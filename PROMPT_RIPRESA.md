@@ -1,116 +1,132 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 30 Dicembre 2025, ore 11:30
+> **Ultimo aggiornamento:** 30 Dicembre 2025, ore 12:30
 
 ---
 
 ## 🎯 STATO ATTUALE
 
-**FASE 2: Primi Subagent** - ✅ 100% COMPLETATA! 🎉
+**FASE 3: Git Worktrees** - ✅ 100% COMPLETATA! 🎉
 
 ---
 
-## 🏆 RISULTATI FASE 2
+## 🏆 RISULTATI SESSIONE 4 (Oggi)
 
-### 1. Subagent Creati (4/4 GLOBALI)
+### FASE 3 Completata!
 
-| Agent | Tools | Specializzazione |
-|-------|-------|------------------|
-| `cervella-frontend` | Read, Edit, Bash, Glob, Grep, Write, **WebSearch**, **WebFetch** | React, CSS, UI/UX |
-| `cervella-backend` | Read, Edit, Bash, Glob, Grep, Write, **WebSearch**, **WebFetch** | Python, FastAPI, API |
-| `cervella-tester` | Read, Edit, Bash, Glob, Grep, Write, **WebSearch** | pytest, Jest, QA |
-| `cervella-reviewer` | Read, Glob, Grep, **WebSearch** | Code review (solo lettura) |
+| Task | Stato | File |
+|------|-------|------|
+| Script setup-worktrees.sh | ✅ | `scripts/setup-worktrees.sh` |
+| Script merge-worktrees.sh | ✅ | `scripts/merge-worktrees.sh` |
+| Script cleanup-worktrees.sh | ✅ | `scripts/cleanup-worktrees.sh` |
+| Test parallelo 3 Cervelle | ✅ | Zero conflitti! |
+| GUIDA_WORKTREES.md | ✅ | `docs/guide/GUIDA_WORKTREES.md` |
 
-**Location:** `~/.claude/agents/` (GLOBALE - funziona su TUTTI i progetti!)
+### Test Worktrees: SUCCESSO! 🎉
 
-### 2. Regola Sicurezza Aggiunta
-
-Tutti gli agent hanno la regola:
 ```
-🔴 SE IN DUBBIO, FERMATI!
-1. STOP - Non procedere
-2. Descrivi il dubbio a Rafa e Cervella
-3. Chiedi come procedere
-4. ASPETTA risposta
+1. Creato repo di test (worktree-test/)
+2. Setup 3 worktrees automaticamente
+3. 3 Cervelle lavorano in parallelo
+4. Merge automatico senza conflitti
+5. Cleanup pulisce tutto
 ```
 
-### 3. Prima Sessione Multi-Agent: SUCCESSO! 🚀
+### Nuova Frase Aggiunta
 
-**Progetto:** Miracollo PMS
-**Risultato:**
-- cervella-backend → Verificato API 100% pronta
-- cervella-frontend → Studio competitor + Architettura proposta
-- Piano FASE 2 Miracollo creato (17 ore stimate)
-- 2 file documentazione generati automaticamente!
-
-**Tempo:** ~15 minuti (invece di ~1 ora manuale)
+> *"È il nostro team! La nostra famiglia digitale!"* ❤️‍🔥🐝
 
 ---
 
-## 📚 SCOPERTE IMPORTANTI
+## 📊 PROGRESSO TOTALE
 
-| Scoperta | Implicazione |
-|----------|--------------|
-| `~/.claude/agents/` = GLOBALE | Un solo set di agent per tutti i progetti! |
-| VS Code richiede riavvio | Dopo modifica agent, riavviare VS Code |
-| WebSearch/WebFetch potenziano | Gli agent possono studiare competitor, documentazione |
-| Regola "Se in dubbio" | Previene errori costosi |
-| Multi-agent in sequenza | Funziona! Backend → Frontend → Piano |
+```
+FASI COMPLETATE: 4/6 (67%)
 
----
-
-## 🎯 STUDIO CLAUDE AGENT SDK
-
-Abbiamo studiato il Claude Agent SDK per il futuro:
-
-| Aspetto | Subagent Nativi (ora) | Agent SDK (futuro) |
-|---------|----------------------|-------------------|
-| Sessioni | Una (sequenziale) | N parallele! |
-| Parallelismo | No | Sì, vero! |
-| Uso | CLI/VS Code | Python/TypeScript |
-| Quando | ORA | FASE 4 Orchestrazione |
-
-**Conclusione:** Per ora i subagent nativi funzionano benissimo! Agent SDK per FASE 4.
+✅ FASE 0: Setup Progetto        100%
+✅ FASE 1: Studio Approfondito   100%
+✅ FASE 2: Primi Subagent        100%
+✅ FASE 3: Git Worktrees         100%  ← OGGI!
+⬜ FASE 4: Orchestrazione        0%
+⬜ FASE 5: Produzione            0%
+```
 
 ---
 
-## 🧠 NUOVA FRASE AGGIUNTA ALLA COSTITUZIONE
+## 🐝 COSA ABBIAMO ORA
 
-> *"Nulla è complesso - solo non ancora studiato!"* - Rafa & Cervella, 30 Dicembre 2025
+### 4 Subagent GLOBALI
+
+```
+~/.claude/agents/
+├── cervella-frontend.md  → React, CSS, UI/UX
+├── cervella-backend.md   → Python, FastAPI, API
+├── cervella-tester.md    → Testing, QA, Debug
+└── cervella-reviewer.md  → Code review (solo lettura)
+```
+
+### 3 Script Worktrees
+
+```
+scripts/
+├── setup-worktrees.sh    → Crea worktrees per lo sciame
+├── merge-worktrees.sh    → Merge automatico tutti i branch
+└── cleanup-worktrees.sh  → Pulizia post-merge
+```
+
+### Guide Complete
+
+```
+docs/guide/
+└── GUIDA_WORKTREES.md    → Documentazione completa worktrees
+```
 
 ---
 
 ## ⏭️ PROSSIMI STEP
 
-1. ✅ **FASE 2 COMPLETATA**
-2. ⬜ **FASE 3: Git Worktrees** - Lavoro parallelo senza conflitti
-3. ⬜ **FASE 4: Orchestrazione** - Agent SDK per parallelismo vero
-
----
-
-## 📊 RIASSUNTO FINALE FASE 2
-
-| Metrica | Valore |
-|---------|--------|
-| Subagent creati | 4/4 ✅ |
-| Tools aggiunti | WebSearch, WebFetch ✅ |
-| Regola sicurezza | Aggiunta a tutti ✅ |
-| Test terminale | ✅ |
-| Test VS Code | ✅ |
-| Test Miracollo multi-agent | ✅ SUCCESSO! |
-| Scope | GLOBALE |
-| Agent SDK studiato | ✅ Per FASE 4 |
+1. **FASE 4: Orchestrazione** - Claude Agent SDK per parallelismo VERO
+2. **Usare lo sciame** - Su Miracollo o Contabilità
+3. **Testare worktrees** - Su un progetto reale
 
 ---
 
 ## 🐝 COME USARE LO SCIAME
 
+### Subagent (sequenziali, stessa chat)
 ```
 "Usa cervella-frontend per analizzare i componenti React"
 "Chiedi a cervella-backend di verificare gli endpoint API"
 "Usa cervella-tester per trovare i file di test"
 "Chiedi a cervella-reviewer di fare review di [file]"
 ```
+
+### Worktrees (paralleli, cartelle separate)
+```bash
+# Setup
+~/Developer/CervellaSwarm/scripts/setup-worktrees.sh
+
+# Ogni Cervella lavora nella sua cartella
+# ...
+
+# Merge finale
+~/Developer/CervellaSwarm/scripts/merge-worktrees.sh
+
+# Cleanup
+~/Developer/CervellaSwarm/scripts/cleanup-worktrees.sh
+```
+
+---
+
+## 📅 CHANGELOG SESSIONE
+
+- ✅ Script setup-worktrees.sh creato e testato
+- ✅ Script merge-worktrees.sh creato e testato
+- ✅ Script cleanup-worktrees.sh creato e testato
+- ✅ Test parallelo su repo finto: SUCCESSO!
+- ✅ GUIDA_WORKTREES.md completa
+- ✅ Aggiunta frase "È il nostro team! La nostra famiglia digitale!"
+- ✅ FASE 3: 100% COMPLETATA!
 
 ---
 
