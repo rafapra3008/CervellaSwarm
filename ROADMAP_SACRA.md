@@ -10,7 +10,7 @@
 |------|------|-------|-----------|
 | 0 | Setup Progetto | ✅ DONE | 100% |
 | 1 | Studio Approfondito | ✅ DONE | 100% |
-| 2 | Primi Subagent | 🟡 IN CORSO | 66% (4/6 task) |
+| 2 | Primi Subagent | 🟡 IN CORSO | 83% (5/6 task) |
 | 3 | Git Worktrees | ⬜ TODO | 0% |
 | 4 | Orchestrazione | ⬜ TODO | 0% |
 | 5 | Produzione | ⬜ TODO | 0% |
@@ -57,7 +57,7 @@
 | 2.2 | cervella-backend.md | ✅ DONE | 30 Dic 2025 - ~/.claude/agents/ |
 | 2.3 | cervella-tester.md | ✅ DONE | 30 Dic 2025 - ~/.claude/agents/ |
 | 2.4 | cervella-reviewer.md | ✅ DONE | 30 Dic 2025 - ~/.claude/agents/ |
-| 2.5 | Test su Miracollo | ⬜ TODO | Prossimo step! |
+| 2.5 | Test su Miracollo | ✅ DONE | 30 Dic 2025 - FUNZIONA! 🎉 |
 | 2.6 | Documentare risultati | ⬜ TODO | Cosa funziona, cosa no |
 
 ---
