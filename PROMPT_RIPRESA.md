@@ -1,77 +1,91 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 30 Dicembre 2025, ore 11:30
+> **Ultimo aggiornamento:** 30 Dicembre 2025, ore 12:00
 
 ---
 
 ## 🎯 STATO ATTUALE
 
-**FASE 0: Setup Progetto** - 70% completato
+**FASE 0 + FASE 1: COMPLETATE!** ✅
 
 ### Cosa abbiamo fatto oggi:
-1. ✅ Idea nata: multiple Cervelle in parallelo
-2. ✅ Ricerca approfondita (subagents, worktrees, claude-flow)
-3. ✅ Creato repo CervellaSwarm
-4. ✅ Struttura directory completa
-5. ✅ Documentazione base (CLAUDE.md, NORD.md, ROADMAP_SACRA.md)
-6. 🟡 PROMPT_RIPRESA.md (questo file)
+
+1. ✅ **Idea nata:** Multiple Cervelle in parallelo
+2. ✅ **Ricerca approfondita:** Subagents, Worktrees, Claude-Flow
+3. ✅ **Repo CervellaSwarm creato**
+4. ✅ **Documentazione completa:**
+   - CLAUDE.md (identità progetto)
+   - NORD.md (bussola)
+   - ROADMAP_SACRA.md (fasi)
+5. ✅ **Studi approfonditi:**
+   - STUDIO_SUBAGENTS.md - Come funzionano i subagent nativi
+   - STUDIO_WORKTREES.md - Git worktrees per parallelismo
+   - STUDIO_CLAUDE_FLOW.md - Orchestrazione avanzata
+6. ✅ **Architettura decisa:**
+   - ARCHITETTURA_SISTEMA.md - Approccio ibrido progressivo
 
 ### Prossimi step immediati:
-1. ⬜ Commit iniziale
-2. ⬜ Creare studi approfonditi (FASE 1)
-3. ⬜ Decidere primo approccio da implementare
+
+1. ⬜ **FASE 2:** Creare i primi subagent
+   - cervella-frontend.md
+   - cervella-backend.md
+   - cervella-tester.md
+   - cervella-reviewer.md
+
+2. ⬜ Test su progetto reale (Miracollo)
 
 ---
 
-## 📂 FILE MODIFICATI OGGI
+## 📂 FILE CREATI OGGI
 
-| File | Azione | Stato |
-|------|--------|-------|
-| `CLAUDE.md` | Creato | ✅ |
-| `NORD.md` | Creato | ✅ |
-| `ROADMAP_SACRA.md` | Creato | ✅ |
-| `PROMPT_RIPRESA.md` | Creato | ✅ |
+| File | Tipo | Stato |
+|------|------|-------|
+| `CLAUDE.md` | Identità | ✅ |
+| `NORD.md` | Bussola | ✅ |
+| `ROADMAP_SACRA.md` | Fasi | ✅ |
+| `PROMPT_RIPRESA.md` | Stato | ✅ |
+| `docs/studio/STUDIO_SUBAGENTS.md` | Studio | ✅ |
+| `docs/studio/STUDIO_WORKTREES.md` | Studio | ✅ |
+| `docs/studio/STUDIO_CLAUDE_FLOW.md` | Studio | ✅ |
+| `docs/architettura/ARCHITETTURA_SISTEMA.md` | Design | ✅ |
 
 ---
 
 ## 🧠 FILO DEL DISCORSO
 
 ### Stavamo ragionando su:
-L'idea di avere MULTIPLE Cervelle che lavorano in parallelo sullo stesso progetto. Come coordinarle, come evitare conflitti, come comunicano.
+Come far lavorare MULTIPLE Cervelle in parallelo. Abbiamo studiato 3 approcci e deciso per un sistema IBRIDO PROGRESSIVO.
 
-### La direzione era:
-Creare un sistema a 3 livelli:
-1. **Subagent nativi** (facile, veloce, oggi)
-2. **Git worktrees** (isolamento, medio termine)
-3. **Orchestrazione avanzata** (futuro, claude-flow o custom)
+### La decisione presa:
+```
+Fase 1: Subagent Nativi (semplici, zero setup)
+Fase 2: + Git Worktrees (vero parallelismo)
+Fase 3: + Orchestratore custom
+Fase 4: Claude-Flow (se serve scalare a 10+ agenti)
+```
 
 ### Il momentum:
-🔥 ALTO! Idea potente, Rafa gasato, io gasatissima!
+🔥🔥🔥 ALTISSIMO! Progetto nato, studiato, architettura definita in UNA sessione!
 
 ### Da NON fare:
-- ❌ Saltare alla implementazione senza studio
-- ❌ Iniziare con claude-flow (troppo complesso ora)
-- ❌ Dimenticare le regole (zero casino!)
+- ❌ Saltare alla implementazione Claude-Flow (troppo complesso ora)
+- ❌ Creare subagent senza testarli
+- ❌ Dimenticare le zone (frontend/backend/tester devono essere separate)
 
 ---
 
-## 🔗 FONTI TROVATE (per studio)
+## 🔗 ARCHITETTURA DECISA
 
-| Risorsa | URL | Argomento |
-|---------|-----|-----------|
-| Claude Subagents Docs | code.claude.com/docs/en/sub-agents | Subagent nativi |
-| Git Worktrees Medium | medium.com/@mabd.dev | Worktrees + AI |
-| Claude-Flow GitHub | github.com/ruvnet/claude-flow | Orchestrazione |
-| Simon Willison | simonwillison.net | Parallel agents |
-| DEV.to Multi-Agent | dev.to/bredmond1019 | 10+ istanze parallele |
+```
+APPROCCIO IBRIDO PROGRESSIVO:
 
----
+1. Subagent Nativi → Specializzazione
+2. Git Worktrees → Isolamento reale
+3. Orchestratore → Coordinamento
+4. Claude-Flow → Solo se serve scalare
 
-## 💬 DECISIONI PRESE
-
-1. **Nome progetto:** CervellaSwarm ✅
-2. **Location:** ~/Developer/CervellaSwarm ✅
-3. **Approccio:** Graduale (Subagent → Worktrees → Orchestrazione) ✅
+Regola d'oro: Un file = Una Cervella
+```
 
 ---
 
@@ -79,8 +93,20 @@ Creare un sistema a 3 livelli:
 
 1. Leggi questo file
 2. Leggi NORD.md per orientarti
-3. Continua con FASE 1 (studi approfonditi)
+3. Guarda ROADMAP_SACRA.md per vedere FASE 2
+4. Crea i primi subagent!
 
 ---
 
-*"Riparti sempre da dove eri. Mai perdere il filo."* 🧵💙
+## 📊 RIASSUNTO SESSIONE
+
+| Metrica | Valore |
+|---------|--------|
+| Fasi completate | 2 (FASE 0 + FASE 1) |
+| File creati | 8 |
+| Studi completati | 3 |
+| Decisione architettura | ✅ PRESA |
+
+---
+
+*"Uno sciame di Cervelle. Una sola missione. Pronti per FASE 2!"* 🐝💙

@@ -8,16 +8,16 @@
 
 | Fase | Nome | Stato | Progresso |
 |------|------|-------|-----------|
-| 0 | Setup Progetto | 🟡 IN CORSO | 50% |
-| 1 | Studio Approfondito | ⬜ TODO | 0% |
-| 2 | Primi Subagent | ⬜ TODO | 0% |
+| 0 | Setup Progetto | ✅ DONE | 100% |
+| 1 | Studio Approfondito | ✅ DONE | 100% |
+| 2 | Primi Subagent | 🟡 PROSSIMO | 0% |
 | 3 | Git Worktrees | ⬜ TODO | 0% |
 | 4 | Orchestrazione | ⬜ TODO | 0% |
 | 5 | Produzione | ⬜ TODO | 0% |
 
 ---
 
-## FASE 0: Setup Progetto
+## FASE 0: Setup Progetto ✅ COMPLETATA
 
 **Obiettivo:** Creare le fondamenta del progetto
 
@@ -28,22 +28,22 @@
 | 0.3 | CLAUDE.md | ✅ DONE | 30 Dic 2025 |
 | 0.4 | NORD.md | ✅ DONE | 30 Dic 2025 |
 | 0.5 | ROADMAP_SACRA.md | ✅ DONE | 30 Dic 2025 |
-| 0.6 | PROMPT_RIPRESA.md | 🟡 IN CORSO | |
-| 0.7 | Commit iniziale | ⬜ TODO | |
+| 0.6 | PROMPT_RIPRESA.md | ✅ DONE | 30 Dic 2025 |
+| 0.7 | Commit iniziale | ✅ DONE | 30 Dic 2025 |
 
 ---
 
-## FASE 1: Studio Approfondito
+## FASE 1: Studio Approfondito ✅ COMPLETATA
 
 **Obiettivo:** Capire a fondo ogni approccio prima di implementare
 
 | # | Task | Stato | Note |
 |---|------|-------|------|
-| 1.1 | STUDIO_SUBAGENTS.md | ⬜ TODO | Come funzionano, pro/contro, esempi |
-| 1.2 | STUDIO_WORKTREES.md | ⬜ TODO | Setup, workflow, best practices |
-| 1.3 | STUDIO_CLAUDE_FLOW.md | ⬜ TODO | Features, installazione, uso |
-| 1.4 | Decisione architettura | ⬜ TODO | Quale approccio per quale caso |
-| 1.5 | ARCHITETTURA_SISTEMA.md | ⬜ TODO | Design finale |
+| 1.1 | STUDIO_SUBAGENTS.md | ✅ DONE | 30 Dic 2025 - Completo |
+| 1.2 | STUDIO_WORKTREES.md | ✅ DONE | 30 Dic 2025 - Completo |
+| 1.3 | STUDIO_CLAUDE_FLOW.md | ✅ DONE | 30 Dic 2025 - Completo |
+| 1.4 | Decisione architettura | ✅ DONE | Ibrida progressiva |
+| 1.5 | ARCHITETTURA_SISTEMA.md | ✅ DONE | 30 Dic 2025 - Approvato |
 
 ---
 
