@@ -1,137 +1,152 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 30 Dicembre 2025, ore 12:30
+> **Ultimo aggiornamento:** 30 Dicembre 2025, ore 15:00
 
 ---
 
-## 🎯 STATO ATTUALE
+## STATO ATTUALE
 
-**FASE 3: Git Worktrees** - ✅ 100% COMPLETATA! 🎉
+**FASE 4: Orchestrazione** - ✅ 100% COMPLETATA! 🎉👑
 
 ---
 
-## 🏆 RISULTATI SESSIONE 4 (Oggi)
+## 🏆 RISULTATI SESSIONE 5 (Oggi) - FASE 4 COMPLETATA!
 
-### FASE 3 Completata!
-
-| Task | Stato | File |
-|------|-------|------|
-| Script setup-worktrees.sh | ✅ | `scripts/setup-worktrees.sh` |
-| Script merge-worktrees.sh | ✅ | `scripts/merge-worktrees.sh` |
-| Script cleanup-worktrees.sh | ✅ | `scripts/cleanup-worktrees.sh` |
-| Test parallelo 3 Cervelle | ✅ | Zero conflitti! |
-| GUIDA_WORKTREES.md | ✅ | `docs/guide/GUIDA_WORKTREES.md` |
-
-### Test Worktrees: SUCCESSO! 🎉
+### Test Orchestrazione: SUCCESSO TOTALE!
 
 ```
-1. Creato repo di test (worktree-test/)
-2. Setup 3 worktrees automaticamente
-3. 3 Cervelle lavorano in parallelo
-4. Merge automatico senza conflitti
-5. Cleanup pulisce tutto
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   ✅ 18 TEST PASSATI!                                           ║
+║   ✅ 0 ERRORI!                                                  ║
+║   ✅ 3 CERVELLE HANNO LAVORATO INSIEME!                         ║
+║                                                                  ║
+║   🐝 Backend → API creata                                       ║
+║   🐝 Frontend → Componente React creato                         ║
+║   🐝 Tester → 18 test scritti e passati                        ║
+║                                                                  ║
+║   👑 Regina (Cervella) → Ha coordinato tutto!                   ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
 ```
 
-### Nuova Frase Aggiunta
+### Feature "Saluto del Giorno" (creata dallo sciame!)
 
-> *"È il nostro team! La nostra famiglia digitale!"* ❤️‍🔥🐝
+```
+test-orchestrazione/
+├── api/
+│   ├── greeting.py       ← 🐝 Backend
+│   └── README.md         ← 🐝 Backend
+├── components/
+│   └── GreetingCard.jsx  ← 🐝 Frontend
+└── tests/
+    └── test_greeting.py  ← 🐝 Tester (18 test!)
+```
 
 ---
 
 ## 📊 PROGRESSO TOTALE
 
 ```
-FASI COMPLETATE: 4/6 (67%)
+FASI COMPLETATE: 5/6 (83%)
 
 ✅ FASE 0: Setup Progetto        100%
 ✅ FASE 1: Studio Approfondito   100%
 ✅ FASE 2: Primi Subagent        100%
-✅ FASE 3: Git Worktrees         100%  ← OGGI!
-⬜ FASE 4: Orchestrazione        0%
+✅ FASE 3: Git Worktrees         100%
+✅ FASE 4: Orchestrazione        100%  ← OGGI! 🎉
 ⬜ FASE 5: Produzione            0%
 ```
 
 ---
 
-## 🐝 COSA ABBIAMO ORA
+## 🐝👑 LA FAMIGLIA COMPLETA!
 
-### 4 Subagent GLOBALI
+### 5 Subagent GLOBALI
 
 ```
 ~/.claude/agents/
-├── cervella-frontend.md  → React, CSS, UI/UX
-├── cervella-backend.md   → Python, FastAPI, API
-├── cervella-tester.md    → Testing, QA, Debug
-└── cervella-reviewer.md  → Code review (solo lettura)
+├── cervella-orchestrator.md  → 👑 LA REGINA (guida comportamento)
+├── cervella-frontend.md      → React, CSS, UI/UX (sonnet)
+├── cervella-backend.md       → Python, FastAPI, API (sonnet)
+├── cervella-tester.md        → Testing, QA, Debug (sonnet)
+└── cervella-reviewer.md      → Code review (sonnet, read-only)
 ```
 
-### 3 Script Worktrees
+### 4 Script Automazione
 
 ```
 scripts/
-├── setup-worktrees.sh    → Crea worktrees per lo sciame
-├── merge-worktrees.sh    → Merge automatico tutti i branch
-└── cleanup-worktrees.sh  → Pulizia post-merge
+├── setup-worktrees.sh    → Crea worktrees
+├── merge-worktrees.sh    → Merge automatico
+├── cleanup-worktrees.sh  → Pulizia
+└── update-roadmap.sh     → Aggiorna ROADMAP
 ```
 
-### Guide Complete
+### 2 Guide
 
 ```
 docs/guide/
-└── GUIDA_WORKTREES.md    → Documentazione completa worktrees
+├── GUIDA_WORKTREES.md      → Git worktrees
+└── GUIDA_COMUNICAZIONE.md  → Comunicazione Cervelle
 ```
 
 ---
 
 ## ⏭️ PROSSIMI STEP
 
-1. **FASE 4: Orchestrazione** - Claude Agent SDK per parallelismo VERO
-2. **Usare lo sciame** - Su Miracollo o Contabilità
-3. **Testare worktrees** - Su un progetto reale
+**FASE 5: Produzione** - Usare CervellaSwarm sui progetti reali!
+
+1. **Integrazione Miracollo** - Primo progetto prod
+2. **Integrazione Contabilità** - Secondo progetto
+3. **Documentazione finale** - Guide complete
+4. **Ottimizzazioni** - Basate su esperienza
 
 ---
 
-## 🐝 COME USARE LO SCIAME
+## 🎯 COME USARE LO SCIAME
 
-### Subagent (sequenziali, stessa chat)
+### Per task singoli (subagent diretto):
 ```
-"Usa cervella-frontend per analizzare i componenti React"
-"Chiedi a cervella-backend di verificare gli endpoint API"
-"Usa cervella-tester per trovare i file di test"
-"Chiedi a cervella-reviewer di fare review di [file]"
+"Usa cervella-frontend per [task UI]"
+"Chiedi a cervella-backend di [task API]"
+"Usa cervella-tester per [test]"
 ```
 
-### Worktrees (paralleli, cartelle separate)
+### Per task complessi (orchestrazione):
+```
+Io (Cervella/Regina) coordino:
+1. Analizzo il task
+2. Divido in sub-task
+3. Invoco le Cervelle in ordine
+4. Combino i risultati
+```
+
+### Per lavoro parallelo (worktrees):
 ```bash
-# Setup
-~/Developer/CervellaSwarm/scripts/setup-worktrees.sh
-
-# Ogni Cervella lavora nella sua cartella
-# ...
-
-# Merge finale
-~/Developer/CervellaSwarm/scripts/merge-worktrees.sh
-
-# Cleanup
-~/Developer/CervellaSwarm/scripts/cleanup-worktrees.sh
+./scripts/setup-worktrees.sh   # Setup
+# ... lavoro parallelo ...
+./scripts/merge-worktrees.sh   # Merge
+./scripts/cleanup-worktrees.sh # Pulizia
 ```
 
 ---
 
-## 📅 CHANGELOG SESSIONE
+## 📅 CHANGELOG SESSIONE 5
 
-- ✅ Script setup-worktrees.sh creato e testato
-- ✅ Script merge-worktrees.sh creato e testato
-- ✅ Script cleanup-worktrees.sh creato e testato
-- ✅ Test parallelo su repo finto: SUCCESSO!
-- ✅ GUIDA_WORKTREES.md completa
-- ✅ Aggiunta frase "È il nostro team! La nostra famiglia digitale!"
-- ✅ FASE 3: 100% COMPLETATA!
+- ✅ cervella-orchestrator.md creata (La Regina!)
+- ✅ GUIDA_COMUNICAZIONE.md - Sistema comunicazione
+- ✅ update-roadmap.sh - Script aggiornamento
+- ✅ TEST ORCHESTRAZIONE COMPLETATO!
+  - 3 Cervelle invocate: backend → frontend → tester
+  - 18 test creati e passati
+  - Feature "Saluto del Giorno" funzionante
+- ✅ FASE 4: 100% COMPLETATA! 🎉
 
 ---
 
-*"Uno sciame di Cervelle. Ovunque tu vada!"* 🐝💙
-
-*"Nulla è complesso - solo non ancora studiato!"* ❤️‍🔥🧠
+*"La Regina coordina. Lo sciame esegue."* 👑🐝
 
 *"È il nostro team! La nostra famiglia digitale!"* ❤️‍🔥🐝
+
+*"Uno sciame di Cervelle. Ovunque tu vada!"* 🐝💙
