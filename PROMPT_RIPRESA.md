@@ -1,52 +1,54 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 30 Dicembre 2025, ore 09:45
+> **Ultimo aggiornamento:** 30 Dicembre 2025, ore 10:00
 
 ---
 
 ## 🎯 STATO ATTUALE
 
-**FASE 2: Primi Subagent** - 80% IN CORSO 🟡
+**FASE 2: Primi Subagent** - 83% IN CORSO 🟡
 
 ### Cosa abbiamo fatto OGGI:
 
-1. ✅ **Creato 4 subagent** in `~/.claude/agents/`:
+1. ✅ **Creato 4 subagent GLOBALI** in `~/.claude/agents/`:
    - cervella-frontend.md (React, CSS, UI/UX)
    - cervella-backend.md (Python, FastAPI, API)
    - cervella-tester.md (pytest, Jest, QA)
    - cervella-reviewer.md (Code review, solo lettura)
 
-2. ✅ **Verificato nel terminale** con `/agents`:
-   - Tutti e 4 visibili come "User agents"
-   - Pronti per essere invocati
+2. ✅ **Verificato nel terminale** con `/agents` - FUNZIONANO!
 
-3. ✅ **Scoperto**:
-   - Nel terminale: funzionano subito
-   - In VS Code: serve riavviare per caricarli
+3. ✅ **Testato su Miracollo via VS Code** - FUNZIONA! 🎉
+   - Dopo riavvio VS Code, i subagent sono visibili
+   - cervella-backend ha elencato 100+ file Python
 
-### Prossimo step immediato:
+4. ✅ **Scoperta importante:**
+   - I subagent in `~/.claude/agents/` sono **GLOBALI**
+   - Funzionano su TUTTI i progetti (Miracollo, Contabilità, etc.)
+   - NON serve creare agenti per ogni progetto!
 
-1. ⬜ **Riavviare VS Code**
-2. ⬜ **Testare subagent su Miracollo** (terminale o VS Code)
-3. ⬜ **Documentare risultati**
+### Prossimo step:
+
+1. ⬜ **Documentare risultati** (ultimo task FASE 2)
+2. ⬜ **Fare altre prove** su diversi progetti
 
 ---
 
-## 📂 SUBAGENT CREATI
+## 📂 SUBAGENT DISPONIBILI (GLOBALI!)
 
-| File | Specializzazione | Model | Location |
-|------|------------------|-------|----------|
-| `cervella-frontend.md` | React, CSS, UI/UX | sonnet | ~/.claude/agents/ |
-| `cervella-backend.md` | Python, FastAPI, API | sonnet | ~/.claude/agents/ |
-| `cervella-tester.md` | pytest, Jest, QA | sonnet | ~/.claude/agents/ |
-| `cervella-reviewer.md` | Code review (solo lettura) | sonnet | ~/.claude/agents/ |
+| File | Specializzazione | Funziona su |
+|------|------------------|-------------|
+| `cervella-frontend.md` | React, CSS, UI/UX | TUTTI i progetti |
+| `cervella-backend.md` | Python, FastAPI, API | TUTTI i progetti |
+| `cervella-tester.md` | pytest, Jest, QA | TUTTI i progetti |
+| `cervella-reviewer.md` | Code review | TUTTI i progetti |
+
+**Location:** `~/.claude/agents/` (GLOBALE!)
 
 **Come invocare:**
 ```
 "Usa cervella-frontend per..."
 "Chiedi a cervella-backend di..."
-"Fai analizzare a cervella-tester..."
-"Fai fare review a cervella-reviewer..."
 ```
 
 ---
@@ -54,30 +56,32 @@
 ## 🧠 FILO DEL DISCORSO
 
 ### Stavamo ragionando su:
-Abbiamo creato i 4 subagent e verificato che funzionano nel terminale. Ora dobbiamo riavviare VS Code e testarli anche nella chat VS Code, poi fare un test reale su Miracollo.
+Abbiamo creato lo sciame e l'abbiamo testato! I subagent sono GLOBALI quindi funzionano su tutti i progetti senza dover ricrearli.
 
-### Scoperte importanti:
-- I subagent si caricano all'avvio della sessione Claude
-- VS Code Beta: serve riavvio per vedere nuovi agents
-- Terminale: li vede subito con `/agents`
-- Sonnet è il modello giusto per coding tasks
+### Scoperte della sessione:
+- ✅ VS Code Beta: serve riavvio per caricare nuovi agents
+- ✅ Terminale: li vede subito con `/agents`
+- ✅ `~/.claude/agents/` = GLOBALE (tutti i progetti)
+- ✅ `.claude/agents/` = locale (solo quel progetto)
 
 ### Il momentum:
-🔥🔥🔥 ALTO! Subagent creati e verificati!
+🔥🔥🔥 ALTISSIMO! Lo sciame è VIVO e funziona!
 
-### Da fare:
-- Riavviare VS Code
-- Testare su Miracollo
-- Documentare cosa funziona
+### Test completati:
+- ✅ cervella-backend su Miracollo → 100+ file Python trovati
+
+### Da testare ancora (opzionale):
+- ⬜ cervella-frontend
+- ⬜ cervella-tester
+- ⬜ cervella-reviewer
 
 ---
 
 ## ⏭️ QUANDO RIPRENDI
 
-1. Riavvia VS Code
-2. Apri Miracollo
-3. Prova: `/agents` per vedere se li vede
-4. Prova: "Usa cervella-backend per elencare file Python"
+1. I 4 subagent sono pronti e GLOBALI
+2. Funzionano su qualsiasi progetto
+3. Puoi fare altre prove o chiudere FASE 2
 
 ---
 
@@ -86,10 +90,11 @@ Abbiamo creato i 4 subagent e verificato che funzionano nel terminale. Ora dobbi
 | Metrica | Valore |
 |---------|--------|
 | Subagent creati | 4/4 ✅ |
-| Verificati terminale | ✅ |
-| Verificati VS Code | ⬜ (dopo riavvio) |
-| Test su Miracollo | ⬜ |
+| Test terminale | ✅ |
+| Test VS Code | ✅ |
+| Test Miracollo | ✅ cervella-backend |
+| Scope | GLOBALE (tutti i progetti!) |
 
 ---
 
-*"Uno sciame di Cervelle. Quasi pronti per il volo!"* 🐝💙
+*"Uno sciame di Cervelle. Ovunque tu vada!"* 🐝💙
