@@ -13,7 +13,8 @@
 | 2 | Primi Subagent | ✅ DONE | 100% |
 | 3 | Git Worktrees | ✅ DONE | 100% |
 | 4 | Orchestrazione | ✅ DONE | 100% |
-| 5 | Produzione | 🚀 IN CORSO | 80% |
+| 5 | Produzione | ✅ DONE | 100% |
+| 6 | Memoria | 🚀 IN CORSO | 25% |
 
 ---
 
@@ -104,17 +105,20 @@
 
 ---
 
-## FASE 6: Memoria 🧠 (Gennaio 2026)
+## FASE 6: Memoria 🧠 (Gennaio 2026) - IN CORSO!
 
 **Obiettivo:** Lo sciame che RICORDA
 
 | # | Task | Stato | Note |
 |---|------|-------|------|
-| 6.1 | Schema SQLite swarm_events | ⬜ TODO | 1 Gennaio 2026 |
-| 6.2 | Hook logging task | ⬜ TODO | Settimana 1 |
-| 6.3 | Lessons Learned DB | ⬜ TODO | Settimana 2 |
-| 6.4 | Pattern Discovery | ⬜ TODO | Settimana 3 |
-| 6.5 | Memory v1.0 | ⬜ TODO | Fine Gennaio |
+| 6.1 | Schema SQLite swarm_events | ✅ DONE | 1 Gen - 2 tabelle + 7 indici! |
+| 6.2 | Hook logging task | ✅ DONE | 1 Gen - PostToolUse configurato! |
+| 6.3 | Script memoria completi | ✅ DONE | 1 Gen - 4 script Python! |
+| 6.4 | Lessons Learned DB | ⬜ TODO | Settimana 2 |
+| 6.5 | Pattern Discovery | ⬜ TODO | Settimana 3 |
+| 6.6 | Memory v1.0 | ⬜ TODO | Fine Gennaio |
+
+→ Dettagli: `docs/roadmap/FASE_6_MEMORIA.md`
 
 ---
 
@@ -141,6 +145,26 @@
 ---
 
 ## 📝 CHANGELOG
+
+### 1 Gennaio 2026 (Sessione 12) - SISTEMA MEMORIA! 🧠🎉
+
+- ✅ **FASE 6.1 COMPLETATA** - Sistema Memoria funzionante!
+- ✅ **Schema SQLite** creato:
+  - Tabella `swarm_events` (18 campi)
+  - Tabella `lessons_learned` (10 campi)
+  - 7 indici ottimizzati
+- ✅ **4 Script Python** creati:
+  - `init_db.py` - Inizializzazione database
+  - `log_event.py` - Hook PostToolUse
+  - `load_context.py` - Hook SessionStart
+  - `query_events.py` - Utility query
+- ✅ **Hook configurati** in `~/.claude/settings.json`
+- ✅ **Test 100% passato!**
+- ✅ **Documentazione completa** (README.md + FASE_6_MEMORIA.md)
+
+**Lo sciame ora RICORDA!** 🐝🧠
+
+**Versione:** 3.0.0 (Major: Sistema Memoria!)
 
 ### 31 Dicembre 2025 (Sessione 11) - ORGANIZZAZIONE FINALE! 📂
 

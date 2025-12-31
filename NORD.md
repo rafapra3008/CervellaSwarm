@@ -15,25 +15,28 @@
 
 ## 🎯 DOVE SIAMO
 
-**FASE 5: Produzione** - 🔥 BRAINSTORMZÃO COMPLETATO!
+**FASE 6: Memoria** - 🧠 SETTIMANA 1 COMPLETATA!
 
 Abbiamo:
-- [x] FASE 0+1+2+3+4+5 (parziale) completate!
+- [x] FASE 0+1+2+3+4+5 completate!
 - [x] 11 subagent GLOBALI (famiglia completa!)
-- [x] VISIONE 2026 definita (docs/VISIONE_REGINA_2026.md)
-- [x] 4 Pilastri: Memoria → Apprendimento → Autonomia → Evoluzione
-- [x] Roadmap 6 mesi con micro-passi settimanali
+- [x] VISIONE 2026 definita
+- [x] **SISTEMA MEMORIA v0.1 FUNZIONANTE!** ✅
+  - Schema SQLite (2 tabelle + 7 indici)
+  - 4 script Python (init, log, load, query)
+  - Hook configurati (SessionStart + PostToolUse)
+  - Test 100% passato!
 
 ---
 
 ## 🎯 PROSSIMO OBIETTIVO
 
-**FASE 6: Memoria** 🧠 - Lo sciame che RICORDA!
+**FASE 6.2: Lessons Learned** 📚 - Settimana 2
 
-**Primo passo (1 Gennaio 2026):**
-1. Schema SQLite swarm_events
-2. Hook logging task delegati
-3. Prima "memoria" funzionante!
+**Prossimi passi (8-14 Gennaio 2026):**
+1. UI per visualizzare logs
+2. Query "quali task falliscono?"
+3. Prime lezioni apprese documentate
 
 ---
 
@@ -74,7 +77,7 @@ APRILE+:   🧬 EVOLUZIONE - Lo sciame che SI MIGLIORA
 
 ## 📅 ULTIMO AGGIORNAMENTO
 
-**30 Dicembre 2025 ore 16:00** - FASE 4 COMPLETATA! Pronti per PRODUZIONE! 🎉👑🐝
+**1 Gennaio 2026** - FASE 6.1 COMPLETATA! Sistema Memoria funzionante! 🧠🎉
 
 ---
 
