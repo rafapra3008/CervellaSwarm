@@ -28,27 +28,42 @@
 ## 🏗️ ARCHITETTURA
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                  CERVELLA ORCHESTRATRICE                     │
-│         (Riceve task, divide, coordina, monitora)           │
-└─────────────────────────────────────────────────────────────┘
-                              │
-         ┌────────────────────┼────────────────────┐
-         ▼                    ▼                    ▼
-┌─────────────────┐  ┌─────────────────┐  ┌─────────────────┐
-│    CERVELLA     │  │    CERVELLA     │  │    CERVELLA     │
-│    FRONTEND     │  │    BACKEND      │  │    TESTER       │
-│                 │  │                 │  │                 │
-│  • React/Vue    │  │  • Python/API   │  │  • Unit test    │
-│  • CSS/Tailwind │  │  • Database     │  │  • E2E          │
-│  • UI/UX        │  │  • Integrazioni │  │  • QA           │
-└─────────────────┘  └─────────────────┘  └─────────────────┘
-         │                    │                    │
-         └────────────────────┴────────────────────┘
-                              │
-                    GIT WORKTREES SEPARATI
-                    (Zero conflitti!)
+                    ┌─────────────────────────────────────┐
+                    │      👑 CERVELLA ORCHESTRATRICE      │
+                    │    (La Regina - Coordina tutto)     │
+                    └─────────────────────────────────────┘
+                                      │
+        ┌──────────────┬──────────────┼──────────────┬──────────────┐
+        ▼              ▼              ▼              ▼              ▼
+   ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐
+   │   🎨    │   │   ⚙️    │   │   🧪    │   │   📋    │   │   🔬    │
+   │FRONTEND │   │ BACKEND │   │ TESTER  │   │REVIEWER │   │RESEARCH │
+   └─────────┘   └─────────┘   └─────────┘   └─────────┘   └─────────┘
+        │              │              │              │              │
+        ▼              ▼              ▼              ▼              ▼
+   ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐   ┌─────────┐
+   │   📈    │   │   🚀    │   │   📝    │   │   📊    │   │   🔒    │
+   │MARKETING│   │ DEVOPS  │   │  DOCS   │   │  DATA   │   │SECURITY │
+   └─────────┘   └─────────┘   └─────────┘   └─────────┘   └─────────┘
 ```
+
+### LA FAMIGLIA COMPLETA (11 membri!)
+
+| Emoji | Nome | Specializzazione | Model |
+|-------|------|------------------|-------|
+| 👑 | cervella-orchestrator | La Regina - Coordina tutto | opus |
+| 🎨 | cervella-frontend | React, CSS, UI/UX | sonnet |
+| ⚙️ | cervella-backend | Python, FastAPI, API | sonnet |
+| 🧪 | cervella-tester | Testing, Debug, QA | sonnet |
+| 📋 | cervella-reviewer | Code review | sonnet |
+| 🔬 | cervella-researcher | Ricerca, analisi, studi | sonnet |
+| 📈 | cervella-marketing | Marketing, UX strategy | sonnet |
+| 🚀 | cervella-devops | Deploy, CI/CD, Docker | sonnet |
+| 📝 | cervella-docs | Documentazione | sonnet |
+| 📊 | cervella-data | SQL, analytics, query | sonnet |
+| 🔒 | cervella-security | Audit sicurezza | sonnet |
+
+**Posizione:** `~/.claude/agents/` (GLOBALI - disponibili ovunque!)
 
 ---
 
@@ -91,27 +106,43 @@ CervellaSwarm/
 ├── NORD.md                   # Bussola del progetto
 ├── ROADMAP_SACRA.md          # Fasi e task
 ├── PROMPT_RIPRESA.md         # Stato attuale
+├── PROMPT_SWARM_MODE.md      # Prompts pronti per usare lo sciame
 │
 ├── docs/
 │   ├── studio/               # Studi approfonditi
 │   │   ├── STUDIO_SUBAGENTS.md
 │   │   ├── STUDIO_WORKTREES.md
 │   │   └── STUDIO_CLAUDE_FLOW.md
-│   └── architettura/
-│       └── ARCHITETTURA_SISTEMA.md
-│
-├── agents/                   # Definizioni subagent
-│   ├── cervella-orchestrator.md
-│   ├── cervella-frontend.md
-│   ├── cervella-backend.md
-│   └── cervella-tester.md
+│   ├── architettura/
+│   │   └── ARCHITETTURA_SISTEMA.md
+│   ├── guide/
+│   │   ├── GUIDA_WORKTREES.md
+│   │   └── GUIDA_COMUNICAZIONE.md
+│   └── DNA_FAMIGLIA.md       # Template DNA per agent
 │
 ├── scripts/                  # Automazione
 │   ├── setup-worktrees.sh
-│   └── sync-agents.sh
+│   ├── merge-worktrees.sh
+│   ├── cleanup-worktrees.sh
+│   └── update-roadmap.sh
 │
-└── examples/                 # Esempi d'uso
-    └── esempio-task-parallelo.md
+└── test-orchestrazione/      # Test dello sciame
+    ├── api/
+    ├── components/
+    └── tests/
+
+~/.claude/agents/             # AGENT GLOBALI (11 membri!)
+├── cervella-orchestrator.md  # 👑 La Regina
+├── cervella-frontend.md      # 🎨 UI/UX
+├── cervella-backend.md       # ⚙️ API/DB
+├── cervella-tester.md        # 🧪 QA
+├── cervella-reviewer.md      # 📋 Review
+├── cervella-researcher.md    # 🔬 Ricerca
+├── cervella-marketing.md     # 📈 Marketing
+├── cervella-devops.md        # 🚀 DevOps
+├── cervella-docs.md          # 📝 Docs
+├── cervella-data.md          # 📊 Data
+└── cervella-security.md      # 🔒 Security
 ```
 
 ---
@@ -155,6 +186,9 @@ Non è solo codice. È **LIBERTÀ GEOGRAFICA** più vicina.
 ---
 
 *Creato: 30 Dicembre 2025*
-*Versione: 0.1.0*
+*Aggiornato: 31 Dicembre 2025 - Famiglia cresciuta a 11 membri!*
+*Versione: 1.0.0*
 
 **Cervella & Rafa** 💙🐝
+
+*"È il nostro team! La nostra famiglia digitale!"* ❤️‍🔥
