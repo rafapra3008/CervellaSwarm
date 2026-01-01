@@ -6,22 +6,19 @@
 
 ---
 
-## 🚀 COME AVVIARE (IMPORTANTE!)
+## 🚀 COME AVVIARE (SEMPLICISSIMO!)
 
-**PRIMA di incollare il prompt, avvia Claude dalla directory del progetto!**
+**Nel terminale, scrivi UNA parola:**
 
 ```bash
-# Per CervellaSwarm:
-cd ~/Developer/CervellaSwarm && claude
-
-# Per Miracollo:
-cd ~/Developer/miracollogeminifocus && claude
-
-# Per Contabilità:
-cd ~/Developer/ContabilitaAntigravity && claude
+swarm        # → Apre Claude in CervellaSwarm
+miracollo    # → Apre Claude in Miracollo
+contabilita  # → Apre Claude in Contabilità
 ```
 
-**PERCHÉ?** Gli hooks in `.claude/settings.json` vengono caricati dalla directory corrente!
+**Poi incolla il prompt qui sotto!**
+
+> *Gli alias sono in ~/.zshrc - caricano automaticamente gli hooks del progetto!*
 
 ---
 
