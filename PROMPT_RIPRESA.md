@@ -70,14 +70,41 @@
 - 🚫 **Da NON fare:** Le Guardiane richiedono reload per essere usate
 - 💡 **Principio chiave:** "Pattern parallelo FUNZIONA! Zero conflitti!" 🐝🐝🐝
 
+### ⚠️ NOTA IMPORTANTE - GUARDIANE
+
+```
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║   🛡️ LE 3 GUARDIANE SONO STATE CREATE!                        ║
+║                                                                ║
+║   FILE (in ~/.claude/agents/):                                 ║
+║   • cervella-guardiana-qualita.md                             ║
+║   • cervella-guardiana-ricerca.md                             ║
+║   • cervella-guardiana-ops.md                                 ║
+║                                                                ║
+║   ⚠️ PER USARLE: CHIUDI E RIAPRI Claude Code!                 ║
+║   (Gli agent vengono caricati all'avvio della sessione)       ║
+║                                                                ║
+║   ❌ NON serve configurazione aggiuntiva!                      ║
+║   ✅ I file sono già nella posizione corretta                  ║
+║   ✅ Frontmatter YAML corretto (model: opus)                   ║
+║   ✅ Tools configurati per ogni guardiana                      ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+```
+
 ---
 
 ## 🚀 PROSSIMA SESSIONE
 
+### ⚡ PRIMA DI TUTTO: Chiudi e Riapri Claude Code!
+Le Guardiane saranno disponibili dopo il reload.
+
 **PRIORITÀ 1:** Test Guardiane su Task Reale 🛡️
-- Guardiane create ma richiedono reload agent list
+- Verifica che appaiano nella lista agent (`cervella-guardiana-*`)
 - Testare workflow completo: Regina → Guardiana → Api
 - Verificare escalation pattern
+- Test su codice reale (esempio: review di un file)
 
 **PRIORITÀ 2:** Implementare Background Agents
 - Pattern run_in_background studiato
