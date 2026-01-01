@@ -1,0 +1,147 @@
+version: '3.8'
+
+#═══════════════════════════════════════════════════════════════════
+#  CERVELLASWARM MONITORING STACK
+#
+#  Stack completo per monitoring H24 dello sciame
+#  - Prometheus: Metriche e storage
+#  - Grafana: Dashboard e visualizzazione
+#  - AlertManager: Alert system (Telegram)
+#  - Swarm Exporter: Metriche custom da swarm_memory.db
+#
+#  Deploy: docker-compose -f docker-compose.monitoring.yml up -d
+#  Stop: docker-compose -f docker-compose.monitoring.yml down
+#═══════════════════════════════════════════════════════════════════
+
+services:
+  # Prometheus - Time-series database e metriche
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: cervellaswarm-prometheus
+    restart: unless-stopped
+    user: "1000:1000"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--storage.tsdb.retention.time=15d'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - ./prometheus/rules:/etc/prometheus/rules:ro
+      - prometheus-data:/prometheus
+    networks:
+      - swarm-monitoring
+    depends_on:
+      - swarm-exporter
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--tries=1", "--spider", "http://localhost:9090/-/healthy"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Grafana - Dashboard e visualizzazione
+  grafana:
+    image: grafana/grafana:latest
+    container_name: cervellaswarm-grafana
+    restart: unless-stopped
+    user: "1000:1000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD:-cervellaswarm}
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_SERVER_ROOT_URL=http://localhost:3000
+      - GF_INSTALL_PLUGINS=
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./grafana/dashboards:/var/lib/grafana/dashboards:ro
+    networks:
+      - swarm-monitoring
+    depends_on:
+      - prometheus
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--tries=1", "--spider", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # AlertManager - Sistema alert
+  alertmanager:
+    image: prom/alertmanager:latest
+    container_name: cervellaswarm-alertmanager
+    restart: unless-stopped
+    user: "1000:1000"
+    command:
+      - '--config.file=/etc/alertmanager/alertmanager.yml'
+      - '--storage.path=/alertmanager'
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./alertmanager/alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+      - alertmanager-data:/alertmanager
+    networks:
+      - swarm-monitoring
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--tries=1", "--spider", "http://localhost:9093/-/healthy"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Swarm Exporter - Metriche custom da swarm_memory.db
+  swarm-exporter:
+    build:
+      context: ./exporter
+      dockerfile: Dockerfile
+    container_name: cervellaswarm-exporter
+    restart: unless-stopped
+    environment:
+      - SWARM_DB_PATH=${SWARM_DB_PATH:-/data/swarm_memory.db}
+      - EXPORTER_PORT=9091
+      - UPDATE_INTERVAL=30
+      - LOG_LEVEL=INFO
+    ports:
+      - "9091:9091"
+    volumes:
+      - ${SWARM_DB_PATH:-../data/swarm_memory.db}:/data/swarm_memory.db:ro
+    networks:
+      - swarm-monitoring
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--tries=1", "--spider", "http://localhost:9091/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+# Network dedicato per isolamento
+networks:
+  swarm-monitoring:
+    driver: bridge
+    name: cervellaswarm-monitoring
+
+# Volumi persistenti
+volumes:
+  prometheus-data:
+    name: cervellaswarm-prometheus-data
+  grafana-data:
+    name: cervellaswarm-grafana-data
+  alertmanager-data:
+    name: cervellaswarm-alertmanager-data
+
+#═══════════════════════════════════════════════════════════════════
+#  COMANDI UTILI
+#
+#  Start: docker-compose -f docker-compose.monitoring.yml up -d
+#  Logs: docker-compose -f docker-compose.monitoring.yml logs -f
+#  Stop: docker-compose -f docker-compose.monitoring.yml down
+#  Restart: docker-compose -f docker-compose.monitoring.yml restart
+#  Status: docker-compose -f docker-compose.monitoring.yml ps
+#
+#  Accesso servizi:
+#  - Grafana: http://VM_IP:3000 (user: admin, pwd: da .env)
+#  - Prometheus: http://VM_IP:9090
+#  - AlertManager: http://VM_IP:9093
+#  - Swarm Exporter: http://VM_IP:9091/metrics
+#═══════════════════════════════════════════════════════════════════

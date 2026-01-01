@@ -1,0 +1,332 @@
+{
+  "timestamp": "01/01/2026 19:18",
+  "project": "/Users/rafapra/Developer/CervellaSwarm",
+  "results": {
+    "large_files": [
+      {
+        "file": "ROADMAP_SACRA.md",
+        "lines": 940,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "PROMPT_RIPRESA.md",
+        "lines": 517,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "scripts/memory/README.md",
+        "lines": 667,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "docs/architettura/ARCHITETTURA_V2.0.md",
+        "lines": 850,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "docs/roadmap/FASE_7_LEARNING.md",
+        "lines": 858,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "docs/roadmap/FASE_7.5_PARALLELIZZAZIONE.md",
+        "lines": 608,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "docs/patterns/validated/delega-gerarchica-pattern.md",
+        "lines": 628,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "scripts/memory/weekly_retro.py",
+        "lines": 590,
+        "suggestion": "Split in moduli separati"
+      },
+      {
+        "file": "scripts/memory/analytics.py",
+        "lines": 837,
+        "suggestion": "Split in moduli separati"
+      },
+      {
+        "file": "scripts/memory/load_context.py",
+        "lines": 526,
+        "suggestion": "Split in moduli separati"
+      }
+    ],
+    "large_functions": [
+      {
+        "file": "test-orchestrazione/components/GreetingCard.jsx",
+        "line": 38,
+        "lines": 108,
+        "name": "function"
+      },
+      {
+        "file": "test-orchestrazione/components/CountdownCard.jsx",
+        "line": 36,
+        "lines": 97,
+        "name": "function"
+      },
+      {
+        "file": "test-hardtests/src/api/cleanup.py",
+        "line": 24,
+        "lines": 72,
+        "name": "delete_inactive_users"
+      },
+      {
+        "file": "scripts/parallel/prompt_builder.py",
+        "line": 55,
+        "lines": 72,
+        "name": "build_prompt"
+      },
+      {
+        "file": "scripts/parallel/prompt_builder.py",
+        "line": 144,
+        "lines": 52,
+        "name": "create_example"
+      },
+      {
+        "file": "scripts/parallel/suggest_pattern.py",
+        "line": 48,
+        "lines": 61,
+        "name": "suggest_pattern"
+      },
+      {
+        "file": "scripts/parallel/suggest_pattern.py",
+        "line": 194,
+        "lines": 86,
+        "name": "main"
+      },
+      {
+        "file": "scripts/memory/lesson_formatter.py",
+        "line": 164,
+        "lines": 66,
+        "name": "main"
+      },
+      {
+        "file": "scripts/memory/suggestions.py",
+        "line": 72,
+        "lines": 110,
+        "name": "get_suggestions"
+      },
+      {
+        "file": "scripts/memory/suggestions.py",
+        "line": 285,
+        "lines": 51,
+        "name": "main"
+      },
+      {
+        "file": "scripts/memory/weekly_retro.py",
+        "line": 62,
+        "lines": 67,
+        "name": "suggest_new_lessons"
+      },
+      {
+        "file": "scripts/memory/weekly_retro.py",
+        "line": 156,
+        "lines": 359,
+        "name": "generate_retro"
+      },
+      {
+        "file": "scripts/memory/weekly_retro.py",
+        "line": 515,
+        "lines": 75,
+        "name": "main"
+      },
+      {
+        "file": "scripts/memory/pattern_detector.py",
+        "line": 169,
+        "lines": 70,
+        "name": "detect_error_patterns"
+      },
+      {
+        "file": "scripts/memory/pattern_detector.py",
+        "line": 239,
+        "lines": 81,
+        "name": "save_patterns_to_db"
+      },
+      {
+        "file": "scripts/memory/pattern_detector.py",
+        "line": 360,
+        "lines": 60,
+        "name": "main"
+      },
+      {
+        "file": "scripts/memory/context_scorer.py",
+        "line": 58,
+        "lines": 65,
+        "name": "score_lesson"
+      },
+      {
+        "file": "scripts/memory/context_scorer.py",
+        "line": 268,
+        "lines": 120,
+        "name": "main"
+      },
+      {
+        "file": "scripts/memory/analytics.py",
+        "line": 100,
+        "lines": 79,
+        "name": "cmd_summary"
+      },
+      {
+        "file": "scripts/memory/analytics.py",
+        "line": 279,
+        "lines": 64,
+        "name": "cmd_agents"
+      },
+      {
+        "file": "scripts/memory/analytics.py",
+        "line": 343,
+        "lines": 57,
+        "name": "cmd_patterns"
+      },
+      {
+        "file": "scripts/memory/analytics.py",
+        "line": 400,
+        "lines": 109,
+        "name": "cmd_dashboard"
+      },
+      {
+        "file": "scripts/memory/analytics.py",
+        "line": 509,
+        "lines": 77,
+        "name": "cmd_auto_detect"
+      },
+      {
+        "file": "scripts/memory/analytics.py",
+        "line": 586,
+        "lines": 178,
+        "name": "cmd_retro"
+      },
+      {
+        "file": "scripts/memory/analytics.py",
+        "line": 764,
+        "lines": 73,
+        "name": "main"
+      },
+      {
+        "file": "scripts/memory/log_event.py",
+        "line": 25,
+        "lines": 51,
+        "name": "extract_agent_info"
+      },
+      {
+        "file": "scripts/memory/log_event.py",
+        "line": 136,
+        "lines": 108,
+        "name": "log_event"
+      },
+      {
+        "file": "scripts/memory/query_events.py",
+        "line": 226,
+        "lines": 103,
+        "name": "main"
+      },
+      {
+        "file": "scripts/memory/init_db.py",
+        "line": 27,
+        "lines": 93,
+        "name": "upgrade_schema"
+      },
+      {
+        "file": "scripts/memory/init_db.py",
+        "line": 120,
+        "lines": 124,
+        "name": "init_database"
+      },
+      {
+        "file": "scripts/memory/init_db.py",
+        "line": 244,
+        "lines": 51,
+        "name": "verify_schema"
+      },
+      {
+        "file": "scripts/memory/load_context.py",
+        "line": 156,
+        "lines": 107,
+        "name": "get_relevant_lessons"
+      },
+      {
+        "file": "scripts/memory/load_context.py",
+        "line": 263,
+        "lines": 73,
+        "name": "format_lessons_for_agent"
+      },
+      {
+        "file": "scripts/memory/load_context.py",
+        "line": 355,
+        "lines": 71,
+        "name": "format_context"
+      },
+      {
+        "file": "scripts/memory/load_context.py",
+        "line": 426,
+        "lines": 75,
+        "name": "load_context"
+      },
+      {
+        "file": "scripts/learning/test_db_save.py",
+        "line": 20,
+        "lines": 70,
+        "name": "test_db_save"
+      },
+      {
+        "file": "scripts/learning/wizard.py",
+        "line": 157,
+        "lines": 76,
+        "name": "run"
+      },
+      {
+        "file": "scripts/engineer/create_auto_pr.py",
+        "line": 253,
+        "lines": 104,
+        "name": "main"
+      },
+      {
+        "file": "scripts/engineer/analyze_codebase.py",
+        "line": 241,
+        "lines": 81,
+        "name": "generate_markdown"
+      },
+      {
+        "file": "scripts/engineer/analyze_codebase.py",
+        "line": 361,
+        "lines": 81,
+        "name": "main"
+      },
+      {
+        "file": ".claude/hooks/subagent_stop.py",
+        "line": 25,
+        "lines": 94,
+        "name": "main"
+      },
+      {
+        "file": "test-orchestrazione/api/countdown.py",
+        "line": 60,
+        "lines": 78,
+        "name": "handle_request"
+      },
+      {
+        "file": "docker/exporter/swarm_exporter.py",
+        "line": 126,
+        "lines": 93,
+        "name": "update_metrics"
+      }
+    ],
+    "todos": [
+      {
+        "file": "scripts/engineer/analyze_codebase.py",
+        "line": 298,
+        "type": "TODO",
+        "content": "/FIXME Trovati\\n\""
+      }
+    ],
+    "duplicates": [],
+    "stats": {
+      "total_files": 88,
+      "total_lines": 25017,
+      "total_issues": 54
+    }
+  }
+}

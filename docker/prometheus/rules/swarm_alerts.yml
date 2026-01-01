@@ -1,0 +1,207 @@
+#═══════════════════════════════════════════════════════════════════
+#  PROMETHEUS ALERT RULES
+#  CervellaSwarm Monitoring
+#═══════════════════════════════════════════════════════════════════
+
+groups:
+  - name: swarm_alerts
+    interval: 30s
+    rules:
+
+      #═══════════════════════════════════════════════════════════════
+      # CRITICAL ALERTS - Richiedono azione immediata
+      #═══════════════════════════════════════════════════════════════
+
+      # Database non accessibile
+      - alert: DatabaseUnavailable
+        expr: up{job="swarm-exporter"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          component: database
+        annotations:
+          summary: "Database swarm_memory.db non accessibile"
+          description: "Lo swarm exporter non riesce a leggere il database da 2 minuti."
+          action: "Verificare path database e permessi su VM"
+          timestamp: "{{ $value }}"
+
+      # Tasso errori molto alto
+      - alert: CriticalErrorRate
+        expr: |
+          (
+            sum(rate(swarm_tasks_failed_total[5m]))
+            /
+            sum(rate(swarm_tasks_total[5m]))
+          ) > 0.5
+        for: 5m
+        labels:
+          severity: critical
+          component: tasks
+        annotations:
+          summary: "Tasso errori CRITICO: > 50%"
+          description: "Più della metà dei task sta fallendo negli ultimi 5 minuti!"
+          action: "Controllare logs immediato e fermare deploy se attivo"
+          timestamp: "{{ $value }}"
+
+      #═══════════════════════════════════════════════════════════════
+      # WARNING ALERTS - Richiedono attenzione
+      #═══════════════════════════════════════════════════════════════
+
+      # Tasso errori alto
+      - alert: HighErrorRate
+        expr: |
+          (
+            sum(rate(swarm_tasks_failed_total[5m]))
+            /
+            sum(rate(swarm_tasks_total[5m]))
+          ) > 0.1
+        for: 10m
+        labels:
+          severity: warning
+          component: tasks
+        annotations:
+          summary: "Tasso errori elevato: > 10%"
+          description: "Il 10% o più dei task sta fallendo negli ultimi 5 minuti."
+          action: "Investigare cause errori e lezioni apprese"
+          timestamp: "{{ $value }}"
+
+      # Success rate basso
+      - alert: LowSuccessRate
+        expr: |
+          (
+            sum(swarm_tasks_success_total)
+            /
+            sum(swarm_tasks_total)
+          ) < 0.9
+        for: 1h
+        labels:
+          severity: warning
+          component: tasks
+        annotations:
+          summary: "Success rate complessivo < 90%"
+          description: "Il success rate è sceso sotto il 90% nell'ultima ora."
+          action: "Review delle lezioni apprese e pattern errori"
+          timestamp: "{{ $value }}"
+
+      # Nessuna attività
+      - alert: NoSwarmActivity
+        expr: |
+          (time() - swarm_last_activity_timestamp) > 14400
+        for: 30m
+        labels:
+          severity: warning
+          component: activity
+        annotations:
+          summary: "Nessun task eseguito da 4+ ore"
+          description: "Lo sciame non ha eseguito task nelle ultime 4 ore."
+          action: "Verificare se è normale o se c'è un problema"
+          timestamp: "{{ $value }}"
+
+      # Agent con alto tasso errori
+      - alert: AgentHighErrorRate
+        expr: |
+          (
+            sum by (agent) (rate(swarm_tasks_failed_total[10m]))
+            /
+            sum by (agent) (rate(swarm_tasks_total[10m]))
+          ) > 0.2
+        for: 15m
+        labels:
+          severity: warning
+          component: agent
+        annotations:
+          summary: "Agent {{ $labels.agent }} ha > 20% errori"
+          description: "L'agent {{ $labels.agent }} sta fallendo molti task."
+          action: "Verificare se ci sono problemi specifici con questo agent"
+          timestamp: "{{ $value }}"
+
+      #═══════════════════════════════════════════════════════════════
+      # INFO ALERTS - Informativi
+      #═══════════════════════════════════════════════════════════════
+
+      # Nuove lezioni critiche
+      - alert: NewCriticalLessons
+        expr: |
+          increase(swarm_lessons_total{severity="CRITICAL"}[1h]) > 0
+        for: 5m
+        labels:
+          severity: info
+          component: learning
+        annotations:
+          summary: "Nuove lezioni CRITICAL apprese"
+          description: "Sono state aggiunte {{ $value }} nuove lezioni CRITICAL nell'ultima ora."
+          action: "Review delle nuove lezioni e aggiornamento processi"
+          timestamp: "{{ $value }}"
+
+      # Picco di attività
+      - alert: HighActivitySpike
+        expr: |
+          rate(swarm_tasks_total[5m]) > 10
+        for: 10m
+        labels:
+          severity: info
+          component: activity
+        annotations:
+          summary: "Picco di attività rilevato"
+          description: "Più di 10 task/min negli ultimi 5 minuti. Lo sciame è attivo!"
+          action: "Monitorare risorse VM se persiste"
+          timestamp: "{{ $value }}"
+
+      #═══════════════════════════════════════════════════════════════
+      # INFRASTRUCTURE ALERTS
+      #═══════════════════════════════════════════════════════════════
+
+      # Prometheus down
+      - alert: PrometheusDown
+        expr: up{job="prometheus"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          component: infrastructure
+        annotations:
+          summary: "Prometheus è DOWN"
+          description: "Il servizio Prometheus non è raggiungibile."
+          action: "Verificare container e logs: docker logs cervellaswarm-prometheus"
+
+      # Grafana down
+      - alert: GrafanaDown
+        expr: up{job="grafana"} == 0
+        for: 5m
+        labels:
+          severity: warning
+          component: infrastructure
+        annotations:
+          summary: "Grafana è DOWN"
+          description: "Il servizio Grafana non è raggiungibile."
+          action: "Verificare container: docker restart cervellaswarm-grafana"
+
+      # AlertManager down
+      - alert: AlertManagerDown
+        expr: up{job="alertmanager"} == 0
+        for: 5m
+        labels:
+          severity: warning
+          component: infrastructure
+        annotations:
+          summary: "AlertManager è DOWN"
+          description: "Il servizio AlertManager non è raggiungibile. Alert non funzionano!"
+          action: "Verificare container e config Telegram"
+
+#═══════════════════════════════════════════════════════════════════
+#  QUERY EXAMPLES
+#
+#  Test in Prometheus UI (http://VM_IP:9090):
+#
+#  # Check tasso errori
+#  sum(rate(swarm_tasks_failed_total[5m])) / sum(rate(swarm_tasks_total[5m]))
+#
+#  # Check success rate
+#  100 * sum(swarm_tasks_success_total) / sum(swarm_tasks_total)
+#
+#  # Ore dall'ultimo task
+#  (time() - swarm_last_activity_timestamp) / 3600
+#
+#  # Task per agent
+#  sum by (agent) (swarm_tasks_total)
+#
+#═══════════════════════════════════════════════════════════════════

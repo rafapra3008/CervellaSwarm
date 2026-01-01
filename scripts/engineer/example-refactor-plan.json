@@ -1,0 +1,9 @@
+{
+  "files": [
+    "src/example.py",
+    "src/utils.py"
+  ],
+  "title": "Refactor: Split large files",
+  "description": "Split example.py and utils.py into smaller modules to improve maintainability and reduce complexity.",
+  "modification_type": "split"
+}

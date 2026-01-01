@@ -183,13 +183,154 @@ python3 scripts/engineer/analyze_codebase.py . \
 - Non rileva code smells complessi
 - Non misura complessità ciclomatica
 
+## Hook Post-Commit (FASE 10c)
+
+L'Ingegnera include un hook automatico che analizza la codebase dopo ogni commit!
+
+### Setup Hook
+
+Il hook è già configurato in `~/.claude/hooks/post_commit_engineer.py`.
+
+Verifica configurazione in `.claude/settings.json`:
+```json
+{
+  "hooks": {
+    "PostCommit": "~/.claude/hooks/post_commit_engineer.py"
+  }
+}
+```
+
+### Cosa Fa l'Hook
+
+1. ✅ Si attiva automaticamente dopo ogni `git commit`
+2. 🔍 Esegue `analyze_codebase.py` in background
+3. 📊 Salva report in `reports/engineer_report_*.json`
+4. 🚨 Se trova issues CRITICHE/ALTE → segnala immediatamente
+
+### Esempio Output Hook
+
+```bash
+$ git commit -m "Add new feature"
+[main abc1234] Add new feature
+ 3 files changed, 150 insertions(+)
+
+🔍 Analisi codebase in corso...
+   Progetto: /Users/rafapra/Developer/MioProgetto
+   Report: reports/engineer_report_20260101_120000.json
+
+============================================================
+🚨 ENGINEERING ISSUES TROVATE!
+============================================================
+
+🔴 CRITICO: File enormi (>1000 righe)
+   Count: 2
+   Files:
+   - src/app.py
+   - src/models.py
+
+🟠 ALTO: Funzioni grandi (>50 righe)
+   Count: 15
+   Files:
+   - src/utils.py
+   - src/handlers.py
+
+============================================================
+💡 Raccomandazione: Esegui code review e refactoring!
+============================================================
+```
+
+## PR Automatiche (FASE 10c)
+
+Script per creare Pull Request automatiche di refactoring!
+
+### Uso Base
+
+```bash
+# Crea PR per refactor specifici file
+python3 scripts/engineer/create_auto_pr.py \
+  --files "src/app.py,src/utils.py" \
+  --title "Split app.py in moduli" \
+  --description "Refactor app.py e utils.py per ridurre complessità"
+
+# Dry-run (no actual changes)
+python3 scripts/engineer/create_auto_pr.py \
+  --files "src/app.py" \
+  --title "Test PR" \
+  --description "Test creazione PR" \
+  --dry-run
+
+# Da configurazione JSON
+python3 scripts/engineer/create_auto_pr.py \
+  --from-json refactor-plan.json
+```
+
+### Formato JSON
+
+```json
+{
+  "files": ["src/app.py", "src/utils.py"],
+  "title": "Split app.py",
+  "description": "Refactor app.py in moduli più piccoli",
+  "modification_type": "split"
+}
+```
+
+### Workflow Automatico
+
+Lo script esegue:
+1. ✅ Crea branch: `refactor/auto-YYYYMMDD_HHMMSS`
+2. ✅ Modifica i file specificati
+3. ✅ Crea commit con messaggio standard
+4. ✅ Pusha branch su remote
+5. ✅ Crea PR con GitHub CLI (`gh`)
+
+### Prerequisiti
+
+```bash
+# Installa GitHub CLI
+brew install gh
+
+# Autentica
+gh auth login
+```
+
+### Output
+
+```bash
+============================================================
+🔧 AUTO PR CREATOR - L'Ingegnera
+============================================================
+
+📌 Creo branch: refactor/auto-20260101_120000
+📝 Modifico 2 file (refactor)...
+   - src/app.py
+   - src/utils.py
+✅ Modifiche completate!
+💾 Creo commit...
+✅ Commit creato!
+🚀 Push branch su remote...
+✅ Branch pushato!
+📋 Creo Pull Request...
+✅ PR creata: https://github.com/user/repo/pull/123
+
+============================================================
+✅ WORKFLOW COMPLETATO!
+============================================================
+Branch: refactor/auto-20260101_120000
+PR URL: https://github.com/user/repo/pull/123
+============================================================
+
+🎉 PR URL: https://github.com/user/repo/pull/123
+```
+
 ## Roadmap Future
 
 - [ ] Analisi AST completa (Python, JS)
 - [ ] Complessità ciclomatica
 - [ ] Code smells detection
 - [ ] Metriche coverage
-- [ ] Integrazione con git (file modificati recentemente)
+- [x] ~~Integrazione con git (hook post-commit)~~ ✅ FASE 10c
+- [x] ~~PR automatiche~~ ✅ FASE 10c
 
 ## Versioning
 
@@ -201,5 +342,5 @@ __version_date__ = "2026-01-01"
 ---
 
 **Creato da:** cervella-backend
-**Per:** L'Ingegnera (FASE 10b)
+**Per:** L'Ingegnera (FASE 10b + 10c)
 **Progetto:** CervellaSwarm

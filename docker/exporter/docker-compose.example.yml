@@ -1,0 +1,42 @@
+# Docker Compose per Swarm Exporter
+#
+# Uso:
+#   docker-compose -f docker-compose.example.yml up -d
+#
+# Verifica:
+#   curl http://localhost:9091/health
+#   curl http://localhost:9091/metrics
+
+version: '3.8'
+
+services:
+  swarm-exporter:
+    build: .
+    container_name: swarm-exporter
+    restart: unless-stopped
+
+    ports:
+      - "9091:9091"
+
+    volumes:
+      # Mount database (read-only)
+      - ~/.cervellaswarm:/data:ro
+
+    environment:
+      - SWARM_DB_PATH=/data/swarm_memory.db
+      - EXPORTER_PORT=9091
+      - UPDATE_INTERVAL=30
+
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:9091/health')"]
+      interval: 30s
+      timeout: 3s
+      start_period: 5s
+      retries: 3
+
+    networks:
+      - monitoring
+
+networks:
+  monitoring:
+    driver: bridge

@@ -1,0 +1,81 @@
+#═══════════════════════════════════════════════════════════════════
+#  PROMETHEUS CONFIGURATION
+#  CervellaSwarm Monitoring
+#═══════════════════════════════════════════════════════════════════
+
+# Global config
+global:
+  scrape_interval: 15s        # Scrape ogni 15 secondi
+  evaluation_interval: 15s    # Evalua regole ogni 15 secondi
+  scrape_timeout: 10s
+
+  # Labels aggiunti a TUTTE le metriche
+  external_labels:
+    cluster: 'cervellaswarm'
+    environment: 'production'
+
+# AlertManager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: ['alertmanager:9093']
+      scheme: http
+      timeout: 10s
+
+# Load rules
+rule_files:
+  - '/etc/prometheus/rules/*.yml'
+
+# Scrape configurations
+scrape_configs:
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+        labels:
+          service: 'prometheus'
+
+  # CervellaSwarm Exporter - METRICHE CUSTOM!
+  - job_name: 'swarm-exporter'
+    scrape_interval: 15s
+    scrape_timeout: 10s
+    static_configs:
+      - targets: ['swarm-exporter:9091']
+        labels:
+          service: 'swarm-exporter'
+          project: 'cervellaswarm'
+    metric_relabel_configs:
+      # Aggiungi label utili
+      - source_labels: [__name__]
+        regex: 'swarm_.*'
+        target_label: 'metric_type'
+        replacement: 'custom'
+
+  # Grafana monitoring (opzionale)
+  - job_name: 'grafana'
+    static_configs:
+      - targets: ['grafana:3000']
+        labels:
+          service: 'grafana'
+
+  # AlertManager monitoring (opzionale)
+  - job_name: 'alertmanager'
+    static_configs:
+      - targets: ['alertmanager:9093']
+        labels:
+          service: 'alertmanager'
+
+#═══════════════════════════════════════════════════════════════════
+#  METRICHE CUSTOM ATTESE
+#
+#  swarm_tasks_total{project="miracollo",agent="cervella-frontend"}
+#  swarm_tasks_success_total{project="miracollo",agent="cervella-frontend"}
+#  swarm_tasks_failed_total{project="miracollo",agent="cervella-frontend"}
+#  swarm_tasks_duration_seconds{project="miracollo",agent="cervella-frontend"}
+#  swarm_agents_active{project="miracollo"}
+#  swarm_last_task_timestamp{project="miracollo"}
+#  swarm_success_rate{project="miracollo"}
+#  swarm_lessons_learned_total{project="miracollo",severity="CRITICAL"}
+#  swarm_error_patterns_total{pattern_type="deploy"}
+#
+#═══════════════════════════════════════════════════════════════════
