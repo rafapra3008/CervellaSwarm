@@ -1,6 +1,46 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 32 - 🎉 LOGGING FUNZIONANTE + DEPLOYMENT!
+> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 33 - 🎯 REGOLA DECISIONE AUTONOMA!
+
+---
+
+## 🎯 SESSIONE 33 - LE API CHE DECIDONO!
+
+### COSA ABBIAMO FATTO
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   🎯 REGOLA DECISIONE AUTONOMA IMPLEMENTATA!                    ║
+║                                                                  ║
+║   🔴 PROBLEMA: Le 🐝 erano TROPPO CAUTELOSE!                    ║
+║   • Chiedevano 3-4 conferme invece di procedere                 ║
+║   • Proponevano opzioni A/B/C invece di decidere                ║
+║   • Causa: DNA diceva "FERMATI" senza specificare QUANDO        ║
+║                                                                  ║
+║   ✅ SOLUZIONE: "Confident by Default with Smart Escalation"    ║
+║   • Ricerca best practices completata (LangGraph, CrewAI, etc)  ║
+║   • DNA aggiornato in TUTTI i 14 agent!                         ║
+║   • SWARM_RULES.md v1.1.0 con REGOLA 10                         ║
+║   • HARDTESTS creati per validazione                            ║
+║                                                                  ║
+║   🐝 NUOVO COMPORTAMENTO:                                       ║
+║   ✅ PROCEDI SE: contesto completo + azione reversibile         ║
+║   ⚠️ UNA DOMANDA SE: info critica manca                         ║
+║   🛑 STOP SE: azione irreversibile                              ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### FILE CREATI/AGGIORNATI
+
+| File | Azione |
+|------|--------|
+| docs/roadmap/SUB_ROADMAP_API_AUTONOMY.md | ✅ CREATO + 100% A+B+C! |
+| docs/studio/RICERCA_AUTONOMIA_AGENT.md | ✅ CREATO |
+| docs/tests/HARDTESTS_AUTONOMY.md | ✅ CREATO (6 scenari) |
+| docs/SWARM_RULES.md | ✅ AGGIORNATO (v1.1.0 + REGOLA 10) |
+| ~/.claude/agents/*.md | ✅ 14 FILE AGGIORNATI! |
 
 ---
 

@@ -162,20 +162,24 @@ APRILE+:   🧬 EVOLUZIONE - Lo sciame che SI MIGLIORA
 
 ## 📅 ULTIMO AGGIORNAMENTO
 
-**1 Gennaio 2026 - Sessione 32** - 🎉 **LOGGING FUNZIONANTE + DEPLOYMENT!**
+**1 Gennaio 2026 - Sessione 33** - 🎯 **REGOLA DECISIONE AUTONOMA!**
 
-- **TESTATO:** Hook SubagentStop FUNZIONA!
-  - 4 agent invocati → tutti loggati correttamente
-  - DB salva senza errori (fix schema v1.0.1)
-- **DEPLOYATO:** Hooks in TUTTI i progetti!
-  - ✅ CervellaSwarm
-  - ✅ Miracollo (copiato .claude/)
-  - ✅ Contabilità (copiato .claude/)
-- **MIGLIORATO:** PROMPT_SWARM_MODE.md con:
-  - Sezione "I Cugini (Paralleli)"
-  - Sezione "Logging Automatico"
-  - Sezione "Lezioni Chiave"
-- **SUB-ROADMAP:** FASE A+C 100%, FASE B 80%!
+- **PROBLEMA RISOLTO:** Le 🐝 erano troppo cautelose!
+  - Chiedevano 3-4 conferme invece di procedere
+  - Proponevano opzioni A/B/C invece di decidere
+  - Causa: DNA diceva "FERMATI" senza specificare QUANDO
+- **SOLUZIONE:** "Confident by Default with Smart Escalation"
+  - ✅ Ricerca best practices completata
+  - ✅ DNA aggiornato in TUTTI i 14 agent!
+  - ✅ SWARM_RULES.md + REGOLA 10
+  - ✅ HARDTESTS creati per validazione
+- **FILE CREATI/AGGIORNATI:**
+  - docs/roadmap/SUB_ROADMAP_API_AUTONOMY.md
+  - docs/studio/RICERCA_AUTONOMIA_AGENT.md
+  - docs/tests/HARDTESTS_AUTONOMY.md
+  - docs/SWARM_RULES.md (v1.1.0)
+  - ~/.claude/agents/*.md (14 file aggiornati!)
+- **PROSSIMO:** Test reale su Miracollo!
 
 ---
 

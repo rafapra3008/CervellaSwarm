@@ -224,6 +224,28 @@
 
 ## 📝 CHANGELOG
 
+### 1 Gennaio 2026 (Sessione 33) - 🎯 REGOLA DECISIONE AUTONOMA! 🎯
+
+- 🔴 **PROBLEMA IDENTIFICATO:** Le 🐝 erano troppo cautelose!
+  - Chiedevano 3-4 conferme invece di procedere
+  - Proponevano opzioni A/B/C invece di decidere
+  - Feedback REALE da sessione Miracollo
+- 🔬 **RICERCA COMPLETATA:**
+  - cervella-researcher ha analizzato best practices
+  - LangGraph, CrewAI, AutoGPT studiati
+  - docs/studio/RICERCA_AUTONOMIA_AGENT.md creato
+- 🎯 **SOLUZIONE IMPLEMENTATA:** "Confident by Default with Smart Escalation"
+  - ✅ DNA aggiornato in TUTTI i 14 agent!
+  - ✅ SWARM_RULES.md v1.1.0 con REGOLA 10
+  - ✅ docs/roadmap/SUB_ROADMAP_API_AUTONOMY.md (FASE A+B+C 100%!)
+  - ✅ docs/tests/HARDTESTS_AUTONOMY.md (6 scenari test)
+- 🐝 **NUOVO COMPORTAMENTO:**
+  - PROCEDI SE: contesto completo + azione reversibile
+  - UNA DOMANDA SE: info critica manca
+  - STOP SE: azione irreversibile
+
+**Versione:** 6.4.0 (Minor: REGOLA DECISIONE AUTONOMA!)
+
 ### 1 Gennaio 2026 (Sessione 32) - 🎉 LOGGING FUNZIONANTE + DEPLOYMENT! 🎉
 
 - 🧪 **HOOK TESTATO E FUNZIONANTE:**

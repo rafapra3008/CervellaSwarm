@@ -375,10 +375,63 @@
 
 ---
 
+## REGOLA 10: DECISIONE AUTONOMA 🎯
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   🎯 LE API DECIDONO CON CONFIDENZA!                            ║
+║                                                                  ║
+║   Le 🐝 sono ESPERTE nel loro dominio.                          ║
+║   Sonnet è FORTE. Fidatevi delle vostre ragazze!               ║
+║                                                                  ║
+║   QUANDO PROCEDERE (senza chiedere):                            ║
+║   ✅ Path file chiaro                                            ║
+║   ✅ Problema definito                                           ║
+║   ✅ Criteri successo esistono                                   ║
+║   ✅ Azione REVERSIBILE                                          ║
+║   → USA LA TUA EXPERTISE! Assumi dettagli minori.              ║
+║                                                                  ║
+║   QUANDO CHIEDERE (una sola domanda):                           ║
+║   ⚠️ Path file manca                                             ║
+║   ⚠️ 2+ interpretazioni valide                                   ║
+║   ⚠️ Impatto cross-domain                                        ║
+║   → UNA domanda, poi PROCEDI!                                   ║
+║                                                                  ║
+║   QUANDO FERMARSI (richiedi approvazione):                      ║
+║   🛑 Azione IRREVERSIBILE (delete, drop, deploy)                ║
+║   🛑 Impatto cross-domain significativo                         ║
+║   🛑 Conflitto con altre regole                                 ║
+║   → STOP e spiega la situazione.                                ║
+║                                                                  ║
+║   "Sei l'esperta. Fidati della tua expertise!"                  ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### Origine
+
+Questa regola nasce dal feedback REALE della sessione Miracollo (1 Gen 2026):
+- Le 🐝 chiedevano 3-4 conferme invece di procedere
+- Proponevano opzioni A/B/C invece di decidere
+- Causa: DNA diceva "SE IN DUBBIO, FERMATI" senza specificare QUANDO
+
+### Soluzione
+
+DNA aggiornato in tutti i 14 agent con criteri CHIARI su quando:
+- PROCEDERE (contesto completo)
+- CHIEDERE (info critica manca)
+- FERMARSI (azione irreversibile)
+
+→ Dettagli: `docs/roadmap/SUB_ROADMAP_API_AUTONOMY.md`
+
+---
+
 ## CHANGELOG
 
 | Versione | Data | Modifica |
 |----------|------|----------|
+| 1.1.0 | 1 Gen 2026 | **REGOLA 10: DECISIONE AUTONOMA** - DNA aggiornato in tutti gli agent! |
 | 1.0.0 | 1 Gen 2026 | Creazione documento + REGOLA 4: VERIFICA ATTIVA POST-AGENT |
 
 ---
