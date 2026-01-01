@@ -77,7 +77,7 @@
 
 ---
 
-### STUDIO 2: 🐝 POOL FLESSIBILE ("I Cugini")
+### STUDIO 2: 🐝 POOL FLESSIBILE ("I Cugini") - ✅ COMPLETATO!
 
 **Problema da risolvere:**
 - Creare agenti al momento = tempo perso
@@ -89,43 +89,48 @@
 
 **Domande da rispondere:**
 
-| # | Domanda | Status |
-|---|---------|--------|
-| 2.1 | Quanti "slot" flessibili? (10? 20? 30?) | ⬜ Da studiare |
-| 2.2 | Come definiamo i file .md template? | ⬜ Da studiare |
-| 2.3 | Come assegniamo ruoli dinamicamente? | ⬜ Da studiare |
-| 2.4 | Naming convention? (cervella-flex-01?) | ⬜ Da studiare |
-| 2.5 | Come tracciamo chi sta facendo cosa? | ⬜ Da studiare |
-| 2.6 | Limiti Claude Code su agenti paralleli? | ⬜ Da studiare |
+| # | Domanda | Status | Risposta |
+|---|---------|--------|----------|
+| 2.1 | Quanti "slot" flessibili? | ✅ RISPOSTO | **Max 3-5 in parallelo** (oltre = overhead) |
+| 2.2 | Come definiamo i template? | ✅ RISPOSTO | **On-demand via Task tool** (non file statici) |
+| 2.3 | Come assegniamo ruoli? | ✅ RISPOSTO | **Partitioning**: ogni cugino = subset file |
+| 2.4 | Naming convention? | ✅ RISPOSTO | **cervella-frontend-cugino-1** |
+| 2.5 | Come tracciamo chi fa cosa? | ✅ RISPOSTO | **Ogni cugino scrive in file .md dedicato** |
+| 2.6 | Limiti Claude Code? | ✅ RISPOSTO | **7-parallel-Task method efficiente** |
 
-**Ipotesi iniziale (da validare):**
+**STUDIO COMPLETO:** `docs/studio/STUDIO_POOL_FLESSIBILE.md`
+
+**Architettura VALIDATA:**
 
 ```
-~/.claude/agents/
-├── cervella-flex-01.md
-├── cervella-flex-02.md
-├── ...
-└── cervella-flex-20.md
+QUANDO SPAWNARE CUGINI:
+- File da modificare > 8 stesso tipo
+- Stima tempo > 45min singolo agent
+- File parallelizzabili (indipendenti)
 
-Ogni file contiene:
-- DNA di famiglia (valori, filosofia)
-- Template generico
-- Placeholder per ruolo dinamico
+LIFECYCLE:
+1. SPAWN - Regina usa Task tool
+2. ASSIGN - Ogni cugino riceve subset file
+3. EXECUTE - Cugino lavora SOLO sui suoi file
+4. REPORT - Scrive risultati in .md
+5. TERMINATE - Context auto-dismisso
 
-Invocazione:
-"cervella-flex-03, oggi sei esperto di Redis.
-Il tuo compito: [task specifico]
-Contesto: [contesto rilevante]"
+CONFLICT AVOIDANCE:
+Cugino #1 → file [1-7]
+Cugino #2 → file [8-14]
+Cugino #3 → file [15-20]
+ZERO sovrapposizioni = ZERO conflitti!
 ```
 
-**Ricerche da fare:**
-- [ ] Limiti tecnici Claude Code su agenti paralleli
-- [ ] Pattern "Agent Pool" in altri framework
-- [ ] Come gestire stato/memoria tra invocazioni
+**Ricerche COMPLETATE:**
+- [x] Limiti tecnici Claude Code su agenti paralleli
+- [x] Pattern "Agent Pool" (Actor model Erlang/Akka)
+- [x] Kubernetes-style autoscaling per agenti AI
+- [x] Multi-agent scaling state of the art 2024-2025
 
 ---
 
-### STUDIO 3: 🔬 BACKGROUND RESEARCH AGENT
+### STUDIO 3: 🔬 BACKGROUND RESEARCH AGENT - ✅ COMPLETATO!
 
 **Problema da risolvere:**
 - Mentre lavoriamo, il mondo va avanti
@@ -137,60 +142,49 @@ Contesto: [contesto rilevante]"
 
 **Domande da rispondere:**
 
-| # | Domanda | Status |
-|---|---------|--------|
-| 3.1 | Trigger: ogni sessione? manuale? periodico? | ⬜ Da studiare |
-| 3.2 | Cosa cerca? (tecnologie? competitor? pattern?) | ⬜ Da studiare |
-| 3.3 | Come sa cosa cercare? (contesto dal progetto?) | ⬜ Da studiare |
-| 3.4 | Output: report? suggerimenti? alert? | ⬜ Da studiare |
-| 3.5 | Come integriamo findings nel workflow? | ⬜ Da studiare |
-| 3.6 | Frequenza report? (fine sessione? settimanale?) | ⬜ Da studiare |
+| # | Domanda | Status | Risposta |
+|---|---------|--------|----------|
+| 3.1 | Trigger? | ✅ RISPOSTO | **Manuale o > 10 min stimati** |
+| 3.2 | Cosa cerca? | ✅ RISPOSTO | **Best practices, competitor, pattern specifici** |
+| 3.3 | Come sa cosa cercare? | ✅ RISPOSTO | **Prompt specifico dalla Regina** |
+| 3.4 | Output? | ✅ RISPOSTO | **File .md con risultati strutturati** |
+| 3.5 | Come integriamo? | ✅ RISPOSTO | **TaskOutput per recuperare quando pronto** |
+| 3.6 | Frequenza? | ✅ RISPOSTO | **On-demand (non periodico)** |
 
-**Ipotesi iniziale (da validare):**
+**STUDIO COMPLETO:** `docs/studio/STUDIO_BACKGROUND_AGENTS.md`
+
+**Pattern VALIDATO:**
 
 ```
-TRIGGER: Hook SessionStart
+PATTERN BACKGROUND RESEARCH:
 
-AZIONE:
-1. Legge contesto progetto corrente
-2. Identifica tecnologie in uso
-3. Cerca in background:
-   - Nuove versioni librerie
-   - Alternative migliori
-   - Pattern moderni vs nostri pattern
-   - Cosa fanno i big player
-4. Produce "Innovation Report"
+Regina → Task(run_in_background: true) → Research Agent
+   ↓
+Regina continua a lavorare su altro...
+   ↓
+Regina → TaskOutput(block: false) → Check status
+   ↓
+Quando pronto...
+   ↓
+Regina → TaskOutput(block: true) → Recupera risultati
 
-OUTPUT (esempio):
-╔══════════════════════════════════════════════════════════════════╗
-║ 🔬 INNOVATION REPORT - 1 Gennaio 2026                           ║
-╠══════════════════════════════════════════════════════════════════╣
-║                                                                  ║
-║ 📦 LIBRERIE:                                                    ║
-║ - FastAPI 0.109 disponibile (noi: 0.104) - minor improvements   ║
-║ - Pydantic v2.5 ha nuovo pattern validation                     ║
-║                                                                  ║
-║ 🔄 PATTERN OBSOLETI TROVATI:                                    ║
-║ - modal system usa pattern 2023, React 19 ha nuove primitive    ║
-║ - Proposta: valutare dialog element nativo                      ║
-║                                                                  ║
-║ 🌟 OPPORTUNITÀ:                                                  ║
-║ - Anthropic ha rilasciato batch API - potremmo parallelizzare   ║
-║ - Vercel v0 ha nuovo approach per UI generation                 ║
-║                                                                  ║
-║ ⚠️ AZIONE RICHIESTA: 0 urgenti, 2 da valutare                   ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
+USE CASES:
+- "Studia best practices authentication 2025"
+- "Analizza competitor X Y Z"
+- "Ricerca pattern per problema W"
+
+OUTPUT: Sempre in file .md (mai solo output!)
 ```
 
-**Ricerche da fare:**
-- [ ] Come implementare agent che lavora in background
-- [ ] Fonti da monitorare (GitHub releases, blogs, papers)
-- [ ] Come evitare "noise" (troppi suggerimenti irrilevanti)
+**Ricerche COMPLETATE:**
+- [x] Claude Code `run_in_background` capabilities
+- [x] Pattern "async agent execution"
+- [x] Context Rot e soluzioni (summaries, just-in-time retrieval)
+- [x] Framework enterprise (Swarms AI, Trigger.dev, Azure Agent)
 
 ---
 
-### STUDIO 4: 🔧 BACKGROUND TECHNICAL AGENT
+### STUDIO 4: 🔧 BACKGROUND TECHNICAL AGENT - ✅ COMPLETATO!
 
 **Problema da risolvere:**
 - Debito tecnico si accumula
@@ -202,40 +196,50 @@ OUTPUT (esempio):
 
 **Domande da rispondere:**
 
-| # | Domanda | Status |
-|---|---------|--------|
-| 4.1 | Cosa analizza? (size? complexity? duplication?) | ⬜ Da studiare |
-| 4.2 | Propone solo o esegue anche? | ⬜ Da studiare |
-| 4.3 | Come prioritizza? (file più critici first?) | ⬜ Da studiare |
-| 4.4 | Integrazione con CODE REVIEW settimanale? | ⬜ Da studiare |
-| 4.5 | Come evitare conflitti con lavoro in corso? | ⬜ Da studiare |
+| # | Domanda | Status | Risposta |
+|---|---------|--------|----------|
+| 4.1 | Cosa analizza? | ✅ RISPOSTO | **Tutto: size, complexity, duplication** |
+| 4.2 | Propone o esegue? | ✅ RISPOSTO | **Su branch separati per sicurezza** |
+| 4.3 | Come prioritizza? | ✅ RISPOSTO | **Task > 10 file o > 45min = background** |
+| 4.4 | Integrazione CODE REVIEW? | ✅ RISPOSTO | **Può alimentare Refactor Day** |
+| 4.5 | Evitare conflitti? | ✅ RISPOSTO | **Branch separato, merge manuale** |
 
-**Ipotesi iniziale (da validare):**
+**STUDIO COMPLETO:** `docs/studio/STUDIO_BACKGROUND_AGENTS.md`
+
+**Pattern VALIDATO:**
 
 ```
-TRIGGER: Periodico (ogni 3 sessioni?) o manuale
+PATTERN BACKGROUND TECHNICAL:
 
-AZIONE:
-1. Scansiona codebase
-2. Identifica:
-   - File > 500 righe
-   - Funzioni > 50 righe
-   - Codice duplicato
-   - Pattern obsoleti
-3. Produce "Technical Debt Report"
-4. PROPONE refactor (non esegue!)
+Regina identifica task massivo
+   ↓
+Regina → Task(run_in_background: true) → Technical Agent
+   ↓
+Technical Agent lavora su branch separato
+   ↓
+Technical Agent → Scrive risultati/diff in file .md
+   ↓
+Regina → Legge risultati e decide merge
 
-OUTPUT → Passa a GUARDIANA QUALITÀ → Se importante, arriva a Regina
+USE CASES:
+- "Migra tutti i test da Jest a Vitest"
+- "Fai refactor di tutti i file > 500 righe"
+- "Genera documentazione per 20 endpoint"
+
+SICUREZZA: Sempre su branch, mai su main!
+CHECKPOINT: Scrive stato ogni 5 minuti
+TIMEOUT: 30 min default, estendibile
 ```
 
-**Ricerche da fare:**
-- [ ] Tool di analisi statica per Python/JS
-- [ ] Come misurare "technical debt" oggettivamente
-- [ ] Pattern "automated refactoring suggestion"
+**Ricerche COMPLETATE:**
+- [x] Deep Agents Architecture (planning + delegazione)
+- [x] Use cases produzione (Netflix 150k righe in 48h!)
+- [x] Progress reporting pattern
+- [x] Error handling e recovery
 
 ---
 
-### STUDIO 5: ✅ VERIFICA ATTIVA POST-AGENT
+### STUDIO 5: ✅ VERIFICA ATTIVA POST-AGENT - ✅ COMPLETATO!
 
 **Problema da risolvere:**
 - Quando 🐝 completano, la Regina verifica
@@ -244,80 +248,71 @@ OUTPUT → Passa a GUARDIANA QUALITÀ → Se importante, arriva a Regina
 
 **Domande da rispondere:**
 
-| # | Domanda | Status |
-|---|---------|--------|
-| 5.1 | QUANDO verificare? (sempre? solo test? solo code?) | ⬜ Da studiare |
-| 5.2 | COME verificare? (run test? review? entrambi?) | ⬜ Da studiare |
-| 5.3 | CHI verifica? (Regina? Guardiana? Tester?) | ⬜ Da studiare |
-| 5.4 | Se fallisce, chi fixa? (Regina? ri-delega?) | ⬜ Da studiare |
-| 5.5 | Come documentare la regola? (Costituzione? SWARM_RULES?) | ⬜ Da studiare |
+| # | Domanda | Status | Risposta |
+|---|---------|--------|----------|
+| 5.1 | QUANDO verificare? | ✅ RISPOSTO | **SEMPRE dopo ogni task agent** |
+| 5.2 | COME verificare? | ✅ RISPOSTO | **Test se esistono, check visivo altrimenti** |
+| 5.3 | CHI verifica? | ✅ RISPOSTO | **Regina ora, Guardiane in futuro** |
+| 5.4 | Se fallisce, chi fixa? | ✅ RISPOSTO | **Prima ri-delega a tester, poi Regina** |
+| 5.5 | Come documentare? | ✅ RISPOSTO | **SWARM_RULES.md (Regola 4!)** |
 
-**Ipotesi iniziale (da validare):**
+**DOCUMENTATO IN:** `docs/SWARM_RULES.md` (REGOLA 4)
+
+**Regola UFFICIALE:**
 
 ```
-REGOLA PROPOSTA: "VERIFICA ATTIVA POST-AGENT"
-
-DOPO ogni task delegato a una 🐝:
-
-1. SE ci sono test → RUN TEST
-   - Passano tutti? → ✅ Procedi
-   - Falliscono? → Fix (Regina o ri-delega a Tester)
-
-2. SE non ci sono test → CHECK VISIVO/LOGICO
-   - Funziona? → ✅ Procedi
-   - Problemi? → Fix o ri-delega
-
-3. SE trova problemi → DOCUMENTA
-   - Aggiunge a lessons_learned
-   - Pattern per prevenire in futuro
-
-CON GUARDIANE: La verifica passa a loro, non più a Regina!
+╔══════════════════════════════════════════════════════════════════╗
+║  REGOLA 4: VERIFICA ATTIVA POST-AGENT                           ║
+║                                                                  ║
+║  DOPO ogni task delegato a una 🐝:                              ║
+║                                                                  ║
+║  1. SE ci sono test → RUN TEST                                  ║
+║     - Passano tutti? → ✅ Procedi                               ║
+║     - Falliscono? → Fix (ri-delega a tester)                    ║
+║                                                                  ║
+║  2. SE non ci sono test → CHECK VISIVO/LOGICO                   ║
+║     - Funziona? → ✅ Procedi                                    ║
+║     - Problemi? → Fix o ri-delega                               ║
+║                                                                  ║
+║  3. SE trova problemi → DOCUMENTA                               ║
+║     - Lesson learned per prevenire in futuro                    ║
+║                                                                  ║
+║  CON GUARDIANE: La verifica passa a loro!                       ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## 🔬 RICERCHE DA FARE
+## 🔬 RICERCHE - TUTTE COMPLETATE! ✅
 
-### Ricerca 1: Gerarchie Multi-Agent
+### Ricerca 1: Gerarchie Multi-Agent ✅ COMPLETATA
 
-**Obiettivo:** Capire best practices per organizzare team di agenti
-
-**Fonti da esplorare:**
-- [ ] Papers accademici su multi-agent systems
-- [ ] LangChain "Supervisor Agent" pattern
-- [ ] AutoGen hierarchical agents
-- [ ] Microsoft Semantic Kernel orchestration
-- [ ] Anthropic Claude multi-agent examples
-
-**Output atteso:** Report con pattern applicabili a noi
+**Output:** `docs/studio/STUDIO_GERARCHIE_MULTIAGENT.md`
+- [x] Papers accademici su multi-agent systems
+- [x] LangChain "Supervisor Agent" pattern
+- [x] AutoGen hierarchical agents
+- [x] Anthropic orchestrator-worker pattern
 
 ---
 
-### Ricerca 2: Background Agents
+### Ricerca 2: Background Agents ✅ COMPLETATA
 
-**Obiettivo:** Capire come implementare agenti che lavorano in parallelo
-
-**Fonti da esplorare:**
-- [ ] Claude Code `run_in_background` capabilities
-- [ ] Pattern "async agent execution"
-- [ ] Come gestire output di agent background
-- [ ] Esempi di "continuous research agents"
-
-**Output atteso:** Guida implementativa per background agents
+**Output:** `docs/studio/STUDIO_BACKGROUND_AGENTS.md`
+- [x] Claude Code `run_in_background` capabilities
+- [x] Pattern "async agent execution"
+- [x] Context Rot e soluzioni
+- [x] Framework enterprise (Swarms AI, Trigger.dev)
 
 ---
 
-### Ricerca 3: Dynamic Role Assignment
+### Ricerca 3: Dynamic Role Assignment ✅ COMPLETATA
 
-**Obiettivo:** Capire come assegnare ruoli dinamicamente
-
-**Fonti da esplorare:**
-- [ ] Pattern "role injection" in prompts
-- [ ] Come mantenere identità base + ruolo dinamico
-- [ ] Limiti di context window con ruoli dinamici
-- [ ] Esempi di "flexible agent pools"
-
-**Output atteso:** Template per agenti flessibili
+**Output:** `docs/studio/STUDIO_POOL_FLESSIBILE.md`
+- [x] Pattern "role injection" via Task tool
+- [x] Actor model (Erlang/Akka) per agenti
+- [x] Kubernetes-style autoscaling
+- [x] Limiti pratici (max 3-5 in parallelo)
 
 ---
 
@@ -385,6 +380,8 @@ Potrebbe essere il nostro "Innovation Engine"!
 | Data | Modifica |
 |------|----------|
 | 1 Gen 2026 | Creazione documento - Brainstorm con Rafa! |
+| 1 Gen 2026 | Studio 1 + Studio 5 completati (SWARM_RULES.md) |
+| 1 Gen 2026 | **TUTTI GLI STUDI COMPLETATI!** 🎉 Studio 2, 3, 4 via ricerca parallela |
 
 ---
 

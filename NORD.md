@@ -18,7 +18,7 @@
 
 ## 🎯 DOVE SIAMO
 
-**FASE 8: LA CORTE REALE - IN STUDIO!** 👑🛡️🐝
+**FASE 8: LA CORTE REALE - STUDI COMPLETATI!** 👑🛡️🐝
 
 Abbiamo:
 - [x] FASE 0+1+2+3+4+5+6 completate!
@@ -27,33 +27,36 @@ Abbiamo:
 - [x] **SISTEMA MEMORIA v2.1.0 FUNZIONANTE!** ✅
 - [x] **🌟 FILOSOFIA DELL'EVOLUZIONE aggiunta alla Costituzione!** 🌟
 
-### 🛡️ SESSIONE 20 - 1 GENNAIO 2026 - SWARM RULES + GUARDIANE!
+### 🎉 SESSIONE 21 - 1 GENNAIO 2026 - TUTTI GLI STUDI COMPLETATI!
 
 ```
 ╔════════════════════════════════════════════════════════════════╗
 ║                                                                ║
-║   📜 SWARM_RULES.md CREATO!                                   ║
+║   🎉 FASE 8: TUTTI I 5 STUDI COMPLETATI!                      ║
 ║                                                                ║
-║   + REGOLA 4: VERIFICA ATTIVA POST-AGENT (GAP colmato!)      ║
-║   + 9 regole totali documentate                               ║
-║   + cervella-orchestrator.md aggiornato                       ║
+║   ✅ Studio 1: Gerarchia Guardiane (3 Guardiane Opus)         ║
+║   ✅ Studio 2: Pool Flessibile ("I Cugini") - max 3-5         ║
+║   ✅ Studio 3: Background Research Agent                       ║
+║   ✅ Studio 4: Background Technical Agent                      ║
+║   ✅ Studio 5: VERIFICA ATTIVA POST-AGENT (→ SWARM_RULES)     ║
 ║                                                                ║
-║   🔬 STUDIO GUARDIANE COMPLETATO!                              ║
+║   📂 NUOVI DOCUMENTI:                                          ║
+║   • docs/studio/STUDIO_POOL_FLESSIBILE.md                     ║
+║   • docs/studio/STUDIO_BACKGROUND_AGENTS.md                   ║
 ║                                                                ║
-║   Risultato: 3 Guardiane (Qualita, Ricerca, Ops)             ║
-║   Model: Opus per Guardiane, Sonnet per api                   ║
-║   Pattern: Handoff + escalation selettivo                     ║
+║   🚀 PRONTI PER IMPLEMENTAZIONE!                               ║
 ║                                                                ║
 ╚════════════════════════════════════════════════════════════════╝
 ```
 
-### 🚀 FASE 8 - La Corte Reale (IN STUDIO! 20%)
+### 🚀 FASE 8 - La Corte Reale (STUDI 100% ✅ - IMPLEMENTAZIONE 0%)
 - [x] **FASE_8_CORTE_REALE.md** creata! ✅
 - [x] **Studio 1: Gerarchia Guardiane** ✅ COMPLETATO!
-- [x] **Studio 5: VERIFICA ATTIVA POST-AGENT** ✅ COMPLETATO! (→ SWARM_RULES.md)
-- ⬜ Studio 2: Pool Flessibile ("I Cugini")
-- ⬜ Studio 3: Background Research Agent
-- ⬜ Studio 4: Background Technical Agent
+- [x] **Studio 2: Pool Flessibile ("I Cugini")** ✅ COMPLETATO!
+- [x] **Studio 3: Background Research Agent** ✅ COMPLETATO!
+- [x] **Studio 4: Background Technical Agent** ✅ COMPLETATO!
+- [x] **Studio 5: VERIFICA ATTIVA POST-AGENT** ✅ COMPLETATO!
+- ⬜ **IMPLEMENTAZIONE: Prima Guardiana** (prossimo step!)
 
 ### 🚀 FASE 7 + 7.5 - (Continuano dopo FASE 8 study)
 - [x] 7a/7b/7c: COMPLETATI! ✅
@@ -64,16 +67,20 @@ Abbiamo:
 
 ## 🎯 PROSSIMI STEP
 
-### PRIORITÀ 1: Formalizzare Regola
-- Studiare VERIFICA ATTIVA POST-AGENT
-- Aggiungere a SWARM_RULES o Costituzione
-- Aggiornare cervella-orchestrator.md
+### PRIORITÀ 1: Implementare Prima Guardiana 🛡️
+- Scegliere quale (Qualità consigliata - più impatto immediato)
+- Creare agent `cervella-guardiana-qualita.md`
+- Test su task reale
 
-### FASE 7: Prossimo Sprint
+### PRIORITÀ 2: Test Pool Flessibile ("I Cugini")
+- PoC con task pilota (refactor 12 file mock)
+- Verificare speedup e qualità
+
+### FASE 7: Prossimo Sprint (dopo FASE 8 impl)
 - 7d: Distribution System (far arrivare lezioni agli agenti)
 - 7e: Automation (cron + weekly)
 
-### FASE 7.5: Prossimo Sprint
+### FASE 7.5: Prossimo Sprint (dopo FASE 8 impl)
 - 7.5b: Dispatcher (esegue strategia)
 - 7.5c: Conflict Detection
 
@@ -116,19 +123,18 @@ APRILE+:   🧬 EVOLUZIONE - Lo sciame che SI MIGLIORA
 
 ## 📅 ULTIMO AGGIORNAMENTO
 
-**1 Gennaio 2026 - Sessione 20** - 📜 **SWARM RULES + GUARDIANE!** 🛡️
+**1 Gennaio 2026 - Sessione 21** - 🎉 **TUTTI GLI STUDI COMPLETATI!** 🎉
 
-- **SWARM_RULES.md CREATO!** - Documento ufficiale regole dello sciame
-  - REGOLA 4: VERIFICA ATTIVA POST-AGENT (GAP colmato!)
-  - 9 regole totali documentate
-- **STUDIO 1 COMPLETATO!** - Gerarchia Guardiane
-  - 3 Guardiane: Qualita, Ricerca, Ops
-  - Opus per Guardiane, Sonnet per api
-  - Pattern Handoff + escalation
+- **FASE 8: STUDI 100% COMPLETATI!**
+  - ✅ Studio 1: Gerarchia Guardiane (3 Guardiane Opus)
+  - ✅ Studio 2: Pool Flessibile ("I Cugini") - max 3-5 paralleli
+  - ✅ Studio 3: Background Research Agent
+  - ✅ Studio 4: Background Technical Agent
+  - ✅ Studio 5: VERIFICA ATTIVA POST-AGENT (→ SWARM_RULES)
 - **FILE CREATI:**
-  - docs/SWARM_RULES.md (v1.0.0)
-  - docs/studio/STUDIO_GERARCHIE_MULTIAGENT.md
-- **PROSSIMO:** Studio 2 (Pool Flessibile) o Studio 3/4 (Background Agents)
+  - docs/studio/STUDIO_POOL_FLESSIBILE.md
+  - docs/studio/STUDIO_BACKGROUND_AGENTS.md
+- **PROSSIMO:** Implementare Prima Guardiana! 🛡️
 
 ---
 

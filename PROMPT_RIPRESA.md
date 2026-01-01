@@ -1,81 +1,85 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 20 - 📜 SWARM RULES + GUARDIANE! 🛡️
+> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 21 - 🎉 TUTTI GLI STUDI COMPLETATI! 🎉
 
 ---
 
-## 🛡️ SESSIONE 20 - SWARM RULES + GUARDIANE!
+## 🎉 SESSIONE 21 - TUTTI GLI STUDI COMPLETATI!
 
 ### COSA ABBIAMO FATTO
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   📜 SWARM_RULES.md CREATO!                                     ║
+║   🎉 FASE 8: TUTTI I 5 STUDI COMPLETATI!                        ║
 ║                                                                  ║
-║   REGOLA 4: VERIFICA ATTIVA POST-AGENT (GAP colmato!)          ║
-║   + 9 regole totali documentate                                 ║
-║   + cervella-orchestrator.md aggiornato                         ║
+║   ✅ Studio 1: Gerarchia Guardiane (3 Guardiane Opus)           ║
+║   ✅ Studio 2: Pool Flessibile ("I Cugini") - max 3-5           ║
+║   ✅ Studio 3: Background Research Agent                         ║
+║   ✅ Studio 4: Background Technical Agent                        ║
+║   ✅ Studio 5: VERIFICA ATTIVA POST-AGENT (→ SWARM_RULES)       ║
 ║                                                                  ║
-║   🔬 STUDIO 1 COMPLETATO: GERARCHIA GUARDIANE                   ║
+║   🔬 2 RICERCHE PARALLELE (cervella-researcher x2)              ║
+║   📝 2 DOCUMENTI CREATI (cervella-docs)                         ║
 ║                                                                  ║
-║   Risultato ricerca:                                            ║
-║   • 3 Guardiane ottimali (Qualita, Ricerca, Ops)               ║
-║   • Opus per Guardiane, Sonnet per api                         ║
-║   • Pattern Handoff + escalation selettivo                     ║
-║   • 80% overhead eliminato dalla Regina                        ║
+║   🚀 PRONTI PER IMPLEMENTAZIONE!                                 ║
 ║                                                                  ║
-║   "Lo sciame ora ha le sue REGOLE!" 📜🐝                        ║
+║   "Lo sciame ha studiato. Ora COSTRUISCE!" 🐝👑                  ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## 🎯 FASE 8: LA CORTE REALE - PROGRESSO 20%
+## 🎯 FASE 8: LA CORTE REALE - STUDI 100% ✅
 
 | Studio | Argomento | Status |
 |--------|-----------|--------|
 | 1 | Gerarchia Guardiane (Api di Corte) | ✅ COMPLETATO! |
-| 5 | Regola VERIFICA ATTIVA POST-AGENT | ✅ COMPLETATO! (→ SWARM_RULES.md) |
-| 2 | Pool Flessibile ("I Cugini") | ⬜ Da studiare |
-| 3 | Background Research Agent | ⬜ Da studiare |
-| 4 | Background Technical Agent | ⬜ Da studiare |
+| 2 | Pool Flessibile ("I Cugini") | ✅ COMPLETATO! |
+| 3 | Background Research Agent | ✅ COMPLETATO! |
+| 4 | Background Technical Agent | ✅ COMPLETATO! |
+| 5 | Regola VERIFICA ATTIVA POST-AGENT | ✅ COMPLETATO! |
 
 → File: `docs/roadmap/FASE_8_CORTE_REALE.md`
-→ Studio: `docs/studio/STUDIO_GERARCHIE_MULTIAGENT.md`
+→ Studi: `docs/studio/STUDIO_*.md`
 
 ---
 
-## 📋 FILE CREATI/MODIFICATI SESSIONE 20
+## 📋 FILE CREATI/MODIFICATI SESSIONE 21
 
 | File | Azione |
 |------|--------|
-| docs/SWARM_RULES.md | ✅ CREATO v1.0.0! |
-| docs/studio/STUDIO_GERARCHIE_MULTIAGENT.md | ✅ CREATO! |
-| cervella-orchestrator.md | ✅ Aggiornato con REGOLA 4 |
-| docs/roadmap/FASE_8_CORTE_REALE.md | ✅ Aggiornato (Studio 1 completato) |
+| docs/studio/STUDIO_POOL_FLESSIBILE.md | ✅ CREATO! |
+| docs/studio/STUDIO_BACKGROUND_AGENTS.md | ✅ CREATO! |
+| docs/roadmap/FASE_8_CORTE_REALE.md | ✅ Aggiornato (tutti studi ✅) |
 | NORD.md | ✅ Aggiornato |
-| ROADMAP_SACRA.md | ✅ v4.5.0 + CHANGELOG |
+| ROADMAP_SACRA.md | ✅ v4.6.0 + CHANGELOG |
 | PROMPT_RIPRESA.md | ✅ Aggiornato (questo file) |
 
 ---
 
 ## FILO DEL DISCORSO
 
-- 🧠 **Stavamo ragionando su:** Formalizzazione regole + Studio Guardiane
-- 🎯 **La direzione:** Completare studi FASE 8, poi implementare Guardiane
-- ⚡ **Il momentum:** ALTO! GAP colmato + ricerca completata!
-- 🚫 **Da NON fare:** Saltare studi rimanenti (Pool Flessibile, Background Agents)
-- 💡 **Principio chiave:** "Una Corte ben organizzata scala. Una Regina sola no." 👑
+- 🧠 **Stavamo ragionando su:** Completamento studi FASE 8
+- 🎯 **La direzione:** ORA → Implementare prima Guardiana!
+- ⚡ **Il momentum:** ALTISSIMO! Tutti gli studi completati!
+- 🚫 **Da NON fare:** Saltare direttamente a implementazione senza leggere studi
+- 💡 **Principio chiave:** "Studiato = Pronto a costruire DEL MODO MIGLIORE!" 💎
 
 ---
 
 ## 🚀 PROSSIMA SESSIONE
 
-**OPZIONE A:** Studio 2 - Pool Flessibile ("I Cugini")
-**OPZIONE B:** Studio 3/4 - Background Agents
-**OPZIONE C:** Implementare prima Guardiana (test su task reale)
+**PRIORITÀ 1:** Implementare Prima Guardiana 🛡️
+- Scegliere quale (Qualità consigliata)
+- Creare `cervella-guardiana-qualita.md`
+- Test su task reale
+
+**PRIORITÀ 2:** Test Pool Flessibile ("I Cugini")
+- PoC con task pilota (refactor 12 file mock)
+
+**OPZIONE C:** Continuare FASE 7d/7.5b (dopo FASE 8 impl)
 
 ---
 

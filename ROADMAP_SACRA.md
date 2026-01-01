@@ -17,7 +17,7 @@
 | 6 | Memoria | ✅ DONE | 100% |
 | 7 | Apprendimento | 🚀 IN CORSO | 40% |
 | 7.5 | Parallelizzazione | 🚀 IN CORSO | 20% |
-| 8 | La Corte Reale | 📚 IN STUDIO | 20% |
+| 8 | La Corte Reale | 🚀 STUDI COMPLETATI! | 50% |
 | 9 | Infrastruttura | ⬜ TODO | 0% |
 
 ---
@@ -192,12 +192,12 @@
 | # | Task | Stato | Note |
 |---|------|-------|------|
 | 8.0 | 🌟 FILOSOFIA DELL'EVOLUZIONE | ✅ DONE | Costituzione aggiornata! |
-| 8.1 | Studio Gerarchia Guardiane | ⬜ TODO | Quante? Quali ruoli? Come comunicano? |
-| 8.2 | Studio Pool Flessibile | ⬜ TODO | "I Cugini" - Dynamic Role Assignment |
-| 8.3 | Studio Background Research Agent | ⬜ TODO | Scienziata che cerca mentre lavoriamo |
-| 8.4 | Studio Background Technical Agent | ⬜ TODO | Refactor/ottimizzazione in background |
-| 8.5 | Regola VERIFICA ATTIVA POST-AGENT | ⬜ TODO | Formalizzare comportamento Regina |
-| 8.6 | Ricerche Best Practices | ⬜ TODO | Gerarchie multi-agent, patterns |
+| 8.1 | Studio Gerarchia Guardiane | ✅ DONE | 3 Guardiane Opus (Qualità, Ricerca, Ops) |
+| 8.2 | Studio Pool Flessibile | ✅ DONE | "I Cugini" - max 3-5 paralleli |
+| 8.3 | Studio Background Research Agent | ✅ DONE | run_in_background + TaskOutput |
+| 8.4 | Studio Background Technical Agent | ✅ DONE | Branch separati per sicurezza |
+| 8.5 | Regola VERIFICA ATTIVA POST-AGENT | ✅ DONE | SWARM_RULES.md Regola 4! |
+| 8.6 | Ricerche Best Practices | ✅ DONE | 3 documenti studio creati! |
 | 8.7 | Proposta Architettura v2.0 | ⬜ TODO | Sintesi finale |
 | 8.8 | Primo Prototipo | ⬜ TODO | Una Guardiana + Un Background Agent |
 
@@ -223,6 +223,26 @@
 ---
 
 ## 📝 CHANGELOG
+
+### 1 Gennaio 2026 (Sessione 21) - 🎉 TUTTI GLI STUDI COMPLETATI! 🎉
+
+- 🎉 **FASE 8: STUDI 100% COMPLETATI!**
+  - ✅ Studio 1: Gerarchia Guardiane (già da S20)
+  - ✅ Studio 2: Pool Flessibile ("I Cugini") - max 3-5 paralleli
+  - ✅ Studio 3: Background Research Agent - run_in_background
+  - ✅ Studio 4: Background Technical Agent - branch separati
+  - ✅ Studio 5: VERIFICA ATTIVA POST-AGENT (già da S20)
+- 🔬 **2 RICERCHE PARALLELE** completate:
+  - cervella-researcher → Pool Flessibile (Actor model, K8s scaling)
+  - cervella-researcher → Background Agents (Deep Agents, async patterns)
+- 📝 **cervella-docs** ha creato i documenti finali
+- 📂 **FILE CREATI:**
+  - docs/studio/STUDIO_POOL_FLESSIBILE.md
+  - docs/studio/STUDIO_BACKGROUND_AGENTS.md
+- 📋 **FASE_8_CORTE_REALE.md** aggiornato (tutte le tabelle ✅)
+- 🚀 **PRONTI PER IMPLEMENTAZIONE!**
+
+**Versione:** 4.6.0 (Minor: FASE 8 Studi Completati!)
 
 ### 1 Gennaio 2026 (Sessione 20) - 📜 SWARM RULES + STUDIO GUARDIANE! 🛡️
 
