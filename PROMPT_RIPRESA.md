@@ -1,61 +1,61 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 39 - 🧹 PULIZIA COMPLETATA
+> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 39 (PARTE 2) - 🔧 SISTEMA HOOKS OTTIMIZZATO
 
 ---
 
-## 🧹 SESSIONE 39 - PULIZIA E NUOVE REGOLE 🧹
+## 🔧 SESSIONE 39 (PARTE 2) - SISTEMA HOOKS OTTIMIZZATO 🔧
 
 ### COSA ABBIAMO FATTO
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   🧹 PULIZIA COMPLETATA!                                        ║
+║   🔧 SISTEMA HOOKS COMPLETO!                                    ║
 ║                                                                  ║
-║   ✅ Docker monitoring ARCHIVIATO → archived/docker/            ║
-║   ✅ Percentuali CORRETTE:                                      ║
-║      • FASE 9: 90% → 10%                                        ║
-║      • FASE 10: 95% → 75%                                       ║
-║   ✅ 4 NUOVE REGOLE aggiunte alla Costituzione                  ║
-║   ✅ Piano anti-"su carta" implementato                         ║
+║   ✅ PreCompact hook FIXATO                                     ║
+║      • Era: pre-compact.sh (solo log + notifica)               ║
+║      • Ora: pre_compact_save.py (snapshot completo!)           ║
+║                                                                  ║
+║   ✅ SessionEnd hook CREATO                                     ║
+║      • session_end_save.py                                      ║
+║      • Salva snapshot quando chiudi sessione                   ║
+║                                                                  ║
+║   ✅ Auto-update PROMPT_RIPRESA                                 ║
+║      • update_prompt_ripresa.py                                 ║
+║      • Aggiorna automaticamente questo file                    ║
+║                                                                  ║
+║   ✅ Git Reminder                                               ║
+║      • git_reminder.py                                          ║
+║      • Notifica ogni 30 min se file non committati             ║
+║                                                                  ║
+║   ✅ Backup in repo                                             ║
+║      • config/claude-hooks/ con tutti gli script               ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
-### LE 4 NUOVE REGOLE
+### SISTEMA HOOKS ATTIVO
 
-| # | Regola | Scopo |
-|---|--------|-------|
-| 18 | REALITY CHECK | 3 domande PRIMA di ogni task grande |
-| 19 | Metriche di VALORE | Mai piu contare righe, conta valore |
-| 20 | Prima BISOGNO | Non costruire prima di sapere cosa serve |
-| 21 | Domanda Monitoring | Non accendere luce in stanza vuota |
-
-### STATO ONESTO
-
-| Cosa | Stato | Note |
-|------|-------|------|
-| FASE 0-8 | ✅ 100% REALE | Funziona tutto |
-| 14 Agent | ✅ REALE | Globali e testati |
-| Memoria | ✅ REALE | Deployato 3 progetti |
-| FASE 9 | ⏸️ 10% | Docker archiviato |
-| FASE 10 | ✅ 75% | Scienziata + Ingegnera OK |
+| Evento | Script | Cosa Fa |
+|--------|--------|---------|
+| PreCompact | pre_compact_save.py + update_prompt_ripresa.py | Snapshot + PROMPT_RIPRESA |
+| SessionEnd | session_end_save.py + update_prompt_ripresa.py | Snapshot + PROMPT_RIPRESA + Notifica |
+| Stop | git_reminder.py | Reminder git (ogni 30 min) |
 
 ### FILO DEL DISCORSO
 
-- 🧠 **Abbiamo capito:** "5000 righe" ≠ successo, "1 cosa REALE" = successo
+- 🧠 **Abbiamo fatto:** Sistema hooks completo e testato
 - 🎯 **La direzione:** USARE lo sciame su progetti REALI
-- ⚡ **Lezione:** La Regina deve fare REALITY CHECK prima di delegare
-- 🚫 **Mai piu:** Costruire infrastruttura senza bisogno reale
+- ⚡ **Momentum:** Sistema automatico pronto, protegge dal compact
+- 🚫 **Mai piu:** Perdere contesto per compact improvviso
 - ✅ **Prossimo:** Miracollo o Contabilita con lo sciame
 
 ### TODO PROSSIMA SESSIONE
 
-- [ ] **Aggiungere lettura Costituzione al DNA delle 🐝**
-  - Per scritto, NON con hook (Rafa non si fida degli hook)
-  - Ogni agent legge ~/.claude/COSTITUZIONE.md PRIMA di lavorare
-  - 14 file da aggiornare in ~/.claude/agents/
+- [ ] **USARE lo sciame su Miracollo** (qualcosa di REALE!)
+- [ ] **USARE lo sciame su Contabilita** (qualcosa di REALE!)
+- [ ] **Aggiungere lettura Costituzione al DNA delle 🐝** (opzionale)
 
 ---
 

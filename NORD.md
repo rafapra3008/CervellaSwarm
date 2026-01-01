@@ -267,17 +267,22 @@ APRILE+:   🧬 EVOLUZIONE - Lo sciame che SI MIGLIORA
 
 ## 📅 ULTIMO AGGIORNAMENTO
 
-**2 Gennaio 2026 - Sessione 39** - 🧹 **PULIZIA COMPLETATA**
+**2 Gennaio 2026 - Sessione 39 (PARTE 2)** - 🔧 **SISTEMA HOOKS OTTIMIZZATO**
 
 ### Cosa abbiamo fatto:
-- Docker monitoring ARCHIVIATO in `archived/docker/`
-- Percentuali CORRETTE: FASE 9 (90%→10%), FASE 10 (95%→75%)
-- 4 NUOVE REGOLE aggiunte alla Costituzione (18-21)
-- Piano anti-"su carta" creato
+- ✅ **PreCompact hook FIXATO** - Ora usa pre_compact_save.py (snapshot completo)
+- ✅ **SessionEnd hook CREATO** - Salva snapshot quando chiudi sessione
+- ✅ **update_prompt_ripresa.py** - Auto-aggiorna PROMPT_RIPRESA.md
+- ✅ **git_reminder.py** - Notifica file non committati ogni 30 min
+- ✅ **Backup hooks** - config/claude-hooks/ nel repo
+- ✅ **Triple check PASSATO** - Tutto testato e funzionante
 
-### Lezione imparata:
-> "5000 righe" ≠ successo
-> "1 cosa REALE che funziona" = successo
+### Sistema Hooks Completo:
+```
+PreCompact → Snapshot + PROMPT_RIPRESA aggiornato
+SessionEnd → Snapshot + PROMPT_RIPRESA aggiornato + Notifica
+Stop       → Git reminder (ogni 30 min)
+```
 
 ### PROSSIMA SESSIONE:
 - USARE lo sciame su Miracollo (qualcosa di REALE!)
