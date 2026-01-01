@@ -15,6 +15,9 @@
 | 4 | Orchestrazione | ✅ DONE | 100% |
 | 5 | Produzione | ✅ DONE | 100% |
 | 6 | Memoria | 🚀 IN CORSO | 85% |
+| 7 | Apprendimento | ⬜ TODO | 0% |
+| 7.5 | Parallelizzazione | ⬜ TODO | 0% |
+| 8 | Infrastruttura | ⬜ TODO | 0% |
 
 ---
 
@@ -130,6 +133,34 @@
 |---|------|-------|------|
 | 7.1 | Prompt Analyzer | ⬜ TODO | Settimana 1-2 |
 | 7.2 | Template Repository | ⬜ TODO | Settimana 3-4 |
+
+---
+
+## FASE 7.5: Parallelizzazione Intelligente 🐝⚡ (Febbraio 2026)
+
+**Obiettivo:** Lo sciame che DIVIDE e CONQUISTA
+
+> *"Idea di Rafa, 1 Gennaio 2026 - Analizzata da cervella-researcher"*
+
+**Concept:** Quando un task richiede 3+ file, la Regina li divide tra più 🐝 specializzate che lavorano in PARALLELO.
+
+| # | Task | Stato | Note |
+|---|------|-------|------|
+| 7.5a | Analisi Task Intelligente | ⬜ TODO | Regina impara a scomporre |
+| 7.5b | Template Prompt Specializzati | ⬜ TODO | Interfacce tra componenti |
+| 7.5c | Test Reale (Miracollo) | ⬜ TODO | Primo task multi-file |
+| 7.5d | Documentazione Pattern | ⬜ TODO | UI+API, Refactor, Bugfix |
+| 7.5e | Integrazione SWARM_RULES | ⬜ TODO | Trigger automatici |
+
+**Benefici attesi:**
+- ✨ Qualità migliore (ogni 🐝 nel suo dominio)
+- ⚡ 30% tempo risparmiato
+- 🎯 Meno errori cross-domain
+
+**Quando usare:**
+- ≥3 file indipendenti
+- Domini diversi (frontend + backend + docs)
+- Tempo stimato > 30min
 
 ---
 
