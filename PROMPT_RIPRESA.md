@@ -1,6 +1,56 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 18 IMPLEMENTAZIONE!
+> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 18 (POST-COMPACT CHECKPOINT!)
+
+---
+
+## 🔴 SCOPERTA IMPORTANTE - LEGGI PRIMA! 🔴
+
+### GAP TROVATO: "VERIFICA ATTIVA POST-AGENT"
+
+Durante la sessione 18, Rafa ha osservato un pattern fondamentale:
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   🔍 IL PATTERN OSSERVATO (Test Parallelizzazione):              ║
+║                                                                  ║
+║   1. 🐝🐝🐝 Tre api lavorano in parallelo                        ║
+║   2. 👑 Regina verifica → 15/19 test passano                    ║
+║   3. 👑 Regina FA FIX per completare                            ║
+║   4. ✅ 19/19 test passano                                       ║
+║                                                                  ║
+║   QUESTO È IL TRIGGER: FIX_AFTER_AGENT! 🎯                      ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+**Il problema:** Il comportamento "verifica dopo task agent" esiste nel codice (`trigger_detector.py`), ma la REGOLA ESPLICITA per la Regina NON C'È!
+
+| Nella Costituzione | Nella Pratica | Gap |
+|-------------------|---------------|-----|
+| "Verifica" (generico) | Run test + Fix da sola | NON documentato! |
+| Non dice COME | 15/19 → fix → 19/19 | Comportamento implicito |
+| Non dice QUANDO | Lo fa "quando si ricorda" | Inconsistente |
+
+### PROPOSTA NUOVA REGOLA: "VERIFICA ATTIVA POST-AGENT"
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   DOPO ogni task delegato a una 🐝:                              ║
+║                                                                  ║
+║   1. ✅ SE ci sono test → RUN TEST                               ║
+║   2. ✅ SE test falliscono → FIX (Regina o ri-delega)            ║
+║   3. ✅ SE non ci sono test → CHECK VISIVO/LOGICO                ║
+║   4. ✅ SE trova problemi → DOCUMENTA (trigger per lezione!)     ║
+║                                                                  ║
+║   Questo renderebbe il comportamento SEMPRE consistente!         ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+**PROSSIMA SESSIONE:** Studiare e formalizzare questa regola!
 
 ---
 
@@ -70,27 +120,42 @@
   - FASE 7a/7b/7c: Schema + Trigger + Wizard
   - FASE 7.5a: Task Analyzer
   - 10 file nuovi, 1885 righe di codice!
-- 🎯 **La direzione:** Continuare FASE 7d (Distribution) e FASE 7.5b (Dispatcher)
-- ⚡ **Il momentum:** ALTISSIMO! Implementazione fluida!
+- 🔴 **SCOPERTA IMPORTANTE:** Rafa ha notato il pattern FIX_AFTER_AGENT!
+  - Quando 🐝 fanno 15/19, la Regina completa a 19/19
+  - Questo comportamento NON è documentato esplicitamente
+  - PROPOSTA: Nuova regola "VERIFICA ATTIVA POST-AGENT"
+- 🎯 **La direzione:**
+  1. Studiare e formalizzare regola VERIFICA ATTIVA POST-AGENT
+  2. Poi continuare FASE 7d (Distribution) e FASE 7.5b (Dispatcher)
+- ⚡ **Il momentum:** ALTISSIMO! Scoperta di un GAP importante!
 - 🚫 **Da NON fare:** Saltare test, tutto deve funzionare prima di andare avanti
 - 💡 **Principio chiave:** "Lo sciame che IMPARA e DIVIDE!" 🧠⚡
+- 🎯 **Nuova intuizione:** La Regina deve SEMPRE verificare dopo le 🐝 - non "quando si ricorda"!
 
 ---
 
 ## 🚀 PROSSIMA SESSIONE - COSA FARE
 
-### 🎯 OBIETTIVO: Continuare IMPLEMENTAZIONE!
+### 🎯 OBIETTIVO PRIORITARIO: Formalizzare "VERIFICA ATTIVA POST-AGENT"
 
 ### 📋 ORDINE CONSIGLIATO
 
-**OPZIONE A: FASE 7d - Distribution System**
+**PRIORITÀ 1: Studiare la nuova regola (30 min)**
+```
+1. Discutere con Rafa la proposta
+2. Decidere COME/QUANDO/COSA verificare
+3. Aggiungere alla Costituzione o SWARM_RULES
+4. Aggiornare cervella-orchestrator.md
+```
+
+**PRIORITÀ 2: FASE 7d - Distribution System**
 ```
 1. Creare retrieve_lessons.py (recupero lezioni per agenti)
 2. Integrare con load_context.py (mostra lezioni rilevanti)
 3. Test integrazione
 ```
 
-**OPZIONE B: FASE 7.5b - Dispatcher**
+**PRIORITÀ 3: FASE 7.5b - Dispatcher**
 ```
 1. Creare dispatcher.py (esegue strategia da task_analyzer)
 2. Integrare con Regina (auto-invoke agenti paralleli)
@@ -100,11 +165,11 @@
 ### ⚡ PRIMO COMANDO SUGGERITO
 
 ```
+"Cervella, studiamo la regola VERIFICA ATTIVA POST-AGENT!"
+```
+oppure se già discussa:
+```
 "Cervella, continuiamo FASE 7d: Distribution System!"
-```
-oppure
-```
-"Cervella, continuiamo FASE 7.5b: Dispatcher!"
 ```
 
 ---

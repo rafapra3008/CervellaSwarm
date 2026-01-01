@@ -44,7 +44,27 @@ Abbiamo:
 
 ---
 
+## 🔴 SCOPERTA IMPORTANTE - PRIORITÀ!
+
+### GAP TROVATO: "VERIFICA ATTIVA POST-AGENT"
+
+Rafa ha osservato che la Regina verifica dopo le 🐝, ma questo NON è documentato!
+
+```
+Quando 🐝 fanno 15/19 → Regina fix → 19/19
+QUESTO comportamento deve essere una REGOLA esplicita!
+```
+
+**PROPOSTA:** Formalizzare regola "VERIFICA ATTIVA POST-AGENT" prima di continuare.
+
+---
+
 ## 🎯 PROSSIMI STEP
+
+### PRIORITÀ 1: Formalizzare Regola
+- Studiare VERIFICA ATTIVA POST-AGENT
+- Aggiungere a SWARM_RULES o Costituzione
+- Aggiornare cervella-orchestrator.md
 
 ### FASE 7: Prossimo Sprint
 - 7d: Distribution System (far arrivare lezioni agli agenti)
@@ -93,13 +113,15 @@ APRILE+:   🧬 EVOLUZIONE - Lo sciame che SI MIGLIORA
 
 ## 📅 ULTIMO AGGIORNAMENTO
 
-**1 Gennaio 2026 - Sessione 18** - 🧠📊 **IMPLEMENTAZIONE FASE 7 + 7.5!**
+**1 Gennaio 2026 - Sessione 18 (POST-COMPACT)** - 🔴 **SCOPERTA GAP IMPORTANTE!**
 
+- **SCOPERTA:** Pattern FIX_AFTER_AGENT osservato ma NON documentato!
+- **PROPOSTA:** Nuova regola "VERIFICA ATTIVA POST-AGENT"
+- **PRIORITÀ:** Formalizzare prima di continuare implementazione
 - **FASE 7a-b-c:** Schema upgrade + Trigger Detector + Wizard COMPLETATI!
 - **FASE 7.5a:** Task Analyzer con Decision Matrix COMPLETATO!
 - 10 file creati, 1885 righe di codice nuovo!
-- Test passati: 7/7 wizard, DB save OK, Task Analyzer OK
-- "Lo sciame che IMPARA e DIVIDE!" 🐝🧠⚡
+- "Lo sciame che IMPARA, DIVIDE e si MIGLIORA!" 🐝🧠⚡
 
 ---
 

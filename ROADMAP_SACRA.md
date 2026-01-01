@@ -193,6 +193,21 @@
 
 ## 📝 CHANGELOG
 
+### 1 Gennaio 2026 (Sessione 18 - POST COMPACT) - 🔴 SCOPERTA GAP IMPORTANTE!
+
+- 🔴 **SCOPERTA:** Rafa ha osservato pattern FIX_AFTER_AGENT:
+  - Quando 🐝 fanno 15/19, la Regina completa a 19/19
+  - Questo comportamento NON è documentato esplicitamente!
+- 🔴 **PROPOSTA:** Nuova regola "VERIFICA ATTIVA POST-AGENT"
+  - DOPO ogni task delegato: RUN TEST → FIX → DOCUMENTA
+  - Comportamento SEMPRE consistente, non "quando si ricorda"
+- 📋 **PRIORITÀ:** Formalizzare regola prima di continuare FASE 7d/7.5b
+- ✅ Checkpoint salvato pre-compact
+- ✅ PROMPT_RIPRESA.md aggiornato con scoperta
+- ✅ NORD.md aggiornato con nuova priorità
+
+**Versione:** 4.3.1 (Patch: Scoperta GAP + Checkpoint)
+
 ### 1 Gennaio 2026 (Sessione 18) - 🧠📊 IMPLEMENTAZIONE FASE 7 + 7.5!
 
 - ✅ **FASE 7a COMPLETATA!** - Schema DB v1.2.0:
