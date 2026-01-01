@@ -1,58 +1,60 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 38 (Chiusura) - 🔍 RIFLESSIONE ONESTA
+> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 39 - 🧹 PULIZIA COMPLETATA
 
 ---
 
-## 🔍 SESSIONE 38 (CHIUSURA) - RIFLESSIONE IMPORTANTE 🔍
+## 🧹 SESSIONE 39 - PULIZIA E NUOVE REGOLE 🧹
 
-### LA DOMANDA CHE CI HA FERMATI
+### COSA ABBIAMO FATTO
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   Rafa: "ma cosa faremmo deploy su VM? come funzionera?"        ║
+║   🧹 PULIZIA COMPLETATA!                                        ║
 ║                                                                  ║
-║   Cervella: "...non c'e niente da monitorare H24.               ║
-║              Lo sciame gira solo quando lavoriamo insieme."      ║
-║                                                                  ║
-║   Rafa: "leggi la costituzione globale..                        ║
-║          c'e qualcosa che non sembra bene.."                    ║
-║                                                                  ║
-║   Costituzione dice:                                             ║
-║   "SU CARTA ≠ REALE"                                            ║
-║   "SOLO le cose REALI ci portano alla LIBERTÀ GEOGRAFICA!"      ║
+║   ✅ Docker monitoring ARCHIVIATO → archived/docker/            ║
+║   ✅ Percentuali CORRETTE:                                      ║
+║      • FASE 9: 90% → 10%                                        ║
+║      • FASE 10: 95% → 75%                                       ║
+║   ✅ 4 NUOVE REGOLE aggiunte alla Costituzione                  ║
+║   ✅ Piano anti-"su carta" implementato                         ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
-### COSA ABBIAMO CREATO (SU CARTA)
+### LE 4 NUOVE REGOLE
 
-| Cosa | Righe | Stato REALE |
-|------|-------|-------------|
-| Docker monitoring | 2,743 | Non deployato, non serve ancora |
-| PR automatiche | ~500 | Non testate in uso reale |
-| Swarm exporter | 855 | Monitora cosa? Niente gira H24 |
-| FASE 12 studio | ~300 | ✅ Questo SI e utile! |
+| # | Regola | Scopo |
+|---|--------|-------|
+| 18 | REALITY CHECK | 3 domande PRIMA di ogni task grande |
+| 19 | Metriche di VALORE | Mai piu contare righe, conta valore |
+| 20 | Prima BISOGNO | Non costruire prima di sapere cosa serve |
+| 21 | Domanda Monitoring | Non accendere luce in stanza vuota |
 
-### LA LEZIONE
+### STATO ONESTO
 
-Abbiamo costruito infrastruttura per qualcosa che NON ESISTE ANCORA.
-Abbiamo detto "90%, 95%" quando in realta e tutto SU CARTA.
+| Cosa | Stato | Note |
+|------|-------|------|
+| FASE 0-8 | ✅ 100% REALE | Funziona tutto |
+| 14 Agent | ✅ REALE | Globali e testati |
+| Memoria | ✅ REALE | Deployato 3 progetti |
+| FASE 9 | ⏸️ 10% | Docker archiviato |
+| FASE 10 | ✅ 75% | Scienziata + Ingegnera OK |
 
-### FILO DEL DISCORSO (per prossima sessione)
+### FILO DEL DISCORSO
 
-- 🧠 **Stavamo ragionando su:** Cosa e REALE vs cosa e SU CARTA
-- 🎯 **La direzione era:** Essere onesti con noi stessi
-- ⚡ **Scoperta:** Abbiamo violato "SU CARTA ≠ REALE"
-- 🚫 **Da NON fare:** Continuare a costruire senza bisogno reale
-- ✅ **Da FARE:** Tornare a progetti che generano VALORE (Miracollo, Contabilita)
+- 🧠 **Abbiamo capito:** "5000 righe" ≠ successo, "1 cosa REALE" = successo
+- 🎯 **La direzione:** USARE lo sciame su progetti REALI
+- ⚡ **Lezione:** La Regina deve fare REALITY CHECK prima di delegare
+- 🚫 **Mai piu:** Costruire infrastruttura senza bisogno reale
+- ✅ **Prossimo:** Miracollo o Contabilita con lo sciame
 
-### PROSSIMA SESSIONE - DOMANDE APERTE
+---
 
-1. Cosa di CervellaSwarm ha senso rendere REALE ora?
-2. Serve monitoring se lo sciame non gira H24?
-3. Meglio tornare a Miracollo/Contabilita e usare lo sciame LA?
+## 📝 SESSIONE 38 - LA RIFLESSIONE
+
+La domanda che ci ha fermati: *"Ma cosa monitorerebbe questo stack? Lo sciame non gira H24!"*
 
 ---
 
@@ -620,3 +622,21 @@ FASI COMPLETATE: 8/9 (89%)
 *"I pattern sono guide, non regole rigide!"* 📚💎
 
 *"Uno sciame di Cervelle. Ovunque tu vada!"* 🐝💙
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-01 20:13 (test)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: ad36e37 - 🔍 Sessione 38 Chiusura: RIFLESSIONE ONESTA - SU CARTA ≠ REALE
+- **File modificati** (3):
+  - ata/logs/hook_debug.log
+  - data/logs/subagent_stop_debug.log
+  - data/swarm_memory.db
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: test
+
+---

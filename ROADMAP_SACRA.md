@@ -18,8 +18,8 @@
 | 7 | Apprendimento | ✅ DONE | 100% |
 | 7.5 | Parallelizzazione | ✅ DONE | 100% |
 | 8 | La Corte Reale | ✅ DONE | 100% |
-| 9 | Infrastruttura | 🔄 IN CORSO | 90% |
-| 10 | Automazione Intelligente | 🔄 IN CORSO | 95% |
+| 9 | Infrastruttura | ⏸️ ARCHIVIATA | 10% |
+| 10 | Automazione Intelligente | ✅ REALE | 75% |
 | 11 | Sistema Roadmap Visuale | 💭 IDEA | 0% |
 | 12 | Standard e Biblioteca Comune | 🔄 IN CORSO | 25% |
 
@@ -234,7 +234,7 @@
 | 9b | FASE 9b: Task Programmati | ⬜ TODO | Febbraio 2026 |
 | 9c | FASE 9c: Agent Autonomo | ⬜ TODO | Q2-Q3 2026 |
 
-**FASE 9a: 90% COMPLETATA!** Solo deploy VM manca!
+**FASE 9a: ⏸️ ARCHIVIATA (10%)** - Codice creato ma NIENTE da monitorare H24. Archiviato in `archived/docker/`
 
 → **Piano dettagliato:** `docs/roadmap/FASE_9_INFRASTRUTTURA.md`
 
@@ -261,7 +261,7 @@
 | 10c.3 | RICERCA_PR_AUTOMATICHE.md | ✅ DONE | Best practices! |
 | 10d | Ottimizzazione | ⬜ TODO | Metriche, tuning |
 
-**FASE 10: 95% COMPLETATA!** Solo ottimizzazione finale manca!
+**FASE 10: 75% REALE** - Scienziata + Ingegnera funzionano! Hook da testare in uso reale.
 
 **L'Idea:**
 ```
@@ -339,6 +339,32 @@ Condividiamo PATTERN e STANDARD, non file.
 ---
 
 ## 📝 CHANGELOG
+
+### 2 Gennaio 2026 (Sessione 39) - 🧹 PULIZIA E NUOVE REGOLE
+
+- 🧹 **PULIZIA COMPLETATA:**
+  - Docker monitoring ARCHIVIATO in `archived/docker/`
+  - Percentuali corrette: FASE 9 (90%→10%), FASE 10 (95%→75%)
+  - Stato onesto: cosa e REALE vs SU CARTA
+- 📜 **4 NUOVE REGOLE AGGIUNTE ALLA COSTITUZIONE:**
+  - REGOLA 18: REALITY CHECK obbligatorio (3 domande prima di ogni task)
+  - REGOLA 19: Metriche di VALORE, non quantita
+  - REGOLA 20: Prima il BISOGNO, poi la soluzione
+  - REGOLA 21: La domanda del monitoring
+- 🎯 **LEZIONE IMPARATA:**
+  - "MEGA SPRINT! 5000 righe!" = FALSO successo
+  - "1 cosa REALE che funziona" = VERO successo
+  - La Regina deve fare REALITY CHECK prima di delegare
+- ✅ **COSA RIMANE REALE:**
+  - 14 Agent globali (tutti funzionanti)
+  - Sistema Memoria (deployato 3 progetti)
+  - Pattern Catalog (validato)
+  - Scienziata + Ingegnera (testate)
+  - FASE 0-8 (100% reali)
+
+**Versione:** 10.0.0 (MAJOR: Pulizia + Nuove Regole Anti-SuCarta!)
+
+---
 
 ### 1 Gennaio 2026 (Sessione 38 - CHIUSURA) - 🔍 RIFLESSIONE ONESTA
 
