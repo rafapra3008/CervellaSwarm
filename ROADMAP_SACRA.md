@@ -154,13 +154,15 @@
 
 **Benefici attesi:**
 - ✨ Qualità migliore (ogni 🐝 nel suo dominio)
-- ⚡ 30% tempo risparmiato
+- ⚡ 36% tempo risparmiato (benchmark 2025)
 - 🎯 Meno errori cross-domain
 
 **Quando usare:**
 - ≥3 file indipendenti
 - Domini diversi (frontend + backend + docs)
 - Tempo stimato > 30min
+
+→ **Piano dettagliato:** `docs/roadmap/FASE_7.5_PARALLELIZZAZIONE.md` (607 righe! 📋)
 
 ---
 
@@ -176,6 +178,23 @@
 ---
 
 ## 📝 CHANGELOG
+
+### 1 Gennaio 2026 (Sessione 17) - 🐝⚡ FASE 7.5 PIANIFICATA!
+
+- ✅ **FASE 7.5 ROADMAP CREATA!** - 607 righe di piano dettagliato!
+- ✅ **Ricerca Parallelizzazione** - Best practices 2025-2026
+- ✅ **Ricerca Agenti Dinamici** - Idea Rafa analizzata!
+- ✅ **FASE_7.5_PARALLELIZZAZIONE.md** - Piano completo con:
+  - 5 Sprint dettagliati
+  - Architettura + diagrammi
+  - Template prompt paralleli
+  - Merge strategy
+  - Test plan + metriche
+- ✅ **INDICE.md aggiornato** - Link al nuovo file
+
+**Lo sciame si prepara a DIVIDERE e CONQUISTARE!** 🐝⚡
+
+**Versione:** 4.1.0 (Minor: FASE 7.5 Planning)
 
 ### 1 Gennaio 2026 (Sessione 16) - 🎉 MEMORY v1.0 RELEASED! 🧠
 

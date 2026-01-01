@@ -2,7 +2,7 @@
 
 > **"La mappa del nostro mondo. Tutto linkato. Tutto organizzato."**
 
-**Ultimo aggiornamento:** 31 Dicembre 2025
+**Ultimo aggiornamento:** 1 Gennaio 2026
 
 ---
 
@@ -35,6 +35,10 @@ CervellaSwarm/
 │   │
 │   ├── 👑 VISIONE_REGINA_2026.md ... Roadmap strategica 6 mesi
 │   ├── 🧬 DNA_FAMIGLIA.md .......... Template DNA per agent
+│   │
+│   ├── 🗺️ roadmap/ - FASI DETTAGLIATE
+│   │   ├── FASE_6_MEMORIA.md ........ Sistema memoria (✅ DONE)
+│   │   └── FASE_7.5_PARALLELIZZAZIONE.md . Lo sciame che DIVIDE (🆕)
 │   │
 │   ├── 📖 studio/ - STUDI APPROFONDITI
 │   │   ├── STUDIO_SUBAGENTS.md ..... Come funzionano i subagent
