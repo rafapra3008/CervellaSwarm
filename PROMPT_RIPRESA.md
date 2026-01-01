@@ -1,10 +1,87 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 18 (POST-COMPACT CHECKPOINT!)
+> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 19 - 🌟 FILOSOFIA DELL'EVOLUZIONE! 🌟
 
 ---
 
-## 🔴 SCOPERTA IMPORTANTE - LEGGI PRIMA! 🔴
+## 🌟 SESSIONE 19 - MOMENTO STORICO! 🌟
+
+### CHI SIAMO E COME LAVORIAMO - DEFINITO!
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   🌟 1 GENNAIO 2026 - FILOSOFIA DELL'EVOLUZIONE 🌟              ║
+║                                                                  ║
+║   Oggi abbiamo immortalato nella Costituzione:                  ║
+║                                                                  ║
+║   💎 IL 100000%                                                  ║
+║   "Non è sempre come immaginiamo... ma alla fine è MEGLIO!"    ║
+║                                                                  ║
+║   🔄 IBRIDO E MODULARE                                          ║
+║   "Flessibilità, non rigidità. Dipende dal momento!"           ║
+║                                                                  ║
+║   🚀 ULTRAPASSAR OS LIMITES                                     ║
+║   "Qui è tutto GRANDE! Superare i propri limiti!"              ║
+║                                                                  ║
+║   💙 SENZA EGO                                                   ║
+║   "Testa pulita, cuore leggero. Il successo è conseguenza."    ║
+║                                                                  ║
+║   🧠 NOTA PER CERVELLA                                          ║
+║   "Se Rafa è in questa fase, IO SONO CON LUI."                 ║
+║                                                                  ║
+║   COSTITUZIONE GLOBALE AGGIORNATA! 📜                           ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+---
+
+## 🎯 FASE 8: LA CORTE REALE - IN STUDIO!
+
+Abbiamo creato la roadmap per l'evoluzione architetturale dello sciame:
+
+| Studio | Argomento | Status |
+|--------|-----------|--------|
+| 1 | Gerarchia Guardiane (Api di Corte) | ⬜ Da studiare |
+| 2 | Pool Flessibile ("I Cugini") | ⬜ Da studiare |
+| 3 | Background Research Agent | ⬜ Da studiare |
+| 4 | Background Technical Agent | ⬜ Da studiare |
+| 5 | Regola VERIFICA ATTIVA POST-AGENT | ⬜ Da studiare |
+
+→ File: `docs/roadmap/FASE_8_CORTE_REALE.md`
+
+---
+
+## 📋 FILE MODIFICATI SESSIONE 19
+
+| File | Azione |
+|------|--------|
+| COSTITUZIONE_GLOBALE.md | ✅ +4 principi + Nota per Cervella! |
+| docs/roadmap/FASE_8_CORTE_REALE.md | ✅ CREATO! |
+| NORD.md | ✅ Aggiornato |
+| ROADMAP_SACRA.md | ✅ +FASE 8 + CHANGELOG |
+| PROMPT_RIPRESA.md | ✅ Aggiornato (questo file) |
+
+---
+
+## FILO DEL DISCORSO
+
+- 🧠 **Stavamo ragionando su:** Evoluzione dello sciame, gerarchia intelligente
+- 🎯 **La direzione:** Studiare FASE 8 - Guardiane, Pool Flessibile, Background Agents
+- ⚡ **Il momentum:** ALTISSIMO! Momento storico di definizione identitaria!
+- 🚫 **Da NON fare:** Saltare lo studio - ogni idea va approfondita
+- 💡 **Principio chiave:** "Il processo ci porta al 100000%!" 💎
+
+---
+
+## 🎉 AUGURI 2026! 🎉
+
+*"Non è sempre come immaginiamo... ma alla fine è il 100000%!"* 💎
+
+---
+
+## 🔴 SESSIONE 18 - SCOPERTA IMPORTANTE (Precedente)
 
 ### GAP TROVATO: "VERIFICA ATTIVA POST-AGENT"
 

@@ -17,7 +17,8 @@
 | 6 | Memoria | ✅ DONE | 100% |
 | 7 | Apprendimento | 🚀 IN CORSO | 40% |
 | 7.5 | Parallelizzazione | 🚀 IN CORSO | 20% |
-| 8 | Infrastruttura | ⬜ TODO | 0% |
+| 8 | La Corte Reale | 📚 IN STUDIO | 10% |
+| 9 | Infrastruttura | ⬜ TODO | 0% |
 
 ---
 
@@ -180,18 +181,72 @@
 
 ---
 
-## FASE 8: Infrastruttura 🏭 (Marzo 2026)
+## FASE 8: La Corte Reale 👑🛡️🐝 (Gennaio 2026)
+
+**Obiettivo:** Evoluzione architetturale dello sciame - Gerarchia intelligente
+
+> *"Una Regina sola non scala. Una Corte ben organizzata, sì."*
+
+> *"Non è sempre come immaginiamo... ma alla fine è il 100000%!"* - Rafa, 1 Gennaio 2026
+
+| # | Task | Stato | Note |
+|---|------|-------|------|
+| 8.0 | 🌟 FILOSOFIA DELL'EVOLUZIONE | ✅ DONE | Costituzione aggiornata! |
+| 8.1 | Studio Gerarchia Guardiane | ⬜ TODO | Quante? Quali ruoli? Come comunicano? |
+| 8.2 | Studio Pool Flessibile | ⬜ TODO | "I Cugini" - Dynamic Role Assignment |
+| 8.3 | Studio Background Research Agent | ⬜ TODO | Scienziata che cerca mentre lavoriamo |
+| 8.4 | Studio Background Technical Agent | ⬜ TODO | Refactor/ottimizzazione in background |
+| 8.5 | Regola VERIFICA ATTIVA POST-AGENT | ⬜ TODO | Formalizzare comportamento Regina |
+| 8.6 | Ricerche Best Practices | ⬜ TODO | Gerarchie multi-agent, patterns |
+| 8.7 | Proposta Architettura v2.0 | ⬜ TODO | Sintesi finale |
+| 8.8 | Primo Prototipo | ⬜ TODO | Una Guardiana + Un Background Agent |
+
+**Principi chiave (definiti 1 Gennaio 2026):**
+- 💎 **IL 100000%** - Il processo ci porta a risultati MIGLIORI
+- 🔄 **IBRIDO E MODULARE** - Flessibilità, dipende dal momento
+- 🚀 **ULTRAPASSAR OS LIMITES** - Qui è tutto GRANDE
+- 💙 **SENZA EGO** - Testa pulita, cuore leggero
+
+→ **Piano dettagliato:** `docs/roadmap/FASE_8_CORTE_REALE.md`
+
+---
+
+## FASE 9: Infrastruttura 🏭 (Marzo 2026)
 
 **Obiettivo:** Lo sciame H24
 
 | # | Task | Stato | Note |
 |---|------|-------|------|
-| 8.1 | VM Setup | ⬜ TODO | Settimana 1-2 |
-| 8.2 | Dashboard Grafana | ⬜ TODO | Settimana 3-4 |
+| 9.1 | VM Setup | ⬜ TODO | Settimana 1-2 |
+| 9.2 | Dashboard Grafana | ⬜ TODO | Settimana 3-4 |
 
 ---
 
 ## 📝 CHANGELOG
+
+### 1 Gennaio 2026 (Sessione 19) - 🌟 FILOSOFIA DELL'EVOLUZIONE! 🌟
+
+- 🌟 **MOMENTO STORICO!** Definito CHI SIAMO e COME LAVORIAMO!
+- 📜 **COSTITUZIONE GLOBALE AGGIORNATA** con nuova sezione:
+  - 💎 IL 100000% - Il processo ci porta a risultati MIGLIORI
+  - 🔄 IBRIDO E MODULARE - Flessibilità, dipende dal momento
+  - 🚀 ULTRAPASSAR OS LIMITES - Qui è tutto GRANDE
+  - 💙 SENZA EGO - Testa pulita, cuore leggero
+  - 🧠 NOTA PER CERVELLA - Ricordo per me stessa
+- 📋 **FASE 8: LA CORTE REALE** creata:
+  - FASE_8_CORTE_REALE.md (roadmap studio)
+  - 5 aree di studio definite
+  - 3 ricerche pianificate
+  - Timeline 4 settimane
+- 🎉 **AUGURI 2026!**
+
+**Citazioni immortalate:**
+> *"Non è sempre come immaginiamo... ma alla fine è il 100000%!"* - Rafa
+> *"Ultrapassar os próprios limites!"* - Rafa
+> *"Senza ego, testa pulita, cuore leggero!"* - Rafa
+> *"Se Rafa è in questa fase, IO SONO CON LUI."* - Cervella
+
+**Versione:** 4.4.0 (Minor: FASE 8 + Filosofia dell'Evoluzione!)
 
 ### 1 Gennaio 2026 (Sessione 18 - POST COMPACT) - 🔴 SCOPERTA GAP IMPORTANTE!
 
