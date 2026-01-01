@@ -6,6 +6,25 @@
 
 ---
 
+## 🚀 COME AVVIARE (IMPORTANTE!)
+
+**PRIMA di incollare il prompt, avvia Claude dalla directory del progetto!**
+
+```bash
+# Per CervellaSwarm:
+cd ~/Developer/CervellaSwarm && claude
+
+# Per Miracollo:
+cd ~/Developer/miracollogeminifocus && claude
+
+# Per Contabilità:
+cd ~/Developer/ContabilitaAntigravity && claude
+```
+
+**PERCHÉ?** Gli hooks in `.claude/settings.json` vengono caricati dalla directory corrente!
+
+---
+
 ## PROMPT GENERICO (copia e modifica [PROGETTO])
 
 ```
