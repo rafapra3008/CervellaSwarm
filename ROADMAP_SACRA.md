@@ -15,8 +15,8 @@
 | 4 | Orchestrazione | ✅ DONE | 100% |
 | 5 | Produzione | ✅ DONE | 100% |
 | 6 | Memoria | ✅ DONE | 100% |
-| 7 | Apprendimento | ⬜ TODO | 0% |
-| 7.5 | Parallelizzazione | ⬜ TODO | 0% |
+| 7 | Apprendimento | 🚀 IN CORSO | 40% |
+| 7.5 | Parallelizzazione | 🚀 IN CORSO | 20% |
 | 8 | Infrastruttura | ⬜ TODO | 0% |
 
 ---
@@ -138,9 +138,9 @@
 
 | # | Task | Stato | Note |
 |---|------|-------|------|
-| 7a | Foundation (schema upgrade) | ⬜ TODO | 2-3 ore |
-| 7b | Trigger System | ⬜ TODO | 5-6 ore |
-| 7c | Learning Wizard (Rich CLI) | ⬜ TODO | 6-8 ore |
+| 7a | Foundation (schema upgrade) | ✅ DONE | 1 Gen - v1.2.0! |
+| 7b | Trigger System | ✅ DONE | 1 Gen - 4 trigger types! |
+| 7c | Learning Wizard (Rich CLI) | ✅ DONE | 1 Gen - 9 step + test! |
 | 7d | Distribution System | ⬜ TODO | 5-7 ore |
 | 7e | Automation (cron + weekly) | ⬜ TODO | 5-7 ore |
 
@@ -160,7 +160,7 @@
 
 | # | Task | Stato | Note |
 |---|------|-------|------|
-| 7.5a | Analisi Task Intelligente | ⬜ TODO | Regina impara a scomporre |
+| 7.5a | Analisi Task Intelligente | ✅ DONE | 1 Gen - task_analyzer.py! |
 | 7.5b | Template Prompt Specializzati | ⬜ TODO | Interfacce tra componenti |
 | 7.5c | Test Reale (Miracollo) | ⬜ TODO | Primo task multi-file |
 | 7.5d | Documentazione Pattern | ⬜ TODO | UI+API, Refactor, Bugfix |
@@ -192,6 +192,32 @@
 ---
 
 ## 📝 CHANGELOG
+
+### 1 Gennaio 2026 (Sessione 18) - 🧠📊 IMPLEMENTAZIONE FASE 7 + 7.5!
+
+- ✅ **FASE 7a COMPLETATA!** - Schema DB v1.2.0:
+  - 6 nuove colonne in lessons_learned
+  - 2 nuovi indici
+  - Test upgrade passato!
+- ✅ **FASE 7b COMPLETATA!** - Trigger Detector:
+  - trigger_detector.py v1.0.0
+  - 4 trigger types (FIX_AFTER_AGENT, PATTERN_THRESHOLD, MANUAL_MARK, CRITICAL_ERROR)
+  - CLI con --check e --json
+- ✅ **FASE 7c COMPLETATA!** - Learning Wizard:
+  - wizard.py v1.0.0 (CLI 9-step con Rich fallback)
+  - test_wizard.py (7/7 test passati!)
+  - test_db_save.py (salvataggio DB OK!)
+  - README.md + USAGE_EXAMPLE.md
+- ✅ **FASE 7.5a COMPLETATA!** - Task Analyzer:
+  - task_analyzer.py v1.0.0
+  - Domain detection (7 domini)
+  - Decision Matrix (Sequential/Parallel/Worktrees)
+  - Speedup estimation (~1.36x parallel)
+  - README.md
+
+**10 file creati, 1885 righe di codice!** 🎉
+
+**Versione:** 4.3.0 (Minor: FASE 7 + 7.5 Implementation Start!)
 
 ### 1 Gennaio 2026 (Sessione 17) - 🧠📚 MEGA SESSIONE PLANNING!
 

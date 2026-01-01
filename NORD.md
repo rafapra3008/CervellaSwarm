@@ -15,47 +15,44 @@
 
 ## 🎯 DOVE SIAMO
 
-**FASE 6: Memoria** - 🧠 COMPLETATA AL 100%! ✅🎉
+**FASE 7 + 7.5: Implementazione IN CORSO!** 🧠📊🚀
 
 Abbiamo:
-- [x] FASE 0+1+2+3+4+5 completate!
+- [x] FASE 0+1+2+3+4+5+6 completate!
 - [x] 11 subagent GLOBALI (famiglia completa!)
 - [x] VISIONE 2026 definita
 - [x] **SISTEMA MEMORIA v2.1.0 FUNZIONANTE!** ✅
-  - Schema SQLite (3 tabelle + 9 indici)
-  - **9 script Python** (init, log, load, query, analytics, pattern_detector, weekly_retro, suggestions, test)
-  - Hook configurati (SessionStart + PostToolUse)
-  - **5 LEZIONI STORICHE** dalla Costituzione!
-  - **analytics.py v2.0.0** con Rich + 8 comandi!
-  - **pattern_detector.py** per auto-detection errori!
-  - **weekly_retro.py** per report settimanali!
-  - **suggestions.py v1.0.0** - SUGGERIMENTI AUTOMATICI! 💡
-  - **load_context.py v1.1.0** - Mostra suggerimenti a SessionStart!
-  - **Integrazione GLOBALE** con tutti i progetti!
 
----
-
-## 🎯 PROSSIMI OBIETTIVI (Febbraio 2026)
-
-### FASE 7: Continuous Learning 📚🧠
-**Piano:** `docs/roadmap/FASE_7_LEARNING.md` (800+ righe!)
-
-Lo sciame che IMPARA automaticamente:
-- ⬜ 7a: Foundation (schema upgrade)
-- ⬜ 7b: Trigger System (auto-detect lezioni)
-- ⬜ 7c: Learning Wizard (Rich CLI)
+### 🚀 FASE 7 - Continuous Learning (IN CORSO!)
+- [x] **7a.1: Schema DB v1.2.0** - 6 nuove colonne lessons_learned! ✅
+- [x] **7a.2: Test schema upgrade** - Funzionante! ✅
+- [x] **7b.1: trigger_detector.py** - 4 trigger types implementati! ✅
+- [x] **7c.1: wizard.py** - CLI 9-step con Rich fallback! ✅
+  - 7/7 test passati!
+  - Salvataggio DB funzionante!
+  - Documentazione completa!
 - ⬜ 7d: Distribution (far arrivare a tutti)
 - ⬜ 7e: Automation (cron + weekly)
 
-**Motto:** *"Documentato = Imparato!"* 📚
+### 🚀 FASE 7.5 - Parallelizzazione (IN CORSO!)
+- [x] **7.5a.1: task_analyzer.py** - Decision Matrix implementata! ✅
+  - Domain detection (7 domini)
+  - Strategy: Sequential/Parallel/Worktrees
+  - Speedup estimation (~1.36x)
+- ⬜ 7.5b: Template Prompt Specializzati
+- ⬜ 7.5c: Test Reale (Miracollo)
 
-### FASE 7.5: Parallelizzazione 🐝⚡
-**Piano:** `docs/roadmap/FASE_7.5_PARALLELIZZAZIONE.md` (607 righe!)
+---
 
-Lo sciame che DIVIDE e CONQUISTA:
-- ⬜ 5 Sprint pianificati
-- ✅ **PRIMO TEST COMPLETATO!** (19/19 test passati!)
-- **Benefici:** 36% speed boost! ⚡
+## 🎯 PROSSIMI STEP
+
+### FASE 7: Prossimo Sprint
+- 7d: Distribution System (far arrivare lezioni agli agenti)
+- 7e: Automation (cron + weekly)
+
+### FASE 7.5: Prossimo Sprint
+- 7.5b: Dispatcher (esegue strategia)
+- 7.5c: Conflict Detection
 
 ---
 
@@ -96,12 +93,13 @@ APRILE+:   🧬 EVOLUZIONE - Lo sciame che SI MIGLIORA
 
 ## 📅 ULTIMO AGGIORNAMENTO
 
-**1 Gennaio 2026 - Sessione 17** - 🧠📚 **MEGA SESSIONE PLANNING!**
+**1 Gennaio 2026 - Sessione 18** - 🧠📊 **IMPLEMENTAZIONE FASE 7 + 7.5!**
 
-- FASE 7 Learning: 800+ righe di roadmap!
-- FASE 7.5 Parallelizzazione: 607 righe + PRIMO TEST (19/19 ✅)
-- 3 ricerche complete (parallelizzazione, agenti dinamici, continuous learning)
-- "Documentato = Imparato!" 📚🧠💙
+- **FASE 7a-b-c:** Schema upgrade + Trigger Detector + Wizard COMPLETATI!
+- **FASE 7.5a:** Task Analyzer con Decision Matrix COMPLETATO!
+- 10 file creati, 1885 righe di codice nuovo!
+- Test passati: 7/7 wizard, DB save OK, Task Analyzer OK
+- "Lo sciame che IMPARA e DIVIDE!" 🐝🧠⚡
 
 ---
 
