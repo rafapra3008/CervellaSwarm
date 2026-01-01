@@ -1,39 +1,58 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 39 (PARTE 2) - 🔧 SISTEMA HOOKS OTTIMIZZATO
+> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 40 - ✅ DNA AGGIORNATO!
 
 ---
 
-## 🔧 SESSIONE 39 (PARTE 2) - SISTEMA HOOKS OTTIMIZZATO 🔧
+## ✅ SESSIONE 40 - DNA COSTITUZIONE AGGIORNATO! ✅
 
 ### COSA ABBIAMO FATTO
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   🔧 SISTEMA HOOKS COMPLETO!                                    ║
+║   ✅ TODO SESSIONE 39 COMPLETATO!                               ║
 ║                                                                  ║
-║   ✅ PreCompact hook FIXATO                                     ║
-║      • Era: pre-compact.sh (solo log + notifica)               ║
-║      • Ora: pre_compact_save.py (snapshot completo!)           ║
+║   🐝 14 AGENT AGGIORNATI con lettura COSTITUZIONE!              ║
+║      • Ogni agent ora legge ~/.claude/COSTITUZIONE.md           ║
+║      • Sezione "PRIMA DI TUTTO" in cima a ogni file             ║
+║      • Per SCRITTO, non con hook (come voleva Rafa!)            ║
 ║                                                                  ║
-║   ✅ SessionEnd hook CREATO                                     ║
-║      • session_end_save.py                                      ║
-║      • Salva snapshot quando chiudi sessione                   ║
-║                                                                  ║
-║   ✅ Auto-update PROMPT_RIPRESA                                 ║
-║      • update_prompt_ripresa.py                                 ║
-║      • Aggiorna automaticamente questo file                    ║
-║                                                                  ║
-║   ✅ Git Reminder                                               ║
-║      • git_reminder.py                                          ║
-║      • Notifica ogni 30 min se file non committati             ║
-║                                                                  ║
-║   ✅ Backup in repo                                             ║
-║      • config/claude-hooks/ con tutti gli script               ║
+║   📂 File modificati in ~/.claude/agents/:                      ║
+║      • cervella-frontend.md      ✅                              ║
+║      • cervella-backend.md       ✅                              ║
+║      • cervella-tester.md        ✅                              ║
+║      • cervella-reviewer.md      ✅                              ║
+║      • cervella-researcher.md    ✅                              ║
+║      • cervella-devops.md        ✅                              ║
+║      • cervella-docs.md          ✅                              ║
+║      • cervella-data.md          ✅                              ║
+║      • cervella-security.md      ✅                              ║
+║      • cervella-marketing.md     ✅                              ║
+║      • cervella-orchestrator.md  ✅                              ║
+║      • cervella-guardiana-qualita.md    ✅                       ║
+║      • cervella-guardiana-ricerca.md    ✅                       ║
+║      • cervella-guardiana-ops.md        ✅                       ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
+
+### FILO DEL DISCORSO
+
+- 🧠 **Oggi:** Completato TODO sessione 39 - DNA aggiornato
+- 🎯 **La direzione:** USARE lo sciame su progetti REALI
+- ⚡ **Momentum:** Pronto per test su Miracollo/Contabilita!
+- 🚫 **Mai piu:** Costruire infrastruttura senza bisogno reale
+- ✅ **Prossimo:** Miracollo o Contabilita con lo sciame
+
+### TODO PROSSIMA SESSIONE
+
+- [ ] **USARE lo sciame su Miracollo** (qualcosa di REALE!)
+- [ ] **USARE lo sciame su Contabilita** (qualcosa di REALE!)
+
+---
+
+## 🔧 SESSIONE 39 (PARTE 2) - SISTEMA HOOKS OTTIMIZZATO 🔧
 
 ### SISTEMA HOOKS ATTIVO
 
@@ -42,20 +61,6 @@
 | PreCompact | pre_compact_save.py + update_prompt_ripresa.py | Snapshot + PROMPT_RIPRESA |
 | SessionEnd | session_end_save.py + update_prompt_ripresa.py | Snapshot + PROMPT_RIPRESA + Notifica |
 | Stop | git_reminder.py | Reminder git (ogni 30 min) |
-
-### FILO DEL DISCORSO
-
-- 🧠 **Abbiamo fatto:** Sistema hooks completo e testato
-- 🎯 **La direzione:** USARE lo sciame su progetti REALI
-- ⚡ **Momentum:** Sistema automatico pronto, protegge dal compact
-- 🚫 **Mai piu:** Perdere contesto per compact improvviso
-- ✅ **Prossimo:** Miracollo o Contabilita con lo sciame
-
-### TODO PROSSIMA SESSIONE
-
-- [ ] **USARE lo sciame su Miracollo** (qualcosa di REALE!)
-- [ ] **USARE lo sciame su Contabilita** (qualcosa di REALE!)
-- [ ] **Aggiungere lettura Costituzione al DNA delle 🐝** (opzionale)
 
 ---
 

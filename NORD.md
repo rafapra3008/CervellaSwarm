@@ -18,7 +18,7 @@
 
 ## 🎯 DOVE SIAMO
 
-**SESSIONE 39 - 2 Gennaio 2026: PULIZIA COMPLETATA!**
+**SESSIONE 40 - 1 Gennaio 2026: DNA COSTITUZIONE AGGIORNATO!**
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
@@ -267,27 +267,16 @@ APRILE+:   🧬 EVOLUZIONE - Lo sciame che SI MIGLIORA
 
 ## 📅 ULTIMO AGGIORNAMENTO
 
-**2 Gennaio 2026 - Sessione 39 (PARTE 2)** - 🔧 **SISTEMA HOOKS OTTIMIZZATO**
+**1 Gennaio 2026 - Sessione 40** - ✅ **DNA COSTITUZIONE AGGIORNATO!**
 
 ### Cosa abbiamo fatto:
-- ✅ **PreCompact hook FIXATO** - Ora usa pre_compact_save.py (snapshot completo)
-- ✅ **SessionEnd hook CREATO** - Salva snapshot quando chiudi sessione
-- ✅ **update_prompt_ripresa.py** - Auto-aggiorna PROMPT_RIPRESA.md
-- ✅ **git_reminder.py** - Notifica file non committati ogni 30 min
-- ✅ **Backup hooks** - config/claude-hooks/ nel repo
-- ✅ **Triple check PASSATO** - Tutto testato e funzionante
-
-### Sistema Hooks Completo:
-```
-PreCompact → Snapshot + PROMPT_RIPRESA aggiornato
-SessionEnd → Snapshot + PROMPT_RIPRESA aggiornato + Notifica
-Stop       → Git reminder (ogni 30 min)
-```
+- ✅ **14 AGENT AGGIORNATI** - Ogni agent ora legge ~/.claude/COSTITUZIONE.md
+- ✅ **Sezione "PRIMA DI TUTTO"** - In cima a ogni file
+- ✅ **Per SCRITTO** - Non con hook (come voleva Rafa!)
 
 ### PROSSIMA SESSIONE:
 - USARE lo sciame su Miracollo (qualcosa di REALE!)
 - USARE lo sciame su Contabilita (qualcosa di REALE!)
-- Misurare VALORE, non quantita
 
 ---
 
