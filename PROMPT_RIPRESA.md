@@ -189,12 +189,13 @@
 
 ## FILO DEL DISCORSO
 
-- 🧠 **Stavamo ragionando su:** Verificare che tutto fosse pronto per test reale
-- 🎯 **La direzione:** TEST REALE su Miracollo! 🚀
-- ⚡ **Il momentum:** MASSIMO! Tutto pronto, Rafa sta per provare!
-- 🚫 **Da NON fare:** Non iniziare FASE 9 prima di usare pattern su progetti reali
-- 💡 **Principio chiave:** "I Cugini sono AUTOMATICI - la Regina decide!"
-- 🐝 **Chiarito:** I prompt sono GIÀ pronti in PROMPT_SWARM_MODE.md
+- 🧠 **Stavamo ragionando su:** REGOLA DECISIONE AUTONOMA - le 🐝 troppo cautelose
+- 🎯 **La direzione:** FASE D - Test REALE su Miracollo con nuovo DNA!
+- ⚡ **Il momentum:** ALTISSIMO! DNA aggiornato in tutti i 14 agent!
+- 🚫 **Da NON fare:** Non tornare al comportamento "chiedi sempre"
+- 💡 **Principio chiave:** "Confident by Default with Smart Escalation"
+- 🐝 **Nuovo comportamento:** PROCEDI se contesto completo, UNA domanda se info critica manca, STOP se irreversibile
+- 📋 **HARDTESTS pronti:** docs/tests/HARDTESTS_AUTONOMY.md (6 scenari per validare)
 
 ---
 
