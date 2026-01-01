@@ -1,10 +1,86 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 28 - 🚀 PRONTI PER TEST REALE! 🚀
+> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 29 - 🔧 SUB-ROADMAP LOGGING ATTIVA!
 
 ---
 
-## 🚀 SESSIONE 28 - VERIFICA PRE-TEST COMPLETATA!
+## 🔧 SESSIONE 29 - DEBUG LOGGING SYSTEM
+
+### COSA ABBIAMO SCOPERTO
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   🔴 PROBLEMA: Hook PostToolUse NON viene chiamato!             ║
+║                                                                  ║
+║   CAUSA PROBABILE:                                               ║
+║   • Settings.json modificato DOPO avvio sessione                ║
+║   • Claude Code carica settings all'AVVIO                       ║
+║   • Serve RIAVVIO per applicare modifiche                       ║
+║                                                                  ║
+║   ✅ FIXATO: log_event.py v1.2.0                                ║
+║   • Supporta formato PostToolUse hook                           ║
+║   • tool_name, tool_input, cwd a root level                     ║
+║   • Fallback per formato vecchio                                ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### SUB-ROADMAP CREATA
+
+📂 `docs/roadmap/SUB_ROADMAP_LOGGING_SYSTEM.md`
+
+| Fase | Descrizione | Stato |
+|------|-------------|-------|
+| A | Debug & Fix Hook | ⬜ TODO |
+| B | Test End-to-End | ⬜ TODO |
+| C | Migliorare Prompt Swarm | ⬜ TODO |
+| D | Dashboard & Monitoraggio | ⬜ TODO |
+
+---
+
+## 💭 FILO DEL DISCORSO - PROSSIMA SESSIONE
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   🧠 MENTE LOCALE DA FARE!                                      ║
+║                                                                  ║
+║   Prima di continuare a fixare, dobbiamo RAGIONARE:             ║
+║                                                                  ║
+║   1. HOOK SYSTEM                                                 ║
+║      • Funziona davvero il PostToolUse per Task?                ║
+║      • Serve riavvio o c'è altro problema?                      ║
+║      • È il modo GIUSTO per loggare?                            ║
+║                                                                  ║
+║   2. PROMPT SWARM                                                ║
+║      • Cosa manca? Cosa funziona?                               ║
+║      • Come collegare con memoria?                              ║
+║      • Regole per ogni progetto?                                ║
+║                                                                  ║
+║   3. VISIONE GENERALE                                            ║
+║      • Come deve funzionare il sistema COMPLETO?                ║
+║      • Cosa serve per FASE 9 (Apprendimento)?                   ║
+║      • Stiamo costruendo nel modo giusto?                       ║
+║                                                                  ║
+║   📍 APPROCCIO: Calma, studio, decisioni belle!                 ║
+║   🎯 OBIETTIVO: Sistema che funziona DA SOLO                    ║
+║                                                                  ║
+║   "Nulla è complesso - solo non ancora studiato!"               ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### DECISIONI DA PRENDERE
+
+- [ ] Hook PostToolUse: è il modo giusto o c'è alternativa migliore?
+- [ ] Prompt Swarm: cosa aggiungere per ogni progetto?
+- [ ] Sistema memoria: come collegare tutto?
+- [ ] Prossimi step: cosa prima, cosa dopo?
+
+---
+
+## 🎉 SESSIONE 28 - VERIFICA PRE-TEST COMPLETATA!
 
 ### COSA ABBIAMO FATTO
 

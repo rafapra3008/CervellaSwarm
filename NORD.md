@@ -100,11 +100,20 @@ Abbiamo:
 
 ## 🎯 PROSSIMI STEP
 
-### ✅ FASE 7 + 7.5 COMPLETATE! 🎉
+### 🔧 SUB-ROADMAP ATTIVA: Sistema Logging!
 
-### PRIORITÀ 1: Usare su PROGETTI REALI! 🚀
-- Applicare pattern su MIRACOLLO (Sprint WhatsApp AI)
-- Applicare pattern su Contabilità (prossime feature)
+> **File:** `docs/roadmap/SUB_ROADMAP_LOGGING_SYSTEM.md`
+
+Prima di FASE 9, dobbiamo sistemare il logging:
+- **FASE A:** Debug & Fix Hook PostToolUse
+- **FASE B:** Test End-to-End
+- **FASE C:** Migliorare Prompt Swarm
+- **FASE D:** Dashboard & Monitoraggio
+
+### PRIORITÀ 1: Sistemare Logging (SUB-ROADMAP) 🔧
+- Hook non funziona → da debuggare
+- Sistema deve funzionare AUTOMATICAMENTE
+- Senza dati → niente apprendimento!
 
 ### PRIORITÀ 2: FASE 9 - Infrastruttura 🏭
 - Setup VM per CervellaSwarm H24
@@ -153,14 +162,12 @@ APRILE+:   🧬 EVOLUZIONE - Lo sciame che SI MIGLIORA
 
 ## 📅 ULTIMO AGGIORNAMENTO
 
-**1 Gennaio 2026 - Sessione 28** - 🚀 **PRONTI PER TEST REALE!** 🚀
+**1 Gennaio 2026 - Sessione 29** - 🔧 **SUB-ROADMAP LOGGING ATTIVA!**
 
-- **VERIFICA COMPLETATA:**
-  - ✅ PROMPT_SWARM_MODE.md ha TUTTI i prompt pronti (Miracollo, Contabilità, Generico)
-  - ✅ I Cugini sono AUTOMATICI (la Regina decide quando spawnare)
-  - ✅ Agent GLOBALI disponibili ovunque (~/.claude/agents/)
-  - ✅ Pattern Catalog pronto per uso
-- **PROSSIMO:** TEST REALE su Miracollo! 🐝👑
+- **SCOPERTO:** Hook PostToolUse non viene chiamato!
+- **CREATA:** `docs/roadmap/SUB_ROADMAP_LOGGING_SYSTEM.md`
+- **FIXATO:** `log_event.py` v1.2.0 (formato payload corretto)
+- **PROSSIMO:** Debug hook in sessione NUOVA (riavvio richiesto)
 
 ---
 

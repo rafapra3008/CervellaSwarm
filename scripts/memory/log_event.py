@@ -6,8 +6,8 @@ Riceve payload da hook PostToolUse e logga eventi nel database.
 Gestisce errori gracefully per non bloccare mai il workflow.
 """
 
-__version__ = "1.1.0"
-__version_date__ = "2026-01-01"  # Fix: cerca agent in subagent_type + tutti i 14 agent
+__version__ = "1.2.0"
+__version_date__ = "2026-01-01"  # Fix: supporta formato PostToolUse hook (tool_name, tool_input, cwd, session_id a root level)
 
 import json
 import sqlite3
@@ -26,13 +26,19 @@ def get_db_path() -> Path:
 
 def extract_agent_info(payload: dict) -> dict:
     """Estrae informazioni sull'agent dal payload."""
-    tool = payload.get("tool", {})
-    tool_name = tool.get("name", "")
-    tool_input = tool.get("input", {})
+    # Formato PostToolUse hook: tool_name e tool_input sono a root level
+    tool_name = payload.get("tool_name", "")
+    tool_input = payload.get("tool_input", {})
 
-    # L'agent è in subagent_type (per Task tool) o nel nome del tool
-    subagent_type = tool_input.get("subagent_type", "")
-    agent_source = subagent_type if subagent_type else tool_name
+    # Fallback per formato vecchio (tool.name, tool.input)
+    if not tool_name:
+        tool = payload.get("tool", {})
+        tool_name = tool.get("name", "")
+        tool_input = tool.get("input", {})
+
+    # L'agent è in subagent O subagent_type
+    subagent = tool_input.get("subagent", "") or tool_input.get("subagent_type", "")
+    agent_source = subagent if subagent else tool_name
 
     # Mapping COMPLETO di tutti i 14 agent (11 worker + 3 guardiane)
     agent_map = {
@@ -71,12 +77,18 @@ def extract_agent_info(payload: dict) -> dict:
 
 def extract_task_info(payload: dict) -> dict:
     """Estrae informazioni sul task dal payload."""
-    tool_input = payload.get("tool", {}).get("input", {})
+    # Formato PostToolUse hook: tool_input è a root level
+    tool_input = payload.get("tool_input", {})
+
+    # Fallback per formato vecchio
+    if not tool_input:
+        tool_input = payload.get("tool", {}).get("input", {})
 
     # Cerca descrizione task in vari campi comuni
     task_description = (
         tool_input.get("task") or
         tool_input.get("prompt") or
+        tool_input.get("description") or
         tool_input.get("query") or
         tool_input.get("message") or
         str(tool_input)[:200]  # Fallback primi 200 char
@@ -105,13 +117,19 @@ def extract_files_modified(payload: dict) -> list:
 
 def extract_project(payload: dict) -> str:
     """Deduce il progetto dal contesto."""
-    cwd = payload.get("context", {}).get("cwd", "")
+    # Formato PostToolUse hook: cwd è a root level
+    cwd = payload.get("cwd", "")
 
-    if "miracollo" in cwd.lower():
+    # Fallback per formato vecchio
+    if not cwd:
+        cwd = payload.get("context", {}).get("cwd", "")
+
+    cwd_lower = cwd.lower()
+    if "miracollo" in cwd_lower:
         return "miracollo"
-    elif "contabilita" in cwd.lower():
+    elif "contabilita" in cwd_lower:
         return "contabilita"
-    elif "cervellaswarm" in cwd.lower():
+    elif "cervellaswarm" in cwd_lower:
         return "cervellaswarm"
     else:
         return "unknown"
@@ -151,10 +169,13 @@ def log_event(payload: dict) -> dict:
             }
 
         # Prepara evento
+        # session_id può essere a root level o in context
+        session_id = payload.get("session_id") or payload.get("context", {}).get("session_id")
+
         event = {
             "id": str(uuid.uuid4()),
             "timestamp": datetime.now(timezone.utc).isoformat(),
-            "session_id": payload.get("context", {}).get("session_id"),
+            "session_id": session_id,
             "event_type": "task_complete",
 
             # Agent
