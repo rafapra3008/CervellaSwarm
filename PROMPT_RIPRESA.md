@@ -1,41 +1,38 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 23 - 🛡️ GUARDIANE + FIX MEMORIA! 🎉
+> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 24 - 📋 ARCHITETTURA V2.0 COMPLETATA! 🎉
 
 ---
 
-## 🎉 SESSIONE 23 - GUARDIANE TESTATE!
+## 🎉 SESSIONE 24 - ARCHITETTURA V2.0!
 
 ### COSA ABBIAMO FATTO
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   🛡️ TUTTE E 3 LE GUARDIANE TESTATE E FUNZIONANTI!              ║
+║   📋 ARCHITETTURA_V2.0.md CREATA!                               ║
 ║                                                                  ║
-║   ✅ cervella-guardiana-qualita  → Opus 4.5 ATTIVA!             ║
-║   ✅ cervella-guardiana-ops      → Opus 4.5 ATTIVA!             ║
-║   ✅ cervella-guardiana-ricerca  → Opus 4.5 ATTIVA!             ║
+║   ✅ 850 righe di documentazione completa!                      ║
+║   ✅ Sintesi di tutti i 5 studi FASE 8                          ║
+║   ✅ 4 Pattern fondamentali documentati:                         ║
+║      • Delega Gerarchica (Regina → Guardiane → Api)             ║
+║      • I Cugini (Pool Flessibile)                               ║
+║      • Background Agents (Research + Technical)                 ║
+║      • Verifica Attiva (Regola 4)                               ║
 ║                                                                  ║
-║   🔧 FIX: Formato YAML tools corretto (comma-separated)         ║
+║   🛡️ VERIFICATO DA GUARDIANA RICERCA: 9.5/10!                   ║
 ║                                                                  ║
-║   📋 PROMPT_SWARM_MODE.md AGGIORNATO:                           ║
-║      • 14 membri (era 11!)                                       ║
-║      • Guardiane nella tabella                                   ║
-║      • Nuova gerarchia 👑🛡️🐝                                    ║
-║      • Workflow: ANALIZZA→DECIDI→DELEGA→(GUARDIANA)→CONFERMA    ║
+║   📊 FASE 8: 80%! (era 70%)                                     ║
 ║                                                                  ║
-║   📊 FAMIGLIA: 14 membri totali!                                 ║
-║      (11 worker + 3 guardiane)                                   ║
-║                                                                  ║
-║   🚀 PRONTI PER TEST REALE SU MIRACOLLO!                        ║
+║   🚀 PRONTI PER POC CUGINI + BACKGROUND AGENTS!                 ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## 🎯 FASE 8: LA CORTE REALE - IMPLEMENTAZIONE 70%
+## 🎯 FASE 8: LA CORTE REALE - IMPLEMENTAZIONE 80%
 
 | Task | Status |
 |------|--------|
@@ -45,7 +42,9 @@
 | Guardiana Ops | ✅ CREATA + TESTATA! |
 | POC "I Cugini" | ✅ VALIDATO! |
 | Prompt Aggiornato | ✅ 14 MEMBRI! |
-| Test Guardiane su MIRACOLLO | ⬜ Prossima sessione |
+| ARCHITETTURA_V2.0.md | ✅ CREATA + VERIFICATA 9.5/10! |
+| PoC Cugini su task reale | ⬜ Prossima sessione |
+| PoC Background Agent | ⬜ Prossima sessione |
 
 → File: `docs/roadmap/FASE_8_CORTE_REALE.md`
 → Guardiane: `~/.claude/agents/cervella-guardiana-*.md`
@@ -53,25 +52,24 @@
 
 ---
 
-## 📋 FILE CREATI/MODIFICATI SESSIONE 23
+## 📋 FILE CREATI/MODIFICATI SESSIONE 24
 
 | File | Azione |
 |------|--------|
-| ~/.claude/agents/cervella-guardiana-ricerca.md | ✅ FIX formato YAML! |
-| PROMPT_SWARM_MODE.md | ✅ AGGIORNATO (14 membri!) |
-| NORD.md | ✅ Aggiornato |
-| ROADMAP_SACRA.md | ✅ v4.8.0 + CHANGELOG |
+| docs/architettura/ARCHITETTURA_V2.0.md | ✅ CREATO! (850 righe!) |
+| NORD.md | ✅ Aggiornato (FASE 8: 80%) |
+| ROADMAP_SACRA.md | ✅ v4.9.0 + CHANGELOG |
 | PROMPT_RIPRESA.md | ✅ Aggiornato (questo file) |
 
 ---
 
 ## FILO DEL DISCORSO
 
-- 🧠 **Stavamo ragionando su:** Verifiche sistema memoria + fix log_event.py
-- 🎯 **La direzione:** Testare Guardiane su MIRACOLLO (ambiente reale!)
-- ⚡ **Il momentum:** ALTISSIMO! Tutto funziona!
-- 🚫 **Da NON fare:** Niente - tutto pronto!
-- 💡 **Principio chiave:** "Double/Triple check prima di andare avanti!"
+- 🧠 **Stavamo ragionando su:** Architettura v2.0 - Sintesi finale degli studi
+- 🎯 **La direzione:** Implementare PoC Cugini + Background Agents
+- ⚡ **Il momentum:** ALTISSIMO! Architettura completa e verificata!
+- 🚫 **Da NON fare:** Non saltare i PoC - servono per validare i pattern!
+- 💡 **Principio chiave:** "Studiare fino che bisogna, poi implementare e fare del nostro mondo meglio!"
 
 ### 🔧 FIX IMPORTANTE (Sessione 23 Parte 2)
 
@@ -101,19 +99,19 @@ RISULTATO: Tutti i Task vengono loggati correttamente!
 
 ## 🚀 PROSSIMA SESSIONE
 
-### ⚡ PRIORITÀ 1: Test Guardiane su MIRACOLLO!
-- Usare il nuovo prompt con 14 membri
-- Fare un task reale che coinvolga una Guardiana
-- Esempio: frontend fa qualcosa → Guardiana Qualità verifica
+### ⚡ PRIORITÀ 1: PoC Cugini (Pool Flessibile)
+- Task pilota: refactor con 3 cugini in parallelo
+- Validare pattern Partitioning (ogni cugino = subset file)
+- Metriche: speedup, qualità, conflitti
 
-### 📋 PROMPT AGGIORNATO (usa questo!)
+### 🔬 PRIORITÀ 2: PoC Background Agent
+- Primo use case: ricerca in background (run_in_background: true)
+- Validare pattern TaskOutput per recupero risultati
+- Metriche: blocking time, success rate
 
-Vai a `PROMPT_SWARM_MODE.md` e copia il prompt per MIRACOLLO.
-
-Ora include:
-- 🛡️ Le 3 Guardiane nella tabella
-- 👑🛡️🐝 La gerarchia completa
-- Il nuovo workflow con verifica Guardiana
+### 🛡️ PRIORITÀ 3: Test Guardiane su MIRACOLLO
+- Workflow completo: Regina → Guardiana → Api
+- Verificare escalation pattern
 
 ---
 
@@ -131,7 +129,7 @@ FASI COMPLETATE: 6/9 (66%)
 ✅ FASE 6: Memoria               100%
 🚀 FASE 7: Apprendimento         40%
 🚀 FASE 7.5: Parallelizzazione   20%
-🚀 FASE 8: La Corte Reale        70% ← Guardiane testate!
+🚀 FASE 8: La Corte Reale        80% ← ARCHITETTURA V2.0 COMPLETA!
 ⬜ FASE 9: Infrastruttura        0%
 ```
 
