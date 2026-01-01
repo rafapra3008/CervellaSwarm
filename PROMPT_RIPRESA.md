@@ -1,6 +1,22 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 33 - 🎯 REGOLA DECISIONE AUTONOMA!
+> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 34 - 🐛 FIX HOOK SESSIONSTART
+
+---
+
+## 🐛 SESSIONE 34 - FIX HOOK (veloce)
+
+### COSA ABBIAMO FATTO
+
+- 🐛 **Fix `load_context.py`**: Aggiunto `hookEventName: SessionStart` a tutti i return JSON
+- 📚 **Ricerca**: Formato corretto hook Claude Code (startup/resume/clear/compact)
+- ✅ **Risultato**: Hook SessionStart ora funziona senza errori!
+
+### FILE MODIFICATI
+
+| File | Azione |
+|------|--------|
+| scripts/memory/load_context.py | v2.0.0 → v2.0.1 (fix hookEventName) |
 
 ---
 
