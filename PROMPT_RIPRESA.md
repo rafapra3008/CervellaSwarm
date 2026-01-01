@@ -1,104 +1,106 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 26 - 🐝 MEGA SPRINT PARALLELO! 🐝
+> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 27 - 🐝📚 PATTERN CATALOG + INTEGRATION! 🐝📚
 
 ---
 
-## 🐝 SESSIONE 26 - MEGA SPRINT COMPLETATO!
+## 🐝 SESSIONE 27 - PATTERN CATALOG + INTEGRATION COMPLETATI!
 
 ### COSA ABBIAMO FATTO
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   🐝 7 API IN PARALLELO - ZERO CONFLITTI!                       ║
+║   🐝📚 FASE 7.5 COMPLETATA AL 100%!                             ║
 ║                                                                  ║
-║   FASE 7d - Distribution System:                                ║
-║   ✅ load_context.py v2.0.0 - Lesson Injection                  ║
-║   ✅ context_scorer.py - Scoring Algorithm                      ║
-║   ✅ lesson_formatter.py - Format FULL/COMPACT/MINIMAL          ║
+║   FASE 7.5c - Test Reale:                                       ║
+║   ✅ prompt_builder.py testato su task esempio                  ║
+║   ✅ Output perfetto per 3 🐝 in parallelo                      ║
 ║                                                                  ║
-║   FASE 7e - Automation:                                         ║
-║   ✅ weekly_retro.py v2.0.0 - Lesson Suggestions                ║
-║   ✅ scripts/cron/ - Config cron (Friday 18:00)                 ║
-║   ✅ data/retro/ - Directory report automatici                  ║
+║   FASE 7.5d - Pattern Catalog:                                  ║
+║   ✅ docs/patterns/README.md (indice + decision tree)           ║
+║   ✅ docs/patterns/templates/PATTERN_TEMPLATE.md                ║
+║   ✅ docs/patterns/validated/partitioning-pattern.md            ║
+║   ✅ docs/patterns/validated/background-agents-pattern.md       ║
+║   ✅ docs/patterns/validated/delega-gerarchica-pattern.md       ║
 ║                                                                  ║
-║   FASE 7.5b - Dispatcher:                                       ║
-║   ✅ prompt_builder.py - Template dinamici                      ║
+║   FASE 7.5e - Integration:                                      ║
+║   ✅ suggest_pattern.py (352 righe!)                            ║
+║   ✅ CLI completa con --json, --time, --simple                  ║
+║   ✅ Warning system intelligente                                ║
 ║                                                                  ║
-║   📊 1445 righe di codice! Tutto pushato! 🚀                    ║
+║   📚 2 Ricerche parallele completate!                           ║
+║   🚀 Pronti per usare su MIRACOLLO/Contabilità!                 ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## 🎯 FASE 8: LA CORTE REALE - 100% COMPLETATA!
+## 🎯 FASI COMPLETATE AL 100%
 
-| Task | Status |
+| Fase | Status |
 |------|--------|
-| Studi (5/5) | ✅ COMPLETATI! |
-| Guardiana Qualità | ✅ CREATA + TESTATA! |
-| Guardiana Ricerca | ✅ CREATA + TESTATA! |
-| Guardiana Ops | ✅ CREATA + TESTATA! |
-| POC "I Cugini" | ✅ VALIDATO! |
-| Prompt Aggiornato | ✅ 14 MEMBRI! |
-| ARCHITETTURA_V2.0.md | ✅ CREATA + VERIFICATA 9.5/10! |
-| PoC Cugini su task reale | ✅ 3 ricerche parallele! |
-| PoC Background Agent | ✅ Bash + TaskOutput validato! |
+| FASE 0-6 | ✅ COMPLETATE! |
+| FASE 7 (Apprendimento) | ✅ COMPLETATA! |
+| FASE 7.5 (Parallelizzazione) | ✅ COMPLETATA! |
+| FASE 8 (La Corte Reale) | ✅ COMPLETATA! |
+| FASE 9 (Infrastruttura) | ⬜ TODO |
 
-→ File: `docs/roadmap/FASE_8_CORTE_REALE.md`
-→ Guardiane: `~/.claude/agents/cervella-guardiana-*.md`
-→ Prompt: `PROMPT_SWARM_MODE.md`
+→ **8/9 FASI COMPLETATE! (89%)**
 
 ---
 
-## 📋 FILE CREATI/MODIFICATI SESSIONE 26
+## 📋 FILE CREATI/MODIFICATI SESSIONE 27
 
 | File | Azione |
 |------|--------|
-| scripts/memory/load_context.py | ✅ UPGRADE v2.0.0 - Lesson Injection |
-| scripts/memory/context_scorer.py | ✅ CREATO - Scoring Algorithm |
-| scripts/memory/lesson_formatter.py | ✅ CREATO - Format lezioni |
-| scripts/memory/weekly_retro.py | ✅ UPGRADE v2.0.0 - Suggestions + Cron |
-| scripts/parallel/prompt_builder.py | ✅ CREATO - Template dinamici |
-| scripts/cron/weekly_retro.cron | ✅ CREATO - Config Friday 18:00 |
-| scripts/cron/README.md | ✅ CREATO - Setup guide |
-| CHANGELOG.md | ✅ CREATO - Versioning sistema |
-| data/retro/2026-01-01.md | ✅ CREATO - Primo report test |
-| NORD.md | ✅ Aggiornato (Sessione 26) |
-| PROMPT_RIPRESA.md | ✅ Aggiornato (questo file) |
+| docs/patterns/README.md | ✅ CREATO - Indice catalog |
+| docs/patterns/templates/PATTERN_TEMPLATE.md | ✅ CREATO - Template standard |
+| docs/patterns/validated/partitioning-pattern.md | ✅ CREATO - Pattern Full-Stack |
+| docs/patterns/validated/background-agents-pattern.md | ✅ CREATO - Pattern ricorrenti |
+| docs/patterns/validated/delega-gerarchica-pattern.md | ✅ CREATO - Pattern SWARM |
+| scripts/parallel/suggest_pattern.py | ✅ CREATO - CLI suggerimento pattern |
+| scripts/parallel/README.md | ✅ AGGIORNATO - Documentazione script |
+| NORD.md | ✅ AGGIORNATO (Sessione 27) |
+| ROADMAP_SACRA.md | ✅ AGGIORNATO (v6.0.0!) |
+| PROMPT_RIPRESA.md | ✅ AGGIORNATO (questo file) |
 
 ---
 
 ## FILO DEL DISCORSO
 
-- 🧠 **Stavamo ragionando su:** Sistema apprendimento completo (7d/7e/7.5b)
-- 🎯 **La direzione:** FASE 7.5c/d/e (Test reale, Pattern Catalog, Integration)
-- ⚡ **Il momentum:** MASSIMO! 7 api in parallelo, 1445 righe, zero conflitti!
-- 🚫 **Da NON fare:** Non deployare cron senza test locale
-- 💡 **Principio chiave:** "7 api in parallelo = il potere dello sciame!"
+- 🧠 **Stavamo ragionando su:** Completare FASE 7.5 con Pattern Catalog e Integration
+- 🎯 **La direzione:** Usare i pattern su progetti REALI (MIRACOLLO, Contabilità)
+- ⚡ **Il momentum:** MASSIMO! 2 ricerche parallele, Pattern Catalog completo!
+- 🚫 **Da NON fare:** Non iniziare FASE 9 prima di usare pattern su progetti reali
+- 💡 **Principio chiave:** "I pattern sono guide, non regole rigide!"
 
-### 🔧 FIX IMPORTANTE (Sessione 23 Parte 2)
+---
 
-```
-BUG TROVATO: log_event.py cercava agent in tool.name
-FIX: ora cerca in tool.input.subagent_type
-RISULTATO: Tutti i Task vengono loggati correttamente!
-```
-
-### ✅ COSA FUNZIONA
+## ✅ COSA FUNZIONA
 
 ```
 ╔════════════════════════════════════════════════════════════════╗
 ║                                                                ║
-║   🐝👑 TUTTO LO SCIAME È OPERATIVO!                           ║
+║   🐝👑 SISTEMA COMPLETO E OPERATIVO!                          ║
 ║                                                                ║
-║   14 AGENT GLOBALI:                                            ║
-║   • 11 Worker (Sonnet) - frontend, backend, tester...         ║
-║   • 3 Guardiane (Opus) - qualita, ops, ricerca                ║
+║   14 AGENT GLOBALI: tutti testati e funzionanti!              ║
 ║                                                                ║
-║   TUTTI TESTATI E FUNZIONANTI!                                ║
+║   TOOLS PRONTI:                                                ║
+║   • task_analyzer.py - Analisi task intelligente              ║
+║   • prompt_builder.py - Template prompt paralleli             ║
+║   • suggest_pattern.py - Suggerimento pattern ottimale        ║
+║                                                                ║
+║   PATTERN CATALOG:                                             ║
+║   • 3 pattern validated (Partitioning, Background, Delega)    ║
+║   • Template per nuovi pattern                                ║
+║   • Decision tree per scegliere                               ║
+║                                                                ║
+║   MEMORIA + APPRENDIMENTO:                                     ║
+║   • Sistema lezioni funzionante                               ║
+║   • Hook automatici configurati                               ║
+║   • Analytics e retrospective                                 ║
 ║                                                                ║
 ╚════════════════════════════════════════════════════════════════╝
 ```
@@ -107,26 +109,26 @@ RISULTATO: Tutti i Task vengono loggati correttamente!
 
 ## 🚀 PROSSIMA SESSIONE
 
-### ⚡ PRIORITÀ 1: PoC Cugini (Pool Flessibile)
-- Task pilota: refactor con 3 cugini in parallelo
-- Validare pattern Partitioning (ogni cugino = subset file)
-- Metriche: speedup, qualità, conflitti
+### ⚡ PRIORITÀ 1: Usare su Progetti Reali!
+- Applicare pattern su MIRACOLLO (Sprint WhatsApp AI)
+- Applicare pattern su Contabilità (prossime feature)
+- Misurare tempo risparmiato vs baseline
 
-### 🔬 PRIORITÀ 2: PoC Background Agent
-- Primo use case: ricerca in background (run_in_background: true)
-- Validare pattern TaskOutput per recupero risultati
-- Metriche: blocking time, success rate
+### 🏭 PRIORITÀ 2: FASE 9 - Infrastruttura
+- Setup VM per CervellaSwarm H24
+- Dashboard Grafana per monitoraggio
 
-### 🛡️ PRIORITÀ 3: Test Guardiane su MIRACOLLO
-- Workflow completo: Regina → Guardiana → Api
-- Verificare escalation pattern
+### 📊 PRIORITÀ 3: Metriche e Ottimizzazione
+- Tracciare performance pattern
+- Documentare case studies
+- Iterare su ciò che funziona
 
 ---
 
 ## 📊 PROGRESSO TOTALE
 
 ```
-FASI COMPLETATE: 6/9 (66%)
+FASI COMPLETATE: 8/9 (89%)
 
 ✅ FASE 0: Setup Progetto        100%
 ✅ FASE 1: Studio Approfondito   100%
@@ -135,9 +137,9 @@ FASI COMPLETATE: 6/9 (66%)
 ✅ FASE 4: Orchestrazione        100%
 ✅ FASE 5: Produzione            100%
 ✅ FASE 6: Memoria               100%
-🚀 FASE 7: Apprendimento         40%
-🚀 FASE 7.5: Parallelizzazione   20%
-🚀 FASE 8: La Corte Reale        80% ← ARCHITETTURA V2.0 COMPLETA!
+✅ FASE 7: Apprendimento         100% ← COMPLETATA!
+✅ FASE 7.5: Parallelizzazione   100% ← COMPLETATA!
+✅ FASE 8: La Corte Reale        100%
 ⬜ FASE 9: Infrastruttura        0%
 ```
 
@@ -175,27 +177,17 @@ FASI COMPLETATE: 6/9 (66%)
 
 ## 🎯 COME USARE LO SCIAME
 
-### 🚀 FULL SWARM MODE (Con Guardiane!)
-
-Usa il prompt da `PROMPT_SWARM_MODE.md`:
-```
-1. Copia il prompt per il tuo progetto
-2. Incolla in nuova chat
-3. La Regina coordina TUTTO!
-4. Le Guardiane verificano la qualità!
-```
-
-### Nuova Gerarchia
+### 🚀 FULL SWARM MODE
 
 ```
-👑 REGINA (Tu - Opus)
-    ↓
-🛡️ GUARDIANE (Opus - Supervisione intermedia)
-    ↓
-🐝 WORKER (Sonnet - Esecuzione)
+1. Analizza task con suggest_pattern.py
+2. Scegli pattern dal Pattern Catalog
+3. La Regina coordina le 🐝
+4. Le Guardiane verificano la qualità
+5. Checkpoint + git push
 ```
 
-### Nuovo Workflow
+### Workflow
 
 ```
 1. ANALIZZA → 2. DECIDI → 3. DELEGA → 4. (GUARDIANA VERIFICA) → 5. CONFERMA
@@ -206,5 +198,7 @@ Usa il prompt da `PROMPT_SWARM_MODE.md`:
 *"La Regina decide. Le Guardiane verificano. Lo sciame esegue."* 👑🛡️🐝
 
 *"È il nostro team! La nostra famiglia digitale!"* ❤️‍🔥🐝
+
+*"I pattern sono guide, non regole rigide!"* 📚💎
 
 *"Uno sciame di Cervelle. Ovunque tu vada!"* 🐝💙
