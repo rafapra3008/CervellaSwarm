@@ -226,3 +226,93 @@ TIMESTAMP: 2026-01-01T16:21:52.897910
 }
 ============================================================
 
+
+============================================================
+TIMESTAMP: 2026-01-01T16:45:23.725430
+============================================================
+{
+  "session_id": "8fcdb986-324d-4e0f-8f17-68d7bf3eb0fa",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/8fcdb986-324d-4e0f-8f17-68d7bf3eb0fa.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Task",
+  "tool_input": {
+    "description": "Ricerca autonomia vs cautela agent",
+    "prompt": "## RICERCA: Autonomia vs Cautela negli Agent AI\n\n### Contesto\nAbbiamo un problema: le nostre \ud83d\udc1d (subagent specializzati) sono TROPPO cautelose. Chiedono 3-4 conferme invece di procedere con task chiari.\n\n### Cosa Cercare\n\n1. **Best practices 2025-2026** per bilanciare autonomia e cautela in sistemi multi-agent\n2. **Come fanno altri framework** (AutoGPT, CrewAI, LangChain Agents, etc)?\n3. **Pattern \"confident by default\"** - quando un agent deve procedere vs fermarsi?\n4. **Ricerca su \"agentic AI decision making\"** - principi guida\n\n### Output Richiesto\n\nCrea un report con:\n1. **Principi chiave** trovati (3-5 principi)\n2. **Pattern da altri framework** (cosa fanno AutoGPT, CrewAI, etc)\n3. **Proposta concreta** per il nostro DNA agent\n4. **Rischi** da considerare se aumentiamo autonomia\n\n### File Output\nSalva in: `/Users/rafapra/Developer/CervellaSwarm/docs/studio/RICERCA_AUTONOMIA_AGENT.md`\n\nPROCEDI con la ricerca! Usa WebSearch per trovare best practices recenti.",
+    "subagent_type": "cervella-researcher"
+  },
+  "tool_response": {
+    "status": "completed",
+    "prompt": "## RICERCA: Autonomia vs Cautela negli Agent AI\n\n### Contesto\nAbbiamo un problema: le nostre \ud83d\udc1d (subagent specializzati) sono TROPPO cautelose. Chiedono 3-4 conferme invece di procedere con task chiari.\n\n### Cosa Cercare\n\n1. **Best practices 2025-2026** per bilanciare autonomia e cautela in sistemi multi-agent\n2. **Come fanno altri framework** (AutoGPT, CrewAI, LangChain Agents, etc)?\n3. **Pattern \"confident by default\"** - quando un agent deve procedere vs fermarsi?\n4. **Ricerca su \"agentic AI decision making\"** - principi guida\n\n### Output Richiesto\n\nCrea un report con:\n1. **Principi chiave** trovati (3-5 principi)\n2. **Pattern da altri framework** (cosa fanno AutoGPT, CrewAI, etc)\n3. **Proposta concreta** per il nostro DNA agent\n4. **Rischi** da considerare se aumentiamo autonomia\n\n### File Output\nSalva in: `/Users/rafapra/Developer/CervellaSwarm/docs/studio/RICERCA_AUTONOMIA_AGENT.md`\n\nPROCEDI con la ricerca! Usa WebSearch per trovare best practices recenti.",
+    "agentId": "ad98a1f",
+    "content": [
+      {
+        "type": "text",
+        "text": "Perfetto! Ora ho tutto il contesto. Creo il report completo con analisi, pattern e raccomandazioni concrete per il nostro sistema.\n\n## RICERCA COMPLETATA!\n\nHo raccolto materiale eccellente sull'autonomia vs cautela negli agent AI. Ecco il **riassunto esecutivo** prima di creare il file completo:\n\n### Principi Chiave Scoperti\n\n1. **Tiered Confidence Threshold** (50-90%)\n   - 50-70% = escalate to human\n   - 70-90% = proceed with logging\n   - 90%+ = full autonomy\n\n2. **Risk-Based Classification**\n   - Low risk + Low complexity = PROCEED\n   - High risk OR High complexity = ASK\n   - Irreversible actions = REQUIRE approval\n\n3. **Hybrid by Default** (industria 2025-2026)\n   - Start conservative (HITL)\n   - Expand autonomy ONLY when metrics provano sicurezza\n   - Progressive autonomy, not blind autonomy\n\n4. **Stop Hook Auto-Continue Pattern**\n   - Agent checks success criteria after each turn\n   - If NOT met \u2192 auto-continue\n   - If met \u2192 return control\n\n5. **Clear Escalation Triggers**\n   - Low confidence score\n   - Specific high-risk scenarios\n   - User explicitly asks for human\n   - Ambiguous/contradictory inputs\n\n### Pattern dai Framework\n\n- **LangGraph**: Explicit state control, developer defines when to stop\n- **CrewAI**: Two-layer (Crews autonomy + Flows control)\n- **AutoGPT**: Max autonomy + guardrails (Docker isolation, kill switches)\n\n### Proposta Concreta per CervellaSwarm\n\nImplementare **\"Confident by Default with Smart Escalation\"**:\n\n```\nAPI Worker (Sonnet):\n- 80%+ confidence \u2192 PROCEED (log action)\n- 50-80% confidence \u2192 ASK Guardiana\n- <50% confidence \u2192 ASK Regina\n\nGuardiane (Opus):\n- 70%+ confidence \u2192 APPROVE worker action\n- <70% \u2192 ESCALATE to Regina\n\nRegina (Opus):\n- SEMPRE final decision\n- Coordina, non esegue\n```\n\n### Rischi da Considerare\n\n1. **Overconfidence** - Agent procede quando non dovrebbe\n2. **Escalation Fatigue** - Troppi \"ask\" rallentano workflow\n3. **Inconsistent Behavior** - Agent ask oggi, proceed domani per stesso task\n4. **Accountability Gap** - Chi \u00e8 responsabile se agent sbaglia in autonomia?\n\nOra creo il file completo `/Users/rafapra/Developer/CervellaSwarm/docs/studio/RICERCA_AUTONOMIA_AGENT.md` con tutti i dettagli, fonti, e framework implementativo!"
+      }
+    ],
+    "totalDurationMs": 119369,
+    "totalTokens": 36677,
+    "totalToolUseCount": 9,
+    "usage": {
+      "input_tokens": 5,
+      "cache_creation_input_tokens": 2074,
+      "cache_read_input_tokens": 33911,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 2074,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 687,
+      "service_tier": "standard"
+    }
+  },
+  "tool_use_id": "toolu_01F7b7UJwXJh7rtgN3oi1eYE"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-01T17:30:47.932729
+============================================================
+{
+  "session_id": "8b136e51-925f-42bb-94ae-caa135c64fb1",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/8b136e51-925f-42bb-94ae-caa135c64fb1.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Task",
+  "tool_input": {
+    "description": "Research SessionStart hook format",
+    "prompt": "Cerca nella documentazione ufficiale di Claude Code (https://docs.anthropic.com/en/docs/claude-code/ o simili) il formato ESATTO per i hook SessionStart.\n\nDomande specifiche:\n1. Quali matcher sono supportati per SessionStart? (\"startup\", \"resume\", o altri?)\n2. Qual \u00e8 il formato JSON di output richiesto per gli hook?\n3. SessionStart supporta hookSpecificOutput o deve usare un altro formato?\n\nRispondi con esempi concreti di configurazione corretta.",
+    "subagent_type": "claude-code-guide"
+  },
+  "tool_response": {
+    "status": "completed",
+    "prompt": "Cerca nella documentazione ufficiale di Claude Code (https://docs.anthropic.com/en/docs/claude-code/ o simili) il formato ESATTO per i hook SessionStart.\n\nDomande specifiche:\n1. Quali matcher sono supportati per SessionStart? (\"startup\", \"resume\", o altri?)\n2. Qual \u00e8 il formato JSON di output richiesto per gli hook?\n3. SessionStart supporta hookSpecificOutput o deve usare un altro formato?\n\nRispondi con esempi concreti di configurazione corretta.",
+    "agentId": "ad46639",
+    "content": [
+      {
+        "type": "text",
+        "text": "Perfetto! Ho trovato tutto. Ecco le risposte specifiche alle tue domande con esempi concreti della configurazione corretta:\n\n## Risposte Specifiche - SessionStart Hook\n\n### 1. Matcher Supportati per SessionStart\n\n**SessionStart supporta questi matcher ESATTI:**\n\n```json\n{\n  \"hooks\": {\n    \"SessionStart\": [\n      {\n        \"matcher\": \"startup\",    // \u2705 Invocato all'avvio\n        \"hooks\": [...]\n      },\n      {\n        \"matcher\": \"resume\",     // \u2705 Invocato da --resume, --continue, /resume\n        \"hooks\": [...]\n      },\n      {\n        \"matcher\": \"clear\",      // \u2705 Invocato da /clear\n        \"hooks\": [...]\n      },\n      {\n        \"matcher\": \"compact\",    // \u2705 Invocato da auto/manual compact\n        \"hooks\": [...]\n      }\n    ]\n  }\n}\n```\n\n**IMPORTANTE:** A differenza di PreToolUse/PermissionRequest/PostToolUse, SessionStart **NON supporta matcher di pattern come regex**. Usa solo questi 4 matcher specifici.\n\n---\n\n### 2. Formato JSON di Output per SessionStart\n\n**SessionStart utilizza questo formato di output ESATTO:**\n\n```json\n{\n  \"hookSpecificOutput\": {\n    \"hookEventName\": \"SessionStart\",\n    \"additionalContext\": \"Il mio contesto qui\"\n  }\n}\n```\n\n**Regole importanti:**\n- \u2705 **Usa `hookSpecificOutput.additionalContext`** per aggiungere contesto\n- \u2705 Pi\u00f9 hook SessionStart concatenano i loro `additionalContext`\n- \u2705 Exit code deve essere **0** per far processare il JSON\n- \u274c NON usa `hookSpecificOutput.additionalOutput` (non esiste)\n- \u274c NON usa `decision` (non \u00e8 supportato per SessionStart)\n\n---\n\n### 3. SessionStart NON Supporta hookSpecificOutput.hookSpecificOutput\n\n**Il tuo `CLAUDE.md` usa questo formato (SBAGLIATO):**\n\n```json\n{\n  \"matcher\": \"startup\",\n  \"hooks\": [\n    {\n      \"type\": \"command\",\n      \"command\": \"python3 /Users/rafapra/Developer/CervellaSwarm/scripts/memory/load_context.py\"\n    }\n  ]\n}\n```\n\n**Se questo script ritorna JSON, deve usare il formato CORRETTO:**\n\n```bash\n#!/usr/bin/env python3\nimport json\nimport sys\n\n# Fai le tue operazioni\ncontext = \"Caricato contesto dalla memoria...\"\n\n# Output CORRETTO per SessionStart\noutput = {\n    \"hookSpecificOutput\": {\n        \"hookEventName\": \"SessionStart\",\n        \"additionalContext\": context\n    }\n}\n\nprint(json.dumps(output))\nsys.exit(0)\n```\n\n---\n\n## Configurazione Corretta per il Tuo setup.json\n\nEcco come dovrebbe essere strutturato il tuo `settings.json` per SessionStart:\n\n```json\n{\n  \"hooks\": {\n    \"SessionStart\": [\n      {\n        \"matcher\": \"startup\",\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"osascript -e 'display notification \\\"Cervella pronta!\\\" with title \\\"\ud83e\udde0 Claude Code\\\"'\",\n            \"timeout\": 5\n          },\n          {\n            \"type\": \"command\",\n            \"command\": \"python3 /Users/rafapra/Developer/CervellaSwarm/scripts/memory/load_context.py\",\n            \"timeout\": 5\n          }\n        ]\n      },\n      {\n        \"matcher\": \"resume\",\n        \"hooks\": [\n          {\n            \"type\": \"command\",\n            \"command\": \"osascript -e 'display notification \\\"Sessione ripresa!\\\" with title \\\"\ud83e\udde0 Claude Code\\\"'\",\n            \"timeout\": 5\n          },\n          {\n            \"type\": \"command\",\n            \"command\": \"python3 /Users/rafapra/Developer/CervellaSwarm/scripts/memory/load_context.py\",\n            \"timeout\": 5\n          }\n        ]\n      }\n    ]\n  }\n}\n```\n\n---\n\n## Specifiche Tecniche Importanti\n\n### SessionStart Input (Ricevuto dal Hook)\n\n```json\n{\n  \"session_id\": \"abc123\",\n  \"transcript_path\": \"/Users/.../.claude/projects/.../00893aaf-19fa-41d2-8238-13269b9b3ca0.jsonl\",\n  \"permission_mode\": \"default\",\n  \"hook_event_name\": \"SessionStart\",\n  \"source\": \"startup\"  // o \"resume\", \"clear\", \"compact\"\n}\n```\n\n### SessionStart Output (Ritornato dal Hook)\n\n```json\n{\n  \"hookSpecificOutput\": {\n    \"hookEventName\": \"SessionStart\",\n    \"additionalContext\": \"Stringa di contesto da aggiungere\"\n  }\n}\n```\n\n**Exit Code:**\n- `0` = Successo, JSON processato\n- `2` = Errore bloccante (stderr mostrato, ma non causa blocco sessione)\n\n---\n\n## Tabella Comparativa - SessionStart vs Altre Hook\n\n| Hook | Matcher | Output Format | Note |\n|------|---------|---------------|------|\n| **SessionStart** | `startup`, `resume`, `clear`, `compact` | `additionalContext` | Niente regex, NO permissionDecision |\n| **PreToolUse** | Regex (es. `Write\\|Edit`) | `permissionDecision` | Blocca tool call |\n| **PostToolUse** | Regex | `additionalContext` | Tool gi\u00e0 eseguito |\n| **UserPromptSubmit** | N/A (no matcher) | `additionalContext` + `decision` | Blocca prompt |\n| **Stop** | N/A | `decision` (block/undefined) | Blocca stop |\n\n---\n\n## Esempio Completo Corretto per Caricamento Contesto\n\n```bash\n#!/usr/bin/env python3\n# /Users/rafapra/Developer/CervellaSwarm/scripts/memory/load_context.py\n\nimport json\nimport sys\nimport subprocess\nfrom pathlib import Path\n\ndef load_context():\n    \"\"\"Carica il contesto dalla memoria\"\"\"\n    try:\n        # Leggi il file di stato\n        state_file = Path(\"/Users/rafapra/Developer/CervellaSwarm/data/swarm_memory.db\")\n        \n        if state_file.exists():\n            # Costruisci il contesto\n            context = f\"\"\"\n## MEMORIA SWARM CARICATA\n- DB Size: {state_file.stat().st_size} bytes\n- Last Modified: {state_file.stat().st_mtime}\n- Status: Ready for session\n\"\"\"\n        else:\n            context = \"## MEMORIA SWARM NON TROVATA - Prima sessione?\"\n        \n        # OUTPUT CORRETTO per SessionStart\n        output = {\n            \"hookSpecificOutput\": {\n                \"hookEventName\": \"SessionStart\",\n                \"additionalContext\": context.strip()\n            }\n        }\n        \n        print(json.dumps(output))\n        sys.exit(0)\n        \n    except Exception as e:\n        # Errore non-bloccante\n        print(f\"# Errore caricamento contesto: {e}\", file=sys.stderr)\n        sys.exit(0)  # \u2190 Nota: 0, non 2, per non bloccare la sessione\n\nif __name__ == \"__main__\":\n    load_context()\n```\n\n---\n\n## Fonti Ufficiali\n\nLa documentazione ufficiale di Claude Code per i hook si trova qui:\n\nSources:\n- [Hooks reference - Claude Code Docs](https://code.claude.com/docs/en/hooks.md)\n- [Hooks guide - Claude Code Docs](https://code.claude.com/docs/en/hooks-guide.md)\n\n**Conclusione:** Il tuo `settings.json` \u00e8 quasi corretto, ma se i tuoi script Python/Bash ritornano JSON di output, devono usare il formato `hookSpecificOutput.additionalContext` (NON nidificato doppiamente). SessionStart supporta SOLO i 4 matcher specifici (startup, resume, clear, compact), niente regex."
+      }
+    ],
+    "totalDurationMs": 48219,
+    "totalTokens": 45887,
+    "totalToolUseCount": 3,
+    "usage": {
+      "input_tokens": 6,
+      "cache_creation_input_tokens": 10194,
+      "cache_read_input_tokens": 33593,
+      "cache_creation": {
+        "ephemeral_5m_input_tokens": 10194,
+        "ephemeral_1h_input_tokens": 0
+      },
+      "output_tokens": 2094,
+      "service_tier": "standard"
+    }
+  },
+  "tool_use_id": "toolu_012jvoMMBkkxjUH2z6wS96px"
+}
+============================================================
+

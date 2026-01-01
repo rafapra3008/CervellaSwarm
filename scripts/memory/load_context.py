@@ -11,8 +11,9 @@ v2.0.0 Novità:
 - Agent Filtering: filtra lezioni per agente specifico
 """
 
-__version__ = "2.0.0"
+__version__ = "2.0.1"
 __version_date__ = "2026-01-01"
+# v2.0.1 - Fix: Aggiunto hookEventName a tutti i return (required by Claude Code)
 
 import json
 import sqlite3
@@ -441,6 +442,7 @@ def load_context(agent_name: str = None, project: str = None) -> dict:
     if not db_path.exists():
         return {
             "hookSpecificOutput": {
+                "hookEventName": "SessionStart",
                 "additionalContext": "🐝 Sistema memoria non inizializzato."
             }
         }
@@ -476,6 +478,7 @@ def load_context(agent_name: str = None, project: str = None) -> dict:
 
         return {
             "hookSpecificOutput": {
+                "hookEventName": "SessionStart",
                 "additionalContext": context_md
             },
             "metadata": {
@@ -491,6 +494,7 @@ def load_context(agent_name: str = None, project: str = None) -> dict:
         print(f"⚠️ Errore caricamento contesto: {e}", file=sys.stderr)
         return {
             "hookSpecificOutput": {
+                "hookEventName": "SessionStart",
                 "additionalContext": f"⚠️ Errore caricamento memoria: {str(e)}"
             }
         }
@@ -510,6 +514,7 @@ def main():
     except Exception as e:
         print(json.dumps({
             "hookSpecificOutput": {
+                "hookEventName": "SessionStart",
                 "additionalContext": f"❌ Errore critico: {str(e)}"
             }
         }), file=sys.stderr)
