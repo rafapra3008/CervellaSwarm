@@ -3,7 +3,7 @@
 > **"Uno sciame senza regole e caos. Uno sciame con regole e POTENZA."**
 
 **Data Creazione:** 1 Gennaio 2026
-**Versione:** 1.2.0
+**Versione:** 1.3.0
 **Priorita:** ALTA - Queste regole sono FONDAMENTALI
 
 ---
@@ -466,12 +466,27 @@ Quando la Regina delega ricerche alle 🐝 (researcher, scienziata), può succed
 ║                                                                  ║
 ║   4. CONFRONTO - Risponde al PERCHÉ originale?                  ║
 ║   5. VALUTO - È UTILE o solo INTERESSANTE?                     ║
-║   6. DECIDO - Se solo interessante → SCARTO!                    ║
+║   6. DECIDO:                                                     ║
+║      • Se UTILE direttamente → USO!                             ║
+║      • Se INTERESSANTE per altro sistema → PASSO 7!             ║
+║      • Se né utile né interessante → SCARTO!                    ║
+║                                                                  ║
+║   🔄 SE È "INTERESSANTE PER ALTRO SISTEMA":                    ║
+║                                                                  ║
+║   7. STUDIO IL CONCETTO - Cosa fa? Quale problema risolve?     ║
+║   8. POSSIAMO RICREARE? - È implementabile per NOI?            ║
+║   9. VALE LA PENA? - Effort vs Valore per i NOSTRI progetti    ║
+║   10. DECIDO: Ricreare SI/NO + aggiungo a roadmap              ║
+║                                                                  ║
+║   "Interessante per altri può diventare UTILE per noi          ║
+║    se studiamo il CONCETTO e lo RICREIAMO!"                    ║
+║                                                                  ║
+║   "Noi qui CREIAMO quando serve!" - Rafa 💎                     ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
-### Esempio
+### Esempio 1: Scarto Diretto
 
 **❌ SBAGLIATO:**
 ```
@@ -481,7 +496,7 @@ Azione: "Ottimo! Procediamo!"
 Problema: Non abbiamo verificato se funziona col NOSTRO sistema!
 ```
 
-**✅ CORRETTO:**
+**✅ CORRETTO (v1.2.0):**
 ```
 PRIMA:
 - PERCHÉ: "Voglio sapere se Agent HQ funziona con Claude Code"
@@ -492,6 +507,37 @@ DOPO:
 - Risultato: "Serve Copilot Pro (Microsoft/OpenAI)..."
 - Confronto: "Funziona con Claude?" → NO!
 - Decisione: SCARTO - non risponde al bisogno!
+```
+
+### Esempio 2: Studio il Concetto e Ricreo (NUOVO v1.3.0!)
+
+**❌ SBAGLIATO (mentalità difensiva):**
+```
+Delega: "Ricerca Dashboard UI competitor"
+Torna: "Agent HQ ha dashboard per Copilot..."
+Azione: "Non ci serve, è per Copilot!" → SCARTO
+Problema: Non abbiamo studiato il CONCETTO!
+```
+
+**✅ CORRETTO (mentalità creativa):**
+```
+PRIMA:
+- PERCHÉ: "Voglio capire se una dashboard ci serve"
+- CAMBIERÀ: "Se utile, ne creiamo una per Swarm"
+- CRITERIO: "Il CONCETTO risolve un problema nostro?"
+
+DOPO (passo 4-6):
+- Risultato: "Dashboard Agent HQ per Copilot..."
+- Confronto: "Utile direttamente?" → NO (Copilot ≠ Claude)
+- È INTERESSANTE per altro sistema? → SI! Passo 7!
+
+DOPO (passo 7-10):
+- CONCETTO: "Vista centralizzata stato agent + storico"
+- POSSIAMO RICREARE? → SI! CLI con Rich o web
+- VALE LA PENA? → Valuto effort vs valore
+- DECISIONE: SI, aggiungo a roadmap come feature nostra!
+
+"Noi qui CREIAMO quando serve!" 💎
 ```
 
 ### Flowchart
@@ -539,6 +585,7 @@ DOPO:
 
 | Versione | Data | Modifica |
 |----------|------|----------|
+| 1.3.0 | 2 Gen 2026 | **REGOLA 11 ESPANSA**: "Interessante per altri → Studio CONCETTO → Posso RICREARE?" |
 | 1.2.0 | 2 Gen 2026 | **REGOLA 11: PERCHÉ** - Verifica risultati ricerche vs bisogno originale |
 | 1.1.0 | 1 Gen 2026 | **REGOLA 10: DECISIONE AUTONOMA** - DNA aggiornato in tutti gli agent! |
 | 1.0.0 | 1 Gen 2026 | Creazione documento + REGOLA 4: VERIFICA ATTIVA POST-AGENT |
