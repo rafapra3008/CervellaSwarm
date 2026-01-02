@@ -290,3 +290,150 @@ docs/studio/
 **Cervella & Rafa**
 
 *2 Gennaio 2026 - Il giorno in cui abbiamo deciso di fare qualcosa di GRANDE.*
+
+---
+
+## 📋 PIANO TECNICO DETTAGLIATO
+
+**Creato da:** cervella-ingegnera  
+**File:** `docs/studio/PIANO_TECNICO_DETTAGLIATO.md`  
+**Righe:** 2,100+ righe di piano ESECUTIVO!
+
+### Cosa Contiene
+
+```
+✅ Roadmap Macro (3 settimane breakdown)
+✅ 45 Task dettagliati con stime ore
+✅ Dipendenze chiare (Gantt-style)
+✅ Critical Path identificato (46h)
+✅ Rischi e mitigazioni (5 rischi analizzati)
+✅ Daily checklist (15 giorni × 8 ore)
+✅ Metriche di successo (3 milestone)
+✅ Contingency plans (se ritardo)
+✅ Post-launch roadmap (mese 1-3)
+```
+
+### Key Findings dal Piano Tecnico
+
+| Aspetto | Stima |
+|---------|-------|
+| **Effort Totale** | 96 ore (base) → 120 ore (realistico) |
+| **Timeline** | 15 giorni (full-time) → 20 giorni (part-time) |
+| **Critical Path** | 46 ore (longest sequential path) |
+| **Rischio** | MEDIO-BASSO (6.5/10 complessità) |
+| **Refactoring Pre-MVP** | 8 ore (path, versioning, DB, deps) |
+
+### Effort Breakdown
+
+```
+TypeScript/JavaScript:    40h (extension core)
+Python:                    8h (refactoring)
+HTML/CSS:                 12h (dashboard)
+Documentation:             8h (README, help)
+Testing:                  16h (unit + integration + manual)
+DevOps:                    4h (packaging + publish)
+Buffer:                    8h (debugging)
+──────────────────────────────────────────
+TOTALE:                   96h
+```
+
+### Refactoring Necessari (PRE-MVP)
+
+**Task 1.1: Path Parametrization (2 ore)**
+```python
+# PRIMA (hardcoded):
+agents_path = Path.home() / ".claude" / "agents"
+
+# DOPO (parametrizzato):
+AGENTS_PATH = os.getenv("CERVELLASWARM_AGENTS_PATH") or \
+              Path.home() / ".claude" / "agents"
+```
+
+**Task 1.2: Version Headers (1 ora)**
+```yaml
+---
+name: cervella-frontend
+version: 1.0.0
+updated: 2026-01-02
+compatible_with: cervellaswarm >= 1.0.0
+---
+```
+
+**Task 1.3: DB Migration System (3 ore)**
+- Creare `scripts/memory/migrate.py`
+- Auto-detect schema version
+- Apply migrations incrementally
+
+**Task 1.4: Dependency Isolation (2 ore)**
+```python
+try:
+    from rich import Console
+    HAS_RICH = True
+except ImportError:
+    HAS_RICH = False
+    # Fallback to plain text
+```
+
+### Week-by-Week Breakdown
+
+**SETTIMANA 1: Foundation (32h)**
+- Refactoring codebase esistente
+- Extension boilerplate (TypeScript)
+- Agent installer logic
+- Settings.json integration
+
+**SETTIMANA 2: MVP Features (32h)**
+- Commands palette (launch agents)
+- Settings panel
+- Webview dashboard con grafici
+- Real-time updates
+
+**SETTIMANA 3: Polish (32h)**
+- Testing (28 unit + 5 integration)
+- Documentation (README + help)
+- Marketplace submission
+- Review + fix
+
+### Rischi Identificati
+
+| Rischio | Prob | Impatto | Mitigazione |
+|---------|------|---------|-------------|
+| TypeScript learning | Media | Alto | Yeoman generator + examples |
+| Webview complexity | Media | Medio | Chart.js (simple), fallback text |
+| Python bridge fail | Bassa | Alto | Test 3 OS, fallback terminal |
+| Marketplace reject | Bassa | Medio | Follow guidelines, peer review |
+| DB schema changes | Alta | Basso | Migration system già incluso |
+
+### Next Actions (Questa Settimana)
+
+**LUNEDÌ (3h):**
+- [ ] Decisione GO/NO-GO con Rafa
+- [ ] Setup publisher account VS Code
+- [ ] Reserve name "cervellaswarm"
+- [ ] Create GitHub repo: cervellaswarm-vscode
+
+**MARTEDÌ (4h):**
+- [ ] Refactoring: path parametrization (tutti gli script)
+- [ ] Add version headers (16 agent files)
+- [ ] Commit: `refactor: prepare for packaging`
+
+**MERCOLEDÌ (4h):**
+- [ ] DB migration script (`migrate.py`)
+- [ ] Test upgrade v1.2.0 → v1.3.0
+- [ ] requirements.txt + optional imports
+
+**GIOVEDÌ (4h):**
+- [ ] Extension boilerplate (Yeoman `yo code`)
+- [ ] Basic package.json
+- [ ] First commit: `chore: initial extension setup`
+
+**VENERDÌ (4h):**
+- [ ] Agent installer logic (TypeScript)
+- [ ] Test copia files
+- [ ] CODE REVIEW con cervella-reviewer
+
+---
+
+*"Dal piano all'esecuzione. Questo è il PATH."* 🗺️
+
+**Leggi il piano completo:** `docs/studio/PIANO_TECNICO_DETTAGLIATO.md`

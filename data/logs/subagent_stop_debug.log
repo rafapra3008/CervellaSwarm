@@ -3390,3 +3390,195 @@ TIMESTAMP: 2026-01-02T14:03:46.884739
 }
 ============================================================
 
+
+============================================================
+TIMESTAMP: 2026-01-02T14:25:28.874552
+============================================================
+{
+  "session_id": "45e7cd9e-b153-4916-afc8-a3b2ac514b78",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/45e7cd9e-b153-4916-afc8-a3b2ac514b78.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a5f9779",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/agent-a5f9779.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T14:33:26.878998
+============================================================
+{
+  "session_id": "45e7cd9e-b153-4916-afc8-a3b2ac514b78",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/45e7cd9e-b153-4916-afc8-a3b2ac514b78.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a56f588",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/agent-a56f588.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T14:41:34.040246
+============================================================
+{
+  "session_id": "b3884402-373b-4883-8615-edebfea57028",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/b3884402-373b-4883-8615-edebfea57028.jsonl",
+  "cwd": "/Users/rafapra/Developer/miracollogeminifocus",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a27ccff",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/agent-a27ccff.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T15:07:07.516144
+============================================================
+{
+  "session_id": "b3884402-373b-4883-8615-edebfea57028",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/b3884402-373b-4883-8615-edebfea57028.jsonl",
+  "cwd": "/Users/rafapra/Developer/miracollogeminifocus",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a612a69",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/agent-a612a69.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T15:08:40.810988
+============================================================
+{
+  "session_id": "1aa80227-9fe1-4fe4-a2b1-24023882694d",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/1aa80227-9fe1-4fe4-a2b1-24023882694d.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a550e60",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/agent-a550e60.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T15:08:42.157719
+============================================================
+{
+  "session_id": "1aa80227-9fe1-4fe4-a2b1-24023882694d",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/1aa80227-9fe1-4fe4-a2b1-24023882694d.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "abafca5",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/agent-abafca5.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T15:09:20.656908
+============================================================
+{
+  "session_id": "738b7c61-4500-44b7-a1f7-5fc28c512e4b",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/738b7c61-4500-44b7-a1f7-5fc28c512e4b.jsonl",
+  "cwd": "/Users/rafapra/Developer/miracollogeminifocus",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a72ce3a",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/agent-a72ce3a.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T15:09:23.786475
+============================================================
+{
+  "session_id": "738b7c61-4500-44b7-a1f7-5fc28c512e4b",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/738b7c61-4500-44b7-a1f7-5fc28c512e4b.jsonl",
+  "cwd": "/Users/rafapra/Developer/miracollogeminifocus",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a2b3c2f",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/agent-a2b3c2f.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T15:10:22.488423
+============================================================
+{
+  "session_id": "738b7c61-4500-44b7-a1f7-5fc28c512e4b",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/738b7c61-4500-44b7-a1f7-5fc28c512e4b.jsonl",
+  "cwd": "/Users/rafapra/Developer/miracollogeminifocus",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "af36b30",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/agent-af36b30.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T15:11:19.129122
+============================================================
+{
+  "session_id": "1aa80227-9fe1-4fe4-a2b1-24023882694d",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/1aa80227-9fe1-4fe4-a2b1-24023882694d.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a27066a",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/agent-a27066a.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T15:17:12.130095
+============================================================
+{
+  "session_id": "1aa80227-9fe1-4fe4-a2b1-24023882694d",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/1aa80227-9fe1-4fe4-a2b1-24023882694d.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "ae57622",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/agent-ae57622.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T15:17:41.388047
+============================================================
+{
+  "session_id": "1aa80227-9fe1-4fe4-a2b1-24023882694d",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/1aa80227-9fe1-4fe4-a2b1-24023882694d.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a44084f",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/agent-a44084f.jsonl"
+}
+============================================================
+
