@@ -1,39 +1,88 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 50 - Extension + Scoperta Agent HQ!
+> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 51 - Agents convertiti Agent HQ!
 
 ---
 
-## SESSIONE 50 - EXTENSION + SCOPERTA STRATEGICA! 🔥 (2 Gennaio 2026)
+## SESSIONE 51 - IMPLEMENTAZIONE AGENT HQ! (2 Gennaio 2026)
 
 ### COSA ABBIAMO FATTO
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   🚀 MEGA SPRINT + SCOPERTA STRATEGICA!                         ║
+║   🚀 IMPLEMENTAZIONE AGENT HQ FORMAT!                           ║
 ║                                                                  ║
-║   ✅ Task 2.1: Extension Project (yo code) COMPLETATO!          ║
-║   ├── cervellaswarm-extension/ creata                           ║
-║   ├── TypeScript + esbuild                                       ║
-║   └── Compila senza errori!                                      ║
+║   ✅ PATTERN CHUNKING AGGIUNTO:                                 ║
+║   ├── Regola "max 500 righe per file" in DNA                   ║
+║   ├── cervella-researcher.md aggiornato                         ║
+║   └── cervella-scienziata.md aggiornato                         ║
 ║                                                                  ║
-║   ✅ Task 2.2: Package.json Configuration COMPLETATO!           ║
-║   ├── 6 comandi (initialize, install, status, dashboard, etc)  ║
-║   ├── 4 settings (tier, agentsPath, enabledAgents, autoUpdate) ║
-║   └── Metadata Marketplace completi                             ║
+║   ✅ 16 AGENTS CONVERTITI IN .agent.md FORMAT!                  ║
+║   ├── .github/agents/ con 16 file Agent HQ compliant           ║
+║   ├── Frontmatter YAML corretto (name, tools, model, etc)      ║
+║   ├── Handoffs alle Guardiane configurati                       ║
+║   └── Script convert_agents_to_agent_hq.py creato               ║
 ║                                                                  ║
-║   ✅ Task 2.3: Extension Activation COMPLETATO!                 ║
-║   └── src/extension.ts (155 righe, 6 comandi funzionanti)      ║
+║   📂 STRUTTURA FINALE:                                          ║
+║   ├── ~/.claude/agents/ → Source of truth (16 files)           ║
+║   └── .github/agents/ → Agent HQ format (16 .agent.md)         ║
 ║                                                                  ║
-║   🔥 SCOPERTA AGENT HQ (VS Code Novembre 2025):                 ║
-║   ├── Dashboard UI GRATIS (zero webview!)                      ║
-║   ├── .agent.md = standard (VS Code rileva auto!)              ║
-║   ├── Git worktrees nativi per background agents               ║
-║   └── CervellaSwarm = "Smart Layer on Top"                     ║
+║   📊 PROGRESSO MVP: ~40%                                        ║
 ║                                                                  ║
-║   📊 PROGRESSO MVP: ~35% (7/45 task)                           ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### FILE CREATI/MODIFICATI
+
+| File | Azione |
+|------|--------|
+| .github/agents/*.agent.md | CREATO - 16 file Agent HQ format |
+| .github/agents/README.md | CREATO - Documentazione |
+| scripts/convert_agents_to_agent_hq.py | CREATO - Script conversione |
+| ~/.claude/agents/cervella-researcher.md | MODIFICATO - Pattern Chunking |
+| ~/.claude/agents/cervella-scienziata.md | MODIFICATO - Pattern Chunking |
+
+### FILO DEL DISCORSO
+
+- **Oggi:** Implementato il format Agent HQ per tutti i 16 agents
+- **Pattern Chunking:** Regola anti-perdita file (max 500 righe)
+- **Struttura:** Source of truth in ~/.claude/agents/, export in .github/agents/
+- **Prossimo:** Testare in VS Code 1.107+ con Agent HQ
+
+### TODO PROSSIMA SESSIONE
+
+```
+╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
+║   📋 PROSSIMI TASK:                                              ║
+║                                                                  ║
+║   ⬜ Testare Agent HQ in VS Code 1.107+                         ║
+║      → Aprire progetto con .github/agents/                      ║
+║      → Verificare che gli agents siano rilevati                 ║
+║      → Testare @cervella-frontend in chat                       ║
+║                                                                  ║
+║   ⬜ Task 3.1-3.3: Agent Installer                              ║
+║      → Comando per copiare agents in workspace                  ║
+║      → UI per selezionare quali agents installare               ║
+║                                                                  ║
+║   ⬜ Continuare MVP secondo roadmap                             ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+---
+
+## SESSIONE 50 - EXTENSION + SCOPERTA STRATEGICA! (2 Gennaio 2026)
+
+### COSA ABBIAMO FATTO
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║   ✅ Extension VS Code creata (cervellaswarm-extension/)        ║
+║   ✅ 6 comandi, 4 settings, Marketplace metadata                ║
+║   🔥 SCOPERTA Agent HQ = "Smart Layer on Top" strategy          ║
+║   📊 PROGRESSO MVP: ~35%                                        ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
@@ -995,19 +1044,17 @@ FASI COMPLETATE: 8/9 (89%)
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-02 17:32 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-02 18:11 (auto)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: dcd2863 - docs: update roadmap - Task 1.3 + 1.4 completed (v15.0.0)
-- **File modificati** (4):
-  - ROMPT_RIPRESA.md
-  - data/logs/hook_debug.log
-  - data/logs/subagent_stop_debug.log
-  - data/swarm_memory.db
+- **Ultimo commit**: 6c4da5d - docs: final checkpoint Session 50 - Extension + Agent HQ + Chunking
+- **File modificati**: Nessuno (git pulito)
 
 ### Note
 - Checkpoint automatico generato da hook
-- Trigger: unknown
+- Trigger: auto
 
 ---

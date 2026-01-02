@@ -6,7 +6,7 @@
 
 ## 📊 OVERVIEW
 
-> **Aggiornato:** 2 Gennaio 2026 - Sessione 50 - Extension + Agent HQ! (v16.0.0)
+> **Aggiornato:** 2 Gennaio 2026 - Sessione 51 - Agents convertiti Agent HQ! (v17.0.0)
 
 | Fase | Nome | Stato | Progresso |
 |------|------|-------|-----------|
@@ -23,7 +23,7 @@
 | 9 | ~~Infrastruttura H24~~ | ❌ ELIMINATA | - |
 | 10 | Automazione Intelligente | ✅ REALE | 75% |
 | 10b | GitHub Actions | ✅ FUNZIONA! | 100% |
-| **MVP** | **VS Code Extension** | 🚀 IN CORSO | **35%** |
+| **MVP** | **VS Code Extension** | 🚀 IN CORSO | **40%** |
 | 11 | Roadmap Visuale | 💭 DOPO MVP | 0% |
 | 12 | Biblioteca Comune | 💭 DOPO MVP | 25% |
 
@@ -42,8 +42,10 @@
 ║   ✅ Task 2.1: Extension Project (yo code) - COMPLETATO         ║
 ║   ✅ Task 2.2: Package.json Configuration - COMPLETATO          ║
 ║   ✅ Task 2.3: Extension Activation - COMPLETATO                ║
-║   🔥 SCOPERTA: Agent HQ = Smart Layer Strategy!                ║
-║   ⬜ PROSSIMO: Convertire agents in .agent.md (per NOI!)       ║
+║   ✅ 16 AGENTS CONVERTITI in .agent.md format!                  ║
+║   ✅ Pattern Chunking aggiunto (max 500 righe/file)             ║
+║   ✅ Script convert_agents_to_agent_hq.py creato                ║
+║   ⬜ PROSSIMO: Testare Agent HQ in VS Code 1.107+              ║
 ║   ⬜ Task 3.1-3.3: Agent Installer                              ║
 ║   ⬜ ... (45 task totali)                                       ║
 ║                                                                  ║
@@ -448,6 +450,29 @@ Condividiamo PATTERN e STANDARD, non file.
 ---
 
 ## 📝 CHANGELOG
+
+### 2 Gennaio 2026 (Sessione 51) - 🚀 AGENTS CONVERTITI AGENT HQ!
+
+**TASK COMPLETATI:**
+- ✅ Pattern Chunking aggiunto a cervella-researcher e cervella-scienziata
+- ✅ 16 agents convertiti in formato .agent.md (Agent HQ)
+- ✅ Script convert_agents_to_agent_hq.py creato
+- ✅ README per .github/agents/ creato
+
+**FILE CREATI:**
+- .github/agents/*.agent.md (16 file Agent HQ compliant)
+- .github/agents/README.md (documentazione)
+- scripts/convert_agents_to_agent_hq.py (script conversione)
+
+**FILE MODIFICATI:**
+- ~/.claude/agents/cervella-researcher.md (Pattern Chunking rule)
+- ~/.claude/agents/cervella-scienziata.md (Pattern Chunking rule)
+
+**PROGRESSO MVP:** 40%
+
+**Versione:** 17.0.0 (MAJOR: Agent HQ Integration!)
+
+---
 
 ### 2 Gennaio 2026 (Sessione 49) - 🚀 MVP FOUNDATION COMPLETATO!
 

@@ -18,40 +18,47 @@
 
 ## 🎯 DOVE SIAMO
 
-**SESSIONE 50 - 2 Gennaio 2026: EXTENSION BOILERPLATE + SCOPERTA AGENT HQ! 🔥**
+**SESSIONE 51 - 2 Gennaio 2026: AGENTS CONVERTITI PER AGENT HQ!**
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   🚀 SESSIONE 50 - MEGA SPRINT + SCOPERTA STRATEGICA!           ║
+║   🚀 SESSIONE 51 - IMPLEMENTAZIONE AGENT HQ!                    ║
 ║                                                                  ║
-║   ✅ Task 2.1: Extension Project (yo code) COMPLETATO!          ║
-║   ├── cervellaswarm-extension/ creata                           ║
-║   ├── TypeScript + esbuild                                       ║
-║   └── Compila senza errori!                                      ║
+║   ✅ Pattern Chunking aggiunto a researcher/scienziata          ║
+║   ├── Regola "max 500 righe per file"                          ║
+║   └── Previene perdita file durante compact                     ║
 ║                                                                  ║
-║   ✅ Task 2.2: Package.json Configuration COMPLETATO!           ║
-║   ├── 6 comandi (initialize, install, status, dashboard, etc)  ║
-║   ├── 4 settings (tier, agentsPath, enabledAgents, autoUpdate) ║
-║   └── Metadata Marketplace completi                             ║
+║   ✅ 16 AGENTS CONVERTITI IN .agent.md FORMAT!                  ║
+║   ├── .github/agents/ con 16 file Agent HQ compliant           ║
+║   ├── Handoffs alle Guardiane configurati                       ║
+║   ├── Tools mappati (read, edit, search, fetch, terminal)       ║
+║   └── Script convert_agents_to_agent_hq.py creato               ║
 ║                                                                  ║
-║   ✅ Task 2.3: Extension Activation COMPLETATO!                 ║
-║   └── src/extension.ts (155 righe, 6 comandi funzionanti)      ║
+║   📂 NUOVA STRUTTURA:                                           ║
+║   ├── ~/.claude/agents/ (source of truth - 16 files)           ║
+║   └── .github/agents/ (Agent HQ format - 16 .agent.md)         ║
 ║                                                                  ║
-║   🔥 SCOPERTA AGENT HQ (VS Code Novembre 2025):                 ║
-║   ├── Dashboard UI pronta (ZERO sviluppo webview!)             ║
-║   ├── .agent.md = standard stabile (VS Code rileva auto!)      ║
-║   ├── Git worktrees nativi per background agents               ║
-║   └── CervellaSwarm = "Smart Layer on Top"!                    ║
+║   📊 PROGRESSO MVP: ~40%                                        ║
 ║                                                                  ║
-║   📊 PROGRESSO MVP: ~35%                                        ║
-║                                                                  ║
-║   ⬜ PROSSIMO: Convertire agents in .agent.md per NOI PRIMA!   ║
+║   ⬜ PROSSIMO: Testare Agent HQ su VS Code 1.107+              ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
-**PROSSIMO OBIETTIVO:** Implementare .agent.md PER NOI prima di commercializzare
+**PROSSIMO OBIETTIVO:** Testare gli agents in VS Code Agent HQ
+
+---
+
+### 📅 SESSIONE 50 - EXTENSION + SCOPERTA AGENT HQ
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║   ✅ Extension VS Code creata (cervellaswarm-extension/)        ║
+║   ✅ 6 comandi, 4 settings, Marketplace metadata                ║
+║   🔥 SCOPERTA Agent HQ = "Smart Layer on Top" strategy          ║
+╚══════════════════════════════════════════════════════════════════╝
+```
 
 ---
 
