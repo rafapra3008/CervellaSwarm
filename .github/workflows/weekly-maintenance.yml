@@ -1,0 +1,85 @@
+# CervellaSwarm - Manutenzione Settimanale
+# Versione: 1.0.0
+# Data: 2026-01-02
+#
+# Esegue analisi settimanale del codebase ogni Lunedi alle 9:00 UTC
+
+name: Weekly Maintenance
+
+on:
+  schedule:
+    # Ogni Lunedi alle 9:00 UTC (10:00 Roma)
+    - cron: '0 9 * * 1'
+
+  # Permetti esecuzione manuale
+  workflow_dispatch:
+
+jobs:
+  maintenance:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      issues: write
+      pull-requests: read
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Claude Weekly Analysis
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+
+          prompt: |
+            ============================================
+            MANUTENZIONE SETTIMANALE CERVELLASWARM
+            ============================================
+
+            Sei Cervella-Ingegnera. Fai analisi settimanale del codebase.
+
+            CONTROLLA:
+
+            1. FILE GRANDI (> 500 righe)
+               - Trova file che hanno superato soglia
+               - Suggerisci split se necessario
+
+            2. TODO/FIXME NEL CODICE
+               - Cerca TODO senza issue linkato
+               - Identifica FIXME dimenticati
+
+            3. DEPENDENCY UPDATES
+               - Controlla requirements.txt / package.json
+               - Nota se ci sono update disponibili
+
+            4. DOCUMENTATION FRESHNESS
+               - README e ROADMAP aggiornati?
+               - Docs obsolete?
+
+            5. CODE PATTERNS
+               - Pattern ripetuti da estrarre
+               - Potenziali ottimizzazioni
+
+            ============================================
+            OUTPUT
+            ============================================
+
+            Se trovi problemi, crea UNA issue con:
+            - Titolo: "[Weekly] Manutenzione YYYY-MM-DD"
+            - Body: Lista problemi organizzati per categoria
+            - Labels: maintenance, automated
+
+            Se tutto OK, non creare issue.
+
+          claude_args: |
+            --allowedTools "Bash(gh issue:*),Read,Glob,Grep"
+            --model claude-sonnet-4-5-20250929
+            --max_turns 5
+
+      - name: Log Completion
+        run: |
+          echo "Manutenzione settimanale completata!"
+          echo "Data: $(date)"
