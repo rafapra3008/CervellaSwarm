@@ -2238,3 +2238,51 @@ TIMESTAMP: 2026-01-02T02:28:13.211578
 }
 ============================================================
 
+
+============================================================
+TIMESTAMP: 2026-01-02T02:40:49.354185
+============================================================
+{
+  "session_id": "db640a4e-1968-4246-b8d5-a30e0a31dbfb",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/db640a4e-1968-4246-b8d5-a30e0a31dbfb.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a34243c",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/agent-a34243c.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T02:43:04.410591
+============================================================
+{
+  "session_id": "db640a4e-1968-4246-b8d5-a30e0a31dbfb",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/db640a4e-1968-4246-b8d5-a30e0a31dbfb.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a8733ad",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/agent-a8733ad.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T02:47:21.142864
+============================================================
+{
+  "session_id": "db640a4e-1968-4246-b8d5-a30e0a31dbfb",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/db640a4e-1968-4246-b8d5-a30e0a31dbfb.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a88a4dc",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/agent-a88a4dc.jsonl"
+}
+============================================================
+
