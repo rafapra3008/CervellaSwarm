@@ -6,7 +6,7 @@
 
 ## 📊 OVERVIEW
 
-> **Aggiornato:** 2 Gennaio 2026 - Sessione 48 - INIZIATO MVP! (v14.0.0)
+> **Aggiornato:** 2 Gennaio 2026 - Sessione 49 - MVP Foundation! (v15.0.0)
 
 | Fase | Nome | Stato | Progresso |
 |------|------|-------|-----------|
@@ -23,7 +23,7 @@
 | 9 | ~~Infrastruttura H24~~ | ❌ ELIMINATA | - |
 | 10 | Automazione Intelligente | ✅ REALE | 75% |
 | 10b | GitHub Actions | ✅ FUNZIONA! | 100% |
-| **MVP** | **VS Code Extension** | 🚀 IN CORSO | **15%** |
+| **MVP** | **VS Code Extension** | 🚀 IN CORSO | **25%** |
 | 11 | Roadmap Visuale | 💭 DOPO MVP | 0% |
 | 12 | Biblioteca Comune | 💭 DOPO MVP | 25% |
 
@@ -37,8 +37,8 @@
 ║   ✅ Publisher riservato: CervellaSwarm (cervellaswarm)         ║
 ║   ✅ Task 1.1: Path Parametrization - COMPLETATO                ║
 ║   ✅ Task 1.2: Version Headers - COMPLETATO                     ║
-║   ⬜ Task 1.3: Database Migration System                        ║
-║   ⬜ Task 1.4: Dependency Isolation                             ║
+║   ✅ Task 1.3: Database Migration System - COMPLETATO           ║
+║   ✅ Task 1.4: Dependency Isolation - COMPLETATO                ║
 ║   ⬜ Task 2.1-2.3: Extension Boilerplate                        ║
 ║   ⬜ Task 3.1-3.3: Agent Installer                              ║
 ║   ⬜ ... (45 task totali)                                       ║
@@ -444,6 +444,31 @@ Condividiamo PATTERN e STANDARD, non file.
 ---
 
 ## 📝 CHANGELOG
+
+### 2 Gennaio 2026 (Sessione 49) - 🚀 MVP FOUNDATION COMPLETATO!
+
+**TASK COMPLETATI - Pattern "I Cugini" (2 API in parallelo):**
+- ✅ Task 1.3: Database Migration System (cervella-backend)
+- ✅ Task 1.4: Dependency Isolation (cervella-backend)
+
+**FILE CREATI:**
+- scripts/memory/migrate.py (479 righe - sistema migration completo)
+- scripts/memory/migrations/001_initial.sql
+- scripts/memory/migrations/002_lessons_learned.sql
+- scripts/memory/migrations/003_error_patterns.sql
+- scripts/memory/migrations/README.md
+- requirements.txt (core dependencies)
+- requirements-dev.txt (optional: rich, pytest)
+
+**FILE MODIFICATI:**
+- scripts/memory/analytics.py (Rich fallback)
+- scripts/memory/weekly_retro.py (Rich fallback)
+
+**PROGRESSO MVP:** 25% (4/45 task completati)
+
+**Versione:** 15.0.0 (MAJOR: MVP Foundation completa!)
+
+---
 
 ### 2 Gennaio 2026 (Sessione 46) - 💰 STUDIO COMMERCIALIZZAZIONE!
 

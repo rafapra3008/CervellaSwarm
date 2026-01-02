@@ -1,6 +1,81 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 48 - INIZIAMO MVP! Task 1.1 + 1.2 completati!
+> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 49 - MVP Foundation! Task 1.3 + 1.4 completati!
+
+---
+
+## SESSIONE 49 - MVP FOUNDATION! 🚀 (2 Gennaio 2026)
+
+### COSA ABBIAMO FATTO
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   🚀 MVP FOUNDATION COMPLETATA!                                 ║
+║                                                                  ║
+║   ✅ Task 1.3: Database Migration System (COMPLETATO!)          ║
+║   ├── scripts/memory/migrate.py (479 righe!)                    ║
+║   ├── migrations/ con 3 file SQL                                ║
+║   ├── CLI: --status, --dry-run, --upgrade, --rollback           ║
+║   └── Schema versioning automatico                              ║
+║                                                                  ║
+║   ✅ Task 1.4: Dependency Isolation (COMPLETATO!)               ║
+║   ├── requirements.txt (core - stdlib only)                     ║
+║   ├── requirements-dev.txt (rich, pytest)                       ║
+║   ├── analytics.py con Rich fallback                            ║
+║   └── weekly_retro.py con Rich fallback                         ║
+║                                                                  ║
+║   🐝 2 API IN PARALLELO (Pattern "I Cugini")                   ║
+║   └── cervella-backend x2 - Zero conflitti!                     ║
+║                                                                  ║
+║   📊 PROGRESSO MVP: 25% (4/45 task)                             ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### FILE CREATI/MODIFICATI
+
+| File | Azione |
+|------|--------|
+| scripts/memory/migrate.py | CREATO - Sistema migration (479 righe) |
+| scripts/memory/migrations/001_initial.sql | CREATO - Schema base |
+| scripts/memory/migrations/002_lessons_learned.sql | CREATO - Extended |
+| scripts/memory/migrations/003_error_patterns.sql | CREATO - Patterns |
+| scripts/memory/migrations/README.md | CREATO - Documentazione |
+| requirements.txt | CREATO - Core dependencies |
+| requirements-dev.txt | CREATO - Optional (rich, pytest) |
+| scripts/memory/analytics.py | MODIFICATO - Rich fallback |
+| scripts/memory/weekly_retro.py | MODIFICATO - Rich fallback |
+
+### FILO DEL DISCORSO
+
+- **Oggi:** MVP Foundation completata! Task 1.3 + 1.4 fatti in parallelo!
+- **La direzione:** Iniziare SETTIMANA 2 con Extension Boilerplate (Task 2.1)
+- **Momentum:** OTTIMO! Pattern "I Cugini" funziona alla grande!
+- **Filosofia:** "Ultrapassar os próprios limites!" - Rafa
+
+### TODO PROSSIMA SESSIONE
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   📋 PROSSIMI TASK (SETTIMANA 2 - Extension Boilerplate):       ║
+║                                                                  ║
+║   ⬜ Task 2.1: Setup Extension Project (4 ore)                  ║
+║      → npm install -g yo generator-code                         ║
+║      → yo code (TypeScript)                                      ║
+║      → Nuovo repo: cervellaswarm-vscode                         ║
+║                                                                  ║
+║   ⬜ Task 2.2: Package.json Configuration (2 ore)               ║
+║      → Metadata, commands, settings                              ║
+║                                                                  ║
+║   ⬜ Task 2.3: Basic Extension Activation (6 ore)               ║
+║      → extension.ts con Initialize command                       ║
+║                                                                  ║
+║   ✅ GIORNO 1 COMPLETATO! (Task 1.1-1.4)                        ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
 
 ---
 
@@ -10,64 +85,9 @@
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🚀 INIZIATO MVP DEVELOPMENT!                                  ║
-║                                                                  ║
-║   ✅ PUBLISHER RISERVATO: CervellaSwarm (cervellaswarm)         ║
-║                                                                  ║
-║   ✅ Task 1.1: Path Parametrization (COMPLETATO!)               ║
-║   ├── scripts/common/paths.py creato                            ║
-║   ├── 10 script Python aggiornati                               ║
-║   └── Supporto env vars per override                            ║
-║                                                                  ║
-║   ✅ Task 1.2: Version Headers (COMPLETATO!)                    ║
-║   ├── scripts/tools/add_version_headers.py creato               ║
-║   └── 16 agent files aggiornati con version 1.0.0               ║
-║                                                                  ║
-║   🐝 2 API IN PARALLELO (cervella-backend x2)                   ║
-║   └── Aggiornamento script memory + learning                    ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### FILE CREATI/MODIFICATI
-
-| File | Azione |
-|------|--------|
-| scripts/common/paths.py | CREATO - Sistema path centralizzato |
-| scripts/common/__init__.py | CREATO - Init modulo |
-| scripts/tools/add_version_headers.py | CREATO - Tool versioning |
-| scripts/memory/*.py (8 files) | AGGIORNATI - Usano paths.py |
-| scripts/learning/*.py (2 files) | AGGIORNATI - Usano paths.py |
-| ~/.claude/agents/*.md (16 files) | AGGIORNATI - Version 1.0.0 |
-
-### FILO DEL DISCORSO
-
-- **Oggi:** Iniziato MVP! Task 1.1 + 1.2 completati!
-- **La direzione:** Continuare con Task 1.3 (DB Migration) o Task 2.1 (Extension Boilerplate)
-- **Momentum:** OTTIMO! Lavoriamo senza fretta, godiamo ogni step!
-- **Filosofia:** "La mappa c'e, godiamo ogni step!" - Rafa
-
-### TODO PROSSIMA SESSIONE
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   📋 PROSSIMI TASK (dal Piano Tecnico):                         ║
-║                                                                  ║
-║   ⬜ Task 1.3: Database Migration System (3 ore)                ║
-║      → scripts/memory/migrate.py                                 ║
-║      → Versioning schema DB                                      ║
-║                                                                  ║
-║   ⬜ Task 1.4: Dependency Isolation (2 ore)                     ║
-║      → requirements.txt                                          ║
-║      → Rich fallback                                             ║
-║                                                                  ║
-║   ⬜ Task 2.1: Extension Boilerplate (4 ore)                    ║
-║      → yo code + setup TypeScript                                ║
-║                                                                  ║
-║   ✅ SETUP ACCOUNT: Publisher CervellaSwarm riservato!          ║
-║                                                                  ║
+║   ✅ Publisher riservato: CervellaSwarm (cervellaswarm)         ║
+║   ✅ Task 1.1: Path Parametrization                              ║
+║   ✅ Task 1.2: Version Headers                                   ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
@@ -943,11 +963,13 @@ FASI COMPLETATE: 8/9 (89%)
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-02 15:39 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-02 16:07 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: fba97e4 - 📝 PROMPT_RIPRESA: Note sessione 47 + errori API
+- **Ultimo commit**: ca111ca - docs: update roadmap - publisher reserved + task 1.1/1.2 done
 - **File modificati** (3):
   - ata/logs/hook_debug.log
   - data/logs/subagent_stop_debug.log
