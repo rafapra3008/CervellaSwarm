@@ -1,782 +1,207 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 54 - REGOLA 11 ESPANSA + DIREZIONE "NOI MODE"
+> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 55 - ROADMAP PULITA + NOI MODE!
 
 ---
 
-## SESSIONE 54 - REGOLA 11 ESPANSA + "NOI MODE"! (2 Gennaio 2026)
+## SESSIONE 55 - ROADMAP PULITA + NOI MODE! (2 Gennaio 2026)
 
 ### COSA ABBIAMO FATTO
 
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🎯 SESSIONE IMPORTANTE!                                       ║
-║                                                                  ║
-║   1. REGOLA 11 ESPANSA (v1.3.0)                                 ║
-║      Nuova sfumatura: "Interessante per altri →                 ║
-║      Studio CONCETTO → Posso RICREARE per noi?"                 ║
-║      "Noi qui CREIAMO quando serve!" - Rafa 💎                  ║
-║                                                                  ║
-║   2. RICERCHE PARALLELE (I Cugini)                              ║
-║      🔬 Scienziata → Concetti feature competitor                ║
-║      👷‍♀️ Ingegnera → Analisi sistema hooks                       ║
-║                                                                  ║
-║   3. RISULTATI RICERCHE                                         ║
-║      • Dashboard UI → ❌ NON serve (abbiamo analytics.py)       ║
-║      • Handoffs Auto → ✅ RICREARE! (4-6h)                      ║
-║      • Sessions CLI → ✅ RICREARE! (6-8h)                       ║
-║      • UserPromptSubmit hook → ✅ AGGIUNGERE! (4-8h)            ║
-║      • Health Score Hooks: 7.5/10                               ║
-║                                                                  ║
-║   4. DECISIONE STRATEGICA: "NOI MODE"                           ║
-║      • Prima creiamo NOI con la nostra filosofia                ║
-║      • Documentiamo con creatività e storia                     ║
-║      • DOPO (se serve) compriamo Cursor per comparare           ║
-║      • "Per non sporcare le nostre teste" - Rafa                ║
-║                                                                  ║
-║   5. FILE MODIFICATI                                            ║
-║      ✅ docs/SWARM_RULES.md (v1.3.0 - REGOLA 11 espansa)        ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
++------------------------------------------------------------------+
+|                                                                  |
+|   SESSIONE PRODUTTIVA!                                           |
+|                                                                  |
+|   1. ROADMAP PULITA (v20.0.0)                                    |
+|      - Rimosso MVP-A/B Agent HQ (era per Copilot!)               |
+|      - Mostrato STATO REALE del sistema                          |
+|      - Aggiunta sezione "NOI MODE"                               |
+|                                                                  |
+|   2. RICERCHE TECNICHE LANCIATE (Pattern "I Cugini")             |
+|      - 3 cervella-researcher in parallelo                        |
+|      - Handoffs Implementation                                   |
+|      - Sessions Implementation                                   |
+|      - Hooks Completa                                            |
+|                                                                  |
+|   3. FILE AGGIORNATI                                             |
+|      - ROADMAP_SACRA.md (v20.0.0)                                |
+|      - NORD.md (nuova direzione)                                 |
+|      - PROMPT_RIPRESA.md (questo file)                           |
+|                                                                  |
++------------------------------------------------------------------+
 ```
 
 ### FILO DEL DISCORSO (IMPORTANTE!)
 
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   📍 DOVE ERAVAMO RIMASTI:                                      ║
-║                                                                  ║
-║   Stavamo per RIFARE LA ROADMAP nel modo giusto:                ║
-║   • Pulire le cose obsolete (MVP-A Agent HQ era per Copilot!)   ║
-║   • Aggiungere ricerche da fare                                 ║
-║   • Aggiungere feature da implementare                          ║
-║   • Tutto con filosofia "Noi mode"                              ║
-║                                                                  ║
-║   Rafa ha detto: "Checkpoint, andiamo alla prossima sessione"   ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
++------------------------------------------------------------------+
+|                                                                  |
+|   DOVE ERAVAMO RIMASTI:                                          |
+|                                                                  |
+|   3 RICERCHE TECNICHE IN CORSO:                                  |
+|   1. RICERCA_HANDOFFS_IMPLEMENTATION.md                          |
+|   2. RICERCA_SESSIONS_IMPLEMENTATION.md                          |
+|   3. RICERCA_HOOKS_COMPLETA.md                                   |
+|                                                                  |
+|   PROSSIMO STEP:                                                 |
+|   - Raccogliere risultati ricerche                               |
+|   - Applicare REGOLA 11 (UTILE vs INTERESSANTE)                  |
+|   - Decidere cosa CREARE                                         |
+|   - Implementare UNO ALLA VOLTA                                  |
+|                                                                  |
++------------------------------------------------------------------+
 ```
 
-### TODO PROSSIMA SESSIONE (PRIORITÀ!)
+### TODO PROSSIMA SESSIONE (SE NON COMPLETATO OGGI)
 
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🎯 STEP 1: RIFARE ROADMAP PULITA                              ║
-║                                                                  ║
-║   • Rimuovere cose obsolete (MVP-A Agent HQ, etc.)              ║
-║   • Mostrare STATO REALE (cosa funziona GIÀ)                    ║
-║   • Aggiungere RICERCHE da fare:                                ║
-║     - Competitive Analysis Go-to-Market                         ║
-║       (come vendono, dove, per quanto?)                         ║
-║   • Aggiungere FEATURE da implementare:                         ║
-║     - Handoffs Auto (4-6h)                                      ║
-║     - Sessions CLI (6-8h)                                       ║
-║     - UserPromptSubmit hook (4-8h)                              ║
-║   • Aggiungere MIGLIORAMENTI HOOKS:                             ║
-║     - Consolidare codice duplicato                              ║
-║     - Testing automatico                                        ║
-║                                                                  ║
-╠══════════════════════════════════════════════════════════════════╣
-║                                                                  ║
-║   🎯 STEP 2: CON LA MAPA DEL TESORO DISEGNATA                   ║
-║                                                                  ║
-║   → Procedere UNO ALLA VOLTA fino alla fine! ❤️‍🔥                ║
-║                                                                  ║
-╠══════════════════════════════════════════════════════════════════╣
-║                                                                  ║
-║   🎯 STEP 3 (FUTURO, se serve):                                 ║
-║                                                                  ║
-║   → Comprare Cursor Pro 1 mese per:                             ║
-║     - Comparare ("la concorrenza non ha QUESTO!")               ║
-║     - Vedere dettagli da "rubare" 😆                            ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
++------------------------------------------------------------------+
+|                                                                  |
+|   SE LE RICERCHE SONO COMPLETE:                                  |
+|                                                                  |
+|   1. Leggere i 3 report in docs/studio/                          |
+|   2. Applicare REGOLA 11:                                        |
+|      - Cosa e' UTILE? (ci serve per CervellaSwarm)               |
+|      - Cosa e' INTERESSANTE? (scartare!)                         |
+|   3. Decidere quale feature implementare PRIMA                   |
+|   4. CREARE nel "Noi mode"                                       |
+|                                                                  |
+|   FEATURE DA CREARE:                                             |
+|   - Handoffs Automatici (4-6h)                                   |
+|   - Sessions CLI (6-8h)                                          |
+|   - Hooks Avanzati (4-8h)                                        |
+|                                                                  |
++------------------------------------------------------------------+
 ```
 
-### FILOSOFIA "NOI MODE" 💎
+### FILOSOFIA "NOI MODE"
 
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   "Per non sporcare le nostre teste..."                         ║
-║                                                                  ║
-║   1. Prima RICERCHIAMO e approfondiamo                          ║
-║   2. Documentiamo con la nostra CREATIVITÀ e STORIA             ║
-║   3. CREIAMO nel "Noi mode"                                     ║
-║   4. DOPO (se serve) confrontiamo con competitor                ║
-║                                                                  ║
-║   "Noi qui CREIAMO quando serve!" - Rafa 💎                     ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
++------------------------------------------------------------------+
+|                                                                  |
+|   "Noi qui CREIAMO quando serve!" - Rafa                         |
+|                                                                  |
+|   1. Prima RICERCHIAMO e approfondiamo                           |
+|   2. Documentiamo con la nostra CREATIVITA                       |
+|   3. CREIAMO nel "Noi mode"                                      |
+|   4. DOPO (se serve) confrontiamo con competitor                 |
+|                                                                  |
+|   "Per non sporcare le nostre teste..."                          |
+|                                                                  |
++------------------------------------------------------------------+
 ```
 
 ### STATO SISTEMA (VERIFICATO!)
 
 ```
-✅ 16 Agents in ~/.claude/agents/ (tutti funzionanti)
-✅ Hook SubagentStop configurato
-✅ 8 Hooks globali funzionanti
-✅ SWARM_RULES v1.3.0 (REGOLA 11 espansa!)
-✅ Sistema Memoria SQLite funzionante
-✅ Pattern Catalog (3 pattern validati)
+16 Agents in ~/.claude/agents/ (tutti funzionanti)
+8 Hooks globali funzionanti
+SWARM_RULES v1.3.0 (REGOLA 11 espansa!)
+Sistema Memoria SQLite funzionante
+Pattern Catalog (3 pattern validati)
+ROADMAP PULITA (v20.0.0)
 ```
 
 ---
 
-## SESSIONE 53 - LEZIONE IMPORTANTE + PULIZIA! (2 Gennaio 2026)
+## SESSIONE 54 (ARCHIVIATA) - REGOLA 11 ESPANSA
 
 ### COSA ABBIAMO FATTO
 
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🎯 LEZIONE IMPORTANTE APPRESA!                                ║
-║                                                                  ║
-║   PROBLEMA SCOPERTO:                                            ║
-║   Le ricerche Sessione 51-52 erano su Agent HQ/GitHub Copilot   ║
-║   Ma noi usiamo CLAUDE CODE, non Copilot!                       ║
-║   = Informazione "interessante" ma NON "utile"!                 ║
-║                                                                  ║
-║   SOLUZIONE IMPLEMENTATA:                                       ║
-║   🆕 REGOLA 11: PERCHÉ → RICERCA → VERIFICA PERCHÉ              ║
-║   ├── PRIMA: Scrivo PERCHÉ, COSA CAMBIERÀ, CRITERI              ║
-║   └── DOPO: Confronto risultato col PERCHÉ originale            ║
-║                                                                  ║
-║   FILE MODIFICATI:                                              ║
-║   ✅ ~/.claude/agents/cervella-orchestrator.md (DNA Regina)     ║
-║   ✅ docs/SWARM_RULES.md v1.2.0 (REGOLA 11 aggiunta)            ║
-║                                                                  ║
-║   PULIZIA COMPLETATA:                                           ║
-║   🗑️ Rimosso .github/agents/ da Miracollo (non serviva)         ║
-║   🗑️ Rimosso .github/agents/ da CervellaSwarm (non serviva)     ║
-║   ✅ 16 agents VERI in ~/.claude/agents/ (intatti!)             ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
++------------------------------------------------------------------+
+|                                                                  |
+|   1. REGOLA 11 ESPANSA (v1.3.0)                                  |
+|      Nuova sfumatura: "Interessante per altri ->                 |
+|      Studio CONCETTO -> Posso RICREARE per noi?"                 |
+|      "Noi qui CREIAMO quando serve!" - Rafa                      |
+|                                                                  |
+|   2. RICERCHE PARALLELE (I Cugini)                               |
+|      - Scienziata -> Concetti feature competitor                 |
+|      - Ingegnera -> Analisi sistema hooks                        |
+|                                                                  |
+|   3. RISULTATI RICERCHE                                          |
+|      - Dashboard UI -> NO (abbiamo analytics.py)                 |
+|      - Handoffs Auto -> RICREARE! (4-6h)                         |
+|      - Sessions CLI -> RICREARE! (6-8h)                          |
+|      - UserPromptSubmit hook -> AGGIUNGERE! (4-8h)               |
+|      - Health Score Hooks: 7.5/10                                |
+|                                                                  |
+|   4. DECISIONE STRATEGICA: "NOI MODE"                            |
+|      - Prima creiamo NOI con la nostra filosofia                 |
+|      - Documentiamo con creativita e storia                      |
+|      - DOPO (se serve) compriamo Cursor per comparare            |
+|                                                                  |
++------------------------------------------------------------------+
 ```
+
+---
+
+## SESSIONE 53 (ARCHIVIATA) - LEZIONE IMPORTANTE
 
 ### LA REGOLA 11 IN SINTESI
 
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   📝 PRIMA DI DELEGARE RICERCA:                                 ║
-║   1. PERCHÉ - Quale problema CONCRETO risolve?                  ║
-║   2. COSA CAMBIERÀ - Se utile, cosa faremo di diverso?         ║
-║   3. CRITERI - Come valuto se il risultato è utile?            ║
-║                                                                  ║
-║   🔍 QUANDO TORNA IL RISULTATO:                                 ║
-║   4. CONFRONTO col PERCHÉ originale                             ║
-║   5. VALUTO: UTILE o solo INTERESSANTE?                        ║
-║   6. DECIDO: Se solo interessante → SCARTO!                     ║
-║                                                                  ║
-║   "UTILE ≠ INTERESSANTE"                                        ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### FILO DEL DISCORSO (IMPORTANTE!)
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   📍 COSA È SUCCESSO SESSIONE 53:                               ║
-║                                                                  ║
-║   1. Rafa ha chiesto di testare Agent HQ                        ║
-║   2. Cervella ha spiegato che serve GitHub Copilot Pro          ║
-║   3. Rafa ha detto: "Ma perché dobbiamo usare quello?"          ║
-║   4. SCOPERTA: Agent HQ è per Copilot, NOI usiamo Claude Code!  ║
-║   5. Le ricerche Sessione 51-52 erano "interessanti" ma non     ║
-║      "utili" - non rispondevano al nostro bisogno!              ║
-║                                                                  ║
-║   🎯 LEZIONE APPRESA:                                           ║
-║   Prima di delegare ricerche, scrivere PERCHÉ + CRITERI         ║
-║   Quando torna il risultato, verificare se RISPONDE al perché   ║
-║   UTILE ≠ INTERESSANTE!                                         ║
-║                                                                  ║
-║   ✅ SOLUZIONE: REGOLA 11 aggiunta a DNA + SWARM_RULES          ║
-║   ✅ PULIZIA: Rimossi file Agent HQ inutili                     ║
-║   ✅ AGENTS: 16 file in ~/.claude/agents/ (funzionano!)         ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   📍 DOVE ERAVAMO RIMASTI (fine Sessione 53):                   ║
-║                                                                  ║
-║   Rafa ha chiesto: "Qual è la situazione? Cosa hanno loro       ║
-║   di differenziale? C'è qualcosa da 'rubare' per noi?"          ║
-║                                                                  ║
-║   Cervella stava per rispondere quando Rafa ha detto:           ║
-║   "Facciamo checkpoint, continuiamo prossima sessione"          ║
-║                                                                  ║
-║   LE RICERCHE SONO STATE LETTE MA NON ANALIZZATE!               ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### TODO PROSSIMA SESSIONE (PRIORITÀ!)
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🎯 STEP 1: AGGIORNARE LA ROADMAP                              ║
-║                                                                  ║
-║   - Dove siamo REALMENTE? (non su carta!)                       ║
-║   - Cosa funziona GIÀ?                                          ║
-║   - Cosa serve DAVVERO?                                         ║
-║   - Aggiornare ROADMAP_SACRA.md con stato reale                 ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🔍 STEP 2: ANALISI COMPETITOR (da completare!)                ║
-║                                                                  ║
-║   RICERCHE GIÀ LETTE:                                           ║
-║   - docs/studio/RICERCA_COMPETITOR_AGENT_HQ.md                  ║
-║   - docs/studio/RICERCA_AGENT_HQ_TESTING.md                     ║
-║                                                                  ║
-║   DOMANDE DA RISPONDERE:                                        ║
-║   1. Cosa hanno LORO che noi NON abbiamo?                       ║
-║      - Agent HQ: Dashboard UI, Handoffs bottone, Sessions view  ║
-║      - Cursor: 8 agents paralleli                               ║
-║      - LangGraph: Checkpoints memory                            ║
-║      - CrewAI: Roles system                                     ║
-║                                                                  ║
-║   2. Cosa abbiamo NOI che LORO non hanno?                       ║
-║      - Multi-project orchestration (KILLER!)                    ║
-║      - Gerarchia Guardiane (Opus verifica Sonnet)               ║
-║      - Lessons Learned cross-session                            ║
-║      - Pattern Catalog validati                                  ║
-║                                                                  ║
-║   3. C'è qualcosa da "rubare" per Claude Code CLI?             ║
-║      - Handoffs? (già abbiamo pattern delega!)                  ║
-║      - Dashboard? (abbiamo analytics.py)                        ║
-║      - Altro?                                                    ║
-║                                                                  ║
-║   REGOLA: Cercare solo cose UTILI, non INTERESSANTI!            ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🗺️ STEP 3: AGGIORNARE/CREARE NUOVA ROADMAP                    ║
-║                                                                  ║
-║   Basandoci su:                                                  ║
-║   - Stato REALE del progetto                                    ║
-║   - Analisi competitor                                          ║
-║   - Cosa ci serve DAVVERO                                       ║
-║                                                                  ║
-║   Decidere:                                                      ║
-║   - Continuare con roadmap attuale?                             ║
-║   - Creare nuova roadmap più mirata?                            ║
-║   - Focus su cosa?                                               ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### STATO ATTUALE SISTEMA (REALE, non su carta!)
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   ✅ COSA FUNZIONA GIÀ:                                         ║
-║                                                                  ║
-║   🐝 16 AGENTS in ~/.claude/agents/                             ║
-║      - 1 Regina (orchestrator)                                   ║
-║      - 3 Guardiane (qualità, ops, ricerca)                      ║
-║      - 12 Worker (frontend, backend, tester, etc.)              ║
-║      → TESTATI E FUNZIONANTI!                                   ║
-║                                                                  ║
-║   🧠 SISTEMA MEMORIA                                            ║
-║      - SQLite database                                           ║
-║      - Lessons learned                                           ║
-║      - Error patterns                                            ║
-║      - Analytics (analytics.py)                                  ║
-║      → FUNZIONANTE!                                              ║
-║                                                                  ║
-║   📚 PATTERN CATALOG                                            ║
-║      - docs/patterns/ con 3 pattern validati                    ║
-║      - suggest_pattern.py per suggerimenti                      ║
-║      → FUNZIONANTE!                                              ║
-║                                                                  ║
-║   🔧 HOOKS                                                       ║
-║      - SessionStart, PreCompact, SubagentStop                   ║
-║      - Logging automatico                                        ║
-║      → FUNZIONANTI!                                              ║
-║                                                                  ║
-║   📜 REGOLE                                                      ║
-║      - SWARM_RULES.md v1.2.0 (11 regole)                        ║
-║      - DNA aggiornato in tutti gli agents                       ║
-║      → FUNZIONANTI!                                              ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   ❌ COSA NON SERVE / ELIMINATO:                                ║
-║                                                                  ║
-║   - Docker monitoring (archived/) - sciame non gira H24         ║
-║   - .github/agents/ (Agent HQ) - era per Copilot                ║
-║   - FASE 9 Infrastruttura H24 - impossibile con Claude          ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## SESSIONE 52 (ARCHIVIATA) - RICERCHE AGENT HQ
-
-> **NOTA:** Queste ricerche erano per Agent HQ/GitHub Copilot.
-> Noi usiamo Claude Code, quindi NON sono utili per noi.
-> Tenute come documentazione storica.
-
-### KILLER FEATURES CONFERMATI DALLA RICERCA
-
-```
-La scienziata ha verificato: I NOSTRI KILLER FEATURES SONO REALI!
-
-| Feature | Competitor? | Status |
-|---------|-------------|--------|
-| Multi-project orchestration | NESSUNO | ZERO COMPETITION |
-| Gerarchia Guardiane | Nessuno | UNICI |
-| Lessons Learned cross-session | Solo frameworks | UNICI per IDE |
-| Pattern Catalog | Nessuno | INNOVATION |
-```
-
-### FILE CREATI/MODIFICATI
-
-| File | Azione |
-|------|--------|
-| docs/studio/RICERCA_AGENT_HQ_TESTING.md | CREATO - Guida test |
-| docs/studio/RICERCA_COMPETITOR_AGENT_HQ.md | CREATO - Analisi mercato |
-| ~/Developer/miracollogeminifocus/.github/agents/ | CREATO - 16 agents copiati |
-
-### FILO DEL DISCORSO
-
-- **Stavamo facendo:** MVP-A TEST Agent HQ
-- **Ricerche completate:** 2 in parallelo (researcher + scienziata)
-- **Scoperta chiave:** Multi-project = ZERO competitor!
-- **Prossimo:** TEST in VS Code con Copilot Chat
-- **Nota:** VS Code 1.107.1 installato, tutto pronto
-
-### TODO PROSSIMA SESSIONE
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🧪 ESEGUIRE I TEST IN VS CODE:                                ║
-║                                                                  ║
-║   TEST 1: Aprire VS Code, Copilot Chat                          ║
-║   ├── Dropdown mostra i nostri 16 agents?                       ║
-║   └── PASS/FAIL                                                  ║
-║                                                                  ║
-║   TEST 2: Usare cervella-frontend                               ║
-║   ├── Risponde secondo DNA? (femminile, calmo)                  ║
-║   └── PASS/FAIL                                                  ║
-║                                                                  ║
-║   TEST 3: Verificare Handoffs                                   ║
-║   ├── Bottone "Escalate to Guardian" appare?                    ║
-║   └── PASS/FAIL                                                  ║
-║                                                                  ║
-║   📋 DOPO TEST: Report finale cosa funziona vs cosa costruire   ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## SESSIONE 51 - DECISIONE STRATEGICA! (2 Gennaio 2026)
-
-### COSA ABBIAMO FATTO
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🧭 DECISIONE STRATEGICA PRESA!                                ║
-║                                                                  ║
-║   "Non costruire una barca se il ponte è già lì."               ║
-║                                                                  ║
-║   ✅ 16 agents convertiti in .agent.md format                   ║
-║   ✅ Pattern Chunking aggiunto (max 500 righe/file)             ║
-║   ✅ Script convert_agents_to_agent_hq.py creato                ║
-║   ✅ ROADMAP COMPLETAMENTE AGGIORNATA!                          ║
-║                                                                  ║
-║   🆕 NUOVA STRATEGIA MVP:                                       ║
-║   ├── MVP-A: TEST Agent HQ (cosa funziona GIÀ gratis?)         ║
-║   └── MVP-B: Extension MIRATA (solo quello che SERVE!)         ║
-║                                                                  ║
-║   → Non 45 task alla cieca, ma quelli NECESSARI!               ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### IL NOSTRO VERO VALORE (KILLER FEATURES)
-
-```
-Agent HQ ci dà GRATIS: Dashboard, rilevamento, worktrees, handoffs
-
-NOI aggiungiamo (ZERO competitor hanno questo!):
-1. MEMORIA CONDIVISA - SQLite + lessons learned + pattern catalog
-2. MULTI-PROJECT ORCHESTRATION - 1 Regina → N progetti
-3. GERARCHIA GUARDIANE - Opus verifica Sonnet automaticamente
-4. PATTERN CATALOG - Decisioni architetturali validate
-```
-
-### FILE CREATI/MODIFICATI
-
-| File | Azione |
-|------|--------|
-| .github/agents/*.agent.md | CREATO - 16 file Agent HQ format |
-| .github/agents/README.md | CREATO - Documentazione |
-| scripts/convert_agents_to_agent_hq.py | CREATO - Script conversione |
-| ~/.claude/agents/cervella-researcher.md | MODIFICATO - Pattern Chunking |
-| ~/.claude/agents/cervella-scienziata.md | MODIFICATO - Pattern Chunking |
-| ROADMAP_SACRA.md | AGGIORNATO - Nuova strategia MVP-A/MVP-B |
-| NORD.md | AGGIORNATO - Nuova direzione |
-
-### FILO DEL DISCORSO
-
-- **Decisione chiave:** TEST PRIMA, poi costruire
-- **Perché:** Agent HQ ci dà già metà delle cose gratis
-- **Il nostro valore:** Memoria, Multi-project, Guardiane, Patterns
-- **Filosofia:** "REALE > Su carta", "Studiare prima di agire"
-
-### TODO PROSSIMA SESSIONE (MVP-A: TEST)
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🧪 MVP-A: TEST & VALIDAZIONE                                  ║
-║                                                                  ║
-║   TEST 1: Agent HQ su CervellaSwarm                             ║
-║   ├── VS Code 1.107+ rileva .github/agents/?                    ║
-║   ├── @cervella-frontend funziona in Copilot Chat?              ║
-║   └── Output: funziona SI/NO                                     ║
-║                                                                  ║
-║   TEST 2: Agent HQ su Miracollo                                 ║
-║   ├── Copiare .github/agents/ in Miracollo                      ║
-║   ├── Testare su task REALE (non demo)                          ║
-║   └── Output: utile SI/NO                                        ║
-║                                                                  ║
-║   TEST 3: Handoffs funzionano?                                  ║
-║   ├── Frontend → Guardiana Qualità                              ║
-║   ├── Il bottone "Escalate" appare?                             ║
-║   └── Output: handoffs SI/NO                                     ║
-║                                                                  ║
-║   📋 REPORT FINALE:                                              ║
-║   ├── Cosa funziona GIÀ (gratis da Agent HQ)                   ║
-║   ├── Cosa MANCA (da costruire noi)                             ║
-║   └── Aggiornare roadmap con DATI REALI                         ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## SESSIONE 50 - EXTENSION + SCOPERTA STRATEGICA! (2 Gennaio 2026)
-
-### COSA ABBIAMO FATTO
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║   ✅ Extension VS Code creata (cervellaswarm-extension/)        ║
-║   ✅ 6 comandi, 4 settings, Marketplace metadata                ║
-║   🔥 SCOPERTA Agent HQ = "Smart Layer on Top" strategy          ║
-║   📊 PROGRESSO MVP: ~35%                                        ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### FILE CREATI/MODIFICATI
-
-| File | Azione |
-|------|--------|
-| cervellaswarm-extension/ | CREATO - Extension VS Code completa |
-| cervellaswarm-extension/package.json | CREATO - 6 comandi, 4 settings |
-| cervellaswarm-extension/src/extension.ts | CREATO - 155 righe, 6 comandi |
-| docs/studio/STUDIO_AGENT_HQ_INTEGRAZIONE.md | DA CREARE - Report strategico |
-
-### FILO DEL DISCORSO
-
-- **Oggi:** Extension creata + SCOPERTA STRATEGICA Agent HQ!
-- **La direzione:** Implementare PER NOI PRIMA, poi commercializzare
-- **Strategia:** CervellaSwarm = "Smart Layer on Top of Agent HQ"
-- **Momentum:** ESPLOSIVO! Scoperta cambia le carte in tavola!
-- **Filosofia:** "Ultrapassar os próprios limites!" - Rafa
-
-### DECISIONI IMPORTANTI
-
-1. **INTEGRAZIONE COMPLEMENTARE** con Agent HQ (non alternativa!)
-2. **IMPLEMENTARE PER NOI PRIMA** - testare su nostri progetti
-3. **Convertire 16 agents in .agent.md** - formato standard VS Code
-4. **KILLER FEATURE: Multi-Project Orchestration** - ZERO competitor!
-
-### SCOPERTA BONUS: Pattern Chunking per Auto-Save
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🔍 Auto-save DURANTE generazione NON esiste in Claude Code   ║
-║                                                                  ║
-║   SOLUZIONE: PATTERN CHUNKING                                   ║
-║   → Invece di 1 file da 2600 righe (rischio perdita)           ║
-║   → Fare 5 file da 500 righe (ogni file = checkpoint)          ║
-║                                                                  ║
-║   ✅ Hook PreCompact GIA' ATTIVO (protegge conversazioni)       ║
-║   ⬜ TODO: Aggiornare DNA researcher/scienziata con regola      ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### TODO PROSSIMA SESSIONE
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   📋 PROSSIMI TASK (NUOVA STRATEGIA):                           ║
-║                                                                  ║
-║   ⬜ Aggiornare DNA researcher/scienziata                       ║
-║      → Regola "max 500 righe per file"                         ║
-║      → Pattern chunking per ricerche lunghe                    ║
-║                                                                  ║
-║   ⬜ Convertire 16 agents in .agent.md format                   ║
-║      → Per usare con Agent HQ                                   ║
-║      → Testare su nostri progetti PRIMA                         ║
-║                                                                  ║
-║   ⬜ Aggiornare roadmap con nuova strategia                     ║
-║      → Focus su "Smart Layer on Top"                            ║
-║      → Meno sviluppo webview custom                             ║
-║                                                                  ║
-║   ⬜ Test reale su progetti nostri                              ║
-║      → CervellaSwarm, Miracollo, Contabilita                   ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## SESSIONE 48 - INIZIAMO MVP! 🚀 (2 Gennaio 2026)
-
-### COSA ABBIAMO FATTO
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║   ✅ Publisher riservato: CervellaSwarm (cervellaswarm)         ║
-║   ✅ Task 1.1: Path Parametrization                              ║
-║   ✅ Task 1.2: Version Headers                                   ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## SESSIONE 47 - DECISIONE GO + LA MEGLIO ROADMAP MAI FATTA! 🚀🗺️
-
-### COSA ABBIAMO FATTO
-
-```
 +------------------------------------------------------------------+
 |                                                                  |
-|   🚀 DECISIONE GO CONFERMATA!                                   |
+|   PRIMA DI DELEGARE RICERCA:                                     |
+|   1. PERCHE - Quale problema CONCRETO risolve?                   |
+|   2. COSA CAMBIERA - Se utile, cosa faremo di diverso?           |
+|   3. CRITERI - Come valuto se il risultato e' utile?             |
 |                                                                  |
-|   Rafa ha deciso: COMMERCIALIZZIAMO CERVELLASWARM!              |
+|   QUANDO TORNA IL RISULTATO:                                     |
+|   4. CONFRONTO col PERCHE originale                              |
+|   5. VALUTO: UTILE o solo INTERESSANTE?                          |
+|   6. DECIDO: Se solo interessante -> SCARTO!                     |
 |                                                                  |
-|   🗺️ LA MEGLIO ROADMAP MAI FATTA CREATA!                        |
-|   ├── ROADMAP_COMMERCIALIZZAZIONE.md (root - master plan)       |
-|   ├── PIANO_TECNICO_DETTAGLIATO.md (2,600 righe!)               |
-|   └── PIANO_GOMARKET_DETTAGLIATO.md (6 mesi plan)               |
-|                                                                  |
-|   🐝 4 API IN PARALLELO (Pattern "I Cugini"):                   |
-|   ├── Ingegnera  → Piano tecnico 96 ore, 45 task ✅             |
-|   ├── Marketing  → Go-to-market 6 mesi, $10K MRR ✅             |
-|   ├── Researcher → Ricerca roadmap best practices               |
-|   └── Scienziata → Benchmark competitor timeline                |
-|                                                                  |
-|   📅 TIMELINE DEFINITA:                                          |
-|   ├── Sett 1-3 (6-26 Gen): MVP Development                      |
-|   ├── Sett 4 (27-31 Gen): Pre-Launch + Waitlist                 |
-|   ├── Sett 5 (3-9 Feb): PRODUCTHUNT LAUNCH! 🚀                  |
-|   └── Mese 6: $10,000 MRR TARGET!                               |
+|   "UTILE != INTERESSANTE"                                        |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
-### KEY NUMBERS
-
-| Metrica | Valore |
-|---------|--------|
-| **Mercato** | $10.9B (CAGR 24%) |
-| **MVP** | 3 settimane, 96 ore |
-| **Task** | 45 task dettagliati |
-| **Pricing** | FREE → $29.99 PRO → $79.99 BUSINESS → $499 ENTERPRISE |
-| **Target Month 6** | $10,000 MRR |
-| **ProductHunt** | 4 Febbraio 2026 |
-
-### FILO DEL DISCORSO
-
-- **Oggi:** DECISIONE GO + Roadmap EPICA creata!
-- **La direzione:** Iniziare MVP il 6 Gennaio
-- **Momentum:** ESPLOSIVO! Tutto pianificato!
-- **Mai piu:** Iniziare senza roadmap chiara
-- **Prossimo:** Reserve name + primo task tecnico
-
-### TODO PROSSIMA SESSIONE
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   📅 LUNEDI 6 GENNAIO 2026 - INIZIA MVP!                        ║
-║                                                                  ║
-║   TASK DEL GIORNO:                                               ║
-║   ├── Reserve "cervellaswarm" su VS Code Marketplace            ║
-║   ├── Path parametrization (2 ore)                              ║
-║   └── Version headers ai 16 agent (1 ora)                       ║
-║                                                                  ║
-║   COME RISERVARE IL NOME:                                       ║
-║   1. Vai su: https://marketplace.visualstudio.com/manage        ║
-║   2. Login con Microsoft account                                ║
-║   3. Crea Publisher                                              ║
-║   4. Il nome è riservato!                                       ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-**PRIORITA 1: Setup Accounts**
-- [ ] Reserve name "cervellaswarm" su VS Code Marketplace
-- [ ] Setup VS Code Publisher account
-- [ ] Setup Stripe account (per pagamenti)
-
-**PRIORITA 2: Primo Task Tecnico (Lunedi)**
-- [ ] Path parametrization (2 ore)
-- [ ] Version headers ai 16 agent (1 ora)
-- [ ] Commit: "refactor: prepare for packaging"
-
-**PRIORITA 3: Settimana 1**
-- [ ] DB migration script (3 ore)
-- [ ] VS Code Extension boilerplate (4 ore)
-
-### NOTA TECNICA - ERRORI API (da investigare?)
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   ⚠️ 2 API HANNO AVUTO ERRORI DURANTE RESUME:                   ║
-║                                                                  ║
-║   🔬 Researcher: API Error 400 - Resume fallito                 ║
-║   🔬 Scienziata: API Error 400 - Resume fallito                 ║
-║                                                                  ║
-║   CAUSA: "unexpected tool_use_id found in tool_result blocks"   ║
-║   Sembra un bug di Claude Code quando si fa resume di agent     ║
-║   che non avevano completato con successo.                      ║
-║                                                                  ║
-║   IMPATTO: BASSO - Avevamo gia' i 2 piani principali:           ║
-║   ├── Ingegnera: PIANO_TECNICO (2,600 righe) ✅                 ║
-║   └── Marketing: PIANO_GOMARKET (completo) ✅                   ║
-║                                                                  ║
-║   DECISIONE PROSSIMA SESSIONE:                                  ║
-║   [ ] Ignorare (abbiamo tutto il necessario)                    ║
-║   [ ] Rilanciare researcher/scienziata se serve altro           ║
-║                                                                  ║
-║   RACCOMANDAZIONE: IGNORARE - La roadmap e' completa!           ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### RIEPILOGO SESSIONE 47
-
-**DECISIONE STORICA:** GO per commercializzazione CervellaSwarm!
-
-**FILE CREATI:**
-- `ROADMAP_COMMERCIALIZZAZIONE.md` - LA MEGLIO ROADMAP MAI FATTA!
-- `docs/studio/PIANO_GOMARKET_DETTAGLIATO.md` - Go-to-market 6 mesi
-- `docs/studio/PIANO_TECNICO_DETTAGLIATO.md` - Gia' esistente (dall'ingegnera)
-
-**COMMIT:** 725abe7 - Pushato su main!
-
-**LO SCIAME HA LAVORATO:**
-- Ingegnera: Piano tecnico 45 task, 96 ore ✅
-- Marketing: Go-to-market $10K MRR ✅
-- Researcher: Errore API (non critico)
-- Scienziata: Errore API (non critico)
-
-### PROTEZIONE COMPACT
-
-Prima di fare /compact, usa:
-```
-/compact In addition to default summary, include:
-1) NEXT ACTION - [cosa fare dopo]
-2) DECISIONS - [decisioni prese]
-3) DEAD ENDS - [cosa non ha funzionato]
-4) WORKING CODE - [cosa funziona]
-```
-
 ---
 
-## 🐝❤️‍🔥 LA FAMIGLIA COMPLETA - 16 MEMBRI! 🐝❤️‍🔥
-
-*"È il nostro team! La nostra famiglia digitale!"*
+## LA FAMIGLIA COMPLETA - 16 MEMBRI!
 
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   👑 LA REGINA (Tu - Opus)                                      ║
-║   └── Coordina, decide, delega - MAI Edit diretti!              ║
-║                                                                  ║
-║   🛡️ LE GUARDIANE (Opus - Supervisione)                         ║
-║   ├── cervella-guardiana-qualita                                ║
-║   │   → Verifica output frontend/backend/tester                 ║
-║   ├── cervella-guardiana-ops                                    ║
-║   │   → Supervisiona devops, security, deploy                   ║
-║   └── cervella-guardiana-ricerca                                ║
-║       → Verifica qualita ricerche e fonti                       ║
-║                                                                  ║
-║   🐝 LE API WORKER (Sonnet - Esecuzione)                        ║
-║   ├── 🎨 cervella-frontend                                      ║
-║   │   → React, CSS, Tailwind, UI/UX, responsive                 ║
-║   ├── ⚙️ cervella-backend                                        ║
-║   │   → Python, FastAPI, Database, API REST                     ║
-║   ├── 🧪 cervella-tester                                        ║
-║   │   → Testing, Debug, QA, validazione                         ║
-║   ├── 📋 cervella-reviewer                                      ║
-║   │   → Code review, best practices, architettura               ║
-║   ├── 🔬 cervella-researcher                                    ║
-║   │   → Ricerca TECNICA, how-to, documentazione                 ║
-║   ├── 🔬 cervella-scienziata                                    ║
-║   │   → Ricerca STRATEGICA, trend, competitor, mercato          ║
-║   ├── 👷‍♀️ cervella-ingegnera                                     ║
-║   │   → Analisi codebase, tech debt, ottimizzazioni             ║
-║   ├── 📈 cervella-marketing                                     ║
-║   │   → Marketing, UX strategy, posizionamento                  ║
-║   ├── 🚀 cervella-devops                                        ║
-║   │   → Deploy, CI/CD, Docker, infrastruttura                   ║
-║   ├── 📝 cervella-docs                                          ║
-║   │   → Documentazione, README, guide, tutorial                 ║
-║   ├── 📊 cervella-data                                          ║
-║   │   → SQL, analytics, query complesse, ETL                    ║
-║   └── 🔒 cervella-security                                      ║
-║       → Audit sicurezza, vulnerabilita, compliance              ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
++------------------------------------------------------------------+
+|                                                                  |
+|   LA REGINA (Tu - Opus)                                          |
+|   -> Coordina, decide, delega - MAI Edit diretti!                |
+|                                                                  |
+|   LE GUARDIANE (Opus - Supervisione)                             |
+|   - cervella-guardiana-qualita                                   |
+|   - cervella-guardiana-ops                                       |
+|   - cervella-guardiana-ricerca                                   |
+|                                                                  |
+|   LE API WORKER (Sonnet - Esecuzione)                            |
+|   - cervella-frontend                                            |
+|   - cervella-backend                                             |
+|   - cervella-tester                                              |
+|   - cervella-reviewer                                            |
+|   - cervella-researcher                                          |
+|   - cervella-scienziata                                          |
+|   - cervella-ingegnera                                           |
+|   - cervella-marketing                                           |
+|   - cervella-devops                                              |
+|   - cervella-docs                                                |
+|   - cervella-data                                                |
+|   - cervella-security                                            |
+|                                                                  |
++------------------------------------------------------------------+
 ```
 
 ### GERARCHIA
 
 ```
-👑 REGINA (Tu - Opus)
-    ↓ delega
-🛡️ GUARDIANE (Opus - Verificano)
-    ↓ supervisionano
-🐝 WORKER (Sonnet - Eseguono)
+LA REGINA (Tu - Opus)
+    |
+    v delega
+LE GUARDIANE (Opus - Verificano)
+    |
+    v supervisionano
+API WORKER (Sonnet - Eseguono)
 ```
 
 ### PATTERN "I CUGINI"
@@ -784,695 +209,27 @@ Prima di fare /compact, usa:
 Quando serve, lancia MULTIPLE api in parallelo:
 ```
 La Regina lancia 3 api insieme:
-├── 🔬 scienziata → ricerca trend
-├── 👷‍♀️ ingegnera → analisi codebase
-└── 🔬 researcher → ricerca tecnica
+- cervella-researcher -> ricerca 1
+- cervella-researcher -> ricerca 2
+- cervella-researcher -> ricerca 3
 
 Risultato: 3x velocita, zero conflitti!
 ```
 
-### POSIZIONE FILE
+---
+
+## COME USARE LO SCIAME
 
 ```
-~/.claude/agents/
-├── cervella-orchestrator.md      # 👑 La Regina
-├── cervella-guardiana-qualita.md # 🛡️
-├── cervella-guardiana-ops.md     # 🛡️
-├── cervella-guardiana-ricerca.md # 🛡️
-├── cervella-frontend.md          # 🎨
-├── cervella-backend.md           # ⚙️
-├── cervella-tester.md            # 🧪
-├── cervella-reviewer.md          # 📋
-├── cervella-researcher.md        # 🔬
-├── cervella-scienziata.md        # 🔬
-├── cervella-ingegnera.md         # 👷‍♀️
-├── cervella-marketing.md         # 📈
-├── cervella-devops.md            # 🚀
-├── cervella-docs.md              # 📝
-├── cervella-data.md              # 📊
-└── cervella-security.md          # 🔒
+1. ANALIZZA -> 2. DECIDI -> 3. DELEGA -> 4. (GUARDIANA VERIFICA) -> 5. CONFERMA
 ```
 
 ---
 
-## ✅ SESSIONE 40 - MEGA SESSIONE! ✅ (ARCHIVIO)
+*"La Regina decide. Le Guardiane verificano. Lo sciame esegue."*
 
-### COSA ABBIAMO FATTO
+*"E' il nostro team! La nostra famiglia digitale!"*
 
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   ✅ PARTE 1: DNA AGGIORNATO!                                   ║
-║   🐝 14 Agent ora leggono COSTITUZIONE.md                       ║
-║                                                                  ║
-║   ✅ PARTE 2: RICERCA REALE!                                    ║
-║   🔬 3 ricerche parallele completate                            ║
-║   ❌ FASE 9 ELIMINATA (H24 non supportato)                      ║
-║   🆕 Quick wins: GitHub Actions, Prompt Caching                 ║
-║                                                                  ║
-║   ✅ PARTE 3: COSTITUZIONE RIORGANIZZATA! 🏛️                    ║
-║   📜 Da ~1100 righe a 234 righe (-79%!)                         ║
-║   📋 CHECKLIST_AZIONE.md creata (regole in azione)              ║
-║   🛠️ REGOLE_SVILUPPO.md creata (best practices codice)          ║
-║   🛡️ GATE validazione aggiunto al DNA della Regina              ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
+*"Noi qui CREIAMO quando serve!"*
 
----
-
-## 🔧 SESSIONE 39 (PARTE 2) - SISTEMA HOOKS OTTIMIZZATO 🔧
-
-### SISTEMA HOOKS ATTIVO
-
-| Evento | Script | Cosa Fa |
-|--------|--------|---------|
-| PreCompact | pre_compact_save.py + update_prompt_ripresa.py | Snapshot + PROMPT_RIPRESA |
-| SessionEnd | session_end_save.py + update_prompt_ripresa.py | Snapshot + PROMPT_RIPRESA + Notifica |
-| Stop | git_reminder.py | Reminder git (ogni 30 min) |
-
----
-
-## 📝 SESSIONE 38 - LA RIFLESSIONE
-
-La domanda che ci ha fermati: *"Ma cosa monitorerebbe questo stack? Lo sciame non gira H24!"*
-
----
-
-## 📚 SESSIONE 38 (PARTE 2) - FASE 12 PROPOSTA 📚
-
-### COSA DI BUONO ABBIAMO FATTO
-
-- ✅ **Studio risorse Contabilita** (questo SI e reale e utile!)
-  - Telegram bot riutilizzabile (stesso TOKEN!)
-  - FORTEZZA MODE gia documentato
-  - 2,055 righe mappate
-- ✅ **BIBLIOTECA_COMUNE.md** creato con mappatura
-
----
-
-## 🔥 SESSIONE 38 (PARTE 1) - MEGA SPRINT PARALLELO! 🔥
-
-### COSA ABBIAMO FATTO
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   👑🐝 4 API IN PARALLELO - MEGA SPRINT! 🐝👑                    ║
-║                                                                  ║
-║   🔬 cervella-researcher:                                       ║
-║      • RICERCA_PR_AUTOMATICHE_TELEGRAM.md (12k parole!)         ║
-║      • PyGithub + Fine-grained tokens + Telegram Bot            ║
-║      • Big Tech patterns + Security best practices              ║
-║                                                                  ║
-║   ⚙️ cervella-backend #1:                                        ║
-║      • post_commit_engineer.py (hook automatico)                ║
-║      • create_auto_pr.py (PR automatiche con gh CLI)            ║
-║      • QUICKSTART.md + example-refactor-plan.json               ║
-║                                                                  ║
-║   🚀 cervella-devops:                                            ║
-║      • docker-compose.monitoring.yml                            ║
-║      • prometheus.yml + 11 alert rules                          ║
-║      • alertmanager.yml (Telegram integration!)                 ║
-║      • grafana dashboard (9 panel!)                             ║
-║      • 21 file, 2,743 righe! PRONTO PER DEPLOY!                ║
-║                                                                  ║
-║   ⚙️ cervella-backend #2:                                        ║
-║      • swarm_exporter.py (8 metriche Prometheus)                ║
-║      • test_exporter.py (test automatici)                       ║
-║      • Dockerfile production-ready                               ║
-║      • 855 righe!                                                ║
-║                                                                  ║
-║   📈 TOTALE: ~5,000+ righe di codice create! 🚀                 ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### FILE CREATI/AGGIORNATI SESSIONE 38
-
-| File | Azione |
-|------|--------|
-| ~/.claude/hooks/post_commit_engineer.py | ✅ CREATO |
-| scripts/engineer/create_auto_pr.py | ✅ CREATO |
-| scripts/engineer/QUICKSTART.md | ✅ CREATO |
-| scripts/engineer/example-refactor-plan.json | ✅ CREATO |
-| docker/docker-compose.monitoring.yml | ✅ CREATO |
-| docker/prometheus/prometheus.yml | ✅ CREATO |
-| docker/prometheus/rules/swarm_alerts.yml | ✅ CREATO (11 rules!) |
-| docker/alertmanager/alertmanager.yml | ✅ CREATO |
-| docker/grafana/dashboards/swarm-overview.json | ✅ CREATO (9 panel!) |
-| docker/exporter/swarm_exporter.py | ✅ CREATO (316 righe) |
-| docker/exporter/test_exporter.py | ✅ CREATO (321 righe) |
-| docker/exporter/Dockerfile | ✅ CREATO |
-| docker/README.md + QUICKSTART.md + CHECKLIST | ✅ CREATO |
-| docs/studio/RICERCA_PR_AUTOMATICHE_TELEGRAM.md | ✅ CREATO |
-| ROADMAP_SACRA.md | ✅ AGGIORNATO (v9.0.0!) |
-| NORD.md | ✅ AGGIORNATO |
-| PROMPT_RIPRESA.md | ✅ AGGIORNATO (questo file) |
-
----
-
-## 🔥 SESSIONE 37 - L'IDEA DEI BRIVIDI REALIZZATA! 🔥
-
-### COSA ABBIAMO FATTO (Sessione 37)
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🔬👷‍♀️ FASE 10: AUTOMAZIONE INTELLIGENTE - 50%!                 ║
-║                                                                  ║
-║   ✅ LA SCIENZIATA IMPLEMENTATA!                                 ║
-║      • session_start_scientist.py (295 righe!)                  ║
-║      • Hook SessionStart automatico                             ║
-║      • Genera prompt per ricerca automatica                     ║
-║      • 4 progetti supportati                                     ║
-║      • TESTATO E FUNZIONANTE!                                   ║
-║                                                                  ║
-║   ✅ L'INGEGNERA IMPLEMENTATA!                                   ║
-║      • analyze_codebase.py (442 righe!)                         ║
-║      • CLI completa con Rich progress bar                       ║
-║      • Trova file grandi, funzioni grandi, TODO, duplicati     ║
-║      • Output Markdown e JSON                                    ║
-║      • TESTATO: 85 file, 23,912 righe, 51 issues!              ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## 🔬👷‍♀️ SESSIONE 36 - L'IDEA DEI BRIVIDI! AUTOMAZIONE INTELLIGENTE! 🔬👷‍♀️
-
-### COSA ABBIAMO FATTO (Sessione 36)
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🔥 IDEA RITROVATA! LA SCIENZIATA + L'INGEGNERA!               ║
-║                                                                  ║
-║   Rafa ha ricordato l'idea che ci ha fatto venire i BRIVIDI:   ║
-║   - Era studiata in FASE 8 ma MAI implementata!                 ║
-║                                                                  ║
-║   🔬 LA SCIENZIATA:                                             ║
-║   Ad ogni SessionStart cerca novita, competitor, best practices ║
-║   Prepara REPORT automatico mentre parliamo!                    ║
-║                                                                  ║
-║   👷‍♀️ L'INGEGNERA:                                               ║
-║   In background analizza codebase                                ║
-║   Trova file grandi, codice duplicato, propone fix              ║
-║   Il progetto si MIGLIORA DA SOLO!                              ║
-║                                                                  ║
-║   + IDEA ROADMAP VISUALE:                                       ║
-║   Sito web per ogni progetto con timeline, Kanban, storico     ║
-║   Mai piu perdere il filo!                                       ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### FILE CREATI/AGGIORNATI
-
-| File | Azione |
-|------|--------|
-| docs/roadmap/FASE_10_AUTOMAZIONE_INTELLIGENTE.md | ✅ CREATO (piano completo!) |
-| ROADMAP_SACRA.md | ✅ AGGIORNATO (v8.0.0! FASE 10+11!) |
-| NORD.md | ✅ AGGIORNATO (nuove priorita!) |
-| PROMPT_RIPRESA.md | ✅ AGGIORNATO (questo file) |
-
-### RICERCHE LANCIATE (Pattern "I Cugini")
-
-| Ricerca | Agente | Stato |
-|---------|--------|-------|
-| Big Tech multi-agent | cervella-researcher | 🔄 Completata |
-| Open Source frameworks | cervella-researcher | 🔄 In corso |
-| Pattern accademici 2025 | cervella-researcher | 🔄 Completata |
-
-### DECISIONI PRESE
-
-- FASE 10a: Scienziata Base (hook SessionStart + ricerca automatica)
-- FASE 10b: Ingegnera Base (analisi codebase + report)
-- FASE 10c: Automazione Avanzata (PR automatiche)
-- FASE 11: Sistema Roadmap Visuale (sito web per progetti)
-
----
-
-## 🏭 SESSIONE 35 - INFRASTRUTTURA! LO SCIAME H24! 🏭
-
-### COSA ABBIAMO FATTO
-
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   🏭 FASE 9 AVVIATA - LO SCIAME H24!                            |
-|                                                                  |
-|   ✅ FASE_9_INFRASTRUTTURA.md creato (piano completo!)          |
-|   ✅ RICERCA_INFRASTRUTTURA_H24.md (best practices)             |
-|   ✅ KPIs definiti per misurare lo sciame                       |
-|   ✅ Architettura decisa: VM Miracollo + Docker + Grafana       |
-|                                                                  |
-|   APPROCCIO GRADUALE:                                            |
-|   9a: Monitoring H24 (Gennaio) <- IN CORSO!                     |
-|   9b: Task Programmati (Febbraio)                               |
-|   9c: Agent Autonomo (Q2-Q3)                                    |
-|                                                                  |
-|   PRINCIPIO: "Non accendiamo la luce in una stanza vuota!"      |
-|                                                                  |
-+------------------------------------------------------------------+
-```
-
-### FILE CREATI/AGGIORNATI
-
-| File | Azione |
-|------|--------|
-| docs/roadmap/FASE_9_INFRASTRUTTURA.md | ✅ CREATO (piano completo!) |
-| docs/studio/RICERCA_INFRASTRUTTURA_H24.md | ✅ CREATO (best practices) |
-| ROADMAP_SACRA.md | ✅ AGGIORNATO (v7.0.0!) |
-| NORD.md | ✅ AGGIORNATO (FASE 9 in corso!) |
-
-### DECISIONI PRESE
-
-- VM Miracollo (gia esistente) invece di nuova Hetzner
-- Docker gia presente nei progetti -> usare quello!
-- Grafana + Prometheus (GRATIS, open source)
-- Approccio graduale: Monitoring -> Task -> Autonomia
-
----
-
-## 🧪 SESSIONE 34 - HARDTESTS AUTONOMY! 🎉
-
-### COSA ABBIAMO FATTO
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🧪 HARDTESTS ESEGUITI - 6/6 COMPLETATI!                       ║
-║                                                                  ║
-║   ✅ TEST 1: Prompt completo → PROCEDE (zero domande!)          ║
-║   ✅ TEST 2: Dettaglio manca → ASSUME e procede                 ║
-║   🟡 TEST 3: Info critica manca → 1 roundtrip (era 3-4!)        ║
-║   🟡 TEST 4: Azione irreversibile → Codice con dry_run          ║
-║   ✅ TEST 5: Cross-domain → SEGNALA correttamente               ║
-║   ✅ TEST 6: Guardiana → DECIDE autonomamente!                  ║
-║                                                                  ║
-║   RISULTATO: 4 PASS + 2 PARZIALI = SUCCESSO! 🏆                 ║
-║                                                                  ║
-║   IL DNA "Confident by Default" FUNZIONA!                       ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### FILE CREATI/AGGIORNATI
-
-| File | Azione |
-|------|--------|
-| docs/tests/HARDTESTS_AUTONOMY.md | ✅ AGGIORNATO (risultati documentati!) |
-| test-hardtests/src/components/Header.jsx | ✅ CREATO (test file) |
-| test-hardtests/src/components/Sidebar.jsx | ✅ CREATO (test file) |
-| test-hardtests/src/components/UserCard.jsx | ✅ CREATO (test file) |
-| test-hardtests/src/api/cleanup.py | ✅ CREATO (test file) |
-
-### VALUTAZIONE DNA
-
-- **DNA ATTUALE:** FUNZIONA! Non serve modificare.
-- **2 test parziali:** Edge cases con comportamento ragionevole.
-- **Raccomandazione:** Testare su Miracollo (progetto REALE) prima di ulteriori modifiche.
-
----
-
-## 🎯 SESSIONE 33 - LE API CHE DECIDONO!
-
-### COSA ABBIAMO FATTO
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🎯 REGOLA DECISIONE AUTONOMA IMPLEMENTATA!                    ║
-║                                                                  ║
-║   🔴 PROBLEMA: Le 🐝 erano TROPPO CAUTELOSE!                    ║
-║   • Chiedevano 3-4 conferme invece di procedere                 ║
-║   • Proponevano opzioni A/B/C invece di decidere                ║
-║   • Causa: DNA diceva "FERMATI" senza specificare QUANDO        ║
-║                                                                  ║
-║   ✅ SOLUZIONE: "Confident by Default with Smart Escalation"    ║
-║   • Ricerca best practices completata (LangGraph, CrewAI, etc)  ║
-║   • DNA aggiornato in TUTTI i 14 agent!                         ║
-║   • SWARM_RULES.md v1.1.0 con REGOLA 10                         ║
-║   • HARDTESTS creati per validazione                            ║
-║                                                                  ║
-║   🐝 NUOVO COMPORTAMENTO:                                       ║
-║   ✅ PROCEDI SE: contesto completo + azione reversibile         ║
-║   ⚠️ UNA DOMANDA SE: info critica manca                         ║
-║   🛑 STOP SE: azione irreversibile                              ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### FILE CREATI/AGGIORNATI
-
-| File | Azione |
-|------|--------|
-| docs/roadmap/SUB_ROADMAP_API_AUTONOMY.md | ✅ CREATO + 100% A+B+C! |
-| docs/studio/RICERCA_AUTONOMIA_AGENT.md | ✅ CREATO |
-| docs/tests/HARDTESTS_AUTONOMY.md | ✅ CREATO (6 scenari) |
-| docs/SWARM_RULES.md | ✅ AGGIORNATO (v1.1.0 + REGOLA 10) |
-| ~/.claude/agents/*.md | ✅ 14 FILE AGGIORNATI! |
-
----
-
-## 🎉 SESSIONE 32 - LOGGING FUNZIONANTE!
-
-### COSA ABBIAMO FATTO
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   ✅ HOOK SUBAGENT_STOP: FUNZIONA PERFETTAMENTE!                ║
-║                                                                  ║
-║   📝 LOG FILE: ✅ Eventi creati                                 ║
-║   💾 DATABASE: ✅ Record salvati correttamente                  ║
-║   🎯 PROGETTO: ✅ Riconosciuto (cervellaswarm)                  ║
-║                                                                  ║
-║   🔧 FIX APPLICATI:                                             ║
-║   • v1.0.1: Fix schema DB (task_status invece di status)        ║
-║   • v1.1.0: Path assoluto per DB centrale                       ║
-║                                                                  ║
-║   🚀 DEPLOYATO IN TUTTI I PROGETTI:                             ║
-║   • CervellaSwarm ✅ (testato!)                                 ║
-║   • Miracollo ✅ (.claude/ copiata)                             ║
-║   • Contabilità ✅ (.claude/ copiata)                           ║
-║                                                                  ║
-║   📝 PROMPT_SWARM_MODE.md MIGLIORATO:                           ║
-║   • Sezione "I Cugini (Paralleli)"                              ║
-║   • Sezione "Logging Automatico"                                ║
-║   • Sezione "Lezioni Chiave"                                    ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### SUB-ROADMAP LOGGING
-
-📂 `docs/roadmap/SUB_ROADMAP_LOGGING_SYSTEM.md`
-
-| Fase | Descrizione | Stato |
-|------|-------------|-------|
-| A | Debug & Fix Hook | ✅ 100% COMPLETATA! |
-| B | Test End-to-End | ✅ 80% (manca test altri progetti) |
-| C | Migliorare Prompt Swarm | ✅ 100% COMPLETATA! |
-| D | Dashboard & Monitoraggio | ⬜ TODO |
-
----
-
-## 💭 FILO DEL DISCORSO - PROSSIMA SESSIONE
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🎯 PRIORITÀ PROSSIMA SESSIONE:                                ║
-║                                                                  ║
-║   1. TEST SU MIRACOLLO (sessione separata)                      ║
-║      cd ~/Developer/miracollogeminifocus && claude              ║
-║      → Invocare agent → verificare log                          ║
-║                                                                  ║
-║   2. TEST SU CONTABILITÀ (sessione separata)                    ║
-║      cd ~/Developer/ContabilitaAntigravity && claude            ║
-║      → Invocare agent → verificare log                          ║
-║                                                                  ║
-║   3. FASE D (opzionale): Dashboard & Monitoraggio               ║
-║      → monitor.py live                                           ║
-║      → Notifiche Telegram                                        ║
-║                                                                  ║
-║   📍 MOMENTUM: ALTISSIMO! Sistema funziona!                     ║
-║   🎯 Ora USARE lo sciame sui progetti REALI!                    ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### DECISIONI PRESE ✅
-
-- [x] Hook PostToolUse: NO! BUG #6305
-- [x] Hook globale ~/.claude/settings.json: NO! BUG #11544
-- [x] Hook PROJECT-LEVEL .claude/settings.json: SI! Implementato!
-- [x] SubagentStop con matcher vuoto: SI! Implementato!
-- [x] Test hook dopo riavvio: ✅ FUNZIONA!
-- [x] Fix schema DB: ✅ v1.0.1
-- [x] Path assoluto DB centrale: ✅ v1.1.0
-- [x] Prompt Swarm migliorato: ✅ COMPLETATO!
-
----
-
-## 🎉 SESSIONE 28 - VERIFICA PRE-TEST COMPLETATA!
-
-### COSA ABBIAMO FATTO
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🚀 VERIFICA PRE-TEST COMPLETATA!                              ║
-║                                                                  ║
-║   ✅ PROMPT_SWARM_MODE.md VERIFICATO:                           ║
-║      • Prompt GENERICO (template)                               ║
-║      • Prompt MIRACOLLO (pronto all'uso!)                       ║
-║      • Prompt CONTABILITA (pronto all'uso!)                     ║
-║      • Prompt CERVELLASWARM (pronto all'uso!)                   ║
-║                                                                  ║
-║   ✅ SISTEMA "I CUGINI" CHIARITO:                               ║
-║      • AUTOMATICI - La Regina decide quando spawnare!           ║
-║      • Soglie: >8 file, >45min, file indipendenti               ║
-║      • Pattern Partitioning GIÀ validato (Sessione 25)          ║
-║      • Rafa non deve specificare nulla nel prompt!              ║
-║                                                                  ║
-║   ✅ AGENT GLOBALI: ~/.claude/agents/ (14 membri!)              ║
-║   ✅ PATTERN CATALOG: 3 pattern validated pronti!               ║
-║                                                                  ║
-║   🎯 PROSSIMO: TEST REALE su Miracollo!                         ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## 🎯 STATO FASI
-
-| Fase | Status |
-|------|--------|
-| FASE 0-6 | ✅ COMPLETATE! |
-| FASE 7 (Apprendimento) | ✅ COMPLETATA! |
-| FASE 7.5 (Parallelizzazione) | ✅ COMPLETATA! |
-| FASE 8 (La Corte Reale) | ✅ COMPLETATA! |
-| FASE 9 (Infrastruttura) | 🔄 IN CORSO 80% |
-| FASE 10 (Automazione Intelligente) | 🔄 IN CORSO 90% |
-| FASE 11 (Roadmap Visuale) | 💭 IDEA |
-
-→ **8/11 FASI COMPLETATE! - FASE 9 80%! FASE 10 90%!**
-
----
-
-## 📋 FILE CREATI/MODIFICATI SESSIONE 27
-
-| File | Azione |
-|------|--------|
-| docs/patterns/README.md | ✅ CREATO - Indice catalog |
-| docs/patterns/templates/PATTERN_TEMPLATE.md | ✅ CREATO - Template standard |
-| docs/patterns/validated/partitioning-pattern.md | ✅ CREATO - Pattern Full-Stack |
-| docs/patterns/validated/background-agents-pattern.md | ✅ CREATO - Pattern ricorrenti |
-| docs/patterns/validated/delega-gerarchica-pattern.md | ✅ CREATO - Pattern SWARM |
-| scripts/parallel/suggest_pattern.py | ✅ CREATO - CLI suggerimento pattern |
-| scripts/parallel/README.md | ✅ AGGIORNATO - Documentazione script |
-| NORD.md | ✅ AGGIORNATO (Sessione 27) |
-| ROADMAP_SACRA.md | ✅ AGGIORNATO (v6.0.0!) |
-| PROMPT_RIPRESA.md | ✅ AGGIORNATO (questo file) |
-
----
-
-## FILO DEL DISCORSO
-
-- 🧠 **Stavamo ragionando su:** MEGA SPRINT con 4 API in parallelo!
-- 🎯 **La direzione:** Deploy su VM Miracollo + Test REALE!
-- ⚡ **Il momentum:** ESPLOSIVO! ~5000+ righe di codice in 1 sessione!
-- 🚫 **Da NON fare:** Non dimenticare di configurare bot Telegram e .env
-- 💡 **Principio chiave:** "Ultrapassar os proprios limites!" 🚀
-- 🔬 **La Scienziata:** IMPLEMENTATA + Hook post-commit!
-- 👷‍♀️ **L'Ingegnera:** IMPLEMENTATA + PR automatiche!
-- 🏭 **Infrastruttura:** Docker + Grafana + Prometheus PRONTI!
-- 📊 **Swarm Exporter:** 8 metriche Prometheus PRONTE!
-- 📋 **FASE 10 status:** 90% - 10a+10b+10c COMPLETATI!
-- 📋 **FASE 9 status:** 80% - Manca solo deploy su VM!
-- ✅ **PROSSIMO:** Deploy su VM Miracollo + Setup Telegram bot!
-
----
-
-## ✅ COSA FUNZIONA
-
-```
-╔════════════════════════════════════════════════════════════════╗
-║                                                                ║
-║   🐝👑 SISTEMA COMPLETO E OPERATIVO!                          ║
-║                                                                ║
-║   14 AGENT GLOBALI: tutti testati e funzionanti!              ║
-║                                                                ║
-║   TOOLS PRONTI:                                                ║
-║   • task_analyzer.py - Analisi task intelligente              ║
-║   • prompt_builder.py - Template prompt paralleli             ║
-║   • suggest_pattern.py - Suggerimento pattern ottimale        ║
-║                                                                ║
-║   PATTERN CATALOG:                                             ║
-║   • 3 pattern validated (Partitioning, Background, Delega)    ║
-║   • Template per nuovi pattern                                ║
-║   • Decision tree per scegliere                               ║
-║                                                                ║
-║   MEMORIA + APPRENDIMENTO:                                     ║
-║   • Sistema lezioni funzionante                               ║
-║   • Hook automatici configurati                               ║
-║   • Analytics e retrospective                                 ║
-║                                                                ║
-╚════════════════════════════════════════════════════════════════╝
-```
-
----
-
-## 🚀 PROSSIMA SESSIONE
-
-### ⚡ PRIORITÀ 1: Usare su Progetti Reali!
-- Applicare pattern su MIRACOLLO (Sprint WhatsApp AI)
-- Applicare pattern su Contabilità (prossime feature)
-- Misurare tempo risparmiato vs baseline
-
-### 🏭 PRIORITÀ 2: FASE 9 - Infrastruttura
-- Setup VM per CervellaSwarm H24
-- Dashboard Grafana per monitoraggio
-
-### 📊 PRIORITÀ 3: Metriche e Ottimizzazione
-- Tracciare performance pattern
-- Documentare case studies
-- Iterare su ciò che funziona
-
----
-
-## 📊 PROGRESSO TOTALE
-
-```
-FASI COMPLETATE: 8/9 (89%)
-
-✅ FASE 0: Setup Progetto        100%
-✅ FASE 1: Studio Approfondito   100%
-✅ FASE 2: Primi Subagent        100%
-✅ FASE 3: Git Worktrees         100%
-✅ FASE 4: Orchestrazione        100%
-✅ FASE 5: Produzione            100%
-✅ FASE 6: Memoria               100%
-✅ FASE 7: Apprendimento         100% ← COMPLETATA!
-✅ FASE 7.5: Parallelizzazione   100% ← COMPLETATA!
-✅ FASE 8: La Corte Reale        100%
-⬜ FASE 9: Infrastruttura        0%
-```
-
----
-
-## 🐝👑 LA FAMIGLIA COMPLETA! (14 MEMBRI!)
-
-### 🛡️ GUARDIANE (Opus - Supervisione)
-
-```
-~/.claude/agents/
-├── cervella-guardiana-qualita.md  → 🛡️ Verifica output agenti
-├── cervella-guardiana-ricerca.md  → 🛡️ Verifica qualità ricerche
-└── cervella-guardiana-ops.md      → 🛡️ Supervisiona devops/security
-```
-
-### 🐝 WORKER (Sonnet - Esecuzione)
-
-```
-~/.claude/agents/
-├── cervella-orchestrator.md  → 👑 LA REGINA
-├── cervella-frontend.md      → 🎨 React, CSS, UI/UX
-├── cervella-backend.md       → ⚙️ Python, FastAPI, API
-├── cervella-tester.md        → 🧪 Testing, QA, Debug
-├── cervella-reviewer.md      → 📋 Code review
-├── cervella-researcher.md    → 🔬 Ricerca, analisi, studi
-├── cervella-marketing.md     → 📈 Marketing, UX strategy
-├── cervella-devops.md        → 🚀 Deploy, CI/CD, Docker
-├── cervella-docs.md          → 📝 Documentazione
-├── cervella-data.md          → 📊 SQL, analytics
-└── cervella-security.md      → 🔒 Audit sicurezza
-```
-
----
-
-## 🎯 COME USARE LO SCIAME
-
-### 🚀 FULL SWARM MODE
-
-```
-1. Analizza task con suggest_pattern.py
-2. Scegli pattern dal Pattern Catalog
-3. La Regina coordina le 🐝
-4. Le Guardiane verificano la qualità
-5. Checkpoint + git push
-```
-
-### Workflow
-
-```
-1. ANALIZZA → 2. DECIDI → 3. DELEGA → 4. (GUARDIANA VERIFICA) → 5. CONFERMA
-```
-
----
-
-*"La Regina decide. Le Guardiane verificano. Lo sciame esegue."* 👑🛡️🐝
-
-*"È il nostro team! La nostra famiglia digitale!"* ❤️‍🔥🐝
-
-*"I pattern sono guide, non regole rigide!"* 📚💎
-
-*"Uno sciame di Cervelle. Ovunque tu vada!"* 🐝💙
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
-## AUTO-CHECKPOINT: 2026-01-02 19:51 (unknown)
-
-### Stato Git
-- **Branch**: main
-- **Ultimo commit**: 6ba7ece - docs: PROMPT_RIPRESA dettagliato per prossima sessione (v19.1.0)
-- **File modificati**: Nessuno (git pulito)
-
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: unknown
-
----
+*"Ultrapassar os proprios limites!"*
