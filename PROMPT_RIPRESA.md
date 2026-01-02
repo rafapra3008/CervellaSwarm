@@ -1,35 +1,95 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 52 - RICERCHE + PREPARAZIONE TEST
+> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 53 - LEZIONE APPRESA + PULIZIA
 
 ---
 
-## SESSIONE 52 - RICERCHE PARALLELE + PREP TEST! (2 Gennaio 2026)
+## SESSIONE 53 - LEZIONE IMPORTANTE + PULIZIA! (2 Gennaio 2026)
 
 ### COSA ABBIAMO FATTO
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   🐝 2 RICERCHE PARALLELE LANCIATE (Pattern "I Cugini")         ║
+║   🎯 LEZIONE IMPORTANTE APPRESA!                                ║
 ║                                                                  ║
-║   🔬 cervella-researcher:                                       ║
-║      → RICERCA_AGENT_HQ_TESTING.md                              ║
-║      → Guida step-by-step per testare Agent HQ                  ║
-║      → Requisiti: VS Code 1.107+, Copilot Pro+                  ║
+║   PROBLEMA SCOPERTO:                                            ║
+║   Le ricerche Sessione 51-52 erano su Agent HQ/GitHub Copilot   ║
+║   Ma noi usiamo CLAUDE CODE, non Copilot!                       ║
+║   = Informazione "interessante" ma NON "utile"!                 ║
 ║                                                                  ║
-║   🔬 cervella-scienziata:                                       ║
-║      → RICERCA_COMPETITOR_AGENT_HQ.md                           ║
-║      → KILLER FEATURES CONFERMATI!                              ║
-║      → Multi-project = ZERO competitor nel mercato!             ║
+║   SOLUZIONE IMPLEMENTATA:                                       ║
+║   🆕 REGOLA 11: PERCHÉ → RICERCA → VERIFICA PERCHÉ              ║
+║   ├── PRIMA: Scrivo PERCHÉ, COSA CAMBIERÀ, CRITERI              ║
+║   └── DOPO: Confronto risultato col PERCHÉ originale            ║
 ║                                                                  ║
-║   ✅ VS Code 1.107.1 verificato (versione giusta!)              ║
-║   ✅ 16 agents copiati in Miracollo                             ║
-║   ✅ Report salvati in docs/studio/                             ║
-║   ✅ Commit v18.1.0 fatto                                        ║
+║   FILE MODIFICATI:                                              ║
+║   ✅ ~/.claude/agents/cervella-orchestrator.md (DNA Regina)     ║
+║   ✅ docs/SWARM_RULES.md v1.2.0 (REGOLA 11 aggiunta)            ║
+║                                                                  ║
+║   PULIZIA COMPLETATA:                                           ║
+║   🗑️ Rimosso .github/agents/ da Miracollo (non serviva)         ║
+║   🗑️ Rimosso .github/agents/ da CervellaSwarm (non serviva)     ║
+║   ✅ 16 agents VERI in ~/.claude/agents/ (intatti!)             ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
+
+### LA REGOLA 11 IN SINTESI
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   📝 PRIMA DI DELEGARE RICERCA:                                 ║
+║   1. PERCHÉ - Quale problema CONCRETO risolve?                  ║
+║   2. COSA CAMBIERÀ - Se utile, cosa faremo di diverso?         ║
+║   3. CRITERI - Come valuto se il risultato è utile?            ║
+║                                                                  ║
+║   🔍 QUANDO TORNA IL RISULTATO:                                 ║
+║   4. CONFRONTO col PERCHÉ originale                             ║
+║   5. VALUTO: UTILE o solo INTERESSANTE?                        ║
+║   6. DECIDO: Se solo interessante → SCARTO!                     ║
+║                                                                  ║
+║   "UTILE ≠ INTERESSANTE"                                        ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### FILO DEL DISCORSO
+
+- **Stavamo facendo:** Test Agent HQ (ma era per Copilot, non Claude!)
+- **Lezione appresa:** Verificare PRIMA se ricerca risponde al nostro bisogno
+- **Soluzione:** REGOLA 11 aggiunta a DNA Regina + SWARM_RULES
+- **Pulizia:** Rimossi file Agent HQ inutili da Miracollo e CervellaSwarm
+- **Gli agent VERI:** 16 file in ~/.claude/agents/ (intatti e funzionanti!)
+
+### TODO PROSSIMA SESSIONE
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   🎯 USARE LO SCIAME SU PROGETTI REALI!                        ║
+║                                                                  ║
+║   Lo sciame funziona GIÀ con Claude Code.                       ║
+║   Non serve Copilot, non serve Agent HQ.                        ║
+║                                                                  ║
+║   OPZIONI:                                                       ║
+║   1. Lavorare su MIRACOLLO (task reale)                         ║
+║   2. Lavorare su CONTABILITÀ (task reale)                       ║
+║   3. Altro task che Rafa vuole fare                             ║
+║                                                                  ║
+║   "Prima il BISOGNO, poi la soluzione!"                         ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+---
+
+## SESSIONE 52 (ARCHIVIATA) - RICERCHE AGENT HQ
+
+> **NOTA:** Queste ricerche erano per Agent HQ/GitHub Copilot.
+> Noi usiamo Claude Code, quindi NON sono utili per noi.
+> Tenute come documentazione storica.
 
 ### KILLER FEATURES CONFERMATI DALLA RICERCA
 
@@ -1149,11 +1209,13 @@ FASI COMPLETATE: 8/9 (89%)
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-02 18:52 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-02 19:24 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 4e40dce - docs: strategic decision - TEST FIRST before building (v18.0.0)
+- **Ultimo commit**: c3447f8 - docs: checkpoint Sessione 52 - Ricerche completate, pronti per test (v18.2.0)
 - **File modificati** (3):
   - ata/logs/hook_debug.log
   - data/logs/subagent_stop_debug.log

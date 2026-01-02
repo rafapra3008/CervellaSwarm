@@ -3,7 +3,7 @@
 > **"Uno sciame senza regole e caos. Uno sciame con regole e POTENZA."**
 
 **Data Creazione:** 1 Gennaio 2026
-**Versione:** 1.0.0
+**Versione:** 1.2.0
 **Priorita:** ALTA - Queste regole sono FONDAMENTALI
 
 ---
@@ -427,10 +427,119 @@ DNA aggiornato in tutti i 14 agent con criteri CHIARI su quando:
 
 ---
 
+## REGOLA 11: PERCHÉ → RICERCA → VERIFICA PERCHÉ 🎯
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   🎯 OGNI RICERCA HA UN PERCHÉ!                                 ║
+║                                                                  ║
+║   "Mai più informazione spazzatura!"                            ║
+║   "UTILE ≠ INTERESSANTE"                                        ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### Il Problema
+
+Quando la Regina delega ricerche alle 🐝 (researcher, scienziata), può succedere:
+- Le 🐝 tornano con info "interessanti"
+- Ma quelle info NON risolvono il problema originale
+- Risultato: ore perse su cose inutili
+
+**Casi reali:**
+- Sessione 38: Docker monitoring per sciame che non gira H24
+- Sessione 51-53: Agent HQ per Copilot quando usiamo Claude Code
+
+### La Soluzione
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   📝 PRIMA DI DELEGARE:                                         ║
+║                                                                  ║
+║   1. PERCHÉ - Quale problema CONCRETO risolve?                  ║
+║   2. COSA CAMBIERÀ - Se utile, cosa faremo di diverso?         ║
+║   3. CRITERI - Come valuto se il risultato è utile?            ║
+║                                                                  ║
+║   🔍 QUANDO TORNA IL RISULTATO:                                 ║
+║                                                                  ║
+║   4. CONFRONTO - Risponde al PERCHÉ originale?                  ║
+║   5. VALUTO - È UTILE o solo INTERESSANTE?                     ║
+║   6. DECIDO - Se solo interessante → SCARTO!                    ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### Esempio
+
+**❌ SBAGLIATO:**
+```
+Delega: "Ricerca Agent HQ testing"
+Torna: "Serve VS Code 1.107, Copilot Pro..."
+Azione: "Ottimo! Procediamo!"
+Problema: Non abbiamo verificato se funziona col NOSTRO sistema!
+```
+
+**✅ CORRETTO:**
+```
+PRIMA:
+- PERCHÉ: "Voglio sapere se Agent HQ funziona con Claude Code"
+- CAMBIERÀ: "Se sì, useremo VS Code invece di CLI"
+- CRITERIO: "Funziona con Anthropic/Claude? SI/NO"
+
+DOPO:
+- Risultato: "Serve Copilot Pro (Microsoft/OpenAI)..."
+- Confronto: "Funziona con Claude?" → NO!
+- Decisione: SCARTO - non risponde al bisogno!
+```
+
+### Flowchart
+
+```
+        IDEA DI RICERCA
+              │
+              ▼
+    ┌─────────────────────┐
+    │ Scrivo PERCHÉ       │
+    │ Scrivo COSA CAMBIERÀ│
+    │ Scrivo CRITERI      │
+    └─────────────────────┘
+              │
+              ▼
+        DELEGO A 🐝
+              │
+              ▼
+        RISULTATO TORNA
+              │
+              ▼
+    ┌─────────────────────┐
+    │ Confronto col PERCHÉ│
+    └─────────────────────┘
+              │
+         ┌────┴────┐
+         │         │
+     RISPONDE   NON RISPONDE
+         │         │
+         ▼         ▼
+      ✅ USO    ❌ SCARTO
+```
+
+### Chi Applica Questa Regola?
+
+| Ruolo | Responsabilità |
+|-------|----------------|
+| 👑 Regina | DEVE scrivere PERCHÉ prima di delegare ricerche |
+| 🐝 Researcher/Scienziata | Fanno la ricerca (non cambiano) |
+| 👑 Regina | DEVE verificare se risultato risponde al PERCHÉ |
+
+---
+
 ## CHANGELOG
 
 | Versione | Data | Modifica |
 |----------|------|----------|
+| 1.2.0 | 2 Gen 2026 | **REGOLA 11: PERCHÉ** - Verifica risultati ricerche vs bisogno originale |
 | 1.1.0 | 1 Gen 2026 | **REGOLA 10: DECISIONE AUTONOMA** - DNA aggiornato in tutti gli agent! |
 | 1.0.0 | 1 Gen 2026 | Creazione documento + REGOLA 4: VERIFICA ATTIVA POST-AGENT |
 
