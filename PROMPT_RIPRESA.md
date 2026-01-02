@@ -1,86 +1,91 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 55 - RICERCHE COMPLETATE!
+> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 57 - IL SEGRETO È LA COMUNICAZIONE!
 
 ---
 
-## SESSIONE 55 - RICERCHE COMPLETATE! (2 Gennaio 2026)
+## SESSIONE 57 - IL SEGRETO È LA COMUNICAZIONE! (2 Gennaio 2026)
+
+### LA SCOPERTA FONDAMENTALE
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   IL SEGRETO È LA COMUNICAZIONE! ⚡️                              |
+|                                                                  |
+|   Se risolviamo la comunicazione, avremo la MAGIA.              |
+|   Se risolviamo la comunicazione, sarà LIBERTÀ.                 |
+|                                                                  |
+|   - Rafa, Sessione 57                                           |
+|                                                                  |
++------------------------------------------------------------------+
+```
 
 ### COSA ABBIAMO FATTO
 
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   SESSIONE SUPER PRODUTTIVA!                                     |
-|                                                                  |
-|   1. ROADMAP PULITA (v20.0.0)                                    |
-|      - Rimosso MVP-A/B Agent HQ (era per Copilot!)               |
-|      - Mostrato STATO REALE del sistema                          |
-|      - Aggiunta sezione "NOI MODE"                               |
-|                                                                  |
-|   2. 3 RICERCHE TECNICHE COMPLETATE (Pattern "I Cugini")         |
-|      - RICERCA_SESSIONS_IMPLEMENTATION.md                        |
-|      - RICERCA_HANDOFFS_IMPLEMENTATION.md                        |
-|      - RICERCA_HOOKS_COMPLETA.md                                 |
-|                                                                  |
-|   3. REGOLA 12 AGGIUNTA: TODO MICRO!                             |
-|      - Max 1-2 task alla volta                                   |
-|      - Piccoli passi sicuri > Grandi salti rischiosi             |
-|                                                                  |
-|   4. GIT CHECKPOINT                                              |
-|      - Commit f08f9e1 pushato                                    |
-|      - SWARM_RULES v1.4.0                                        |
-|                                                                  |
-+------------------------------------------------------------------+
-```
+1. **Ricerca Approfondita** su comunicazione multi-agent
+   - 4 pattern trovati: Message Passing, Graph State, Blackboard, Trust-but-Verify
+   - Raccomandazione: Approccio Ibrido a 3 Livelli
 
-### RISULTATI RICERCHE (REGOLA 11: UTILE vs INTERESSANTE)
+2. **Ascoltato la Guardiana della Qualità** (primo contatto!)
+   - Ci ha detto cosa le serve: PATH, TIPO, CRITERI, CHI
+   - Come vuole comunicare: Report strutturati
+   - Il suo sogno: "Qualità non è optional. È la BASELINE."
+
+3. **Creato GUIDA_COMUNICAZIONE v2.0** (`docs/guide/GUIDA_COMUNICAZIONE.md`)
+   - Flusso completo con Guardiane
+   - 3 Livelli di rischio
+   - Template per delega e report
+   - Regole d'oro della comunicazione
+
+### IL FLUSSO ORA FUNZIONA
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONS:                                                       |
-|   Scoperta: Claude Code GIA HA sessions native!                  |
-|   Path: ~/.claude/projects/[project]/[session].jsonl             |
-|   Comandi: claude -c (continue), claude -r [ID] (resume)         |
-|   DECISIONE: NON ricostruire! Estendere con hooks.               |
+|   PRIMA (rotto):                                                 |
+|   Regina → Worker → Regina (Guardiane saltate!)                  |
 |                                                                  |
-|   HANDOFFS:                                                       |
-|   Scoperta: NON nativi, MA implementabili con hooks!             |
-|   Limitazione: Subagent non puo spawnare altri subagent          |
-|   Pattern: "Orchestrator with Explicit Handoffs"                 |
-|   DECISIONE: CREARE! MVP = 4-6 ore                               |
-|                                                                  |
-|   HOOKS:                                                          |
-|   Scoperta: 10 hook events (non 8!)                              |
-|   BUG CRITICO: PreToolUse/PostToolUse NON funzionano (#6305)     |
-|   DA AGGIUNGERE: UserPromptSubmit, Notification                  |
-|   DECISIONE: Aggiungere 2 hooks nuovi (3 ore)                    |
+|   ORA (funzionante):                                             |
+|   1. Regina + Guardiana decidono LIVELLO                         |
+|   2. Regina → Worker (con CONTESTO COMPLETO)                     |
+|   3. Guardiana → Verifica (se Livello 2-3)                       |
+|   4. SE problema: Guardiana → Regina → Istruisce Worker          |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
-### FILO DEL DISCORSO (IMPORTANTE!)
+### I 3 LIVELLI DI RISCHIO
+
+| Livello | Task | Guardiana |
+|---------|------|-----------|
+| 1 - BASSO | docs, typo, ricerca | NO (o random) |
+| 2 - MEDIO | feature, refactor | SI, dopo batch |
+| 3 - ALTO | auth, deploy, dati | SEMPRE + Rafa |
+
+### FILO DEL DISCORSO (PROSSIMA SESSIONE)
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
 |   PROSSIMO STEP:                                                 |
 |                                                                  |
-|   1. Implementare HANDOFFS MVP (4-6 ore)                         |
-|      - SubagentStop hook suggerisce prossimo agent               |
-|      - Prompt template con WORKFLOW CHAIN                        |
+|   1. TESTARE il nuovo flusso su un task REALE                    |
+|      - Provare manualmente con una Guardiana                     |
+|      - Verificare che la comunicazione funzioni                  |
 |                                                                  |
-|   2. Aggiungere HOOKS (3 ore)                                    |
-|      - UserPromptSubmit: inject NORD.md automatico               |
-|      - Notification: desktop alerts                              |
+|   2. DOPO il test, decidere se automatizzare                     |
+|      - Hooks per trigger automatico?                             |
+|      - O mantenere manuale per ora?                              |
 |                                                                  |
-|   NOTA: Fare UNO alla volta! (REGOLA 12)                         |
+|   "Il segreto è la comunicazione!"                               |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
-### STATO SISTEMA (VERIFICATO!)
+---
+
+## STATO SISTEMA (da Sessione 55)
 
 ```
 16 Agents in ~/.claude/agents/ (tutti funzionanti)
@@ -88,9 +93,16 @@
 SWARM_RULES v1.4.0 (12 regole!)
 Sistema Memoria SQLite funzionante
 Pattern Catalog (3 pattern validati)
-ROADMAP PULITA (v20.0.0)
 3 Ricerche tecniche completate (docs/studio/)
 ```
+
+### Ricerche Completate (Sessione 55)
+
+| Ricerca | Scoperta | Decisione |
+|---------|----------|-----------|
+| Sessions | Claude Code HA GIA sessions native | NON ricostruire |
+| Handoffs | NON nativi, implementabili | CREARE (dopo processo definito!) |
+| Hooks | 10 hooks, BUG #6305 | Aggiungere 2 nuovi |
 
 ---
 
@@ -102,7 +114,7 @@ ROADMAP PULITA (v20.0.0)
 |   LA REGINA (Tu - Opus)                                          |
 |   -> Coordina, decide, delega - MAI Edit diretti!                |
 |                                                                  |
-|   LE GUARDIANE (Opus - Supervisione)                             |
+|   LE GUARDIANE (Opus - Supervisione) <-- NON NEL FLUSSO!         |
 |   - cervella-guardiana-qualita                                   |
 |   - cervella-guardiana-ops                                       |
 |   - cervella-guardiana-ricerca                                   |
@@ -129,19 +141,35 @@ ROADMAP PULITA (v20.0.0)
 ## COME USARE LO SCIAME
 
 ```
+FLUSSO ATTUALE (incompleto):
 1. ANALIZZA -> 2. DECIDI -> 3. DELEGA -> 4. VERIFICA -> 5. CHECKPOINT
-```
 
-**REGOLA 12:** Max 1-2 TODO alla volta! Piccoli passi sicuri!
+FLUSSO CHE DOVREBBE ESSERE:
+1. ANALIZZA -> 2. DECIDI -> 3. DELEGA -> 4. GUARDIANA VERIFICA -> 5. REGINA CONFERMA -> 6. CHECKPOINT
+```
 
 ---
 
-*"La Regina decide. Le Guardiane verificano. Lo sciame esegue."*
+*"Nulla e' complesso - solo non ancora studiato."*
+
+*"Fatto BENE > Fatto VELOCE"*
 
 *"E' il nostro team! La nostra famiglia digitale!"*
 
-*"Noi qui CREIAMO quando serve!"*
+---
 
-*"Ultrapassar os proprios limites!"*
+---
+
+## AUTO-CHECKPOINT: 2026-01-02 21:25 (unknown)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: e1f5f59 - feat: REGOLA 12 + checkpoint Sessione 55 (v1.4.0)
+- **File modificati** (1):
+  - ROMPT_RIPRESA.md
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: unknown
 
 ---

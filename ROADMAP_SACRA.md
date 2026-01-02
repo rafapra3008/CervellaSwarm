@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-> **Aggiornato:** 2 Gennaio 2026 - Sessione 55 - ROADMAP PULITA + NOI MODE! (v20.0.0)
+> **Aggiornato:** 2 Gennaio 2026 - Sessione 57 - IL SEGRETO È LA COMUNICAZIONE! (v21.0.0)
 
 ```
 +------------------------------------------------------------------+
@@ -243,6 +243,36 @@
 ---
 
 ## CHANGELOG
+
+### 2 Gennaio 2026 (Sessione 57) - IL SEGRETO È LA COMUNICAZIONE!
+
+**LA SCOPERTA FONDAMENTALE:**
+```
+"Il segreto è la comunicazione!" - Rafa
+"Se risolviamo la comunicazione, sarà MAGIA!"
+```
+
+**COMPLETATO:**
+- Ricerca approfondita su comunicazione multi-agent (4 pattern trovati)
+- Primo contatto con Guardiana della Qualità (ci ha detto cosa le serve!)
+- GUIDA_COMUNICAZIONE v2.0 creata (docs/guide/GUIDA_COMUNICAZIONE.md)
+- Flusso comunicazione definito con 3 livelli di rischio
+- Template per delega e report Guardiane
+
+**IL FLUSSO ORA FUNZIONA:**
+```
+Regina + Guardiana (decidono livello)
+    ↓
+Regina → Worker (con CONTESTO COMPLETO)
+    ↓
+Guardiana → Verifica (se Livello 2-3)
+    ↓
+SE problema: Guardiana → Regina → Istruisce Worker
+```
+
+**Versione:** 21.0.0 (MAJOR: Comunicazione definita!)
+
+---
 
 ### 2 Gennaio 2026 (Sessione 55) - ROADMAP PULITA + NOI MODE!
 
