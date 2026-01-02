@@ -4494,3 +4494,163 @@ TIMESTAMP: 2026-01-02T17:56:24.737350
 }
 ============================================================
 
+
+============================================================
+TIMESTAMP: 2026-01-02T18:00:08.138689
+============================================================
+{
+  "session_id": "5d7503c4-8002-4a5a-8932-53afd77cbfcd",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/5d7503c4-8002-4a5a-8932-53afd77cbfcd.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "af86acc",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/agent-af86acc.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T18:02:57.094805
+============================================================
+{
+  "session_id": "0bb70fe3-b1fa-4d29-8c04-92426565508d",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-ContabilitaAntigravity/0bb70fe3-b1fa-4d29-8c04-92426565508d.jsonl",
+  "cwd": "/Users/rafapra/Developer/ContabilitaAntigravity",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "abd9caa",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-ContabilitaAntigravity/agent-abd9caa.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T18:03:29.143945
+============================================================
+{
+  "session_id": "c9e70c79-af46-4f28-bed6-a7e397f3d0e3",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/c9e70c79-af46-4f28-bed6-a7e397f3d0e3.jsonl",
+  "cwd": "/Users/rafapra/Developer/miracollogeminifocus",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "ab38846",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/agent-ab38846.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T18:05:06.541722
+============================================================
+{
+  "session_id": "d4d4ad3f-988e-4491-a9bc-1144b1f95e7e",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/d4d4ad3f-988e-4491-a9bc-1144b1f95e7e.jsonl",
+  "cwd": "/Users/rafapra/Developer/miracollogeminifocus",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "aba1162",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/agent-aba1162.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T18:05:10.217488
+============================================================
+{
+  "session_id": "d4d4ad3f-988e-4491-a9bc-1144b1f95e7e",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/d4d4ad3f-988e-4491-a9bc-1144b1f95e7e.jsonl",
+  "cwd": "/Users/rafapra/Developer/miracollogeminifocus",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a6f678f",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/agent-a6f678f.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T18:06:06.180768
+============================================================
+{
+  "session_id": "d4d4ad3f-988e-4491-a9bc-1144b1f95e7e",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/d4d4ad3f-988e-4491-a9bc-1144b1f95e7e.jsonl",
+  "cwd": "/Users/rafapra/Developer/miracollogeminifocus",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "af44b24",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/agent-af44b24.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T18:07:37.994473
+============================================================
+{
+  "session_id": "0bb70fe3-b1fa-4d29-8c04-92426565508d",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-ContabilitaAntigravity/0bb70fe3-b1fa-4d29-8c04-92426565508d.jsonl",
+  "cwd": "/Users/rafapra/Developer/ContabilitaAntigravity",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a686b94",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-ContabilitaAntigravity/agent-a686b94.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T18:08:21.467234
+============================================================
+{
+  "session_id": "d4d4ad3f-988e-4491-a9bc-1144b1f95e7e",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/d4d4ad3f-988e-4491-a9bc-1144b1f95e7e.jsonl",
+  "cwd": "/Users/rafapra/Developer/miracollogeminifocus",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "aaa14c6",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-miracollogeminifocus/agent-aaa14c6.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T18:08:48.197697
+============================================================
+{
+  "session_id": "5d7503c4-8002-4a5a-8932-53afd77cbfcd",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/5d7503c4-8002-4a5a-8932-53afd77cbfcd.jsonl",
+  "cwd": "/Users/rafapra/Developer/CervellaSwarm",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "ad366e8",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-CervellaSwarm/agent-ad366e8.jsonl"
+}
+============================================================
+
+
+============================================================
+TIMESTAMP: 2026-01-02T18:09:13.167481
+============================================================
+{
+  "session_id": "0bb70fe3-b1fa-4d29-8c04-92426565508d",
+  "transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-ContabilitaAntigravity/0bb70fe3-b1fa-4d29-8c04-92426565508d.jsonl",
+  "cwd": "/Users/rafapra/Developer/ContabilitaAntigravity",
+  "permission_mode": "default",
+  "hook_event_name": "SubagentStop",
+  "stop_hook_active": false,
+  "agent_id": "a27e1af",
+  "agent_transcript_path": "/Users/rafapra/.claude/projects/-Users-rafapra-Developer-ContabilitaAntigravity/agent-a27e1af.jsonl"
+}
+============================================================
+
