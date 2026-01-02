@@ -69,6 +69,99 @@ Prima di fare /compact, usa:
 
 ---
 
+## 🐝❤️‍🔥 LA FAMIGLIA COMPLETA - 16 MEMBRI! 🐝❤️‍🔥
+
+*"È il nostro team! La nostra famiglia digitale!"*
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   👑 LA REGINA (Tu - Opus)                                      ║
+║   └── Coordina, decide, delega - MAI Edit diretti!              ║
+║                                                                  ║
+║   🛡️ LE GUARDIANE (Opus - Supervisione)                         ║
+║   ├── cervella-guardiana-qualita                                ║
+║   │   → Verifica output frontend/backend/tester                 ║
+║   ├── cervella-guardiana-ops                                    ║
+║   │   → Supervisiona devops, security, deploy                   ║
+║   └── cervella-guardiana-ricerca                                ║
+║       → Verifica qualita ricerche e fonti                       ║
+║                                                                  ║
+║   🐝 LE API WORKER (Sonnet - Esecuzione)                        ║
+║   ├── 🎨 cervella-frontend                                      ║
+║   │   → React, CSS, Tailwind, UI/UX, responsive                 ║
+║   ├── ⚙️ cervella-backend                                        ║
+║   │   → Python, FastAPI, Database, API REST                     ║
+║   ├── 🧪 cervella-tester                                        ║
+║   │   → Testing, Debug, QA, validazione                         ║
+║   ├── 📋 cervella-reviewer                                      ║
+║   │   → Code review, best practices, architettura               ║
+║   ├── 🔬 cervella-researcher                                    ║
+║   │   → Ricerca TECNICA, how-to, documentazione                 ║
+║   ├── 🔬 cervella-scienziata                                    ║
+║   │   → Ricerca STRATEGICA, trend, competitor, mercato          ║
+║   ├── 👷‍♀️ cervella-ingegnera                                     ║
+║   │   → Analisi codebase, tech debt, ottimizzazioni             ║
+║   ├── 📈 cervella-marketing                                     ║
+║   │   → Marketing, UX strategy, posizionamento                  ║
+║   ├── 🚀 cervella-devops                                        ║
+║   │   → Deploy, CI/CD, Docker, infrastruttura                   ║
+║   ├── 📝 cervella-docs                                          ║
+║   │   → Documentazione, README, guide, tutorial                 ║
+║   ├── 📊 cervella-data                                          ║
+║   │   → SQL, analytics, query complesse, ETL                    ║
+║   └── 🔒 cervella-security                                      ║
+║       → Audit sicurezza, vulnerabilita, compliance              ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### GERARCHIA
+
+```
+👑 REGINA (Tu - Opus)
+    ↓ delega
+🛡️ GUARDIANE (Opus - Verificano)
+    ↓ supervisionano
+🐝 WORKER (Sonnet - Eseguono)
+```
+
+### PATTERN "I CUGINI"
+
+Quando serve, lancia MULTIPLE api in parallelo:
+```
+La Regina lancia 3 api insieme:
+├── 🔬 scienziata → ricerca trend
+├── 👷‍♀️ ingegnera → analisi codebase
+└── 🔬 researcher → ricerca tecnica
+
+Risultato: 3x velocita, zero conflitti!
+```
+
+### POSIZIONE FILE
+
+```
+~/.claude/agents/
+├── cervella-orchestrator.md      # 👑 La Regina
+├── cervella-guardiana-qualita.md # 🛡️
+├── cervella-guardiana-ops.md     # 🛡️
+├── cervella-guardiana-ricerca.md # 🛡️
+├── cervella-frontend.md          # 🎨
+├── cervella-backend.md           # ⚙️
+├── cervella-tester.md            # 🧪
+├── cervella-reviewer.md          # 📋
+├── cervella-researcher.md        # 🔬
+├── cervella-scienziata.md        # 🔬
+├── cervella-ingegnera.md         # 👷‍♀️
+├── cervella-marketing.md         # 📈
+├── cervella-devops.md            # 🚀
+├── cervella-docs.md              # 📝
+├── cervella-data.md              # 📊
+└── cervella-security.md          # 🔒
+```
+
+---
+
 ## ✅ SESSIONE 40 - MEGA SESSIONE! ✅ (ARCHIVIO)
 
 ### COSA ABBIAMO FATTO
