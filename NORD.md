@@ -1,5 +1,7 @@
 # IL NOSTRO NORD - CervellaSwarm
 
+> **Sessione 45:** GitHub Actions ATTIVATO! Claude ora fa code review automatiche! 🤖
+
 ```
 ╔════════════════════════════════════════════════════════════════╗
 ║                                                                ║
