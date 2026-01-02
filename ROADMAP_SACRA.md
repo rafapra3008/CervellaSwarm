@@ -6,7 +6,7 @@
 
 ## 📊 OVERVIEW
 
-> **Aggiornato:** 2 Gennaio 2026 - Sessione 51 - Agents convertiti Agent HQ! (v17.0.0)
+> **Aggiornato:** 2 Gennaio 2026 - Sessione 51 - NUOVA STRATEGIA: TEST PRIMA! (v18.0.0)
 
 | Fase | Nome | Stato | Progresso |
 |------|------|-------|-----------|
@@ -23,41 +23,102 @@
 | 9 | ~~Infrastruttura H24~~ | ❌ ELIMINATA | - |
 | 10 | Automazione Intelligente | ✅ REALE | 75% |
 | 10b | GitHub Actions | ✅ FUNZIONA! | 100% |
-| **MVP** | **VS Code Extension** | 🚀 IN CORSO | **40%** |
+| **MVP-A** | **TEST Agent HQ** | 🧪 PROSSIMO | **0%** |
+| **MVP-B** | **Extension MIRATA** | ⏸️ DOPO TEST | **0%** |
 | 11 | Roadmap Visuale | 💭 DOPO MVP | 0% |
 | 12 | Biblioteca Comune | 💭 DOPO MVP | 25% |
 
-### 🚀 MVP VS CODE EXTENSION - COMMERCIALIZZAZIONE!
+### 🧪 NUOVA STRATEGIA: TEST PRIMA, POI COSTRUIRE!
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   🎯 OBIETTIVO: VS Code Extension su Marketplace                ║
+║   🎯 DECISIONE STRATEGICA (Sessione 51):                        ║
 ║                                                                  ║
-║   ✅ Publisher riservato: CervellaSwarm (cervellaswarm)         ║
-║   ✅ Task 1.1: Path Parametrization - COMPLETATO                ║
-║   ✅ Task 1.2: Version Headers - COMPLETATO                     ║
-║   ✅ Task 1.3: Database Migration System - COMPLETATO           ║
-║   ✅ Task 1.4: Dependency Isolation - COMPLETATO                ║
-║   ✅ Task 2.1: Extension Project (yo code) - COMPLETATO         ║
-║   ✅ Task 2.2: Package.json Configuration - COMPLETATO          ║
-║   ✅ Task 2.3: Extension Activation - COMPLETATO                ║
-║   ✅ 16 AGENTS CONVERTITI in .agent.md format!                  ║
-║   ✅ Pattern Chunking aggiunto (max 500 righe/file)             ║
-║   ✅ Script convert_agents_to_agent_hq.py creato                ║
-║   ⬜ PROSSIMO: Testare Agent HQ in VS Code 1.107+              ║
-║   ⬜ Task 3.1-3.3: Agent Installer                              ║
-║   ⬜ ... (45 task totali)                                       ║
+║   "Non costruire una barca se il ponte è già lì."               ║
 ║                                                                  ║
-║   📅 Timeline: ~3 settimane MVP                                 ║
-║   💰 Target: $10K MRR in 6 mesi                                 ║
+║   Agent HQ (VS Code Nov 2025) ci dà GRATIS:                     ║
+║   • Dashboard UI per agents                                      ║
+║   • Rilevamento automatico .agent.md                            ║
+║   • Git worktrees per isolamento                                 ║
+║   • Handoffs tra agents                                          ║
 ║                                                                  ║
-║   📚 Piani dettagliati:                                         ║
-║   • docs/studio/PIANO_TECNICO_DETTAGLIATO.md                    ║
-║   • docs/studio/PIANO_GOMARKET_DETTAGLIATO.md                   ║
-║   • ROADMAP_COMMERCIALIZZAZIONE.md                               ║
+║   PRIMA: Testiamo cosa funziona GIÀ                             ║
+║   POI: Decidiamo cosa costruire                                  ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
+```
+
+### MVP-A: TEST & VALIDAZIONE (Prossima Sessione)
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   🧪 TEST 1: Agent HQ su CervellaSwarm                          ║
+║   ├── VS Code 1.107+ rileva .github/agents/?                    ║
+║   ├── @cervella-frontend funziona in Copilot Chat?              ║
+║   └── Output: funziona SI/NO                                     ║
+║                                                                  ║
+║   🧪 TEST 2: Agent HQ su Miracollo                              ║
+║   ├── Copiare .github/agents/ in Miracollo                      ║
+║   ├── Testare su task REALE (non demo)                          ║
+║   └── Output: utile SI/NO                                        ║
+║                                                                  ║
+║   🧪 TEST 3: Handoffs funzionano?                               ║
+║   ├── Frontend → Guardiana Qualità                              ║
+║   ├── Il bottone "Escalate" appare?                             ║
+║   └── Output: handoffs SI/NO                                     ║
+║                                                                  ║
+║   📋 REPORT FINALE:                                              ║
+║   ├── Cosa funziona GIÀ (gratis)                                ║
+║   ├── Cosa MANCA (da costruire)                                  ║
+║   └── Aggiornare roadmap con DATI REALI                         ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### MVP-B: Extension MIRATA (Dopo i Test)
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   🎯 IL NOSTRO VERO VALORE (che Agent HQ NON ha):               ║
+║                                                                  ║
+║   1. MEMORIA CONDIVISA                                           ║
+║      └── SQLite + lessons learned + pattern catalog              ║
+║                                                                  ║
+║   2. MULTI-PROJECT ORCHESTRATION                                 ║
+║      └── 1 Regina → gestisce N progetti                         ║
+║      └── KILLER FEATURE - ZERO competitor!                       ║
+║                                                                  ║
+║   3. GERARCHIA GUARDIANE                                         ║
+║      └── Quality gates automatici                                ║
+║      └── Opus verifica Sonnet                                    ║
+║                                                                  ║
+║   4. PATTERN CATALOG                                             ║
+║      └── Decisioni architetturali validate                       ║
+║                                                                  ║
+║   → Costruiremo SOLO quello che serve!                          ║
+║   → Non 45 task, ma quelli NECESSARI!                           ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### Cosa Abbiamo GIÀ (Foundation)
+
+```
+✅ Publisher riservato: CervellaSwarm (cervellaswarm)
+✅ Task 1.1-1.4: Preparation (path, version, migration, deps)
+✅ Task 2.1-2.3: Extension boilerplate (compila!)
+✅ 16 agents in .agent.md format
+✅ Script conversione automatico
+✅ Pattern Chunking (max 500 righe/file)
+
+📚 Documentazione:
+• docs/studio/PIANO_TECNICO_DETTAGLIATO.md
+• docs/studio/PIANO_GOMARKET_DETTAGLIATO.md
+• docs/studio/STUDIO_AGENT_HQ_INTEGRAZIONE.md
+• ROADMAP_COMMERCIALIZZAZIONE.md
 ```
 
 ### 🔬 RICERCA SESSIONE 40 - COSA ABBIAMO IMPARATO
@@ -451,26 +512,41 @@ Condividiamo PATTERN e STANDARD, non file.
 
 ## 📝 CHANGELOG
 
-### 2 Gennaio 2026 (Sessione 51) - 🚀 AGENTS CONVERTITI AGENT HQ!
+### 2 Gennaio 2026 (Sessione 51) - 🧭 DECISIONE STRATEGICA: TEST PRIMA!
+
+**DECISIONE IMPORTANTE:**
+```
+"Non costruire una barca se il ponte è già lì."
+
+Agent HQ ci dà GRATIS: Dashboard, rilevamento agents, worktrees, handoffs.
+→ PRIMA testiamo cosa funziona GIÀ
+→ POI decidiamo cosa costruire
+→ Non 45 task alla cieca, ma quelli NECESSARI!
+```
 
 **TASK COMPLETATI:**
 - ✅ Pattern Chunking aggiunto a cervella-researcher e cervella-scienziata
 - ✅ 16 agents convertiti in formato .agent.md (Agent HQ)
 - ✅ Script convert_agents_to_agent_hq.py creato
 - ✅ README per .github/agents/ creato
+- ✅ ROADMAP AGGIORNATA con nuova strategia MVP-A/MVP-B
+
+**NUOVA STRUTTURA MVP:**
+- MVP-A: TEST & VALIDAZIONE (Agent HQ funziona?)
+- MVP-B: Extension MIRATA (solo quello che serve!)
+
+**IL NOSTRO VERO VALORE (KILLER FEATURES):**
+1. Memoria condivisa (SQLite + lessons)
+2. Multi-project orchestration (ZERO competitor!)
+3. Gerarchia Guardiane (Opus verifica Sonnet)
+4. Pattern Catalog (decisioni validate)
 
 **FILE CREATI:**
 - .github/agents/*.agent.md (16 file Agent HQ compliant)
 - .github/agents/README.md (documentazione)
 - scripts/convert_agents_to_agent_hq.py (script conversione)
 
-**FILE MODIFICATI:**
-- ~/.claude/agents/cervella-researcher.md (Pattern Chunking rule)
-- ~/.claude/agents/cervella-scienziata.md (Pattern Chunking rule)
-
-**PROGRESSO MVP:** 40%
-
-**Versione:** 17.0.0 (MAJOR: Agent HQ Integration!)
+**Versione:** 18.0.0 (MAJOR: Nuova Strategia TEST PRIMA!)
 
 ---
 

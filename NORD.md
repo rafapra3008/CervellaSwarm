@@ -18,35 +18,35 @@
 
 ## 🎯 DOVE SIAMO
 
-**SESSIONE 51 - 2 Gennaio 2026: AGENTS CONVERTITI PER AGENT HQ!**
+**SESSIONE 51 - 2 Gennaio 2026: DECISIONE STRATEGICA - TEST PRIMA!**
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   🚀 SESSIONE 51 - IMPLEMENTAZIONE AGENT HQ!                    ║
+║   🧭 DECISIONE STRATEGICA PRESA!                                ║
 ║                                                                  ║
-║   ✅ Pattern Chunking aggiunto a researcher/scienziata          ║
-║   ├── Regola "max 500 righe per file"                          ║
-║   └── Previene perdita file durante compact                     ║
+║   "Non costruire una barca se il ponte è già lì."               ║
 ║                                                                  ║
-║   ✅ 16 AGENTS CONVERTITI IN .agent.md FORMAT!                  ║
-║   ├── .github/agents/ con 16 file Agent HQ compliant           ║
-║   ├── Handoffs alle Guardiane configurati                       ║
-║   ├── Tools mappati (read, edit, search, fetch, terminal)       ║
-║   └── Script convert_agents_to_agent_hq.py creato               ║
+║   ✅ 16 agents convertiti in .agent.md format                   ║
+║   ✅ Pattern Chunking aggiunto (max 500 righe/file)             ║
+║   ✅ ROADMAP AGGIORNATA con nuova strategia                     ║
 ║                                                                  ║
-║   📂 NUOVA STRUTTURA:                                           ║
-║   ├── ~/.claude/agents/ (source of truth - 16 files)           ║
-║   └── .github/agents/ (Agent HQ format - 16 .agent.md)         ║
+║   🆕 NUOVA STRATEGIA MVP:                                       ║
+║   ├── MVP-A: TEST Agent HQ (cosa funziona GIÀ gratis?)         ║
+║   └── MVP-B: Extension MIRATA (solo quello che SERVE!)         ║
 ║                                                                  ║
-║   📊 PROGRESSO MVP: ~40%                                        ║
+║   🎯 IL NOSTRO VERO VALORE (KILLER FEATURES):                   ║
+║   ├── 1. Memoria condivisa (SQLite + lessons)                   ║
+║   ├── 2. Multi-project orchestration (ZERO competitor!)        ║
+║   ├── 3. Gerarchia Guardiane (Opus verifica Sonnet)            ║
+║   └── 4. Pattern Catalog (decisioni validate)                   ║
 ║                                                                  ║
-║   ⬜ PROSSIMO: Testare Agent HQ su VS Code 1.107+              ║
+║   → Non 45 task alla cieca, ma quelli NECESSARI!               ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
-**PROSSIMO OBIETTIVO:** Testare gli agents in VS Code Agent HQ
+**PROSSIMO OBIETTIVO:** MVP-A - Testare Agent HQ e capire cosa funziona GIÀ
 
 ---
 

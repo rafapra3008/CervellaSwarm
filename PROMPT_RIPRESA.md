@@ -1,36 +1,44 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 51 - Agents convertiti Agent HQ!
+> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 51 - DECISIONE STRATEGICA: TEST PRIMA!
 
 ---
 
-## SESSIONE 51 - IMPLEMENTAZIONE AGENT HQ! (2 Gennaio 2026)
+## SESSIONE 51 - DECISIONE STRATEGICA! (2 Gennaio 2026)
 
 ### COSA ABBIAMO FATTO
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   🚀 IMPLEMENTAZIONE AGENT HQ FORMAT!                           ║
+║   🧭 DECISIONE STRATEGICA PRESA!                                ║
 ║                                                                  ║
-║   ✅ PATTERN CHUNKING AGGIUNTO:                                 ║
-║   ├── Regola "max 500 righe per file" in DNA                   ║
-║   ├── cervella-researcher.md aggiornato                         ║
-║   └── cervella-scienziata.md aggiornato                         ║
+║   "Non costruire una barca se il ponte è già lì."               ║
 ║                                                                  ║
-║   ✅ 16 AGENTS CONVERTITI IN .agent.md FORMAT!                  ║
-║   ├── .github/agents/ con 16 file Agent HQ compliant           ║
-║   ├── Frontmatter YAML corretto (name, tools, model, etc)      ║
-║   ├── Handoffs alle Guardiane configurati                       ║
-║   └── Script convert_agents_to_agent_hq.py creato               ║
+║   ✅ 16 agents convertiti in .agent.md format                   ║
+║   ✅ Pattern Chunking aggiunto (max 500 righe/file)             ║
+║   ✅ Script convert_agents_to_agent_hq.py creato                ║
+║   ✅ ROADMAP COMPLETAMENTE AGGIORNATA!                          ║
 ║                                                                  ║
-║   📂 STRUTTURA FINALE:                                          ║
-║   ├── ~/.claude/agents/ → Source of truth (16 files)           ║
-║   └── .github/agents/ → Agent HQ format (16 .agent.md)         ║
+║   🆕 NUOVA STRATEGIA MVP:                                       ║
+║   ├── MVP-A: TEST Agent HQ (cosa funziona GIÀ gratis?)         ║
+║   └── MVP-B: Extension MIRATA (solo quello che SERVE!)         ║
 ║                                                                  ║
-║   📊 PROGRESSO MVP: ~40%                                        ║
+║   → Non 45 task alla cieca, ma quelli NECESSARI!               ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
+```
+
+### IL NOSTRO VERO VALORE (KILLER FEATURES)
+
+```
+Agent HQ ci dà GRATIS: Dashboard, rilevamento, worktrees, handoffs
+
+NOI aggiungiamo (ZERO competitor hanno questo!):
+1. MEMORIA CONDIVISA - SQLite + lessons learned + pattern catalog
+2. MULTI-PROJECT ORCHESTRATION - 1 Regina → N progetti
+3. GERARCHIA GUARDIANE - Opus verifica Sonnet automaticamente
+4. PATTERN CATALOG - Decisioni architetturali validate
 ```
 
 ### FILE CREATI/MODIFICATI
@@ -42,31 +50,42 @@
 | scripts/convert_agents_to_agent_hq.py | CREATO - Script conversione |
 | ~/.claude/agents/cervella-researcher.md | MODIFICATO - Pattern Chunking |
 | ~/.claude/agents/cervella-scienziata.md | MODIFICATO - Pattern Chunking |
+| ROADMAP_SACRA.md | AGGIORNATO - Nuova strategia MVP-A/MVP-B |
+| NORD.md | AGGIORNATO - Nuova direzione |
 
 ### FILO DEL DISCORSO
 
-- **Oggi:** Implementato il format Agent HQ per tutti i 16 agents
-- **Pattern Chunking:** Regola anti-perdita file (max 500 righe)
-- **Struttura:** Source of truth in ~/.claude/agents/, export in .github/agents/
-- **Prossimo:** Testare in VS Code 1.107+ con Agent HQ
+- **Decisione chiave:** TEST PRIMA, poi costruire
+- **Perché:** Agent HQ ci dà già metà delle cose gratis
+- **Il nostro valore:** Memoria, Multi-project, Guardiane, Patterns
+- **Filosofia:** "REALE > Su carta", "Studiare prima di agire"
 
-### TODO PROSSIMA SESSIONE
+### TODO PROSSIMA SESSIONE (MVP-A: TEST)
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   📋 PROSSIMI TASK:                                              ║
+║   🧪 MVP-A: TEST & VALIDAZIONE                                  ║
 ║                                                                  ║
-║   ⬜ Testare Agent HQ in VS Code 1.107+                         ║
-║      → Aprire progetto con .github/agents/                      ║
-║      → Verificare che gli agents siano rilevati                 ║
-║      → Testare @cervella-frontend in chat                       ║
+║   TEST 1: Agent HQ su CervellaSwarm                             ║
+║   ├── VS Code 1.107+ rileva .github/agents/?                    ║
+║   ├── @cervella-frontend funziona in Copilot Chat?              ║
+║   └── Output: funziona SI/NO                                     ║
 ║                                                                  ║
-║   ⬜ Task 3.1-3.3: Agent Installer                              ║
-║      → Comando per copiare agents in workspace                  ║
-║      → UI per selezionare quali agents installare               ║
+║   TEST 2: Agent HQ su Miracollo                                 ║
+║   ├── Copiare .github/agents/ in Miracollo                      ║
+║   ├── Testare su task REALE (non demo)                          ║
+║   └── Output: utile SI/NO                                        ║
 ║                                                                  ║
-║   ⬜ Continuare MVP secondo roadmap                             ║
+║   TEST 3: Handoffs funzionano?                                  ║
+║   ├── Frontend → Guardiana Qualità                              ║
+║   ├── Il bottone "Escalate" appare?                             ║
+║   └── Output: handoffs SI/NO                                     ║
+║                                                                  ║
+║   📋 REPORT FINALE:                                              ║
+║   ├── Cosa funziona GIÀ (gratis da Agent HQ)                   ║
+║   ├── Cosa MANCA (da costruire noi)                             ║
+║   └── Aggiornare roadmap con DATI REALI                         ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
