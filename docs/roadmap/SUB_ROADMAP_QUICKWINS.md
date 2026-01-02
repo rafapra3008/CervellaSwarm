@@ -3,7 +3,8 @@
 > *"Vittorie veloci che portano valore REALE!"*
 
 **Creato:** 2 Gennaio 2026 - Sessione 41
-**Versione:** 1.0.0
+**Aggiornato:** 2 Gennaio 2026 - Sessione 42
+**Versione:** 1.1.0
 
 ---
 
@@ -16,9 +17,12 @@
 |                                                                  |
 |   QW-1: Prompt Caching        [ ] 0% → Risparmio 90% token!     |
 |   QW-2: GitHub Actions        [ ] 0% → Code review H24!         |
+|   QW-3: Scienziata Agent      [ ] 0% → Ricerca on-demand!       |
+|   QW-4: Ingegnera Agent       [ ] 0% → Analisi codebase!        |
+|   QW-5: Context Protection    [ ] 0% → /compact custom!         |
 |                                                                  |
-|   Tempo totale stimato: 2-4 ore                                  |
-|   Beneficio: Risparmio $$ + Qualita automatica                  |
+|   Tempo totale stimato: 4-6 ore                                  |
+|   Beneficio: Risparmio $$ + Qualita + Famiglia completa!        |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -199,11 +203,108 @@ jobs:
 
 ---
 
+---
+
+## QW-3: SCIENZIATA AGENT (Priorita MEDIA)
+
+### Cos'e
+Agent della famiglia per ricerca strategica on-demand.
+Diversa da cervella-researcher: focus su trend, competitor, innovazioni.
+
+### Benefici
+- Ricerca STRATEGICA (non solo tecnica)
+- On-demand (la chiami quando serve)
+- Parte della famiglia (stessa filosofia)
+
+### Implementazione
+
+| Step | Descrizione | Stato | Tempo |
+|------|-------------|-------|-------|
+| 1 | Creare DNA cervella-scienziata.md | [ ] TODO | 30 min |
+| 2 | Definire prompt templates | [ ] TODO | 20 min |
+| 3 | Testare su task reale | [ ] TODO | 15 min |
+
+**Tempo totale:** ~1 ora
+
+### Differenza da cervella-researcher
+
+| Aspetto | researcher | scienziata |
+|---------|------------|------------|
+| Focus | Tecnico, how-to | Strategico, trend |
+| Output | Docs, guide | Report, insights |
+| Quando | Problemi specifici | Esplorare novita |
+
+---
+
+## QW-4: INGEGNERA AGENT (Priorita MEDIA)
+
+### Cos'e
+Agent della famiglia per analisi codebase on-demand.
+Trova file grandi, codice duplicato, TODO, propone ottimizzazioni.
+
+### Benefici
+- Analisi INTERNA del progetto
+- On-demand (non automatica ogni commit)
+- Report strutturati
+
+### Implementazione
+
+| Step | Descrizione | Stato | Tempo |
+|------|-------------|-------|-------|
+| 1 | Creare DNA cervella-ingegnera.md | [ ] TODO | 30 min |
+| 2 | Integrare analyze_codebase.py | [ ] TODO | 20 min |
+| 3 | Testare su CervellaSwarm | [ ] TODO | 15 min |
+
+**Tempo totale:** ~1 ora
+
+### Cosa Trova
+- File > 500 righe
+- Funzioni > 50 righe
+- TODO/FIXME/HACK
+- Codice duplicato
+- Import non usati
+
+---
+
+## QW-5: CONTEXT PROTECTION (Priorita BASSA)
+
+### Cos'e
+Protezione da perdita contesto durante compact.
+Usa /compact con istruzioni custom.
+
+### Benefici
+- Zero perdita info critiche
+- Zero setup
+- Funziona SUBITO
+
+### Implementazione
+
+| Step | Descrizione | Stato | Tempo |
+|------|-------------|-------|-------|
+| 1 | Creare template /compact custom | [ ] TODO | 15 min |
+| 2 | Documentare in CLAUDE.md | [ ] TODO | 10 min |
+| 3 | Valutare c0ntextKeeper | [ ] TODO | 30 min |
+
+**Tempo totale:** ~1 ora
+
+### Template Consigliato
+
+```bash
+/compact In addition to default summary, include:
+1) NEXT ACTION - [cosa fare dopo]
+2) DECISIONS - [decisioni prese]
+3) DEAD ENDS - [cosa non ha funzionato]
+4) WORKING CODE - [cosa funziona]
+```
+
+---
+
 ## CHANGELOG
 
 | Data | Versione | Modifica |
 |------|----------|----------|
 | 2 Gen 2026 | 1.0.0 | Creazione iniziale |
+| 2 Gen 2026 | 1.1.0 | Aggiunti QW-3/4/5: Scienziata, Ingegnera, Context Protection |
 
 ---
 
