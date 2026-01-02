@@ -1,10 +1,58 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 1 Gennaio 2026 - Sessione 40 - ✅ DNA AGGIORNATO!
+> **Ultimo aggiornamento:** 2 Gennaio 2026 - Sessione 41 - ✅ QUICK WINS ROADMAP!
 
 ---
 
-## ✅ SESSIONE 40 - MEGA SESSIONE! ✅
+## ✅ SESSIONE 41 - ORGANIZZAZIONE + QUICK WINS! ✅
+
+### COSA ABBIAMO FATTO
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   ✅ DOUBLE CHECK COSTITUZIONE (10000% PRECISA!)                ║
+║   ├── 4 file globali verificati (948 righe totali)              ║
+║   │   • COSTITUZIONE.md (234 righe)                             ║
+║   │   • CHECKLIST_AZIONE.md (165 righe)                         ║
+║   │   • CLAUDE.md (221 righe)                                   ║
+║   │   • REGOLE_SVILUPPO.md (328 righe)                          ║
+║   ├── 14 Agent DNA verificati (tutti leggono Costituzione)      ║
+║   └── REALITY CHECK presente dove serve                          ║
+║                                                                  ║
+║   ✅ ANALISI LOG SWARM                                           ║
+║   ├── cervellaswarm: 144 eventi                                  ║
+║   ├── miracollo: 32 eventi (Sprint 4.7 Meta WhatsApp)           ║
+║   └── contabilita: 1 evento                                      ║
+║                                                                  ║
+║   🅿️ PARCHEGGIATO                                                ║
+║   └── Scienziata + Ingegnera (on-demand quando serve)           ║
+║       (Gli script esistono ma non sono accesi - DECISIONE!)     ║
+║                                                                  ║
+║   ✅ SUB_ROADMAP_QUICKWINS.md CREATA!                           ║
+║   ├── QW-1: Prompt Caching (-90% costi!) ~1.5h                  ║
+║   └── QW-2: GitHub Actions (review H24) ~1.5h                   ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### FILO DEL DISCORSO
+
+- 🧠 **Oggi:** Verifica costituzione + Quick Wins roadmap!
+- 🎯 **La direzione:** Implementare quick wins per risparmio e automazione
+- ⚡ **Momentum:** ALTO! Tutto organizzato e pronto!
+- 🚫 **Mai piu:** Attivare cose senza prima verificare che servono
+- ✅ **Prossimo:** Implementare Quick Wins!
+
+### TODO PROSSIMA SESSIONE
+
+- [ ] **QW-1: Prompt Caching** (-90% costi token!) ~1.5h
+- [ ] **QW-2: GitHub Actions** (code review H24!) ~1.5h
+- [ ] **Testare su Miracollo** (qualcosa di REALE!)
+
+---
+
+## ✅ SESSIONE 40 - MEGA SESSIONE! ✅ (ARCHIVIO)
 
 ### COSA ABBIAMO FATTO
 
@@ -25,29 +73,8 @@
 ║   🛠️ REGOLE_SVILUPPO.md creata (best practices codice)          ║
 ║   🛡️ GATE validazione aggiunto al DNA della Regina              ║
 ║                                                                  ║
-║   NUOVA STRUTTURA:                                              ║
-║   ├── COSTITUZIONE.md → Chi siamo, filosofia (bella!)          ║
-║   ├── CHECKLIST_AZIONE.md → Regole come checkbox               ║
-║   ├── REGOLE_SVILUPPO.md → Best practices codice               ║
-║   └── CLAUDE.md → Come operare (trigger, comandi)              ║
-║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
-
-### FILO DEL DISCORSO
-
-- 🧠 **Oggi:** DNA + Ricerca + Costituzione riorganizzata!
-- 🎯 **La direzione:** Sistema pulito, regole nel posto giusto
-- ⚡ **Momentum:** ALTISSIMO! Tutto organizzato!
-- 🚫 **Mai piu:** Costituzione "bagunça" con 1100 righe
-- ✅ **Prossimo:** USARE lo sciame su progetti REALI
-
-### TODO PROSSIMA SESSIONE
-
-- [ ] **USARE lo sciame su Miracollo** (qualcosa di REALE!)
-- [ ] **USARE lo sciame su Contabilita** (qualcosa di REALE!)
-- [ ] **FASE 10b.1:** Setup GitHub Actions (quick win - 1-2 ore!)
-- [ ] **FASE 10c.1:** Implementare Prompt Caching (quick win - 1-2 ore!)
 
 ---
 

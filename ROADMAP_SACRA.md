@@ -6,7 +6,7 @@
 
 ## 📊 OVERVIEW
 
-> **Aggiornato:** 1 Gennaio 2026 - Sessione 40 - MEGA SESSIONE! (v10.3.0)
+> **Aggiornato:** 2 Gennaio 2026 - Sessione 41 - Quick Wins Roadmap! (v10.4.0)
 
 | Fase | Nome | Stato | Progresso |
 |------|------|-------|-----------|
@@ -417,6 +417,25 @@ Condividiamo PATTERN e STANDARD, non file.
 ---
 
 ## 📝 CHANGELOG
+
+### 2 Gennaio 2026 (Sessione 41) - 📋 QUICK WINS ROADMAP!
+
+**VERIFICHE COMPLETATE:**
+- ✅ Double check Costituzione Globale (10000% precisa!)
+- ✅ Verifica DNA 14 Agent (tutti leggono Costituzione)
+- ✅ Analisi log Swarm (177 eventi: cervellaswarm 144, miracollo 32)
+
+**DECISIONI:**
+- 🅿️ Scienziata + Ingegnera PARCHEGGIATE (on-demand quando serve)
+
+**CREATO:**
+- 📋 SUB_ROADMAP_QUICKWINS.md con:
+  - QW-1: Prompt Caching (-90% costi token!) ~1.5h
+  - QW-2: GitHub Actions (code review H24!) ~1.5h
+
+**Versione:** 10.4.0 (Minor: Quick Wins Roadmap)
+
+---
 
 ### 1 Gennaio 2026 (Sessione 40) - 🎉 MEGA SESSIONE!
 
