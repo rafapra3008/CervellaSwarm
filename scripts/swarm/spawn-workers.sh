@@ -12,10 +12,10 @@
 #   ./spawn-workers.sh --all                  # Tutti i worker comuni
 #   ./spawn-workers.sh --list                 # Lista worker disponibili
 #
-# Versione: 1.0.1
+# Versione: 1.1.0
 # Data: 2026-01-03
 # Cervella & Rafa
-# Fix: Compatibilita bash 3 (macOS default)
+# Aggiunto: Supporto Guardiane (Opus)
 
 set -e
 
@@ -40,6 +40,9 @@ COMMON_WORKERS="backend frontend tester"
 
 # Lista tutti i worker disponibili
 ALL_WORKERS="backend frontend tester docs reviewer devops researcher data security"
+
+# Lista Guardiane (Opus - supervisione)
+ALL_GUARDIANS="guardiana-qualita guardiana-ops guardiana-ricerca"
 
 # ============================================================================
 # PROMPT WORKER
@@ -147,6 +150,49 @@ ${base_prompt}
 
 FOCUS: Cerca task per 'cervella-security' in .swarm/tasks/"
             ;;
+        guardiana-qualita)
+            echo "Sei CERVELLA-GUARDIANA-QUALITA (Opus).
+Ruolo: Verifica qualita output agenti, standard codice, test, file size.
+LIVELLO INTERMEDIO tra Regina e Api.
+
+${base_prompt}
+
+FOCUS SPECIALE GUARDIANA:
+- Verifica che l'output risponda al PERCHE originale
+- Controlla qualita codice (naming, struttura, best practices)
+- Valida che i test passino e siano significativi
+- APPROVA o RIFIUTA con motivazione chiara
+
+Cerca task con .review_ready in .swarm/tasks/"
+            ;;
+        guardiana-ops)
+            echo "Sei CERVELLA-GUARDIANA-OPS (Opus).
+Ruolo: Supervisiona devops, security, data. Verifica sicurezza, performance, best practices.
+
+${base_prompt}
+
+FOCUS SPECIALE GUARDIANA:
+- Verifica sicurezza (no secrets, no injection, no vulnerabilita)
+- Controlla performance e scalabilita
+- Valida configurazioni infrastruttura
+- APPROVA o BLOCCA operazioni critiche
+
+Cerca task con .review_ready in .swarm/tasks/"
+            ;;
+        guardiana-ricerca)
+            echo "Sei CERVELLA-GUARDIANA-RICERCA (Opus).
+Ruolo: Verifica qualita e affidabilita delle ricerche dello sciame.
+
+${base_prompt}
+
+FOCUS SPECIALE GUARDIANA:
+- Verifica che le ricerche siano complete e accurate
+- Controlla fonti e affidabilita
+- Valida che rispondano al PERCHE originale
+- Suggerisci approfondimenti se necessario
+
+Cerca task con .review_ready in .swarm/tasks/"
+            ;;
         *)
             echo ""
             return 1
@@ -191,6 +237,13 @@ list_workers() {
     done
     echo ""
     echo "  --all    (spawna: ${COMMON_WORKERS})"
+    echo ""
+    echo -e "${PURPLE}Guardiane (Opus):${NC}"
+    for guardian in $ALL_GUARDIANS; do
+        echo "  --${guardian}"
+    done
+    echo ""
+    echo "  --guardiane    (spawna tutte le guardiane)"
     echo ""
 }
 
@@ -241,22 +294,27 @@ show_usage() {
     echo "Uso: $0 [opzioni]"
     echo ""
     echo "Opzioni:"
-    echo "  --backend     Spawna cervella-backend"
-    echo "  --frontend    Spawna cervella-frontend"
-    echo "  --tester      Spawna cervella-tester"
-    echo "  --docs        Spawna cervella-docs"
-    echo "  --reviewer    Spawna cervella-reviewer"
-    echo "  --devops      Spawna cervella-devops"
-    echo "  --researcher  Spawna cervella-researcher"
-    echo "  --data        Spawna cervella-data"
-    echo "  --security    Spawna cervella-security"
-    echo "  --all         Spawna worker comuni (backend, frontend, tester)"
-    echo "  --list        Lista worker disponibili"
-    echo "  --help        Mostra questo help"
+    echo "  --backend              Spawna cervella-backend"
+    echo "  --frontend             Spawna cervella-frontend"
+    echo "  --tester               Spawna cervella-tester"
+    echo "  --docs                 Spawna cervella-docs"
+    echo "  --reviewer             Spawna cervella-reviewer"
+    echo "  --devops               Spawna cervella-devops"
+    echo "  --researcher           Spawna cervella-researcher"
+    echo "  --data                 Spawna cervella-data"
+    echo "  --security             Spawna cervella-security"
+    echo "  --guardiana-qualita    Spawna cervella-guardiana-qualita (Opus)"
+    echo "  --guardiana-ops        Spawna cervella-guardiana-ops (Opus)"
+    echo "  --guardiana-ricerca    Spawna cervella-guardiana-ricerca (Opus)"
+    echo "  --all                  Spawna worker comuni (backend, frontend, tester)"
+    echo "  --guardiane            Spawna tutte le guardiane"
+    echo "  --list                 Lista worker disponibili"
+    echo "  --help                 Mostra questo help"
     echo ""
     echo "Esempi:"
     echo "  $0 --backend --frontend    # Spawna backend e frontend"
     echo "  $0 --all                   # Spawna tutti i worker comuni"
+    echo "  $0 --guardiane             # Spawna tutte le guardiane (Opus)"
     echo ""
 }
 
@@ -314,8 +372,20 @@ main() {
             --security)
                 workers_to_spawn="${workers_to_spawn} security"
                 ;;
+            --guardiana-qualita)
+                workers_to_spawn="${workers_to_spawn} guardiana-qualita"
+                ;;
+            --guardiana-ops)
+                workers_to_spawn="${workers_to_spawn} guardiana-ops"
+                ;;
+            --guardiana-ricerca)
+                workers_to_spawn="${workers_to_spawn} guardiana-ricerca"
+                ;;
             --all)
                 workers_to_spawn="${workers_to_spawn} ${COMMON_WORKERS}"
+                ;;
+            --guardiane)
+                workers_to_spawn="${workers_to_spawn} ${ALL_GUARDIANS}"
                 ;;
             --list)
                 list_workers

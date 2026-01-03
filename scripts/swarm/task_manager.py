@@ -6,7 +6,7 @@ Gestisce la creazione, monitoraggio e stato dei task per il sistema Multi-Finest
 Usa file marker (.ready, .working, .done) per sincronizzazione tra agenti.
 """
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __version_date__ = "2026-01-03"
 
 from pathlib import Path
@@ -134,7 +134,7 @@ def list_tasks() -> list:
     Lista tutti i task con il loro stato.
 
     Returns:
-        Lista di dict con: task_id, status, agent, file
+        Lista di dict con: task_id, status, ack, agent, file
     """
     ensure_tasks_dir()
 
@@ -144,6 +144,7 @@ def list_tasks() -> list:
     for task_file in sorted(tasks_path.glob("TASK_*.md")):
         task_id = task_file.stem
         status = get_task_status(task_id)
+        ack = get_ack_status(task_id)
 
         # Leggi metadata dal file (agent)
         agent = "unknown"
@@ -159,6 +160,7 @@ def list_tasks() -> list:
         tasks.append({
             'task_id': task_id,
             'status': status,
+            'ack': ack,
             'agent': agent,
             'file': str(task_file)
         })
@@ -218,6 +220,60 @@ def mark_working(task_id: str) -> bool:
     return True
 
 
+def ack_received(task_id: str) -> bool:
+    """
+    Segna un task come ACK_RECEIVED (worker ha ricevuto il task).
+
+    Args:
+        task_id: ID del task
+
+    Returns:
+        True se successo, False altrimenti
+    """
+    if not validate_task_id(task_id):
+        print(f"Errore: Task ID non valido: {task_id}")
+        return False
+
+    ensure_tasks_dir()
+
+    task_file = Path(TASKS_DIR) / f"{task_id}.md"
+    if not task_file.exists():
+        print(f"Errore: Task {task_id} non esiste!")
+        return False
+
+    ack_file = Path(TASKS_DIR) / f"{task_id}.ack_received"
+    ack_file.touch()
+    print(f"ACK_RECEIVED: {task_id}")
+    return True
+
+
+def ack_understood(task_id: str) -> bool:
+    """
+    Segna un task come ACK_UNDERSTOOD (worker ha capito il task).
+
+    Args:
+        task_id: ID del task
+
+    Returns:
+        True se successo, False altrimenti
+    """
+    if not validate_task_id(task_id):
+        print(f"Errore: Task ID non valido: {task_id}")
+        return False
+
+    ensure_tasks_dir()
+
+    task_file = Path(TASKS_DIR) / f"{task_id}.md"
+    if not task_file.exists():
+        print(f"Errore: Task {task_id} non esiste!")
+        return False
+
+    ack_file = Path(TASKS_DIR) / f"{task_id}.ack_understood"
+    ack_file.touch()
+    print(f"ACK_UNDERSTOOD: {task_id}")
+    return True
+
+
 def mark_done(task_id: str) -> bool:
     """
     Segna un task come done (completato).
@@ -274,13 +330,38 @@ def get_task_status(task_id: str) -> str:
     return "created"
 
 
+def get_ack_status(task_id: str) -> str:
+    """
+    Ritorna lo stato ACK di un task (R/U/D).
+
+    Args:
+        task_id: ID del task
+
+    Returns:
+        Stringa con formato "R/U/D" dove:
+        - R = ACK_RECEIVED (✓ o -)
+        - U = ACK_UNDERSTOOD (✓ or -)
+        - D = DONE (✓ or -)
+    """
+    if not validate_task_id(task_id):
+        return "---"
+
+    tasks_path = Path(TASKS_DIR)
+
+    r = "✓" if (tasks_path / f"{task_id}.ack_received").exists() else "-"
+    u = "✓" if (tasks_path / f"{task_id}.ack_understood").exists() else "-"
+    d = "✓" if (tasks_path / f"{task_id}.done").exists() else "-"
+
+    return f"{r}/{u}/{d}"
+
+
 def cleanup_task(task_id: str, remove_markers: bool = True) -> bool:
     """
     Rimuove i marker files di un task.
 
     Args:
         task_id: ID del task
-        remove_markers: Se True, rimuove .ready, .working, .done
+        remove_markers: Se True, rimuove .ready, .working, .done, .ack_received, .ack_understood
 
     Returns:
         True se successo, False altrimenti
@@ -292,7 +373,7 @@ def cleanup_task(task_id: str, remove_markers: bool = True) -> bool:
     tasks_path = Path(TASKS_DIR)
 
     if remove_markers:
-        markers = ['.ready', '.working', '.done']
+        markers = ['.ready', '.working', '.done', '.ack_received', '.ack_understood']
         for marker in markers:
             marker_file = tasks_path / f"{task_id}{marker}"
             if marker_file.exists():
@@ -312,6 +393,8 @@ if __name__ == "__main__":
         print("  task_manager.py create TASK_ID AGENT DESC      - Crea nuovo task")
         print("  task_manager.py ready TASK_ID                  - Segna task come ready")
         print("  task_manager.py working TASK_ID                - Segna task come working")
+        print("  task_manager.py ack-received TASK_ID           - Segna ACK_RECEIVED (task ricevuto)")
+        print("  task_manager.py ack-understood TASK_ID         - Segna ACK_UNDERSTOOD (task capito)")
         print("  task_manager.py done TASK_ID                   - Segna task come done")
         print("  task_manager.py status TASK_ID                 - Mostra stato task")
         print("  task_manager.py cleanup TASK_ID                - Rimuove marker files")
@@ -325,10 +408,10 @@ if __name__ == "__main__":
         if not tasks:
             print("Nessun task trovato.")
         else:
-            print(f"{'TASK_ID':<12} {'STATUS':<10} {'AGENT':<25} {'FILE'}")
-            print("-" * 80)
+            print(f"{'TASK_ID':<12} {'STATUS':<10} {'ACK':<7} {'AGENT':<25} {'FILE'}")
+            print("-" * 90)
             for task in tasks:
-                print(f"{task['task_id']:<12} {task['status']:<10} {task['agent']:<25} {task['file']}")
+                print(f"{task['task_id']:<12} {task['status']:<10} {task['ack']:<7} {task['agent']:<25} {task['file']}")
 
     elif command == "create":
         if len(sys.argv) < 5:
@@ -347,7 +430,7 @@ if __name__ == "__main__":
             print(f"Errore: {e}")
             sys.exit(1)
 
-    elif command in ["ready", "working", "done", "status", "cleanup"]:
+    elif command in ["ready", "working", "done", "ack-received", "ack-understood", "status", "cleanup"]:
         if len(sys.argv) < 3:
             print(f"Uso: task_manager.py {command} TASK_ID")
             sys.exit(1)
@@ -360,12 +443,21 @@ if __name__ == "__main__":
         elif command == "working":
             if mark_working(task_id):
                 print(f"Task {task_id} segnato come WORKING")
+        elif command == "ack-received":
+            if ack_received(task_id):
+                print(f"Task {task_id} - ACK_RECEIVED confermato")
+        elif command == "ack-understood":
+            if ack_understood(task_id):
+                print(f"Task {task_id} - ACK_UNDERSTOOD confermato")
         elif command == "done":
             if mark_done(task_id):
                 print(f"Task {task_id} segnato come DONE")
         elif command == "status":
             status = get_task_status(task_id)
-            print(f"Task {task_id}: {status.upper()}")
+            ack = get_ack_status(task_id)
+            print(f"Task {task_id}:")
+            print(f"  Status: {status.upper()}")
+            print(f"  ACK: {ack} (R=Received, U=Understood, D=Done)")
         elif command == "cleanup":
             if cleanup_task(task_id):
                 print(f"Marker files di {task_id} rimossi")

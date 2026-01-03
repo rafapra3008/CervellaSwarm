@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-> **Aggiornato:** 3 Gennaio 2026 - Sessione 70 - STUDIO COMUNICAZIONE COMPLETATO! BLEND FATTO! (v27.4.0)
+> **Aggiornato:** 3 Gennaio 2026 - Sessione 71 - I 4 CRITICI IMPLEMENTATI! (v27.5.0)
 
 ```
 +------------------------------------------------------------------+
@@ -300,6 +300,44 @@ APRI -> ASPETTA -> COMUNICA -> TESTA -> VERIFICA -> CHIUDI
 ---
 
 ## CHANGELOG
+
+### 3 Gennaio 2026 (Sessione 71) - I 4 CRITICI IMPLEMENTATI!
+
+**LO SCIAME HA LAVORATO IN PARALLELO!**
+
+3 api lanciate contemporaneamente:
+- cervella-docs: Template DUBBI e PARTIAL
+- cervella-devops: Spawn Guardiane
+- cervella-backend: Triple ACK system
+
+**FILE CREATI/MODIFICATI:**
+- `.swarm/tasks/TEMPLATE_DUBBI.md` (62 righe) - Template per dubbi worker
+- `.swarm/tasks/TEMPLATE_PARTIAL.md` (76 righe) - Template per compact imminente
+- `scripts/swarm/spawn-workers.sh` v1.1.0 - Aggiunto supporto Guardiane
+- `scripts/swarm/task_manager.py` v1.1.0 - Aggiunto Triple ACK
+- `scripts/swarm/triple-ack.sh` v2.0.0 - Helper script ACK
+
+**NUOVI COMANDI:**
+```bash
+# Spawn Guardiane
+./spawn-workers.sh --guardiana-qualita
+./spawn-workers.sh --guardiana-ops
+./spawn-workers.sh --guardiana-ricerca
+./spawn-workers.sh --guardiane  # Tutte e 3
+
+# Triple ACK
+./triple-ack.sh received TASK_ID
+./triple-ack.sh understood TASK_ID
+./triple-ack.sh status TASK_ID
+```
+
+**FRASI DELLA SESSIONE:**
+- "Ultrapassar os proprios limites!" - Rafa
+- "L'abbiamo STUDIATO! L'abbiamo IMPLEMENTATO! Ora USIAMOLO!"
+
+**Versione:** 27.5.0 (MINOR: 4 Critici implementati)
+
+---
 
 ### 3 Gennaio 2026 (Sessione 70) - STUDIO COMUNICAZIONE COMPLETATO! BLEND FATTO!
 

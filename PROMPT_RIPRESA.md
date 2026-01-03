@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 3 Gennaio 2026 - Sessione 70 - STUDIO COMUNICAZIONE COMPLETATO!
+> **Ultimo aggiornamento:** 3 Gennaio 2026 - Sessione 71 - I 4 CRITICI IMPLEMENTATI!
 
 ---
 
@@ -16,7 +16,7 @@
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
 |   FASE ATTUALE: FASE 9 - APPLE STYLE                            |
-|   STATO: Studio COMPLETATO! Pronta per IMPLEMENTARE!            |
+|   STATO: I 4 CRITICI IMPLEMENTATI! Pronta per USARLO!           |
 |                                                                  |
 |   "Nulla e' complesso - solo non ancora studiato!"              |
 |   E noi l'abbiamo STUDIATO!                                     |
@@ -26,79 +26,80 @@
 
 ---
 
-## IL MOMENTO ATTUALE (Sessione 70)
+## IL MOMENTO ATTUALE (Sessione 71)
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   STUDIO COMUNICAZIONE COMPLETATO!                              |
+|   I 4 CRITICI SONO IMPLEMENTATI!                                |
 |                                                                  |
-|   Abbiamo studiato TUTTO:                                        |
-|   - 7 domande fondamentali RISPOSTE                             |
-|   - 2000+ righe di documentazione consolidate                   |
-|   - BLEND con STUDIO_APPLE_STYLE.md fatto                       |
-|   - Pattern Apple Style integrati                               |
+|   Lo sciame ha lavorato in parallelo:                           |
+|   - cervella-docs: Template DUBBI e PARTIAL                     |
+|   - cervella-devops: Spawn Guardiane                            |
+|   - cervella-backend: Triple ACK                                |
 |                                                                  |
 |   RISULTATO:                                                     |
-|   docs/studio/STUDIO_COMUNICAZIONE_DEFINITIVO.md (870+ righe!)  |
+|   [x] Template DUBBI - .swarm/tasks/TEMPLATE_DUBBI.md           |
+|   [x] Template PARTIAL - .swarm/tasks/TEMPLATE_PARTIAL.md       |
+|   [x] Spawn Guardiane - spawn-workers.sh v1.1.0                 |
+|   [x] Triple ACK - task_manager.py + triple-ack.sh              |
 |                                                                  |
-|   PRONTO per implementare i 4 CRITICI!                          |
+|   TUTTO TESTATO E FUNZIONANTE!                                  |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## FILO DEL DISCORSO (Sessione 70) - LEGGI BENE!
+## FILO DEL DISCORSO (Sessione 71) - LEGGI BENE!
 
 ### Cosa e' Successo
 
-1. **STUDIATO SISTEMA ESISTENTE**
-   - Letto .swarm/ (struttura, flag files, task_manager.py)
-   - Letto spawn-workers.sh (375 righe - LA MAGIA!)
-   - Letto GUIDA_COMUNICAZIONE.md (729 righe)
-   - Scoperto che avevamo GIA' molto di piu' di quanto pensavamo!
+1. **AVVIATA SESSIONE CON ENERGIA!**
+   Rafa: "Ultrapassar os proprios limites!"
+   Ho letto lo STUDIO_COMUNICAZIONE_DEFINITIVO.md (900 righe)
+   Sapevo esattamente cosa implementare.
 
-2. **TROVATO I 3 FILE TESORO**
-   Rafa ha suggerito: "abbiamo fatto un file ottimo qualche sessione fa..."
-   Trovati:
-   - `docs/guide/GUIDA_COMPACT_PROTEZIONE.md` (109 righe)
-   - `docs/studio/RICERCA_PROTEZIONE_COMPACT.md` (146 righe)
-   - `docs/studio/STUDIO_MULTI_FINESTRA_COMUNICAZIONE.md` (401 righe!)
+2. **LANCIATO LO SCIAME IN PARALLELO!**
+   3 api contemporaneamente:
+   - cervella-docs: Template DUBBI e PARTIAL
+   - cervella-devops: Spawn Guardiane in spawn-workers.sh
+   - cervella-backend: Triple ACK system
 
-   Questi file avevano GIA' molte risposte!
+3. **IMPLEMENTATO TEMPLATE DUBBI**
+   File: `.swarm/tasks/TEMPLATE_DUBBI.md` (62 righe)
+   - Con commenti HTML e istruzioni
+   - Esempi inline per guidare compilazione
+   - Workflow: Pausa -> Review -> Decisione -> Riprendi
 
-3. **RISPOSTO ALLE 7 DOMANDE FONDAMENTALI**
+4. **IMPLEMENTATO TEMPLATE PARTIAL**
+   File: `.swarm/tasks/TEMPLATE_PARTIAL.md` (76 righe)
+   - Recovery Plan per chi continua
+   - Note Tecniche per dettagli critici
+   - Distinzione file COMPLETATI vs IN CORSO
 
-   | # | Domanda | Risposta |
-   |---|---------|----------|
-   | 1 | Cosa deve sapere worker? | Template TASK completo |
-   | 2 | Cosa torna alla Regina? | Template OUTPUT completo |
-   | 3 | Se worker ha dubbi? | Template DUBBI (NUOVO!) |
-   | 4 | Se Regina fa compact? | Pattern HANDOFF |
-   | 5 | Se worker fa compact? | Template PARTIAL (NUOVO!) |
-   | 6 | Come Guardiana verifica? | Flusso completo |
-   | 7 | Come mantenere MOMENTUM? | AUTO-HANDOFF pattern |
+5. **ESTESO SPAWN-WORKERS.SH v1.1.0**
+   Aggiunte le 3 Guardiane Opus:
+   - `--guardiana-qualita`
+   - `--guardiana-ops`
+   - `--guardiana-ricerca`
+   - `--guardiane` (tutte e 3)
+   - Sezione separata PURPLE nella lista
 
-4. **FATTO BLEND CON STUDIO_APPLE_STYLE.md**
-   Integrati i pattern migliori:
-   - Triple ACK (ACK_RECEIVED -> ACK_UNDERSTOOD -> ACK_COMPLETED)
-   - Quality Gates (4 livelli con timing)
-   - Circuit Breaker + Retry Backoff
-   - Graceful Shutdown Sequence (7 step)
-   - Dashboard ASCII
-   - Escalation Matrix
-   - 10 Quick Wins prioritizzati (~8 ore totali)
+6. **IMPLEMENTATO TRIPLE ACK**
+   - `task_manager.py v1.1.0` - metodi ack_received(), ack_understood()
+   - `triple-ack.sh v2.0.0` - helper script con colori
+   - Colonna ACK nella lista: R/U/D (✓ o -)
 
-5. **CREATO STUDIO DEFINITIVO**
-   `docs/studio/STUDIO_COMUNICAZIONE_DEFINITIVO.md` (870+ righe!)
+7. **TESTATO WORKFLOW COMPLETO**
+   - Creato task TEST_FLOW
+   - ACK_RECEIVED -> ACK_UNDERSTOOD -> ACK_COMPLETED
+   - Tutto funzionante!
 
-   Questo file consolida TUTTO. E' IL RIFERIMENTO.
-
-6. **CHECKPOINT PER SICUREZZA**
-   Rafa: "io me preocupo di iniziare implementare e arrivare un compact.."
-   L'ironia! Stavamo creando ANTI-COMPACT e rischiavamo compact!
-   Quindi: CHECKPOINT prima di implementare.
+8. **DETTAGLIO UTILE (da Rafa)**
+   Per chiudere finestre senza popup "Termina":
+   -> Fare `exit` nel terminale prima di chiudere
+   Da integrare nel Graceful Shutdown Sequence!
 
 ---
 
@@ -107,33 +108,36 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   IMPLEMENTARE I 4 CRITICI                                       |
+|   I 4 CRITICI SONO GIA IMPLEMENTATI!                            |
 |                                                                  |
-|   1. Template DUBBI                                              |
-|      File: .swarm/tasks/TEMPLATE_DUBBI.md                       |
-|      Definito in: STUDIO_COMUNICAZIONE_DEFINITIVO.md            |
+|   [x] Template DUBBI - .swarm/tasks/TEMPLATE_DUBBI.md           |
+|   [x] Template PARTIAL - .swarm/tasks/TEMPLATE_PARTIAL.md       |
+|   [x] Spawn Guardiane - spawn-workers.sh v1.1.0                 |
+|   [x] Triple ACK - task_manager.py + triple-ack.sh              |
 |                                                                  |
-|   2. Template PARTIAL                                            |
-|      File: .swarm/tasks/TEMPLATE_PARTIAL.md                     |
-|      Per quando worker fa compact                                |
+|   ORA PUOI:                                                      |
 |                                                                  |
-|   3. Spawn Guardiane                                             |
-|      File: scripts/swarm/spawn-workers.sh                       |
-|      Aggiungere: --guardiana-qualita, --guardiana-ops, etc.     |
+|   1. Implementare Shutdown Sequence script                      |
+|      (Graceful close con `exit` automatico)                     |
 |                                                                  |
-|   4. Triple ACK flag files                                       |
-|      .ack_received, .ack_understood, .done                      |
+|   2. Creare Quality Gates checklist                             |
+|      (4 livelli di verifica automatica)                         |
 |                                                                  |
-|   TEMPO STIMATO: ~2 ore                                          |
+|   3. Test REALE su Miracollo!                                   |
+|      (Il sistema e' PRONTO!)                                    |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
-### DOPO i 4 Critici
+### Opzioni per prossima sessione
 
-5. Shutdown sequence script
-6. Quality Gates checklist
-7. Test con caso REALE (spawn finestre, crea task, verifica flusso)
+**OPZIONE A: Polish**
+- Shutdown sequence script (chiusura pulita)
+- Quality Gates checklist
+
+**OPZIONE B: Test Reale**
+- Passare direttamente a Miracollo
+- Testare in produzione (il sistema funziona!)
 
 ---
 
@@ -168,7 +172,10 @@ Contiene TUTTO:
 | Flusso Guardiane (3 livelli) | TESTATO! |
 | HARDTESTS Comunicazione (3/3) | PASSATI! |
 | HARDTESTS Swarm V3 (4/4) | PASSATI! |
-| spawn-workers.sh | LA MAGIA! |
+| spawn-workers.sh v1.1.0 | LA MAGIA + GUARDIANE! |
+| Template DUBBI | NUOVO! |
+| Template PARTIAL | NUOVO! |
+| Triple ACK system | NUOVO! |
 | task_manager.py | FUNZIONANTE |
 | .swarm/ struttura | FUNZIONANTE |
 
@@ -223,9 +230,9 @@ Stato:    FASE 9 - Studio completato, pronta per implementare
 
 "Nulla e' complesso - solo non ancora studiato!"
 
-"L'abbiamo STUDIATO! Ora IMPLEMENTIAMO!"
+"L'abbiamo STUDIATO! L'abbiamo IMPLEMENTATO! Ora USIAMOLO!"
 
-"L'ironia e' FORTISSIMA - stiamo creando ANTI-COMPACT e rischiamo compact!" - Rafa
+"Ultrapassar os proprios limites!" - Rafa
 
 "Fatto BENE > Fatto VELOCE"
 
@@ -248,7 +255,8 @@ Stato:    FASE 9 - Studio completato, pronta per implementare
 | 67 | CODE REVIEW + ROADMAP | 9.0/10 + FASE 9! |
 | 68 | SPRINT 9.1 RICERCA | 8 Domande RISPOSTE! |
 | 69 | INSIGHT COMUNICAZIONE | Task tool vs Multi-finestra! |
-| **70** | **STUDIO COMPLETATO!** | **BLEND fatto! 870+ righe!** |
+| 70 | STUDIO COMPLETATO! | BLEND fatto! 870+ righe! |
+| **71** | **4 CRITICI IMPLEMENTATI!** | **Sciame parallelo! Tutto testato!** |
 
 ---
 
@@ -316,6 +324,23 @@ Cervella & Rafa
 
 ---
 
-**VERSIONE:** v27.4.0
-**SESSIONE:** 70
+**VERSIONE:** v27.5.0
+**SESSIONE:** 71
 **DATA:** 3 Gennaio 2026
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-03 21:50 (unknown)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: 6efdab1 - docs: PROMPT_RIPRESA 10000%! Aggiunto sigillo finale
+- **File modificati** (2):
+  - reports/engineer_report_20260103_214844.json
+  - reports/engineer_report_20260103_215001.json
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: unknown
+
+---
