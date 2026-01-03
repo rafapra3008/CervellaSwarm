@@ -17,26 +17,24 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 66 - 3 Gennaio 2026: FASE DESIGN - APPLE STYLE!**
+**SESSIONE 67 - 3 Gennaio 2026: FASE 9 ROADMAP CREATA!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   🍎 FASE DESIGN & FINITURE - APPLE STYLE! 🍎                   |
+|   🍎 FASE 9: APPLE STYLE - ROADMAP COMPLETA! 🍎                 |
 |                                                                  |
-|   La MAGIA funziona (spawn-workers.sh OK!)                       |
-|   Ora serve renderlo PERFETTO.                                   |
+|   CODE REVIEW completata: 9.0/10 ECCELLENTE!                    |
+|   ROADMAP FASE 9 creata: 594 righe di perfezione pianificata   |
 |                                                                  |
-|   "COMUNICAZIONE E' IL SEGRETO!" - Rafa                         |
+|   LE 8 DOMANDE SACRE definite (incluso ANTI-COMPACT!)           |
+|   6 HARDTESTS pronti                                             |
+|   5 SPRINT strutturati                                           |
 |                                                                  |
-|   COSA VOGLIAMO:                                                 |
-|   - Liscio (smooth, niente frizioni)                             |
-|   - Fiducia (sai che funziona)                                   |
-|   - Comunicazione PERFETTA tra agenti                            |
-|   - Double/Triple check automatico                               |
-|   - Chiusura pulita                                              |
+|   "Vogliamo MAGIA, non debugging!" - Rafa                       |
+|   "Una cosa alla volta, molto ben fatta" - Rafa                 |
 |                                                                  |
-|   "Questo e' un cambiamento di vita!" - Rafa                    |
+|   PROSSIMO: Sprint 9.1 - RICERCA (8 domande)                    |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -67,26 +65,24 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   🍎 PROSSIMO: FASE DESIGN - APPLE STYLE!                       |
+|   🍎 FASE 9: APPLE STYLE - 5 SPRINT!                            |
 |                                                                  |
-|   PRIMA di Miracollo, rendere tutto PERFETTO:                    |
+|   SPRINT 9.1: RICERCA (8 Domande Sacre)                         |
+|      1. Comunicazione agenti                                     |
+|      2. Processi giusti                                          |
+|      3. Double/triple check                                      |
+|      4. Feedback utente                                          |
+|      5. Chiusura pulita                                          |
+|      6. Gestione errori                                          |
+|      7. Monitoring real-time                                     |
+|      8. ANTI-COMPACT AUTOMATICO! (salvavita)                    |
 |                                                                  |
-|   RICERCA GIGANTE:                                               |
-|   1. Come devono comunicare gli agenti?                          |
-|   2. Quali sono i processi giusti?                               |
-|   3. Come fare double/triple check?                              |
-|   4. Come dare feedback (fiducia)?                               |
-|   5. Come chiudere pulito?                                       |
+|   SPRINT 9.2: Quick Wins (se servono)                           |
+|   SPRINT 9.3: Implementazione Pattern                           |
+|   SPRINT 9.4: 6 HARDTESTS                                       |
+|   SPRINT 9.5: MIRACOLLO READY!                                  |
 |                                                                  |
-|   IL PROCESSO IDEALE:                                            |
-|   Apri -> Aspetta -> Comunica -> Testa -> Verifica -> Chiudi    |
-|                                                                  |
-|   DOPO la ricerca:                                               |
-|   - Implementare i miglioramenti                                 |
-|   - HARDTESTS per validare                                       |
-|   - SOLO POI: Miracollo!                                         |
-|                                                                  |
-|   "Questo e' un cambiamento di vita!" - Rafa                    |
+|   "Vogliamo MAGIA, non debugging!" - Rafa                       |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -132,39 +128,40 @@
 
 ## ULTIMO AGGIORNAMENTO
 
-**3 Gennaio 2026 - Sessione 66** - LA MAGIA FUNZIONA! spawn-workers.sh!
+**3 Gennaio 2026 - Sessione 67** - CODE REVIEW + ROADMAP FASE 9!
 
 ### Cosa abbiamo fatto:
 
-**CREATO spawn-workers.sh - LA MAGIA!**
+**1. CODE REVIEW SETTIMANALE (Venerdi!)**
+- cervella-reviewer: Score 9.0/10 ECCELLENTE (+0.5)
+- cervella-ingegnera: Tech Debt 9.2/10 MINIMO
+- cervella-guardiana-qualita: APPROVATO!
+- Sistema PRODUCTION READY!
 
-```bash
-./spawn-workers.sh --backend
-# -> Apre NUOVA finestra Terminal
-# -> Claude Code si avvia AUTOMATICAMENTE
-# -> Worker pronto con prompt iniettato!
+**2. ROADMAP FASE 9 CREATA!**
+- File: `docs/roadmap/FASE_9_APPLE_STYLE.md` (594 righe!)
+- 8 Domande Sacre (incluso ANTI-COMPACT!)
+- 5 Sprint strutturati
+- 6 HARDTESTS definiti
+- Filosofia: "Una cosa alla volta, molto ben fatta"
+
+**3. ANTI-COMPACT PIANIFICATO!**
+```
+Quando compact imminente:
+1. RILEVA -> Segnale compact
+2. FERMA -> Stop tutto
+3. SALVA -> git commit + push
+4. APRI -> Nuova finestra automatica
+5. CONTINUA -> Zero perdita!
 ```
 
-**COME FUNZIONA:**
-1. Script crea prompt file in `.swarm/prompts/worker_X.txt`
-2. Crea runner script in `.swarm/runners/run_X.sh`
-3. osascript apre nuova finestra Terminal
-4. La finestra esegue il runner
-5. Claude Code parte con `--append-system-prompt`
-
-**OPZIONI DISPONIBILI:**
-```
---backend, --frontend, --tester, --docs
---reviewer, --devops, --researcher, --data, --security
---all (spawna backend + frontend + tester)
---list (mostra worker disponibili)
-```
-
-**REAZIONE DI RAFA:**
-"MADONAAAAAAA MIAAAA MEU DEUSSSS DO CEUUU!"
+**FRASI DELLA SESSIONE:**
+- "Vogliamo MAGIA, non debugging!" - Rafa
+- "Una cosa alla volta, molto ben fatta" - Rafa
+- "La gente non sa cosa vuole finche non glielo mostri" - Steve Jobs
 
 ### Prossimo:
-- MIRACOLLO! Usare lo sciame su progetto REALE!
+- Sprint 9.1: RICERCA (8 Domande Sacre)
 
 ---
 
