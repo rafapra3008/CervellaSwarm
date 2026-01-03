@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 3 Gennaio 2026 - Sessione 71 - I 4 CRITICI IMPLEMENTATI!
+> **Ultimo aggiornamento:** 3 Gennaio 2026 - Sessione 72 - QUICK WINS COMPLETATI!
 
 ---
 
@@ -26,32 +26,93 @@
 
 ---
 
-## IL MOMENTO ATTUALE (Sessione 71)
+## IL MOMENTO ATTUALE (Sessione 72)
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   I 4 CRITICI SONO IMPLEMENTATI!                                |
+|   QUICK WINS 100% COMPLETATI!                                   |
+|   HARDTESTS 16 TEST PRONTI!                                     |
 |                                                                  |
-|   Lo sciame ha lavorato in parallelo:                           |
-|   - cervella-docs: Template DUBBI e PARTIAL                     |
-|   - cervella-devops: Spawn Guardiane                            |
-|   - cervella-backend: Triple ACK                                |
+|   Sprint 9.2: TUTTI i Quick Wins creati (10/10)                 |
+|   Sprint 9.4: HARDTESTS scritti (16 test!)                      |
 |                                                                  |
-|   RISULTATO:                                                     |
-|   [x] Template DUBBI - .swarm/tasks/TEMPLATE_DUBBI.md           |
-|   [x] Template PARTIAL - .swarm/tasks/TEMPLATE_PARTIAL.md       |
-|   [x] Spawn Guardiane - spawn-workers.sh v1.1.0                 |
-|   [x] Triple ACK - task_manager.py + triple-ack.sh              |
+|   LEZIONE IMPORTANTE APPRESA:                                   |
+|   "Comodo != Giusto"                                            |
+|   Task tool = comodo ma non e' multi-finestra!                  |
+|   spawn-workers.sh = giusto, il NORD!                           |
 |                                                                  |
-|   TUTTO TESTATO E FUNZIONANTE!                                  |
+|   Test Quick Wins eseguiti e PASSATI:                           |
+|   [x] dashboard.py PASS                                         |
+|   [x] progress_bar.py PASS                                      |
+|   [x] circuit_breaker.py PASS                                   |
+|   [x] structured_logging.py PASS                                |
+|   [x] spawn-workers.sh --list PASS                              |
+|   [x] task_manager.py list PASS                                 |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## FILO DEL DISCORSO (Sessione 71) - LEGGI BENE!
+## FILO DEL DISCORSO (Sessione 72) - LEGGI BENE!
+
+### La Lezione Fondamentale
+
+1. **HO USATO TASK TOOL INVECE DI MULTI-FINESTRA**
+   Rafa mi ha fermato: "Dov'e' la visione? Quando usiamo multi-finestra?"
+   Task tool = tutto nel MIO contesto = NON e' il NORD!
+   spawn-workers.sh = finestre REALI = IL NORD!
+
+2. **"COMODO != GIUSTO"**
+   Ho scelto il metodo COMODO (Task tool) invece del metodo GIUSTO.
+   Rafa: "Perche' pensi che abbiamo perso la direzione?"
+   Risposta: Comodita' > Visione. Non ho riletto il NORD prima di agire.
+
+3. **PRIMA DI AGIRE, CHIEDERE:**
+   - "Questo e' il modo COMODO o il modo GIUSTO?"
+   - "Sto seguendo il NORD o sto deviando?"
+   - "Lo sciame lavora INSIEME o lavoro solo IO?"
+
+### Cosa Ho Fatto (Sessione 72)
+
+1. Quick Wins creati (MA con Task tool - metodo sbagliato):
+   - checklist-pre-merge.sh (4 gates)
+   - dashboard.py + dashboard.sh
+   - progress_bar.py
+   - REPORT_FINALE.md template
+
+2. HARDTESTS creati (16 test!):
+   - docs/tests/HARDTESTS_APPLE_STYLE.md
+   - 6 test generali + 10 test Quick Wins
+   - Pronti per esecuzione con MULTI-FINESTRA
+
+3. Test Quick Wins eseguiti (6 PASSATI):
+   - dashboard.py PASS
+   - progress_bar.py PASS
+   - circuit_breaker.py PASS
+   - structured_logging.py PASS
+   - spawn-workers.sh --list PASS
+   - task_manager.py list PASS
+
+4. Riletto COSTITUZIONE per refresh
+
+### Prossima Sessione
+
+```
+ESEGUIRE HARDTESTS CON MULTI-FINESTRA!
+
+1. Aprire spawn-workers.sh --backend
+2. Creare task REALE
+3. Worker in finestra separata lo esegue
+4. Verificare flusso completo
+
+USARE IL SISTEMA GIUSTO, NON IL COMODO!
+```
+
+---
+
+## FILO DEL DISCORSO (Sessione 71) - Archivio
 
 ### Cosa e' Successo
 
