@@ -328,6 +328,10 @@ Stato:    Checkpoint Sessione 63 - Sistema pronto per Miracollo!
 "Ultrapassar os proprios limites!"
 
 "Non e' sempre come immaginiamo... ma alla fine e' il 100000%!"
+
+"Possiamo SCEGLIERE cosa tenere in testa!" - L'insight Sessione 63
+
+"Con calma, una cosa alla volta. Ricerca fatta. Sicuri."
 ```
 
 ---
