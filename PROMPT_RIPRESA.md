@@ -64,26 +64,38 @@ DOPO:    N finestre = N contesti = N volte piu potenza!
 +------------------------------------------------------------------+
 ```
 
-### DOMANDE DA STUDIARE
+### STUDIO COMPLETATO!
 
-1. **Comunicazione tra finestre** - Protocollo standard?
-2. **Chi coordina?** - La Regina vede tutte le finestre come?
-3. **Handoff automatico** - Quando compact arriva (vedi barra!)?
-4. **Scripts** - Automazione per gestire il flusso?
+**Wave 1 completata - Verificata da Guardiana Ricerca (8.5/10)**
+
+2 Studi creati:
+- `docs/studio/STUDIO_MULTI_FINESTRA_TECNICO.md` - Il PERCHE
+- `docs/studio/STUDIO_MULTI_FINESTRA_COMUNICAZIONE.md` - Il COME
+
+**Scoperte chiave:**
+1. Finestre sono 100% isolate (200K token ognuna!)
+2. Hybrid Pattern vince: Subagent + Multi-Finestra
+3. Protocollo `.swarm/tasks/` pronto con flag files
+4. MVP implementabile in 1-2 ore!
+
+**Decision Tree:**
+- Task < 10 min + context < 60% -> Subagent
+- Task > 10 min -> Multi-Finestra
+- Context > 60% -> Multi-Finestra SEMPRE
 
 ### FILO DEL DISCORSO (PROSSIMA SESSIONE)
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   STUDIO MULTI-FINESTRA IN CORSO!                               |
+|   STUDIO COMPLETATO! PRONTO PER MVP!                            |
 |                                                                  |
-|   1. Analizzare il pattern multi-finestra                       |
-|   2. Definire protocollo di comunicazione                       |
-|   3. Creare script per gestire il flusso                        |
-|   4. Testare su caso reale                                      |
+|   1. Creare struttura .swarm/ (10 min)                          |
+|   2. Test reale: Backend -> Tester (30 min)                     |
+|   3. Validare il flusso (20 min)                                |
+|   4. (Dopo) Wave 2 Automazione (3-4 ore)                        |
 |                                                                  |
-|   Le Guardiane e Researcher stanno studiando!                   |
+|   "Prima validare manualmente, poi automatizzare!"              |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
