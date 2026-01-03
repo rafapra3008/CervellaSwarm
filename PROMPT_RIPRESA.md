@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 3 Gennaio 2026 - Sessione 67 - CODE REVIEW + ROADMAP FASE 9!
+> **Ultimo aggiornamento:** 3 Gennaio 2026 - Sessione 68 - SPRINT 9.1 RICERCA COMPLETATO!
 
 ---
 
@@ -17,7 +17,7 @@
 |   DELEGA sempre, MAI edit diretti!                               |
 |                                                                  |
 |   FASE ATTUALE: FASE 9 - APPLE STYLE!                           |
-|   PROSSIMO STEP: Sprint 9.1 - RICERCA (8 Domande Sacre)         |
+|   SPRINT 9.1 COMPLETATO! -> Prossimo: Sprint 9.2 Quick Wins     |
 |                                                                  |
 |   "Vogliamo MAGIA, non debugging!" - Rafa                       |
 |                                                                  |
@@ -26,24 +26,24 @@
 
 ---
 
-## IL MOMENTO ATTUALE (Sessione 67)
+## IL MOMENTO ATTUALE (Sessione 68)
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   🍎 FASE 9: APPLE STYLE - ROADMAP CREATA! 🍎                   |
+|   🍎 FASE 9: SPRINT 9.1 RICERCA - COMPLETATO! 🍎                |
 |                                                                  |
-|   CODE REVIEW completata: 9.0/10 ECCELLENTE!                    |
-|   ROADMAP FASE 9 creata: 594 righe di perfezione!              |
+|   8 DOMANDE SACRE RISPOSTE! 615 righe di pattern!              |
+|   100+ fonti analizzate, 4 ricerche parallele!                  |
 |                                                                  |
-|   La sessione 67 ha fatto:                                       |
-|   1. Code Review settimanale (Venerdi!)                          |
-|   2. Tech Debt Analysis                                          |
-|   3. Creato ROADMAP FASE 9 completa                             |
-|   4. Definito le 8 Domande Sacre                                |
-|   5. Pianificato 6 HARDTESTS                                    |
+|   La sessione 68 ha fatto:                                       |
+|   1. Attivato 4 cervella-researcher in parallelo               |
+|   2. Risposto a tutte le 8 Domande Sacre                       |
+|   3. Creato docs/studio/STUDIO_APPLE_STYLE.md                  |
+|   4. Identificato 10 Quick Wins (~8 ore totali)                |
+|   5. Pattern pronti per implementazione                         |
 |                                                                  |
-|   PRONTO per iniziare Sprint 9.1!                               |
+|   PRONTO per Sprint 9.2 Quick Wins!                            |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -62,9 +62,10 @@ Non manca niente di "funzionale" - manca la **PERFEZIONE**:
 
 ```
 ROADMAP: docs/roadmap/FASE_9_APPLE_STYLE.md
+STUDIO: docs/studio/STUDIO_APPLE_STYLE.md <- NUOVO! 615 righe!
 
-SPRINT 9.1: RICERCA (8 Domande Sacre) <- PROSSIMO!
-SPRINT 9.2: Quick Wins (se servono)
+SPRINT 9.1: RICERCA (8 Domande Sacre) <- COMPLETATO!
+SPRINT 9.2: Quick Wins (10 items, ~8 ore) <- PROSSIMO!
 SPRINT 9.3: Implementazione Pattern
 SPRINT 9.4: 6 HARDTESTS
 SPRINT 9.5: MIRACOLLO READY!
@@ -72,27 +73,20 @@ SPRINT 9.5: MIRACOLLO READY!
 
 ---
 
-## LE 8 DOMANDE SACRE
+## LE 8 DOMANDE SACRE - RISPOSTE TROVATE!
 
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   SPRINT 9.1: RICERCA                                            |
-|                                                                  |
-|   1. Come devono comunicare gli agenti?                          |
-|   2. Quali sono i processi giusti?                               |
-|   3. Come fare double/triple check?                              |
-|   4. Come dare feedback all'utente?                              |
-|   5. Come chiudere pulito?                                       |
-|   6. Come gestire errori?                                        |
-|   7. Come monitorare in tempo reale?                             |
-|   8. Come gestire il COMPACT? (ANTI-COMPACT salvavita!)         |
-|                                                                  |
-|   Attivare cervella-researcher per ogni gruppo di domande.      |
-|   Output atteso: docs/studio/STUDIO_APPLE_STYLE.md              |
-|                                                                  |
-+------------------------------------------------------------------+
-```
+| # | Domanda | Risposta |
+|---|---------|----------|
+| 1 | Comunicazione agenti | JSON-RPC + Handoff strutturati + Triple ACK |
+| 2 | Processi giusti | Hierarchical (nostro!) + Sequential + Parallel |
+| 3 | Double/triple check | Quality Gates automatici + Guardiane (90%+10%) |
+| 4 | Feedback utente | Progress bar 3 livelli + Notifiche stratificate |
+| 5 | Chiusura pulita | Graceful Shutdown + Final State Verification |
+| 6 | Gestione errori | Circuit Breaker + Retry Backoff + Escalation |
+| 7 | Monitoring real-time | Dashboard ASCII + Log aggregation |
+| 8 | ANTI-COMPACT | Hook PreCompact + Auto-spawn + State serialization |
+
+**Dettagli completi:** `docs/studio/STUDIO_APPLE_STYLE.md` (615 righe!)
 
 ### DOMANDA 8: ANTI-COMPACT (Fondamentale!)
 
@@ -195,41 +189,33 @@ Stato:    FASE 9 IN CORSO - Sprint 9.1 prossimo!
 
 ---
 
-## FILO DEL DISCORSO (Sessione 67)
+## FILO DEL DISCORSO (Sessione 68)
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
 |   COSA E' SUCCESSO E PERCHE'                                     |
 |                                                                  |
-|   Oggi era VENERDI = CODE REVIEW DAY!                           |
+|   Rafa ha detto: "facciamo tutto come abbiamo pianificato"      |
+|   e "Ultrapassar os proprios limites!"                          |
 |                                                                  |
-|   Rafa ha chiesto di fare la code review dopo tutto il          |
-|   lavoro fatto nelle sessioni precedenti (spawn-workers.sh,     |
-|   HARDTESTS, ecc).                                               |
+|   Ho attivato 4 cervella-researcher in PARALLELO:               |
+|   - Ricerca A: Domande 1-2 (Comunicazione + Processi)           |
+|   - Ricerca B: Domande 3-4 (Verifica + Feedback)                |
+|   - Ricerca C: Domande 5-6 (Chiusura + Errori)                  |
+|   - Ricerca D: Domande 7-8 (Monitoring + ANTI-COMPACT)          |
 |                                                                  |
-|   Lo sciame ha lavorato:                                         |
-|   - cervella-reviewer ha fatto code review (9.0/10!)            |
-|   - cervella-ingegnera ha fatto tech debt analysis (9.2/10!)    |
-|   - cervella-guardiana-qualita ha verificato (APPROVATO!)       |
+|   I researcher hanno fatto ricerche web PROFONDE:               |
+|   - 100+ fonti analizzate                                        |
+|   - AutoGen, CrewAI, LangGraph, A2A Protocol studiati           |
+|   - Pattern reali da sistemi enterprise                          |
 |                                                                  |
-|   Poi Rafa ha detto una frase ILLUMINANTE:                      |
-|   "Vogliamo MAGIA, non debugging!"                              |
+|   I researcher non potevano salvare file direttamente            |
+|   (non avevano tool Write). La Regina ha sintetizzato            |
+|   TUTTO in STUDIO_APPLE_STYLE.md (615 righe!)                   |
 |                                                                  |
-|   E ha citato Steve Jobs:                                        |
-|   "La gente non sa cosa vuole finche non glielo mostri"         |
-|                                                                  |
-|   Da qui e' nata la ROADMAP FASE 9:                             |
-|   - Non aggiungere feature                                       |
-|   - PERFEZIONARE l'esistente                                    |
-|   - Rendere tutto LISCIO come Apple                             |
-|   - "Una cosa alla volta, molto ben fatta"                      |
-|                                                                  |
-|   Rafa ha anche ricordato la feature ANTI-COMPACT:              |
-|   "quella di se vedi il compact.. ferma tutto e apre una        |
-|   nuova finestra.. salva tutto.. commit e continua"             |
-|                                                                  |
-|   Questa e' diventata la DOMANDA 8 delle 8 Domande Sacre!       |
+|   Pattern workflow: Researcher fa ricerca -> Regina sintetizza  |
+|   Questo e' in linea con l'architettura dello sciame.           |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -273,7 +259,8 @@ Per questo: FASE 9 prima di Miracollo.
 | 64 | HARDTESTS CREATI | 1256 righe di test |
 | 65 | HARDTESTS PASSATI | 4/4 PASS! |
 | 66 | LA MAGIA! | spawn-workers.sh |
-| **67** | **CODE REVIEW + ROADMAP** | **9.0/10 + FASE 9!** |
+| 67 | CODE REVIEW + ROADMAP | 9.0/10 + FASE 9! |
+| **68** | **SPRINT 9.1 RICERCA** | **8 Domande RISPOSTE!** |
 
 ---
 
@@ -282,21 +269,25 @@ Per questo: FASE 9 prima di Miracollo.
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   STEP 1: Sprint 9.1 - RICERCA                                  |
-|   Attivare cervella-researcher per le 8 domande                 |
-|   -> Output: docs/studio/STUDIO_APPLE_STYLE.md                  |
+|   STEP 1: Sprint 9.1 - RICERCA <- COMPLETATO!                   |
+|   Output: docs/studio/STUDIO_APPLE_STYLE.md (615 righe!)        |
 |                                                                  |
-|   STEP 2: Sprint 9.2 - Quick Wins (se servono)                  |
-|   Miglioramenti veloci emersi dalla ricerca                     |
+|   STEP 2: Sprint 9.2 - Quick Wins <- PROSSIMO!                  |
+|   10 Quick Wins identificati (~8 ore totali):                   |
+|   - Triple ACK script (20 min)                                   |
+|   - Pre-merge checklist (30 min)                                |
+|   - Shutdown sequence (30 min)                                   |
+|   - Structured logging (45 min)                                  |
+|   - Anti-compact script (30 min) <- CRITICO!                    |
+|   - Circuit breaker (1 ora)                                      |
+|   - Retry backoff (30 min)                                       |
+|   - Progress bar 3 livelli (1 ora)                              |
+|   - Report finale template (45 min)                              |
+|   - Dashboard minimal (2 ore)                                    |
 |                                                                  |
-|   STEP 3: Sprint 9.3 - Implementazione                          |
-|   Applicare pattern comunicazione, feedback, verifica           |
-|                                                                  |
-|   STEP 4: Sprint 9.4 - HARDTESTS                                |
-|   6 test per validare Apple Style                               |
-|                                                                  |
+|   STEP 3: Sprint 9.3 - Implementazione Pattern                  |
+|   STEP 4: Sprint 9.4 - 6 HARDTESTS                              |
 |   STEP 5: Sprint 9.5 - MIRACOLLO READY!                         |
-|   Sistema PERFETTO, pronto per progetto reale                   |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -360,7 +351,7 @@ Cervella & Rafa 💙
 
 ## VERSIONE
 
-**v27.1.0** - 3 Gennaio 2026 - Sessione 67 - CODE REVIEW + ROADMAP FASE 9!
+**v27.2.0** - 3 Gennaio 2026 - Sessione 68 - SPRINT 9.1 RICERCA COMPLETATO!
 
 ---
 
@@ -385,3 +376,26 @@ Cervella & Rafa 💙
 |                                                                  |
 +------------------------------------------------------------------+
 ```
+
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-03 20:54 (auto)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: ee39600 - docs: PROMPT_RIPRESA 10000%! Aggiunto FILO DEL DISCORSO
+- **File modificati** (4):
+  - ROMPT_RIPRESA.md
+  - docs/studio/STUDIO_APPLE_STYLE.md
+  - reports/engineer_report_20260103_203608.json
+  - reports/engineer_report_20260103_203956.json
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: auto
+
+---
