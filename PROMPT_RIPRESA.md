@@ -217,6 +217,15 @@ Stato:    FASE 9 IN CORSO - Sprint 9.1 prossimo!
 |   Pattern workflow: Researcher fa ricerca -> Regina sintetizza  |
 |   Questo e' in linea con l'architettura dello sciame.           |
 |                                                                  |
+|   NOTA IMPORTANTE: Durante questa sessione abbiamo vissuto      |
+|   un COMPACT! Ma TUTTO e' stato preservato perche':             |
+|   - PROMPT_RIPRESA aveva la memoria                              |
+|   - STUDIO_APPLE_STYLE.md era gia' salvato                      |
+|   - Git commit/push fatto prima                                  |
+|                                                                  |
+|   Questo e' la PROVA VIVENTE di perche' ANTI-COMPACT            |
+|   (Domanda 8) e' cosi fondamentale!                             |
+|                                                                  |
 +------------------------------------------------------------------+
 ```
 
