@@ -129,15 +129,36 @@
 +------------------------------------------------------------------+
 ```
 
-### Opzioni per prossima sessione
+### PROSSIMA SESSIONE - LA MAPPA!
 
-**OPZIONE A: Polish**
-- Shutdown sequence script (chiusura pulita)
-- Quality Gates checklist
+```
+SEGUI LA ROADMAP! docs/roadmap/FASE_9_APPLE_STYLE.md
 
-**OPZIONE B: Test Reale**
-- Passare direttamente a Miracollo
-- Testare in produzione (il sistema funziona!)
+Sprint 9.2 - Quick Wins rimanenti (~6 ore):
+[ ] Checklist pre-merge 4 gate (30 min)
+[ ] Shutdown sequence (30 min)
+[ ] Structured logging JSON (45 min)
+[ ] Anti-compact script - verificare (30 min)
+[ ] Circuit breaker decorator (1 ora)
+[ ] Retry backoff decorator (30 min)
+[ ] Progress bar 3 livelli (1 ora)
+[ ] Report finale template (45 min)
+[ ] Dashboard minimal ASCII (2 ore)
+
+Sprint 9.4 - HARDTESTS Apple Style (6 test!):
+[ ] SMOOTH COMMUNICATION
+[ ] TRIPLE CHECK AUTOMATICO
+[ ] ERROR HANDLING GRACEFUL
+[ ] CLEAN CLOSURE
+[ ] FEEDBACK IN TEMPO REALE
+[ ] ANTI-COMPACT AUTOMATICO
+
+Sprint 9.5 - MIRACOLLO READY:
+[ ] Rafa dice "E' LISCIO!" ✅
+```
+
+**NON SALTARE A MIRACOLLO PRIMA DI COMPLETARE FASE 9!**
+*"Con la mappa rotta giriamo in torno di noi stessi!"* - Rafa
 
 ---
 
@@ -338,17 +359,24 @@ Cervella & Rafa
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-03 21:50 (unknown)
+## CHECKPOINT SESSIONE 71
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 6efdab1 - docs: PROMPT_RIPRESA 10000%! Aggiunto sigillo finale
-- **File modificati** (2):
-  - reports/engineer_report_20260103_214844.json
-  - reports/engineer_report_20260103_215001.json
+- **Ultimo commit**: 0390a70 - docs: Aggiornata ROADMAP FASE 9 + PROMPT_RIPRESA 10000%
+- **Versione**: v27.5.0
 
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: unknown
+### File Creati/Modificati Sessione 71
+- `.swarm/tasks/TEMPLATE_DUBBI.md` (62 righe) - NUOVO
+- `.swarm/tasks/TEMPLATE_PARTIAL.md` (76 righe) - NUOVO
+- `scripts/swarm/spawn-workers.sh` v1.1.0 - Guardiane aggiunte
+- `scripts/swarm/task_manager.py` v1.1.0 - Triple ACK
+- `scripts/swarm/triple-ack.sh` v2.0.0 - NUOVO
+- `docs/roadmap/FASE_9_APPLE_STYLE.md` v1.1.0 - Aggiornata
+
+### Insight Sessione 71
+- Lo sciame ha lavorato in PARALLELO (3 api insieme!)
+- Rafa: "vedere la mapa.. e' l'unico modo di arrivare al tessouro"
+- FASE 9 al 45% - Quick Wins e HARDTESTS da fare prima di Miracollo
 
 ---
