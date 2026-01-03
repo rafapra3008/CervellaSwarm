@@ -17,23 +17,25 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 59 - 3 Gennaio 2026: SMART MODE!**
+**SESSIONE 60 - 3 Gennaio 2026: MULTI-FINESTRA!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   LAVORARE SMART, NON HARD!                                     |
+|   LA SCOPERTA CHE CAMBIA TUTTO!                                 |
 |                                                                  |
-|   1. PROMPT CORTI (12 righe invece di 50)                       |
-|   2. HOOKS SMART (contesto caricato automaticamente!)           |
-|   3. TUTTI I PROGETTI ALLINEATI                                 |
+|   Rafa ha scoperto: MULTI-FINESTRA = LIBERTA TOTALE             |
 |                                                                  |
-|   SessionStart hooks creati per:                                |
-|   - CervellaSwarm (Regina + 3 Livelli)                          |
-|   - Miracollo (COSTITUZIONE + FORTEZZA)                         |
-|   - Contabilita (FORTEZZA MODE)                                 |
+|   Durante sessione Miracollo con compact imminente,             |
+|   ha aperto NUOVA finestra -> RECUPERO TOTALE!                  |
 |                                                                  |
-|   Ora: scrivi `swarm` e il contesto si carica da solo!          |
+|   Questa scoperta puo' rivoluzionare CervellaSwarm:             |
+|   - Ogni agente in finestra separata                            |
+|   - Zero rischio compact                                        |
+|   - Scalabilita' infinita                                       |
+|   - Comunicazione via FILE (git, PROMPT_RIPRESA)                |
+|                                                                  |
+|   STUDIO IN CORSO per definire protocollo e automazione!        |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -60,16 +62,23 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   1. DECIDERE: Automatizzare o manuale?                         |
-|      - Hooks per trigger automatico Guardiane?                  |
-|      - O mantenere manuale per ora?                             |
+|   STUDIO MULTI-FINESTRA                                         |
 |                                                                  |
-|   2. APPLICARE su progetto REALE                                |
-|      - Miracollo? Contabilita?                                  |
-|      - Testare il flusso in produzione                          |
+|   1. ANALIZZARE il pattern multi-finestra                       |
+|      - Come funziona tecnicamente?                              |
+|      - Quali sono i limiti?                                     |
 |                                                                  |
-|   3. HANDOFFS AUTOMATICI                                        |
-|      - frontend -> tester -> reviewer automatico                |
+|   2. DEFINIRE protocollo di comunicazione                       |
+|      - Come si parlano le finestre?                             |
+|      - Quale formato per i file condivisi?                      |
+|                                                                  |
+|   3. CREARE script per gestire il flusso                        |
+|      - Monitoraggio compact (barra 0-100%)                      |
+|      - Handoff automatico quando serve                          |
+|                                                                  |
+|   4. TESTARE su caso reale                                      |
+|      - Prima su CervellaSwarm stesso                            |
+|      - Poi su Miracollo                                         |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -115,22 +124,30 @@
 
 ## ULTIMO AGGIORNAMENTO
 
-**3 Gennaio 2026 - Sessione 59** - SMART MODE!
+**3 Gennaio 2026 - Sessione 60** - MULTI-FINESTRA!
 
-### Cosa abbiamo fatto:
-- Prompt CORTI: da 50 righe a 12 (85% risparmio token!)
-- SessionStart hooks per TUTTI i progetti:
-  - CervellaSwarm: session_start_swarm.py
-  - Miracollo: session_start_miracollo.py (gia esisteva)
-  - Contabilita: session_start_contabilita.py (NUOVO!)
-- Analisi Miracollo: cosa hanno fatto, cosa serve a noi
-- Scoperta: "Il prompt e un RITUALE, non documentazione!"
-- Scoperta: "Lavorare SMART, non hard!"
+### Cosa e' successo:
+- Rafa ha scoperto pattern MULTI-FINESTRA durante sessione Miracollo
+- Compact imminente -> aperto nuova finestra -> RECUPERO TOTALE!
+- 30 moduli, ~5300 righe di codice salvate grazie al pattern
+- File feedback creato: `FEEDBACK_SESSIONE_17_18_CONTEXT_RECOVERY.md`
+
+### L'insight rivoluzionario:
+```
+PRIMA:   Una finestra = Limite di contesto = Limite di potenza
+DOPO:    N finestre = N contesti = N volte piu potenza!
+```
+
+### La visione:
+- Ogni agente in finestra separata (non nella stessa della Regina)
+- Comunicazione via FILE (git, PROMPT_RIPRESA, roadmap)
+- Zero rischio compact, scalabilita infinita
 
 ### Prossimo:
-- Testare i nuovi hooks (aprire sessioni fresche)
-- Applicare su progetto REALE (Miracollo!)
-- Handoffs automatici
+- STUDIO APPROFONDITO sul pattern multi-finestra
+- Definire protocollo comunicazione tra finestre
+- Creare script per automazione
+- Testare su caso reale
 
 ---
 

@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-> **Aggiornato:** 3 Gennaio 2026 - Sessione 59 - SMART MODE! (v24.0.0)
+> **Aggiornato:** 3 Gennaio 2026 - Sessione 60 - MULTI-FINESTRA! (v25.0.0)
 
 ```
 +------------------------------------------------------------------+
@@ -243,6 +243,45 @@
 ---
 
 ## CHANGELOG
+
+### 3 Gennaio 2026 (Sessione 60) - MULTI-FINESTRA!
+
+**LA SCOPERTA CHE CAMBIA TUTTO!**
+
+```
+"MULTI-FINESTRA = LIBERTA TOTALE!" - Rafa & Cervella
+```
+
+**COSA E' SUCCESSO:**
+- Durante sessione Miracollo, compact imminente
+- Rafa apre NUOVA finestra
+- Nuova Cervella analizza `git status` -> vede tutto il lavoro!
+- RECUPERO COMPLETO - 30 moduli, ~5300 righe salvate!
+
+**L'INSIGHT RIVOLUZIONARIO:**
+```
+PRIMA:   Una finestra = Limite di contesto = Limite di potenza
+DOPO:    N finestre = N contesti = N volte piu potenza!
+```
+
+**LA NUOVA VISIONE:**
+- Ogni agente in finestra separata (non nella stessa della Regina)
+- Comunicazione via FILE (git, PROMPT_RIPRESA, roadmap)
+- Zero rischio compact, scalabilita infinita
+- Il filesystem e' la VERITA - `git status` non mente mai!
+
+**STUDIO IN CORSO:**
+1. Analizzare pattern multi-finestra
+2. Definire protocollo comunicazione
+3. Creare script automazione
+4. Testare su caso reale
+
+**File di riferimento:**
+- `miracollogeminifocus/docs/FEEDBACK_SESSIONE_17_18_CONTEXT_RECOVERY.md`
+
+**Versione:** 25.0.0 (MAJOR: Multi-Finestra - Paradigm Shift!)
+
+---
 
 ### 3 Gennaio 2026 (Sessione 59) - SMART MODE!
 

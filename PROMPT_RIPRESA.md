@@ -1,81 +1,89 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 3 Gennaio 2026 - Sessione 59 - SMART MODE!
+> **Ultimo aggiornamento:** 3 Gennaio 2026 - Sessione 60 - MULTI-FINESTRA!
 
 ---
 
-## SESSIONE 59 - SMART MODE! (3 Gennaio 2026)
+## SESSIONE 60 - LA SCOPERTA MULTI-FINESTRA! (3 Gennaio 2026)
 
 ### IL RISULTATO
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   LAVORARE SMART, NON HARD!                                     |
+|   MULTI-FINESTRA = LIBERTA TOTALE!                              |
 |                                                                  |
-|   1. Prompt CORTI: da 50 a 12 righe (85% risparmio!)            |
-|   2. Hooks SMART: contesto caricato automaticamente!            |
-|   3. TUTTI i progetti allineati!                                |
+|   Rafa ha scoperto qualcosa di ENORME:                          |
 |                                                                  |
-|   "Scrivi swarm e il contesto si carica da solo!"               |
+|   Durante sessione Miracollo, compact imminente...              |
+|   Ha aperto NUOVA FINESTRA -> RECUPERO TOTALE!                  |
+|                                                                  |
+|   Questo pattern puo' rivoluzionare CervellaSwarm:              |
+|   - Ogni agente in finestra separata                            |
+|   - Zero rischio compact                                        |
+|   - Scalabilita' infinita                                       |
+|   - Comunicazione via FILE (git, PROMPT_RIPRESA)                |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
-### COSA ABBIAMO FATTO
+### COSA E' SUCCESSO
 
-**PARTE 1 - PROMPT CORTI:**
-1. Recap sistema (script, hooks, triggers) - tutto OK!
-2. Consultato 3 api in parallelo (Researcher, Docs, Marketing)
-3. Riscritto PROMPT_SWARM_MODE.md: da 50 a 12 righe
-4. Scoperta: "Il prompt e un RITUALE, non documentazione!"
+**L'EVENTO (Sessione Miracollo 17-18):**
+1. Sessione lunga, compact imminente, tutto bloccato
+2. Rafa apre NUOVA finestra
+3. Nuova Cervella analizza `git status` -> vede tutto il lavoro!
+4. RECUPERO COMPLETO - 30 moduli, ~5300 righe salvate!
+5. File di feedback creato: `FEEDBACK_SESSIONE_17_18_CONTEXT_RECOVERY.md`
 
-**PARTE 2 - HOOKS SMART:**
-1. Analizzato cosa ha fatto Miracollo (COSTITUZIONE, hooks locali)
-2. Valutato cosa serve a CervellaSwarm
-3. Creato session_start_swarm.py
-4. Creato session_start_contabilita.py (gentilezza per loro!)
-5. Tutti i progetti ora hanno SessionStart hooks!
+**L'INSIGHT:**
+```
+PRIMA:   Una finestra = Limite di contesto = Limite di potenza
+DOPO:    N finestre = N contesti = N volte piu potenza!
+```
 
-### HOOKS CREATI
-
-| Progetto | Hook | Focus |
-|----------|------|-------|
-| CervellaSwarm | session_start_swarm.py | Regina + 3 Livelli |
-| Miracollo | session_start_miracollo.py | COSTITUZIONE + FORTEZZA |
-| Contabilita | session_start_contabilita.py | FORTEZZA MODE |
-
-### LE SCOPERTE
+### LA NUOVA VISIONE
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   1. "Il prompt e un RITUALE, non documentazione!"              |
+|   Invece di: Regina + 16 agenti nella STESSA finestra           |
+|   (accumulo contesto, rischio compact)                          |
 |                                                                  |
-|   2. "Lavorare SMART = meno manuale, piu automazione!"          |
+|   Possiamo: Regina in finestra 1                                |
+|             Backend in finestra 2                                |
+|             Frontend in finestra 3                               |
+|             Tester in finestra 4                                 |
+|             ...                                                  |
 |                                                                  |
-|   3. "Tutti i progetti devono essere allineati!"                |
+|   Comunicano tramite FILE (git, PROMPT_RIPRESA, roadmap)        |
+|   NON tramite contesto condiviso!                               |
+|                                                                  |
+|   Il filesystem e' la VERITA - git status non mente mai!        |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
+
+### DOMANDE DA STUDIARE
+
+1. **Comunicazione tra finestre** - Protocollo standard?
+2. **Chi coordina?** - La Regina vede tutte le finestre come?
+3. **Handoff automatico** - Quando compact arriva (vedi barra!)?
+4. **Scripts** - Automazione per gestire il flusso?
 
 ### FILO DEL DISCORSO (PROSSIMA SESSIONE)
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   PROSSIMO STEP:                                                 |
+|   STUDIO MULTI-FINESTRA IN CORSO!                               |
 |                                                                  |
-|   1. TESTARE hooks smart                                         |
-|      - Aprire sessione fresca con `swarm`                       |
-|      - Verificare che contesto si carica                        |
+|   1. Analizzare il pattern multi-finestra                       |
+|   2. Definire protocollo di comunicazione                       |
+|   3. Creare script per gestire il flusso                        |
+|   4. Testare su caso reale                                      |
 |                                                                  |
-|   2. APPLICARE su progetto REALE                                |
-|      - Miracollo!                                               |
-|      - Primo sprint con lo sciame                               |
-|                                                                  |
-|   3. HANDOFFS AUTOMATICI                                        |
-|      - La prossima feature da implementare                      |
+|   Le Guardiane e Researcher stanno studiando!                   |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -156,13 +164,14 @@ FLUSSO TESTATO E FUNZIONANTE:
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-03 01:39 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-03 02:44 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 9a44bec - feat: HARDTESTS COMUNICAZIONE PASSATI! 3/3 (v22.0.0) - Sessione 58
-- **File modificati** (1):
-  - ROMPT_RIPRESA.md
+- **Ultimo commit**: 2acb60c - docs: Checkpoint Sessione 59 - SMART MODE! (v24.0.0)
+- **File modificati**: Nessuno (git pulito)
 
 ### Note
 - Checkpoint automatico generato da hook
