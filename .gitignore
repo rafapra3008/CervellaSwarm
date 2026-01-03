@@ -7,3 +7,11 @@ data/swarm_memory.db
 # Environment
 .env
 *.env
+
+# Swarm temporary files
+.swarm/tasks/*.working
+.swarm/tasks/*.lock
+.swarm/locks/
+.swarm/logs/
+.swarm/status/
+# Keep tracked: .swarm/README.md, .swarm/tasks/*.md, .swarm/handoff/

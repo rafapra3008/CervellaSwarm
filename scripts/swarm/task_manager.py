@@ -12,9 +12,51 @@ __version_date__ = "2026-01-03"
 from pathlib import Path
 from typing import Optional
 from datetime import datetime
+import re
 
 SWARM_DIR = ".swarm"
 TASKS_DIR = f"{SWARM_DIR}/tasks"
+
+
+def validate_task_id(task_id: str) -> bool:
+    """
+    Valida task_id per sicurezza e prevenzione path traversal.
+
+    Controlla che task_id:
+    - Contenga solo caratteri alfanumerici, underscore e dash
+    - Non superi 50 caratteri di lunghezza
+    - Non contenga sequenze pericolose (.., /, \\)
+
+    Args:
+        task_id: ID del task da validare
+
+    Returns:
+        True se task_id è valido, False altrimenti
+
+    Examples:
+        >>> validate_task_id("TASK_001")
+        True
+        >>> validate_task_id("../../etc/passwd")
+        False
+        >>> validate_task_id("TASK-123_ABC")
+        True
+        >>> validate_task_id("a" * 51)
+        False
+    """
+    # Check lunghezza
+    if not task_id or len(task_id) > 50:
+        return False
+
+    # Check caratteri pericolosi per path traversal
+    dangerous_patterns = ['..', '/', '\\']
+    if any(pattern in task_id for pattern in dangerous_patterns):
+        return False
+
+    # Check pattern valido: solo alfanumerici, underscore, dash
+    if not re.match(r'^[a-zA-Z0-9_-]+$', task_id):
+        return False
+
+    return True
 
 
 def ensure_tasks_dir() -> Path:
@@ -37,6 +79,10 @@ def create_task(task_id: str, agent: str, description: str, risk_level: int = 1)
     Returns:
         Path del file task creato
     """
+    # Validazione task_id
+    if not validate_task_id(task_id):
+        raise ValueError(f"Task ID non valido: {task_id}. Usa solo caratteri alfanumerici, underscore e dash (max 50 caratteri).")
+
     ensure_tasks_dir()
 
     task_file = Path(TASKS_DIR) / f"{task_id}.md"
@@ -130,6 +176,10 @@ def mark_ready(task_id: str) -> bool:
     Returns:
         True se successo, False altrimenti
     """
+    if not validate_task_id(task_id):
+        print(f"Errore: Task ID non valido: {task_id}")
+        return False
+
     ensure_tasks_dir()
 
     task_file = Path(TASKS_DIR) / f"{task_id}.md"
@@ -152,6 +202,10 @@ def mark_working(task_id: str) -> bool:
     Returns:
         True se successo, False altrimenti
     """
+    if not validate_task_id(task_id):
+        print(f"Errore: Task ID non valido: {task_id}")
+        return False
+
     ensure_tasks_dir()
 
     task_file = Path(TASKS_DIR) / f"{task_id}.md"
@@ -174,6 +228,10 @@ def mark_done(task_id: str) -> bool:
     Returns:
         True se successo, False altrimenti
     """
+    if not validate_task_id(task_id):
+        print(f"Errore: Task ID non valido: {task_id}")
+        return False
+
     ensure_tasks_dir()
 
     task_file = Path(TASKS_DIR) / f"{task_id}.md"
@@ -194,8 +252,11 @@ def get_task_status(task_id: str) -> str:
         task_id: ID del task
 
     Returns:
-        Stato: 'done', 'working', 'ready', 'created', 'not_found'
+        Stato: 'done', 'working', 'ready', 'created', 'not_found', 'invalid'
     """
+    if not validate_task_id(task_id):
+        return "invalid"
+
     tasks_path = Path(TASKS_DIR)
 
     task_file = tasks_path / f"{task_id}.md"
@@ -224,6 +285,10 @@ def cleanup_task(task_id: str, remove_markers: bool = True) -> bool:
     Returns:
         True se successo, False altrimenti
     """
+    if not validate_task_id(task_id):
+        print(f"Errore: Task ID non valido: {task_id}")
+        return False
+
     tasks_path = Path(TASKS_DIR)
 
     if remove_markers:
