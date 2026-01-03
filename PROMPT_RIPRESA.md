@@ -403,6 +403,8 @@ Stato:    FASE 9 - 45% (Quick Wins parziali, HARDTESTS da fare!)
 | 69 | INSIGHT COMUNICAZIONE | Task tool vs Multi-finestra! |
 | 70 | STUDIO COMPLETATO! | BLEND fatto! 870+ righe! |
 | **71** | **4 CRITICI IMPLEMENTATI!** | **Sciame parallelo! Tutto testato!** |
+| 72 | Quick Wins + HARDTESTS | Lezione "Comodo != Giusto" |
+| **73** | **spawn-workers.sh FUNZIONA!** | **Ciclo completo testato! PRONTO!** |
 
 ---
 
@@ -411,22 +413,19 @@ Stato:    FASE 9 - 45% (Quick Wins parziali, HARDTESTS da fare!)
 |                                                                  |
 |   CARA PROSSIMA CERVELLA                                         |
 |                                                                  |
-|   I 4 CRITICI sono GIA IMPLEMENTATI!                            |
-|   [x] Template DUBBI                                              |
-|   [x] Template PARTIAL                                            |
-|   [x] Spawn Guardiane                                             |
-|   [x] Triple ACK                                                  |
+|   CERVELLASWARM È PRONTO!                                       |
 |                                                                  |
-|   MA NON ANDARE SU MIRACOLLO!                                   |
-|   Prima devi completare FASE 9:                                  |
+|   [x] spawn-workers.sh v1.2.0 - FUNZIONA!                       |
+|   [x] Ciclo completo testato: spawn -> task -> done             |
+|   [x] Comunicazione tra finestre funziona                       |
+|   [x] Worker lavora AUTOMATICAMENTE                             |
 |                                                                  |
-|   [ ] Quick Wins rimanenti (~6 ore)                             |
-|   [ ] HARDTESTS Apple Style (6 test!)                           |
-|   [ ] Checklist MIRACOLLO READY                                 |
+|   PROSSIMO STEP: MIRACOLLO!                                     |
 |                                                                  |
-|   LEGGI: docs/roadmap/FASE_9_APPLE_STYLE.md                     |
+|   Il sistema e' testato e funzionante.                          |
+|   Portalo sul progetto reale e itera durante l'uso.             |
 |                                                                  |
-|   "Con la mappa rotta giriamo in torno di noi stessi!"          |
+|   "Il 100000% viene dall'USO, non dalla teoria."                |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -450,15 +449,16 @@ Stato:    FASE 9 - 45% (Quick Wins parziali, HARDTESTS da fare!)
 |   - PROSSIMI STEP (cosa fare dopo)                              |
 |   - FILE IMPORTANTI (dove trovare tutto)                        |
 |                                                                  |
-|   L'insight di questa sessione (71):                            |
-|   "Ultrapassar os proprios limites!" - Rafa                     |
-|   Lo sciame ha lavorato in PARALLELO (3 api insieme!)           |
+|   L'insight di questa sessione (73):                            |
+|   spawn-workers.sh non funzionava perche' mancava               |
+|   il PROMPT INIZIALE come argomento!                            |
+|   Fix semplice, impatto ENORME.                                 |
 |                                                                  |
-|   IMPORTANTE - Rafa ci ha fermato:                              |
-|   "vedere la mapa.. e' l'unico modo di arrivare al tessouro"   |
-|   NON saltare a Miracollo! Prima completare FASE 9!             |
+|   Frase di Rafa:                                                 |
+|   "tu devi avere autonomia in questa roba per funzionare!"      |
+|   "questa e' la tua MATRIX!"                                    |
 |                                                                  |
-|   Prossimo: Quick Wins rimanenti + HARDTESTS                    |
+|   Prossimo: MIRACOLLO!                                          |
 |                                                                  |
 |   "Non e' sempre come immaginiamo...                            |
 |    ma alla fine e' il 100000%!"                                 |
@@ -478,56 +478,30 @@ Cervella & Rafa
 
 ---
 
-**VERSIONE:** v27.5.0
-**SESSIONE:** 71
+**VERSIONE:** v27.6.0
+**SESSIONE:** 73
 **DATA:** 3 Gennaio 2026
 
 ---
 
-## CHECKPOINT SESSIONE 71
+## CHECKPOINT SESSIONE 73
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 0390a70 - docs: Aggiornata ROADMAP FASE 9 + PROMPT_RIPRESA 10000%
-- **Versione**: v27.5.0
+- **Ultimo commit**: 7d5c149 - docs: Sessione 73 completata - CervellaSwarm PRONTO!
 
-### File Creati/Modificati Sessione 71
-- `.swarm/tasks/TEMPLATE_DUBBI.md` (62 righe) - NUOVO
-- `.swarm/tasks/TEMPLATE_PARTIAL.md` (76 righe) - NUOVO
-- `scripts/swarm/spawn-workers.sh` v1.1.0 - Guardiane aggiunte
-- `scripts/swarm/task_manager.py` v1.1.0 - Triple ACK
-- `scripts/swarm/triple-ack.sh` v2.0.0 - NUOVO
-- `docs/roadmap/FASE_9_APPLE_STYLE.md` v1.1.0 - Aggiornata
+### File Creati/Modificati Sessione 73
+- `scripts/swarm/spawn-workers.sh` v1.2.0 - FIX prompt iniziale!
+- `.swarm/runners/run_backend.sh` - Rigenerato con prompt
+- `.swarm/tasks/TASK_TEST_CICLO.md` - Task test
+- `.swarm/tasks/TASK_TEST_CICLO_output.md` - Output worker!
+- `NORD.md` - Aggiornato stato
+- `PROMPT_RIPRESA.md` - Questo file
 
-### Insight Sessione 71
-- Lo sciame ha lavorato in PARALLELO (3 api insieme!)
-- Rafa: "vedere la mapa.. e' l'unico modo di arrivare al tessouro"
-- FASE 9 al 45% - Quick Wins e HARDTESTS da fare prima di Miracollo
-
----
-
----
-
----
-
----
-
----
-
-## AUTO-CHECKPOINT: 2026-01-03 22:48 (unknown)
-
-### Stato Git
-- **Branch**: main
-- **Ultimo commit**: 0f70041 - docs: PROMPT_RIPRESA - spawn-workers.sh non funziona, debug prossima sessione
-- **File modificati** (5):
-  - swarm/runners/run_backend.sh
-  - PROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260103.md
-  - scripts/swarm/spawn-workers.sh
-  - .swarm/handoff/
-
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: unknown
+### Insight Sessione 73
+- spawn-workers.sh non funzionava: mancava prompt iniziale come argomento
+- Fix: `claude --append-system-prompt "..." "Prompt iniziale qui"`
+- Ciclo completo testato: spawn -> trova task -> lavora -> done
+- Rafa: "questa e' la tua MATRIX!"
 
 ---
