@@ -4,6 +4,7 @@ Utility functions for CervellaSwarm test orchestration.
 Modulo contenente funzioni di utilità per la gestione di date e altri helper.
 """
 
+import re
 from datetime import datetime
 from typing import Literal, Optional
 
@@ -83,3 +84,57 @@ def format_date(
     except (ValueError, AttributeError) as e:
         # In caso di errore nella formattazione, ritorna stringa vuota
         return ""
+
+
+def validate_email(email: Optional[str]) -> bool:
+    """
+    Valida un indirizzo email.
+
+    Verifica che l'email abbia un formato valido secondo le convenzioni standard:
+    - Contiene esattamente un @
+    - Ha una parte locale (prima di @) non vuota
+    - Ha un dominio (dopo @) con almeno un punto
+    - Non contiene caratteri non validi
+
+    Args:
+        email: Stringa contenente l'indirizzo email da validare.
+               Accetta None e stringhe vuote (ritorna False).
+
+    Returns:
+        True se l'email ha un formato valido, False altrimenti.
+
+    Examples:
+        >>> validate_email("user@example.com")
+        True
+
+        >>> validate_email("test.user@domain.org")
+        True
+
+        >>> validate_email("invalid-email")
+        False
+
+        >>> validate_email("")
+        False
+
+        >>> validate_email(None)
+        False
+
+        >>> validate_email("user@")
+        False
+
+        >>> validate_email("@domain.com")
+        False
+    """
+    # Gestione None
+    if email is None:
+        return False
+
+    # Gestione stringa vuota
+    if not isinstance(email, str) or email.strip() == "":
+        return False
+
+    # Pattern regex per email valida
+    # Basato su RFC 5322 (semplificato per casi comuni)
+    email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+
+    return bool(re.match(email_pattern, email.strip()))
