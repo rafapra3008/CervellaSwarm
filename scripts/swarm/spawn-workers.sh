@@ -272,7 +272,7 @@ spawn_worker() {
 #!/bin/bash
 RUNNEREOF
     echo "cd ${PROJECT_ROOT}" >> "$runner_script"
-    echo "claude --append-system-prompt \"\$(cat ${prompt_file})\"" >> "$runner_script"
+    echo "/Users/rafapra/.nvm/versions/node/v24.11.0/bin/claude --append-system-prompt \"\$(cat ${prompt_file})\"" >> "$runner_script"
     chmod +x "$runner_script"
 
     # Apre nuova finestra Terminal eseguendo lo script runner
