@@ -195,6 +195,73 @@ Stato:    FASE 9 IN CORSO - Sprint 9.1 prossimo!
 
 ---
 
+## FILO DEL DISCORSO (Sessione 67)
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   COSA E' SUCCESSO E PERCHE'                                     |
+|                                                                  |
+|   Oggi era VENERDI = CODE REVIEW DAY!                           |
+|                                                                  |
+|   Rafa ha chiesto di fare la code review dopo tutto il          |
+|   lavoro fatto nelle sessioni precedenti (spawn-workers.sh,     |
+|   HARDTESTS, ecc).                                               |
+|                                                                  |
+|   Lo sciame ha lavorato:                                         |
+|   - cervella-reviewer ha fatto code review (9.0/10!)            |
+|   - cervella-ingegnera ha fatto tech debt analysis (9.2/10!)    |
+|   - cervella-guardiana-qualita ha verificato (APPROVATO!)       |
+|                                                                  |
+|   Poi Rafa ha detto una frase ILLUMINANTE:                      |
+|   "Vogliamo MAGIA, non debugging!"                              |
+|                                                                  |
+|   E ha citato Steve Jobs:                                        |
+|   "La gente non sa cosa vuole finche non glielo mostri"         |
+|                                                                  |
+|   Da qui e' nata la ROADMAP FASE 9:                             |
+|   - Non aggiungere feature                                       |
+|   - PERFEZIONARE l'esistente                                    |
+|   - Rendere tutto LISCIO come Apple                             |
+|   - "Una cosa alla volta, molto ben fatta"                      |
+|                                                                  |
+|   Rafa ha anche ricordato la feature ANTI-COMPACT:              |
+|   "quella di se vedi il compact.. ferma tutto e apre una        |
+|   nuova finestra.. salva tutto.. commit e continua"             |
+|                                                                  |
+|   Questa e' diventata la DOMANDA 8 delle 8 Domande Sacre!       |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+### Le Decisioni Prese
+
+1. **FASE 9 = Apple Style** (non nuove feature)
+2. **8 Domande Sacre** da ricercare (incluso ANTI-COMPACT)
+3. **6 HARDTESTS** per validare la perfezione
+4. **5 Sprint** strutturati
+5. **SOLO DOPO -> Miracollo!**
+
+### Perche' Questa Direzione?
+
+```
+Il sistema FUNZIONA gia' (9.0/10).
+Ma "funziona" non basta.
+
+Rafa vuole che usare CervellaSwarm sia una GIOIA.
+Non una lotta. Non debugging.
+MAGIA.
+
+Come un prodotto Apple:
+- Non leggi il manuale (e' intuitivo)
+- Non ti chiedi se funziona (SAI che funziona)
+- Non vedi la complessita' (e' tutto liscio)
+
+Per questo: FASE 9 prima di Miracollo.
+```
+
+---
+
 ## LA STORIA (come siamo arrivati qui)
 
 | Sessione | Cosa | Risultato |
@@ -297,20 +364,24 @@ Cervella & Rafa 💙
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-03 20:34 (unknown)
+## PROMPT_RIPRESA 10000%!
 
-### Stato Git
-- **Branch**: main
-- **Ultimo commit**: 0ffd75e - docs: FASE 9 APPLE STYLE - Design & Finiture! (v27.0.1)
-- **File modificati** (5):
-  - ORD.md
-  - PROMPT_RIPRESA.md
-  - ROADMAP_SACRA.md
-  - reports/scientist_prompt_20260103.md
-  - docs/reviews/METRICS_TRACKING.md
-
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: unknown
-
----
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   Questo file e' scritto con CURA.                              |
+|                                                                  |
+|   La prossima Cervella non sa NULLA.                            |
+|   Questo file e' la sua UNICA memoria.                          |
+|                                                                  |
+|   Per questo:                                                    |
+|   - FILO DEL DISCORSO (perche', non solo cosa)                  |
+|   - DECISIONI PRESE (cosa abbiamo scelto)                       |
+|   - PROSSIMI STEP (cosa fare dopo)                              |
+|   - FILE IMPORTANTI (dove trovare tutto)                        |
+|                                                                  |
+|   "Non e' sempre come immaginiamo...                            |
+|    ma alla fine e' il 100000%!"                                 |
+|                                                                  |
++------------------------------------------------------------------+
+```
