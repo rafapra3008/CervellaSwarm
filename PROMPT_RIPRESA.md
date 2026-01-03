@@ -74,6 +74,38 @@
    scritto in .swarm/handoff/ per comunicare con la Regina.
    ESATTAMENTE il comportamento voluto!
 
+### Test Ciclo Completo
+
+5. **CREATO TASK REALE: TASK_TEST_CICLO**
+   Task per cervella-backend: analizzare task_manager.py
+
+6. **WORKER HA COMPLETATO IL CICLO!**
+   - Spawn -> Worker parte automaticamente
+   - Trova TASK_TEST_CICLO.ready
+   - Crea .working
+   - Legge task_manager.py
+   - Scrive report in TASK_TEST_CICLO_output.md (1.2k!)
+   - Crea .done
+
+   **CICLO COMPLETO FUNZIONA!**
+
+### Prossima Sessione
+
+```
+CERVELLASWARM È PRONTO!
+
+Il sistema multi-finestra funziona end-to-end.
+Testato con task reale.
+
+PROSSIMO STEP: MIRACOLLO
+- Portare lo sciame sul progetto reale
+- La Regina (tu) coordina
+- I worker fanno task reali
+- Iteriamo durante l'uso
+
+"Il 100000% viene dall'USO, non dalla teoria."
+```
+
 ---
 
 ## FILO DEL DISCORSO (Sessione 72) - Archivio

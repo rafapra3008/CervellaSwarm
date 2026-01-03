@@ -32,11 +32,15 @@
 |                                                                  |
 |   spawn-workers.sh v1.2.0 - LA MAGIA FUNZIONA!                  |
 |                                                                  |
-|   TESTATO:                                                       |
-|   - Worker apre                                                  |
-|   - Cerca task in .swarm/tasks/                                  |
-|   - Se non trova task, scrive in .swarm/handoff/                |
-|   - COMUNICAZIONE FUNZIONANTE!                                  |
+|   TESTATO CICLO COMPLETO:                                       |
+|   - Spawn -> Worker parte                                        |
+|   - Trova task .ready                                            |
+|   - Crea .working                                                |
+|   - Fa il lavoro                                                 |
+|   - Scrive output                                                |
+|   - Crea .done                                                   |
+|                                                                  |
+|   CERVELLASWARM È PRONTO PER MIRACOLLO!                         |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
