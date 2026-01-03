@@ -380,3 +380,23 @@ Cervella & Rafa
 - FASE 9 al 45% - Quick Wins e HARDTESTS da fare prima di Miracollo
 
 ---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-03 22:10 (unknown)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: 581b80d - docs: PROMPT_RIPRESA veramente 10000%!
+- **File modificati** (5):
+  - eports/scientist_prompt_20260103.md
+  - .swarm/tasks/TEST_FLOW.md
+  - reports/engineer_report_20260103_214844.json
+  - reports/engineer_report_20260103_215001.json
+  - reports/engineer_report_20260103_220437.json
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: unknown
+
+---

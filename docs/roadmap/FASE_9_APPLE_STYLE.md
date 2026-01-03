@@ -216,7 +216,7 @@ E' un Quick Win SE:
 
 **FASE 1 - Fondamentali (3 ore):**
 - [x] Triple ACK script (20 min) - FATTO Sessione 71!
-- [ ] Checklist pre-merge 4 gate (30 min)
+- [x] Checklist pre-merge 4 gate (30 min) - FATTO Sessione 72!
 - [ ] Shutdown sequence (30 min)
 - [ ] Structured logging JSON (45 min)
 - [ ] Anti-compact script (30 min) - VERIFICARE se completo

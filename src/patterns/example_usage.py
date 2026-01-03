@@ -1,7 +1,7 @@
 """Example usage of CervellaSwarm reliability patterns.
 
-This file demonstrates how to use circuit_breaker, retry, and structured_logging
-together to build resilient worker processes.
+This file demonstrates how to use circuit_breaker, retry, structured_logging,
+and progress_bar together to build resilient worker processes.
 """
 
 import time
@@ -11,6 +11,7 @@ from pathlib import Path
 from circuit_breaker import circuit_breaker, CircuitBreakerError
 from retry_backoff import retry
 from structured_logging import SwarmLogger
+from progress_bar import ProgressBar, SprintProgress
 
 
 # Example 1: Simple retry with logging
@@ -132,6 +133,27 @@ def example_task_tracking():
     logger.info("All tasks completed", total_tasks=len(tasks))
 
 
+# Example 5: Progress bars for long-running tasks
+def example_progress_bars():
+    """Example: Visual progress tracking for tasks and sprints."""
+    print("\nSimple task progress:")
+    with ProgressBar("Installing dependencies", total=100) as pb:
+        for i in range(0, 101, 20):
+            pb.update(i, f"Package {i//20}/5")
+            time.sleep(0.3)
+
+    print("\n\nSprint with multiple tasks:")
+    sprint = SprintProgress("Sprint 9.2 - Quick Wins", total_tasks=4)
+
+    tasks = ["Linting setup", "Type hints", "Tests", "Documentation"]
+    for task in tasks:
+        with sprint.task(task) as pb:
+            for i in range(0, 101, 33):
+                pb.update(i)
+                time.sleep(0.2)
+        time.sleep(0.3)
+
+
 if __name__ == "__main__":
     print("=" * 60)
     print("CervellaSwarm Reliability Patterns - Examples")
@@ -156,6 +178,10 @@ if __name__ == "__main__":
     print("\n[4] Task Tracking")
     print("-" * 60)
     example_task_tracking()
+
+    print("\n[5] Progress Bars")
+    print("-" * 60)
+    example_progress_bars()
 
     print("\n" + "=" * 60)
     print("Examples completed!")

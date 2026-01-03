@@ -7,6 +7,7 @@ Modules:
     circuit_breaker: Prevent cascade failures
     retry_backoff: Handle transient errors gracefully
     structured_logging: JSON logging for observability
+    progress_bar: Multi-level progress tracking (task/sprint/phase)
 """
 
 __version__ = "1.0.0"
@@ -31,6 +32,14 @@ from .structured_logging import (
     read_logs
 )
 
+from .progress_bar import (
+    ProgressBar,
+    SprintProgress,
+    PhaseProgress,
+    BarStyle,
+    BarColor
+)
+
 __all__ = [
     # Circuit Breaker
     "CircuitBreaker",
@@ -45,4 +54,10 @@ __all__ = [
     "SwarmLogger",
     "LogLevel",
     "read_logs",
+    # Progress Bars
+    "ProgressBar",
+    "SprintProgress",
+    "PhaseProgress",
+    "BarStyle",
+    "BarColor",
 ]

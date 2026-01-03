@@ -102,12 +102,68 @@ errors = read_logs(
 
 ---
 
+### 4. Progress Bars (Multi-Level)
+**File:** `progress_bar.py`
+**Scopo:** Visual progress tracking for tasks, sprints, and phases
+
+**Quick Start:**
+```python
+from patterns import ProgressBar, SprintProgress, PhaseProgress
+import time
+
+# Single task progress
+with ProgressBar("Installing dependencies") as pb:
+    for i in range(0, 101, 10):
+        pb.update(i)
+        time.sleep(0.1)
+
+# Sprint with multiple tasks
+sprint = SprintProgress("Sprint 9.2", total_tasks=5)
+for task in ["Setup", "Build", "Test", "Deploy", "Verify"]:
+    with sprint.task(task) as pb:
+        for i in range(0, 101, 25):
+            pb.update(i)
+            time.sleep(0.1)
+```
+
+**Output:**
+```
+TASK:   ████████████░░░░░░░░  60% | Installing dependencies...
+SPRINT: ████████░░░░░░░░░░░░  40% | 4/10 tasks
+PHASE:  ██░░░░░░░░░░░░░░░░░░  10% | Sprint 1/10
+```
+
+**Features:**
+- **3 Levels**: Task → Sprint → Phase
+- **Colored output**: Blue (task), Green (sprint), Magenta (phase)
+- **In-place updates**: Same line updates for clean output
+- **Context manager**: Auto-completion with `with` statement
+- **Customizable**: Width, colors, percentage display
+
+**Advanced usage:**
+```python
+# Full phase tracking
+phase = PhaseProgress("Phase 9 - Apple Style", total_sprints=3)
+
+for sprint_num in range(1, 4):
+    sprint = phase.sprint(f"Sprint 9.{sprint_num}", total_tasks=5)
+
+    for task in tasks:
+        with sprint.task(task.name) as pb:
+            # Do work...
+            pb.update(progress)
+
+    phase.complete_sprint()
+```
+
+---
+
 ## Combined Usage
 
 The real power comes from combining patterns:
 
 ```python
-from patterns import circuit_breaker, retry, SwarmLogger
+from patterns import circuit_breaker, retry, SwarmLogger, ProgressBar
 
 logger = SwarmLogger("api-client", task_id="job-001")
 
@@ -115,14 +171,21 @@ logger = SwarmLogger("api-client", task_id="job-001")
 @retry(max_retries=3, base_delay=1)
 def resilient_api_call(data):
     logger.info("API call started", data=data)
-    response = external_api.post(data)
-    logger.info("API call succeeded", status=response.status)
+
+    with ProgressBar("Processing API call") as pb:
+        pb.update(30)
+        response = external_api.post(data)
+        pb.update(80)
+        logger.info("API call succeeded", status=response.status)
+        pb.update(100)
+
     return response
 
 # Now your function is:
 # - Protected from cascade failures (circuit breaker)
 # - Resilient to transient errors (retry)
 # - Observable (structured logging)
+# - Visual progress tracking (progress bar)
 ```
 
 ---
@@ -177,6 +240,7 @@ src/patterns/
 ├── circuit_breaker.py       # Circuit Breaker pattern
 ├── retry_backoff.py         # Retry with backoff
 ├── structured_logging.py    # JSON logging
+├── progress_bar.py          # Multi-level progress bars
 ├── example_usage.py         # Working examples
 └── README.md               # This file
 ```
@@ -190,6 +254,7 @@ src/patterns/
 | Circuit Breaker | Calling external services | Cascade failures, wasted resources |
 | Retry Backoff | Transient network/API errors | Immediate failures, thundering herd |
 | Structured Logging | Need observability | Lost debugging info, unclear behavior |
+| Progress Bars | Long-running tasks | User confusion, perceived slowness |
 
 ---
 
@@ -206,6 +271,9 @@ python3 src/patterns/retry_backoff.py
 
 # Test logging
 python3 src/patterns/structured_logging.py
+
+# Test progress bars
+python3 src/patterns/progress_bar.py
 ```
 
 ---
