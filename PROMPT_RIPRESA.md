@@ -83,6 +83,38 @@ DOPO:    N finestre = N contesti = N volte piu potenza!
 - Task > 10 min -> Multi-Finestra
 - Context > 60% -> Multi-Finestra SEMPRE
 
+### CHI HA LAVORATO
+
+| Chi | Cosa Ha Fatto |
+|-----|---------------|
+| **Regina** | Coordinato tutto, salvato studi, checkpoint |
+| **Guardiana Ricerca** | Validato approccio, verificato studi (8.5/10!) |
+| **cervella-researcher x2** | Studio Tecnico + Studio Comunicazione in parallelo |
+
+### DECISIONI PRESE
+
+1. **Wave 1 prima, Wave 2 dopo** - La Guardiana ha detto: "Prima validare manualmente"
+2. **Hybrid Pattern** - Subagent + Multi-Finestra, non uno o l'altro
+3. **Protocollo .swarm/** - Flag files (.ready, .working, .done, .error)
+
+### FILE CREATI/MODIFICATI
+
+| File | Azione |
+|------|--------|
+| `docs/studio/STUDIO_MULTI_FINESTRA_TECNICO.md` | CREATO (350+ righe) |
+| `docs/studio/STUDIO_MULTI_FINESTRA_COMUNICAZIONE.md` | CREATO (400+ righe) |
+| `NORD.md` | AGGIORNATO (nuova direzione) |
+| `ROADMAP_SACRA.md` | AGGIORNATO (changelog sessione 60) |
+| `PROMPT_RIPRESA.md` | AGGIORNATO (questo file!) |
+
+### COMMITS
+
+| Hash | Messaggio |
+|------|-----------|
+| `2527bb9` | feat: Sessione 60 - MULTI-FINESTRA! (v25.0.0) |
+| `863a0c5` | docs: Studio Multi-Finestra completato! Wave 1 (v25.1.0) |
+| `e1e05fc` | docs: PROMPT_RIPRESA aggiornato (v25.1.1) |
+
 ### FILO DEL DISCORSO (PROSSIMA SESSIONE)
 
 ```
@@ -90,12 +122,20 @@ DOPO:    N finestre = N contesti = N volte piu potenza!
 |                                                                  |
 |   STUDIO COMPLETATO! PRONTO PER MVP!                            |
 |                                                                  |
+|   COSA FARE:                                                     |
 |   1. Creare struttura .swarm/ (10 min)                          |
 |   2. Test reale: Backend -> Tester (30 min)                     |
 |   3. Validare il flusso (20 min)                                |
 |   4. (Dopo) Wave 2 Automazione (3-4 ore)                        |
 |                                                                  |
+|   COME FARLO:                                                    |
+|   - Leggi STUDIO_MULTI_FINESTRA_COMUNICAZIONE.md                |
+|   - Segui il protocollo .swarm/tasks/                           |
+|   - Template TASK_XXX.md gia pronti!                            |
+|                                                                  |
+|   PERCHE:                                                        |
 |   "Prima validare manualmente, poi automatizzare!"              |
+|   - Guardiana Ricerca                                           |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -174,19 +214,8 @@ FLUSSO TESTATO E FUNZIONANTE:
 
 ---
 
----
+## VERSIONE
 
----
-
-## AUTO-CHECKPOINT: 2026-01-03 02:44 (unknown)
-
-### Stato Git
-- **Branch**: main
-- **Ultimo commit**: 2acb60c - docs: Checkpoint Sessione 59 - SMART MODE! (v24.0.0)
-- **File modificati**: Nessuno (git pulito)
-
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: unknown
+**v25.1.1** - 3 Gennaio 2026 - Sessione 60 MULTI-FINESTRA!
 
 ---
