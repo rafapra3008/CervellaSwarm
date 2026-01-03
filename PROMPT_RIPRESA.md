@@ -97,17 +97,28 @@
 
 4. Riletto COSTITUZIONE per refresh
 
-### Prossima Sessione
+### Prossima Sessione - URGENTE!
 
 ```
-ESEGUIRE HARDTESTS CON MULTI-FINESTRA!
+PROBLEMA: spawn-workers.sh NON FUNZIONA!
 
-1. Aprire spawn-workers.sh --backend
-2. Creare task REALE
-3. Worker in finestra separata lo esegue
-4. Verificare flusso completo
+La finestra si apre ma Claude NON parte.
+Abbiamo provato fix con path completo ma non basta.
 
-USARE IL SISTEMA GIUSTO, NON IL COMODO!
+FOCUS SESSIONE 73:
+1. DEBUG spawn-workers.sh - capire perche' non parte
+2. Testare manualmente il runner script
+3. Fixare finche' funziona
+4. SOLO DOPO: HARDTESTS
+
+COMANDI DEBUG:
+- cat .swarm/runners/run_backend.sh
+- bash -x .swarm/runners/run_backend.sh  (vedi cosa fa)
+- Aprire Terminal manualmente e provare il comando
+
+IL PROBLEMA:
+osascript apre finestra -> esegue runner -> claude non parte
+Forse problema con NVM/PATH nella nuova shell?
 ```
 
 ---
