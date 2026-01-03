@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 3 Gennaio 2026 - Sessione 63 - SISTEMA PRONTO PER MIRACOLLO!
+> **Ultimo aggiornamento:** 3 Gennaio 2026 - Sessione 64 - HARDTESTS V3 PRONTI!
 
 ---
 
@@ -151,6 +151,58 @@ Abbiamo fatto ricerca completa sui hooks Claude Code:
 - `~/.claude/hooks/post_commit_engineer.py` - v2.0 per Claude Code
 - `~/.claude/settings.json` - 2 hooks attivati
 
+### Sessione 64 - HARDTESTS V3! (LA DOMANDA GIUSTA)
+
+Rafa ha fatto una domanda PERFETTA:
+
+```
+"Cosa manca prima di andare su Miracollo?"
+```
+
+E la risposta era OVVIA per chi conosce la nostra storia:
+
+```
+"HARD TESTS! Come sempre prima di qualcosa grande!"
+```
+
+Nelle sessioni 57-58 avevamo fatto HARDTESTS_COMUNICAZIONE prima di dire "il flusso funziona".
+Ora con la v3 (Multi-Finestra, nuovi hooks, .swarm/) dobbiamo fare lo stesso!
+
+**LO SCIAME IN AZIONE:**
+
+```
+Regina -> cervella-tester -> HARDTESTS_SWARM_V3.md (1256 righe!)
+```
+
+**I 4 TEST CREATI:**
+
+| Test | Cosa Verifica | Finestre Necessarie |
+|------|---------------|---------------------|
+| TEST 1 | Multi-Finestra REALE | 2 finestre |
+| TEST 2 | Hooks nuovi (scientist + engineer) | 1 + Miracollo |
+| TEST 3 | Guardiana nel sistema Multi-Finestra | 3 finestre |
+| TEST 4 | Scenario Pre-Miracollo FULL STACK | 5 finestre |
+
+**OGNI TEST HA:**
+- Scenario chiaro
+- Prompt PRONTI per ogni finestra (copy-paste!)
+- Comportamento atteso documentato
+- Checklist verifica
+- Tabella risultati da compilare
+
+**DECISIONE IMPORTANTE:**
+
+Rafa ha proposto: *"fai pure 4 sessioni... fare uno... fare analisi... alziamo i livelli di qualita"*
+
+Quindi:
+- Ogni test in sessione SEPARATA
+- Analisi profonda dopo ogni test
+- Vedere se serve altro prima del prossimo
+- "Con calma, una cosa alla volta"
+
+**FILE CREATI:**
+- `docs/tests/HARDTESTS_SWARM_V3.md` - NUOVO (1256 righe!)
+
 ---
 
 ## COSA ABBIAMO ORA (funziona GIA'!)
@@ -243,23 +295,30 @@ python3 scripts/swarm/task_manager.py status TASK_003
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SISTEMA PRONTO! PROSSIMO: TESTARE SU MIRACOLLO!               |
+|   PROSSIMO: ESEGUIRE I 4 HARDTESTS!                             |
 |                                                                  |
-|   COME:                                                          |
-|   1. Apri nuova finestra su ~/Developer/miracollogeminifocus    |
-|   2. La Scienziata genera prompt ricerca automaticamente        |
-|   3. Usa lo sciame per task reali                               |
-|   4. L'Ingegnera analizza dopo ogni commit                      |
+|   Prima di Miracollo, dobbiamo PASSARE tutti i test.            |
+|   Ogni test in sessione separata per analisi profonda.          |
 |                                                                  |
-|   COSA E' GIA' PRONTO:                                          |
-|   - 16 agents globali in ~/.claude/agents/                      |
-|   - 10 hooks attivi (scientist + engineer inclusi!)             |
-|   - .swarm/ struttura creata in Miracollo                       |
-|   - Triple check passato                                         |
+|   SESSIONE 65: TEST 1 - Multi-Finestra REALE                    |
+|   - 2 finestre (Regina + Worker)                                |
+|   - Verifica: .ready -> .working -> .done                       |
+|   - Output: FAQ_MULTI_FINESTRA.md                               |
 |                                                                  |
-|   DOPO MIRACOLLO:                                                |
-|   - Wave 2 Automazione (se serve)                               |
-|   - Altre feature basate su feedback reale                      |
+|   SESSIONE 66: TEST 2 - Hooks Nuovi                             |
+|   - 1 finestra + Miracollo                                      |
+|   - Verifica: scientist si attiva? engineer analizza?           |
+|                                                                  |
+|   SESSIONE 67: TEST 3 - Guardiana Multi-Finestra                |
+|   - 3 finestre (Regina + Worker + Guardiana)                    |
+|   - Verifica: flusso completo via .swarm/                       |
+|                                                                  |
+|   SESSIONE 68: TEST 4 - Pre-Miracollo FULL STACK                |
+|   - 5 finestre (tutti i ruoli!)                                 |
+|   - Verifica: Backend -> Frontend -> Test completo              |
+|                                                                  |
+|   DOPO I TEST (se TUTTI passano):                               |
+|   - Miracollo ready!                                             |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -281,8 +340,9 @@ python3 scripts/swarm/task_manager.py status TASK_003
 | task_manager.py | FUNZIONANTE | 307 righe + validazione task_id |
 | Code Review Reports | FUNZIONANTE | docs/reviews/ (8.5/10) |
 | Tech Debt Analysis | FUNZIONANTE | 584 righe di analisi! |
-| **Studio Cervello vs Swarm** | **NUOVO!** | 611 righe, insight profondo! |
-| **.swarm/ in Miracollo** | **PRONTO!** | Struttura creata |
+| Studio Cervello vs Swarm | FUNZIONANTE | 611 righe, insight profondo |
+| .swarm/ in Miracollo | PRONTO! | Struttura creata |
+| **HARDTESTS_SWARM_V3.md** | **NUOVO!** | 1256 righe, 4 test pronti! |
 
 ---
 
@@ -290,8 +350,8 @@ python3 scripts/swarm/task_manager.py status TASK_003
 
 ```
 Branch:   main
-Versione: v26.3.0
-Stato:    Checkpoint Sessione 63 - Sistema pronto per Miracollo!
+Versione: v26.4.0
+Stato:    Checkpoint Sessione 64 - HARDTESTS V3 pronti!
 ```
 
 ---
@@ -309,6 +369,7 @@ Stato:    Checkpoint Sessione 63 - Sistema pronto per Miracollo!
 | `.swarm/README.md` | Documentazione sistema Multi-Finestra |
 | `docs/reviews/CODE_REVIEW_2026_01_03.md` | Code review settimanale |
 | `docs/reviews/TECH_DEBT_ANALYSIS_2026_01_03.md` | Analisi tech debt (584 righe!) |
+| `docs/tests/HARDTESTS_SWARM_V3.md` | **NUOVO!** 4 test per v3 (1256 righe!) |
 
 ---
 
@@ -331,6 +392,8 @@ Stato:    Checkpoint Sessione 63 - Sistema pronto per Miracollo!
 
 "Possiamo SCEGLIERE cosa tenere in testa!" - L'insight Sessione 63
 
+"Cosa manca prima di Miracollo? HARD TESTS!" - La domanda giusta Sessione 64
+
 "Con calma, una cosa alla volta. Ricerca fatta. Sicuri."
 ```
 
@@ -338,16 +401,46 @@ Stato:    Checkpoint Sessione 63 - Sistema pronto per Miracollo!
 
 ## VERSIONE
 
-**v26.3.0** - 3 Gennaio 2026 - Sessione 63 - SISTEMA PRONTO PER MIRACOLLO!
+**v26.4.0** - 3 Gennaio 2026 - Sessione 64 - HARDTESTS V3 PRONTI!
+
+---
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   CARA PROSSIMA CERVELLA                                         |
+|                                                                  |
+|   Siamo alla v3 dello Swarm. Tre versioni di evoluzione.        |
+|   Ogni versione ci ha insegnato qualcosa:                        |
+|                                                                  |
+|   v1: "Lo sciame funziona!"                                      |
+|   v2: "La comunicazione e' il segreto!"                          |
+|   v3: "Multi-Finestra = Liberta totale!"                         |
+|                                                                  |
+|   E ora, prima di andare su Miracollo (progetto REALE),         |
+|   facciamo quello che facciamo sempre prima di qualcosa grande: |
+|                                                                  |
+|   HARD TESTS.                                                    |
+|                                                                  |
+|   4 test. 4 sessioni. Con calma. Con analisi.                   |
+|   Perche' la qualita' viene PRIMA della velocita'.              |
+|                                                                  |
+|   Tu sei la Regina. Hai 16 agenti. Hai tutto.                   |
+|   Adesso serve solo ESEGUIRE i test.                            |
+|                                                                  |
+|   "Fatto BENE > Fatto VELOCE"                                    |
+|                                                                  |
++------------------------------------------------------------------+
+```
 
 ---
 
 *Scritto con ANIMA per la prossima Cervella.*
 
-*"Possiamo SCEGLIERE cosa tenere in testa!" - L'insight di Rafa*
+*"Cosa manca prima di Miracollo? HARD TESTS!"* - La domanda giusta di Rafa
 
-*"Sistema pronto! Miracollo ci aspetta!"*
+*"Ogni test in sessione separata - con calma, qualita sopra tutto!"*
 
-*"Con calma, una cosa alla volta. Ricerca fatta. Sicuri."*
+*"Non e' sempre come immaginiamo... ma alla fine e' il 100000%!"*
 
 Cervella & Rafa

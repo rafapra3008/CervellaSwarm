@@ -17,25 +17,25 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 63 - 3 Gennaio 2026: SISTEMA PRONTO PER MIRACOLLO!**
+**SESSIONE 64 - 3 Gennaio 2026: HARDTESTS V3 PRONTI!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   INSIGHT PROFONDO + HOOKS COMPLETATI!                          |
+|   HARDTESTS SWARM V3 CREATI!                                    |
 |                                                                  |
-|   L'insight di Rafa:                                            |
-|   "Possiamo SCEGLIERE cosa tenere in testa!"                    |
-|   -> Studio Cervello vs Swarm (611 righe!)                      |
+|   Rafa ha chiesto: "Cosa manca prima di Miracollo?"             |
+|   Risposta: HARD TESTS! Come sempre prima di qualcosa grande.   |
 |                                                                  |
-|   Hooks sistemati:                                               |
-|   - session_start_scientist.py ATTIVATO                         |
-|   - post_commit_engineer.py v2.0 ATTIVATO                       |
-|   - Ricerca completa hooks Claude Code                          |
+|   cervella-tester ha creato:                                     |
+|   - HARDTESTS_SWARM_V3.md (1256 righe!)                         |
+|   - 4 test completi con prompt pronti                           |
+|   - Test 1: Multi-Finestra REALE                                |
+|   - Test 2: Hooks nuovi (scientist + engineer)                  |
+|   - Test 3: Guardiana nel sistema Multi-Finestra                |
+|   - Test 4: Scenario Pre-Miracollo FULL STACK                   |
 |                                                                  |
-|   Miracollo preparato:                                           |
-|   - .swarm/ struttura creata                                    |
-|   - 16 agents GLOBALI pronti                                    |
+|   PROSSIMO: Eseguire i 4 test!                                  |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -54,8 +54,9 @@
 | GUIDA_COMUNICAZIONE v2.0 | FUNZIONANTE |
 | Flusso Guardiane (3 livelli) | TESTATO E FUNZIONANTE! |
 | HARDTESTS Comunicazione (3/3) | PASSATI! |
-| Studio Cervello vs Swarm | NUOVO! 611 righe |
+| Studio Cervello vs Swarm | FUNZIONANTE | 611 righe |
 | .swarm/ in Miracollo | PRONTO! |
+| **HARDTESTS_SWARM_V3.md** | **NUOVO!** | 1256 righe, 4 test |
 
 ---
 
@@ -64,23 +65,27 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   PROSSIMO: TESTARE SU MIRACOLLO!                               |
+|   PROSSIMO: ESEGUIRE I 4 HARDTESTS!                             |
 |                                                                  |
-|   Il sistema e' PRONTO:                                          |
-|   - 16 agents globali                                            |
-|   - 10 hooks attivi                                              |
-|   - .swarm/ struttura creata                                    |
-|   - Triple check passato                                         |
+|   Prima di Miracollo, dobbiamo PASSARE tutti i test:            |
 |                                                                  |
-|   COME:                                                          |
-|   1. Apri nuova finestra su miracollogeminifocus                |
-|   2. La Scienziata genera prompt ricerca automaticamente        |
-|   3. Usa lo sciame per task reali                               |
-|   4. L'Ingegnera analizza dopo ogni commit                      |
+|   TEST 1: Multi-Finestra REALE (2 finestre)                     |
+|   - Regina crea task, Worker lo esegue via .swarm/              |
+|   - Verifica: .ready -> .working -> .done                       |
 |                                                                  |
-|   DOPO MIRACOLLO:                                                |
-|   - Wave 2 Automazione (se serve)                               |
-|   - Altre feature basate su feedback reale                      |
+|   TEST 2: Hooks Nuovi (1 finestra + Miracollo)                  |
+|   - session_start_scientist.py si attiva?                       |
+|   - post_commit_engineer.py analizza?                           |
+|                                                                  |
+|   TEST 3: Guardiana Multi-Finestra (3 finestre)                 |
+|   - Flusso completo con verifica via .swarm/                    |
+|                                                                  |
+|   TEST 4: Pre-Miracollo FULL STACK (5 finestre)                 |
+|   - Backend -> Guardiana -> Frontend -> Guardiana -> Test       |
+|                                                                  |
+|   DOPO I TEST:                                                   |
+|   - Se TUTTI passano -> Miracollo ready!                         |
+|   - Se qualcuno fallisce -> Fix + re-test                        |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -126,33 +131,34 @@
 
 ## ULTIMO AGGIORNAMENTO
 
-**3 Gennaio 2026 - Sessione 63** - SISTEMA PRONTO PER MIRACOLLO!
+**3 Gennaio 2026 - Sessione 64** - HARDTESTS V3 PRONTI!
 
 ### Cosa abbiamo fatto:
 
-**L'INSIGHT DI RAFA:**
+**LA DOMANDA GIUSTA:**
 ```
-"Possiamo SCEGLIERE cosa tenere in testa!"
+Rafa: "Cosa manca prima di andare su Miracollo?"
+Risposta: HARD TESTS! Come sempre prima di qualcosa grande.
 ```
-- Studio Cervello vs Swarm (611 righe!)
-- Parallelo neuroscienza-CervellaSwarm
-- Il SUPERPOTERE documentato
 
-**FIX E MIGLIORAMENTI:**
-- Fix sicurezza task_manager.py (validazione task_id)
-- .gitignore aggiornato per .swarm/
-- Hook session_start_scientist.py ATTIVATO
-- Hook post_commit_engineer.py v2.0 (adattato per Claude Code)
-- Ricerca completa hooks Claude Code (10 eventi disponibili!)
+**HARDTESTS_SWARM_V3.md CREATO:**
+- cervella-tester ha creato 1256 righe di test!
+- 4 test completi con prompt pronti per ogni finestra
+- TEST 1: Multi-Finestra REALE (2 finestre)
+- TEST 2: Hooks nuovi - scientist + engineer (1 + Miracollo)
+- TEST 3: Guardiana nel sistema Multi-Finestra (3 finestre)
+- TEST 4: Scenario Pre-Miracollo FULL STACK (5 finestre)
 
-**MIRACOLLO PREPARATO:**
-- Struttura .swarm/ creata
-- Triple check passato
-- 16 agents pronti
+**FORMATO PROFESSIONALE:**
+- Prompt pronti da copiare per ogni finestra
+- Comportamento atteso documentato
+- Checklist verifica per ogni test
+- Setup finestre e comandi utili
 
 ### Prossimo:
-- Aprire finestra su Miracollo
-- Testare sciame su progetto REALE
+- Eseguire i 4 HARDTESTS
+- Se TUTTI passano -> Miracollo ready!
+- Se qualcuno fallisce -> Fix + re-test
 
 ---
 

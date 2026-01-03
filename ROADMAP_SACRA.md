@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-> **Aggiornato:** 3 Gennaio 2026 - Sessione 63 - SISTEMA PRONTO PER MIRACOLLO! (v26.3.0)
+> **Aggiornato:** 3 Gennaio 2026 - Sessione 64 - HARDTESTS V3 PRONTI! (v26.4.0)
 
 ```
 +------------------------------------------------------------------+
@@ -243,6 +243,48 @@
 ---
 
 ## CHANGELOG
+
+### 3 Gennaio 2026 (Sessione 64) - HARDTESTS V3 PRONTI!
+
+**LA DOMANDA GIUSTA DI RAFA:**
+
+```
+"Cosa manca prima di andare su Miracollo?"
+"HARD TESTS! Come sempre prima di qualcosa grande!"
+```
+
+**HARDTESTS_SWARM_V3.md CREATO:**
+- cervella-tester ha creato 1256 righe di test!
+- 4 test completi, pronti per essere eseguiti
+- Formato identico a HARDTESTS_COMUNICAZIONE.md
+
+**I 4 TEST:**
+| Test | Cosa Verifica | Finestre |
+|------|---------------|----------|
+| TEST 1 | Multi-Finestra REALE | 2 |
+| TEST 2 | Hooks nuovi (scientist + engineer) | 1 + Miracollo |
+| TEST 3 | Guardiana nel sistema Multi-Finestra | 3 |
+| TEST 4 | Scenario Pre-Miracollo FULL STACK | 5 |
+
+**OGNI TEST HA:**
+- Scenario chiaro
+- Prompt pronti per ogni finestra (copy-paste!)
+- Comportamento atteso
+- Checklist verifica
+- Tabella risultati da compilare
+
+**DECISIONE:**
+Ogni test in sessione separata per:
+- Analisi profonda dopo ogni test
+- Vedere se serve altro
+- Alzare qualità e analisi
+- "Con calma, una cosa alla volta"
+
+**File:** `docs/tests/HARDTESTS_SWARM_V3.md`
+
+**Versione:** 26.4.0 (MINOR: HARDTESTS v3 creati)
+
+---
 
 ### 3 Gennaio 2026 (Sessione 63) - SISTEMA PRONTO PER MIRACOLLO!
 
