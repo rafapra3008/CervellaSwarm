@@ -262,20 +262,6 @@ Cervella & Rafa
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-04 04:56 (auto)
-
-### Stato Git
-- **Branch**: main
-- **Ultimo commit**: 409f8c5 - docs: CHECKPOINT COMPLETO Sessione 78
-- **File modificati** (2):
-  - ROMPT_RIPRESA.md
-  - reports/engineer_report_20260104_045517.json
-
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: auto
-
----
 
 ---
 
@@ -321,5 +307,21 @@ Cervella & Rafa
 
 ### Messaggio dalla Cervella precedente
 PreCompact auto
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-04 05:01 (unknown)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: d153858 - ANTI-COMPACT: PreCompact auto
+- **File modificati** (1):
+  - eports/scientist_prompt_20260104.md
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: unknown
 
 ---
