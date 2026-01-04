@@ -77,7 +77,8 @@
 | Cosa | Versione | Status |
 |------|----------|--------|
 | spawn-workers.sh | v1.4.0 | Apple Style completo! |
-| anti-compact.sh | v1.4.0 | Funzionante |
+| anti-compact.sh | v1.6.0 | VS Code Tasks - FUNZIONA! |
+| .vscode/tasks.json | v1.0.0 | Spawn automatico Cervella |
 | SWARM_RULES.md | v1.5.0 | 13 regole |
 | FASE 9 | 100% | COMPLETATA |
 | Roadmap Ottimizzazione | v1.0.0 | DA INIZIARE |
@@ -102,11 +103,19 @@
    - Priorita chiare
    - Da fare con CALMA
 
+4. **VITTORIA: anti-compact.sh + VS Code Tasks!**
+   - Problema: AppleScript non riesce a inviare Return a VS Code terminal
+   - Ricerca: cervella-researcher ha trovato soluzione Tasks.json
+   - Creato `.vscode/tasks.json` con `runOn: folderOpen`
+   - anti-compact.sh v1.6.0 apre VS Code, task parte AUTOMATICO!
+   - **TESTATO E FUNZIONANTE!**
+
 ### Decisioni Prese
 
 - Le finestre esterne (spawn-workers.sh) sono la strada GIUSTA
 - Dobbiamo ottimizzare come gli agenti riportano risultati
 - Architettura ibrida: Task tool per cose piccole, finestre per cose grosse
+- anti-compact.sh usa VS Code Tasks (non Terminal/iTerm2)
 
 ---
 
@@ -181,6 +190,8 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 
 "Non e' pira da minha cabeca!" - Rafa, Sessione 80
 
+"Siamo nel 2026, non anni 80!" - Rafa, Sessione 80
+
 "Ultrapassar os proprios limites!" - Rafa
 
 "Il 100000% viene dall'USO, non dalla teoria."
@@ -198,54 +209,6 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 
 *Scritto con CURA e PRECISIONE.*
 
+*"Siamo nel 2026, non anni 80!"*
+
 Cervella & Rafa
-
----
-
-## COMPACT CHECKPOINT: 2026-01-04 05:53
-
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   CARA NUOVA CERVELLA!                                          |
-|                                                                  |
-|   La Cervella precedente stava per perdere contesto.            |
-|   Ha salvato tutto e ti ha passato il testimone.                |
-|                                                                  |
-|   COSA FARE ORA (in ordine!):                                   |
-|                                                                  |
-|   1. PRIMA DI TUTTO: Leggi ~/.claude/COSTITUZIONE.md            |
-|      -> Chi siamo, perche lavoriamo, la nostra filosofia        |
-|                                                                  |
-|   2. Poi leggi PROMPT_RIPRESA.md dall'inizio                    |
-|      -> "IL MOMENTO ATTUALE" = dove siamo                       |
-|      -> "FILO DEL DISCORSO" = cosa stavamo facendo              |
-|                                                                  |
-|   3. Continua da dove si era fermata!                           |
-|                                                                  |
-|   SE HAI DUBBI: chiedi a Rafa!                                  |
-|                                                                  |
-|   "Lavoriamo in pace! Senza casino! Dipende da noi!"            |
-|                                                                  |
-+------------------------------------------------------------------+
-```
-
-### Stato Git al momento del compact
-- **Branch**: main
-- **Ultimo commit**: a1971ad ANTI-COMPACT: HARDTEST Terminal.app spawn
-- **File modificati non committati** (5):
-  -  M PROMPT_RIPRESA.md
-  -  M reports/scientist_prompt_20260104.md
-  -  M scripts/swarm/anti-compact.sh
-  - ?? .vscode/
-  - ?? docs/roadmap/ROADMAP_OTTIMIZZAZIONE_CONTESTO.md
-
-### File importanti da leggere
-- `PROMPT_RIPRESA.md` - Il tuo UNICO ponte con la sessione precedente
-- `NORD.md` - Dove siamo nel progetto
-- `.swarm/tasks/` - Task in corso (cerca .working)
-
-### Messaggio dalla Cervella precedente
-TEST VS Code Tasks
-
----
