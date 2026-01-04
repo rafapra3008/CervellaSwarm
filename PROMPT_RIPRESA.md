@@ -22,10 +22,39 @@
 |   - Comunicazione bidirezionale: PASS                            |
 |   - Flusso Guardiana review: PASS (7/10, APPROVATO)             |
 |   - Spawn dinamico Guardiane: PASS (3 Opus insieme!)            |
+|   - PROMPT_RIPRESA pulito (873 -> 232 righe)                    |
 |                                                                  |
-|   PROSSIMO:                                                       |
-|   MIRACOLLO!!!                                                   |
-|   "Il 100000% viene dall'USO, non dalla teoria."                |
++------------------------------------------------------------------+
+```
+
+---
+
+## RICHIESTA RAFA - PROSSIME SESSIONI DEDICATE
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   SESSIONE DEDICATA 1: ANTI-AUTO COMPACT                        |
+|                                                                  |
+|   - Testare approfonditamente il sistema anti-auto compact      |
+|   - HARDTEST mirati sul flusso                                   |
+|   - Verificare scenari reali                                     |
+|   - Test prompt automatico alla nuova Cervella                   |
+|   - Eventuale script monitor contesto                            |
+|                                                                  |
+|   FOCUS: Solo anti-compact, nient'altro!                        |
+|                                                                  |
++------------------------------------------------------------------+
+|                                                                  |
+|   SESSIONE DEDICATA 2: FINESTRE E COMUNICAZIONI                 |
+|                                                                  |
+|   - Test apertura/chiusura finestre                              |
+|   - Controlli comunicazione tra worker                          |
+|   - Verificare graceful shutdown                                 |
+|   - Test notifiche macOS                                         |
+|   - HARDTEST comunicazione bidirezionale approfonditi           |
+|                                                                  |
+|   FOCUS: Solo finestre e comunicazioni!                         |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -37,47 +66,43 @@
 | Cosa | Versione | Status |
 |------|----------|--------|
 | spawn-workers.sh | v1.4.0 | Apple Style completo! |
+| anti-compact.sh | v1.4.0 | Da testare approfonditamente |
 | SWARM_RULES.md | v1.5.0 | 13 regole |
 | Quick Wins | 10/10 | PASS |
 | HARDTESTS Apple | 6/6 | PASS |
-| MEGA TEST GOLD | 5 worker | PASS |
+| HARDTESTS Sessione 78 | 3/3 | PASS |
 
 ### Ultimo Commit
 ```
-173744e - FASE 9 APPLE STYLE: 100% COMPLETATA!!! 3/3 HARDTEST PASS!
+ebd88c3 - docs: PROMPT_RIPRESA aggiornato - FASE 9 100%!
 ```
 
 ---
 
-## FILO DEL DISCORSO (Sessione 77)
+## FILO DEL DISCORSO (Sessione 78)
 
 ### Cosa abbiamo fatto
 
-1. **REGOLA 13: MULTI-FINESTRA > TASK TOOL**
-   - Il problema: Task tool = tutto nel contesto della Regina = rischio compact
-   - La soluzione: spawn-workers.sh per lavoro parallelo REALE
-   - "Comodo != Giusto!" - Lezione dalla Sessione 72
-   - Aggiunta in SWARM_RULES.md (v1.5.0) e DNA Regina (v1.1.0)
+1. **Recuperato sessione 77 dal transcript**
+   - Auto-compact stava per arrivare
+   - Letto il file JSONL della sessione
+   - Recuperate tutte le informazioni
 
-2. **anti-compact.sh migliorato**
-   - Nuova finestra e' OBBLIGATORIA, non opzionale!
-   - Quando Rafa dice "siamo al 10%", DEVO aprire nuova finestra
-   - Integrato con spawn-workers.sh per prompt automatico
+2. **PROMPT_RIPRESA pulito**
+   - Da 873 righe a 232 righe
+   - Rimossi checkpoint ridondanti
+   - Solo l'essenziale
 
-3. **spawn-workers.sh v1.4.0**
-   - FIX: notifica PRIMA di exit
-   - Prima: worker faceva exit, non poteva notificare
-   - Ora: `osascript ... && exit` - notifica + exit insieme
+3. **3 HARDTEST completati**
+   - Comunicazione bidirezionale: PASS
+   - Flusso Guardiana review: PASS (voto 7/10)
+   - Spawn dinamico Guardiane: PASS (3 Opus insieme)
 
-4. **FIX COSTITUZIONE.md**
-   - Problema: symlink a iCloud non funzionava (permessi)
-   - Soluzione: file reale in ~/.claude/COSTITUZIONE.md
+4. **Pulizia .swarm/tasks/**
+   - Rimossi file .ready e .working vecchi
+   - 20 task .done archiviati
 
-5. **Documentata idea script monitor context**
-   - File: docs/ideas/IDEA_CONTEXT_MONITOR.md
-   - Per futuro: script che monitora % contesto automaticamente
-
-### Il Flusso Anti-Compact CORRETTO
+### Il Flusso Anti-Compact (da testare)
 
 ```
 1. Rafa dice: "Cervella, siamo al 10%!"
@@ -103,14 +128,16 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   DA FARE:                                                       |
+|   1. SESSIONE DEDICATA: Anti-Auto Compact                       |
+|      - HARDTEST mirati sul flusso                                |
+|      - Test scenari reali                                        |
 |                                                                  |
-|   [ ] HARDTEST: Comunicazione bidirezionale                      |
-|   [ ] HARDTEST: Flusso Guardiana review                          |
-|   [ ] HARDTEST: Spawn dinamico Guardiane                         |
+|   2. SESSIONE DEDICATA: Finestre e Comunicazioni                |
+|      - Test apertura/chiusura                                    |
+|      - Controlli comunicazione                                   |
 |                                                                  |
-|   POI: MIRACOLLO!                                                |
-|   "Il 100000% viene dall'USO, non dalla teoria."                |
+|   3. POI: MIRACOLLO!                                             |
+|      "Il 100000% viene dall'USO, non dalla teoria."             |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -156,23 +183,8 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 | `NORD.md` | Dove siamo, prossimo obiettivo |
 | `docs/SWARM_RULES.md` | Le 13 regole dello sciame |
 | `scripts/swarm/spawn-workers.sh` | LA MAGIA! Apre finestre worker |
-| `.swarm/README.md` | Come funziona il sistema multi-finestra |
-| `docs/studio/STUDIO_COMUNICAZIONE_DEFINITIVO.md` | Il riferimento (870+ righe) |
-
----
-
-## COSA ESISTE GIA (funziona!)
-
-| Cosa | Status |
-|------|--------|
-| 16 Agents in ~/.claude/agents/ | FUNZIONANTE |
-| Sistema Memoria SQLite | FUNZIONANTE |
-| 10 Hooks globali | FUNZIONANTE |
-| SWARM_RULES v1.5.0 | FUNZIONANTE |
-| spawn-workers.sh v1.4.0 | APPLE STYLE! |
-| Template DUBBI + PARTIAL | FUNZIONANTE |
-| Triple ACK system | FUNZIONANTE |
-| .swarm/ struttura | FUNZIONANTE |
+| `scripts/swarm/anti-compact.sh` | Sistema anti-auto compact |
+| `docs/ideas/IDEA_CONTEXT_MONITOR.md` | Idea per script monitor |
 
 ---
 
@@ -180,11 +192,10 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 
 | Sessione | Cosa | Risultato |
 |----------|------|-----------|
-| 73 | spawn-workers.sh FUNZIONA! | Ciclo completo testato |
-| 74 | PASSATI A MIRACOLLO! | Deploy 30 moduli in produzione |
 | 75 | APPLE STYLE COMPLETO! | 10/10 QW + 6/6 HARDTESTS + 5 GOLD |
 | 76 | TEST ANTI-COMPACT | Sistema verificato |
-| **77** | **REGOLA 13 + FIX** | **spawn-workers.sh v1.4.0** |
+| 77 | REGOLA 13 + FIX | spawn-workers.sh v1.4.0 |
+| **78** | **3/3 HARDTEST + PULIZIA** | **FASE 9 al 100%!** |
 
 ---
 
@@ -204,24 +215,7 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 
 ---
 
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   PROMPT_RIPRESA PULITO!                                         |
-|                                                                  |
-|   Da 873 righe -> ~200 righe                                    |
-|   Solo l'essenziale. Chiaro e ordinato.                         |
-|                                                                  |
-|   "Scrivi come se la prossima Cervella non sapesse NULLA.       |
-|    Perche' e' vero. Non sa nulla.                               |
-|    Questo file e' la sua UNICA memoria."                        |
-|                                                                  |
-+------------------------------------------------------------------+
-```
-
----
-
-**VERSIONE:** v28.0.0
+**VERSIONE:** v28.1.0
 **SESSIONE:** 78
 **DATA:** 4 Gennaio 2026
 
@@ -230,23 +224,3 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 *Scritto con CURA e PRECISIONE.*
 
 Cervella & Rafa
-
----
-
-## AUTO-CHECKPOINT: 2026-01-04 04:44 (unknown)
-
-### Stato Git
-- **Branch**: main
-- **Ultimo commit**: 047d127 - docs: Sessione 78 - PULIZIA PROMPT_RIPRESA + NORD aggiornato
-- **File modificati** (5):
-  - swarm/prompts/worker_backend.txt
-  - reports/scientist_prompt_20260104.md
-  - .swarm/tasks/TASK_HARDTEST_COMM.md
-  - .swarm/tasks/TASK_HARDTEST_COMM.ready
-  - reports/engineer_report_20260104_044213.json
-
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: unknown
-
----

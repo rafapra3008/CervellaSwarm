@@ -159,8 +159,9 @@
    - Solo l'essenziale
 
 ### Prossimo:
-- 3 HARDTEST finali (comunicazione, Guardiana, spawn dinamico)
-- MIRACOLLO!
+1. **SESSIONE DEDICATA: Anti-Auto Compact** - HARDTEST mirati
+2. **SESSIONE DEDICATA: Finestre e Comunicazioni** - Test apertura/chiusura
+3. **MIRACOLLO!**
 
 ---
 
