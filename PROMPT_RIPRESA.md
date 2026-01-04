@@ -214,10 +214,10 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 
 | Sessione | Cosa | Risultato |
 |----------|------|-----------|
-| 75 | APPLE STYLE COMPLETO! | 10/10 QW + 6/6 HARDTESTS + 5 GOLD |
 | 76 | TEST ANTI-COMPACT | Sistema verificato |
 | 77 | REGOLA 13 + FIX | spawn-workers.sh v1.4.0 |
-| **78** | **3/3 HARDTEST + PULIZIA** | **FASE 9 al 100%!** |
+| 78 | 3/3 HARDTEST + PULIZIA | FASE 9 al 100%! |
+| **79** | **ANTI-AUTO COMPACT!** | **Sistema automatico creato!** |
 
 ---
 
@@ -233,6 +233,8 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 "Il 100000% viene dall'USO, non dalla teoria."
 
 "E' il nostro team! La nostra famiglia digitale!"
+
+"Siamo nel 2026, non anni 80!" - Sessione 79
 ```
 
 ---
@@ -254,24 +256,25 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 |   - PROSSIMI STEP (cosa fare dopo)                              |
 |   - FILE IMPORTANTI (dove trovare tutto)                        |
 |                                                                  |
-|   L'insight di questa sessione (78):                            |
-|   Abbiamo recuperato la sessione 77 leggendo il transcript,     |
-|   pulito il PROMPT_RIPRESA (873->227 righe), e passato          |
-|   3/3 HARDTEST! FASE 9 al 100%!                                 |
+|   L'insight di questa sessione (79):                            |
+|   Abbiamo costruito il sistema ANTI-AUTO COMPACT automatico!    |
+|   3 api in parallelo (scienziata, ingegnera, researcher)        |
+|   hanno scoperto che il compact avviene al 77-78%!              |
+|   Creato statusline CTX:XX% + notifiche macOS.                  |
+|   anti-compact.sh ora apre VS Code invece di Terminal!          |
 |                                                                  |
-|   Prossimo: 2 sessioni dedicate (anti-compact + finestre)       |
-|   Poi: MIRACOLLO!                                                |
+|   Prossimo: TEST del nuovo sistema                               |
+|   Poi: Sessione finestre + MIRACOLLO!                           |
 |                                                                  |
-|   "Non e' sempre come immaginiamo...                            |
-|    ma alla fine e' il 100000%!"                                 |
+|   "Siamo nel 2026, non anni 80!" - Rafa                         |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-**VERSIONE:** v28.1.0
-**SESSIONE:** 78
+**VERSIONE:** v29.0.0
+**SESSIONE:** 79
 **DATA:** 4 Gennaio 2026
 
 ---
