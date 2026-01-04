@@ -709,20 +709,6 @@ TEST REALE al 4% - Sessione 76 completa!
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-04 03:55 (unknown)
-
-### Stato Git
-- **Branch**: main
-- **Ultimo commit**: 7ebcb2f - ANTI-COMPACT: TEST REALE al 4% - Sessione 76 completa!
-- **File modificati** (2):
-  - ROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260104.md
-
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: unknown
-
----
 
 ---
 
@@ -818,5 +804,22 @@ TEST Sessione 77 - Verifica flusso anti-compact
 
 ### Messaggio dalla Cervella precedente
 TEST v1.4.0 - Prompt automatico per nuova Cervella!
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-04 04:21 (unknown)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: 8c26a83 - ANTI-COMPACT: TEST v1.4.0 - Prompt automatico per nuova Cervella!
+- **File modificati** (2):
+  - eports/scientist_prompt_20260104.md
+  - .swarm/runners/anti_compact_runner.sh
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: unknown
 
 ---
