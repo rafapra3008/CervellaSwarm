@@ -230,3 +230,23 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 *Scritto con CURA e PRECISIONE.*
 
 Cervella & Rafa
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-04 04:44 (unknown)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: 047d127 - docs: Sessione 78 - PULIZIA PROMPT_RIPRESA + NORD aggiornato
+- **File modificati** (5):
+  - swarm/prompts/worker_backend.txt
+  - reports/scientist_prompt_20260104.md
+  - .swarm/tasks/TASK_HARDTEST_COMM.md
+  - .swarm/tasks/TASK_HARDTEST_COMM.ready
+  - reports/engineer_report_20260104_044213.json
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: unknown
+
+---
