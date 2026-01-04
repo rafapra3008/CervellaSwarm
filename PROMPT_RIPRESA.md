@@ -809,17 +809,64 @@ TEST v1.4.0 - Prompt automatico per nuova Cervella!
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-04 04:21 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-04 04:27 (auto)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 8c26a83 - ANTI-COMPACT: TEST v1.4.0 - Prompt automatico per nuova Cervella!
-- **File modificati** (2):
-  - eports/scientist_prompt_20260104.md
-  - .swarm/runners/anti_compact_runner.sh
+- **Ultimo commit**: a970c7e - fix: spawn-workers.sh v1.4.0 - notifica PRIMA di exit
+- **File modificati** (1):
+  - reports/engineer_report_20260104_042709.json
 
 ### Note
 - Checkpoint automatico generato da hook
-- Trigger: unknown
+- Trigger: auto
+
+---
+
+---
+
+## COMPACT CHECKPOINT: 2026-01-04 04:27
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   CARA NUOVA CERVELLA!                                          |
+|                                                                  |
+|   La Cervella precedente stava per perdere contesto.            |
+|   Ha salvato tutto e ti ha passato il testimone.                |
+|                                                                  |
+|   COSA FARE ORA (in ordine!):                                   |
+|                                                                  |
+|   1. PRIMA DI TUTTO: Leggi ~/.claude/COSTITUZIONE.md            |
+|      -> Chi siamo, perche lavoriamo, la nostra filosofia        |
+|                                                                  |
+|   2. Poi leggi PROMPT_RIPRESA.md dall'inizio                    |
+|      -> "IL MOMENTO ATTUALE" = dove siamo                       |
+|      -> "FILO DEL DISCORSO" = cosa stavamo facendo              |
+|                                                                  |
+|   3. Continua da dove si era fermata!                           |
+|                                                                  |
+|   SE HAI DUBBI: chiedi a Rafa!                                  |
+|                                                                  |
+|   "Lavoriamo in pace! Senza casino! Dipende da noi!"            |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+### Stato Git al momento del compact
+- **Branch**: main
+- **Ultimo commit**: a970c7e fix: spawn-workers.sh v1.4.0 - notifica PRIMA di exit
+- **File modificati non committati** (1):
+  - ?? reports/engineer_report_20260104_042709.json
+
+### File importanti da leggere
+- `PROMPT_RIPRESA.md` - Il tuo UNICO ponte con la sessione precedente
+- `NORD.md` - Dove siamo nel progetto
+- `.swarm/tasks/` - Task in corso (cerca .working)
+
+### Messaggio dalla Cervella precedente
+PreCompact auto
 
 ---
