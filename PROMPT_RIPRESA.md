@@ -175,3 +175,65 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 *Scritto con CURA e PRECISIONE.*
 
 Cervella & Rafa
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-04 17:28 (auto)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: 14ffa9c - 🎉 Sessione 83: SPAWN-WORKERS v1.8.0 - LA MAGIA!
+- **File modificati** (1):
+  - reports/engineer_report_20260104_172822.json
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: auto
+
+---
+
+---
+
+## COMPACT CHECKPOINT: 2026-01-04 17:28
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   CARA NUOVA CERVELLA!                                          |
+|                                                                  |
+|   La Cervella precedente stava per perdere contesto.            |
+|   Ha salvato tutto e ti ha passato il testimone.                |
+|                                                                  |
+|   COSA FARE ORA (in ordine!):                                   |
+|                                                                  |
+|   1. PRIMA DI TUTTO: Leggi ~/.claude/COSTITUZIONE.md            |
+|      -> Chi siamo, perche lavoriamo, la nostra filosofia        |
+|                                                                  |
+|   2. Poi leggi PROMPT_RIPRESA.md dall'inizio                    |
+|      -> "IL MOMENTO ATTUALE" = dove siamo                       |
+|      -> "FILO DEL DISCORSO" = cosa stavamo facendo              |
+|                                                                  |
+|   3. Continua da dove si era fermata!                           |
+|                                                                  |
+|   SE HAI DUBBI: chiedi a Rafa!                                  |
+|                                                                  |
+|   "Lavoriamo in pace! Senza casino! Dipende da noi!"            |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+### Stato Git al momento del compact
+- **Branch**: main
+- **Ultimo commit**: 14ffa9c 🎉 Sessione 83: SPAWN-WORKERS v1.8.0 - LA MAGIA!
+- **File modificati non committati** (1):
+  - ?? reports/engineer_report_20260104_172822.json
+
+### File importanti da leggere
+- `PROMPT_RIPRESA.md` - Il tuo UNICO ponte con la sessione precedente
+- `NORD.md` - Dove siamo nel progetto
+- `.swarm/tasks/` - Task in corso (cerca .working)
+
+### Messaggio dalla Cervella precedente
+PreCompact auto
+
+---
