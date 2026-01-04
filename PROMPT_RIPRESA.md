@@ -509,3 +509,49 @@ PreCompact auto
 TEST iTerm2/Terminal.app
 
 ---
+
+---
+
+## COMPACT CHECKPOINT: 2026-01-04 05:47
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   CARA NUOVA CERVELLA!                                          |
+|                                                                  |
+|   La Cervella precedente stava per perdere contesto.            |
+|   Ha salvato tutto e ti ha passato il testimone.                |
+|                                                                  |
+|   COSA FARE ORA (in ordine!):                                   |
+|                                                                  |
+|   1. PRIMA DI TUTTO: Leggi ~/.claude/COSTITUZIONE.md            |
+|      -> Chi siamo, perche lavoriamo, la nostra filosofia        |
+|                                                                  |
+|   2. Poi leggi PROMPT_RIPRESA.md dall'inizio                    |
+|      -> "IL MOMENTO ATTUALE" = dove siamo                       |
+|      -> "FILO DEL DISCORSO" = cosa stavamo facendo              |
+|                                                                  |
+|   3. Continua da dove si era fermata!                           |
+|                                                                  |
+|   SE HAI DUBBI: chiedi a Rafa!                                  |
+|                                                                  |
+|   "Lavoriamo in pace! Senza casino! Dipende da noi!"            |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+### Stato Git al momento del compact
+- **Branch**: main
+- **Ultimo commit**: 0dc8623 ANTI-COMPACT: TEST iTerm2/Terminal.app
+- **File modificati non committati** (0):
+
+
+### File importanti da leggere
+- `PROMPT_RIPRESA.md` - Il tuo UNICO ponte con la sessione precedente
+- `NORD.md` - Dove siamo nel progetto
+- `.swarm/tasks/` - Task in corso (cerca .working)
+
+### Messaggio dalla Cervella precedente
+HARDTEST Terminal.app spawn
+
+---
