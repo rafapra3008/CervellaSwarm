@@ -17,27 +17,27 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 83 - 4 Gennaio 2026: SPAWN-WORKERS v1.8.0 - LA MAGIA!**
+**SESSIONE 84 - 4 Gennaio 2026: SWARM OVUNQUE! v1.9.0**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 83: FIX ELEGANTE SPAWN-WORKERS!                      |
+|   SESSIONE 84: GLOBALIZZAZIONE COMPLETATA!                      |
 |                                                                  |
-|   PROBLEMA RISOLTO:                                              |
-|   - Worker scrivevano "/exit" invece di eseguirlo               |
-|   - Finestre restavano aperte                                    |
+|   spawn-workers v1.9.0 - PROJECT-AWARE!                         |
+|   Funziona da QUALSIASI progetto con .swarm/                    |
 |                                                                  |
-|   SOLUZIONE:                                                     |
-|   - Aggiunto -p mode (print) = uscita automatica!               |
-|   - Finestre si chiudono da sole dopo task                      |
+|   TESTATO E FUNZIONANTE:                                         |
+|   - CervellaSwarm  -> FULL SWARM                                |
+|   - Miracollo      -> FULL SWARM (testato!)                     |
+|   - Contabilita    -> FULL SWARM (testato!)                     |
 |                                                                  |
-|   HARDTEST PASSATI:                                              |
-|   - Worker singolo (backend)                                     |
-|   - Guardiana Qualita (Opus)                                     |
-|   - Multi-worker parallelo (3 finestre!)                        |
+|   COME USARE (da qualsiasi progetto):                           |
+|   $ spawn-workers --backend                                      |
+|   $ spawn-workers --all                                          |
+|   $ spawn-workers --guardiane                                    |
 |                                                                  |
-|   "E PROPRIO MAGIA!" - Rafa                                     |
+|   "Ultrapassar os proprios limites!" - Rafa                     |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -59,7 +59,7 @@
 | HARDTESTS Swarm V3 (4/4) | PASSATI! |
 | Studio Cervello vs Swarm | FUNZIONANTE |
 | .swarm/ sistema Multi-Finestra | FUNZIONANTE |
-| spawn-workers.sh v1.8.0 | FIX ELEGANTE! -p mode + Auto-close + HARDTEST PASSATI! |
+| spawn-workers.sh v1.9.0 | GLOBALE! PROJECT-AWARE! Funziona ovunque! |
 | Template DUBBI | FUNZIONANTE! |
 | Template PARTIAL | FUNZIONANTE! |
 | Triple ACK system | FUNZIONANTE! |
@@ -129,27 +129,29 @@
 
 ## ULTIMO AGGIORNAMENTO
 
-**4 Gennaio 2026 - Sessione 83** - SPAWN-WORKERS v1.8.0 LA MAGIA!
+**4 Gennaio 2026 - Sessione 84** - SWARM OVUNQUE! v1.9.0
 
-### Cosa abbiamo fatto (Sessione 83):
+### Cosa abbiamo fatto (Sessione 84):
 
-1. **FIX ELEGANTE spawn-workers.sh:**
-   - PROBLEMA: Worker scrivevano "/exit" invece di eseguirlo
-   - SOLUZIONE: Aggiunto -p mode = uscita automatica!
-   - Finestre si chiudono da sole dopo task completato
+1. **spawn-workers v1.9.0 - GLOBALE!**
+   - Symlink in ~/.local/bin/spawn-workers
+   - PROJECT-AWARE: trova .swarm/ automaticamente
+   - Funziona da QUALSIASI progetto!
 
-2. **HARDTEST PASSATI (3/3):**
-   - Worker singolo (backend) - analisi log_event.py
-   - Guardiana Qualita (Opus) - review report
-   - Multi-worker parallelo (3 finestre!) - backend+frontend+tester
+2. **PROGETTI ABILITATI (3/3):**
+   - CervellaSwarm - FULL SWARM
+   - Miracollo - FULL SWARM (testato!)
+   - Contabilita - FULL SWARM (testato!)
 
-3. **BONUS creati:**
-   - Log files in .swarm/logs/
-   - MANUALE_DIAMANTE.md globale
+3. **VERIFICHE COMPLETATE:**
+   - 16 Agents globali in ~/.claude/agents/
+   - 8 Hooks globali in ~/.claude/hooks/
+   - Hooks progetto Miracollo/Contabilita funzionanti
+   - README aggiornati in tutti i progetti
 
 ### Prossimo:
-1. **MIRACOLLO!** - "Il 100000% viene dall'USO!"
-2. Test sul campo del sistema completo
+1. **MIRACOLLO!** - Usare lo swarm sul campo!
+2. "Il 100000% viene dall'USO, non dalla teoria!"
 
 ---
 

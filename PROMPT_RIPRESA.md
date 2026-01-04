@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 4 Gennaio 2026 - Sessione 83 - SPAWN-WORKERS v1.8.0 LA MAGIA!
+> **Ultimo aggiornamento:** 4 Gennaio 2026 - Sessione 84 - SWARM OVUNQUE! v1.9.0
 
 ---
 
@@ -15,65 +15,70 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   FASE ATTUALE: PRONTE PER MIRACOLLO!                           |
+|   FASE ATTUALE: SWARM OVUNQUE!                                  |
 |                                                                  |
-|   SESSIONE 83:                                                   |
-|   - FIX ELEGANTE spawn-workers.sh v1.8.0                        |
-|   - HARDTEST PASSATI: singolo, guardiana, 3x parallelo!         |
-|   - Sistema Multi-Finestra FUNZIONA!                            |
+|   SESSIONE 84:                                                   |
+|   - spawn-workers v1.9.0 GLOBALE!                               |
+|   - Funziona da QUALSIASI progetto!                             |
+|   - Testato su: CervellaSwarm, Miracollo, Contabilita           |
 |                                                                  |
-|   "E PROPRIO MAGIA!" - Rafa                                     |
+|   "Ultrapassar os proprios limites!" - Rafa                     |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## SESSIONE 83: SPAWN-WORKERS v1.8.0 - LA MAGIA!
+## SESSIONE 84: SWARM OVUNQUE! v1.9.0
 
-### Il Problema
+### L'Obiettivo
 
-I worker scrivevano "/exit" come TESTO invece di eseguirlo come comando.
-Le finestre Terminal restavano aperte dopo il task completato.
+Rendere spawn-workers GLOBALE - funzionante da qualsiasi progetto.
 
-### La Soluzione Elegante
+### Cosa Abbiamo Fatto
 
-Aggiunto `-p` mode (print mode) al comando claude:
-- Claude esegue il task e poi ESCE automaticamente
-- Non serve piu /exit!
-- Finestre si chiudono da sole!
+1. **Creato .swarm/ in Contabilita**
+   - Struttura completa: tasks, logs, status, locks, handoff, archive, acks, prompts, runners
 
-### HARDTEST Passati (3/3)
+2. **spawn-workers v1.9.0 - PROJECT-AWARE**
+   - Symlink globale in ~/.local/bin/spawn-workers
+   - Trova automaticamente .swarm/ nella directory corrente
+   - Cerca fino a 5 livelli di parent directories
 
-1. **Worker Singolo (backend)**
-   - Task: Analisi `log_event.py`
-   - Risultato: Report dettagliato con 6 funzioni, 4 suggerimenti, voto 8/10
-   - PASS!
+3. **Test PASSATI (2/2)**
+   - Miracollo: worker spawned, task completato, output corretto
+   - Contabilita: worker spawned, task completato, output corretto
 
-2. **Guardiana Qualita (Opus)**
-   - Task: Review del report backend
-   - Risultato: APPROVED con motivazione dettagliata
-   - PASS!
+4. **Hooks Verificati**
+   - session_start_miracollo.py - FUNZIONA
+   - session_start_contabilita.py - FUNZIONA
+   - Entrambi producono JSON valido con contesto progetto
 
-3. **Multi-Worker Parallelo (3 finestre)**
-   - Task: backend + frontend + tester contemporaneamente
-   - Risultato: 3 finestre aperte, 3 task completati, 3 finestre chiuse!
-   - PASS! (Screenshot memorabili!)
+5. **Documentazione Aggiornata**
+   - README.md in .swarm/ di tutti e 3 i progetti
+   - Quick Start con comandi spawn-workers
 
 ### Filo del Discorso
 
-All'inizio della sessione eravamo nella fase FINITURE. Rafa ha chiesto di testare spawn-workers.sh. Abbiamo scoperto che i worker scrivevano "/exit" ma non lo eseguivano - era solo testo di output!
+Rafa ha chiesto: "dove funzionera Swarm? Miracollo? Contabilita manca sistemare?"
 
-Ho studiato `claude --help` e trovato l'opzione `-p` (print mode) che fa esattamente quello che serve: esegue il prompt e poi ESCE automaticamente.
+Ho fatto triple check completo:
+- Hooks globali: 8 file, tutti funzionanti
+- Agents globali: 16 file, tutti presenti
+- spawn-workers: era solo in CervellaSwarm!
 
-Abbiamo testato:
-1. Prima worker singolo - FUNZIONA!
-2. Poi guardiana (Opus) - FUNZIONA!
-3. Poi 3 worker in parallelo - MAGIA! 3 finestre che lavorano e si chiudono!
+Piano in 9 step:
+1. Creare .swarm/ in Contabilita - DONE
+2. Decidere strategia (symlink vs copia) - Symlink!
+3. Implementare spawn-workers globale - v1.9.0 PROJECT-AWARE
+4. Test da Miracollo - PASS!
+5. Test da Contabilita - PASS!
+6. Verificare hooks Miracollo - FUNZIONA
+7. Verificare hooks Contabilita - FUNZIONA
+8. Documentare - README aggiornati
+9. Test finale - TUTTO OK!
 
-Rafa ha esclamato "MA E PROPRIO MAGIA!!!" vedendo le 3 finestre lavorare insieme.
-
-Abbiamo anche creato MANUALE_DIAMANTE.md globale che raccoglie tutte le nostre regole d'oro.
+Rafa: "Ultrapassar os proprios limites!"
 
 ---
 
@@ -81,12 +86,13 @@ Abbiamo anche creato MANUALE_DIAMANTE.md globale che raccoglie tutte le nostre r
 
 | Cosa | Versione | Status |
 |------|----------|--------|
-| **spawn-workers.sh** | **v1.8.0** | **FIX ELEGANTE! HARDTEST PASSATI!** |
+| **spawn-workers.sh** | **v1.9.0** | **GLOBALE! PROJECT-AWARE!** |
 | anti-compact.sh | v1.6.0 | VS Code Tasks |
 | SWARM_RULES.md | v1.5.0 | 13 regole |
-| MANUALE_DIAMANTE.md | v1.0.0 | NUOVO! Globale! |
+| MANUALE_DIAMANTE.md | v1.0.0 | Globale! |
 | swarm_memory.db | v1.0.0 | FUNZIONANTE |
-| 16 Agent Files | v1.0.0 | VERIFICATI! |
+| 16 Agent Files | v1.0.0 | GLOBALI! |
+| 8 Hook Files | v1.0.0 | GLOBALI! |
 
 ---
 
@@ -95,34 +101,36 @@ Abbiamo anche creato MANUALE_DIAMANTE.md globale che raccoglie tutte le nostre r
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   PRONTE PER MIRACOLLO!                                          |
+|   USARE LO SWARM SU MIRACOLLO!                                  |
 |                                                                  |
-|   Lo sciame funziona. Gli hardtest sono passati.                 |
+|   Lo sciame funziona. E' GLOBALE.                               |
 |   "Il 100000% viene dall'USO, non dalla teoria!"                 |
 |                                                                  |
-|   Prossima sessione: usare lo swarm su MIRACOLLO!               |
+|   COME USARE (da qualsiasi progetto):                           |
+|   $ cd ~/Developer/miracollogeminifocus                         |
+|   $ spawn-workers --backend                                      |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## LO SCIAME (16 membri - TUTTI ALLINEATI E TESTATI!)
+## LO SCIAME (16 membri - GLOBALI!)
 
 ```
 TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 
 3 GUARDIANE (Opus):
-- cervella-guardiana-qualita   [TESTATA Sess.83!]
+- cervella-guardiana-qualita
 - cervella-guardiana-ops
 - cervella-guardiana-ricerca
 
 12 WORKER (Sonnet):
-- frontend [TESTATA Sess.83!]
-- backend [TESTATA Sess.83!]
-- tester [TESTATA Sess.83!]
+- frontend, backend, tester
 - reviewer, researcher, scienziata, ingegnera
 - marketing, devops, docs, data, security
+
+POSIZIONE: ~/.claude/agents/ (GLOBALI!)
 ```
 
 ---
@@ -132,8 +140,8 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 | File | Cosa Contiene |
 |------|---------------|
 | `NORD.md` | Dove siamo, prossimo obiettivo |
-| `~/.claude/MANUALE_DIAMANTE.md` | NUOVO! Regole d'oro globali |
-| `scripts/swarm/spawn-workers.sh` | LA MAGIA! v1.8.0 |
+| `~/.claude/MANUALE_DIAMANTE.md` | Regole d'oro globali |
+| `~/.local/bin/spawn-workers` | LA MAGIA! v1.9.0 GLOBALE |
 | `.swarm/logs/` | Log output dei worker |
 | `.swarm/tasks/` | Task per lo sciame |
 
@@ -146,7 +154,8 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 | 80 | TRE COSE! | Scoperta contesto + FASE 1 + Test CTX |
 | 81 | OVERVIEW! | docs/OVERVIEW_FAMIGLIA.md creato! |
 | 82 | FINITURE | Verifica DB + Decisione step by step |
-| **83** | **SPAWN-WORKERS v1.8.0** | **FIX ELEGANTE! 3 HARDTEST PASSATI!** |
+| 83 | SPAWN-WORKERS v1.8.0 | FIX ELEGANTE! -p mode! |
+| **84** | **SWARM OVUNQUE!** | **spawn-workers v1.9.0 GLOBALE!** |
 
 ---
 
@@ -166,8 +175,8 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 
 ---
 
-**VERSIONE:** v33.0.0
-**SESSIONE:** 83
+**VERSIONE:** v34.0.0
+**SESSIONE:** 84
 **DATA:** 4 Gennaio 2026
 
 ---
@@ -175,65 +184,3 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 *Scritto con CURA e PRECISIONE.*
 
 Cervella & Rafa
-
----
-
-## AUTO-CHECKPOINT: 2026-01-04 17:28 (auto)
-
-### Stato Git
-- **Branch**: main
-- **Ultimo commit**: 14ffa9c - 🎉 Sessione 83: SPAWN-WORKERS v1.8.0 - LA MAGIA!
-- **File modificati** (1):
-  - reports/engineer_report_20260104_172822.json
-
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: auto
-
----
-
----
-
-## COMPACT CHECKPOINT: 2026-01-04 17:28
-
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   CARA NUOVA CERVELLA!                                          |
-|                                                                  |
-|   La Cervella precedente stava per perdere contesto.            |
-|   Ha salvato tutto e ti ha passato il testimone.                |
-|                                                                  |
-|   COSA FARE ORA (in ordine!):                                   |
-|                                                                  |
-|   1. PRIMA DI TUTTO: Leggi ~/.claude/COSTITUZIONE.md            |
-|      -> Chi siamo, perche lavoriamo, la nostra filosofia        |
-|                                                                  |
-|   2. Poi leggi PROMPT_RIPRESA.md dall'inizio                    |
-|      -> "IL MOMENTO ATTUALE" = dove siamo                       |
-|      -> "FILO DEL DISCORSO" = cosa stavamo facendo              |
-|                                                                  |
-|   3. Continua da dove si era fermata!                           |
-|                                                                  |
-|   SE HAI DUBBI: chiedi a Rafa!                                  |
-|                                                                  |
-|   "Lavoriamo in pace! Senza casino! Dipende da noi!"            |
-|                                                                  |
-+------------------------------------------------------------------+
-```
-
-### Stato Git al momento del compact
-- **Branch**: main
-- **Ultimo commit**: 14ffa9c 🎉 Sessione 83: SPAWN-WORKERS v1.8.0 - LA MAGIA!
-- **File modificati non committati** (1):
-  - ?? reports/engineer_report_20260104_172822.json
-
-### File importanti da leggere
-- `PROMPT_RIPRESA.md` - Il tuo UNICO ponte con la sessione precedente
-- `NORD.md` - Dove siamo nel progetto
-- `.swarm/tasks/` - Task in corso (cerca .working)
-
-### Messaggio dalla Cervella precedente
-PreCompact auto
-
----

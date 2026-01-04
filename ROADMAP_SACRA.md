@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-> **Aggiornato:** 4 Gennaio 2026 - Sessione 83 - SPAWN-WORKERS v1.8.0 LA MAGIA! (v33.0.0)
+> **Aggiornato:** 4 Gennaio 2026 - Sessione 84 - SWARM OVUNQUE! v1.9.0 (v34.0.0)
 
 ```
 +------------------------------------------------------------------+
@@ -323,6 +323,29 @@ APRI -> ASPETTA -> COMUNICA -> TESTA -> VERIFICA -> CHIUDI
 ---
 
 ## CHANGELOG
+
+### 4 Gennaio 2026 (Sessione 84) - SWARM OVUNQUE! v1.9.0
+
+**GLOBALIZZAZIONE SPAWN-WORKERS!**
+
+- spawn-workers v1.9.0: PROJECT-AWARE!
+- Symlink globale in ~/.local/bin/spawn-workers
+- Trova automaticamente .swarm/ nella directory corrente
+
+**PROGETTI ABILITATI (3/3):**
+- CervellaSwarm - FULL SWARM
+- Miracollo - FULL SWARM (testato!)
+- Contabilita - FULL SWARM (testato!)
+
+**VERIFICHE COMPLETATE:**
+- 16 Agents globali in ~/.claude/agents/
+- 8 Hooks globali in ~/.claude/hooks/
+- Hooks progetto Miracollo/Contabilita funzionanti
+- README aggiornati in tutti i progetti
+
+**Versione:** 34.0.0 (MAJOR: Swarm globale funzionante!)
+
+---
 
 ### 4 Gennaio 2026 (Sessione 83) - SPAWN-WORKERS v1.8.0 LA MAGIA!
 

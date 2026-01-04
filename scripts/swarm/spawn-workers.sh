@@ -12,7 +12,7 @@
 #   ./spawn-workers.sh --all                  # Tutti i worker comuni
 #   ./spawn-workers.sh --list                 # Lista worker disponibili
 #
-# Versione: 1.8.0
+# Versione: 1.9.0
 # Data: 2026-01-04
 # Apple Style: Auto-close, Graceful shutdown, Notifiche macOS
 #
@@ -23,17 +23,41 @@
 # v1.7.0: Fix virgolette + auto-exit se no task
 # v1.8.0: FIX ELEGANTE! -p mode = uscita automatica dopo task!
 #         HARDTEST PASSATI: singolo, guardiana, 3x parallelo!
+# v1.9.0: PROJECT-AWARE! Funziona da qualsiasi progetto con .swarm/
+#         Symlink globale in ~/.local/bin/spawn-workers
 # Cervella & Rafa
 # Aggiunto: Supporto Guardiane (Opus)
 
 set -e
 
 # ============================================================================
-# CONFIGURAZIONE
+# CONFIGURAZIONE - PROJECT-AWARE (v1.9.0)
 # ============================================================================
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
+# Trova la root del progetto cercando .swarm/
+# Funziona sia da symlink globale che da chiamata diretta
+find_project_root() {
+    local search_dir="$(pwd)"
+
+    # Cerca .swarm/ nella directory corrente o nelle superiori (max 5 livelli)
+    for i in {1..5}; do
+        if [ -d "${search_dir}/.swarm" ]; then
+            echo "${search_dir}"
+            return 0
+        fi
+        # Se siamo alla root, fermiamoci
+        if [ "${search_dir}" = "/" ]; then
+            break
+        fi
+        search_dir="$(dirname "${search_dir}")"
+    done
+
+    # Non trovato - restituisci pwd e lascia che main() gestisca l'errore
+    echo "$(pwd)"
+    return 1
+}
+
+PROJECT_ROOT="$(find_project_root)"
 SWARM_DIR="${PROJECT_ROOT}/.swarm"
 
 # Colori
