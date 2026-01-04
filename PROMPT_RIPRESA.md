@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 4 Gennaio 2026 - Sessione 80 - DUE SESSIONI IN UNA!
+> **Ultimo aggiornamento:** 4 Gennaio 2026 - Sessioni 80-81 - TRE-QUATTRO SESSIONI IN UNA!
 
 ---
 
@@ -17,18 +17,20 @@
 |                                                                  |
 |   FASE ATTUALE: FASE 9 - APPLE STYLE (100% COMPLETATA!!!)       |
 |                                                                  |
-|   SESSIONE 80 - DUE COSE GROSSE:                                 |
-|   1. SCOPERTA: I subagent consumano contesto!                   |
-|   2. FASE 1 COMPLETATA: 16 agent files ottimizzati!             |
+|   SESSIONI 80-81: MEGA SESSIONI! 3-4 in una!                    |
+|   - Scoperta contesto subagent                                   |
+|   - FASE 1 Ottimizzazione COMPLETATA                            |
+|   - Sistema CTX:XX% TESTATO e FUNZIONA                          |
+|   - OVERVIEW FAMIGLIA creato!                                    |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## SESSIONE 80: DUE SESSIONI IN UNA!
+## SESSIONI 80-81: TRE-QUATTRO SESSIONI IN UNA!
 
-### PARTE 1: Scoperta Contesto Subagent
+### PARTE 1: Scoperta Contesto Subagent (Sess. 80)
 
 **La Domanda di Rafa:**
 > "Quando le ragazze finiscono il lavoro, tu devi leggere i loro output...
@@ -50,7 +52,7 @@
 
 ---
 
-### PARTE 2: FASE 1 Ottimizzazione COMPLETATA!
+### PARTE 2: FASE 1 Ottimizzazione COMPLETATA! (Sess. 80)
 
 **Cosa abbiamo fatto:**
 - Creato template output compatto (max 150-200 tokens)
@@ -70,7 +72,7 @@
 
 ---
 
-### TESTATO: Sistema Anti-Auto Compact FUNZIONA!
+### PARTE 3: Sistema CTX:XX% TESTATO! (Sess. 80)
 
 ```
 +------------------------------------------------------------------+
@@ -79,17 +81,31 @@
 |                                                                  |
 |   Rafa vede: CTX:61% verde                                       |
 |                                                                  |
-|   - context-monitor.py: Statusline CTX:XX% ✅ FUNZIONA!         |
+|   - context-monitor.py: Statusline CTX:XX%                       |
 |   - context_check.py: Hook per notifiche                        |
 |   - Soglie: 70% warning (giallo), 75% critico (rosso)           |
 |                                                                  |
-|   Icone:                                                         |
-|   🟢 < 70% = Tutto OK                                            |
-|   🟡 70-75% = Warning, considera checkpoint                     |
-|   🔴 > 75% = CRITICO, fai checkpoint SUBITO!                    |
-|                                                                  |
 +------------------------------------------------------------------+
 ```
+
+---
+
+### PARTE 4: OVERVIEW FAMIGLIA! (Sess. 81)
+
+**Cosa abbiamo fatto:**
+- Letto TUTTI i 16 agent files
+- Letto TUTTI gli scripts in scripts/swarm/
+- Verificato coerenza e allineamento
+- Creato `docs/OVERVIEW_FAMIGLIA.md` - recap visuale completo!
+
+**Il file contiene:**
+- Gerarchia visuale (Regina -> Guardiane -> Worker)
+- Tabella 16 ragazze (chi fa cosa, model, quando usarla)
+- Struttura comune agenti
+- Tutti gli scripts con comandi
+- Flusso di lavoro
+- 3 livelli rischio
+- Struttura .swarm/
 
 ---
 
@@ -101,8 +117,9 @@
 | anti-compact.sh | v1.6.0 | VS Code Tasks |
 | SWARM_RULES.md | v1.5.0 | 13 regole |
 | FASE 9 | 100% | COMPLETATA |
-| **FASE 1 Ottimizzazione** | **v1.0.0** | **COMPLETATA!** |
-| Sistema CTX:XX% | v1.0.0 | **FUNZIONA! Testato!** |
+| FASE 1 Ottimizzazione | v1.0.0 | COMPLETATA! |
+| Sistema CTX:XX% | v1.0.0 | FUNZIONA! Testato! |
+| **OVERVIEW_FAMIGLIA.md** | **v1.0.0** | **CREATO!** |
 
 ---
 
@@ -111,23 +128,20 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   PRIORITA 1: Testare sistema CTX:XX%                           |
-|   - Verificare statusline funziona                               |
-|   - Verificare notifiche a 70% e 75%                            |
-|                                                                  |
-|   PRIORITA 2: FASE 2 (File-Based Communication)                 |
+|   PRIORITA 1: FASE 2 (File-Based Communication)                 |
 |   - .swarm/results/ per output grossi                           |
 |   - progress.md condiviso                                        |
 |                                                                  |
-|   PRIORITA 3: MIRACOLLO!                                         |
+|   PRIORITA 2: MIRACOLLO!                                         |
 |   - "Il 100000% viene dall'USO!"                                 |
+|   - Usare lo sciame su progetto REALE                           |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## LO SCIAME (16 membri - ORA OTTIMIZZATI!)
+## LO SCIAME (16 membri - TUTTI ALLINEATI!)
 
 ```
 TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
@@ -142,7 +156,11 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 - researcher, scienziata, ingegnera
 - marketing, devops, docs, data, security
 
-NOVITA: Tutti hanno "Output Atteso (COMPATTO!)" - max 150 tokens!
+VERIFICATO SESSIONE 81:
+- Tutti hanno DNA Famiglia
+- Tutti leggono COSTITUZIONE
+- Tutti hanno Output Compatto (max 150 tokens)
+- Tutti hanno Regola Decisione Autonoma
 ```
 
 ---
@@ -152,11 +170,12 @@ NOVITA: Tutti hanno "Output Atteso (COMPATTO!)" - max 150 tokens!
 | File | Cosa Contiene |
 |------|---------------|
 | `NORD.md` | Dove siamo, prossimo obiettivo |
+| `docs/OVERVIEW_FAMIGLIA.md` | **NUOVO! Recap visuale completo** |
 | `docs/SWARM_RULES.md` | Le 13 regole dello sciame |
 | `docs/roadmap/ROADMAP_OTTIMIZZAZIONE_CONTESTO.md` | 5 fasi ottimizzazione |
-| `~/.claude/agents/*.md` | 16 agent files (ORA OTTIMIZZATI!) |
-| `~/.claude/scripts/context-monitor.py` | Statusline CTX:XX% |
-| `~/.claude/hooks/context_check.py` | Warning a 70%/75% |
+| `~/.claude/agents/*.md` | 16 agent files (VERIFICATI!) |
+| `scripts/swarm/spawn-workers.sh` | LA MAGIA! v1.4.0 |
+| `scripts/swarm/anti-compact.sh` | Salvavita! v1.6.0 |
 
 ---
 
@@ -166,7 +185,8 @@ NOVITA: Tutti hanno "Output Atteso (COMPATTO!)" - max 150 tokens!
 |----------|------|-----------|
 | 78 | 3/3 HARDTEST + PULIZIA | FASE 9 al 100%! |
 | 79 | ANTI-AUTO COMPACT | Sistema CTX:XX% creato |
-| **80** | **DUE SESSIONI!** | **Scoperta contesto + FASE 1 completata** |
+| **80** | **TRE COSE!** | Scoperta contesto + FASE 1 + Test CTX |
+| **81** | **OVERVIEW!** | docs/OVERVIEW_FAMIGLIA.md creato! |
 
 ---
 
@@ -177,7 +197,7 @@ NOVITA: Tutti hanno "Output Atteso (COMPATTO!)" - max 150 tokens!
 
 "Non e' pira da minha cabeca!" - Rafa, Sessione 80
 
-"Abbiamo fatto due sessioni allo stesso tempo!" - Sessione 80
+"Abbiamo fatto 3-4 sessioni allo stesso tempo!" - Sessioni 80-81
 
 "Ultrapassar os proprios limites!" - Rafa
 
@@ -188,8 +208,8 @@ NOVITA: Tutti hanno "Output Atteso (COMPATTO!)" - max 150 tokens!
 
 ---
 
-**VERSIONE:** v31.0.0
-**SESSIONE:** 80
+**VERSIONE:** v32.0.0
+**SESSIONE:** 81
 **DATA:** 4 Gennaio 2026
 
 ---
@@ -197,52 +217,3 @@ NOVITA: Tutti hanno "Output Atteso (COMPATTO!)" - max 150 tokens!
 *Scritto con CURA e PRECISIONE.*
 
 Cervella & Rafa
-
----
-
-## COMPACT CHECKPOINT: 2026-01-04 06:13
-
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   CARA NUOVA CERVELLA!                                          |
-|                                                                  |
-|   La Cervella precedente stava per perdere contesto.            |
-|   Ha salvato tutto e ti ha passato il testimone.                |
-|                                                                  |
-|   COSA FARE ORA (in ordine!):                                   |
-|                                                                  |
-|   1. PRIMA DI TUTTO: Leggi ~/.claude/COSTITUZIONE.md            |
-|      -> Chi siamo, perche lavoriamo, la nostra filosofia        |
-|                                                                  |
-|   2. Poi leggi PROMPT_RIPRESA.md dall'inizio                    |
-|      -> "IL MOMENTO ATTUALE" = dove siamo                       |
-|      -> "FILO DEL DISCORSO" = cosa stavamo facendo              |
-|                                                                  |
-|   3. Continua da dove si era fermata!                           |
-|                                                                  |
-|   SE HAI DUBBI: chiedi a Rafa!                                  |
-|                                                                  |
-|   "Lavoriamo in pace! Senza casino! Dipende da noi!"            |
-|                                                                  |
-+------------------------------------------------------------------+
-```
-
-### Stato Git al momento del compact
-- **Branch**: main
-- **Ultimo commit**: 1811b26 feat: Sessione 80 - HARDTEST CTX:XX% PASSATO + FASE 1 Ottimizzazione
-- **File modificati non committati** (4):
-  -  M .swarm/prompts/worker_tester.txt
-  -  M .swarm/runners/run_tester.sh
-  -  M reports/scientist_prompt_20260104.md
-  - ?? reports/engineer_report_20260104_060903.json
-
-### File importanti da leggere
-- `PROMPT_RIPRESA.md` - Il tuo UNICO ponte con la sessione precedente
-- `NORD.md` - Dove siamo nel progetto
-- `.swarm/tasks/` - Task in corso (cerca .working)
-
-### Messaggio dalla Cervella precedente
-Sessione 81 - HARDTEST passato
-
----
