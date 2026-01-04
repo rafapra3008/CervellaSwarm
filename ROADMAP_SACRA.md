@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-> **Aggiornato:** 4 Gennaio 2026 - Sessione 82 - FINITURE & VERIFICA (v32.1.0)
+> **Aggiornato:** 4 Gennaio 2026 - Sessione 83 - SPAWN-WORKERS v1.8.0 LA MAGIA! (v33.0.0)
 
 ```
 +------------------------------------------------------------------+
@@ -323,6 +323,27 @@ APRI -> ASPETTA -> COMUNICA -> TESTA -> VERIFICA -> CHIUDI
 ---
 
 ## CHANGELOG
+
+### 4 Gennaio 2026 (Sessione 83) - SPAWN-WORKERS v1.8.0 LA MAGIA!
+
+**FIX ELEGANTE: Worker Auto-Exit!**
+
+- PROBLEMA: Worker scrivevano "/exit" come testo invece di eseguirlo
+- SOLUZIONE: Aggiunto `-p` mode = uscita automatica dopo task!
+- Finestre Terminal si chiudono da sole dopo completamento
+
+**HARDTEST PASSATI (3/3):**
+- Worker singolo (backend) - analisi log_event.py, report 8/10
+- Guardiana Qualita (Opus) - review APPROVED
+- Multi-worker parallelo - 3 finestre insieme! MAGIA!
+
+**BONUS:**
+- Log files in `.swarm/logs/`
+- MANUALE_DIAMANTE.md globale creato
+
+**Versione:** 33.0.0 (MAJOR: Sistema Multi-Finestra FUNZIONA!)
+
+---
 
 ### 4 Gennaio 2026 (Sessione 82) - FINITURE & VERIFICA
 

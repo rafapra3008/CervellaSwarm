@@ -17,24 +17,27 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 82 - 4 Gennaio 2026: FINITURE & VERIFICA**
+**SESSIONE 83 - 4 Gennaio 2026: SPAWN-WORKERS v1.8.0 - LA MAGIA!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 82: FINITURE PRIMA DI ANDARE LIVE                    |
+|   SESSIONE 83: FIX ELEGANTE SPAWN-WORKERS!                      |
 |                                                                  |
-|   VERIFICATO:                                                    |
-|   - Database swarm_memory.db: FUNZIONA                          |
-|   - Hook SubagentStop: Logga correttamente                      |
-|   - Log errori vecchi: Puliti                                   |
+|   PROBLEMA RISOLTO:                                              |
+|   - Worker scrivevano "/exit" invece di eseguirlo               |
+|   - Finestre restavano aperte                                    |
 |                                                                  |
-|   MANCA:                                                         |
-|   - Finiture generali                                            |
-|   - Double/Triple check sistemi                                  |
-|   - Verifica completa prima di LIVE                             |
+|   SOLUZIONE:                                                     |
+|   - Aggiunto -p mode (print) = uscita automatica!               |
+|   - Finestre si chiudono da sole dopo task                      |
 |                                                                  |
-|   "Una cosa alla volta, con calma" - Rafa                       |
+|   HARDTEST PASSATI:                                              |
+|   - Worker singolo (backend)                                     |
+|   - Guardiana Qualita (Opus)                                     |
+|   - Multi-worker parallelo (3 finestre!)                        |
+|                                                                  |
+|   "E PROPRIO MAGIA!" - Rafa                                     |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -56,7 +59,7 @@
 | HARDTESTS Swarm V3 (4/4) | PASSATI! |
 | Studio Cervello vs Swarm | FUNZIONANTE |
 | .swarm/ sistema Multi-Finestra | FUNZIONANTE |
-| spawn-workers.sh v1.4.0 | APPLE STYLE! Auto-close + Notifiche + Spawn Dinamico |
+| spawn-workers.sh v1.8.0 | FIX ELEGANTE! -p mode + Auto-close + HARDTEST PASSATI! |
 | Template DUBBI | FUNZIONANTE! |
 | Template PARTIAL | FUNZIONANTE! |
 | Triple ACK system | FUNZIONANTE! |
@@ -126,23 +129,27 @@
 
 ## ULTIMO AGGIORNAMENTO
 
-**4 Gennaio 2026 - Sessione 82** - FINITURE & VERIFICA
+**4 Gennaio 2026 - Sessione 83** - SPAWN-WORKERS v1.8.0 LA MAGIA!
 
-### Cosa abbiamo fatto (Sessione 82):
+### Cosa abbiamo fatto (Sessione 83):
 
-1. **Verifica Sistema Log/DB:**
-   - Controllato swarm_memory.db: FUNZIONA
-   - Hook SubagentStop: Logga correttamente
-   - Puliti log errori vecchi (dal 1 Gennaio)
+1. **FIX ELEGANTE spawn-workers.sh:**
+   - PROBLEMA: Worker scrivevano "/exit" invece di eseguirlo
+   - SOLUZIONE: Aggiunto -p mode = uscita automatica!
+   - Finestre si chiudono da sole dopo task completato
 
-2. **Decisione: FINITURE PRIMA DI LIVE**
-   - Mancano finiture generali
-   - Serve double/triple check di tutti i sistemi
-   - "Una cosa alla volta, con calma" - Rafa
+2. **HARDTEST PASSATI (3/3):**
+   - Worker singolo (backend) - analisi log_event.py
+   - Guardiana Qualita (Opus) - review report
+   - Multi-worker parallelo (3 finestre!) - backend+frontend+tester
+
+3. **BONUS creati:**
+   - Log files in .swarm/logs/
+   - MANUALE_DIAMANTE.md globale
 
 ### Prossimo:
-1. **Finiture e verifica completa**
-2. **MIRACOLLO!** - "Il 100000% viene dall'USO!"
+1. **MIRACOLLO!** - "Il 100000% viene dall'USO!"
+2. Test sul campo del sistema completo
 
 ---
 

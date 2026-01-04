@@ -12,13 +12,17 @@
 #   ./spawn-workers.sh --all                  # Tutti i worker comuni
 #   ./spawn-workers.sh --list                 # Lista worker disponibili
 #
-# Versione: 1.7.0
+# Versione: 1.8.0
 # Data: 2026-01-04
 # Apple Style: Auto-close, Graceful shutdown, Notifiche macOS
-# v1.4.0: Fix notifica + exit (notifica PRIMA di exit!)
-# v1.5.0: FIX VERO! Auto-close finestra Terminal tramite TTY!
-# v1.6.0: FIX DIALOGO! Background close = no conferma macOS!
-# v1.7.0: FIX VIRGOLETTE + AUTO-EXIT se no task!
+#
+# CHANGELOG:
+# v1.4.0: Fix notifica + exit
+# v1.5.0: Auto-close finestra Terminal tramite TTY
+# v1.6.0: Background close = no conferma macOS
+# v1.7.0: Fix virgolette + auto-exit se no task
+# v1.8.0: FIX ELEGANTE! -p mode = uscita automatica dopo task!
+#         HARDTEST PASSATI: singolo, guardiana, 3x parallelo!
 # Cervella & Rafa
 # Aggiunto: Supporto Guardiane (Opus)
 
@@ -328,9 +332,16 @@ spawn_worker() {
 MY_TTY=$(tty)
 RUNNEREOF
     echo "cd ${PROJECT_ROOT}" >> "$runner_script"
-    # Prompt iniziale che fa partire il worker automaticamente
-    local initial_prompt="Controlla .swarm/tasks/ per task .ready assegnati a te e inizia a lavorare. Se non ci sono task per te, fai /exit SUBITO!"
-    echo "/Users/rafapra/.nvm/versions/node/v24.11.0/bin/claude --append-system-prompt \"\$(cat ${prompt_file})\" \"${initial_prompt}\"" >> "$runner_script"
+    # Output visivo
+    echo "echo ''" >> "$runner_script"
+    echo "echo '🐝 [CervellaSwarm] Worker avviato'" >> "$runner_script"
+    echo "echo ''" >> "$runner_script"
+    # Prompt iniziale
+    local initial_prompt="Controlla .swarm/tasks/ per task .ready assegnati a te e inizia a lavorare. Se non ci sono task, termina dicendo 'Nessun task per me'."
+    # v1.8.0: -p mode = uscita automatica dopo completamento task!
+    echo "mkdir -p ${SWARM_DIR}/logs" >> "$runner_script"
+    echo "LOG_FILE=\"${SWARM_DIR}/logs/worker_\$(date +%Y%m%d_%H%M%S).log\"" >> "$runner_script"
+    echo "/Users/rafapra/.nvm/versions/node/v24.11.0/bin/claude -p --append-system-prompt \"\$(cat ${prompt_file})\" \"${initial_prompt}\" 2>&1 | tee \"\$LOG_FILE\"" >> "$runner_script"
 
     # Aggiungi chiusura automatica finestra Terminal
     cat >> "$runner_script" << 'CLOSEWINDOWEOF'

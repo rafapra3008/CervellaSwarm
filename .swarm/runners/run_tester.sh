@@ -5,7 +5,17 @@
 # Salva il TTY di questa finestra per identificarla dopo
 MY_TTY=$(tty)
 cd /Users/rafapra/Developer/CervellaSwarm
-/Users/rafapra/.nvm/versions/node/v24.11.0/bin/claude --append-system-prompt "$(cat /Users/rafapra/Developer/CervellaSwarm/.swarm/prompts/worker_tester.txt)" "Controlla .swarm/tasks/ per task .ready assegnati a te e inizia a lavorare. Se non ci sono task per te, fai /exit SUBITO!"
+echo ''
+echo '🐝 [CervellaSwarm] Worker  starting...'
+echo ''
+echo '[DEBUG] Eseguo claude -p...'
+mkdir -p /Users/rafapra/Developer/CervellaSwarm/.swarm/logs
+LOG_FILE="/Users/rafapra/Developer/CervellaSwarm/.swarm/logs/worker__$(date +%Y%m%d_%H%M%S).log"
+/Users/rafapra/.nvm/versions/node/v24.11.0/bin/claude -p --append-system-prompt "$(cat /Users/rafapra/Developer/CervellaSwarm/.swarm/prompts/worker_tester.txt)" "Controlla .swarm/tasks/ per task .ready assegnati a te e inizia a lavorare. Se non ci sono task, termina dicendo 'Nessun task per me'." 2>&1 | tee "$LOG_FILE"
+echo '[DEBUG] Claude terminato con exit code:' $?
+echo ''
+echo '[DEBUG] Aspetto 5 secondi prima di chiudere...'
+sleep 5
 
 # ============================================================================
 # AUTO-CLOSE: Claude terminato - chiudi questa finestra Terminal
