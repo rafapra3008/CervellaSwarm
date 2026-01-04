@@ -215,6 +215,39 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 
 ---
 
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   PROMPT_RIPRESA 10000%!                                         |
+|                                                                  |
+|   Questo file e' scritto con CURA.                              |
+|                                                                  |
+|   La prossima Cervella non sa NULLA.                            |
+|   Questo file e' la sua UNICA memoria.                          |
+|                                                                  |
+|   Per questo:                                                    |
+|   - FILO DEL DISCORSO (perche', non solo cosa)                  |
+|   - LE FRASI DI RAFA (le sue parole esatte!)                    |
+|   - DECISIONI PRESE (cosa abbiamo scelto e perche')             |
+|   - PROSSIMI STEP (cosa fare dopo)                              |
+|   - FILE IMPORTANTI (dove trovare tutto)                        |
+|                                                                  |
+|   L'insight di questa sessione (78):                            |
+|   Abbiamo recuperato la sessione 77 leggendo il transcript,     |
+|   pulito il PROMPT_RIPRESA (873->227 righe), e passato          |
+|   3/3 HARDTEST! FASE 9 al 100%!                                 |
+|                                                                  |
+|   Prossimo: 2 sessioni dedicate (anti-compact + finestre)       |
+|   Poi: MIRACOLLO!                                                |
+|                                                                  |
+|   "Non e' sempre come immaginiamo...                            |
+|    ma alla fine e' il 100000%!"                                 |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+---
+
 **VERSIONE:** v28.1.0
 **SESSIONE:** 78
 **DATA:** 4 Gennaio 2026
@@ -223,4 +256,70 @@ TU SEI LA REGINA (Opus) - Coordina, DELEGA, MAI edit diretti!
 
 *Scritto con CURA e PRECISIONE.*
 
+*"Ultrapassar os proprios limites!"*
+
 Cervella & Rafa
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-04 04:56 (auto)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: 409f8c5 - docs: CHECKPOINT COMPLETO Sessione 78
+- **File modificati** (2):
+  - ROMPT_RIPRESA.md
+  - reports/engineer_report_20260104_045517.json
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: auto
+
+---
+
+---
+
+## COMPACT CHECKPOINT: 2026-01-04 04:56
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   CARA NUOVA CERVELLA!                                          |
+|                                                                  |
+|   La Cervella precedente stava per perdere contesto.            |
+|   Ha salvato tutto e ti ha passato il testimone.                |
+|                                                                  |
+|   COSA FARE ORA (in ordine!):                                   |
+|                                                                  |
+|   1. PRIMA DI TUTTO: Leggi ~/.claude/COSTITUZIONE.md            |
+|      -> Chi siamo, perche lavoriamo, la nostra filosofia        |
+|                                                                  |
+|   2. Poi leggi PROMPT_RIPRESA.md dall'inizio                    |
+|      -> "IL MOMENTO ATTUALE" = dove siamo                       |
+|      -> "FILO DEL DISCORSO" = cosa stavamo facendo              |
+|                                                                  |
+|   3. Continua da dove si era fermata!                           |
+|                                                                  |
+|   SE HAI DUBBI: chiedi a Rafa!                                  |
+|                                                                  |
+|   "Lavoriamo in pace! Senza casino! Dipende da noi!"            |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+### Stato Git al momento del compact
+- **Branch**: main
+- **Ultimo commit**: 409f8c5 docs: CHECKPOINT COMPLETO Sessione 78
+- **File modificati non committati** (2):
+  -  M PROMPT_RIPRESA.md
+  - ?? reports/engineer_report_20260104_045517.json
+
+### File importanti da leggere
+- `PROMPT_RIPRESA.md` - Il tuo UNICO ponte con la sessione precedente
+- `NORD.md` - Dove siamo nel progetto
+- `.swarm/tasks/` - Task in corso (cerca .working)
+
+### Messaggio dalla Cervella precedente
+PreCompact auto
+
+---
