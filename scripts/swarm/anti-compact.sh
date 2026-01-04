@@ -18,12 +18,13 @@
 #   ./anti-compact.sh --no-spawn          # Solo checkpoint, no nuova finestra
 #   ./anti-compact.sh --message "testo"   # Con messaggio custom
 #
-# Versione: 1.4.0
+# Versione: 1.5.0
 # Data: 2026-01-04
 # v1.1.0: Fix comando claude (era 'claudecode')
 # v1.2.0: Istruzioni COMPLETE per nuova Cervella!
 # v1.3.0: Chiarito che nuova finestra e' OBBLIGATORIA, non opzionale!
 # v1.4.0: PROMPT AUTOMATICO! La nuova finestra parte GIA con istruzioni!
+# v1.5.0: Usa iTerm2 invece di VS Code (write text funziona PERFETTO!)
 # Cervella DevOps & Rafa
 # "ZERO PERDITA. ZERO PANICO. MAGIA PURA."
 
@@ -212,43 +213,45 @@ echo ""
 log_success "La nuova sessione puo riprendere da qui!"
 echo ""
 
-# Step 5: Spawn nuova finestra VS Code CON PROMPT AUTOMATICO!
+# Step 5: Spawn nuova finestra terminale CON PROMPT AUTOMATICO!
 if [ "$SPAWN_NEW_WINDOW" = true ]; then
     # Verifica se siamo su macOS
     if [[ "$OSTYPE" == "darwin"* ]]; then
-        log_info "Apertura nuova finestra VS Code CON PROMPT AUTOMATICO..."
-
         # Prompt iniziale per la nuova Cervella
         INITIAL_PROMPT="ANTI-COMPACT: Sono la nuova Cervella! La sessione precedente mi ha passato il testimone. Leggo subito COSTITUZIONE e PROMPT_RIPRESA per capire dove eravamo e continuo il lavoro!"
 
         # Comando claude da eseguire
         CLAUDE_CMD="cd ${PROJECT_ROOT} && /Users/rafapra/.nvm/versions/node/v24.11.0/bin/claude '${INITIAL_PROMPT}'"
 
-        # AppleScript per aprire VS Code con nuovo terminale
-        osascript << APPLESCRIPT
-        -- Attiva VS Code
-        tell application "Visual Studio Code"
-            activate
-        end tell
+        # Verifica se iTerm2 e' installato
+        if [ -d "/Applications/iTerm.app" ]; then
+            log_info "Apertura nuova finestra iTerm2 CON PROMPT AUTOMATICO..."
 
-        delay 0.5
-
-        -- Apre nuovo terminale integrato (Ctrl+Shift+\`)
-        tell application "System Events"
-            keystroke "\`" using {control down, shift down}
-        end tell
-
-        delay 0.8
-
-        -- Esegue il comando claude
-        tell application "System Events"
-            keystroke "${CLAUDE_CMD}"
-            keystroke return
-        end tell
+            # AppleScript per iTerm2 - usa "write text" che include Enter automatico!
+            osascript << APPLESCRIPT
+tell application "iTerm2"
+    create window with default profile
+    tell current session of current tab of current window
+        write text "${CLAUDE_CMD}"
+    end tell
+end tell
 APPLESCRIPT
+            log_success "Nuova finestra iTerm2 aperta!"
+        else
+            log_info "Apertura nuova finestra Terminal.app CON PROMPT AUTOMATICO..."
 
-        log_success "Nuova finestra VS Code aperta CON PROMPT AUTOMATICO!"
-        log_info "La nuova Cervella sta partendo nel terminale integrato!"
+            # AppleScript per Terminal.app - usa "do script" che esegue il comando!
+            osascript << APPLESCRIPT
+tell application "Terminal"
+    do script "${CLAUDE_CMD}"
+    activate
+end tell
+APPLESCRIPT
+            log_success "Nuova finestra Terminal.app aperta!"
+        fi
+
+        log_info "La nuova Cervella sta partendo!"
+        log_info "Nota: Se preferisci VS Code, usa Tasks.json (vedi .swarm/tasks/RICERCA_VSCODE_TERMINAL_output.md)"
     else
         log_warning "Apertura automatica finestra disponibile solo su macOS"
         log_info "Apri manualmente una nuova finestra e riprendi da PROMPT_RIPRESA.md"

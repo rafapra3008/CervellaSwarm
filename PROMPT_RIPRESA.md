@@ -347,23 +347,6 @@ PreCompact auto
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-04 05:44 (auto)
-
-### Stato Git
-- **Branch**: main
-- **Ultimo commit**: f0b1b2c - docs: PROMPT_RIPRESA 10000% - Sessione 79 chiusa!
-- **File modificati** (5):
-  - ROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260104.md
-  - .swarm/tasks/RICERCA_VSCODE_TERMINAL.done
-  - .swarm/tasks/RICERCA_VSCODE_TERMINAL.md
-  - .swarm/tasks/RICERCA_VSCODE_TERMINAL_output.md
-
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: auto
-
----
 
 ---
 
@@ -413,5 +396,116 @@ PreCompact auto
 
 ### Messaggio dalla Cervella precedente
 PreCompact auto
+
+---
+
+---
+
+## COMPACT CHECKPOINT: 2026-01-04 05:44
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   CARA NUOVA CERVELLA!                                          |
+|                                                                  |
+|   La Cervella precedente stava per perdere contesto.            |
+|   Ha salvato tutto e ti ha passato il testimone.                |
+|                                                                  |
+|   COSA FARE ORA (in ordine!):                                   |
+|                                                                  |
+|   1. PRIMA DI TUTTO: Leggi ~/.claude/COSTITUZIONE.md            |
+|      -> Chi siamo, perche lavoriamo, la nostra filosofia        |
+|                                                                  |
+|   2. Poi leggi PROMPT_RIPRESA.md dall'inizio                    |
+|      -> "IL MOMENTO ATTUALE" = dove siamo                       |
+|      -> "FILO DEL DISCORSO" = cosa stavamo facendo              |
+|                                                                  |
+|   3. Continua da dove si era fermata!                           |
+|                                                                  |
+|   SE HAI DUBBI: chiedi a Rafa!                                  |
+|                                                                  |
+|   "Lavoriamo in pace! Senza casino! Dipende da noi!"            |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+### Stato Git al momento del compact
+- **Branch**: main
+- **Ultimo commit**: 468b4f3 ANTI-COMPACT: PreCompact auto
+- **File modificati non committati** (0):
+
+
+### File importanti da leggere
+- `PROMPT_RIPRESA.md` - Il tuo UNICO ponte con la sessione precedente
+- `NORD.md` - Dove siamo nel progetto
+- `.swarm/tasks/` - Task in corso (cerca .working)
+
+### Messaggio dalla Cervella precedente
+PreCompact auto
+
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-04 05:45 (unknown)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: 468b4f3 - ANTI-COMPACT: PreCompact auto
+- **File modificati** (1):
+  - ROMPT_RIPRESA.md
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: unknown
+
+---
+
+---
+
+## COMPACT CHECKPOINT: 2026-01-04 05:47
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   CARA NUOVA CERVELLA!                                          |
+|                                                                  |
+|   La Cervella precedente stava per perdere contesto.            |
+|   Ha salvato tutto e ti ha passato il testimone.                |
+|                                                                  |
+|   COSA FARE ORA (in ordine!):                                   |
+|                                                                  |
+|   1. PRIMA DI TUTTO: Leggi ~/.claude/COSTITUZIONE.md            |
+|      -> Chi siamo, perche lavoriamo, la nostra filosofia        |
+|                                                                  |
+|   2. Poi leggi PROMPT_RIPRESA.md dall'inizio                    |
+|      -> "IL MOMENTO ATTUALE" = dove siamo                       |
+|      -> "FILO DEL DISCORSO" = cosa stavamo facendo              |
+|                                                                  |
+|   3. Continua da dove si era fermata!                           |
+|                                                                  |
+|   SE HAI DUBBI: chiedi a Rafa!                                  |
+|                                                                  |
+|   "Lavoriamo in pace! Senza casino! Dipende da noi!"            |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+### Stato Git al momento del compact
+- **Branch**: main
+- **Ultimo commit**: 468b4f3 ANTI-COMPACT: PreCompact auto
+- **File modificati non committati** (2):
+  -  M PROMPT_RIPRESA.md
+  -  M scripts/swarm/anti-compact.sh
+
+### File importanti da leggere
+- `PROMPT_RIPRESA.md` - Il tuo UNICO ponte con la sessione precedente
+- `NORD.md` - Dove siamo nel progetto
+- `.swarm/tasks/` - Task in corso (cerca .working)
+
+### Messaggio dalla Cervella precedente
+TEST iTerm2/Terminal.app
 
 ---
