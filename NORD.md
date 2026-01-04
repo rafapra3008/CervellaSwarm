@@ -17,25 +17,25 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 78 - 4 Gennaio 2026: FASE 9 APPLE STYLE 98% + PULIZIA!**
+**SESSIONE 79 - 4 Gennaio 2026: ANTI-AUTO COMPACT IMPLEMENTATO!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 77-78: CONSOLIDAMENTO!                               |
+|   SESSIONE 79: ANTI-AUTO COMPACT AUTOMATICO!                    |
 |                                                                  |
-|   SESSIONE 77:                                                   |
-|   - REGOLA 13: Multi-finestra > Task tool (SWARM_RULES v1.5.0)  |
-|   - anti-compact.sh: nuova finestra OBBLIGATORIA                |
-|   - spawn-workers.sh v1.4.0: notifica PRIMA di exit             |
-|   - FIX COSTITUZIONE.md: file reale (no symlink iCloud)         |
+|   SCOPERTA: Compact avviene al 77-78%, NON 99%!                 |
 |                                                                  |
-|   SESSIONE 78:                                                   |
-|   - PROMPT_RIPRESA pulito: 873 -> 232 righe!                    |
-|   - NORD.md aggiornato                                          |
-|   - Pronte per 3 HARDTEST finali                                |
+|   SISTEMA CREATO:                                                |
+|   - context-monitor.py: Statusline CTX:XX%                      |
+|   - context_check.py: Hook UserPromptSubmit                     |
+|   - Notifiche macOS: 70% warning, 75% critico                   |
 |                                                                  |
-|   POI: MIRACOLLO!                                                |
+|   3 API hanno lavorato in parallelo:                            |
+|   - scienziata (community), ingegnera (transcript)              |
+|   - researcher (Claude internals)                                |
+|                                                                  |
+|   "Siamo nel 2026, non anni 80!" - Rafa                         |
 |                                                                  |
 +------------------------------------------------------------------+
 ```

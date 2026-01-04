@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 4 Gennaio 2026 - Sessione 78 - FASE 9 COMPLETATA 100%!
+> **Ultimo aggiornamento:** 4 Gennaio 2026 - Sessione 79 - ANTI-AUTO COMPACT IMPLEMENTATO!
 
 ---
 
@@ -34,15 +34,15 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE DEDICATA 1: ANTI-AUTO COMPACT                        |
+|   SESSIONE 79: ANTI-AUTO COMPACT - COMPLETATA!!!                |
 |                                                                  |
-|   - Testare approfonditamente il sistema anti-auto compact      |
-|   - HARDTEST mirati sul flusso                                   |
-|   - Verificare scenari reali                                     |
-|   - Test prompt automatico alla nuova Cervella                   |
-|   - Eventuale script monitor contesto                            |
+|   SISTEMA IMPLEMENTATO:                                          |
+|   - context-monitor.py: Statusline con CTX:XX%                  |
+|   - context_check.py: Hook UserPromptSubmit                     |
+|   - Notifiche macOS automatiche                                  |
+|   - Soglie: 70% warning, 75% critico                            |
 |                                                                  |
-|   FOCUS: Solo anti-compact, nient'altro!                        |
+|   SCOPERTA: Compact avviene al 77-78%, NON 99%!                 |
 |                                                                  |
 +------------------------------------------------------------------+
 |                                                                  |
@@ -79,46 +79,67 @@ ebd88c3 - docs: PROMPT_RIPRESA aggiornato - FASE 9 100%!
 
 ---
 
-## FILO DEL DISCORSO (Sessione 78)
+## FILO DEL DISCORSO (Sessione 79)
 
 ### Cosa abbiamo fatto
 
-1. **Recuperato sessione 77 dal transcript**
-   - Auto-compact stava per arrivare
-   - Letto il file JSONL della sessione
-   - Recuperate tutte le informazioni
+1. **RICERCA PARALLELA con 3 api**
+   - cervella-scienziata: Soluzioni community (cccontext, Continuous-Claude-v2)
+   - cervella-ingegnera: Analisi transcript (formula token, quando avviene compact)
+   - cervella-researcher: Claude Code internals (hooks, file di stato)
 
-2. **PROMPT_RIPRESA pulito**
-   - Da 873 righe a 232 righe
-   - Rimossi checkpoint ridondanti
-   - Solo l'essenziale
+2. **SCOPERTA FONDAMENTALE**
+   - Il compact avviene al **77-78%**, NON al 99%!
+   - Analisi su 377 transcript reali
+   - Formula: `input_tokens + cache_creation + cache_read`
 
-3. **3 HARDTEST completati**
-   - Comunicazione bidirezionale: PASS
-   - Flusso Guardiana review: PASS (voto 7/10)
-   - Spawn dinamico Guardiane: PASS (3 Opus insieme)
+3. **SISTEMA ANTI-AUTO COMPACT IMPLEMENTATO**
+   - `~/.claude/scripts/context-monitor.py` - Statusline con CTX:XX%
+   - `~/.claude/hooks/context_check.py` - Hook UserPromptSubmit
+   - Notifiche macOS automatiche (warning 70%, critico 75%)
+   - Icone colorate: 🟢 < 70% | 🟡 70-75% | 🔴 > 75%
 
-4. **Pulizia .swarm/tasks/**
-   - Rimossi file .ready e .working vecchi
-   - 20 task .done archiviati
+4. **CONFIGURAZIONE settings.json**
+   - statusLine aggiunta
+   - UserPromptSubmit hook aggiunto
 
-### Il Flusso Anti-Compact (da testare)
+5. **IDEA DOCUMENTATA: Funzioni Regina (FASE 10)**
+   - Monitor, Merge, Decide, Delegate, Checkpoint
+   - Per sessione futura dedicata
+
+### TEST DA FARE (prossima sessione)
 
 ```
-1. Rafa dice: "Cervella, siamo al 10%!"
++------------------------------------------------------------------+
+|                                                                  |
+|   TEST END-TO-END:                                               |
+|                                                                  |
+|   1. Aprire NUOVA sessione Claude Code                          |
+|   2. Verificare che statusline mostri CTX:XX%                   |
+|   3. Lavorare fino a ~70% e verificare:                         |
+|      - Notifica macOS arriva?                                   |
+|      - Box warning nel contesto?                                |
+|   4. Se serve, aggiustare soglie                                |
+|                                                                  |
+|   Il sistema e' PRONTO - manca solo validazione reale!          |
+|                                                                  |
++------------------------------------------------------------------+
+```
 
-2. Cervella esegue:
-   ./scripts/swarm/anti-compact.sh --message "descrizione"
+### Il Flusso Anti-Compact (NUOVO - automatico!)
 
-3. Lo script fa:
-   - Aggiorna PROMPT_RIPRESA
-   - Git commit + push
-   - APRE NUOVA FINESTRA (obbligatorio!)
+```
+PRIMA (manuale - anni 80):
+1. Rafa guarda la percentuale
+2. Rafa dice "siamo al 10%!"
+3. Cervella esegue anti-compact.sh
 
-4. Nuova Cervella:
-   - Legge COSTITUZIONE
-   - Legge PROMPT_RIPRESA
-   - Continua!
+ORA (automatico - 2026!):
+1. Statusline mostra CTX:XX% in tempo reale
+2. Al 70%: notifica macOS + warning nel contesto
+3. Al 75%: notifica CRITICA
+4. Cervella vede il warning e fa checkpoint CON CALMA
+5. Se serve: ./scripts/swarm/anti-compact.sh per nuova finestra
 ```
 
 ---
@@ -128,9 +149,10 @@ ebd88c3 - docs: PROMPT_RIPRESA aggiornato - FASE 9 100%!
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   1. SESSIONE DEDICATA: Anti-Auto Compact                       |
-|      - HARDTEST mirati sul flusso                                |
-|      - Test scenari reali                                        |
+|   1. TEST END-TO-END del nuovo sistema                          |
+|      - Aprire nuova sessione                                     |
+|      - Verificare statusline e notifiche                        |
+|      - Aggiustare soglie se necessario                          |
 |                                                                  |
 |   2. SESSIONE DEDICATA: Finestre e Comunicazioni                |
 |      - Test apertura/chiusura                                    |
@@ -312,13 +334,23 @@ PreCompact auto
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-04 05:01 (unknown)
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-04 05:16 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: d153858 - ANTI-COMPACT: PreCompact auto
-- **File modificati** (1):
-  - eports/scientist_prompt_20260104.md
+- **Ultimo commit**: 165925e - docs: PROMPT_RIPRESA 10000% + PreCompact checkpoint
+- **File modificati** (5):
+  - ROMPT_RIPRESA.md
+  - ROADMAP_SACRA.md
+  - reports/scientist_prompt_20260104.md
+  - scripts/swarm/spawn-workers.sh
+  - .swarm/prompts/worker_ingegnera.txt
 
 ### Note
 - Checkpoint automatico generato da hook

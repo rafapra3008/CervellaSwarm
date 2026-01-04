@@ -249,6 +249,29 @@ APRI -> ASPETTA -> COMUNICA -> TESTA -> VERIFICA -> CHIUDI
 
 ## FASI FUTURE
 
+### FASE 10: Funzioni Regina (IDEA - Sessione 79)
+
+**Obiettivo:** La Regina NON aspetta passivamente mentre le api lavorano!
+
+> *"Mentre le api lavorano, la Regina COORDINA attivamente!"* - Sessione 79
+
+| Funzione | Cosa Fa |
+|----------|---------|
+| MONITOR | Controlla stato task (.working, .done), dashboard ASCII |
+| MERGE | Unisce i report quando arrivano |
+| DECIDE | Sceglie la strada migliore |
+| DELEGATE | Lancia nuovi task se serve |
+| CHECKPOINT | Salva stato periodicamente |
+
+**Script da creare:** `regina-monitor.sh`
+- Dashboard ASCII con stato task
+- Notifica quando un'ape finisce
+- Prepara merge dei report
+
+**Priorità:** MEDIA (dopo anti-compact)
+
+---
+
 ### FASE 11: Sistema Roadmap Visuale (IDEA)
 
 **Obiettivo:** Un sito web per visualizzare e gestire le roadmap

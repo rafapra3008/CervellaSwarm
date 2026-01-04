@@ -41,7 +41,7 @@ NC='\033[0m' # No Color
 COMMON_WORKERS="backend frontend tester"
 
 # Lista tutti i worker disponibili
-ALL_WORKERS="backend frontend tester docs reviewer devops researcher data security"
+ALL_WORKERS="backend frontend tester docs reviewer devops researcher data security scienziata ingegnera"
 
 # Lista Guardiane (Opus - supervisione)
 ALL_GUARDIANS="guardiana-qualita guardiana-ops guardiana-ricerca"
@@ -165,6 +165,24 @@ Specializzazione: Sicurezza, audit, vulnerabilita.
 ${base_prompt}
 
 FOCUS: Cerca task per 'cervella-security' in .swarm/tasks/"
+            ;;
+        scienziata)
+            echo "Sei CERVELLA-SCIENZIATA.
+Specializzazione: Ricerca STRATEGICA, trend di mercato, competitor analysis, opportunita business.
+Diversa da researcher (tecnica), tu guardi il BUSINESS e le STRATEGIE.
+
+${base_prompt}
+
+FOCUS: Cerca task per 'cervella-scienziata' in .swarm/tasks/"
+            ;;
+        ingegnera)
+            echo "Sei CERVELLA-INGEGNERA.
+Specializzazione: Analisi codebase, technical debt, refactoring, ottimizzazioni.
+Analizzi e proponi, NON modifichi direttamente.
+
+${base_prompt}
+
+FOCUS: Cerca task per 'cervella-ingegnera' in .swarm/tasks/"
             ;;
         guardiana-qualita)
             echo "Sei CERVELLA-GUARDIANA-QUALITA (Opus).
@@ -321,6 +339,8 @@ show_usage() {
     echo "  --researcher           Spawna cervella-researcher"
     echo "  --data                 Spawna cervella-data"
     echo "  --security             Spawna cervella-security"
+    echo "  --scienziata           Spawna cervella-scienziata"
+    echo "  --ingegnera            Spawna cervella-ingegnera"
     echo "  --guardiana-qualita    Spawna cervella-guardiana-qualita (Opus)"
     echo "  --guardiana-ops        Spawna cervella-guardiana-ops (Opus)"
     echo "  --guardiana-ricerca    Spawna cervella-guardiana-ricerca (Opus)"
@@ -389,6 +409,12 @@ main() {
                 ;;
             --security)
                 workers_to_spawn="${workers_to_spawn} security"
+                ;;
+            --scienziata)
+                workers_to_spawn="${workers_to_spawn} scienziata"
+                ;;
+            --ingegnera)
+                workers_to_spawn="${workers_to_spawn} ingegnera"
                 ;;
             --guardiana-qualita)
                 workers_to_spawn="${workers_to_spawn} guardiana-qualita"
