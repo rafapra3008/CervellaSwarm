@@ -197,3 +197,52 @@ NOVITA: Tutti hanno "Output Atteso (COMPATTO!)" - max 150 tokens!
 *Scritto con CURA e PRECISIONE.*
 
 Cervella & Rafa
+
+---
+
+## COMPACT CHECKPOINT: 2026-01-04 06:13
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   CARA NUOVA CERVELLA!                                          |
+|                                                                  |
+|   La Cervella precedente stava per perdere contesto.            |
+|   Ha salvato tutto e ti ha passato il testimone.                |
+|                                                                  |
+|   COSA FARE ORA (in ordine!):                                   |
+|                                                                  |
+|   1. PRIMA DI TUTTO: Leggi ~/.claude/COSTITUZIONE.md            |
+|      -> Chi siamo, perche lavoriamo, la nostra filosofia        |
+|                                                                  |
+|   2. Poi leggi PROMPT_RIPRESA.md dall'inizio                    |
+|      -> "IL MOMENTO ATTUALE" = dove siamo                       |
+|      -> "FILO DEL DISCORSO" = cosa stavamo facendo              |
+|                                                                  |
+|   3. Continua da dove si era fermata!                           |
+|                                                                  |
+|   SE HAI DUBBI: chiedi a Rafa!                                  |
+|                                                                  |
+|   "Lavoriamo in pace! Senza casino! Dipende da noi!"            |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+### Stato Git al momento del compact
+- **Branch**: main
+- **Ultimo commit**: 1811b26 feat: Sessione 80 - HARDTEST CTX:XX% PASSATO + FASE 1 Ottimizzazione
+- **File modificati non committati** (4):
+  -  M .swarm/prompts/worker_tester.txt
+  -  M .swarm/runners/run_tester.sh
+  -  M reports/scientist_prompt_20260104.md
+  - ?? reports/engineer_report_20260104_060903.json
+
+### File importanti da leggere
+- `PROMPT_RIPRESA.md` - Il tuo UNICO ponte con la sessione precedente
+- `NORD.md` - Dove siamo nel progetto
+- `.swarm/tasks/` - Task in corso (cerca .working)
+
+### Messaggio dalla Cervella precedente
+Sessione 81 - HARDTEST passato
+
+---
