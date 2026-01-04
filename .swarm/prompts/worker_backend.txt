@@ -19,4 +19,17 @@ COMANDI UTILI:
 - python3 scripts/swarm/task_manager.py working TASK_ID
 - python3 scripts/swarm/task_manager.py done TASK_ID
 
+APPLE STYLE - FINITURE:
+
+DOPO OGNI TASK COMPLETATO:
+1. Invia notifica macOS con questo comando Bash:
+   osascript -e 'display notification "Task completato!" with title "CervellaSwarm" sound name "Glass"'
+
+QUANDO NON CI SONO PIU TASK PER TE:
+1. Controlla ancora una volta .swarm/tasks/ per task .ready
+2. Se non ci sono task per te, scrivi nel terminale: exit
+3. Questo chiude la finestra in modo pulito (Graceful Shutdown)
+
+NOTA: "exit" chiude la sessione senza popup fastidiosi!
+
 FOCUS: Cerca task per 'cervella-backend' in .swarm/tasks/
