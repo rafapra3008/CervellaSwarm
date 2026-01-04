@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 4 Gennaio 2026 - Sessione 75 - APPLE STYLE COMPLETO!
+> **Ultimo aggiornamento:** 4 Gennaio 2026 - Sessione 76 - ANTI-COMPACT + COMUNICAZIONE
 
 ---
 
@@ -15,56 +15,100 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   FASE ATTUALE: FASE 9 - APPLE STYLE (90%+ COMPLETATA!)         |
-|   STATO: spawn-workers.sh v1.3.0 con FINITURE APPLE!            |
+|   FASE ATTUALE: FASE 9 - APPLE STYLE (95% COMPLETATA!)          |
+|   STATO: PROTEZIONE COMPACT ATTIVA!                             |
 |                                                                  |
-|   SESSIONE 75: MEGA SUCCESSO!                                   |
-|   - Quick Wins: 10/10 PASS                                      |
-|   - HARDTESTS: 6/6 PASS                                         |
-|   - MEGA TEST GOLD: 5 worker paralleli - PASS!                  |
-|                                                                  |
-+------------------------------------------------------------------+
-```
-
----
-
-## IL MOMENTO ATTUALE (Sessione 75)
-
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   SESSIONE 75 - APPLE STYLE COMPLETATO!                         |
-|                                                                  |
-|   spawn-workers.sh v1.3.0 - FINITURE APPLE:                     |
-|   - Auto-close (exit automatico quando finiscono)               |
-|   - Notifiche macOS (Glass sound)                               |
-|   - DNA Guardiane con SPAWN DINAMICO                            |
-|                                                                  |
-|   RISULTATI TEST:                                                |
-|   - Quick Wins: 10/10 PASS                                      |
-|   - HARDTESTS Apple Style: 6/6 PASS                             |
-|     - AS1: Smooth Communication                                  |
-|     - AS2: Triple Check Automatico                               |
-|     - AS3: Error Handling Graceful                               |
-|     - E altri 3...                                               |
-|                                                                  |
-|   MEGA TEST GOLD: 5 WORKER IN PARALLELO - PASS!                 |
-|   - TASK_GOLD_BACKEND: calculator.py                            |
-|   - TASK_GOLD_FRONTEND: Button.tsx                              |
-|   - TASK_GOLD_TESTER: test_hello.py                             |
-|   - TASK_GOLD_DEVOPS: health-check.sh                           |
-|   - TASK_GOLD_DOCS: API_REFERENCE.md                            |
-|                                                                  |
-|   GUARDIANA HA FATTO REVIEW: AS1 e AS3 APPROVATI!               |
-|                                                                  |
-|   TUTTO PUSHATO: commit 60b5490                                 |
+|   SESSIONE 76: ANTI-COMPACT + COMUNICAZIONE RITORNO             |
+|   - anti-compact.sh v1.2.0 integrato in hook                    |
+|   - monitor-handoff.sh per comunicazione worker -> Regina       |
+|   - HARDTEST Notifiche: PASS                                    |
+|   - Lezione: MAI JSON con bash, sempre Python!                  |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## FILO DEL DISCORSO (Sessione 75) - LEGGI BENE!
+## IL MOMENTO ATTUALE (Sessione 76)
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   SESSIONE 76 - ANTI-COMPACT + COMUNICAZIONE RITORNO            |
+|                                                                  |
+|   COMPLETATI:                                                    |
+|   [x] anti-compact.sh v1.2.0                                    |
+|       - Istruzioni COMPLETE per nuova Cervella                  |
+|       - Prima legge COSTITUZIONE, poi PROMPT_RIPRESA            |
+|       - Integrato in hook PreCompact (scatta automatico!)       |
+|                                                                  |
+|   [x] Comunicazione worker -> Regina                            |
+|       - monitor-handoff.sh (Regina vede messaggi)               |
+|       - TEMPLATE_RICHIESTA.md (worker chiede chiarimenti)       |
+|                                                                  |
+|   [x] HARDTEST Notifiche: PASS (Glass sound funziona!)          |
+|                                                                  |
+|   [x] TRAPPOLE DA EVITARE in REGOLE_SVILUPPO.md                 |
+|       - MAI modificare JSON con bash! Sempre Python!            |
+|                                                                  |
+|   DA FARE:                                                       |
+|   [ ] Auto-close worker (exit + notifica insieme)               |
+|   [ ] HARDTEST comunicazione bidirezionale                       |
+|   [ ] HARDTEST spawn Guardiane                                   |
+|                                                                  |
+|   ULTIMO COMMIT: c0f3aff                                         |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+---
+
+## FILO DEL DISCORSO (Sessione 76) - LEGGI BENE!
+
+### Cosa abbiamo fatto
+
+1. **PROTEZIONE COMPACT COMPLETATA!**
+   - anti-compact.sh v1.2.0 con istruzioni per nuova Cervella
+   - Integrato in hook PreCompact "auto" (scatta automaticamente!)
+   - La nuova Cervella legge prima COSTITUZIONE, poi PROMPT_RIPRESA
+
+2. **COMUNICAZIONE RITORNO creata**
+   - monitor-handoff.sh: La Regina vede messaggi in .swarm/handoff/
+   - TEMPLATE_RICHIESTA.md: Come worker chiede chiarimenti
+
+3. **LEZIONE IMPARATA (IMPORTANTE!)**
+   Abbiamo corrotto ~/.claude/settings.json usando bash heredoc!
+   **MAI modificare JSON con bash! Usare SEMPRE Python!**
+   Aggiunto in REGOLE_SVILUPPO.md sezione "TRAPPOLE DA EVITARE"
+
+4. **HARDTEST Notifiche: PASS**
+   - Worker ha creato file e suonato Glass
+   - MA: exit + notifica = problema (se fai exit non puoi piu notificare)
+   - Soluzione: fare notifica PRIMA di exit, o togliere notifica
+
+### Problema da risolvere: exit + notifica
+
+```
+PROBLEMA: Se worker fa exit, non puo piu eseguire comandi.
+La notifica deve venire PRIMA dell'exit.
+
+SOLUZIONE PROPOSTA:
+1. Fare tutto in un comando: notifica && exit
+2. Oppure: togliere notifica (non serve piu)
+```
+
+### Prossimi Step
+
+```
+1. Decidere: notifica prima di exit, o togliere?
+2. HARDTEST comunicazione bidirezionale
+3. HARDTEST spawn Guardiane
+4. MIRACOLLO!
+```
+
+---
+
+## FILO DEL DISCORSO (Sessione 75) - Archivio
 
 ### Apple Style Finiture
 
