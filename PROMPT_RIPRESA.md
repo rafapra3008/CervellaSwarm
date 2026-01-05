@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 4 Gennaio 2026 - Sessione 86 - AUTO-HANDOFF v4.0.0!
+> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 87 - AUTO-HANDOFF v4.3.0 VS CODE NATIVO!
 
 ---
 
@@ -15,16 +15,104 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   FASE ATTUALE: AUTO-HANDOFF DA PERFEZIONARE                    |
+|   FASE ATTUALE: AUTO-HANDOFF COMPLETATO! VS CODE NATIVO!        |
 |                                                                  |
-|   SESSIONE 86:                                                   |
-|   - context_check.py v4.0.0 - Apre Terminal + claude -p         |
-|   - FUNZIONA ma claude esce dopo risposta                       |
-|   - DA FIXARE: restare aperto / aprire su VS Code               |
+|   SESSIONE 87:                                                   |
+|   - context_check.py v4.3.0 - VS CODE NATIVO!                   |
+|   - Apre VS Code + terminal integrato + Claude                  |
+|   - TUTTO in una finestra! TESTATO E FUNZIONA!                  |
 |                                                                  |
-|   "Siamo nel 2026!" - Rafa                                      |
+|   "E' ORO!" - Rafa                                              |
 |                                                                  |
 +------------------------------------------------------------------+
+```
+
+---
+
+## SESSIONE 87: AUTO-HANDOFF v4.3.0 VS CODE NATIVO!
+
+### L'Obiettivo
+
+Fare funzionare l'AUTO-HANDOFF aprendo VS Code con Claude nel terminal integrato (non Terminal.app separato).
+
+### Il Problema Iniziale
+
+La sessione 86 aveva:
+- `claude -p` che usciva dopo il prompt (risolto togliendo `-p`)
+- VS Code si apriva ma il terminal integrato non rispondeva a osascript
+- Rafa: "sarebbe meglio aprire su vscode"
+
+### Cosa Abbiamo Fatto
+
+1. **ANALISI APPROFONDITA** - 10 passi indietro, ricerca seria
+   - Letto settings.json, capito come funzionano gli hooks
+   - Analizzato spawn-workers.sh per pattern funzionanti
+   - Test minimali uno alla volta
+
+2. **SCOPERTA CHIAVE: Command Palette!**
+   - `Ctrl+backtick` per aprire terminal NON funziona da osascript
+   - `Cmd+Shift+P` + "Terminal: Create New Terminal" FUNZIONA!
+
+3. **PATTERN TESTATO E FUNZIONANTE:**
+   ```
+   1. code --new-window /path     (apre VS Code)
+   2. sleep 4                      (aspetta apertura)
+   3. Cmd+Shift+P                  (Command Palette)
+   4. "Terminal: Create New Terminal" + Enter
+   5. sleep 2                      (aspetta terminal)
+   6. keystroke "claude prompt" + Enter
+   ```
+
+4. **context_check.py v4.3.0**
+   - Nuova funzione `open_vscode_with_claude()`
+   - Fallback a Terminal.app se VS Code fallisce
+   - TESTATO con Miracollo - FUNZIONA PERFETTAMENTE!
+
+### Filo del Discorso
+
+Rafa voleva VS Code nativo, non due finestre separate. Abbiamo fatto ricerca seria:
+- Prima provato alla cieca (non funzionava)
+- Rafa: "Facciamo 10 passi indietro"
+- Test minimali: Calculator, Terminal, VS Code
+- Scoperto che Command Palette e' la chiave
+- Test completo con log e timing
+- "HAHAHAHAHAH TU SEI LA NUMERO UNO!" - Rafa quando ha funzionato
+
+### FILE MODIFICATI (Sessione 87)
+
+| File | Cosa |
+|------|------|
+| `~/.claude/hooks/context_check.py` | v4.3.0 - VS CODE NATIVO! |
+
+### COMANDI CHE FUNZIONANO (copia e usa!)
+
+```bash
+# Apre VS Code su progetto + terminal + comando (TESTATO!)
+code --new-window ~/Developer/miracollogeminifocus
+sleep 4
+osascript << 'EOF'
+tell application "Visual Studio Code" to activate
+delay 1
+tell application "System Events"
+    tell process "Code"
+        keystroke "p" using {command down, shift down}
+        delay 0.8
+        keystroke "Terminal: Create New Terminal"
+        delay 0.5
+        key code 36
+    end tell
+end tell
+EOF
+sleep 2
+osascript << 'EOF'
+tell application "System Events"
+    tell process "Code"
+        keystroke "echo CIAO"
+        delay 0.3
+        key code 36
+    end tell
+end tell
+EOF
 ```
 
 ---
@@ -388,17 +476,31 @@ PreCompact auto
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-04 19:55 (unknown)
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-05 02:43 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 5815eb3 - 🐝 Sessione 84: SWARM OVUNQUE! spawn-workers v1.9.0 GLOBALE!
+- **Ultimo commit**: 3126fa6 - 📝 PROMPT_RIPRESA 100000%! Sessione 86
 - **File modificati** (5):
-  - ORD.md
-  - PROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260104.md
-  - .swarm/handoff/HANDOFF_20260104_184226.md
-  - .swarm/handoff/HANDOFF_20260104_184447.md
+  - swarm/runners/run_backend.sh
+  - .swarm/tasks/HT3_BACKEND.ready
+  - .swarm/tasks/HT3_BACKEND_output.md
+  - .swarm/tasks/TASK_TEST_BACKEND.ready
+  - .swarm/tasks/TASK_TEST_BACKEND_output.md
 
 ### Note
 - Checkpoint automatico generato da hook

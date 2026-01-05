@@ -1,13 +1,17 @@
-# HT3_BACKEND - Output
+# HT3_BACKEND - Analisi task_manager.py
 
-**Completato da:** cervella-backend
-**Data:** 2026-01-04
+**Analizzato da:** cervella-backend
+**Data:** 2026-01-05
 
-## Risultato
+---
 
-**Numero funzioni:** 12
+## Numero Funzioni
 
-## Lista funzioni
+**12 funzioni**
+
+---
+
+## Lista Nomi
 
 - `validate_task_id` (riga 21)
 - `ensure_tasks_dir` (riga 62)
@@ -21,3 +25,7 @@
 - `get_task_status` (riga 303)
 - `get_ack_status` (riga 333)
 - `cleanup_task` (riga 358)
+
+---
+
+*Report generato da cervella-backend*

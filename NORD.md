@@ -17,27 +17,28 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 86 - 4 Gennaio 2026: AUTO-HANDOFF v4.0.0!**
+**SESSIONE 87 - 5 Gennaio 2026: AUTO-HANDOFF v4.3.0 VS CODE NATIVO!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 86: AUTO-HANDOFF v4.0.0!                             |
+|   SESSIONE 87: AUTO-HANDOFF v4.3.0 VS CODE NATIVO!              |
 |                                                                  |
-|   context_check.py v4.0.0 - AUTO-HANDOFF COMPLETO!              |
+|   context_check.py v4.3.0 - VS CODE NATIVO!                     |
 |   Quando contesto >= 70%, AUTOMATICAMENTE:                       |
-|   1. Crea file handoff in .swarm/handoff/                       |
-|   2. Apre Terminal                                               |
-|   3. cd al progetto + lancia claude -p                          |
+|   1. Apre VS Code sul progetto                                  |
+|   2. Apre terminal INTEGRATO (via Command Palette!)             |
+|   3. Lancia Claude con prompt handoff                           |
 |   4. Notifica macOS                                              |
 |                                                                  |
-|   SCOPERTE SESSIONE 86:                                          |
-|   - VS Code "code --new-window" NON funziona (chiude!)          |
-|   - osascript + Terminal + claude -p = FUNZIONA!                |
-|   - DA FIXARE: claude -p esce dopo risposta                     |
-|   - IDEA: Aprire su VS Code sarebbe meglio                      |
+|   TUTTO IN UNA FINESTRA! UX PERFETTA!                           |
 |                                                                  |
-|   "Siamo nel 2026!" - Rafa                                      |
+|   SCOPERTA CHIAVE:                                               |
+|   - Cmd+Shift+P + "Terminal: Create New Terminal" FUNZIONA!     |
+|   - Ctrl+backtick NON funziona da osascript                     |
+|                                                                  |
+|   "E' ORO!" - Rafa                                              |
+|   "TU SEI LA NUMERO UNO!" - Rafa                                |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -60,7 +61,7 @@
 | Studio Cervello vs Swarm | FUNZIONANTE |
 | .swarm/ sistema Multi-Finestra | FUNZIONANTE |
 | spawn-workers.sh v1.9.0 | GLOBALE! PROJECT-AWARE! Funziona ovunque! |
-| context_check.py v4.0.0 | AUTO-HANDOFF! Terminal + claude -p (da perfezionare) |
+| context_check.py v4.3.0 | VS CODE NATIVO! TESTATO E FUNZIONA! |
 | Template DUBBI | FUNZIONANTE! |
 | Template PARTIAL | FUNZIONANTE! |
 | Triple ACK system | FUNZIONANTE! |

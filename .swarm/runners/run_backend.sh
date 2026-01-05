@@ -6,16 +6,11 @@
 MY_TTY=$(tty)
 cd /Users/rafapra/Developer/CervellaSwarm
 echo ''
-echo '🐝 [CervellaSwarm] Worker  starting...'
+echo '🐝 [CervellaSwarm] Worker avviato'
 echo ''
-echo '[DEBUG] Eseguo claude...'
 mkdir -p /Users/rafapra/Developer/CervellaSwarm/.swarm/logs
-LOG_FILE="/Users/rafapra/Developer/CervellaSwarm/.swarm/logs/worker__$(date +%Y%m%d_%H%M%S).log"
-script -q "$LOG_FILE" /Users/rafapra/.nvm/versions/node/v24.11.0/bin/claude -p --append-system-prompt "$(cat /Users/rafapra/Developer/CervellaSwarm/.swarm/prompts/worker_backend.txt)" "Controlla .swarm/tasks/ per task .ready assegnati a te e inizia a lavorare. Se non ci sono task, termina subito."
-echo '[DEBUG] Claude terminato con exit code:' $?
-echo ''
-echo '[DEBUG] Aspetto 5 secondi prima di chiudere...'
-sleep 5
+LOG_FILE="/Users/rafapra/Developer/CervellaSwarm/.swarm/logs/worker_$(date +%Y%m%d_%H%M%S).log"
+/Users/rafapra/.nvm/versions/node/v24.11.0/bin/claude -p --append-system-prompt "$(cat /Users/rafapra/Developer/CervellaSwarm/.swarm/prompts/worker_backend.txt)" "Controlla .swarm/tasks/ per task .ready assegnati a te e inizia a lavorare. Se non ci sono task, termina dicendo 'Nessun task per me'." 2>&1 | tee "$LOG_FILE"
 
 # ============================================================================
 # AUTO-CLOSE: Claude terminato - chiudi questa finestra Terminal

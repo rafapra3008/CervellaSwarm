@@ -1,85 +1,63 @@
 # Report Analisi: log_event.py
 
 **Analizzato da:** cervella-backend
-**Data:** 2026-01-04
+**Data:** 2026-01-05
 **File:** `scripts/memory/log_event.py`
-**Versione file:** 1.2.0
+**Versione:** 1.2.0
 
 ---
 
-## 1. Numero di Funzioni
+## 1. Numero Funzioni
 
-Il file contiene **6 funzioni**:
-
-| # | Funzione | Righe |
-|---|----------|-------|
-| 1 | `extract_agent_info()` | 24-72 |
-| 2 | `extract_task_info()` | 75-97 |
-| 3 | `extract_files_modified()` | 100-112 |
-| 4 | `extract_project()` | 115-132 |
-| 5 | `log_event()` | 135-240 |
-| 6 | `main()` | 243-274 |
+**Totale: 6 funzioni**
 
 ---
 
-## 2. Funzioni Principali
+## 2. Lista Funzioni Principali
 
-### `log_event(payload: dict) -> dict`
-**La funzione CORE del modulo.** Riceve un payload da hook PostToolUse e:
-- Estrae info agent, task, file modificati e progetto
-- Valida se e un agent swarm
-- Inserisce l'evento nel database SQLite
-- Gestisce errori senza bloccare il workflow
-
-### `extract_agent_info(payload: dict) -> dict`
-Estrae nome e ruolo dell'agent dal payload. Supporta tutti i 14 agent dello sciame (11 worker + 3 guardiane).
-
-### `extract_task_info(payload: dict) -> dict`
-Estrae descrizione e stato del task. Cerca in vari campi comuni (task, prompt, description, query, message).
-
-### `extract_project(payload: dict) -> str`
-Deduce il progetto dal path cwd (miracollo, contabilita, cervellaswarm, unknown).
-
-### `main()`
-Entry point. Legge JSON da stdin, chiama log_event(), stampa risultato.
+| # | Nome | Riga | Descrizione |
+|---|------|------|-------------|
+| 1 | `extract_agent_info` | 24 | Estrae informazioni sull'agent dal payload |
+| 2 | `extract_task_info` | 75 | Estrae informazioni sul task dal payload |
+| 3 | `extract_files_modified` | 100 | Estrae lista file modificati dal payload |
+| 4 | `extract_project` | 115 | Deduce il progetto dal contesto (cwd) |
+| 5 | `log_event` | 135 | Funzione principale: logga evento nel database |
+| 6 | `main` | 243 | Entry point: legge stdin e chiama log_event |
 
 ---
 
 ## 3. Potenziali Miglioramenti
 
-### A. Positivi (Ben Fatto!)
+### Positivi (cosa funziona bene)
 - Gestione errori graceful (non blocca mai il workflow)
-- Supporto formato vecchio e nuovo (retrocompatibilita)
-- Exit 0 anche su errore (non blocca hook)
-- Codice ben documentato con docstring
+- Fallback per formati vecchi del payload
+- Mapping completo di tutti i 14 agent
+- Docstrings presenti
 
-### B. Suggerimenti Minori
+### Suggerimenti Miglioramento
 
-1. **Costante per lunghezza fallback**: La riga 91 usa `[:200]` come magic number. Potrebbe essere una costante:
-   ```python
-   MAX_FALLBACK_LENGTH = 200
-   ```
+1. **Connessione DB non context manager**
+   - Linea 203-225: usa `with sqlite3.connect(db_path) as conn:` per chiusura automatica
 
-2. **Logging strutturato**: Il file usa `print(..., file=sys.stderr)` per errori. Potrebbe usare il modulo `logging` per consistenza con altri script.
+2. **Duplicazione logica estrazione tool_input**
+   - `extract_agent_info` e `extract_task_info` hanno logica simile per estrarre `tool_input`
+   - Possibile helper: `get_tool_input(payload)` riutilizzabile
 
-3. **Type hints completi**: Alcune funzioni tornano `list` o `str` ma potrebbero avere hint piu specifici:
-   ```python
-   def extract_files_modified(payload: dict) -> list[str]:
-   ```
+3. **Magic strings per progetti**
+   - Linee 125-132: i nomi progetti sono hardcoded
+   - Possibile config esterna o costanti
 
-4. **Test unitari**: Non ci sono test per questo modulo. Sarebbe utile avere test per:
-   - Payload formato nuovo
-   - Payload formato vecchio
-   - Payload non-swarm agent
-   - DB non esistente
+4. **Nessun logging strutturato**
+   - Solo `print` a stderr (linea 236)
+   - Possibile integrazione con modulo `logging`
 
 ---
 
-## Conclusione
+## Criteri di Successo
 
-Il file e **ben strutturato** e **robusto**. Segue il principio di non bloccare mai il workflow anche in caso di errori. I suggerimenti sono miglioramenti minori, non critici.
-
-**Voto: 8/10** - Codice production-ready con piccoli margini di miglioramento.
+- [x] File analizzato
+- [x] Report scritto
+- [x] Suggerimenti (se ci sono)
 
 ---
 
