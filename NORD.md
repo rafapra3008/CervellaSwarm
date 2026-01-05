@@ -86,29 +86,47 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   I 3 PEZZI MANCANTI PER IL 100000%!                            |
-|                                                                  |
-|   "SU CARTA != REALE" - Costituzione                            |
+|   I 3 PEZZI MANCANTI + LA GRANDE VISIONE!                       |
 |                                                                  |
 |   PRIORITA' 1: ANTI AUTO-COMPACT                                |
-|   → Renderlo SEAMLESS (testato, funzionante)                    |
-|   → Zero perdita di contesto                                    |
-|   → Status: SU CARTA - DA RENDERE REALE!                        |
+|   → v5.0.0 IMPLEMENTATO - DA TESTARE!                           |
 |                                                                  |
 |   PRIORITA' 2: SISTEMA FEEDBACK CERVELLE                        |
-|   → Raccolta automatica a fine sessione                         |
-|   → Analisi periodica pattern                                   |
 |   → Il sistema IMPARA dai propri errori                         |
-|   → Status: IDEA GENIALE - DA IMPLEMENTARE!                     |
 |                                                                  |
 |   PRIORITA' 3: ROADMAPS VISUALE                                 |
 |   → Multi-progetto automatico                                   |
-|   → Un comando, tutti i progetti                                |
-|   → Status: IDEA - DA RICERCARE!                                |
 |                                                                  |
-|   ROADMAP DEDICATA: docs/roadmap/ROADMAP_3_PEZZI_MANCANTI.md   |
+|   PRIORITA' 4: TEMPLATE NUOVO PROGETTO                          |
+|   → swarm-init in 1 comando!                                    |
 |                                                                  |
-|   PROSSIMA SESSIONE: Iniziare da ANTI AUTO-COMPACT!            |
++------------------------------------------------------------------+
+```
+
+---
+
+## LA GRANDE VISIONE: CERVELLASWARM IDE!
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   "PIÙ FIGHE CHE CURSOR 2.0!" - Rafa, 5 Gennaio 2026           |
+|                                                                  |
+|   L'IDEA:                                                        |
+|   - IDE basato su VS Code                                        |
+|   - Multi-AI (Claude, GPT, Gemini, Llama...)                    |
+|   - 16+ agenti specializzati                                     |
+|   - Roadmaps visuali integrati                                   |
+|   - COMUNICAZIONE e ORGANIZZAZIONE                               |
+|                                                                  |
+|   IL SEGRETO:                                                    |
+|   "COMUNICAZIONE e VISUALIZZARE"                                 |
+|   "ORDINE e ORGANIZZAZIONE"                                      |
+|   "Em busca da similaridade"                                     |
+|                                                                  |
+|   DOCUMENTO: docs/visione/VISIONE_CERVELLASWARM_IDE.md          |
+|                                                                  |
+|   Questa idea potrebbe essere IL PRODOTTO!                      |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
