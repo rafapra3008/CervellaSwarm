@@ -17,27 +17,24 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 90 - 5 Gennaio 2026: QUICK-TASK + FILOSOFIA DI VITA!**
+**SESSIONE 92 - 5 Gennaio 2026: VISIBILITA' WORKER COMPLETATA!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 90: LA PIU' EPICA!                                   |
+|   SESSIONE 92: LUCE NEL BUIO!                                   |
 |                                                                  |
-|   1. QUICK-TASK COMMAND - Da 6 step a 1!                        |
-|      quick-task "descrizione" --backend                         |
-|      "Rendi facile fare la cosa giusta!"                        |
+|   FASE 1 VISIBILITA' COMPLETATA:                                |
+|   - spawn-workers v2.2.0 (Heartbeat + Notifiche)                |
+|   - swarm-heartbeat v1.0.0 (nuovo comando!)                     |
+|   - dashboard.py v1.1.0 (sezione LIVE HEARTBEAT)                |
 |                                                                  |
-|   2. FILOSOFIA DI VITA:                                          |
-|      "Non combattere la natura umana (via piu facile).          |
-|       PROGETTA intorno ad essa!"                                 |
+|   HARDTEST PASSATO: 3 heartbeat scritti correttamente!          |
 |                                                                  |
-|   3. FIX SICUREZZA ALTI (3 fix completati!)                     |
+|   $ swarm-heartbeat                                              |
+|   [backend] ACTIVE (15s ago) - Analizzando file X               |
 |                                                                  |
-|   4. REGOLE DNA: 14 (Via Giusta) + 15 (Whitelist)               |
-|                                                                  |
-|   31 file, 2732 inserzioni!                                      |
-|   "Ultrapassar os proprios limites!" - Rafa                     |
+|   "Lavorare al buio e' difficile - ORA ABBIAMO LUCE!"          |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -75,22 +72,19 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 91: STABILIZZAZIONE + STUDIO VISIBILITA'!            |
+|   PROSSIMA SESSIONE:                                             |
 |                                                                  |
-|   COMPLETATO:                                                    |
-|   - Template prompt inizio sessione                              |
-|   - Worker Health Tracking (PID + cleanup)                       |
-|   - spawn-workers v2.1.0 + swarm-cleanup v1.0.0                 |
+|   1. CODE REVIEW SETTIMANALE                                     |
+|      - Oggi e' lunedi!                                           |
+|      - cervella-reviewer per audit                               |
 |                                                                  |
-|   STUDIO DA FARE (PRIORITA' ALTA!):                             |
-|   "IL MISTERO DEL WORKER"                                        |
-|   Come vedere cosa fa il worker MENTRE lavora?                   |
-|   Soluzioni da studiare:                                         |
-|   - tail -f streaming log                                        |
-|   - Heartbeat con stato                                          |
-|   - swarm-watch dashboard live                                   |
+|   2. FASE 2.5: STUDIO FRONTEND WORKER (futuro)                  |
+|      - Cosa vede l'utente nella finestra?                        |
+|      - Come migliorare UX?                                       |
+|      - Priorita' BASSA (sistema funziona!)                       |
 |                                                                  |
-|   "Lavorare al buio e' difficile!" - Rafa                       |
+|   3. MIRACOLLO!                                                  |
+|      - Usare swarm in produzione                                 |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -136,7 +130,7 @@
 
 ## ULTIMO AGGIORNAMENTO
 
-**5 Gennaio 2026 - Sessione 91** - STABILIZZAZIONE SWARM + STUDIO VISIBILITA'!
+**5 Gennaio 2026 - Sessione 92** - VISIBILITA' WORKER COMPLETATA!
 
 ### Cosa abbiamo fatto (Sessione 91):
 

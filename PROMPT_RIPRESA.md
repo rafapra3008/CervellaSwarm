@@ -855,17 +855,29 @@ PreCompact auto
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-05 05:02 (unknown)
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-05 06:15 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: ec30d45 - NORD.md: Sessione 90 EPICA!
+- **Ultimo commit**: 6d5069a - Sessione 91: Stabilizzazione Swarm + Studio Visibilita!
 - **File modificati** (5):
-  - swarm/tasks/TASK_20260105_042820_migliorare_testo_inizio_sessione.ready
-  - reports/scientist_prompt_20260105.md
-  - scripts/swarm/spawn-workers.sh
-  - .swarm/handoff/HANDOFF_20260105_044257.md
-  - .swarm/tasks/TASK_20260105_042820_migliorare_testo_inizio_sessione.done
+  - swarm/prompts/worker_backend.txt
+  - .swarm/runners/run_backend.sh
+  - .swarm/tasks/TASK_20260105_051500_studio_visibilita_guardiana.ready
+  - .swarm/tasks/TASK_20260105_051500_studio_visibilita_researcher.ready
+  - .swarm/tasks/TASK_REGOLA_VIA_GIUSTA.ready
 
 ### Note
 - Checkpoint automatico generato da hook

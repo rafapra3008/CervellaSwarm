@@ -12,12 +12,13 @@
 #   ./spawn-workers.sh --all                  # Tutti i worker comuni
 #   ./spawn-workers.sh --list                 # Lista worker disponibili
 #
-# Versione: 2.1.0
+# Versione: 2.2.0
 # Data: 2026-01-05
 # Apple Style: Auto-close, Graceful shutdown, Notifiche macOS
 # v2.0.0: Config centralizzata ~/.swarm/config
 #
 # CHANGELOG:
+# v2.2.0: HEARTBEAT + Notifiche INIZIO task! Worker scrivono stato ogni 60s
 # v2.1.0: Worker Health Tracking - PID/timestamp per sapere se worker e' vivo!
 # v1.4.0: Fix notifica + exit
 # v1.5.0: Auto-close finestra Terminal tramite TTY
@@ -127,6 +128,15 @@ REGOLE WORKER:
 5. NON modificare file fuori dal tuo scope
 6. Se hai dubbi, scrivi in .swarm/handoff/ per la Regina
 
+HEARTBEAT (IMPORTANTE - fallo ogni 60 secondi mentre lavori!):
+Scrivi il tuo stato attuale per la Regina:
+echo "$(date +%s)|NOME_TASK|cosa stai facendo ora" >> .swarm/status/heartbeat_WORKER.log
+
+Esempio:
+echo "$(date +%s)|TASK_123|Analizzando file database.py" >> .swarm/status/heartbeat_backend.log
+
+Questo permette alla Regina di vedere il tuo progresso in tempo reale!
+
 COMANDI UTILI:
 - python3 scripts/swarm/task_manager.py list
 - python3 scripts/swarm/task_manager.py working TASK_ID
@@ -134,9 +144,10 @@ COMANDI UTILI:
 
 APPLE STYLE - FINITURE:
 
-DOPO OGNI TASK COMPLETATO:
-1. Invia notifica macOS con virgolette DRITTE ("):
-   osascript -e 'display notification "Task completato" with title "CervellaSwarm" sound name "Glass"'
+NOTIFICHE (usa SEMPRE virgolette DRITTE!):
+- INIZIO TASK: osascript -e 'display notification "Inizio: NOME_TASK" with title "CervellaSwarm"'
+- FINE TASK: osascript -e 'display notification "Completato: NOME_TASK" with title "CervellaSwarm" sound name "Glass"'
+- ERRORE: osascript -e 'display notification "ERRORE!" with title "CervellaSwarm" sound name "Basso"'
 
 QUANDO NON CI SONO PIU TASK PER TE:
 1. Controlla .swarm/tasks/ per task .ready assegnati a te

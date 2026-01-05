@@ -12,8 +12,8 @@ Usage:
     ./dashboard.py --help       # Mostra help
 """
 
-__version__ = "1.0.0"
-__version_date__ = "2026-01-03"
+__version__ = "1.1.0"
+__version_date__ = "2026-01-05"
 
 import sys
 import json
@@ -416,6 +416,91 @@ def render_activity(tasks: List[Dict]) -> str:
     return '\n'.join(lines)
 
 
+def get_live_activity_from_heartbeat() -> List[Dict]:
+    """
+    Legge heartbeat files e mostra attivita' live dei worker.
+
+    Returns:
+        Lista di dict con: worker, timestamp, task, action, is_active
+    """
+    activities = []
+    status_dir = Path('.swarm/status')
+
+    if not status_dir.exists():
+        return activities
+
+    for hb_file in status_dir.glob('heartbeat_*.log'):
+        try:
+            content = hb_file.read_text().strip()
+            if not content:
+                continue
+
+            lines = content.split('\n')
+            last_line = lines[-1]
+            parts = last_line.split('|')
+
+            if len(parts) >= 3:
+                timestamp = int(parts[0])
+                task = parts[1]
+                action = parts[2]
+
+                age = int(time.time()) - timestamp
+                is_active = age < 120  # Active se heartbeat < 2 minuti
+
+                activities.append({
+                    'worker': hb_file.stem.replace('heartbeat_', ''),
+                    'timestamp': timestamp,
+                    'task': task,
+                    'action': action,
+                    'age': age,
+                    'is_active': is_active
+                })
+        except Exception:
+            continue
+
+    return activities
+
+
+def render_heartbeat() -> str:
+    """Renderizza la sezione heartbeat live."""
+    lines = []
+
+    lines.append("║                                                                                      ║")
+    lines.append("║  " + colorize("LIVE HEARTBEAT", Colors.BOLD) + "                                                                       ║")
+
+    activities = get_live_activity_from_heartbeat()
+
+    if not activities:
+        lines.append("║  " + colorize("Nessun heartbeat - i worker non hanno ancora scritto", Colors.DIM) + "                          ║")
+    else:
+        for activity in activities:
+            worker = activity['worker'][:12]
+            action = activity['action'][:40] if activity['action'] else '-'
+            age = activity['age']
+
+            # Formatta age
+            if age < 60:
+                age_str = f"{age}s"
+            else:
+                age_str = f"{age // 60}m"
+
+            # Status con colore
+            if activity['is_active']:
+                status = colorize("ACTIVE", Colors.BRIGHT_GREEN)
+            else:
+                status = colorize("STALE ", Colors.BRIGHT_YELLOW)
+
+            # Padding
+            worker_pad = 12 - len(worker)
+            age_pad = 5 - len(age_str)
+            action_pad = 40 - len(action)
+
+            line = f"║  {worker}{' ' * worker_pad} {status} ({age_str}{' ' * age_pad}) {action}{' ' * action_pad}   ║"
+            lines.append(line)
+
+    return '\n'.join(lines)
+
+
 def render_footer() -> str:
     """Renderizza il footer della dashboard."""
     lines = []
@@ -438,6 +523,7 @@ def render_dashboard(tasks: List[Dict]) -> str:
         render_header(),
         render_workers(tasks),
         render_stats(tasks),
+        render_heartbeat(),
         render_activity(tasks),
         render_footer()
     ]
