@@ -17,24 +17,27 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 92 - 5 Gennaio 2026: VISIBILITA' WORKER COMPLETATA!**
+**SESSIONE 93 - 5 Gennaio 2026: REGOLA 13 RISCRITTA!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 92: LUCE NEL BUIO!                                   |
+|   SESSIONE 93: CHIAREZZA NELLE REGOLE!                          |
 |                                                                  |
-|   FASE 1 VISIBILITA' COMPLETATA:                                |
-|   - spawn-workers v2.2.0 (Heartbeat + Notifiche)                |
-|   - swarm-heartbeat v1.0.0 (nuovo comando!)                     |
-|   - dashboard.py v1.1.0 (sezione LIVE HEARTBEAT)                |
+|   REGOLA 13 COMPLETAMENTE RISCRITTA:                            |
 |                                                                  |
-|   HARDTEST PASSATO: 3 heartbeat scritti correttamente!          |
+|   DELEGO A UN AGENTE? → SEMPRE spawn-workers!                   |
 |                                                                  |
-|   $ swarm-heartbeat                                              |
-|   [backend] ACTIVE (15s ago) - Analizzando file X               |
+|   - Niente eccezioni "task veloce"                              |
+|   - Niente confusione "ricerca vs modifiche"                    |
+|   - SEMPLICE: Se delego = spawn-workers. Punto.                 |
 |                                                                  |
-|   "Lavorare al buio e' difficile - ORA ABBIAMO LUCE!"          |
+|   5 FILE AGGIORNATI per coerenza totale:                        |
+|   - cervella-orchestrator.md v1.2.0                             |
+|   - CLAUDE.md, SWARM_RULES.md v1.6.0                            |
+|   - MANUALE_DIAMANTE.md, CHECKLIST_AZIONE.md                    |
+|                                                                  |
+|   "Comodo ≠ Giusto!" → "SEMPRE spawn-workers!"                  |
 |                                                                  |
 +------------------------------------------------------------------+
 ```

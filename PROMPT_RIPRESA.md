@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 92 - VISIBILITA' WORKER COMPLETATA!
+> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 93 - REGOLA 13 RISCRITTA!
 
 ---
 
@@ -15,17 +15,81 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   SESSIONE 92: VISIBILITA' WORKER COMPLETATA!                   |
-|   - FASE 1 implementata e TESTATA!                               |
-|   - spawn-workers v2.2.0 (Heartbeat + Notifiche)                |
-|   - swarm-heartbeat v1.0.0 (nuovo comando!)                     |
-|   - dashboard.py v1.1.0 (sezione LIVE HEARTBEAT)                |
-|   - HARDTEST PASSATO - 3 heartbeat scritti!                     |
+|   SESSIONE 93: REGOLA 13 RISCRITTA!                             |
 |                                                                  |
-|   "Lavorare al buio e' difficile - ORA ABBIAMO LUCE!"          |
+|   LA REGOLA PIU' IMPORTANTE:                                     |
+|   DELEGO A UN AGENTE? → SEMPRE spawn-workers!                   |
+|                                                                  |
+|   - Niente eccezioni "task veloce"                              |
+|   - Niente "Task tool per ricerca"                              |
+|   - Se delego = spawn-workers. Punto.                           |
+|                                                                  |
+|   5 file aggiornati per coerenza totale!                        |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
+
+---
+
+## SESSIONE 93: REGOLA 13 RISCRITTA!
+
+### Il Problema (visto in Miracollo)
+
+Rafa ha visto una Cervella in Miracollo che spiegava:
+- "Task tool per ricerche, spawn-workers per modifiche"
+
+Ma questo era SBAGLIATO! Anche le ricerche consumano contesto!
+
+### La Soluzione
+
+Abbiamo riscritto la REGOLA 13 in modo SEMPLICE e CHIARO:
+
+```
+DELEGO A UN AGENTE? → SEMPRE spawn-workers!
+
+- cervella-researcher  → spawn-workers --researcher
+- cervella-backend     → spawn-workers --backend
+- cervella-docs        → spawn-workers --docs
+- QUALSIASI agente     → spawn-workers!
+
+NIENTE ECCEZIONI "TASK VELOCE"!
+Se delego = spawn-workers. Punto.
+```
+
+### Perche' SEMPRE spawn-workers?
+
+1. L'agente lavora nel SUO contesto (finestra separata)
+2. Il MIO contesto resta PULITO per coordinare
+3. Se IO compatto → l'agente continua tranquillo
+4. L'agente filtra e mi da' solo il RISULTATO pulito
+
+### File Aggiornati (Sessione 93)
+
+| File | Cosa |
+|------|------|
+| `~/.claude/agents/cervella-orchestrator.md` | Regola 13 riscritta, v1.2.0 |
+| `~/.claude/CLAUDE.md` | Sezione SWARM MODE aggiornata |
+| `docs/SWARM_RULES.md` | Regola 13 riscritta, v1.6.0 |
+| `~/.claude/MANUALE_DIAMANTE.md` | Aggiunta Regola 0 Swarm |
+| `~/.claude/CHECKLIST_AZIONE.md` | Checklist SWARM aggiornata |
+
+### Filo del Discorso
+
+Rafa aveva sessione Miracollo aperta. Ha visto una Cervella confusa sulle regole.
+Siamo venuti su CervellaSwarm per SISTEMARE il DNA alla fonte.
+
+Il ragionamento:
+- Task tool interno = agente lavora nel MIO contesto = consuma MIO spazio
+- spawn-workers = agente lavora nel SUO contesto = MIO contesto resta pulito
+- Quindi: SEMPRE spawn-workers per qualsiasi delega!
+
+Abbiamo aggiornato 5 file per avere coerenza TOTALE.
+
+### Prossimi Step
+
+1. **Testare in Miracollo** - Le nuove Cervelle seguiranno la regola?
+2. **Code Review** - Oggi e' lunedi!
+3. **MIRACOLLO!** - Usare swarm in produzione
 
 ---
 
@@ -936,17 +1000,19 @@ PreCompact auto
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-05 06:15 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-05 07:06 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 6d5069a - Sessione 91: Stabilizzazione Swarm + Studio Visibilita!
+- **Ultimo commit**: b47fd6b - PROMPT_RIPRESA: Sessione 92 completa 100000%! 💙
 - **File modificati** (5):
-  - swarm/prompts/worker_backend.txt
-  - .swarm/runners/run_backend.sh
-  - .swarm/tasks/TASK_20260105_051500_studio_visibilita_guardiana.ready
-  - .swarm/tasks/TASK_20260105_051500_studio_visibilita_researcher.ready
-  - .swarm/tasks/TASK_REGOLA_VIA_GIUSTA.ready
+  - .swarm/handoff/HANDOFF_20260105_062934.md
+  - .swarm/handoff/HANDOFF_20260105_063026.md
+  - .swarm/handoff/HANDOFF_20260105_063141.md
+  - reports/engineer_report_20260105_062902.json
+  - reports/engineer_report_20260105_063110.json
 
 ### Note
 - Checkpoint automatico generato da hook
