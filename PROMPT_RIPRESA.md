@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 97 - CODE REVIEW + HARDTEST!
+> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 98 - PROTEZIONE TASK TOOL!
 
 ---
 
@@ -15,23 +15,79 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   SESSIONE 97: CODE REVIEW + 4 FIX + 3 HARDTEST!               |
+|   SESSIONE 98: PROTEZIONE TASK TOOL IMPLEMENTATA!               |
 |                                                                  |
-|   SISTEMA MIGLIORATO:                                            |
-|   - task_manager.py v1.2.0 (race condition fix!)                |
-|   - spawn-workers v2.8.0 (max 5 worker default)                 |
-|   - anti-compact.sh v1.7.0 (retry git push!)                    |
-|   - watcher-regina.sh v1.1.0 (no keystroke!)                    |
+|   NOVITA CRITICA:                                                |
+|   - Hook che BLOCCA Task tool per agenti cervella-*!            |
+|   - Se provi Task + cervella-backend -> BLOCCATO!               |
+|   - USA SEMPRE: spawn-workers --backend (finestre!)             |
 |                                                                  |
-|   PROSSIMO FOCUS: Migliorare ANTI-COMPACT!                      |
-|   (come abbiamo fatto con AUTO-SVEGLIA)                         |
+|   "SEMPRE FINESTRE! SEMPRE! SENZA ECCEZIONE!" - Rafa            |
 |                                                                  |
-|   IDEA FUTURA: Sistema ROADMAPS visuale multi automatico!       |
-|                                                                  |
-|   "Ultrapassar os proprios limites!" - Rafa                     |
+|   FILE IMPORTANTI:                                               |
+|   - ~/.claude/hooks/block_task_for_agents.py (NUOVO!)           |
+|   - ~/.claude/agents/cervella-orchestrator.md v1.3.0            |
+|   - docs/SWARM_RULES.md v1.7.0                                  |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
+
+---
+
+## SESSIONE 98: PROTEZIONE TASK TOOL!
+
+### Il Problema
+
+Una Cervella in Miracollo ha usato Task tool invece di spawn-workers.
+Risultato: contesto al 6%, TUTTO BLOCCATO, lavoro PERSO!
+
+La Regola 13 esisteva ma veniva IGNORATA perche' Task tool era "piu facile".
+
+### La Soluzione (LIVELLO 1 + LIVELLO 2!)
+
+**LIVELLO 1 - LINGUAGGIO FORTE:**
+- cervella-orchestrator.md v1.3.0 - Box VIETATO come PRIMA cosa nel DNA
+- SWARM_RULES.md v1.7.0 - Regola 13 con conseguenze catastrofiche
+
+**LIVELLO 2 - HOOK CHE BLOCCA:**
+- block_task_for_agents.py - Hook PreToolUse
+- Se subagent_type contiene "cervella-" → BLOCCATO automaticamente!
+- Mostra messaggio con soluzione (spawn-workers)
+
+### HARDTEST Passati
+
+| Test | Input | Risultato |
+|------|-------|-----------|
+| cervella-backend | Task tool | BLOCCATO! |
+| Explore | Task tool | Passa (legittimo) |
+| general-purpose | Task tool | Passa (legittimo) |
+
+### File Creati/Modificati
+
+| File | Azione |
+|------|--------|
+| ~/.claude/hooks/block_task_for_agents.py | NUOVO - Hook protezione |
+| ~/.claude/settings.json | Aggiunto PreToolUse |
+| ~/.claude/agents/cervella-orchestrator.md | v1.3.0 - VIETATO in cima |
+| docs/SWARM_RULES.md | v1.7.0 - Regola 13 riscritta |
+
+### Filo del Discorso
+
+Rafa ha visto il disastro in Miracollo: Cervella ha usato Task tool, contesto al 6%, tutto bloccato.
+
+Ha detto: "SEMPRE FINESTRE! SEMPRE! SENZA ECCEZIONE! NON C'e' PIU' SCELTA!"
+
+Abbiamo analizzato e implementato ENTRAMBI i livelli:
+- Livello 1 = Educazione (la Cervella CAPISCE perche')
+- Livello 2 = Enforcement (la Cervella NON PUO' bypassare)
+
+Il vero test sara' in uso - quando una Cervella provera' Task tool e vedra' il blocco!
+
+### Prossimi Step
+
+1. **Usare lo swarm** - Il sistema e' protetto, usiamolo!
+2. **MIRACOLLO** - Tornare a lavorare con protezione attiva
+3. **Vedere in uso** - Il vero HARDTEST e' la produzione
 
 ---
 
@@ -1260,17 +1316,18 @@ PreCompact auto
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-05 15:54 (unknown)
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-05 16:06 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 3879ad0 - Sessione 97: CHECKPOINT COMPLETO!
-- **File modificati** (5):
-  - swarm/prompts/worker_backend.txt
-  - .swarm/prompts/worker_frontend.txt
-  - .swarm/prompts/worker_reviewer.txt
-  - .swarm/runners/run_backend.sh
-  - .swarm/runners/run_frontend.sh
+- **Ultimo commit**: 91a9d43 - ANTI-COMPACT: PreCompact auto
+- **File modificati** (2):
+  - ROMPT_RIPRESA.md
+  - reports/scientist_prompt_20260105.md
 
 ### Note
 - Checkpoint automatico generato da hook

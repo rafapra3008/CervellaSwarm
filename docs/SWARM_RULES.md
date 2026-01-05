@@ -3,7 +3,7 @@
 > **"Uno sciame senza regole e caos. Uno sciame con regole e POTENZA."**
 
 **Data Creazione:** 1 Gennaio 2026
-**Versione:** 1.6.0
+**Versione:** 1.7.0
 **Priorita:** ALTA - Queste regole sono FONDAMENTALI
 
 ---
@@ -642,63 +642,46 @@ La Regina crea MAX 2 TODO alla volta:
 
 ---
 
-## REGOLA 13: DELEGO = SEMPRE SPAWN-WORKERS!
+## REGOLA 13: 🚫 VIETATO Task tool per agenti cervella-*!
 
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   🚨 REGOLA SEMPLICE E CHIARA!                                  ║
-║                                                                  ║
-║   ┌─────────────────────────────────────────────────────────────┐
-║   │                                                             │
-║   │   DELEGO A UN AGENTE?  →  SEMPRE spawn-workers!            │
-║   │                                                             │
-║   │   • cervella-researcher  → spawn-workers --researcher       │
-║   │   • cervella-backend     → spawn-workers --backend          │
-║   │   • cervella-frontend    → spawn-workers --frontend         │
-║   │   • cervella-docs        → spawn-workers --docs             │
-║   │   • QUALSIASI agente     → spawn-workers!                   │
-║   │                                                             │
-║   └─────────────────────────────────────────────────────────────┘
-║                                                                  ║
-║   PERCHÉ SEMPRE SPAWN-WORKERS?                                   ║
-║                                                                  ║
-║   • L'agente lavora nel SUO contesto (finestra separata)        ║
-║   • Il MIO contesto resta PULITO per coordinare                 ║
-║   • Se IO compatto → l'agente continua tranquillo               ║
-║   • L'agente filtra e mi dà solo il RISULTATO pulito            ║
-║                                                                  ║
-║   ┌─────────────────────────────────────────────────────────────┐
-║   │                                                             │
-║   │   IO (REGINA) FACCIO DIRETTAMENTE:                         │
-║   │                                                             │
-║   │   • Read, Grep, Glob → leggere per capire                  │
-║   │   • Edit SOLO whitelist → NORD.md, PROMPT_RIPRESA.md       │
-║   │   • Coordinare e decidere                                   │
-║   │                                                             │
-║   └─────────────────────────────────────────────────────────────┘
-║                                                                  ║
-║   NIENTE ECCEZIONI "TASK VELOCE"!                               ║
-║   Se delego a un agente = spawn-workers. Punto.                 ║
-║                                                                  ║
-║   "Comodo ≠ Giusto!" - Lezione Sessione 72                      ║
-║   "SEMPRE spawn-workers!" - Lezione Sessione 93                 ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-### Comandi spawn-workers:
-
-```bash
-# Spawn singolo worker
-spawn-workers --backend
-spawn-workers --researcher
-spawn-workers --docs
-
-# Comando rapido (crea task + spawna!)
-quick-task "descrizione" --backend
-quick-task "descrizione" --frontend
-quick-task "descrizione" --docs
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                                                                              ║
+║   🚫🚫🚫 VIETATO ASSOLUTO! Task tool per agenti cervella-* 🚫🚫🚫          ║
+║                                                                              ║
+║   ══════════════════════════════════════════════════════════════════════    ║
+║   CONSEGUENZE CATASTROFICHE (È SUCCESSO DAVVERO!):                          ║
+║   ══════════════════════════════════════════════════════════════════════    ║
+║                                                                              ║
+║   1. L'agente lavora nel TUO contesto                                       ║
+║   2. Se TU compatti → TUTTO SI BLOCCA                                       ║
+║   3. Il lavoro viene PERSO                                                  ║
+║   4. Rafa deve ricominciare da ZERO                                         ║
+║   5. ORE di lavoro BUTTATE                                                  ║
+║                                                                              ║
+║   ══════════════════════════════════════════════════════════════════════    ║
+║   COSA FARE INVECE:                                                         ║
+║   ══════════════════════════════════════════════════════════════════════    ║
+║                                                                              ║
+║   ✅ spawn-workers --backend                                                ║
+║   ✅ spawn-workers --frontend                                               ║
+║   ✅ spawn-workers --researcher                                             ║
+║   ✅ spawn-workers --docs                                                   ║
+║   ✅ quick-task "descrizione" --backend                                     ║
+║   ✅ quick-task "descrizione" --frontend                                    ║
+║                                                                              ║
+║   L'agente lavora nella SUA finestra, contesto SEPARATO!                    ║
+║                                                                              ║
+║   ══════════════════════════════════════════════════════════════════════    ║
+║   PROTEZIONE AUTOMATICA:                                                    ║
+║   ══════════════════════════════════════════════════════════════════════    ║
+║                                                                              ║
+║   Un hook PreToolUse BLOCCA automaticamente Task tool per cervella-*.       ║
+║   Se vedi errore di blocco, è CORRETTO! Usa spawn-workers!                  ║
+║                                                                              ║
+║   "SEMPRE FINESTRE! SEMPRE! SENZA ECCEZIONE!" - Rafa                        ║
+║                                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
 ```
 
 ### Origine e Evoluzione
@@ -708,8 +691,9 @@ quick-task "descrizione" --docs
 | 72 | "Comodo ≠ Giusto!" - Task tool scelto per comodità |
 | 89 | "Task tool per modifiche = ERRORE!" |
 | 93 | "SEMPRE spawn-workers!" - Anche per ricerche! |
+| **98** | **"SEMPRE FINESTRE! Hook che BLOCCA!"** - VIETATO ASSOLUTO! |
 
-La regola si è evoluta: prima dicevamo "solo per modifiche", ora diciamo "SEMPRE per qualsiasi delega". Perché anche le ricerche consumano contesto!
+La regola si è evoluta: prima "solo per modifiche", poi "SEMPRE spawn-workers", ora **VIETATO con hook che blocca!**
 
 ---
 
@@ -717,6 +701,7 @@ La regola si è evoluta: prima dicevamo "solo per modifiche", ora diciamo "SEMPR
 
 | Versione | Data | Modifica |
 |----------|------|----------|
+| 1.7.0 | 5 Gen 2026 | **REGOLA 13 VIETATO ASSOLUTO + HOOK CHE BLOCCA!** - Task tool per cervella-* ora BLOCCATO automaticamente! |
 | 1.6.0 | 5 Gen 2026 | **REGOLA 13 RISCRITTA: DELEGO = SEMPRE SPAWN-WORKERS!** - Niente eccezioni "task veloce"! |
 | 1.5.0 | 4 Gen 2026 | **REGOLA 13: MULTI-FINESTRA > TASK TOOL** - spawn-workers.sh per parallelo! |
 | 1.4.0 | 2 Gen 2026 | **REGOLA 12: TODO MICRO** - Max 1-2 task alla volta! |
