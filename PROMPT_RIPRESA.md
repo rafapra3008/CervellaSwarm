@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 87 - AUTO-HANDOFF v4.3.0 VS CODE NATIVO!
+> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 88 - BEEHIVE ORGANIZZATO!
 
 ---
 
@@ -15,17 +15,63 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   FASE ATTUALE: AUTO-HANDOFF COMPLETATO! VS CODE NATIVO!        |
+|   SESSIONE 88: BEEHIVE ORGANIZZATO!                             |
+|   - Casa pulita: 102 file archiviati CervellaSwarm              |
+|   - Casa pulita: 14 file archiviati Miracollo                   |
+|   - ROADMAP_BEEHIVE v1.1.0 - Fase 3 COMPLETATA!                 |
+|   - 4 su 5 metriche successo raggiunte!                         |
 |                                                                  |
-|   SESSIONE 87:                                                   |
-|   - context_check.py v4.3.0 - VS CODE NATIVO!                   |
-|   - Apre VS Code + terminal integrato + Claude                  |
-|   - TUTTO in una finestra! TESTATO E FUNZIONA!                  |
-|                                                                  |
-|   "E' ORO!" - Rafa                                              |
+|   SESSIONE 87 (sotto): AUTO-HANDOFF v4.3.0 ORO!                 |
+|   "E' PROPRIO MAGIA!" - Rafa                                    |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
+
+---
+
+## SESSIONE 88: BEEHIVE ORGANIZZATO!
+
+### L'Obiettivo
+
+Organizzare la casa dopo la magia della sessione 87 (swarm-status + swarm-review).
+
+### Cosa Abbiamo Fatto
+
+1. **ORGANIZZATO CERVELLASWARM**
+   - 102 file archiviati in `.swarm/archive/sessioni_test_20260105/`
+   - Task di test (HARDTEST_*, HT3_*, TASK_*, RICERCA_*) tutti archiviati
+   - Rimasti solo template e file di riferimento
+
+2. **ORGANIZZATO MIRACOLLO**
+   - 14 file archiviati in `.swarm/archive/sessioni_20260105/`
+   - SPLIT_SETTINGS (stale) archiviato
+   - Rimasto solo CLEANUP_CONSOLE_LOG.ready (task reale in coda!)
+
+3. **AGGIORNATO ROADMAP_BEEHIVE v1.1.0**
+   - Fase 3 COMPLETATA (Workflow Guardiane)
+   - 4 su 5 metriche successo raggiunte
+   - Prossimo: depends_on (Fase 4)
+
+### Comandi Globali Disponibili
+
+```bash
+swarm-status              # Stato progetto corrente
+swarm-status --all        # Stato TUTTI i progetti
+swarm-status --cleanup    # Pulisce task stale
+
+swarm-review              # Mostra task da verificare
+swarm-review --start      # Spawna Guardiane per review
+
+spawn-workers --backend   # Spawna api backend
+spawn-workers --frontend  # Spawna api frontend
+```
+
+### FILE MODIFICATI (Sessione 88)
+
+| File | Cosa |
+|------|------|
+| `ROADMAP_BEEHIVE.md` | v1.1.0 - Fase 3 COMPLETATA! |
+| `.swarm/archive/` | 102+ file archiviati |
 
 ---
 

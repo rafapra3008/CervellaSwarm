@@ -17,28 +17,26 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 87 - 5 Gennaio 2026: AUTO-HANDOFF v4.3.0 VS CODE NATIVO!**
+**SESSIONE 88 - 5 Gennaio 2026: BEEHIVE ORGANIZZATO!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 87: AUTO-HANDOFF v4.3.0 VS CODE NATIVO!              |
+|   SESSIONE 88: BEEHIVE ORGANIZZATO!                             |
 |                                                                  |
-|   context_check.py v4.3.0 - VS CODE NATIVO!                     |
-|   Quando contesto >= 70%, AUTOMATICAMENTE:                       |
-|   1. Apre VS Code sul progetto                                  |
-|   2. Apre terminal INTEGRATO (via Command Palette!)             |
-|   3. Lancia Claude con prompt handoff                           |
-|   4. Notifica macOS                                              |
+|   Casa pulita!                                                   |
+|   - 102 file archiviati in CervellaSwarm                        |
+|   - 14 file archiviati in Miracollo                             |
+|   - ROADMAP_BEEHIVE v1.1.0 - Fase 3 COMPLETATA!                 |
 |                                                                  |
-|   TUTTO IN UNA FINESTRA! UX PERFETTA!                           |
+|   COMANDI GLOBALI PRONTI:                                        |
+|   $ swarm-status --all      (vedi tutto!)                       |
+|   $ swarm-review --start    (attiva Guardiane!)                 |
+|   $ spawn-workers --backend (spawna api!)                       |
 |                                                                  |
-|   SCOPERTA CHIAVE:                                               |
-|   - Cmd+Shift+P + "Terminal: Create New Terminal" FUNZIONA!     |
-|   - Ctrl+backtick NON funziona da osascript                     |
+|   4 su 5 metriche successo! Prossimo: depends_on                |
 |                                                                  |
-|   "E' ORO!" - Rafa                                              |
-|   "TU SEI LA NUMERO UNO!" - Rafa                                |
+|   "E' PROPRIO MAGIA!" - Rafa                                    |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -128,35 +126,27 @@
 
 ## ULTIMO AGGIORNAMENTO
 
-**5 Gennaio 2026 - Sessione 87** - AUTO-HANDOFF v4.3.0 VS CODE NATIVO!
+**5 Gennaio 2026 - Sessione 88** - BEEHIVE ORGANIZZATO!
 
-### Cosa abbiamo fatto (Sessione 87):
+### Cosa abbiamo fatto (Sessione 88):
 
-1. **ANALISI APPROFONDITA**
-   - "Facciamo 10 passi indietro" - Rafa
-   - Test minimali uno alla volta
-   - Ricerca seria su hooks, osascript, VS Code
+1. **ORGANIZZATO CASA**
+   - 102 file archiviati in CervellaSwarm
+   - 14 file archiviati in Miracollo
+   - SPLIT_SETTINGS stale archiviato
 
-2. **SCOPERTA CHIAVE: Command Palette!**
-   - `Ctrl+backtick` NON funziona da osascript
-   - `Cmd+Shift+P` + "Terminal: Create New Terminal" FUNZIONA!
-   - Timing importante: sleep 4 dopo apertura VS Code
+2. **AGGIORNATO ROADMAP_BEEHIVE v1.1.0**
+   - Fase 3 COMPLETATA (Workflow Guardiane)
+   - 4 su 5 metriche successo raggiunte!
 
-3. **context_check.py v4.3.0**
-   - Nuova funzione `open_vscode_with_claude()`
-   - VS Code + terminal integrato + Claude
-   - TUTTO in una finestra!
-   - Fallback a Terminal.app se VS Code fallisce
-
-4. **TEST RIUSCITO!**
-   - Testato con Miracollo
-   - VS Code si apre, terminal si apre, Claude parte
-   - "HAHAHAHAHAH TU SEI LA NUMERO UNO!" - Rafa
+3. **TESTATO COMANDI GLOBALI**
+   - `swarm-status --all` FUNZIONA!
+   - `swarm-review` FUNZIONA!
 
 ### Prossimo:
-1. **MIRACOLLO!** - Usare lo Swarm in produzione
-2. **Test AUTO-HANDOFF reale** - aspettare 70% contesto
-3. **HARDTESTS** su tutti i progetti
+1. **CODE REVIEW** - oggi e' Lunedi!
+2. **depends_on** - Fase 4 ROADMAP_BEEHIVE
+3. **Usare Swarm su Miracollo** in produzione
 
 ---
 

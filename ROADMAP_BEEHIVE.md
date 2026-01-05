@@ -2,8 +2,8 @@
 
 > **"Cervella Beehive"** - Il sistema che fa nascere nuove Cervelle!
 
-**Versione:** 1.0.0
-**Data:** 5 Gennaio 2026
+**Versione:** 1.1.0
+**Data:** 5 Gennaio 2026 (Sessione 88)
 **Link:** ROADMAP_SACRA.md (progetto principale)
 
 ---
@@ -15,12 +15,14 @@
 |                                                                  |
 |   BEEHIVE = Il nostro ALVEARE digitale!                         |
 |                                                                  |
-|   - spawn-workers.sh v1.9.0 FUNZIONA!                           |
-|   - 16 agenti GLOBALI pronti                                     |
-|   - 10 hooks GLOBALI attivi                                      |
-|   - AUTO-HANDOFF v4.0.0 (da perfezionare)                       |
+|   ✅ spawn-workers.sh v1.9.0 FUNZIONA!                          |
+|   ✅ swarm-status v1.0.0 FUNZIONA!                              |
+|   ✅ swarm-review v1.0.0 FUNZIONA!                              |
+|   ✅ 16 agenti GLOBALI pronti                                    |
+|   ✅ 10 hooks GLOBALI attivi                                     |
+|   ✅ AUTO-HANDOFF v4.3.0 (VS Code nativo!)                      |
 |                                                                  |
-|   MA: ci sono problemi da fixare per il 100000%!                |
+|   FASI 1-2-3 COMPLETATE! Prossimo: depends_on                   |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -183,7 +185,7 @@ spawn-workers --frontend --count=3
 |---|----------|----------|--------|---------|--------|
 | 1 | Stale Task Detection | CRITICA | Basso | Alto | ✅ FATTO! (in swarm-status --cleanup) |
 | 2 | swarm-status comando | ALTA | Medio | Alto | ✅ FATTO! v1.0.0 |
-| 3 | Workflow Guardiane | MEDIA | Medio | Medio | 🔄 IN CORSO |
+| 3 | Workflow Guardiane | MEDIA | Medio | Medio | ✅ FATTO! swarm-review v1.0.0 |
 | 4 | depends_on | MEDIA | Medio | Medio | |
 | 5 | --count=N | BASSA | Basso | Basso | |
 | 6 | AUTO-HANDOFF | IN CORSO | Alto | Alto | (altra sessione) |
@@ -280,12 +282,14 @@ spawn-workers --frontend --count=3
 Prima di dire "BEEHIVE 100000%" verifichiamo:
 
 ```
-[ ] Zero task .working > 30 min
-[ ] swarm-status mostra tutto
-[ ] Guardiane verificano output
+[x] Zero task .working > 30 min (swarm-status --cleanup)
+[x] swarm-status mostra tutto (v1.0.0!)
+[x] Guardiane verificano output (swarm-review v1.0.0!)
 [ ] depends_on funziona
-[ ] AUTO-HANDOFF apre e RESTA aperto
+[x] AUTO-HANDOFF apre e RESTA aperto (v4.3.0 VS Code!)
 ```
+
+**4 su 5 completate! Manca solo depends_on!**
 
 ---
 
@@ -329,10 +333,20 @@ Cervella & Rafa
 
 **CHANGELOG:**
 
-### 5 Gennaio 2026 - v1.0.0
+### 5 Gennaio 2026 - v1.1.0 (Sessione 88)
+- ✅ Fase 3 COMPLETATA! swarm-review v1.0.0
+- Organizzata casa: 102 file archiviati in CervellaSwarm
+- Organizzata casa: 14 file archiviati in Miracollo
+- SPLIT_SETTINGS stale archiviato
+- Task rimasti puliti e pronti
+
+### 5 Gennaio 2026 - v1.0.0 (Sessione 87)
 - Creata ROADMAP_BEEHIVE
 - Checkup completo sistema
 - Identificati 6 problemi
 - Definite 5 fasi implementazione
 - Prioritizzato il lavoro
+- ✅ swarm-status v1.0.0 creato
+- ✅ swarm-review v1.0.0 creato
+- ✅ Workflow Ape → Guardiana TESTATO!
 
