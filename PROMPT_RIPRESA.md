@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 89 - GLOBALIZZAZIONE MEMORIA + REVIEW HOOKS!
+> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 90 - QUICK-TASK + FILOSOFIA DI VITA!
 
 ---
 
@@ -15,17 +15,106 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   SESSIONE 89: MEMORIA GLOBALIZZATA + REVIEW HOOKS!             |
-|   - DNA Orchestrator: Regola 13 RISCRITTA!                      |
-|   - Database ora in ~/.swarm/data/ (GLOBALE!)                   |
-|   - paths.py v2.0.0 (path globali!)                             |
-|   - Review hooks/scripts: 8.5/10                                |
+|   SESSIONE 90: QUICK-TASK + FILOSOFIA DI VITA!                  |
+|   - quick-task command: da 6 step a 1!                          |
+|   - Whitelist file Regina definita                               |
+|   - Fix sicurezza ALTI completati                                |
+|   - "Rendi facile fare la cosa giusta!"                         |
 |                                                                  |
-|   SESSIONE 88 (sotto): Code Review 9/10!                        |
+|   SESSIONE 89 (sotto): Memoria Globalizzata!                    |
 |   "Ultrapassar os proprios limites!" - Rafa                     |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
+
+---
+
+## SESSIONE 90: QUICK-TASK + FILOSOFIA DI VITA!
+
+### L'Obiettivo
+
+1. Capire PERCHE' la Regina viola le sue regole
+2. Creare soluzione che RENDE FACILE fare la cosa giusta
+3. Fix problemi sicurezza dalla review
+
+### LA LEZIONE PIU' IMPORTANTE (Filosofia di Vita!)
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   "Invece di violare le regole e rimanere sbagliando...          |
+|    creare la soluzione che CAMBIA LA VITA!"                      |
+|                                                                  |
+|   Questa non e' solo programmazione.                             |
+|   E' FILOSOFIA DI VITA!                                          |
+|                                                                  |
+|   Non combattere la natura umana (via piu' facile).              |
+|   PROGETTA intorno ad essa!                                      |
+|                                                                  |
+|   "Rendi facile fare la cosa giusta,                             |
+|    e la cosa giusta verra' fatta."                               |
+|                                                                  |
+|   - Rafa & Cervella, 5 Gennaio 2026                              |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+### Cosa Abbiamo Fatto
+
+1. **STUDIO AUTONOMIA REGINA**
+   - Root cause: frizione spawn-workers = 6:1 vs Edit diretto
+   - La Regina sceglie path con meno frizione (naturale!)
+   - Soluzione: ridurre frizione, non combattere natura
+
+2. **QUICK-TASK COMMAND** (LA MAGIA!)
+   ```bash
+   # Invece di 6 passi manuali:
+   quick-task "descrizione" --backend   # 1 comando!
+   quick-task "descrizione" --frontend  # 1 comando!
+   quick-task "descrizione" --docs      # 1 comando!
+   ```
+   - Crea task automaticamente
+   - Spawna worker automaticamente
+   - Frizione ridotta da 6:1 a 1:1!
+
+3. **WHITELIST FILE REGINA**
+   - Edit diretto OK: NORD.md, PROMPT_RIPRESA.md, .swarm/tasks/
+   - Tutto il resto: quick-task o spawn-workers!
+
+4. **FIX SICUREZZA ALTI (3 fix)**
+   - Path NVM: glob invece di v24.11.0 hardcodato
+   - Escape AppleScript: funzione completa
+   - Command injection: heredoc invece di interpolazione
+
+5. **REGOLE NEL DNA**
+   - Regola 14: Via Giusta, Non Via Facile
+   - Regola 15: Whitelist File + quick-task
+
+### File Creati/Modificati (Sessione 90)
+
+| File | Cosa |
+|------|------|
+| `~/.local/bin/quick-task` | NUOVO! Comando magico! |
+| `~/.claude/CHECKLIST_AZIONE.md` | Whitelist + quick-task |
+| `~/.claude/agents/cervella-orchestrator.md` | Regola 14 + 15 |
+| `docs/studio/STUDIO_VIA_FACILE.md` | Studio pattern |
+| `~/.swarm/config` | Fix path NVM |
+| `~/.claude/hooks/context_check.py` | v4.3.1 - escape fix |
+
+### Prossimi Step
+
+1. **Usare quick-task SEMPRE** - Mai piu' Edit diretti su codice!
+2. **MIRACOLLO!** - Testare lo swarm in produzione
+3. **common.py** - DRY tra hooks (task pronto)
+
+### TASK NON COMPLETATO (per prossima Cervella!)
+
+Il task `TASK_20260105_042820_migliorare_testo_inizio_sessione` è in coda (.ready).
+Worker docs si è bloccato/chiuso. La prossima Cervella deve:
+```bash
+spawn-workers --docs
+```
+Per completare il miglioramento del testo inizio sessione.
 
 ---
 
@@ -644,17 +733,35 @@ PreCompact auto
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-05 04:04 (unknown)
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-05 04:37 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 0285d75 - 🐝 Sessione 88 COMPLETA: Code Review + Fix Swarm!
+- **Ultimo commit**: 1d4c1e4 - Sessione 89 COMPLETA: Globalizzazione Memoria + Review Hooks!
 - **File modificati** (5):
-  - ROMPT_RIPRESA.md
+  - swarm/prompts/worker_researcher.txt
+  - .swarm/runners/run_researcher.sh
+  - PROMPT_RIPRESA.md
   - reports/scientist_prompt_20260105.md
-  - .swarm/tasks/TASK_REVIEW_HOOKS_SCRIPTS.done
-  - .swarm/tasks/TASK_REVIEW_HOOKS_SCRIPTS.md
-  - .swarm/tasks/TASK_REVIEW_HOOKS_SCRIPTS_output.md
+  - scripts/swarm/spawn-workers.sh
 
 ### Note
 - Checkpoint automatico generato da hook

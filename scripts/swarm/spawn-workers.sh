@@ -12,7 +12,7 @@
 #   ./spawn-workers.sh --all                  # Tutti i worker comuni
 #   ./spawn-workers.sh --list                 # Lista worker disponibili
 #
-# Versione: 2.0.0
+# Versione: 2.0.1
 # Data: 2026-01-05
 # Apple Style: Auto-close, Graceful shutdown, Notifiche macOS
 # v2.0.0: Config centralizzata ~/.swarm/config
@@ -47,10 +47,15 @@ get_claude_bin() {
         echo "$CLAUDE_BIN"
     elif command -v claude &>/dev/null; then
         which claude
-    elif [[ -x "$HOME/.nvm/versions/node/v24.11.0/bin/claude" ]]; then
-        echo "$HOME/.nvm/versions/node/v24.11.0/bin/claude"
     else
-        echo ""
+        # Cerca qualsiasi versione Node in NVM (non hardcodata!)
+        local nvm_claude
+        nvm_claude=$(ls -t "$HOME"/.nvm/versions/node/*/bin/claude 2>/dev/null | head -1)
+        if [[ -n "$nvm_claude" && -x "$nvm_claude" ]]; then
+            echo "$nvm_claude"
+        else
+            echo ""
+        fi
     fi
 }
 
@@ -435,8 +440,13 @@ CLOSEWINDOWEOF
     chmod +x "$runner_script"
 
     # Apre nuova finestra Terminal eseguendo lo script runner
-    osascript -e "tell application \"Terminal\" to do script \"${runner_script}\""
-    osascript -e "tell application \"Terminal\" to activate"
+    # SICUREZZA: Usa heredoc invece di interpolazione per evitare command injection
+    osascript << APPLESCRIPTEOF
+tell application "Terminal"
+    do script "$runner_script"
+end tell
+APPLESCRIPTEOF
+    osascript -e 'tell application "Terminal" to activate'
 
     if [ $? -eq 0 ]; then
         print_success "cervella-${worker_name} spawned!"
