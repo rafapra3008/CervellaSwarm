@@ -139,25 +139,22 @@
 
 ## ULTIMO AGGIORNAMENTO
 
-**5 Gennaio 2026 - Sessione 94** - CODE REVIEW DAY + PULIZIA CASA!
+**5 Gennaio 2026 - Sessione 96** - AUTO-SVEGLIA SEMPRE!
 
-### Cosa abbiamo fatto (Sessione 94):
+### Cosa abbiamo fatto (Sessione 95 + 96):
 
-**CODE REVIEW + FIX (8.25/10!):**
-- cervella-reviewer: audit completo
-- swarm-lib.sh v1.0.0: funzioni comuni
-- spawn-workers v2.3.0: validazione config
-- swarm-review v1.2.0: prompt su file
+**SESSIONE 95 - LA MAGIA SOPRA MAGIA:**
+- HARDTEST notifiche click: PASSATO!
+- Ricerca AUTO-SVEGLIA con cervella-researcher
+- watcher-regina.sh v1.0.0: fswatch + AppleScript
+- spawn-workers v2.6.0: --auto-sveglia flag
+- HARDTEST End-to-End: PASSATO!!!
 
-**NOTIFICHE WORKER (MAGIA!):**
-- Idea di Rafa: "quando worker finisce, arriva notifica!"
-- cervella-devops: studio + implementazione
-- spawn-workers v2.5.0: notifiche dettagliate
-- terminal-notifier installato: click apre output!
-- HARDTEST 1 e 2 passati! Notifiche funzionano!
-
-**DA COMPLETARE (Sessione 95):**
-- HARDTEST finale: click apre _output.md (fix v2.5.0)
+**SESSIONE 96 - AUTO-SVEGLIA SEMPRE:**
+- spawn-workers v2.7.0: AUTO-SVEGLIA e' ora DEFAULT!
+- Check anti-watcher-duplicati (evita watcher multipli)
+- PROMPT_INIZIO_SESSIONE.md v2.0.0 aggiornato
+- Completato checkpoint sessione 95
 
 ### 🐝 FEEDBACK SWARM (Sessione 94):
 

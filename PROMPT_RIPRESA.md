@@ -1095,17 +1095,16 @@ PreCompact auto
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-05 14:20 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-05 14:25 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: d38fb39 - ANTI-COMPACT: PreCompact auto
-- **File modificati** (5):
-  - swarm/prompts/worker_researcher.txt
-  - .swarm/runners/run_researcher.sh
-  - NORD.md
-  - PROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260105.md
+- **Ultimo commit**: c87d0cf - Sessione 95: LA MAGIA SOPRA MAGIA! AUTO-SVEGLIA!
+- **File modificati** (2):
+  - .swarm/handoff/HANDOFF_20260105_142531.md
+  - reports/engineer_report_20260105_142435.json
 
 ### Note
 - Checkpoint automatico generato da hook

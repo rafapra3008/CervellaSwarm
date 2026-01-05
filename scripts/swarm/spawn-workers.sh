@@ -12,12 +12,13 @@
 #   ./spawn-workers.sh --all                  # Tutti i worker comuni
 #   ./spawn-workers.sh --list                 # Lista worker disponibili
 #
-# Versione: 2.6.0
+# Versione: 2.7.0
 # Data: 2026-01-05
 # Apple Style: Auto-close, Graceful shutdown, Notifiche macOS
 # v2.0.0: Config centralizzata ~/.swarm/config
 #
 # CHANGELOG:
+# v2.7.0: AUTO-SVEGLIA SEMPRE! Default=true. Check anti-watcher-duplicati. Flag --no-auto-sveglia per disabilitare.
 # v2.6.0: AUTO-SVEGLIA! Flag --auto-sveglia avvia watcher che sveglia la Regina quando worker finiscono!
 # v2.5.0: FIX NOTIFICA CLICK! Apre _output.md del task invece di .log. Legge task name da file stato.
 # v2.4.0: NOTIFICA DETTAGLIATA! Nome task, tempo esecuzione, esito. Click per aprire log (se terminal-notifier)
@@ -38,9 +39,9 @@
 set -e
 
 # ============================================================================
-# AUTO-SVEGLIA (v2.6.0) - Flag per svegliare la Regina!
+# AUTO-SVEGLIA (v2.7.0) - SEMPRE ATTIVO! La Regina viene svegliata automaticamente!
 # ============================================================================
-AUTO_SVEGLIA=false
+AUTO_SVEGLIA=true
 
 # ============================================================================
 # CONFIGURAZIONE CENTRALIZZATA (v2.0.0)
@@ -626,14 +627,16 @@ show_usage() {
     echo "  --all                  Spawna worker comuni (backend, frontend, tester)"
     echo "  --guardiane            Spawna tutte le guardiane"
     echo "  --list                 Lista worker disponibili"
-    echo "  --auto-sveglia         Avvia watcher che sveglia la Regina!"
+    echo "  --no-auto-sveglia      Disabilita AUTO-SVEGLIA (default: attivo!)"
     echo "  --help                 Mostra questo help"
     echo ""
+    echo "  AUTO-SVEGLIA e' ATTIVO di default! La Regina viene svegliata automaticamente."
+    echo ""
     echo "Esempi:"
-    echo "  $0 --backend --frontend    # Spawna backend e frontend"
+    echo "  $0 --backend               # Spawna backend (AUTO-SVEGLIA attivo!)"
     echo "  $0 --all                   # Spawna tutti i worker comuni"
     echo "  $0 --guardiane             # Spawna tutte le guardiane (Opus)"
-    echo "  $0 --docs --auto-sveglia   # Docs + sveglia Regina quando finisce!"
+    echo "  $0 --docs --no-auto-sveglia  # Docs senza svegliare la Regina"
     echo ""
 }
 
@@ -723,6 +726,9 @@ main() {
             --auto-sveglia)
                 AUTO_SVEGLIA=true
                 ;;
+            --no-auto-sveglia)
+                AUTO_SVEGLIA=false
+                ;;
             *)
                 print_error "Opzione sconosciuta: $1"
                 show_usage
@@ -778,8 +784,24 @@ main() {
     # ============================================================================
     if [ "$AUTO_SVEGLIA" = true ]; then
         WATCHER_SCRIPT="${PROJECT_ROOT}/scripts/swarm/watcher-regina.sh"
+        WATCHER_PID_FILE="${SWARM_DIR}/status/watcher.pid"
 
-        if [ -x "$WATCHER_SCRIPT" ]; then
+        # CHECK ANTI-DUPLICATI (v2.7.0): Se watcher gia' attivo, non avviarne un altro!
+        if [ -f "$WATCHER_PID_FILE" ]; then
+            EXISTING_PID=$(cat "$WATCHER_PID_FILE" 2>/dev/null)
+            if [ -n "$EXISTING_PID" ] && kill -0 "$EXISTING_PID" 2>/dev/null; then
+                print_info "AUTO-SVEGLIA gia' attivo! (PID: $EXISTING_PID)"
+                print_info "La Regina verra' svegliata quando i worker finiscono!"
+                echo ""
+                # Skip avvio nuovo watcher
+            else
+                # PID file esiste ma processo morto - pulisci e riavvia
+                rm -f "$WATCHER_PID_FILE"
+            fi
+        fi
+
+        # Avvia watcher solo se non gia' attivo
+        if [ ! -f "$WATCHER_PID_FILE" ] && [ -x "$WATCHER_SCRIPT" ]; then
             echo ""
             print_info "Avvio AUTO-SVEGLIA watcher..."
 
@@ -788,12 +810,12 @@ main() {
             WATCHER_PID=$!
 
             # Salva PID per cleanup futuro
-            echo $WATCHER_PID > "${SWARM_DIR}/status/watcher.pid"
+            echo $WATCHER_PID > "$WATCHER_PID_FILE"
 
             print_success "Watcher AUTO-SVEGLIA avviato! (PID: $WATCHER_PID)"
             print_info "La Regina verra' svegliata quando i worker finiscono!"
             echo ""
-        else
+        elif [ ! -x "$WATCHER_SCRIPT" ]; then
             print_warning "Watcher script non trovato: $WATCHER_SCRIPT"
             print_warning "AUTO-SVEGLIA non attivato."
         fi

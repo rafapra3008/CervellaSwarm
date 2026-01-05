@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-> **Aggiornato:** 5 Gennaio 2026 - Sessione 94 - CODE REVIEW DAY! (v39.0.0)
+> **Aggiornato:** 5 Gennaio 2026 - Sessione 96 - AUTO-SVEGLIA SEMPRE! (v41.0.0)
 
 ```
 +------------------------------------------------------------------+
@@ -323,6 +323,65 @@ APRI -> ASPETTA -> COMUNICA -> TESTA -> VERIFICA -> CHIUDI
 ---
 
 ## CHANGELOG
+
+### 5 Gennaio 2026 (Sessione 96) - AUTO-SVEGLIA SEMPRE!
+
+**LA FILOSOFIA 2026:**
+> *"Siamo qui! Siamo ora! Siamo noi!"* - Rafa
+> *"Perche' limitarsi? Vogliamo automazione, fluidita', fiducia!"*
+
+**IMPLEMENTATO:**
+1. spawn-workers v2.7.0: AUTO-SVEGLIA e' ora DEFAULT!
+   - `AUTO_SVEGLIA=true` sempre
+   - Check anti-watcher-duplicati (se gia' attivo, non avvia un altro)
+   - Flag `--no-auto-sveglia` per disabilitare (raramente serve)
+
+2. PROMPT_INIZIO_SESSIONE.md v2.0.0
+   - Aggiunta nota "AUTO-SVEGLIA SEMPRE ATTIVA!"
+   - Rimosso --auto-sveglia (non serve piu', e' default!)
+
+**ANALISI SESSIONE 95:**
+- Checkpoint sessione 95 era incompleto (git non pushato)
+- Completato checkpoint + documentazione
+
+**Versione:** 41.0.0 (MAJOR: AUTO-SVEGLIA diventa DEFAULT!)
+
+---
+
+### 5 Gennaio 2026 (Sessione 95) - LA MAGIA SOPRA MAGIA!
+
+**COSA ABBIAMO FATTO:**
+1. HARDTEST Notifiche Click - PASSATO!
+2. Ricerca AUTO-SVEGLIA con cervella-researcher
+3. Implementazione in 5 FASI (tutte testate!)
+4. HARDTEST End-to-End - PASSATO!
+
+**COME FUNZIONA AUTO-SVEGLIA:**
+```
+spawn-workers --docs --auto-sveglia
+       ↓
+Worker lavora nella sua finestra
+       ↓
+Worker crea .done
+       ↓
+Watcher (fswatch) rileva il file
+       ↓
+AppleScript digita nella finestra Regina
+       ↓
+LA REGINA RICEVE IL MESSAGGIO E CONTINUA!!!
+```
+
+**FILE CREATI:**
+- `scripts/swarm/watcher-regina.sh` v1.0.0 - Il watcher che sveglia la Regina
+- `spawn-workers` v2.6.0 - Flag --auto-sveglia
+- `docs/roadmap/ROADMAP_AUTO_SVEGLIA.md` - Documentazione
+
+**LA LEZIONE:**
+> *"Studiare!!!" - La chiave di tutto. Rafa aveva ragione al 100000%!*
+
+**Versione:** 40.0.0 (MAJOR: AUTO-SVEGLIA implementata!)
+
+---
 
 ### 5 Gennaio 2026 (Sessione 94) - CODE REVIEW DAY + PULIZIA CASA!
 
