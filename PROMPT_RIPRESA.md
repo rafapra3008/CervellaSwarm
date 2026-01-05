@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 91 - STABILIZZAZIONE + STUDIO VISIBILITA'!
+> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 92 - VISIBILITA' WORKER COMPLETATA!
 
 ---
 
@@ -15,16 +15,85 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   SESSIONE 91: STABILIZZAZIONE + STUDIO VISIBILITA'!            |
-|   - Template prompt inizio sessione creato                       |
-|   - Worker Health Tracking implementato                          |
-|   - PROBLEMA CRITICO identificato: "Lavoriamo al buio!"         |
-|   - 2 ricercatori spawnati per studiare visibilita'             |
+|   SESSIONE 92: VISIBILITA' WORKER COMPLETATA!                   |
+|   - FASE 1 implementata e TESTATA!                               |
+|   - spawn-workers v2.2.0 (Heartbeat + Notifiche)                |
+|   - swarm-heartbeat v1.0.0 (nuovo comando!)                     |
+|   - dashboard.py v1.1.0 (sezione LIVE HEARTBEAT)                |
+|   - HARDTEST PASSATO - 3 heartbeat scritti!                     |
 |                                                                  |
-|   "Lavorare al buio e' difficile!" - Rafa                       |
+|   "Lavorare al buio e' difficile - ORA ABBIAMO LUCE!"          |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
+
+---
+
+## SESSIONE 92: VISIBILITA' WORKER COMPLETATA!
+
+### Cosa Abbiamo Fatto
+
+1. **ORGANIZZATO STUDI** (dagli output dei 2 ricercatori sessione 91)
+   - `docs/roadmap/ROADMAP_VISIBILITA.md` - Piano 3 fasi
+   - `docs/studio/BEST_PRACTICES_MONITORAGGIO.md` - Sapere estratto
+
+2. **IMPLEMENTATO FASE 1** (3 task delegati a 2 api backend)
+   - spawn-workers v2.2.0: Heartbeat ogni 60s + Notifiche inizio
+   - swarm-heartbeat v1.0.0: Comando per vedere stato live
+   - dashboard.py v1.1.0: Sezione LIVE HEARTBEAT
+
+3. **HARDTEST PASSATO!**
+   - Worker ha scritto 3 heartbeat correttamente
+   - Formato: `timestamp|task|azione`
+   - swarm-heartbeat mostra ACTIVE/STALE con colori
+
+4. **PROBLEMA UX DOCUMENTATO** (per futuro)
+   - Finestra worker "ferma" mentre lavora
+   - Claude bufferizza output - l'utente non vede nulla
+   - Priorita' BASSA - il sistema FUNZIONA!
+
+### Comandi Nuovi Disponibili
+
+```bash
+# Vedere stato live worker
+$ swarm-heartbeat
+[backend] ACTIVE (15s ago) - Analizzando file X
+
+# Watch mode (refresh ogni 2s)
+$ swarm-heartbeat --watch
+
+# Dashboard con heartbeat
+$ python3 scripts/swarm/dashboard.py
+```
+
+### File Creati/Modificati (Sessione 92)
+
+| File | Cosa |
+|------|------|
+| `docs/roadmap/ROADMAP_VISIBILITA.md` | NUOVO! Piano 3 fasi |
+| `docs/studio/BEST_PRACTICES_MONITORAGGIO.md` | NUOVO! Best practices |
+| `~/.local/bin/spawn-workers` | v2.2.0 - Heartbeat + Notifiche |
+| `~/.local/bin/swarm-heartbeat` | NUOVO! Comando stato live |
+| `scripts/swarm/dashboard.py` | v1.1.0 - Sezione heartbeat |
+
+### Prossimi Step
+
+1. **CODE REVIEW** - Oggi e' lunedi!
+2. **FASE 2.5** - Studio frontend worker (futuro, bassa priorita')
+3. **MIRACOLLO!** - Usare swarm in produzione
+
+### Filo del Discorso
+
+Sessione 91 aveva identificato il problema "Lavoriamo al buio!" e spawnato 2 ricercatori.
+
+Sessione 92 ha:
+- Letto gli studi (CONVERGENZA: Heartbeat + Notifiche!)
+- Organizzato in roadmap + best practices
+- Delegato implementazione a 2 api backend
+- Le api hanno completato in ~5 minuti!
+- Eseguito HARDTEST - 3 heartbeat scritti correttamente
+
+Abbiamo anche scoperto un problema UX: la finestra del worker mostra solo "Worker avviato" e poi nulla fino alla fine. Claude bufferizza l'output. Ma questo e' finitura per il futuro - il sistema FUNZIONA!
 
 ---
 
