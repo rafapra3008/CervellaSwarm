@@ -12,12 +12,13 @@
 #   ./spawn-workers.sh --all                  # Tutti i worker comuni
 #   ./spawn-workers.sh --list                 # Lista worker disponibili
 #
-# Versione: 2.7.0
+# Versione: 2.8.0
 # Data: 2026-01-05
 # Apple Style: Auto-close, Graceful shutdown, Notifiche macOS
 # v2.0.0: Config centralizzata ~/.swarm/config
 #
 # CHANGELOG:
+# v2.8.0: MAX WORKERS! Limite default 5 per evitare sovraccarico. Flag --max-workers N per cambiare.
 # v2.7.0: AUTO-SVEGLIA SEMPRE! Default=true. Check anti-watcher-duplicati. Flag --no-auto-sveglia per disabilitare.
 # v2.6.0: AUTO-SVEGLIA! Flag --auto-sveglia avvia watcher che sveglia la Regina quando worker finiscono!
 # v2.5.0: FIX NOTIFICA CLICK! Apre _output.md del task invece di .log. Legge task name da file stato.
@@ -42,6 +43,11 @@ set -e
 # AUTO-SVEGLIA (v2.7.0) - SEMPRE ATTIVO! La Regina viene svegliata automaticamente!
 # ============================================================================
 AUTO_SVEGLIA=true
+
+# ============================================================================
+# MAX WORKERS (v2.8.0) - Limite per evitare sovraccarico sistema
+# ============================================================================
+MAX_WORKERS=5
 
 # ============================================================================
 # CONFIGURAZIONE CENTRALIZZATA (v2.0.0)
@@ -729,6 +735,15 @@ main() {
             --no-auto-sveglia)
                 AUTO_SVEGLIA=false
                 ;;
+            --max-workers)
+                shift
+                if [[ -n "$1" && "$1" =~ ^[0-9]+$ ]]; then
+                    MAX_WORKERS="$1"
+                else
+                    print_error "--max-workers richiede un numero!"
+                    exit 1
+                fi
+                ;;
             *)
                 print_error "Opzione sconosciuta: $1"
                 show_usage
@@ -750,8 +765,19 @@ main() {
     # Conta worker
     worker_count=$(echo "$workers_to_spawn" | wc -w | xargs)
 
+    # CHECK MAX WORKERS (v2.8.0): Previene sovraccarico sistema
+    if [ "$worker_count" -gt "$MAX_WORKERS" ]; then
+        print_warning "Richiesti ${worker_count} worker, ma MAX_WORKERS=${MAX_WORKERS}!"
+        print_warning "Spawning solo i primi ${MAX_WORKERS} worker."
+        print_info "Usa --max-workers N per cambiare il limite."
+        echo ""
+        # Tronca la lista
+        workers_to_spawn=$(echo "$workers_to_spawn" | xargs -n1 | head -n "$MAX_WORKERS" | xargs)
+        worker_count=$MAX_WORKERS
+    fi
+
     echo ""
-    print_info "Spawning ${worker_count} worker(s)..."
+    print_info "Spawning ${worker_count} worker(s)... (max: ${MAX_WORKERS})"
     echo ""
 
     spawned=0

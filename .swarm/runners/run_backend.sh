@@ -29,7 +29,7 @@ SWARM_DIR="/Users/rafapra/Developer/CervellaSwarm/.swarm"
 
 # ============================================================================
 # AUTO-CLOSE: Claude terminato - chiudi questa finestra Terminal
-# v2.4.0: Notifica DETTAGLIATA con tempo esecuzione!
+# v2.5.0: Click notifica apre _output.md del task (non piu .log!)
 # ============================================================================
 
 # Salva exit code di Claude
@@ -60,7 +60,38 @@ else
     SOUND="Basso"
 fi
 
-# Notifica dettagliata prima di chiudere (v2.4.0)
+# v2.5.0: Trova l'ultimo task completato (.done piu recente) per questo worker
+# Cerca file _output.md corrispondente al task
+TASK_OUTPUT_FILE=""
+TASK_FILE="${SWARM_DIR}/status/worker_${WORKER_NAME}.task"
+if [ -f "$TASK_FILE" ]; then
+    # Se il worker ha scritto quale task stava processando, usa quello
+    TASK_NAME=$(cat "$TASK_FILE")
+    POTENTIAL_OUTPUT="${SWARM_DIR}/tasks/${TASK_NAME}_output.md"
+    if [ -f "$POTENTIAL_OUTPUT" ]; then
+        TASK_OUTPUT_FILE="$POTENTIAL_OUTPUT"
+    fi
+fi
+
+# Fallback: cerca il .done piu recente e deriva l'output
+if [ -z "$TASK_OUTPUT_FILE" ]; then
+    LATEST_DONE=$(ls -t "${SWARM_DIR}/tasks/"*.done 2>/dev/null | head -1)
+    if [ -n "$LATEST_DONE" ]; then
+        # Estrai nome task dal file .done (rimuovi .done)
+        TASK_BASE=$(basename "$LATEST_DONE" .done)
+        POTENTIAL_OUTPUT="${SWARM_DIR}/tasks/${TASK_BASE}_output.md"
+        if [ -f "$POTENTIAL_OUTPUT" ]; then
+            TASK_OUTPUT_FILE="$POTENTIAL_OUTPUT"
+        fi
+    fi
+fi
+
+# Fallback finale: usa il log
+if [ -z "$TASK_OUTPUT_FILE" ]; then
+    TASK_OUTPUT_FILE="$LOG_FILE"
+fi
+
+# Notifica dettagliata prima di chiudere (v2.5.0)
 # Prova terminal-notifier (se installato) per click action, altrimenti osascript
 if command -v terminal-notifier &>/dev/null; then
     terminal-notifier \
@@ -68,7 +99,7 @@ if command -v terminal-notifier &>/dev/null; then
         -subtitle "Worker terminato" \
         -message "cervella-${WORKER_NAME}: ${ESITO} (${DURATION_STR})" \
         -sound "$SOUND" \
-        -open "file://${LOG_FILE}" 2>/dev/null
+        -open "file://${TASK_OUTPUT_FILE}" 2>/dev/null
 else
     osascript -e "display notification \"cervella-${WORKER_NAME}: ${ESITO} (${DURATION_STR})\" with title \"CervellaSwarm\" sound name \"${SOUND}\"" 2>/dev/null
 fi
