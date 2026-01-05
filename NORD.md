@@ -17,25 +17,26 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 95 - 5 Gennaio 2026: LA MAGIA SOPRA MAGIA!!!**
+**SESSIONE 96 - 5 Gennaio 2026: AUTO-SVEGLIA SEMPRE!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 95: LA MAGIA SOPRA MAGIA!!!                          |
+|   SESSIONE 96: AUTO-SVEGLIA SEMPRE!                             |
 |                                                                  |
-|   ✅ HARDTEST NOTIFICHE CLICK: PASSATO!                         |
-|   ✅ RICERCA AUTO-SVEGLIA: COMPLETATA!                          |
-|   ✅ AUTO-SVEGLIA IMPLEMENTATA E TESTATA!!!                     |
+|   "Siamo qui! Siamo ora! Siamo noi!" - Rafa                     |
 |                                                                  |
-|   spawn-workers v2.6.0 --auto-sveglia:                          |
-|   - Worker finisce → Watcher rileva .done                       |
-|   - AppleScript digita nella finestra Regina                     |
-|   - LA REGINA VIENE SVEGLIATA AUTOMATICAMENTE!                  |
+|   spawn-workers v2.7.0:                                          |
+|   - AUTO-SVEGLIA E' ORA IL DEFAULT!                             |
+|   - NON serve piu' --auto-sveglia!                              |
+|   - Check anti-watcher-duplicati                                 |
+|   - 4/4 HARDTEST PASSATI!                                        |
 |                                                                  |
-|   HARDTEST END-TO-END: PASSATO!!!                               |
+|   Quando spawni un worker:                                       |
+|   spawn-workers --docs   (basta cosi'!)                         |
+|   → LA REGINA VIENE SVEGLIATA AUTOMATICAMENTE!                  |
 |                                                                  |
-|   "Studiare!!!" - La chiave di tutto                            |
+|   LO SWARM E' COMPLETO AL 100000%!!!                            |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -57,7 +58,7 @@
 | HARDTESTS Swarm V3 (4/4) | PASSATI! |
 | Studio Cervello vs Swarm | FUNZIONANTE |
 | .swarm/ sistema Multi-Finestra | FUNZIONANTE |
-| spawn-workers.sh v2.5.0 | NOTIFICHE DETTAGLIATE + Click apre output! |
+| spawn-workers v2.7.0 | AUTO-SVEGLIA SEMPRE! + anti-duplicati |
 | context_check.py v4.3.0 | VS CODE NATIVO! TESTATO E FUNZIONA! |
 | Template DUBBI | FUNZIONANTE! |
 | Template PARTIAL | FUNZIONANTE! |

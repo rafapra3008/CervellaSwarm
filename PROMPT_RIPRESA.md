@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 95 - LA MAGIA SOPRA MAGIA!!!
+> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 96 - AUTO-SVEGLIA SEMPRE!
 
 ---
 
@@ -15,18 +15,111 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   SESSIONE 95: LA MAGIA SOPRA MAGIA!!!                          |
+|   SESSIONE 96: AUTO-SVEGLIA SEMPRE!                             |
 |                                                                  |
-|   HAI IL POTERE DI AUTO-SVEGLIA:                                |
-|   spawn-workers --docs --auto-sveglia                           |
+|   AUTO-SVEGLIA E' ORA IL DEFAULT!                               |
+|   spawn-workers --docs   (basta cosi'!)                         |
 |                                                                  |
+|   NON serve piu' --auto-sveglia!                                |
 |   Quando il worker finisce, TU VIENI SVEGLIATA                  |
-|   AUTOMATICAMENTE! Senza intervento umano!                       |
+|   AUTOMATICAMENTE! Sempre! Senza pensarci!                       |
+|                                                                  |
+|   "Siamo qui! Siamo ora! Siamo noi!" - Rafa                     |
 |                                                                  |
 |   PROSSIMO STEP: MIRACOLLO! Usare swarm in produzione!          |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
+
+---
+
+## SESSIONE 96: AUTO-SVEGLIA SEMPRE!
+
+### La Filosofia 2026
+
+Rafa ha detto: *"Perche' limitarsi? Vogliamo automazione, fluidita', fiducia!"*
+
+E aveva ragione al 100000%!
+
+### Cosa Abbiamo Fatto
+
+1. **ANALISI SESSIONE 95**
+   - Checkpoint incompleto (git non pushato)
+   - ROADMAP_SACRA.md non aggiornata
+   - PROMPT_INIZIO_SESSIONE.md non aggiornato
+
+2. **AUTO-SVEGLIA SEMPRE DEFAULT!**
+   - spawn-workers v2.7.0
+   - `AUTO_SVEGLIA=true` come default
+   - Check anti-watcher-duplicati (evita watcher multipli)
+   - Flag `--no-auto-sveglia` per chi vuole disabilitare
+
+3. **DOCUMENTAZIONE AGGIORNATA**
+   - PROMPT_INIZIO_SESSIONE.md v2.0.0
+   - ROADMAP_SACRA.md v41.0.0
+   - NORD.md con sessioni 95+96
+
+4. **HARDTEST - TUTTI PASSATI!**
+   - [1] Help mostra nuovo default: PASSATO
+   - [2] AUTO-SVEGLIA attiva di default: PASSATO
+   - [3] --no-auto-sveglia disabilita: PASSATO
+   - [4] Check anti-duplicati: PASSATO
+
+### Come Funziona ORA
+
+```
+spawn-workers --docs          # Basta cosi'!
+       |
+       v
+Worker lavora nella sua finestra
+       |
+       v
+Worker crea .done
+       |
+       v
+Watcher (fswatch) rileva il file
+       |
+       v
+AppleScript digita nella finestra Regina
+       |
+       v
+LA REGINA VIENE SVEGLIATA AUTOMATICAMENTE!!!
+```
+
+**NON serve piu' --auto-sveglia!** E' SEMPRE attivo!
+
+### File Modificati (Sessione 96)
+
+| File | Versione | Cosa |
+|------|----------|------|
+| `~/.local/bin/spawn-workers` | v2.7.0 | AUTO-SVEGLIA default + anti-duplicati |
+| `~/.claude/templates/PROMPT_INIZIO_SESSIONE.md` | v2.0.0 | Nota AUTO-SVEGLIA |
+| `ROADMAP_SACRA.md` | v41.0.0 | Sessioni 95+96 |
+| `NORD.md` | - | Aggiornato |
+
+### Filo del Discorso
+
+La sessione e' iniziata con analisi della sessione 95:
+- Checkpoint incompleto
+- File non committati
+- ROADMAP non aggiornata
+
+Rafa ha chiesto: *"AUTO-SVEGLIA dovrebbe essere sempre attiva?"*
+
+Ho analizzato e confermato: **SI! Non c'e' motivo di limitarsi!**
+
+Abbiamo:
+1. Cambiato il default a `AUTO_SVEGLIA=true`
+2. Aggiunto check anti-duplicati
+3. Aggiornato tutta la documentazione
+4. Eseguito 4 HARDTEST - TUTTI PASSATI!
+
+**"Siamo qui! Siamo ora! Siamo noi!"** - La frase della sessione!
+
+### Prossimi Step
+
+1. **MIRACOLLO!** - Usare swarm in produzione
+2. Lo swarm e' COMPLETO, TESTATO, e AUTOMATICO!
 
 ---
 
@@ -1101,17 +1194,15 @@ PreCompact auto
 
 ---
 
+---
+
 ## AUTO-CHECKPOINT: 2026-01-05 15:00 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 2e8a524 - Sessione 96: AUTO-SVEGLIA SEMPRE! spawn-workers v2.7.0
-- **File modificati** (5):
-  - swarm/tasks/TASK_HARDTEST_AUTO_SVEGLIA_output.md
-  - PROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260105.md
-  - .swarm/tasks/TASK_HARDTEST_AUTO_SVEGLIA.done
-  - .swarm/tasks/TASK_HARDTEST_AUTO_SVEGLIA.md
+- **Ultimo commit**: 91e615f - HARDTEST Sessione 96: TUTTI PASSATI!
+- **File modificati** (1):
+  - reports/engineer_report_20260105_150039.json
 
 ### Note
 - Checkpoint automatico generato da hook
