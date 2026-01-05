@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 98 FINALE
+> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 98 (ANTI-COMPACT v5.0.0!)
 
 ---
 
@@ -15,16 +15,23 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   SESSIONE 98: TUTTO SALVATO E VERIFICATO!                      |
+|   SESSIONE 98: ANTI-COMPACT v5.0.0 IMPLEMENTATO!                |
 |                                                                  |
-|   L'HANDOFF HA FUNZIONATO!                                       |
-|   - Tutti i file sono stati salvati correttamente               |
-|   - Hook block_task_for_agents.py ATTIVO                        |
-|   - ROADMAP 3 PEZZI MANCANTI creata                             |
+|   ATTENZIONE:                                                    |
+|   - context_check.py v5.0.0 e' stato IMPLEMENTATO               |
+|   - MA NON ANCORA TESTATO in scenario reale!                    |
+|   - Se sei arrivata qui tramite handoff automatico:             |
+|     → SEI LA PRIMA A TESTARLO!                                  |
+|     → Verifica che tutto funzioni                               |
+|     → Documenta cosa e' andato bene/male                        |
 |                                                                  |
-|   PROSSIMA SESSIONE: ANTI AUTO-COMPACT (Priorita' 1)            |
+|   NOVITA' v5.0.0 (da verificare!):                              |
+|   - Git auto-commit prima di handoff                            |
+|   - File handoff RICCO con git status                           |
+|   - Terminal + VS Code (IBRIDO)                                 |
+|   - Prompt punta a file handoff specifico                       |
 |                                                                  |
-|   "SU CARTA != REALE" - Solo le cose REALI contano!             |
+|   "SU CARTA != REALE" - Ora dobbiamo TESTARE!                   |
 |   "SEMPRE FINESTRE!" - Rafa                                     |
 |                                                                  |
 +------------------------------------------------------------------+
