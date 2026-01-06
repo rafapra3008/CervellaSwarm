@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 6 Gennaio 2026 - Sessione 104 (SCIAME IN AZIONE!)
+> **Ultimo aggiornamento:** 6 Gennaio 2026 - Sessione 105 (DEPLOY MULTI-MAILBOX!)
 
 ---
 
@@ -15,15 +15,16 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   SESSIONE 104: SCIAME IN AZIONE!                               |
+|   SESSIONE 105: DEPLOY MULTI-MAILBOX!                           |
 |                                                                  |
-|   LO SCIAME HA LAVORATO SU MIRACOLLO:                           |
-|   - cervella-backend ha creato cm_poller_scheduler.py           |
-|   - Task completato in ~5 minuti                                 |
-|   - Codice di alta qualita' (pattern APScheduler)               |
-|   - Deploy su produzione FUNZIONANTE!                           |
+|   COMPLETATO IL DEPLOY SU MIRACOLLO:                            |
+|   - Parser v2.0 (825 righe, 6 parser!)                          |
+|   - 2 caselle email: BeSync + Booking Engine                    |
+|   - Polling ogni 2 minuti su entrambe                           |
+|   - TUTTO IN PRODUZIONE!                                         |
 |                                                                  |
-|   RISULTATO: Miracollo ha polling email automatico ogni 2 min!  |
+|   VERIFICA: curl https://miracollo.com/api/cm/poller/status     |
+|   → {"running": true, "mailbox_count": 2}                       |
 |                                                                  |
 |   "Ultrapassar os proprios limites!"                            |
 |                                                                  |
@@ -469,14 +470,19 @@ Cervella & Rafa
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-06 14:14 (unknown)
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-06 14:57 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 6a9430f - ANTI-COMPACT: PreCompact auto
-- **File modificati** (2):
-  - eports/scientist_prompt_20260106.md
-  - .swarm/handoff/HANDOFF_20260106_141449.md
+- **Ultimo commit**: 5f76fcb - 📝 HANDOFF Sessione 104 - Worker researcher attivo su Miracollo
+- **File modificati** (3):
+  - ROMPT_RIPRESA.md
+  - reports/scientist_prompt_20260106.md
+  - reports/engineer_report_20260106_141634.json
 
 ### Note
 - Checkpoint automatico generato da hook
