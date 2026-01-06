@@ -467,15 +467,16 @@ Cervella & Rafa
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-06 13:24 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-06 14:14 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: d8b8aa8 - ANTI-COMPACT: PreCompact auto
-- **File modificati** (3):
-  - ROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260106.md
-  - .swarm/handoff/HANDOFF_20260106_132323.md
+- **Ultimo commit**: 6a9430f - ANTI-COMPACT: PreCompact auto
+- **File modificati** (2):
+  - eports/scientist_prompt_20260106.md
+  - .swarm/handoff/HANDOFF_20260106_141449.md
 
 ### Note
 - Checkpoint automatico generato da hook
