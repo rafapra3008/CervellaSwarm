@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 6 Gennaio 2026 - Sessione 103 (SU CARTA → REALE!)
+> **Ultimo aggiornamento:** 6 Gennaio 2026 - Sessione 104 (SCIAME IN AZIONE!)
 
 ---
 
@@ -15,22 +15,17 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   SESSIONE 103: SU CARTA → REALE!                               |
+|   SESSIONE 104: SCIAME IN AZIONE!                               |
 |                                                                  |
-|   - Code Review settimanale: 8.5/10 (ottimo!)                   |
-|   - Trovati 4 comandi documentati ma NON esistenti              |
-|   - CREATI e funzionanti:                                        |
-|     * swarm-help (guida completa comandi)                        |
-|     * task-new (crea task da template)                           |
-|     * swarm-report (report task completati)                      |
-|     * swarm-session-check (verifica inizio sessione)             |
+|   LO SCIAME HA LAVORATO SU MIRACOLLO:                           |
+|   - cervella-backend ha creato cm_poller_scheduler.py           |
+|   - Task completato in ~5 minuti                                 |
+|   - Codice di alta qualita' (pattern APScheduler)               |
+|   - Deploy su produzione FUNZIONANTE!                           |
 |                                                                  |
-|   LEZIONE: "SU CARTA != REALE"                                  |
-|   Se non funziona, non esiste!                                   |
+|   RISULTATO: Miracollo ha polling email automatico ogni 2 min!  |
 |                                                                  |
-|   LO SCIAME E' 100% OPERATIVO E REALE!                          |
-|                                                                  |
-|   PRIMO COMANDO DA USARE: swarm-help                            |
+|   "Ultrapassar os proprios limites!"                            |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -171,6 +166,52 @@ Rafa: "noi siamo piu' fighe che il Cursor 2.0!"
 - ✅ PEZZO 3: Roadmaps Visuale → FATTO
 - ✅ PEZZO 4: swarm-init → FATTO
 - ⏸️ PEZZO 1: Anti-Compact → PARCHEGGIATO (70%)
+
+---
+
+## SESSIONE 104 - 6 Gennaio 2026: SCIAME IN AZIONE!
+
+**TASK COMPLETATO:**
+Lo sciame ha supportato Miracollo con la creazione del CM Poller Scheduler.
+
+**COME HA FUNZIONATO:**
+1. Regina (io) ha creato task dettagliato in .swarm/tasks/
+2. spawn-workers --backend ha lanciato cervella-backend
+3. Worker ha lavorato nel suo terminale (~5 minuti)
+4. Watcher ha notificato completamento
+5. Regina ha verificato output e deployato
+
+**RISULTATO:**
+- cm_poller_scheduler.py creato (250 righe)
+- main.py modificato (startup/shutdown)
+- cm_reservation.py modificato (+2 endpoint)
+- .env.example aggiornato
+- QUALITA' ECCELLENTE: pattern APScheduler coerente con codebase
+
+**FEEDBACK SULLO SCIAME:**
+
+| Cosa | Valutazione | Note |
+|------|-------------|------|
+| spawn-workers | PERFETTO | Lancia worker in finestra separata |
+| Watcher AUTO-SVEGLIA | FUNZIONA | Notifica quando .done appare |
+| Task file .md | EFFICACE | Istruzioni chiare per il worker |
+| Tempo esecuzione | ~5 min | Ottimo per task medio |
+| Qualita' output | ALTA | Codice pulito, pattern rispettato |
+
+**SUGGERIMENTI MIGLIORAMENTO:**
+
+1. **QUASI PERFETTO** - Il sistema funziona molto bene!
+
+2. **IDEA: progress live** - Sarebbe utile vedere cosa sta facendo
+   il worker in tempo reale (non solo quando finisce)
+
+3. **IDEA: retry automatico** - Se worker fallisce, riprova 1 volta
+
+4. **NOTA IMPORTANTE:** La Regina NON deve fare edit diretti per
+   task che possono essere delegati. SEMPRE spawn-workers!
+
+**LEZIONE:**
+> *"Lo sciame e' REALE e FUNZIONA! Delegare sempre!"*
 
 ---
 
@@ -422,14 +463,19 @@ Cervella & Rafa
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-06 11:34 (unknown)
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-06 13:24 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 63c2493 - 🐝 Sessione 35: Supporto a Miracollo - LA GRANDE VISIONE!
-- **File modificati** (2):
-  - reports/engineer_report_20260106_111648.json
-  - reports/engineer_report_20260106_112644.json
+- **Ultimo commit**: d8b8aa8 - ANTI-COMPACT: PreCompact auto
+- **File modificati** (3):
+  - ROMPT_RIPRESA.md
+  - reports/scientist_prompt_20260106.md
+  - .swarm/handoff/HANDOFF_20260106_132323.md
 
 ### Note
 - Checkpoint automatico generato da hook
