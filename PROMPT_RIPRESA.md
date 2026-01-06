@@ -414,17 +414,16 @@ Cervella & Rafa
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-06 06:09 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-06 07:31 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: c12e16a - Aggiunto: LAVORO GENERALE Comunicazione e Capacità Sciame
-- **File modificati** (5):
-  - ROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260106.md
-  - .swarm/tasks/TASK_CODE_REVIEW_SETTIMANALE.done
-  - .swarm/tasks/TASK_CODE_REVIEW_SETTIMANALE.md
-  - .swarm/tasks/TASK_CODE_REVIEW_SETTIMANALE.ready
+- **Ultimo commit**: 96c5d80 - ANTI-COMPACT: PreCompact auto
+- **File modificati** (2):
+  - eports/scientist_prompt_20260106.md
+  - .swarm/handoff/HANDOFF_20260106_073137.md
 
 ### Note
 - Checkpoint automatico generato da hook
