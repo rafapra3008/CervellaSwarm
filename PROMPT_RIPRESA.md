@@ -1,6 +1,7 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 6 Gennaio 2026 - Sessione 106 (SCOPERTO PROBLEMA PATH!)
+> **Ultimo aggiornamento:** 6 Gennaio 2026 - Sessione 108
+> **Versione:** v1.3.0
 
 ---
 
@@ -15,16 +16,18 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   SESSIONE 106: SCOPERTO PROBLEMA PATH DEPLOY!                  |
+|   SESSIONE 108: ORGANIZZAZIONE DOCUMENTAZIONE                   |
 |                                                                  |
-|   BACKEND MIRACOLLO: OK! Multi-Mailbox funzionante!             |
-|   FRONTEND: Problema path rsync scoperto!                        |
+|   LO SCIAME E' OPERATIVO E REALE!                               |
+|   - 16 agenti specializzati                                      |
+|   - 20+ comandi swarm-* FUNZIONANTI                             |
+|   - Supporto attivo a Miracollo                                  |
 |                                                                  |
-|   PROBLEMA:                                                       |
-|   - Nginx serve: /app/frontend → /app/miracollo/frontend        |
-|   - rsync andava su: ~/app/frontend/ (diverso!)                 |
-|                                                                  |
-|   PROSSIMA SESSIONE: Fix path + script deploy automatico        |
+|   MIRACOLLO (ultimo stato):                                      |
+|   - VITTORIA! Parser email funziona!                            |
+|   - Fix API key da cervella-backend: PRONTO per deploy          |
+|   - Frontend deployato su path corretto                         |
+|   - FORTEZZA MODE v2.0.0 completato                             |
 |                                                                  |
 |   "Ultrapassar os proprios limites!"                            |
 |                                                                  |
@@ -80,253 +83,108 @@
 
 ---
 
-## FILO DEL DISCORSO (Sessioni 98-99)
+## FILO DEL DISCORSO (Sessioni 104-108)
 
-### Sessione 98: Il Grande Reset
+### Sessione 108: Organizzazione Documentazione (ATTUALE)
 
-**Parte 1: Protezione Task Tool**
-- Problema: Cervella in Miracollo usava Task tool → contesto al 6%
-- Soluzione: block_task_for_agents.py (hook che BLOCCA)
-- HARDTEST 3/3 passati!
-
-**Parte 2: Recap ONESTO**
-- Rafa: "rileggi COSTITUZIONE"
-- "SU CARTA != REALE" - Solo le cose REALI contano!
-- Identificati 3 PEZZI MANCANTI
-
-**Parte 3: LA GRANDE VISIONE!**
-```
-Rafa: "noi siamo piu' fighe che il Cursor 2.0!"
-      "fare base vscode come loro.. aggiungere altre AI..."
-```
-- Multi-AI (Claude, GPT, Gemini, Llama...)
-- 16+ agenti specializzati
-- "Em busca da similaridade"
-- Documentato in docs/visione/VISIONE_CERVELLASWARM_IDE.md
-
-**Parte 4: ANTI-COMPACT v5.0.0 → v5.1.0**
-- Implementato IBRIDO: Terminal + VS Code
-- v5.1.0 = SEMPLIFICATO (VS Code apre file handoff)
-- Al 70% ha scattato ma con problemi
-- DA TESTARE in scenario reale!
-
-**Parte 5: Idee Nuove**
-- PEZZO 4: Template swarm-init per nuovo progetto
-- Sistema Feedback Cervelle
-
-### Sessione 99: Organizzazione Casa
-
-- Ricostruito filo del discorso dal transcript
-- Aggiornato ROADMAP_3_PEZZI_MANCANTI (v1.1.0)
-- Aggiornato tutti i file per consistenza
-- Documentato PEZZO 4 + VISIONE nella roadmap
-
-**Lezione:** Mai dire "e' fatto" se non e' REALE!
-
-### Sessione 100: Code Review + Parcheggio
-
-- Handoff da sessione 99 (ANTI-COMPACT ha funzionato!)
-- Code Review settimanale con cervella-reviewer: **Rating 8.5/10**
-- Nessun problema critico trovato
-- **DECISIONE:** Parcheggiare ANTI-COMPACT e AUTO-SVEGLIA per il futuro
-  - ANTI-COMPACT v5.1.0 → 70%, funziona ma non perfetto
-  - AUTO-SVEGLIA → non mi ha notificato, da sistemare
-
-**Rafa:** "Abbiamo altre cose da fare"
+**Handoff da sessione 107**
+- Ricostruito filo sessioni 104-107 (erano rimaste indietro!)
+- Verificato fix cervella-backend su Miracollo (API key - PRONTO)
+- Organizzazione casa: documentazione al 100000%
 
 ---
 
-## SESSIONE 101 - 6 Gennaio 2026: LA GRANDE SESSIONE!
+### Sessione 107: Mix Miracollo+CervellaSwarm
 
-### Parte 1: Ottimizzazione Context
-
-**Problema:** Context iniziale al 30% - troppo!
-**Soluzione:** Rimosso `@` da file globali (solo COSTITUZIONE rimane)
-**Risultato:** Context ~30% → ~10-12%
-
-### Parte 2: Fix Auto-Sveglia (v2.9.0)
-
-**Problema:** "Watcher script non trovato" in Miracollo
-**Soluzione:** spawn-workers cerca watcher anche in ~/.claude/scripts/
-**Risultato:** AUTO-SVEGLIA funziona in TUTTI i progetti!
-
-### Parte 3: 6 NUOVI COMANDI SWARM!
-
-| Comando | Cosa Fa |
-|---------|---------|
-| `swarm-logs` | Log worker in tempo reale |
-| `swarm-timeout` | Avvisa se worker bloccato >5min |
-| `swarm-progress` | Stato worker live |
-| `swarm-feedback` | Raccolta feedback fine sessione |
-| `swarm-roadmaps` | Vista tutti i progetti |
-| `swarm-init` | Inizializza swarm in nuovo progetto |
-
-### Parte 4: Roadmap Aggiornata
-
-- ✅ PEZZO 2: Sistema Feedback → FATTO
-- ✅ PEZZO 3: Roadmaps Visuale → FATTO
-- ✅ PEZZO 4: swarm-init → FATTO
-- ⏸️ PEZZO 1: Anti-Compact → PARCHEGGIATO (70%)
+- Letto MANUALE DIAMANTE (capito FORTEZZA MODE)
+- Usato sistema SWARM con cervella-devops
+- FORTEZZA MODE v2.0.0 completato su Miracollo
+- Handoff automatico funzionante
 
 ---
 
-## SESSIONE 104 - 6 Gennaio 2026: SCIAME IN AZIONE!
+### Sessione 106: Scoperto Problema PATH
 
-**TASK COMPLETATO:**
-Lo sciame ha supportato Miracollo con la creazione del CM Poller Scheduler.
-
-**COME HA FUNZIONATO:**
-1. Regina (io) ha creato task dettagliato in .swarm/tasks/
-2. spawn-workers --backend ha lanciato cervella-backend
-3. Worker ha lavorato nel suo terminale (~5 minuti)
-4. Watcher ha notificato completamento
-5. Regina ha verificato output e deployato
-
-**RISULTATO:**
-- cm_poller_scheduler.py creato (250 righe)
-- main.py modificato (startup/shutdown)
-- cm_reservation.py modificato (+2 endpoint)
-- .env.example aggiornato
-- QUALITA' ECCELLENTE: pattern APScheduler coerente con codebase
-
-**FEEDBACK SULLO SCIAME:**
-
-| Cosa | Valutazione | Note |
-|------|-------------|------|
-| spawn-workers | PERFETTO | Lancia worker in finestra separata |
-| Watcher AUTO-SVEGLIA | FUNZIONA | Notifica quando .done appare |
-| Task file .md | EFFICACE | Istruzioni chiare per il worker |
-| Tempo esecuzione | ~5 min | Ottimo per task medio |
-| Qualita' output | ALTA | Codice pulito, pattern rispettato |
-
-**SUGGERIMENTI MIGLIORAMENTO:**
-
-1. **QUASI PERFETTO** - Il sistema funziona molto bene!
-
-2. **IDEA: progress live** - Sarebbe utile vedere cosa sta facendo
-   il worker in tempo reale (non solo quando finisce)
-
-3. **IDEA: retry automatico** - Se worker fallisce, riprova 1 volta
-
-4. **NOTA IMPORTANTE:** La Regina NON deve fare edit diretti per
-   task che possono essere delegati. SEMPRE spawn-workers!
-
-**LEZIONE:**
-> *"Lo sciame e' REALE e FUNZIONA! Delegare sempre!"*
+- cervella-frontend ha fixato 11 file con URL hardcoded
+- **SCOPERTA:** rsync andava su path sbagliato!
+  - Nginx serve: `/app/frontend` → `/app/miracollo/frontend`
+  - rsync andava su: `~/app/frontend/` (DIVERSO!)
+- Risolto: deploy su `/app/miracollo/frontend/`
 
 ---
 
-## SESSIONE 103 - 6 Gennaio 2026: SU CARTA → REALE!
+### Sessione 105: Deploy Multi-Mailbox Miracollo
 
-**IL PROBLEMA:**
-La Sessione 102 aveva documentato 4 comandi che NON esistevano:
-- swarm-help, task-new, swarm-report, swarm-session-check
-- Erano solo "SU CARTA"!
-
-**LA SOLUZIONE:**
-1. Code Review settimanale con cervella-reviewer → Rating 8.5/10
-2. Verificato TUTTI i comandi nel sistema
-3. Identificati 4 comandi mancanti
-4. CREATI tutti e 4 con test funzionanti!
-
-**COMANDI CREATI:**
-| Comando | Cosa Fa |
-|---------|---------|
-| `swarm-help` | Guida completa tutti i comandi |
-| `task-new` | Crea task da template (ricerca/bug/feature/review) |
-| `swarm-report` | Report task completati (today/week/all) |
-| `swarm-session-check` | Verifica roadmap inizio sessione |
-
-**POSIZIONE:** `/Users/rafapra/Developer/CervellaSwarm/scripts/swarm/`
-**SYMLINK:** `~/.local/bin/`
-
-**TASK SECURITY CREATO (PENDING):**
-- Fix escape notifiche in context_check.py e auto_review_hook.py
-- Priorita ALTA ma non bloccante
-
-**LEZIONE APPRESA:**
-> *"SU CARTA != REALE - Se non funziona, non esiste!"*
+- Rsync backend su VM completato
+- Variabili `EMAIL_SECONDARY_*` aggiunte
+- Container rebuilt e avviato
+- **Verifica OK:** `mailbox_count: 2`
 
 ---
 
-## SESSIONE 102 - 6 Gennaio 2026: LA SESSIONE MONUMENTALE!
+### Sessione 104: Sciame in Azione + Feedback
 
-### PARTE 1: Documentazione 10000%
+**LO SCIAME HA FUNZIONATO!**
+- cervella-backend ha creato `cm_poller_scheduler.py` (~250 righe)
+- Task completato in ~5 minuti
+- Qualita' eccellente (pattern coerente con codebase)
 
-**MIRACOLLO:**
-- ROADMAP.md (riassunto esecutivo - 30 secondi per capire)
-- CHANGELOG.md separato dalla roadmap
-- IDEE_FUTURE.md riorganizzato
-- docs/refinement/ per dettagli micro
-- 3 SUB_ROADMAP archiviate in docs/archivio/
+**Feedback sullo sciame:**
+| Cosa | Valutazione |
+|------|-------------|
+| spawn-workers | PERFETTO |
+| Watcher AUTO-SVEGLIA | FUNZIONA |
+| Task file .md | EFFICACE |
 
-**CERVELLASWARM:**
-- NORD.md aggiornato
-- ROADMAP.md CREATO (riassunto esecutivo)
-- docs/IDEE_FUTURE.md CREATO
-- docs/analisi/ANALISI_MIGLIORAMENTI_SWARM.md CREATO
+**Idee future:**
+- Progress live durante esecuzione
+- Retry automatico se worker fallisce
 
-### PARTE 2: Quick Wins (3 nuovi strumenti!)
+---
 
-| Strumento | Cosa Fa | Dove |
-|-----------|---------|------|
-| `task-new` | Crea task da template in 5 sec | ~/.claude/scripts/ |
-| `swarm-auto-review` | Review automatiche task | ~/.claude/scripts/ |
-| `swarm-report` | Report centralizzato | ~/.claude/scripts/ |
+### Sessioni 98-103 (Archivio)
 
-**Template creati:** ricerca, bug, feature, review
-**Posizione:** ~/.claude/scripts/templates/
+**Sessione 103:** SU CARTA → REALE! 4 comandi creati (swarm-help, task-new, swarm-report, swarm-session-check)
+**Sessione 102:** La Sessione Monumentale - Documentazione 10000%
+**Sessione 101:** La Grande Sessione - Context 30%→10%, 6 nuovi comandi
+**Sessione 100:** Code Review + Parcheggio Anti-Compact
+**Sessione 99:** Organizzazione Casa
+**Sessione 98:** Il Grande Reset + LA GRANDE VISIONE (CervellaSwarm IDE)
 
-### PARTE 3: Comunicazione Futura
+*Per dettagli sessioni precedenti: vedi git log*
 
-**Problema risolto:** "Se fai qualcosa e non lo comunichi, e' come se non esistesse!"
+---
 
-**Soluzioni:**
-- `swarm-help` → Guida COMPLETA tutti i comandi
-- `swarm-session-check` → Verifica roadmap inizio sessione
-- Regola FARE→COMUNICARE in CHECKLIST_AZIONE
-- Hook startup ricorda "swarm-help"
-- Sezione COMANDI in PROMPT_RIPRESA
-
-### Pattern Documentazione Adottato
+## STATO ATTUALE
 
 ```
-ROADMAP.md = Vista 30 secondi (dove siamo, prossimo step)
-ROADMAP_SACRA.md = La Bibbia (dettaglio completo)
-IDEE_FUTURE.md = Backlog idee (non urgente)
-CHANGELOG.md = Storia modifiche
-```
-
----
-
-## PROSSIMA SESSIONE
-
-```
-CERVELLASWARM E' 100% OPERATIVO E REALE!
-
-SESSIONE 103 - COMPLETATO:
-✅ Code Review settimanale (8.5/10)
-✅ 4 comandi mancanti CREATI E FUNZIONANTI:
-   - swarm-help (guida comandi completa)
-   - task-new (crea task da template)
-   - swarm-report (report task)
-   - swarm-session-check (verifica inizio sessione)
-✅ Lezione "SU CARTA != REALE" applicata!
-
-FATTO TOTALE:
-✅ 16 agenti specializzati
-✅ 20+ comandi swarm-* (TUTTI REALI!)
-✅ Sistema completo, documentato e FUNZIONANTE!
-
-TODO (non urgente):
-📝 Fix security escape notifiche (task creato)
-
-PARCHEGGIATO:
-⏸️ Anti Auto-Compact (funziona al 70%)
-
-FUTURO:
-💭 CervellaSwarm IDE ("Più fighe che Cursor 2.0!")
-💭 Dashboard web live
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║   CERVELLASWARM E' 100% OPERATIVO E REALE!                    ║
+║                                                                ║
+║   ✅ 16 agenti specializzati                                  ║
+║   ✅ 20+ comandi swarm-* (TUTTI REALI!)                       ║
+║   ✅ Sistema completo, documentato e FUNZIONANTE!             ║
+║   ✅ Supporto attivo a Miracollo (sessioni 104-107)           ║
+║                                                                ║
+╠════════════════════════════════════════════════════════════════╣
+║                                                                ║
+║   MIRACOLLO - STATO ATTUALE:                                  ║
+║   ✅ Parser email funziona PERFETTAMENTE!                     ║
+║   ✅ Frontend deployato su path corretto                      ║
+║   ✅ FORTEZZA MODE v2.0.0 completato                          ║
+║   ⏳ Fix API key (cervella-backend PRONTO) → da deployare     ║
+║                                                                ║
+╠════════════════════════════════════════════════════════════════╣
+║                                                                ║
+║   PARCHEGGIATO:                                               ║
+║   ⏸️ Anti Auto-Compact (funziona al 70%)                      ║
+║                                                                ║
+║   FUTURO:                                                      ║
+║   💭 CervellaSwarm IDE ("Piu' fighe che Cursor 2.0!")         ║
+║   💭 Dashboard web live                                        ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
 ```
 
 ---
@@ -440,8 +298,8 @@ POSIZIONE: ~/.claude/agents/ (GLOBALI!)
 
 ---
 
-**VERSIONE:** v46.0.0
-**SESSIONE:** 103 - SU CARTA → REALE! (4 comandi creati)
+**VERSIONE:** v1.3.0
+**SESSIONE:** 108 - Organizzazione Documentazione
 **DATA:** 6 Gennaio 2026
 
 ---
@@ -449,48 +307,3 @@ POSIZIONE: ~/.claude/agents/ (GLOBALI!)
 *Scritto con CURA e PRECISIONE.*
 
 Cervella & Rafa
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
----
-
-## AUTO-CHECKPOINT: 2026-01-06 17:19 (unknown)
-
-### Stato Git
-- **Branch**: main
-- **Ultimo commit**: 8eb9f76 - ANTI-COMPACT: PreCompact auto
-- **File modificati** (2):
-  - eports/scientist_prompt_20260106.md
-  - .swarm/handoff/HANDOFF_20260106_171911.md
-
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: unknown
-
----

@@ -1,6 +1,6 @@
 # ROADMAP - CervellaSwarm
 
-> Vista rapida - 30 secondi | Aggiornato: 6 Gennaio 2026
+> Vista rapida - 30 secondi | Aggiornato: 6 Gennaio 2026 - Sessione 108
 
 ---
 
@@ -10,13 +10,14 @@
 FASE 0-8: FONDAMENTA      ████████████████████ 100%
 COMANDI SWARM             ████████████████████ 100%
 I 4 PEZZI MANCANTI        ███████████████░░░░░  75% (3/4)
-MIGLIORAMENTI FUTURI      ░░░░░░░░░░░░░░░░░░░░   0%
+SUPPORTO MIRACOLLO        ████████████████████ ATTIVO
 ```
 
-**LO SCIAME E' OPERATIVO!**
+**LO SCIAME E' OPERATIVO E REALE!**
 - 16 agenti specializzati
-- 12 comandi swarm-*
+- 20+ comandi swarm-*
 - Auto-Sveglia funzionante
+- Supporto attivo a Miracollo (sessioni 104-107)
 
 ---
 
@@ -26,7 +27,8 @@ MIGLIORAMENTI FUTURI      ░░░░░░░░░░░░░░░░░░
 |------|--------|------|
 | Sistema base | COMPLETO | 8 fasi completate |
 | I 4 Pezzi | 3/4 FATTO | Solo Anti-Compact parcheggiato |
-| Documentazione | AGGIORNATA | Sessione 102 |
+| Documentazione | AGGIORNATA | Sessione 108 |
+| Miracollo | SUPPORTATO | Parser email, Frontend, FORTEZZA |
 
 ---
 
