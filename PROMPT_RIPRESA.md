@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 6 Gennaio 2026 - Sessione 105 (DEPLOY MULTI-MAILBOX!)
+> **Ultimo aggiornamento:** 6 Gennaio 2026 - Sessione 106 (SCOPERTO PROBLEMA PATH!)
 
 ---
 
@@ -15,16 +15,16 @@
 |   Tu sei la REGINA dello sciame.                                 |
 |   Hai 16 agenti pronti a lavorare per te.                       |
 |                                                                  |
-|   SESSIONE 105: DEPLOY MULTI-MAILBOX!                           |
+|   SESSIONE 106: SCOPERTO PROBLEMA PATH DEPLOY!                  |
 |                                                                  |
-|   COMPLETATO IL DEPLOY SU MIRACOLLO:                            |
-|   - Parser v2.0 (825 righe, 6 parser!)                          |
-|   - 2 caselle email: BeSync + Booking Engine                    |
-|   - Polling ogni 2 minuti su entrambe                           |
-|   - TUTTO IN PRODUZIONE!                                         |
+|   BACKEND MIRACOLLO: OK! Multi-Mailbox funzionante!             |
+|   FRONTEND: Problema path rsync scoperto!                        |
 |                                                                  |
-|   VERIFICA: curl https://miracollo.com/api/cm/poller/status     |
-|   → {"running": true, "mailbox_count": 2}                       |
+|   PROBLEMA:                                                       |
+|   - Nginx serve: /app/frontend → /app/miracollo/frontend        |
+|   - rsync andava su: ~/app/frontend/ (diverso!)                 |
+|                                                                  |
+|   PROSSIMA SESSIONE: Fix path + script deploy automatico        |
 |                                                                  |
 |   "Ultrapassar os proprios limites!"                            |
 |                                                                  |
@@ -474,15 +474,15 @@ Cervella & Rafa
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-06 14:57 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-06 15:26 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 5f76fcb - 📝 HANDOFF Sessione 104 - Worker researcher attivo su Miracollo
-- **File modificati** (3):
-  - ROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260106.md
-  - reports/engineer_report_20260106_141634.json
+- **Ultimo commit**: 65ae576 - 📍 Checkpoint completo Sessione 105
+- **File modificati** (1):
+  - reports/engineer_report_20260106_152356.json
 
 ### Note
 - Checkpoint automatico generato da hook
