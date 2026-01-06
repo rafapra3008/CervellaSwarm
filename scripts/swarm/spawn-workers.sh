@@ -12,12 +12,13 @@
 #   ./spawn-workers.sh --all                  # Tutti i worker comuni
 #   ./spawn-workers.sh --list                 # Lista worker disponibili
 #
-# Versione: 2.8.0
-# Data: 2026-01-05
+# Versione: 2.9.0
+# Data: 2026-01-06
 # Apple Style: Auto-close, Graceful shutdown, Notifiche macOS
 # v2.0.0: Config centralizzata ~/.swarm/config
 #
 # CHANGELOG:
+# v2.9.0: FIX AUTO-SVEGLIA! Cerca watcher ANCHE in ~/.claude/scripts/ (globale). Funziona in TUTTI i progetti!
 # v2.8.0: MAX WORKERS! Limite default 5 per evitare sovraccarico. Flag --max-workers N per cambiare.
 # v2.7.0: AUTO-SVEGLIA SEMPRE! Default=true. Check anti-watcher-duplicati. Flag --no-auto-sveglia per disabilitare.
 # v2.6.0: AUTO-SVEGLIA! Flag --auto-sveglia avvia watcher che sveglia la Regina quando worker finiscono!
@@ -809,7 +810,14 @@ main() {
     # AUTO-SVEGLIA (v2.6.0) - Avvia watcher se richiesto
     # ============================================================================
     if [ "$AUTO_SVEGLIA" = true ]; then
-        WATCHER_SCRIPT="${PROJECT_ROOT}/scripts/swarm/watcher-regina.sh"
+        # Cerca watcher: prima nel progetto, poi globalmente
+        if [ -x "${PROJECT_ROOT}/scripts/swarm/watcher-regina.sh" ]; then
+            WATCHER_SCRIPT="${PROJECT_ROOT}/scripts/swarm/watcher-regina.sh"
+        elif [ -x "$HOME/.claude/scripts/watcher-regina.sh" ]; then
+            WATCHER_SCRIPT="$HOME/.claude/scripts/watcher-regina.sh"
+        else
+            WATCHER_SCRIPT=""
+        fi
         WATCHER_PID_FILE="${SWARM_DIR}/status/watcher.pid"
 
         # CHECK ANTI-DUPLICATI (v2.7.0): Se watcher gia' attivo, non avviarne un altro!
@@ -826,8 +834,8 @@ main() {
             fi
         fi
 
-        # Avvia watcher solo se non gia' attivo
-        if [ ! -f "$WATCHER_PID_FILE" ] && [ -x "$WATCHER_SCRIPT" ]; then
+        # Avvia watcher solo se non gia' attivo e script esiste
+        if [ ! -f "$WATCHER_PID_FILE" ] && [ -n "$WATCHER_SCRIPT" ] && [ -x "$WATCHER_SCRIPT" ]; then
             echo ""
             print_info "Avvio AUTO-SVEGLIA watcher..."
 
@@ -841,8 +849,9 @@ main() {
             print_success "Watcher AUTO-SVEGLIA avviato! (PID: $WATCHER_PID)"
             print_info "La Regina verra' svegliata quando i worker finiscono!"
             echo ""
-        elif [ ! -x "$WATCHER_SCRIPT" ]; then
-            print_warning "Watcher script non trovato: $WATCHER_SCRIPT"
+        elif [ -z "$WATCHER_SCRIPT" ]; then
+            print_warning "Watcher script non trovato!"
+            print_warning "Cercato in: ${PROJECT_ROOT}/scripts/swarm/ e ~/.claude/scripts/"
             print_warning "AUTO-SVEGLIA non attivato."
         fi
     fi

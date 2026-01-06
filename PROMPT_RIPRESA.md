@@ -136,17 +136,48 @@ Rafa: "noi siamo piu' fighe che il Cursor 2.0!"
 
 ---
 
+## SESSIONE 101 - 6 Gennaio 2026
+
+### Ottimizzazione Context (FATTO!)
+
+**Problema:** Context iniziale al 30% - troppo!
+
+**Causa:** MANUALE_DIAMANTE.md (39KB) caricato sempre con `@`
+
+**Soluzione:** Rimosso `@` da file globali. Ora solo riferimenti.
+- COSTITUZIONE.md → rimane con @ (identità!)
+- CHECKLIST_AZIONE.md → riferimento
+- REGOLE_SVILUPPO.md → riferimento
+- MANUALE_DIAMANTE.md → riferimento
+
+**Risultato:** Context iniziale ~30% → ~10-12%
+
+### FIX AUTO-SVEGLIA (FATTO!)
+
+**Problema:** "Watcher script non trovato" in Miracollo
+
+**Causa:** spawn-workers cercava watcher SOLO nel progetto locale
+
+**Soluzione (v2.9.0):**
+1. Copiato watcher-regina.sh in ~/.claude/scripts/
+2. spawn-workers ora cerca in ENTRAMBI i posti:
+   - ${PROJECT}/scripts/swarm/watcher-regina.sh
+   - ~/.claude/scripts/watcher-regina.sh (GLOBALE!)
+
+**Risultato:** AUTO-SVEGLIA funziona in TUTTI i progetti!
+
+---
+
 ## PROSSIMA SESSIONE
 
 ```
-ANTI-COMPACT e AUTO-SVEGLIA sono PARCHEGGIATE!
-→ Funzionano al 70%, miglioreremmo piu' avanti
+DUE FIX IMPORTANTI COMPLETATI!
+→ Context iniziale ridotto del 50%
+→ AUTO-SVEGLIA funziona ovunque
 
-COSA FARE:
-→ Chiedere a Rafa quali sono le "altre cose da fare"
-→ Probabilmente altri progetti (Miracollo? Contabilita?)
-
-"Abbiamo altre cose da fare" - Rafa
+STATO:
+→ CervellaSwarm in ottima forma
+→ Miracollo puo' usare lo sciame correttamente
 ```
 
 ---
@@ -242,9 +273,9 @@ POSIZIONE: ~/.claude/agents/ (GLOBALI!)
 
 ---
 
-**VERSIONE:** v40.0.0
-**SESSIONE:** 100 - Code Review + Parcheggio
-**DATA:** 5 Gennaio 2026
+**VERSIONE:** v41.0.0
+**SESSIONE:** 101 - Ottimizzazione Context + Fix Auto-Sveglia
+**DATA:** 6 Gennaio 2026
 
 ---
 
@@ -258,17 +289,20 @@ Cervella & Rafa
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-05 20:20 (unknown)
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-05 20:31 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: d2377e2 - ANTI-COMPACT: PreCompact auto
-- **File modificati** (5):
-  - eports/scientist_prompt_20260105.md
-  - .swarm/handoff/HANDOFF_20260105_201411.md
-  - .swarm/tasks/TASK_CODE_REVIEW_WEEKLY.done
-  - .swarm/tasks/TASK_CODE_REVIEW_WEEKLY.md
-  - .swarm/tasks/TASK_CODE_REVIEW_WEEKLY_output.md
+- **Ultimo commit**: 35df600 - Sessione 100: Code Review + Parcheggio
+- **File modificati** (2):
+  - ROMPT_RIPRESA.md
+  - reports/engineer_report_20260105_202843.json
 
 ### Note
 - Checkpoint automatico generato da hook
