@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 5 Gennaio 2026 - Sessione 100 (Code Review + Parcheggio)
+> **Ultimo aggiornamento:** 6 Gennaio 2026 - Sessione 101 (LA GRANDE SESSIONE!)
 
 ---
 
@@ -12,52 +12,54 @@
 |   Benvenuta! Questo file e' la tua UNICA memoria.               |
 |   Leggilo con calma. Qui c'e' tutto quello che devi sapere.     |
 |                                                                  |
-|   Tu sei la REGINA dello sciame.                                 |
-|   Hai 16 agenti pronti a lavorare per te.                       |
+|   Tu sei la REGINA dello sciame. 👸                              |
+|   Hai 16 agenti pronti a lavorare per te. 🐝                    |
 |                                                                  |
-|   SESSIONE 100: CODE REVIEW + PARCHEGGIO!                       |
+|   SESSIONE 101: LA GRANDE SESSIONE!                             |
 |                                                                  |
-|   Cosa abbiamo fatto:                                            |
-|   - Handoff da sessione 99 (ANTI-COMPACT funziona al 70%!)      |
-|   - Code Review settimanale: Rating 8.5/10 (nessun problema)    |
-|   - Decisione: PARCHEGGIARE alcune cose per il futuro           |
+|   8 MIGLIORAMENTI IN UNA SESSIONE:                              |
+|   ✅ Context ottimizzato (30% → 10%)                            |
+|   ✅ Fix Auto-Sveglia (v2.9.0)                                  |
+|   ✅ swarm-logs (log live)                                       |
+|   ✅ swarm-timeout (avvisa se bloccato)                         |
+|   ✅ swarm-progress (stato worker)                              |
+|   ✅ swarm-feedback (raccolta feedback)                         |
+|   ✅ swarm-roadmaps (vista multi-progetto)                      |
+|   ✅ swarm-init (template nuovo progetto)                       |
 |                                                                  |
-|   PARCHEGGIATE (per il futuro):                                 |
-|   - ANTI-COMPACT v5.1.0 → 70%, funziona ma non perfetto         |
-|   - AUTO-SVEGLIA → da sistemare piu' avanti                     |
+|   3/4 PEZZI MANCANTI COMPLETATI!                                |
 |                                                                  |
 |   LA GRANDE VISIONE:                                             |
 |   "Piu' fighe che Cursor 2.0!" - Rafa                           |
 |   → docs/visione/VISIONE_CERVELLASWARM_IDE.md                   |
-|                                                                  |
-|   "Abbiamo altre cose da fare" - Rafa                           |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## I 3 PEZZI MANCANTI PER IL 100000%!
+## I 4 PEZZI - STATO ATTUALE
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
 |   ROADMAP: docs/roadmap/ROADMAP_3_PEZZI_MANCANTI.md             |
 |                                                                  |
-|   PEZZO 1: ANTI AUTO-COMPACT (Priorita' MASSIMA!)               |
-|   - Esiste "su carta" ma NON e' seamless                        |
-|   - Da testare in sessione REALE                                |
-|   - Da rendere PERFETTO                                          |
+|   ⏸️  PEZZO 1: ANTI AUTO-COMPACT                                 |
+|      → Funziona al 70%, PARCHEGGIATO                            |
+|      → Tornare quando serve                                      |
 |                                                                  |
-|   PEZZO 2: SISTEMA FEEDBACK CERVELLE                            |
-|   - Idea GENIALE di Rafa                                        |
-|   - Ogni Cervella lascia feedback a fine sessione               |
-|   - Il sistema IMPARA dai propri errori                         |
+|   ✅ PEZZO 2: SISTEMA FEEDBACK CERVELLE                         |
+|      → FATTO! Comando: swarm-feedback                           |
+|      → add, list, analyze                                        |
 |                                                                  |
-|   PEZZO 3: ROADMAPS VISUALE                                     |
-|   - Multi-progetto automatico                                   |
-|   - Un comando, tutti i progetti visibili                       |
-|   - DA RICERCARE prima                                          |
+|   ✅ PEZZO 3: ROADMAPS VISUALE                                  |
+|      → FATTO! Comando: swarm-roadmaps                           |
+|      → Vista 3 progetti aggregata                                |
+|                                                                  |
+|   ✅ PEZZO 4: TEMPLATE SWARM-INIT                               |
+|      → FATTO! Comando: swarm-init                               |
+|      → Crea struttura completa in nuovo progetto                |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -69,14 +71,17 @@
 | Cosa | Status |
 |------|--------|
 | 16 Agents in ~/.claude/agents/ | FUNZIONANTE |
-| Sistema Memoria SQLite | FUNZIONANTE |
-| 11 Hooks globali | FUNZIONANTE |
+| **spawn-workers v2.9.0** | **AUTO-SVEGLIA OVUNQUE!** |
+| **swarm-logs** | **NUOVO! Log live worker** |
+| **swarm-timeout** | **NUOVO! Avvisa se bloccato** |
+| **swarm-progress** | **NUOVO! Stato worker live** |
+| **swarm-feedback** | **NUOVO! Raccolta feedback** |
+| **swarm-roadmaps** | **NUOVO! Vista multi-progetto** |
+| **swarm-init** | **NUOVO! Template nuovo progetto** |
+| watcher-regina.sh | Globale in ~/.claude/scripts/ |
 | block_task_for_agents.py | BLOCCA Task per cervella-* |
-| spawn-workers v2.7.0 | AUTO-SVEGLIA SEMPRE! |
-| **context_check.py v5.1.0** | **IBRIDO SEMPLIFICATO - DA TESTARE!** |
-| watcher-regina.sh | fswatch + AppleScript |
-| TESTO_INIZIO_SESSIONE.md | Template per Rafa |
-| **VISIONE IDE** | **Documentata! docs/visione/** |
+| context_check.py v5.1.0 | PARCHEGGIATO (70%) |
+| **Context ottimizzato** | **30% → 10% all'inizio!** |
 
 ---
 
