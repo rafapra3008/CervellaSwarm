@@ -1,6 +1,7 @@
 # ANALISI MIGLIORAMENTI - CervellaSwarm
 
 > **Data:** 6 Gennaio 2026
+> **Ultimo aggiornamento:** 6 Gennaio 2026 - Sessione 102
 > **Autore:** Cervella (Regina)
 > **Scopo:** Feedback onesto + Roadmap miglioramenti
 
@@ -63,63 +64,117 @@
 
 ---
 
+## FEEDBACK DAL CAMPO
+
+### Sessione Miracollo - 6 Gennaio 2026
+
+**Valutazione complessiva: 9/10**
+
+| Worker | Voto | Note |
+|--------|------|------|
+| cervella-reviewer | 9/10 | Report completo, ben strutturato, actionable |
+| cervella-researcher | 10/10 | Studio INCREDIBILE - 517 righe, fonti verificate |
+| cervella-frontend #1 | 9/10 | Split automation-app.js perfetto |
+| cervella-frontend #2 | 9/10 | Split modals.js perfetto |
+
+**Risultati:**
+- 4 task lanciati → 4 completati con successo
+- 0 errori
+- 0 file rotti
+- Qualità output: ALTA
+
+**Problemi riscontrati:**
+1. **Notifiche overlap** - Quando 2+ worker finiscono quasi insieme, una notifica si perde
+2. **Tempo variabile** - Alcuni task più lunghi (4 min vs 2 min) - normale ma non previsto
+
+**Osservazioni:**
+- 2 frontend in parallelo FUNZIONA!
+- La ricerca Channel Manager (517 righe) da sola vale la sessione
+- spawn-workers è stabile
+
+---
+
 ## COSA MIGLIORARE
 
 ### PRIORITA ALTA
 
-| # | Problema | Impatto | Soluzione Proposta |
-|---|----------|---------|-------------------|
-| 1 | **Non vedo chi sta lavorando in tempo reale** | Devo controllare manualmente | Dashboard web live |
-| 2 | **Output sparsi in tanti file** | Difficile trovare risultati | Centralizzare in report |
-| 3 | **Verifica qualita manuale** | Dimentico di verificare | Auto-review dopo ogni task |
+| # | Problema | Impatto | Soluzione Proposta | Status |
+|---|----------|---------|-------------------|--------|
+| 1 | ~~Non vedo chi sta lavorando~~ | ~~Controllare manualmente~~ | ~~Dashboard web live~~ | swarm-status OK |
+| 2 | ~~Output sparsi~~ | ~~Difficile trovare~~ | ~~Centralizzare in report~~ | ✅ swarm-report |
+| 3 | ~~Verifica qualita manuale~~ | ~~Dimentico verificare~~ | ~~Auto-review~~ | ✅ swarm-auto-review |
+| 4 | **Notifiche overlap** | Perdo notifiche | Coda notifiche + log | **NUOVO** |
 
 ### PRIORITA MEDIA
 
-| # | Problema | Impatto | Soluzione Proposta |
-|---|----------|---------|-------------------|
-| 4 | **Task template ripetitivi** | Scrivo sempre le stesse cose | Template pre-fatti |
-| 5 | **Statistiche non aggregate** | Non so performance sciame | Dashboard statistiche |
-| 6 | **Feedback non analizzato** | Raccolgo ma non uso | Report settimanale auto |
+| # | Problema | Impatto | Soluzione Proposta | Status |
+|---|----------|---------|-------------------|--------|
+| 5 | ~~Task template ripetitivi~~ | ~~Scrivo sempre le stesse cose~~ | ~~Template pre-fatti~~ | ✅ task-new |
+| 6 | **Statistiche non aggregate** | Non so performance sciame | Dashboard statistiche | TODO |
+| 7 | **Feedback non analizzato** | Raccolgo ma non uso | Report settimanale auto | TODO |
+| 8 | **Testare 3+ worker paralleli** | Non sappiamo il limite | Test progressivo | **NUOVO** |
 
 ### PRIORITA BASSA
 
-| # | Problema | Impatto | Soluzione Proposta |
-|---|----------|---------|-------------------|
-| 7 | **Niente notifiche push** | Devo guardare terminal | Telegram/notifiche native |
-| 8 | **Log non persistenti** | Perdo storia | SQLite per log |
+| # | Problema | Impatto | Soluzione Proposta | Status |
+|---|----------|---------|-------------------|--------|
+| 9 | **Niente notifiche push** | Devo guardare terminal | Telegram/notifiche native | TODO |
+| 10 | **Log non persistenti** | Perdo storia | SQLite per log | TODO |
+| 11 | **Stima tempo task** | Non so quanto aspettare | Calcolo medio per tipo | **NUOVO** |
 
 ---
 
 ## ROADMAP MIGLIORAMENTI
 
-### FASE 1: Quick Wins (1-2 sessioni)
+### FASE 1: Quick Wins ✅ COMPLETATA - Sessione 102
 
 ```
-[ ] Template task comuni
-    - TASK_TEMPLATE_RICERCA.md
-    - TASK_TEMPLATE_FIX_BUG.md
-    - TASK_TEMPLATE_FEATURE.md
-    - TASK_TEMPLATE_REVIEW.md
+[x] Template task comuni
+    - TASK_TEMPLATE_RICERCA.md    ✅
+    - TASK_TEMPLATE_FIX_BUG.md    ✅
+    - TASK_TEMPLATE_FEATURE.md    ✅
+    - TASK_TEMPLATE_REVIEW.md     ✅
+    - Script task-new             ✅
 
-[ ] Auto-review semplice
-    - Dopo .done, Guardiana verifica automaticamente
-    - Score in _output.md
+[x] Auto-review semplice
+    - swarm-auto-review           ✅
+    - Hook auto_review_hook.py    ✅
+
+[x] Report centralizzato
+    - swarm-report                ✅
 ```
 
-### FASE 2: Visibilita (2-3 sessioni)
+### FASE 2: Stabilità Notifiche (PROSSIMA)
 
 ```
-[ ] Report centralizzato
-    - swarm-report genera report giornaliero
-    - Tutti i task completati + output
-    - Statistiche aggregate
+[ ] Fix notifiche overlap
+    - Investigare watcher-regina.sh
+    - Coda notifiche (mai perdere)
+    - Log notifiche per debug
+    - Test con 2+ worker simultanei
 
+[ ] COMUNICARE parallelismo alla Regina
+    - Documentare in PROMPT_RIPRESA: "2 worker paralleli FUNZIONA!"
+    - Aggiungere tip in swarm-help
+    - Esempi: spawn-workers --frontend && spawn-workers --backend
+    - Limiti noti: notifiche possono sovrapporsi
+```
+
+### FASE 3: Visibilità Avanzata
+
+```
 [ ] swarm-dashboard (CLI)
     - Vista live di tutti i worker
     - Chi sta lavorando, su cosa, da quanto
+    - Stima tempo rimanente
+
+[ ] Statistiche aggregate
+    - Performance per tipo agente
+    - Tempo medio per tipo task
+    - Success rate
 ```
 
-### FASE 3: Intelligence (futuro)
+### FASE 4: Intelligence (futuro)
 
 ```
 [ ] Analisi feedback automatica
@@ -145,23 +200,23 @@
 
 ## METRICHE SUCCESSO
 
-| Metrica | Ora | Target |
-|---------|-----|--------|
-| Tempo per creare task | 2-3 min | 30 sec (template) |
-| Tempo per trovare output | 1-2 min | 10 sec (report) |
-| Task verificati manualmente | 100% | 20% (auto-review) |
-| Feedback analizzati | 0% | 100% (settimanale) |
+| Metrica | Prima | Ora | Target |
+|---------|-------|-----|--------|
+| Tempo per creare task | 2-3 min | **5 sec** ✅ | 30 sec |
+| Tempo per trovare output | 1-2 min | **10 sec** ✅ | 10 sec |
+| Task verificati manualmente | 100% | **auto** ✅ | 20% |
+| Feedback analizzati | 0% | 0% | 100% |
 
 ---
 
 ## PROSSIMA AZIONE
 
-**Consiglio:** Iniziare con FASE 1 - Template task comuni
+**Consiglio:** FASE 2 - Fix notifiche overlap
 
-Perche:
-- Quick win immediato
-- Risparmia tempo ogni giorno
-- Non richiede infrastruttura
+Perché:
+- Problema reale riscontrato in produzione
+- Impatta esperienza utente
+- Già identificata causa probabile (watcher)
 
 ---
 

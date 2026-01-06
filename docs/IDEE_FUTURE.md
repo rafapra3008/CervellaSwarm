@@ -1,6 +1,6 @@
 # IDEE FUTURE - CervellaSwarm
 
-> **Backlog idee - Aggiornato: 6 Gennaio 2026**
+> **Backlog idee - Aggiornato: 6 Gennaio 2026 - Sessione 102**
 
 ---
 
@@ -14,14 +14,14 @@
 
 ---
 
-## MIGLIORAMENTI BREVE TERMINE
+## PROSSIMO (da Feedback Miracollo)
 
 | Idea | Priorita | Note |
 |------|----------|------|
-| Template task comuni | ALTA | Risparmio 2 min/task |
-| Auto-review dopo task | ALTA | Guardiana verifica automaticamente |
-| Report centralizzato | MEDIA | swarm-report giornaliero |
+| **Fix notifiche overlap** | ALTA | Quando 2+ worker finiscono insieme, notifica si perde |
+| **Comunicare parallelismo** | ALTA | Dire alla Regina che 2+ worker paralleli FUNZIONA! |
 | Dashboard CLI live | MEDIA | Chi sta lavorando, su cosa |
+| Statistiche aggregate | MEDIA | Performance per tipo agente |
 
 **Documento:** [docs/analisi/ANALISI_MIGLIORAMENTI_SWARM.md](analisi/ANALISI_MIGLIORAMENTI_SWARM.md)
 
@@ -35,10 +35,15 @@
 
 ---
 
-## COMPLETATE
+## COMPLETATE (Sessione 102!)
 
 | Idea | Quando |
 |------|--------|
+| **task-new** (template task) | 6 Gen 2026 - Sess 102 |
+| **swarm-auto-review** | 6 Gen 2026 - Sess 102 |
+| **swarm-report** | 6 Gen 2026 - Sess 102 |
+| **swarm-help** | 6 Gen 2026 - Sess 102 |
+| **swarm-session-check** | 6 Gen 2026 - Sess 102 |
 | swarm-feedback | 6 Gen 2026 |
 | swarm-roadmaps | 6 Gen 2026 |
 | swarm-init | 6 Gen 2026 |
