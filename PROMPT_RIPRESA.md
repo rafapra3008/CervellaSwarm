@@ -307,3 +307,21 @@ POSIZIONE: ~/.claude/agents/ (GLOBALI!)
 *Scritto con CURA e PRECISIONE.*
 
 Cervella & Rafa
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-06 17:41 (auto)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: f0c70b1 - 📍 Sessione 108: Organizzazione Documentazione
+- **File modificati** (3):
+  - reports/engineer_report_20260106_173714.json
+  - reports/engineer_report_20260106_173846.json
+  - reports/scientist_prompt_20260106.md
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: auto
+
+---
