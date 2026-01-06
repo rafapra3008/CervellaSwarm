@@ -186,13 +186,37 @@
     - Pagina HTML statica con stato live
 ```
 
+### FASE 5: Multi-Progetto (NUOVO - 6 Gen 2026)
+
+```
+[ ] Studio architettura multi-progetto
+    - Come coordinare worker su progetti diversi
+    - Vista unificata di tutti i progetti
+    - Gestione risorse condivise (se worker occupato)
+
+[ ] swarm-global-status
+    - Vedere TUTTI i progetti in un colpo
+    - Chi lavora dove
+
+[ ] Coordinamento Regina cross-project
+    - Una Regina che vede tutto?
+    - O Regine che comunicano?
+
+[ ] Dashboard multi-progetto
+    - Vista aggregata
+    - Switch rapido tra progetti
+```
+
+**MOTIVAZIONE:** Sessione 110 - Abbiamo visto worker su CervellaSwarm e Miracollo
+lavorare in parallelo per coincidenza. Funziona, ma non e' orchestrato.
+Serve per il futuro IDE!
+
 ---
 
 ## IDEE PARCHEGIATE
 
 | Idea | Perche Parcheggiata |
 |------|---------------------|
-| Multi-progetto parallelo | Complessita alta, non serve ora |
 | AI che sceglie quale agente | Overkill, la Regina sceglie bene |
 | Marketplace agenti | Troppo presto |
 

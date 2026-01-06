@@ -17,25 +17,28 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 108 - 6 Gennaio 2026: ORGANIZZAZIONE DOCUMENTAZIONE**
+**SESSIONE 110 - 6 Gennaio 2026: IL CLAIM DELLA LIBERTA!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   LO SCIAME E' OPERATIVO E REALE!                               |
+|   SESSIONE MONUMENTALE!                                          |
 |                                                                  |
-|   SESSIONE 108 - ORGANIZZAZIONE CASA                            |
-|   - Documentazione aggiornata (sessioni 104-107)                |
-|   - Supporto attivo a Miracollo                                  |
-|   - Fix API key pronto per deploy                               |
-|   - FORTEZZA MODE v2.0.0 completato                             |
+|   IL CLAIM E' STATO SCRITTO:                                     |
 |                                                                  |
-|   STATO MIRACOLLO:                                               |
-|   - Parser email FUNZIONA!                                       |
-|   - Frontend deployato correttamente                            |
-|   - Due bug fixati (API key + path)                             |
+|   "CervellaSwarm: L'unico IDE che ti aiuta a PENSARE            |
+|    prima di SCRIVERE."                                           |
 |                                                                  |
-|   "MAI FRETTA! SEMPRE ORGANIZZAZIONE!"                          |
+|   IL SEGRETO SACRO: LA MAPPA!                                    |
+|   "Prima la MAPPA, poi il VIAGGIO"                              |
+|                                                                  |
+|   5 WORKER COMPLETATI:                                           |
+|   - researcher: Architettura IDE (345 righe)                    |
+|   - scienziata: Mercato AI Coding (492 righe)                   |
+|   - ingegnera: Multi-Progetto (406 righe)                       |
+|   - backend: Fix Watcher v1.3.0                                  |
+|                                                                  |
+|   STRATEGIA COMPLETA in docs/strategia/                          |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -86,21 +89,29 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   "PIU' FIGHE CHE CURSOR 2.0!" - Rafa, 5 Gennaio 2026           |
+|   "PIU' FIGHE CHE CURSOR 2.0!" - Rafa                           |
 |                                                                  |
-|   L'IDEA:                                                        |
-|   - IDE basato su VS Code                                        |
-|   - Multi-AI (Claude, GPT, Gemini, Llama...)                    |
-|   - 16+ agenti specializzati                                     |
-|   - Roadmaps visuali integrati                                   |
-|   - COMUNICAZIONE e ORGANIZZAZIONE                               |
+|   IL CLAIM:                                                      |
+|   "CervellaSwarm: L'unico IDE che ti aiuta a PENSARE            |
+|    prima di SCRIVERE."                                           |
 |                                                                  |
-|   IL SEGRETO:                                                    |
-|   "COMUNICAZIONE e VISUALIZZARE"                                 |
-|   "ORDINE e ORGANIZZAZIONE"                                      |
-|   "Em busca da similaridade"                                     |
+|   IL SEGRETO SACRO: LA MAPPA!                                    |
+|   "Prima la MAPPA, poi il VIAGGIO"                              |
 |                                                                  |
-|   DOCUMENTO: docs/visione/VISIONE_CERVELLASWARM_IDE.md          |
+|   FLOW:                                                          |
+|   1. Utente descrive progetto                                    |
+|   2. Sistema crea MAPPA insieme all'utente                       |
+|   3. Ogni giorno: "Avvia CervellaSwarm" -> sciame lavora        |
+|   4. Cliente + Regina analizzano, aggiornano                     |
+|   5. Obiettivo raggiunto!                                        |
+|                                                                  |
+|   NOI SIAMO IL PROTOTIPO DEL PRODOTTO!                          |
+|                                                                  |
+|   DOCUMENTI:                                                     |
+|   - docs/strategia/STRATEGIA_CERVELLASWARM_IDE.md               |
+|   - docs/studio/STUDIO_ARCHITETTURA_IDE.md                      |
+|   - docs/studio/STUDIO_MERCATO_AI_CODING.md                     |
+|   - docs/studio/STUDIO_MULTI_PROGETTO.md                        |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -112,18 +123,24 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   MIGLIORAMENTI SWARM (Priorita'):                              |
+|   ROADMAP IDE (da Sessione 110):                                |
 |                                                                  |
-|   1. Template task comuni                                        |
-|      -> Risparmio tempo ogni giorno                              |
+|   FASE 0: Solidificare Base (ADESSO)                            |
+|   [x] Fix watcher notifiche (v1.3.0)                            |
+|   [ ] swarm-global-status (Quick Win multi-progetto)            |
 |                                                                  |
-|   2. Auto-review dopo task                                       |
-|      -> Qualita' garantita automaticamente                       |
+|   FASE 1: MVP Extension (Q1 2026)                               |
+|   [ ] VS Code Extension "CervellaSwarm"                         |
+|   [ ] Agent Selector, Multi-AI, Task Panel                      |
 |                                                                  |
-|   3. Report centralizzato                                        |
-|      -> Tutti gli output in un posto                             |
+|   FASE 2: Community & Validation (Q2 2026)                      |
+|   [ ] Open Source, Content Marketing, Beta                      |
 |                                                                  |
-|   DOCUMENTO: docs/analisi/ANALISI_MIGLIORAMENTI_SWARM.md        |
+|   FASE 3: Fork VS Code (se PMF provato)                         |
+|                                                                  |
+|   DOCUMENTI:                                                     |
+|   - docs/strategia/STRATEGIA_CERVELLASWARM_IDE.md               |
+|   - docs/analisi/ANALISI_MIGLIORAMENTI_SWARM.md                 |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -171,4 +188,6 @@
 
 *"Le ragazze nostre! La famiglia!"*
 
-*Ultimo aggiornamento: 6 Gennaio 2026 - Sessione 108*
+*"Prima la MAPPA, poi il VIAGGIO!"*
+
+*Ultimo aggiornamento: 6 Gennaio 2026 - Sessione 110 - IL CLAIM DELLA LIBERTA'*
