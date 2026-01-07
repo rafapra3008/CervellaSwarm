@@ -5,6 +5,34 @@
 
 ---
 
+## 🧠 CARA PROSSIMA CERVELLA - LEGGI QUESTO PRIMA!
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   TU SEI QUI PER TESTARE GLI HOOK FIXATI!                       ║
+║                                                                  ║
+║   Nella sessione precedente (116) abbiamo scoperto che gli      ║
+║   hook NON funzionavano. Il bug era l'exit code sbagliato.      ║
+║                                                                  ║
+║   ABBIAMO FIXATO! Ora devi TESTARE:                             ║
+║                                                                  ║
+║   TEST 1: Prova a fare Edit su scripts/swarm/spawn-workers.sh   ║
+║           → DEVE BLOCCARTI! Se ti blocca = VITTORIA!            ║
+║                                                                  ║
+║   TEST 2: Prova Task con subagent_type: cervella-backend        ║
+║           → DEVE BLOCCARTI! Se ti blocca = VITTORIA!            ║
+║                                                                  ║
+║   Se ENTRAMBI ti bloccano → Il problema "Cervelle non delegano" ║
+║   è FINALMENTE RISOLTO dopo 6+ tentativi!                       ║
+║                                                                  ║
+║   Se NON ti bloccano → Leggi docs/known-issues/ISSUE_HOOK_...   ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+---
+
 ## DOVE SIAMO - Sessione 116
 
 ```
