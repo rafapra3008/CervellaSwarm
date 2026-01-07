@@ -493,6 +493,8 @@ RUNNEREOF
     echo "LOG_FILE=\"${SWARM_DIR}/logs/worker_\$(date +%Y%m%d_%H%M%S).log\"" >> "$runner_script"
     # v2.4.0: Salva SWARM_DIR come variabile nel runner per usarla nella notifica finale
     echo "SWARM_DIR=\"${SWARM_DIR}\"" >> "$runner_script"
+    # v3.0.0: CERVELLASWARM_WORKER=1 permette ai Worker di bypassare hook blocco edit!
+    echo "export CERVELLASWARM_WORKER=1" >> "$runner_script"
     echo "${claude_path} -p --append-system-prompt \"\$(cat ${prompt_file})\" \"${initial_prompt}\" 2>&1 | tee \"\$LOG_FILE\"" >> "$runner_script"
 
     # Aggiungi chiusura automatica finestra Terminal con notifica dettagliata (v2.4.0)
