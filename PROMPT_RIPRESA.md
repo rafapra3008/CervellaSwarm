@@ -77,11 +77,60 @@ Invece di fare 6 passi manuali, 1 comando! Questo è il modo giusto!
 
 ---
 
-## PROSSIMA SESSIONE
+## PROSSIMA SESSIONE - ISTRUZIONI CHIARE!
 
-1. **TESTARE HOOK** - L'hook sarà attivo dalla prossima sessione
-2. Verificare che blocca Edit/Write non autorizzati
-3. Se funziona → abbiamo RISOLTO il problema della delegazione!
+### 1. TESTARE L'HOOK (Prima cosa!)
+
+L'hook `block_edit_non_whitelist.py` sarà ATTIVO dalla prossima sessione.
+
+**Come testare:**
+```bash
+# Prova a fare Edit su un file NON in whitelist, es:
+Edit scripts/swarm/spawn-workers.sh
+
+# RISULTATO ATTESO:
+# 🚫 BLOCCATO! + messaggio con istruzioni
+```
+
+**Se funziona:**
+- L'hook ti blocca
+- Ti dice di usare quick-task o spawn-workers
+- VITTORIA! Problema risolto!
+
+**Se NON funziona:**
+- Verifica settings.json ha PreToolUse per Edit e Write
+- Verifica il file hook esiste in ~/.claude/hooks/
+
+### 2. Se il test passa
+
+Possiamo dire che il problema "Cervelle non delegano" è **RISOLTO**!
+Il sistema ora FORZA la delegazione, non è più una scelta.
+
+### 3. File Chiave da Conoscere
+
+| File | Cosa Fa |
+|------|---------|
+| `~/.claude/hooks/block_edit_non_whitelist.py` | Hook che blocca Edit/Write |
+| `~/.claude/settings.json` | Configurazione hooks |
+| `~/.local/bin/quick-task` | Comando per delegare veloce |
+| `~/.local/bin/spawn-workers` | Spawna worker in finestra separata |
+
+### 4. Whitelist (cosa la Regina PUÒ editare)
+
+- `NORD.md` - Bussola progetto
+- `PROMPT_RIPRESA.md` - Stato sessione
+- `ROADMAP_SACRA.md` - Roadmap
+- `.swarm/tasks/*` - Task per worker
+- `.swarm/handoff/*` - Comunicazione
+- `.swarm/feedback/*` - Feedback
+
+**TUTTO IL RESTO → Usa quick-task!**
+
+```bash
+# Esempio:
+quick-task "Fix bug in api.py" --backend
+quick-task "Add button to dashboard" --frontend
+```
 
 ---
 
