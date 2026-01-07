@@ -1,0 +1,349 @@
+/* ============================================
+   SWARM WIDGET - CSS Module
+   Visualizzazione circolare della famiglia
+   ============================================ */
+
+/* === COLORI === */
+:root {
+  --regina-gold: #f59e0b;
+  --regina-glow: rgba(245, 158, 11, 0.4);
+  --guard-purple: #8b5cf6;
+  --guard-glow: rgba(139, 92, 246, 0.3);
+  --worker-blue: #3b82f6;
+  --worker-glow: rgba(59, 130, 246, 0.3);
+  --active-green: #22c55e;
+  --active-glow: rgba(34, 197, 94, 0.5);
+  --connection-gold: rgba(245, 158, 11, 0.6);
+  --bg-deep: #0a0a1a;
+  --swarm-tooltip-bg: rgba(15, 23, 42, 0.95);
+}
+
+/* === CONTAINER === */
+.swarmContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swarmSvg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* === NODI BASE === */
+.node {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.node:hover {
+  transform: scale(1.1);
+}
+
+.nodeCircle {
+  fill: var(--bg-deep);
+  stroke-width: 2;
+  transition: all 0.3s ease-out;
+}
+
+.nodeEmoji {
+  font-size: 24px;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* === REGINA === */
+.reginaNode .nodeCircle {
+  stroke: var(--regina-gold);
+  filter: drop-shadow(0 0 15px var(--regina-glow));
+}
+
+.reginaNode .nodeEmoji {
+  font-size: 32px;
+}
+
+/* Pulse regina - respiro lento */
+@keyframes pulseRegina {
+  0%, 100% {
+    filter: drop-shadow(0 0 15px var(--regina-glow));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 30px var(--regina-glow));
+    transform: scale(1.02);
+  }
+}
+
+.reginaNode {
+  animation: pulseRegina 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* === GUARDIANE === */
+.guardianaNode .nodeCircle {
+  stroke: var(--guard-purple);
+  filter: drop-shadow(0 0 8px var(--guard-glow));
+}
+
+.guardianaNode .nodeEmoji {
+  font-size: 22px;
+}
+
+/* === WORKER === */
+.workerNode .nodeCircle {
+  stroke: var(--worker-blue);
+  opacity: 0.6;
+  transition: all 0.3s ease-out;
+}
+
+.workerNode .nodeEmoji {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* === STATO WORKING === */
+@keyframes pulseWorking {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px var(--active-glow));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--active-glow));
+  }
+}
+
+.nodeWorking .nodeCircle {
+  stroke: var(--active-green);
+  opacity: 1;
+  filter: drop-shadow(0 0 12px var(--active-glow));
+}
+
+.nodeWorking {
+  animation: pulseWorking 2s ease-in-out infinite;
+}
+
+.nodeWorking .nodeEmoji {
+  opacity: 1;
+}
+
+/* === LINEA CONNESSIONE === */
+@keyframes dashFlow {
+  0% {
+    stroke-dashoffset: 20;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.connectionLine {
+  fill: none;
+  stroke: var(--connection-gold);
+  stroke-width: 2;
+  stroke-dasharray: 5, 5;
+  animation: dashFlow 1s linear infinite;
+  opacity: 0.8;
+}
+
+/* === TOOLTIP === */
+.tooltip {
+  position: absolute;
+  background: var(--swarm-tooltip-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  z-index: 100;
+  min-width: 180px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.2s ease-out;
+}
+
+.tooltipVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tooltipHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.tooltipEmoji {
+  font-size: 20px;
+}
+
+.tooltipName {
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tooltipRole {
+  color: #94a3b8;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.tooltipStatus {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.tooltipStatusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.tooltipStatusDotIdle {
+  background: #64748b;
+}
+
+.tooltipStatusDotWorking {
+  background: var(--active-green);
+  box-shadow: 0 0 8px var(--active-glow);
+}
+
+.tooltipStatusLabel {
+  color: #94a3b8;
+}
+
+.tooltipTask {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tooltipTaskLabel {
+  color: #64748b;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tooltipTaskName {
+  color: #f8fafc;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* === HEADER WIDGET === */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.headerIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--regina-gold) 0%, #fbbf24 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.headerLabel {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.headerStats {
+  display: flex;
+  gap: 16px;
+}
+
+.headerStat {
+  font-size: 12px;
+}
+
+.headerStatActive {
+  color: var(--active-green);
+}
+
+.headerStatIdle {
+  color: #64748b;
+}
+
+/* === LEGENDA === */
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 16px;
+  padding: 0 8px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #64748b;
+}
+
+.legendDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legendDotRegina {
+  background: var(--regina-gold);
+  box-shadow: 0 0 6px var(--regina-glow);
+}
+
+.legendDotGuardiana {
+  background: var(--guard-purple);
+  box-shadow: 0 0 6px var(--guard-glow);
+}
+
+.legendDotWorker {
+  background: var(--worker-blue);
+  opacity: 0.6;
+}
+
+.legendDotWorking {
+  background: var(--active-green);
+  box-shadow: 0 0 6px var(--active-glow);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .swarmContainer {
+    min-height: 300px;
+  }
+
+  .legend {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}

@@ -1,6 +1,6 @@
 import { Layout } from './components/Layout'
 import { NordWidget } from './components/NordWidget'
-import { FamigliaWidget } from './components/FamigliaWidget'
+import { SwarmWidget } from './components/swarm'
 import { RoadmapWidget } from './components/RoadmapWidget'
 import { SessioneWidget } from './components/SessioneWidget'
 import { useDashboardData } from './hooks/useDashboardData'
@@ -25,7 +25,7 @@ function App() {
     <Layout>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         <NordWidget nord={nord ?? undefined} loading={loading} />
-        <FamigliaWidget famiglia={famiglia ?? undefined} loading={loading} />
+        <SwarmWidget famiglia={famiglia ?? undefined} loading={loading} />
       </div>
       <div className="mb-8">
         <RoadmapWidget roadmap={roadmap ?? undefined} loading={loading} />

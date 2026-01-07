@@ -706,14 +706,23 @@ Vedi: `NORD.md` per dettagli completi.
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-07 21:54 (unknown)
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-07 22:26 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 89cc548 - ✅ SESSIONE 118: Test spawn-workers PASSATO!
-- **File modificati** (2):
-  - ROMPT_RIPRESA.md
-  - reports/engineer_report_20260107_215334.json
+- **Ultimo commit**: 5ea4af7 - 🎯 SESSIONE 118: Sistema Regina/Worker COMPLETO + Dashboard dati reali!
+- **File modificati** (5):
+  - swarm/runners/run_docs.sh
+  - .swarm/tasks/TEST_FEEDBACK_LOOP_OUTPUT.md
+  - .swarm/test/components/UserCard.jsx
+  - PROMPT_RIPRESA.md
+  - dashboard/frontend/src/App.tsx
 
 ### Note
 - Checkpoint automatico generato da hook
