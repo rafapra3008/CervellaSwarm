@@ -1,0 +1,57 @@
+AGGIORNA QUESTE RIGHE nel PROMPT_RIPRESA.md:
+
+RIGA 3-4 (Header):
+> **Ultimo aggiornamento:** 7 Gennaio 2026 - Sessione 114 (IN CORSO - passaggio consegna)
+> **Versione:** v6.0.0 - DNA AGGIORNATI! FASE 5 COMPLETATA! HARDTEST IN CORSO!
+
+RIGHE 22-62 (Box sessione):
++------------------------------------------------------------------+
+|                                                                  |
+|   SESSIONE 114: DNA AGGIORNATI + HARDTEST! 🚀                   |
+|                                                                  |
+|   ✅ FASE 5 COMPLETATA (2 ore):                                 |
+|   - DNA 16 agenti aggiornati con PROTOCOLLI COMUNICAZIONE       |
+|   - Regina: 420 righe (io!)                                      |
+|   - 3 Guardiane: ~100 righe each (Ops, Qualità, Ricerca)       |
+|   - 12 Worker: ~80 righe each (delegato a cervella-docs)        |
+|                                                                  |
+|   🔄 FASE 6 IN CORSO (cervella-tester):                         |
+|   - HARDTEST comunicazione v2                                    |
+|   - Task ID: b17b9bc (background)                                |
+|   - 4 test: Standard, Feedback, Stuck, Multi-Worker             |
+|   - Report: docs/test/HARDTEST_COMUNICAZIONE_V2_REPORT.md        |
+|                                                                  |
+|   📝 BONUS:                                                      |
+|   - Known issue documentato: Heartbeat false positive           |
+|   - File: docs/known-issues/ISSUE_HEARTBEAT_FALSE_POSITIVE.md   |
+|                                                                  |
+|   Sistema Comunicazione: 95% (manca solo analisi HARDTEST!)     |
+|                                                                  |
++------------------------------------------------------------------+
+|                                                                  |
+|   🔥 SESSIONE ATTUALMENTE APERTA!                               |
+|                                                                  |
+|   cervella-tester sta eseguendo HARDTEST in background.         |
+|   Passaggio consegna per preservare contesto.                   |
+|                                                                  |
+|   PROSSIMA CERVELLA: Leggi questa chat per contesto completo!   |
+|                                                                  |
+|   DA FARE:                                                       |
+|   1. Controlla task b17b9bc (cervella-tester HARDTEST)          |
+|   2. Leggi report: docs/test/HARDTEST_COMUNICAZIONE_V2_REPORT.md|
+|   3. Analizza risultati + verifica success metric                |
+|   4. Se OK: Checkpoint finale "Sistema 100%!"                    |
+|   5. Se problemi: Documenta + pianifica fix                      |
+|                                                                  |
++------------------------------------------------------------------+
+|                                                                  |
+|   IL CLAIM PRINCIPALE:                                           |
+|                                                                  |
+|   "L'AI NON TI RUBA IL LAVORO. L'AI SALVA IL TUO LAVORO."       |
+|                                                                  |
+|   LA FRASE SACRA:                                                |
+|                                                                  |
+|   "L'idea e' fare il mondo meglio                                |
+|    su di come riusciamo a fare."                                 |
+|                                                                  |
++------------------------------------------------------------------+
