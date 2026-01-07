@@ -1,6 +1,5 @@
-// UserCard.jsx - Componente di test per TEST_FEEDBACK_LOOP
-// Creato da: cervella-frontend
-// Data: 2026-01-07
+// UserCard.jsx - Componente di test
+// Creato da cervella-frontend come parte di TEST_FEEDBACK_LOOP
 
 export function UserCard({ name, avatar }) {
   return (

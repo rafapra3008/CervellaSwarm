@@ -21,18 +21,16 @@
 /* === CONTAINER === */
 .swarmContainer {
   position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 450px;
+  height: 450px;
+  margin: 0 auto;
+  border: 5px solid red;
+  border-radius: 12px;
 }
 
 .swarmSvg {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
+  width: 450px;
+  height: 450px;
 }
 
 /* === NODI BASE === */
@@ -69,15 +67,12 @@
   font-size: 32px;
 }
 
-/* Pulse regina - respiro lento */
 @keyframes pulseRegina {
   0%, 100% {
     filter: drop-shadow(0 0 15px var(--regina-glow));
-    transform: scale(1);
   }
   50% {
     filter: drop-shadow(0 0 30px var(--regina-glow));
-    transform: scale(1.02);
   }
 }
 
@@ -99,13 +94,13 @@
 /* === WORKER === */
 .workerNode .nodeCircle {
   stroke: var(--worker-blue);
-  opacity: 0.6;
+  opacity: 0.7;
   transition: all 0.3s ease-out;
 }
 
 .workerNode .nodeEmoji {
   font-size: 18px;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 /* === STATO WORKING === */
@@ -134,12 +129,8 @@
 
 /* === LINEA CONNESSIONE === */
 @keyframes dashFlow {
-  0% {
-    stroke-dashoffset: 20;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+  0% { stroke-dashoffset: 20; }
+  100% { stroke-dashoffset: 0; }
 }
 
 .connectionLine {
@@ -156,7 +147,6 @@
   position: absolute;
   background: var(--swarm-tooltip-bg);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 12px 16px;
@@ -181,21 +171,9 @@
   margin-bottom: 8px;
 }
 
-.tooltipEmoji {
-  font-size: 20px;
-}
-
-.tooltipName {
-  color: #f8fafc;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.tooltipRole {
-  color: #94a3b8;
-  font-size: 12px;
-  margin-bottom: 8px;
-}
+.tooltipEmoji { font-size: 20px; }
+.tooltipName { color: #f8fafc; font-weight: 600; font-size: 14px; }
+.tooltipRole { color: #94a3b8; font-size: 12px; margin-bottom: 8px; }
 
 .tooltipStatus {
   display: flex;
@@ -210,18 +188,13 @@
   border-radius: 50%;
 }
 
-.tooltipStatusDotIdle {
-  background: #64748b;
-}
-
+.tooltipStatusDotIdle { background: #64748b; }
 .tooltipStatusDotWorking {
   background: var(--active-green);
   box-shadow: 0 0 8px var(--active-glow);
 }
 
-.tooltipStatusLabel {
-  color: #94a3b8;
-}
+.tooltipStatusLabel { color: #94a3b8; }
 
 .tooltipTask {
   margin-top: 8px;
@@ -233,7 +206,6 @@
   color: #64748b;
   font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 .tooltipTaskName {
@@ -248,7 +220,6 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
-  padding: 0 8px;
 }
 
 .headerTitle {
@@ -281,17 +252,9 @@
   gap: 16px;
 }
 
-.headerStat {
-  font-size: 12px;
-}
-
-.headerStatActive {
-  color: var(--active-green);
-}
-
-.headerStatIdle {
-  color: #64748b;
-}
+.headerStat { font-size: 12px; }
+.headerStatActive { color: var(--active-green); }
+.headerStatIdle { color: #64748b; }
 
 /* === LEGENDA === */
 .legend {
@@ -299,7 +262,6 @@
   justify-content: center;
   gap: 24px;
   margin-top: 16px;
-  padding: 0 8px;
 }
 
 .legendItem {
@@ -328,7 +290,7 @@
 
 .legendDotWorker {
   background: var(--worker-blue);
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .legendDotWorking {
@@ -339,7 +301,13 @@
 /* === RESPONSIVE === */
 @media (max-width: 600px) {
   .swarmContainer {
-    min-height: 300px;
+    width: 320px;
+    height: 320px;
+  }
+  
+  .swarmSvg {
+    width: 320px;
+    height: 320px;
   }
 
   .legend {

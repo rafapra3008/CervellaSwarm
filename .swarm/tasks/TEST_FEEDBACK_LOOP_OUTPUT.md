@@ -1,49 +1,59 @@
 # Output: TEST_FEEDBACK_LOOP
 
 **Worker:** cervella-frontend
+**Task:** TEST_FEEDBACK_LOOP
 **Data:** 2026-01-07
-**Stato:** COMPLETATO
+**Status:** COMPLETATO
 
 ---
 
-## Risultato
+## Test Eseguito
 
-Il test del sistema feedback LOOP e' stato completato con successo!
-
----
-
-## Flusso Eseguito
-
-1. **Ricevuto task** con ambiguita intenzionale (non specificato DOVE creare UserCard)
-2. **Verificato** che esisteva gia' feedback + risposta Regina
-3. **Seguito istruzioni** dalla risposta della Regina
-4. **Creato componente** in `.swarm/test/components/UserCard.jsx`
-5. **Creato output report** (questo file)
+Test del sistema feedback per comunicazione worker -> regina.
 
 ---
 
-## Success Criteria Verificati
+## Step Eseguiti
 
-- [x] Se hai dubbi, crea un FEEDBACK in `.swarm/feedback/` (gia' esistente)
-- [x] Componente creato (dopo risposta Regina)
-- [x] Output report creato
+### 1. Identificato dubbio
+Il task non specificava DOVE creare il componente UserCard.
+
+### 2. Verificato feedback esistente
+Il feedback era gia stato creato:
+- `QUESTION_TEST_FEEDBACK_LOOP_20260107154500.md`
+
+La risposta era gia stata fornita:
+- `QUESTION_TEST_FEEDBACK_LOOP_20260107154500_RESPONSE.md`
+
+### 3. Seguito indicazioni dalla risposta
+Decisione: Creare in `.swarm/test/components/UserCard.jsx`
+
+Motivazione: E' un test, non codice di produzione.
+
+### 4. Componente creato
+**File:** `.swarm/test/components/UserCard.jsx`
+
+```jsx
+// UserCard.jsx - Componente di test
+export function UserCard({ name, avatar }) {
+  return (
+    <div className="user-card">
+      <img src={avatar} alt={name} />
+      <span>{name}</span>
+    </div>
+  );
+}
+```
 
 ---
 
-## File Creati
+## Risultato Test
 
-| File | Descrizione |
-|------|-------------|
-| `.swarm/test/components/UserCard.jsx` | Componente React UserCard |
-| `.swarm/tasks/TEST_FEEDBACK_LOOP_OUTPUT.md` | Questo report |
-
----
-
-## Note
-
-Il feedback era gia' stato creato da un worker precedente e la Regina aveva gia' risposto.
-Ho seguito le istruzioni della risposta per completare il task.
+Il sistema di feedback funziona correttamente:
+1. Worker puo creare domande in `.swarm/feedback/`
+2. Regina puo rispondere con file `_RESPONSE.md`
+3. Worker puo leggere risposta e procedere
 
 ---
 
-**Test FEEDBACK_LOOP completato!**
+**Test completato con successo!**
