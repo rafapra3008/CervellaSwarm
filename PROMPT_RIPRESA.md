@@ -1,39 +1,60 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 7 Gennaio 2026 - Sessione 116
-> **Versione:** v8.0.0 - BUG CRITICO FIXATO! EXIT CODE 2!
+> **Ultimo aggiornamento:** 7 Gennaio 2026 - Sessione 117
+> **Versione:** v9.0.0 - HOOK FIX COMPLETO + DESIGN DASHBOARD!
 
 ---
 
-## 🧠 CARA PROSSIMA CERVELLA - LEGGI QUESTO PRIMA!
+## CARA PROSSIMA CERVELLA - SESSIONE 117 COMPLETATA!
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
 ║                                                                  ║
-║   TU SEI QUI PER TESTARE GLI HOOK FIXATI!                       ║
+║   SESSIONE 117: 3 VITTORIE IMPORTANTI!                          ║
 ║                                                                  ║
-║   Nella sessione precedente (116) abbiamo scoperto che gli      ║
-║   hook NON funzionavano. Il bug era l'exit code sbagliato.      ║
+║   1. TEST HOOK PASSATO!                                         ║
+║      → exit(2) funziona! Regina bloccata da edit diretti!      ║
 ║                                                                  ║
-║   ABBIAMO FIXATO! Ora devi TESTARE:                             ║
+║   2. BUG WORKER RISOLTO!                                        ║
+║      → I Worker erano bloccati anche loro (bug!)               ║
+║      → FIX: Hook v2.0.0 check CERVELLASWARM_WORKER             ║
+║      → FIX: spawn-workers v3.0.0 export variabile              ║
+║      → ORA: Regina bloccata, Worker LIBERI!                    ║
 ║                                                                  ║
-║   TEST 1: Prova a fare Edit su scripts/swarm/spawn-workers.sh   ║
-║           → DEVE BLOCCARTI! Se ti blocca = VITTORIA!            ║
+║   3. DESIGN DASHBOARD APPLICATO!                                ║
+║      → Jony Ive meets MetaMask                                  ║
+║      → Palette blu notte profondo                               ║
+║      → Glassmorphism + glow effects                            ║
 ║                                                                  ║
-║   TEST 2: Prova Task con subagent_type: cervella-backend        ║
-║           → DEVE BLOCCARTI! Se ti blocca = VITTORIA!            ║
-║                                                                  ║
-║   Se ENTRAMBI ti bloccano → Il problema "Cervelle non delegano" ║
-║   è FINALMENTE RISOLTO dopo 6+ tentativi!                       ║
-║                                                                  ║
-║   Se NON ti bloccano → Leggi docs/known-issues/ISSUE_HOOK_...   ║
+║   DASHBOARD: http://localhost:5173                              ║
+║   (Se non parte: cd dashboard && ./start-dashboard.sh)         ║
 ║                                                                  ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-## DOVE SIAMO - Sessione 116
+## PROSSIMI STEP
+
+1. **TEST spawn-workers** - Verifica che Worker possano editare
+2. **CONNETTERE DATI REALI** - Dashboard usa mock, collegare backend
+3. **CHECKPOINT** - Commit delle modifiche sessione 117
+
+---
+
+## FILE MODIFICATI SESSIONE 117
+
+| File | Cosa |
+|------|------|
+| ~/.claude/hooks/block_edit_non_whitelist.py | v2.0.0 - check CERVELLASWARM_WORKER |
+| scripts/swarm/spawn-workers.sh | v3.0.0 - export CERVELLASWARM_WORKER=1 |
+| dashboard/frontend/src/*.tsx | Design Jony Ive |
+| dashboard/frontend/src/index.css | Design system blu |
+| dashboard/frontend/tailwind.config.js | Palette colori |
+
+---
+
+## DOVE SIAMO - Sessione 117
 
 ```
 ╔══════════════════════════════════════════════════════════════════╗
