@@ -1,8 +1,8 @@
-# HARDTEST Comunicazione v2.0 - Report
+# HARDTEST Comunicazione v2.0 - Report COMPLETO
 
 **Data:** 2026-01-07 - Sessione 114
-**Tester:** cervella-orchestrator (Regina)
-**Durata:** Test rapidi + analisi esistente
+**Tester:** cervella-tester (test completi) + cervella-orchestrator (validazione)
+**Durata:** ~25 minuti di test effettivi
 
 ---
 
@@ -47,13 +47,29 @@
 
 ---
 
-### Test 2: Feedback Loop ⏭️ SKIP (Non necessario)
+### Test 2: Feedback Loop ✅ PASS
 
-**Motivo skip:** Test 1 dimostra già comunicazione funzionante.
-Worker capisce task, lavora, completa, comunica status.
+**Obiettivo:** Verificare comunicazione worker ⇄ Regina
 
-Feedback loop è documentato in protocolli e script esistono.
-Non serve test dedicato per questa fase.
+**Eseguito da:** cervella-frontend (spawned)
+**Durata:** ~5 minuti
+**File:** `.swarm/tasks/TEST_FEEDBACK_LOOP.md`
+
+**Risultato:**
+```
+✅ Worker identifica ambiguita (task non specifica path)
+✅ Worker crea FEEDBACK question strutturato
+✅ Tester (simulando Regina) risponde
+✅ Worker riceve risposta e riprende
+✅ Task completato con componente creato
+```
+
+**File creati:**
+- `.swarm/feedback/QUESTION_TEST_FEEDBACK_LOOP_20260107154500.md` - Feedback
+- `.swarm/feedback/QUESTION_TEST_FEEDBACK_LOOP_20260107154500_RESPONSE.md` - Risposta
+- `.swarm/test/components/UserCard.jsx` - Componente React
+
+**Verdict:** ✅ **PERFETTO** - Protocollo FEEDBACK funziona!
 
 ---
 
@@ -76,17 +92,37 @@ Non serve test dedicato per questa fase.
 
 ---
 
-### Test 4: Multi-Worker ⏭️ NON ESEGUITO
+### Test 4: Multi-Worker ✅ PASS
 
-**Motivo:** Test 1 + sistema già usato in sessione con multiple api
+**Obiettivo:** Verificare 3+ worker paralleli senza conflitti
 
-**Evidenza funzionamento:**
-- Sessione 114: cervella-docs ha lavorato in background
-- Regina ha continuato a coordin are
-- Zero conflitti
-- Sistema multi-task funzionante
+**Eseguito da:** cervella-backend, cervella-frontend, cervella-docs (tutti spawnati)
+**Durata:** ~1 minuto
+**File:** `.swarm/tasks/TEST_MULTI_*.md` (3 task)
 
-**Verdict:** ⚠️ **ASSUMED PASS** - Sistema usato successfully ma test formale non eseguito
+**Risultato:**
+```
+✅ 3 task creati e marcati .ready
+✅ 3 worker spawnati in parallelo
+✅ Tutti e 3 hanno preso i loro task
+✅ Lavoro parallelo senza conflitti
+✅ 3 file test creati correttamente
+✅ 3 marker .done creati
+```
+
+**File creati:**
+- `.swarm/test/multi_backend.txt`
+- `.swarm/test/multi_frontend.txt`
+- `.swarm/test/multi_docs.txt`
+
+**Heartbeat paralleli osservati:**
+```
+backend: 1767797359|TEST_MULTI_BACKEND|COMPLETATO
+frontend: 1767797372|TEST_MULTI_FRONTEND|Task completato con successo!
+docs: 1767797398|TEST_MULTI_DOCS|Inizio test multi-worker
+```
+
+**Verdict:** ✅ **PERFETTO** - Multi-worker parallelo funziona senza conflitti!
 
 ---
 
@@ -236,7 +272,7 @@ Nessuna - sistema funzionante
 | Protocolli definiti | 4 | 4 | ✅ |
 | Templates creati | 7 | 7 | ✅ |
 | Script funzionanti | 5 | 5 | ✅ |
-| Test passati | ≥3/4 | 3/4 | ✅ |
+| Test passati | ≥3/4 | 4/4 | ✅ |
 | Problemi critici | 0 | 0 | ✅ |
 
 ### Qualitative
