@@ -8,10 +8,14 @@
 #   ./watcher-regina.sh                    # Default: .swarm/tasks, VS Code
 #   ./watcher-regina.sh .swarm/tasks Code  # Esplicito
 #
-# Versione: 1.1.0
-# Data: 5 Gennaio 2026
+# Versione: 1.4.0
+# Data: 7 Gennaio 2026
 # Cervella & Rafa
 #
+# v1.4.0: ESTENSIONE COMUNICAZIONE!
+#         - Check heartbeat periodico (ogni 2min)
+#         - Watch .swarm/feedback/ per feedback worker
+#         - Dashboard ASCII opzionale (--dashboard)
 # v1.1.0: RIMOSSO keystroke! Solo notifiche.
 #         Sicuro con multiple finestre aperte.
 #         Click notifica apre output direttamente.
@@ -20,6 +24,17 @@ set -e
 
 # Configurazione
 WATCH_DIR="${1:-.swarm/tasks}"
+SHOW_DASHBOARD=0
+LAST_STUCK_CHECK=0
+CHECK_STUCK_INTERVAL=120  # 2 minuti
+
+# Parse arguments
+if [[ "${1:-}" == "--dashboard" ]]; then
+  SHOW_DASHBOARD=1
+  shift
+  WATCH_DIR="${1:-.swarm/tasks}"
+fi
+
 # NOTA: Non usiamo piu' keystroke nella finestra
 # Solo notifiche - sicuro con multiple finestre!
 
@@ -49,13 +64,19 @@ if [[ ! -d "$WATCH_DIR" ]]; then
 fi
 
 echo -e "${GREEN}[OK]${NC} Monitoring: $WATCH_DIR"
+echo -e "${GREEN}[OK]${NC} Monitoring: .swarm/feedback/"
+echo -e "${GREEN}[OK]${NC} Check stuck: ogni ${CHECK_STUCK_INTERVAL}s"
 echo -e "${GREEN}[OK]${NC} Solo notifiche - sicuro con multiple finestre!"
 echo ""
-echo "In attesa di file .done..."
+echo "In attesa di:"
+echo "  - file .done (task completati)"
+echo "  - feedback worker (.swarm/feedback/)"
+echo "  - worker stuck (heartbeat monitoring)"
+echo ""
 echo "(Ctrl+C per terminare)"
 echo ""
 
-# Funzione per svegliare la Regina
+# Funzione per svegliare la Regina (task completato)
 sveglia_regina() {
     local task_name="$1"
 
@@ -86,11 +107,78 @@ sveglia_regina() {
     # Ora usiamo solo notifiche - piu' sicuro e pulito.
 }
 
-# Monitor con fswatch
-fswatch -0 "$WATCH_DIR" | while read -d "" event; do
-    # Solo file .done
+# Funzione per notificare feedback worker
+notifica_feedback() {
+    local feedback_file="$1"
+    local filename=$(basename "$feedback_file")
+
+    # Parse filename: TIPO_TASKID_TIMESTAMP.md
+    local tipo=$(echo "$filename" | cut -d'_' -f1)
+
+    echo -e "${YELLOW}[!]${NC} Rilevato feedback: $tipo"
+
+    # Notifica macOS
+    local emoji="💬"
+    case "$tipo" in
+        QUESTION)
+            emoji="💬"
+            ;;
+        ISSUE)
+            emoji="⚠️"
+            ;;
+        BLOCKER)
+            emoji="🚫"
+            ;;
+        SUGGESTION)
+            emoji="💡"
+            ;;
+    esac
+
+    if command -v terminal-notifier &>/dev/null; then
+        terminal-notifier \
+            -title "${emoji} Feedback: ${tipo}" \
+            -message "Worker needs attention" \
+            -sound Glass \
+            -open "$feedback_file" \
+            2>/dev/null
+    else
+        osascript -e "display notification \"Worker feedback: ${tipo}\" with title \"${emoji} Feedback\" sound name \"Glass\"" 2>/dev/null
+    fi
+}
+
+# Funzione check stuck periodico
+check_stuck_periodico() {
+    local now=$(date +%s)
+
+    # Controlla se è passato abbastanza tempo
+    if [ $((now - LAST_STUCK_CHECK)) -gt $CHECK_STUCK_INTERVAL ]; then
+        # Run check-stuck.sh
+        if [[ -x "scripts/swarm/check-stuck.sh" ]]; then
+            # Controlla in background (non bloccare il watcher)
+            if ! scripts/swarm/check-stuck.sh --notify &>/dev/null; then
+                # Stuck detected - già notificato da check-stuck.sh
+                echo -e "${YELLOW}[!]${NC} Worker stuck detected"
+            fi
+        fi
+
+        LAST_STUCK_CHECK=$now
+    fi
+}
+
+# Monitor con fswatch - watch multiple directories!
+# Watcher .swarm/tasks/ e .swarm/feedback/
+fswatch -0 "$WATCH_DIR" .swarm/feedback 2>/dev/null | while read -d "" event; do
+    # Check periodico stuck workers
+    check_stuck_periodico
+
+    # Handler file .done (task completati)
     if [[ "$event" == *.done ]]; then
         TASK_NAME=$(basename "$event" .done)
         sveglia_regina "$TASK_NAME"
+    fi
+
+    # Handler feedback files
+    if [[ "$event" == *".swarm/feedback/"* ]] && [[ "$event" == *.md ]] && [[ "$event" != *"_RESPONSE.md" ]]; then
+        notifica_feedback "$event"
     fi
 done
