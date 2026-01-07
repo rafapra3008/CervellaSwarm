@@ -18,30 +18,27 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 111 - 6 Gennaio 2026: LA SESSIONE DEGLI STUDI!**
+**SESSIONE 112 - 7 Gennaio 2026: LA SESSIONE DELLA DIREZIONE E DELLA DASHBOARD!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE MONUMENTALE!                                          |
+|   SESSIONE DELLA DIREZIONE!                                      |
 |                                                                  |
-|   6 STUDI COMPLETATI DALLO SCIAME:                              |
-|   - Dashboard ARCH (587 righe)                                   |
-|   - Dashboard TECH (490 righe)                                   |
-|   - Dashboard UX                                                 |
-|   - Mercato No-Code (450 righe)                                  |
-|   - OpenAI Swarm                                                 |
-|   - Positioning "Salva il Lavoro" (10 claim!)                   |
+|   FATTO:                                                         |
+|   - Sintetizzato i 6 studi della sessione 111                   |
+|   - Confermato strategia DUAL-TRACK (VISUAL first!)             |
+|   - COSTRUITO la Dashboard MAPPA (backend + frontend!)          |
+|   - Creato Sistema Memoria Persistente                          |
+|   - Documentato DECISIONI_TECNICHE.md                           |
 |                                                                  |
-|   NUOVO COMANDO: swarm-global-status                             |
-|   Vista multi-progetto FUNZIONANTE!                              |
+|   DASHBOARD FUNZIONANTE:                                         |
+|   - Backend: 13 endpoint FastAPI (porta 8100)                   |
+|   - Frontend: React + Vite + TypeScript (porta 5173)            |
+|   - SSE per real-time                                            |
 |                                                                  |
-|   NUOVA VISIONE: DUAL-TRACK                                      |
-|   - Track 1: CervellaSwarm IDE (developer)                      |
-|   - Track 2: CervellaSwarm VISUAL (non-programmatori)           |
-|                                                                  |
-|   NUOVO POSITIONING:                                             |
-|   "L'AI NON TI RUBA IL LAVORO. L'AI SALVA IL TUO LAVORO."       |
+|   NUOVA DIREZIONE:                                               |
+|   "La comunicazione interna deve essere meglio!"                |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -54,7 +51,9 @@
 |------|--------|
 | 16 Agents in ~/.claude/agents/ | FUNZIONANTE |
 | spawn-workers v3.0.0 | +marketing! |
-| **swarm-global-status** | **NUOVO! Multi-progetto** |
+| swarm-global-status | Multi-progetto |
+| **Dashboard MAPPA** | **NUOVO! Prototipo funzionante!** |
+| **Sistema DECISIONI** | **NUOVO! Template docs/decisioni/** |
 | swarm-logs | Log live worker |
 | swarm-timeout | Avvisa se bloccato |
 | swarm-progress | Stato worker live |
@@ -138,11 +137,20 @@
 |                                                                  |
 |   DA FARE:                                                       |
 |                                                                  |
-|   1. SINTESI dei 6 studi (prossima sessione)                    |
-|   2. FIX Sveglia Regina (sessione dedicata)                     |
+|   1. MIGLIORARE COMUNICAZIONE INTERNA                           |
+|      → Come parlano le api tra loro?                            |
+|      → Protocolli piu chiari                                    |
+|                                                                  |
+|   2. CONTINUARE DASHBOARD MAPPA                                  |
+|      → Connettere frontend a dati reali                         |
+|      → Widget "Decisioni Attive"                                |
+|                                                                  |
+|   3. SISTEMA MEMORIA su altri progetti                          |
+|      → Applicare DECISIONI_TECNICHE a Miracollo                 |
+|      → Applicare a Contabilita                                  |
+|                                                                  |
+|   4. FIX SVEGLIA REGINA (sessione dedicata)                     |
 |      → docs/roadmap/ROADMAP_SVEGLIA_REGINA.md                   |
-|   3. Decisione strategica Dual-Track                            |
-|   4. MVP Dashboard o Extension?                                  |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -177,4 +185,4 @@
 
 *"L'AI dalla parte delle persone, non contro di loro."*
 
-*Ultimo aggiornamento: 6 Gennaio 2026 - Sessione 111 - LA SESSIONE DEGLI STUDI*
+*Ultimo aggiornamento: 7 Gennaio 2026 - Sessione 112 - LA SESSIONE DELLA DIREZIONE E DELLA DASHBOARD*

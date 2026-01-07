@@ -6,7 +6,7 @@
 
 ## OVERVIEW
 
-> **Aggiornato:** 6 Gennaio 2026 - Sessione 103 - 4 COMANDI REALI! (v43.0.0)
+> **Aggiornato:** 7 Gennaio 2026 - Sessione 112 - DASHBOARD MAPPA! (v44.0.0)
 
 ```
 +------------------------------------------------------------------+
@@ -323,6 +323,68 @@ APRI -> ASPETTA -> COMUNICA -> TESTA -> VERIFICA -> CHIUDI
 ---
 
 ## CHANGELOG
+
+### 7 Gennaio 2026 (Sessione 112) - DASHBOARD MAPPA FUNZIONANTE!
+
+**LA SESSIONE DELLA DIREZIONE!**
+
+```
+Sintesi 6 studi + DASHBOARD costruita dallo sciame!
+```
+
+**COSA ABBIAMO FATTO:**
+1. Sintetizzato i 6 studi della sessione 111 (3,500+ righe)
+2. Confermato strategia DUAL-TRACK (VISUAL first!)
+3. Dashboard MAPPA costruita in ~10 minuti dallo sciame:
+   - Backend: 13 endpoint FastAPI, SSE, porta 8100
+   - Frontend: React + Vite + TypeScript, porta 5173
+4. Sistema Memoria Persistente creato (docs/decisioni/DECISIONI_TECNICHE.md)
+5. Porte dedicate configurate (8100 per Dashboard)
+
+**FILE CREATI/MODIFICATI:**
+- `dashboard/` - Intera struttura (api/ + frontend/)
+- `docs/decisioni/DECISIONI_TECNICHE.md` - Template decisioni
+- `docs/studio/STUDIO_MEMORIA_PERSISTENTE.md` - Studio memoria
+- `docs/roadmap/SUB_ROADMAP_FASE0_DASHBOARD.md` - Piano dashboard
+
+**INSIGHT CHIAVE:**
+- "Rafa NON e' programmatore, eppure ha costruito 2 sistemi" -> QUESTO e' il prodotto!
+- Il claim "L'AI salva il lavoro" parla a chi ha PAURA dell'AI
+- La MAPPA brilla per chi e' PERSO (non-tecnici)
+
+**FRASI:**
+- "L'idea e' fare il mondo meglio su di come riusciamo a fare."
+- "La comunicazione interna deve essere meglio!"
+
+**Versione:** 44.0.0 (MAJOR: Dashboard MAPPA funzionante!)
+
+---
+
+### 6 Gennaio 2026 (Sessione 111) - LA SESSIONE DEGLI STUDI!
+
+**6 STUDI COMPLETATI DALLO SCIAME!**
+
+| Studio | Righe |
+|--------|-------|
+| Dashboard ARCH | 587 |
+| Dashboard TECH | 490 |
+| Dashboard UX | - |
+| Mercato No-Code | 450 |
+| OpenAI Swarm | - |
+| Positioning "Salva il Lavoro" | - |
+
+**NUOVO COMANDO:** swarm-global-status (vista multi-progetto!)
+
+**NUOVA VISIONE:** DUAL-TRACK
+- Track 1: CervellaSwarm IDE (developer)
+- Track 2: CervellaSwarm VISUAL (non-programmatori)
+
+**NUOVO POSITIONING:**
+"L'AI NON TI RUBA IL LAVORO. L'AI SALVA IL TUO LAVORO."
+
+**Versione:** 43.5.0 (MINOR: 6 studi + swarm-global-status)
+
+---
 
 ### 5 Gennaio 2026 (Sessione 98) - PROTEZIONE TASK TOOL!
 

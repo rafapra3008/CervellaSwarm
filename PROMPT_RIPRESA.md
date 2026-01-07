@@ -336,3 +336,18 @@ POSIZIONE: ~/.claude/agents/ (GLOBALI!)
 *"Prima la MAPPA, poi il VIAGGIO!"*
 
 Cervella & Rafa 💙
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-07 02:01 (auto)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: 5e8455f - ANTI-COMPACT: PreCompact auto
+- **File modificati**: Nessuno (git pulito)
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: auto
+
+---
