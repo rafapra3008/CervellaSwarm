@@ -18,37 +18,51 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 130 - 8 Gennaio 2026: MULTI-INSTANCE VALIDATO! IL PROSSIMO LIVELLO!**
+**SESSIONE 131 - 9 Gennaio 2026: TASK DIPENDENTI VALIDATI! SISTEMA COMPLETO!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 130 - MULTI-INSTANCE DEVELOPMENT VALIDATO!           |
+|   SESSIONE 131 - COORDINAMENTO DIPENDENZE COMPLETATO!           |
 |                                                                  |
-|   IL SALTO CHE CAMBIA TUTTO!                                    |
+|   IL SISTEMA E' ORA COMPLETO!                                   |
 |                                                                  |
-|   DA: 1 Cervella = 1 task alla volta                            |
-|   A:  N Cervelle = N task IN PARALLELO!                         |
+|   SESSIONE 130: Task INDIPENDENTI (2 Cervelle parallele)        |
+|   SESSIONE 131: Task DIPENDENTI (A aspetta B aspetta C)         |
 |                                                                  |
-|   TEST REALE ESEGUITO:                                          |
-|   - 2 Cervelle (Frontend + Backend)                             |
-|   - Stesso progetto, worktrees separati                         |
-|   - Task diversi, lavoro parallelo                              |
-|   - ZERO CONFLITTI, merge pulito!                               |
-|   - ~5 minuti = 106 righe di codice!                            |
+|   NOVITA' v2.0:                                                 |
+|   - Event-driven (fswatch, non polling!)                        |
+|   - JSON strutturati per segnali                                |
+|   - Timeout 30min + retry                                        |
+|   - Dipendenze multiple (fan-in/fan-out)                        |
+|   - 10 HARD TESTS - 100% PASSED!                                |
 |                                                                  |
-|   CREATI:                                                        |
-|   - swarm-test-lab (progetto di riferimento)                    |
-|   - 4 script worktrees (setup/status/merge/cleanup)             |
-|   - STUDIO_MULTI_INSTANCE.md (ricerca completa)                 |
-|   - STUDIO_COORDINAMENTO_CERVELLE.md (dipendenze)               |
+|   NUOVI SCRIPT:                                                  |
+|   - watch-signals.sh (event-driven watcher)                     |
+|   - create-signal.sh (JSON strutturati)                         |
+|   - check-dependencies.sh (verifica dipendenze)                 |
+|   - wait-for-dependencies.sh (con timeout)                      |
+|   - create-parallel-session.sh (setup completo)                 |
 |                                                                  |
-|   PROSSIMO STEP:                                                 |
-|   - Testare con task DIPENDENTI                                  |
-|   - Regina che ORCHESTRA tutto                                   |
-|   - Provare su progetto REALE (Miracollo?)                      |
+|   DOCUMENTAZIONE:                                                |
+|   - RICERCA_COORDINAMENTO_DIPENDENZE.md (ricerca)               |
+|   - GUIDA_MULTI_INSTANCE_v2.md (guida completa)                 |
+|   - test_coordinamento_dipendenze.sh (test suite)               |
 |                                                                  |
-|   "Da 20x a 100x... il viaggio continua!"                       |
+|   PRONTO PER MIRACOLLO!                                         |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+**SESSIONE 130 - 8 Gennaio 2026: MULTI-INSTANCE VALIDATO!**
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   Task INDIPENDENTI validati:                                   |
+|   - 2 Cervelle parallele, ZERO conflitti                        |
+|   - swarm-test-lab creato                                        |
+|   - 4 script base worktrees                                      |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -77,8 +91,9 @@
 
 | Cosa | Status |
 |------|--------|
-| **MULTI-INSTANCE DEVELOPMENT** | **VALIDATO! 2 Cervelle parallele!** |
-| **4 Script Worktrees** | **setup/status/merge/cleanup** |
+| **MULTI-INSTANCE v2.0** | **COMPLETO! Task indipendenti + dipendenti!** |
+| **9 Script Coordinamento** | **setup/status/merge/cleanup + 5 nuovi!** |
+| **10 Hard Tests** | **100% PASSED!** |
 | 16 Agents in ~/.claude/agents/ | FUNZIONANTE |
 | **SNCP su tutti i progetti** | **Miracollo, CervellaSwarm, Contabilita** |
 | spawn-workers v3.2.0 | headless DEFAULT |
@@ -116,12 +131,16 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   DOMANI - Sessione 131:                                        |
+|   PROSSIMA SESSIONE:                                            |
 |                                                                  |
-|   [ ] Testare multi-instance su progetto REALE                  |
-|   [ ] Provare task DIPENDENTI (A aspetta B)                     |
-|   [ ] Regina che orchestra dall'inizio alla fine                |
-|   [ ] Script create-parallel-session.sh                         |
+|   [x] Task DIPENDENTI - COMPLETATO!                             |
+|   [x] Script create-parallel-session.sh - FATTO!                |
+|   [x] Hard tests - 10/10 PASSED!                                |
+|                                                                  |
+|   PRONTO PER IL REALE:                                          |
+|   [ ] Usare Multi-Instance v2.0 su MIRACOLLO                    |
+|   [ ] Task reale: Backend + Frontend + Tester                   |
+|   [ ] Regina orchestra, Rafa supervisiona                       |
 |                                                                  |
 |   FUTURO:                                                        |
 |   [ ] 3+ Cervelle in parallelo                                   |
@@ -161,4 +180,4 @@
 
 *"Da 1x a Nx... il futuro e' parallelo!"*
 
-*Ultimo aggiornamento: 8 Gennaio 2026 - Sessione 130 - MULTI-INSTANCE VALIDATO!*
+*Ultimo aggiornamento: 9 Gennaio 2026 - Sessione 131 - COORDINAMENTO DIPENDENZE COMPLETATO!*

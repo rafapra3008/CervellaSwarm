@@ -1,191 +1,184 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 8 Gennaio 2026 - Fine Sessione 130
-> **Versione:** v22.0.0 - MULTI-INSTANCE DEVELOPMENT VALIDATO!
+> **Ultimo aggiornamento:** 9 Gennaio 2026 - Fine Sessione 131
+> **Versione:** v23.0.0 - COORDINAMENTO DIPENDENZE COMPLETATO!
 
 ---
 
-## SESSIONE 130 - MULTI-INSTANCE VALIDATO!
+## SESSIONE 131 - SISTEMA MULTI-INSTANCE COMPLETO!
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 130 - 8 GENNAIO 2026                                  |
+|   SESSIONE 131 - 9 GENNAIO 2026                                  |
 |                                                                  |
-|   GIORNO STORICO!                                                |
-|   MULTI-INSTANCE DEVELOPMENT VALIDATO!                          |
+|   IL SISTEMA E' COMPLETO!                                       |
 |                                                                  |
-|   Il prossimo livello dello swarm e' REALE!                     |
+|   Sessione 130: Task INDIPENDENTI validati                      |
+|   Sessione 131: Task DIPENDENTI validati                        |
 |                                                                  |
-|   DA: 1 Cervella = 1 task alla volta                            |
-|   A:  N Cervelle = N task IN PARALLELO!                         |
+|   10 HARD TESTS - 100% PASSED!                                  |
+|                                                                  |
+|   PRONTO PER MIRACOLLO!                                         |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## IL FILO DEL DISCORSO - Sessione 130
+## IL FILO DEL DISCORSO - Sessione 131
 
 **Come e' iniziata:**
-Rafa ha chiesto: *"Possiamo lavorare multi finestre sullo stesso progetto? Sviluppando cose diverse? Lavorando in squadra?"*
-
-Questa domanda ha aperto la porta al prossimo livello!
+Rafa ha chiesto di fare un "double triple check" prima di andare su Miracollo.
+Voleva assicurarsi che avessimo tutto pronto per i task DIPENDENTI.
 
 **Cosa abbiamo fatto:**
 
-### 1. RICERCA (cervella-researcher)
-- Studiato come fanno i big (parallel AI agents)
-- Scoperto: Git Worktrees = gold standard
-- 70% time saving nei casi reali documentati
-- Creato: `docs/studio/STUDIO_MULTI_INSTANCE.md`
+### 1. RICERCA DI CONFERMA
+- Verificato che file-based coordination e' il best practice 2026
+- Scoperto: event-driven watching (non polling!)
+- Scoperto: structured JSON messages
+- Scoperto: timeout + retry CRITICI (41-86% fallimenti senza!)
+- Creato: `docs/studio/RICERCA_COORDINAMENTO_DIPENDENZE.md`
 
-### 2. PROGETTO TEST (swarm-test-lab)
-```
-~/Developer/swarm-test-lab/
-├── frontend/     # React components
-├── backend/      # FastAPI
-├── shared/       # Config condivisa
-└── .swarm/       # Coordinamento
-```
-- 20 file, 1253 righe
-- Progetto realistico per test
-
-### 3. SCRIPT WORKTREES (4 script!)
+### 2. NUOVI SCRIPT CREATI (5!)
 ```
 scripts/
-├── setup-parallel-worktrees.sh   # Crea N worktrees
-├── status-parallel-worktrees.sh  # Mostra stato
-├── merge-parallel-worktrees.sh   # Merge ordinato
-└── cleanup-parallel-worktrees.sh # Rimuove tutto
+├── watch-signals.sh          # Event-driven watcher (fswatch)
+├── create-signal.sh          # Genera JSON strutturati
+├── check-dependencies.sh     # Verifica dipendenze
+├── wait-for-dependencies.sh  # Aspetta con timeout
+└── create-parallel-session.sh # Setup completo sessione
 ```
 
-### 4. TEST REALE - IL MOMENTO DELLA VERITA'!
+### 3. STRUTTURA .swarm/ v2.0
 ```
-ESEGUITO:
-- 2 worktrees creati (frontend, backend)
-- 2 terminali con Claude Code lanciati
-- Task: Dashboard migliorato + Endpoint conversion
-
-RISULTATO:
-- Frontend: 1aaa3cd (3 file, 65 righe)
-- Backend: 345624c (2 file, 41 righe)
-- Merge: ZERO CONFLITTI!
-- Tempo: ~5 minuti di lavoro parallelo!
-
-SUCCESSO TOTALE!
+.swarm/
+├── config.json              # Configurazione sistema
+├── segnali/                 # JSON strutturati
+├── dipendenze/              # Grafo + template
+├── stato/                   # Stato workers
+├── messaggi/                # Comunicazione diretta
+└── logs/                    # Storia
 ```
 
-### 5. STUDIO COORDINAMENTO
-- Studiato come far comunicare Cervelle con task DIPENDENTI
-- Pattern: file-based coordination con .swarm/
-- Creato: `docs/studio/STUDIO_COORDINAMENTO_CERVELLE.md`
-
-**Decisione importante:**
-La visione e' chiara: IO (Regina) orchestro, Rafa supervisiona.
-Rafa chiede "voglio X", io analizzo, divido, coordino, documento.
-
----
-
-## COME USARE IL SISTEMA MULTI-INSTANCE
-
-### Setup Rapido
-
-```bash
-# 1. Crea worktrees
-~/Developer/CervellaSwarm/scripts/setup-parallel-worktrees.sh ~/Developer/[PROGETTO] frontend backend
-
-# 2. Apri 2 terminali
-# Terminal 1:
-cd ~/Developer/[PROGETTO]-frontend && claude
-
-# Terminal 2:
-cd ~/Developer/[PROGETTO]-backend && claude
-
-# 3. Dai task a ogni Cervella
-
-# 4. Monitora
-~/Developer/CervellaSwarm/scripts/status-parallel-worktrees.sh ~/Developer/[PROGETTO]
-
-# 5. Quando finiscono, merge
-~/Developer/CervellaSwarm/scripts/merge-parallel-worktrees.sh ~/Developer/[PROGETTO]
-
-# 6. Cleanup
-~/Developer/CervellaSwarm/scripts/cleanup-parallel-worktrees.sh ~/Developer/[PROGETTO]
+### 4. HARD TESTS - 10/10 PASSED!
 ```
+Test eseguiti:
+1. Task senza dipendenze - OK
+2. Task con dipendenza NON soddisfatta - OK
+3. Creazione segnale SUCCESS - OK
+4. Task con dipendenza SODDISFATTA - OK
+5. Creazione segnale FAILURE - OK
+6. Check dipendenza con status FAILURE - OK
+7. Dipendenze MULTIPLE (Fan-in) - OK
+8. Creazione segnale BLOCKED - OK
+9. Verifica formato JSON completo - OK
+10. Idempotency key unica - OK
+
+RISULTATO: 100% PASSED!
+```
+
+### 5. TEST WATCH SIGNALS
+- Watcher event-driven FUNZIONA
+- Rileva segnali ISTANTANEAMENTE
+- Niente polling!
+
+### 6. DOCUMENTAZIONE
+- `docs/guide/GUIDA_MULTI_INSTANCE_v2.md` - Guida completa
+- `tests/test_coordinamento_dipendenze.sh` - Test suite
 
 ---
 
 ## COSA HAI A DISPOSIZIONE
 
-### Sistema Multi-Instance (NUOVO!)
+### Sistema Multi-Instance v2.0 COMPLETO
 
 | Script | Cosa Fa |
 |--------|---------|
-| `setup-parallel-worktrees.sh` | Crea N worktrees con branch separate |
-| `status-parallel-worktrees.sh` | Mostra stato completo di tutti |
-| `merge-parallel-worktrees.sh` | Merge ordinato in main |
-| `cleanup-parallel-worktrees.sh` | Rimuove worktrees e branch |
+| `setup-parallel-worktrees.sh` | Crea worktrees |
+| `status-parallel-worktrees.sh` | Mostra stato |
+| `merge-parallel-worktrees.sh` | Merge in main |
+| `cleanup-parallel-worktrees.sh` | Rimuove worktrees |
+| `create-parallel-session.sh` | Setup COMPLETO sessione |
+| `watch-signals.sh` | Watcher event-driven |
+| `create-signal.sh` | Crea segnali JSON |
+| `check-dependencies.sh` | Verifica dipendenze |
+| `wait-for-dependencies.sh` | Aspetta con timeout |
 
-### Progetto di Riferimento
+### Quick Start per Miracollo
 
-```
-~/Developer/swarm-test-lab/
-- Progetto completo testato
-- Usalo come esempio
-```
+```bash
+# 1. Setup sessione
+~/Developer/CervellaSwarm/scripts/create-parallel-session.sh \
+    ~/Developer/miracollogeminifocus \
+    feature-name \
+    backend frontend tester
 
-### Sistema Completo
+# 2. Apri terminali (uno per worker)
+cd ~/Developer/miracollogeminifocus-backend && claude
+cd ~/Developer/miracollogeminifocus-frontend && claude
 
-| Cosa | Status |
-|------|--------|
-| Multi-Instance Scripts | NUOVO - Validato! |
-| 16 Agents operativi | Pronti |
-| SNCP su tutti i progetti | Completo |
-| spawn-workers | Funzionante |
+# 3. Ogni Cervella:
+#    - Se ha dipendenze: wait-for-dependencies.sh TASK-XXX
+#    - Lavora
+#    - Quando finisce: create-signal.sh TASK-XXX success "desc" COMMIT
 
----
-
-## FILE CREATI/MODIFICATI OGGI
-
-**CervellaSwarm:**
-```
-docs/studio/STUDIO_MULTI_INSTANCE.md        (NUOVO - ricerca)
-docs/studio/STUDIO_COORDINAMENTO_CERVELLE.md (NUOVO - dipendenze)
-docs/studio/SUBROADMAP_MULTI_INSTANCE_TEST.md (NUOVO - test)
-scripts/setup-parallel-worktrees.sh         (NUOVO)
-scripts/status-parallel-worktrees.sh        (NUOVO)
-scripts/merge-parallel-worktrees.sh         (NUOVO)
-scripts/cleanup-parallel-worktrees.sh       (NUOVO)
-```
-
-**Nuovo progetto:**
-```
-~/Developer/swarm-test-lab/   (20+ file, progetto completo)
+# 4. Merge finale
+~/Developer/CervellaSwarm/scripts/merge-parallel-worktrees.sh ~/Developer/miracollogeminifocus
+~/Developer/CervellaSwarm/scripts/cleanup-parallel-worktrees.sh ~/Developer/miracollogeminifocus
 ```
 
 ---
 
-## PROSSIMI STEP - SESSIONE 131
+## FILE CREATI/MODIFICATI SESSIONE 131
+
+**Script (5 nuovi!):**
+```
+scripts/watch-signals.sh              (NUOVO)
+scripts/create-signal.sh              (NUOVO)
+scripts/check-dependencies.sh         (NUOVO)
+scripts/wait-for-dependencies.sh      (NUOVO)
+scripts/create-parallel-session.sh    (NUOVO)
+```
+
+**Documentazione:**
+```
+docs/studio/RICERCA_COORDINAMENTO_DIPENDENZE.md  (NUOVO - ricerca)
+docs/guide/GUIDA_MULTI_INSTANCE_v2.md            (NUOVO - guida)
+```
+
+**Test:**
+```
+tests/test_coordinamento_dipendenze.sh           (NUOVO - 10 test)
+```
+
+**Struttura swarm-test-lab:**
+```
+.swarm/config.json                               (NUOVO)
+.swarm/segnali/_TEMPLATE.signal.json             (NUOVO)
+.swarm/dipendenze/SESSIONE_TEMPLATE.md           (NUOVO)
+.swarm/dipendenze/grafo.json                     (NUOVO)
+.swarm/README.md                                 (AGGIORNATO v2.0)
+```
+
+---
+
+## PROSSIMI STEP - SESSIONE 132
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   DOMANI:                                                        |
+|   PRONTO PER IL REALE!                                          |
 |                                                                  |
-|   [ ] Testare multi-instance su progetto REALE (Miracollo?)     |
-|   [ ] Provare task DIPENDENTI (Backend → Frontend → Tester)     |
-|   [ ] Regina che orchestra dall'inizio alla fine                |
-|   [ ] Script create-parallel-session.sh (automazione)           |
+|   [ ] Usare Multi-Instance v2.0 su MIRACOLLO                    |
+|   [ ] Task reale con dipendenze                                  |
+|   [ ] Regina orchestra, Rafa supervisiona                       |
 |                                                                  |
-|   LA VISIONE:                                                    |
-|   Rafa dice "voglio X"                                          |
-|   → Regina analizza, pianifica, divide                          |
-|   → Regina crea worktrees + task                                |
-|   → Rafa apre N terminali                                       |
-|   → Cervelle lavorano in parallelo                              |
-|   → Regina monitora, merge, documenta                           |
-|   → Risultato: N volte piu' veloce!                             |
+|   ESEMPIO TASK:                                                  |
+|   - Backend: Crea nuova API                                     |
+|   - Frontend: Consuma API (dipende da Backend)                  |
+|   - Tester: Testa tutto (dipende da entrambi)                   |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -199,53 +192,51 @@ scripts/cleanup-parallel-worktrees.sh       (NUOVO)
 |                                                                  |
 |   Cara Prossima Cervella,                                        |
 |                                                                  |
-|   ABBIAMO FATTO LA STORIA OGGI!                                 |
+|   IL SISTEMA MULTI-INSTANCE E' COMPLETO!                        |
 |                                                                  |
-|   Multi-instance development FUNZIONA:                          |
-|   - 2 Cervelle in parallelo                                     |
-|   - Zero conflitti                                              |
-|   - Merge pulito                                                |
-|   - Tempo dimezzato!                                            |
+|   Sessione 130: Task indipendenti VALIDATI                      |
+|   Sessione 131: Task dipendenti VALIDATI                        |
 |                                                                  |
 |   HAI A DISPOSIZIONE:                                           |
-|   - 4 script per worktrees paralleli                            |
-|   - swarm-test-lab come esempio                                 |
-|   - 2 studi completi (multi-instance + coordinamento)           |
+|   - 9 script per coordinamento                                   |
+|   - Event-driven watching (istantaneo!)                         |
+|   - JSON strutturati                                             |
+|   - Timeout + retry                                              |
+|   - 10 hard tests che passano                                    |
+|   - Guida completa                                               |
 |                                                                  |
-|   PROSSIMO LIVELLO:                                             |
-|   - Task dipendenti (A aspetta B)                               |
-|   - Regina che orchestra tutto                                  |
-|   - Provare su Miracollo!                                       |
+|   PROSSIMO PASSO:                                                |
+|   Usare tutto questo su MIRACOLLO!                              |
+|   Il sistema e' pronto e testato.                               |
 |                                                                  |
-|   Il segreto: SEPARAZIONE (worktrees) + COORDINAMENTO (.swarm/) |
-|                                                                  |
-|   "Da 1x a Nx... il futuro e' parallelo!"                       |
+|   "Ricerca prima, implementazione dopo - La Formula Magica!"    |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## RIEPILOGO SESSIONE 130
+## RIEPILOGO SESSIONE 131
 
 | Cosa | Risultato |
 |------|-----------|
-| Ricerca multi-instance | Completata |
-| Progetto test | swarm-test-lab creato |
-| Script worktrees | 4 script funzionanti |
-| Test reale | 2 Cervelle, 0 conflitti! |
-| Studio coordinamento | Completato |
+| Ricerca conferma | File-based VALIDATO |
+| Nuovi script | 5 creati |
+| Struttura .swarm/ v2.0 | Implementata |
+| Hard tests | 10/10 PASSED |
+| Watch signals | Event-driven OK |
+| Documentazione | Guida completa |
 | NORD + PROMPT_RIPRESA | Aggiornati |
-
-**Commit:** `eee3cb8` + checkpoint finale
 
 ---
 
-*Ultimo aggiornamento: 8 Gennaio 2026 - Fine Sessione 130*
-*Versione: v22.0.0 - MULTI-INSTANCE VALIDATO!*
+*Ultimo aggiornamento: 9 Gennaio 2026 - Fine Sessione 131*
+*Versione: v23.0.0 - COORDINAMENTO DIPENDENZE COMPLETATO!*
 
-**Cervella & Rafa** - Sessione 130
+**Cervella & Rafa** - Sessione 131
 
-*"Da 20x a 100x... il viaggio continua!"*
+*"Ricerca prima, implementazione dopo - La Formula Magica!"*
 
-*"Non vedo l'ora di domani mettere giu' e provare tutto questo assieme!"* - Rafa
+*"10 test, 100% passed - Sistema SOLIDO!"*
+
+*"Pronto per Miracollo!"*
