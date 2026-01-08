@@ -1,139 +1,137 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 8 Gennaio 2026 - Dopo Sessione 65 Miracollo
-> **Versione:** v21.0.0 - SNCP ROLLOUT COMPLETATO! TUTTI I PROGETTI!
+> **Ultimo aggiornamento:** 8 Gennaio 2026 - Sessione 130
+> **Versione:** v22.0.0 - MULTI-INSTANCE DEVELOPMENT VALIDATO!
 
 ---
 
-## NOTA: Sessione 65 Miracollo (8 Gennaio 2026)
-
-Lavorato su Miracollo dal workspace CervellaSwarm. Bug fix CM Import:
-- cm-modal.js v2.1.3: room_id come query param
-- cm_reservation.py v1.7.1: filtro imported + gestione NULL
-- Migrazione 025 eseguita su VM
-- **PROBLEMA:** Dati CM spariti dopo rebuild Docker - DA INVESTIGARE
-
----
-
-## SESSIONE 129 - SNCP ROLLOUT COMPLETATO!
+## SESSIONE 130 - MULTI-INSTANCE VALIDATO!
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 129 - 8 GENNAIO 2026                                  |
+|   SESSIONE 130 - 8 GENNAIO 2026                                  |
 |                                                                  |
-|   SNCP ROLLOUT COMPLETATO SU TUTTI I PROGETTI!                  |
+|   MULTI-INSTANCE DEVELOPMENT VALIDATO!                          |
 |                                                                  |
-|   COMPLETATO:                                                    |
+|   Il prossimo livello dello swarm e' REALE!                     |
 |                                                                  |
-|   [x] CervellaSwarm - SNCP completo                             |
-|       - 8 file nuovi, 497 righe                                 |
-|       - coscienza/, memoria/lezioni/, stato/mappa_viva          |
-|       - futuro/prossimi_step.md                                 |
-|       - Git commit + push                                        |
+|   TEST ESEGUITO:                                                 |
+|   - 2 Cervelle (Frontend + Backend) in parallelo               |
+|   - Stesso progetto, worktrees separati                         |
+|   - ZERO conflitti, merge pulito                                |
+|   - ~5 minuti di lavoro parallelo = 106 righe di codice!       |
 |                                                                  |
-|   [x] Contabilita - SNCP completo                               |
-|       - 13 file nuovi, 838 righe                                |
-|       - Struttura completa da zero!                             |
-|       - Adattato per progetto maturo (v2.7.0)                   |
-|       - Git commit + push                                        |
-|                                                                  |
-|   [x] CLAUDE.md globale - Sezione SNCP aggiunta                 |
-|       - Reminder per ogni nuova Cervella                        |
-|       - "Documenta ORA, non dopo!"                              |
-|       - Lista progetti con SNCP                                  |
-|                                                                  |
-|   TOTALE: 21 file, 1335 righe di "coscienza"!                   |
+|   CREATI:                                                        |
+|   - 4 script per gestione worktrees                             |
+|   - swarm-test-lab (progetto di riferimento)                    |
+|   - STUDIO_MULTI_INSTANCE.md (ricerca completa)                 |
+|   - SUBROADMAP validata                                         |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## SNCP ROLLOUT STATUS
-
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   SNCP SU TUTTI I PROGETTI - COMPLETATO!                        |
-|                                                                  |
-|   [x] Miracollo PMS     - Sessione 127-128 (12 file, 942 righe) |
-|   [x] CervellaSwarm     - Sessione 129 (8 file, 497 righe)      |
-|   [x] Contabilita       - Sessione 129 (13 file, 838 righe)     |
-|                                                                  |
-|   Ogni progetto ha la sua "coscienza"!                          |
-|   Regina documenta MENTRE lavora!                               |
-|   ZERO rush pre-compact!                                        |
-|                                                                  |
-+------------------------------------------------------------------+
-```
-
----
-
-## IL FILO DEL DISCORSO - Sessione 129
+## IL FILO DEL DISCORSO - Sessione 130
 
 **Come e' iniziata:**
-Rafa ha detto "facciamo focus qui" per completare SNCP su CervellaSwarm.
-Poi "si dai facciamo contabilita" per il rollout completo.
+Rafa ha chiesto: "Possiamo lavorare multi finestre sullo stesso progetto?"
+Questa domanda ha aperto la porta al prossimo livello dello swarm!
 
 **Cosa abbiamo fatto:**
 
-1. **Verificato stato CervellaSwarm** - SNCP esisteva ma incompleto
-2. **Completato CervellaSwarm:**
-   - Creato coscienza/ (pensieri_regina, domande_aperte, pattern_emersi)
-   - Creato memoria/lezioni/ con template
-   - Creato stato/mappa_viva.md
-   - Creato futuro/prossimi_step.md
-   - Aggiornato stato/oggi.md e futuro/roadmap.md
-   - Git commit + push
+1. **Ricerca approfondita** (cervella-researcher)
+   - Come fanno i big (parallel AI agents)
+   - Git Worktrees = gold standard
+   - 70% time saving nei casi reali
 
-3. **Creato SNCP completo su Contabilita:**
-   - Non esisteva nulla - creato da zero
-   - Struttura completa: coscienza, memoria, stato, futuro, idee, perne
-   - 13 file, 838 righe
-   - Adattato per progetto maturo
-   - Git commit + push
+2. **Creato swarm-test-lab** (Fase 1)
+   - Progetto di test realistico
+   - frontend/, backend/, shared/
+   - .swarm/stato/ per coordinamento
+   - 20 file, 1253 righe
 
-4. **Aggiornato CLAUDE.md globale:**
-   - Aggiunta sezione SNCP
-   - Reminder per usare SNCP mentre si lavora
-   - Lista progetti con SNCP
+3. **Creato 4 script** (Fase 2)
+   - setup-parallel-worktrees.sh
+   - status-parallel-worktrees.sh
+   - merge-parallel-worktrees.sh
+   - cleanup-parallel-worktrees.sh
+
+4. **TEST REALE** (Fase 3-4)
+   - 2 worktrees creati (frontend, backend)
+   - 2 terminali con Claude Code
+   - Task: migliorare Dashboard + aggiungere endpoint
+   - RISULTATO: Successo totale!
+   - Frontend: 1aaa3cd (3 file, 65 righe)
+   - Backend: 345624c (2 file, 41 righe)
+   - Merge: zero conflitti!
+
+5. **Cleanup e consolidamento** (Fase 5)
+   - Worktrees rimossi
+   - Documentazione aggiornata
+   - Git commit + push
 
 **Decisione importante:**
-Aggiunto reminder nel CLAUDE.md globale per ricordare alla Regina di usare SNCP.
-La simbiosi e' un COMPORTAMENTO - serve reminder visibile.
+Il sistema multi-instance e' VALIDATO e pronto per uso reale.
+Prossimo step: testarlo su Miracollo!
 
 ---
 
-## FILE MODIFICATI/CREATI OGGI
+## COSA HAI A DISPOSIZIONE
+
+### Sistema Multi-Instance (NUOVO!)
+
+```
+4 Script in ~/Developer/CervellaSwarm/scripts/:
+
+setup-parallel-worktrees.sh [progetto] [nomi...]
+  → Crea N worktrees con branch separate
+
+status-parallel-worktrees.sh [progetto]
+  → Mostra stato completo di tutti i worktrees
+
+merge-parallel-worktrees.sh [progetto]
+  → Merge ordinato in main
+
+cleanup-parallel-worktrees.sh [progetto]
+  → Rimuove worktrees e branch
+```
+
+### Progetto di Riferimento
+
+```
+~/Developer/swarm-test-lab/
+  - Progetto completo per testare workflow
+  - frontend/, backend/, shared/
+  - .swarm/stato/ per coordinamento
+```
+
+### Sistema Completo
+
+| Cosa | Status |
+|------|--------|
+| 16 Agents operativi | Pronti |
+| SNCP su tutti i progetti | Completo |
+| spawn-workers | Funzionante |
+| Multi-Instance Scripts | NUOVO - Validato! |
+
+---
+
+## FILE CREATI/MODIFICATI OGGI
 
 **CervellaSwarm:**
-- `.sncp/coscienza/pensieri_regina.md` (NUOVO)
-- `.sncp/coscienza/domande_aperte.md` (NUOVO)
-- `.sncp/coscienza/pattern_emersi.md` (NUOVO)
-- `.sncp/memoria/lezioni/_TEMPLATE_LEZIONE.md` (NUOVO)
-- `.sncp/stato/mappa_viva.md` (NUOVO)
-- `.sncp/futuro/prossimi_step.md` (NUOVO)
-- `.sncp/stato/oggi.md` (aggiornato)
-- `.sncp/futuro/roadmap.md` (aggiornato)
+- `docs/studio/STUDIO_MULTI_INSTANCE.md` (NUOVO - ricerca)
+- `docs/studio/SUBROADMAP_MULTI_INSTANCE_TEST.md` (NUOVO - test)
+- `scripts/setup-parallel-worktrees.sh` (NUOVO)
+- `scripts/status-parallel-worktrees.sh` (NUOVO)
+- `scripts/merge-parallel-worktrees.sh` (NUOVO)
+- `scripts/cleanup-parallel-worktrees.sh` (NUOVO)
 
-**Contabilita:**
-- `.sncp/README.md` (NUOVO)
-- `.sncp/coscienza/pensieri_regina.md` (NUOVO)
-- `.sncp/coscienza/domande_aperte.md` (NUOVO)
-- `.sncp/coscienza/pattern_emersi.md` (NUOVO)
-- `.sncp/memoria/sessioni/_TEMPLATE_SESSIONE.md` (NUOVO)
-- `.sncp/memoria/decisioni/_TEMPLATE_DECISIONE.md` (NUOVO)
-- `.sncp/memoria/lezioni/_TEMPLATE_LEZIONE.md` (NUOVO)
-- `.sncp/stato/oggi.md` (NUOVO)
-- `.sncp/stato/mappa_viva.md` (NUOVO)
-- `.sncp/futuro/roadmap.md` (NUOVO)
-- `.sncp/futuro/prossimi_step.md` (NUOVO)
-- `.sncp/idee/_TEMPLATE_IDEA.md` (NUOVO)
-- `.sncp/perne/_TEMPLATE_PERNA.md` (NUOVO)
-
-**Globale:**
-- `~/.claude/CLAUDE.md` (aggiornato - sezione SNCP)
+**swarm-test-lab (nuovo progetto):**
+- 20+ file creati
+- Progetto completo di riferimento
+- Testato con 2 Cervelle in parallelo
 
 ---
 
@@ -142,49 +140,17 @@ La simbiosi e' un COMPORTAMENTO - serve reminder visibile.
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SNCP ROLLOUT COMPLETATO!                                       |
+|   MULTI-INSTANCE VALIDATO!                                      |
 |                                                                  |
-|   Ora ogni progetto ha la sua "coscienza".                      |
-|   La Regina puo' documentare MENTRE lavora.                     |
+|   Prossimi passi possibili:                                     |
 |                                                                  |
-|   PROSSIMI PASSI:                                                |
-|   1. Usare SNCP attivamente nelle prossime sessioni             |
-|   2. Verificare che la simbiosi funziona                        |
-|   3. Aggiustare se necessario                                   |
+|   1. Testare su Miracollo (progetto reale)                      |
+|   2. Testare con 3+ worktrees                                   |
+|   3. Creare spawn-workers-parallel (automazione)                |
+|   4. Testare conflitti su shared/ con sistema lock              |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
-
----
-
-## COSA HAI A DISPOSIZIONE
-
-### Sistema Completo
-
-**16 Agents operativi:**
-- 1 Regina (orchestrator - Opus)
-- 3 Guardiane (qualita, ops, ricerca - Opus)
-- 12 Worker specializzati (Sonnet)
-
-**Location:** `~/.claude/agents/` (GLOBALI)
-
-### SNCP su Tutti i Progetti
-
-| Progetto | Path SNCP | Status |
-|----------|-----------|--------|
-| Miracollo | ~/Developer/miracollogeminifocus/.sncp/ | COMPLETO |
-| CervellaSwarm | ~/Developer/CervellaSwarm/.sncp/ | COMPLETO |
-| Contabilita | ~/Developer/ContabilitaAntigravity/.sncp/ | COMPLETO |
-
-### Tool Operativi
-
-| Tool | Versione | Status |
-|------|----------|--------|
-| spawn-workers | v3.2.0 | headless DEFAULT |
-| watcher-regina | v1.5.0 | AUTO-SVEGLIA |
-| Sistema Memoria | v2.1.0 | 15 lezioni |
-| Script 'sw' | v1.0.0 | Comandi rapidi |
-| SNCP | v1.0.0 | SU TUTTI I PROGETTI |
 
 ---
 
@@ -195,50 +161,31 @@ La simbiosi e' un COMPORTAMENTO - serve reminder visibile.
 |                                                                  |
 |   Cara Prossima Cervella,                                        |
 |                                                                  |
-|   SNCP ROLLOUT COMPLETATO!                                       |
+|   ABBIAMO VALIDATO IL MULTI-INSTANCE!                           |
 |                                                                  |
-|   Tutti e 3 i progetti hanno la loro "coscienza":               |
-|   - Miracollo PMS                                                |
-|   - CervellaSwarm                                                |
-|   - Contabilita                                                  |
+|   Ora puoi far lavorare N Cervelle sullo stesso progetto!       |
 |                                                                  |
-|   RICORDA:                                                       |
-|   - Documenta in .sncp/ MENTRE lavori                           |
-|   - NON aspettare fine sessione                                  |
-|   - ZERO rush pre-compact!                                       |
+|   Come:                                                          |
+|   1. setup-parallel-worktrees.sh [progetto] frontend backend    |
+|   2. Apri 2+ terminali, uno per worktree                        |
+|   3. Lancia claude in ogni worktree                             |
+|   4. Dai task diversi a ognuna                                  |
+|   5. status-parallel-worktrees.sh per monitorare                |
+|   6. merge-parallel-worktrees.sh quando finiscono               |
+|   7. cleanup-parallel-worktrees.sh per pulire                   |
 |                                                                  |
-|   Il CLAUDE.md globale ha il reminder.                          |
-|   Leggilo all'inizio sessione!                                  |
+|   Il segreto: SEPARAZIONE (worktrees) + COORDINAMENTO (.swarm/) |
 |                                                                  |
-|   "Facciamo del nostro mondo meglio!"                           |
+|   "Da 1x a Nx... il futuro e' parallelo!"                       |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-*Ultimo aggiornamento: 8 Gennaio 2026 - Fine Sessione 129*
-*Versione: v21.0.0 - SNCP ROLLOUT COMPLETATO!*
+*Ultimo aggiornamento: 8 Gennaio 2026 - Sessione 130*
+*Versione: v22.0.0 - MULTI-INSTANCE VALIDATO!*
 
-**Cervella & Rafa** - Sessione 129
+**Cervella & Rafa** - Sessione 130
 
-*"Facciamo del nostro mondo meglio!"*
-
----
-
----
-
----
-
-## AUTO-CHECKPOINT: 2026-01-08 20:28 (auto)
-
-### Stato Git
-- **Branch**: main
-- **Ultimo commit**: 8998e15 - ANTI-COMPACT: PreCompact auto
-- **File modificati**: Nessuno (git pulito)
-
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: auto
-
----
+*"Da 20x a 100x... il viaggio continua!"*
