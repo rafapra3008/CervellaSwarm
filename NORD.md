@@ -18,7 +18,42 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 129 - 8 Gennaio 2026: SNCP ROLLOUT COMPLETATO! TUTTI I PROGETTI!**
+**SESSIONE 130 - 8 Gennaio 2026: MULTI-INSTANCE VALIDATO! IL PROSSIMO LIVELLO!**
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   SESSIONE 130 - MULTI-INSTANCE DEVELOPMENT VALIDATO!           |
+|                                                                  |
+|   IL SALTO CHE CAMBIA TUTTO!                                    |
+|                                                                  |
+|   DA: 1 Cervella = 1 task alla volta                            |
+|   A:  N Cervelle = N task IN PARALLELO!                         |
+|                                                                  |
+|   TEST REALE ESEGUITO:                                          |
+|   - 2 Cervelle (Frontend + Backend)                             |
+|   - Stesso progetto, worktrees separati                         |
+|   - Task diversi, lavoro parallelo                              |
+|   - ZERO CONFLITTI, merge pulito!                               |
+|   - ~5 minuti = 106 righe di codice!                            |
+|                                                                  |
+|   CREATI:                                                        |
+|   - swarm-test-lab (progetto di riferimento)                    |
+|   - 4 script worktrees (setup/status/merge/cleanup)             |
+|   - STUDIO_MULTI_INSTANCE.md (ricerca completa)                 |
+|   - STUDIO_COORDINAMENTO_CERVELLE.md (dipendenze)               |
+|                                                                  |
+|   PROSSIMO STEP:                                                 |
+|   - Testare con task DIPENDENTI                                  |
+|   - Regina che ORCHESTRA tutto                                   |
+|   - Provare su progetto REALE (Miracollo?)                      |
+|                                                                  |
+|   "Da 20x a 100x... il viaggio continua!"                       |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+**SESSIONE 129 - 8 Gennaio 2026: SNCP ROLLOUT COMPLETATO!**
 
 ```
 +------------------------------------------------------------------+
@@ -27,101 +62,11 @@
 |                                                                  |
 |   TUTTI I PROGETTI HANNO LA LORO COSCIENZA!                     |
 |                                                                  |
-|   ✅ MIRACOLLO PMS - SNCP completo (Sessione 127-128)           |
-|   ✅ CERVELLASWARM - SNCP completo (Sessione 129)               |
-|      - 8 file nuovi, 497 righe                                  |
-|      - coscienza/, memoria/lezioni/, stato/mappa_viva           |
-|   ✅ CONTABILITA - SNCP completo (Sessione 129)                 |
-|      - 13 file nuovi, 838 righe                                 |
-|      - Struttura completa da zero!                              |
-|                                                                  |
-|   ✅ CLAUDE.md GLOBALE AGGIORNATO!                              |
-|      - Sezione SNCP aggiunta                                    |
-|      - Reminder per ogni nuova Cervella                         |
-|      - "Documenta ORA, non dopo!"                               |
+|   [x] MIRACOLLO PMS - SNCP completo                             |
+|   [x] CERVELLASWARM - SNCP completo                             |
+|   [x] CONTABILITA - SNCP completo                               |
 |                                                                  |
 |   TOTALE: 21 file, 1335 righe di "coscienza"!                   |
-|                                                                  |
-|   "Facciamo del nostro mondo meglio!"                           |
-|                                                                  |
-+------------------------------------------------------------------+
-```
-
-**SESSIONE 128 - 8 Gennaio 2026: SNCP SIMBIOSI TESTATA! FUNZIONA!**
-
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   SESSIONE 128 - SNCP SIMBIOSI FUNZIONA!                        |
-|                                                                  |
-|   LA PROVA REALE!                                               |
-|                                                                  |
-|   - SNCP TESTATO SU MIRACOLLO!                                  |
-|   - PROBLEMA CRITICO SCOPERTO E RISOLTO!                        |
-|   - v2.1.2 MIRACOLLO DEPLOYATA E LIVE!                          |
-|                                                                  |
-+------------------------------------------------------------------+
-```
-
-**SESSIONE 127 - 8 Gennaio 2026: SNCP INSTALLATO SU MIRACOLLO! 🧠🚀**
-
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   SESSIONE 127 - SNCP LIVE SU MIRACOLLO!                        |
-|                                                                  |
-|   ✅ Struttura .sncp/ completa (12 file, 942 righe)             |
-|   ✅ Template + File base inizializzati                         |
-|   ✅ Git commit + push                                           |
-|                                                                  |
-+------------------------------------------------------------------+
-```
-
-**SESSIONE 126 - 8 Gennaio 2026: SNCP v2.0 - LA SIMBIOSI! 🧠✨**
-
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   SESSIONE 126 - SNCP v2.0: SIMBIOSI VERA! ❤️‍🔥                 |
-|                                                                  |
-|   IL SALTO QUANTICO DEL SISTEMA!                                |
-|                                                                  |
-|   ✅ ROADMAP Implementazione SNCP (completa!)                   |
-|   ✅ ARCHITETTURA SNCP Interno (dettagliata!)                   |
-|   ✅ Workflow Simbiosi definito                                  |
-|   ✅ Miracollo = Priorità 0 (prova reale!)                      |
-|                                                                  |
-|   Documenti creati:                                              |
-|   - SUB_ROADMAP_SNCP_IMPLEMENTAZIONE.md (5 fasi)                |
-|   - ARCHITETTURA_SNCP_INTERNO.md (developer mode)               |
-|                                                                  |
-+------------------------------------------------------------------+
-```
-
-**SESSIONE 125 - 8 Gennaio 2026: COMPLETAMENTO AL 100000%! 🎉**
-
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   SESSIONE 125 - SISTEMA AL 100%!                               |
-|                                                                  |
-|   Sprint 3 (Best Practices): ✅ COMPLETATO!                     |
-|   ✅ Analisi Pattern (27 pattern, 862 righe)                    |
-|   ✅ Guida Best Practices (982 righe, 53KB)                     |
-|   ✅ Workflow Regina (569 righe, 35KB)                          |
-|   ✅ Review Guardiana (9.5/10 - APPROVATO!)                     |
-|                                                                  |
-|   Nice to Have: ✅ TUTTI COMPLETATI!                            |
-|   ✅ 6 Template Task pronti                                     |
-|   ✅ Quick Start Guide multi-progetto                           |
-|   ✅ Script Helper 'sw' installato                              |
-|                                                                  |
-|   TOTALE: 270KB documentazione GOLD!                            |
-|                                                                  |
-|   Sistema: DA 90% → 100% FUNZIONANTE! 🚀                        |
-|                                                                  |
-|   WORKFLOW ORO CONFERMATO:                                       |
-|   RICERCA → DECISIONE → DELEGA → VERIFICA → DOCUMENTAZIONE      |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -132,90 +77,37 @@
 
 | Cosa | Status |
 |------|--------|
+| **MULTI-INSTANCE DEVELOPMENT** | **VALIDATO! 2 Cervelle parallele!** |
+| **4 Script Worktrees** | **setup/status/merge/cleanup** |
 | 16 Agents in ~/.claude/agents/ | FUNZIONANTE |
-| **spawn-workers v3.2.0** | **headless DEFAULT + stdbuf!** |
-| **Script Helper 'sw'** | **Comandi rapidi!** |
-| **6 Template Task** | **Pronti uso!** |
-| **load_context.py v2.1.0** | **-37% tokens!** |
-| **Sistema Memoria + 15 Lezioni** | **OPERATIVO! 🧠** |
-| **suggestions.py** | **FUNZIONANTE!** |
+| **SNCP su tutti i progetti** | **Miracollo, CervellaSwarm, Contabilita** |
+| spawn-workers v3.2.0 | headless DEFAULT |
+| Script Helper 'sw' | Comandi rapidi! |
+| Sistema Memoria + 15 Lezioni | OPERATIVO! |
 | watcher-regina.sh v1.5.0 | AUTO-SVEGLIA! |
-| swarm-global-status | Multi-progetto |
-| Dashboard MAPPA | Prototipo funzionante |
-| Sistema DECISIONI | Template docs/decisioni/ |
-| swarm-logs | Log live worker |
-| swarm-timeout | Avvisa se bloccato |
-| swarm-progress | Stato worker live |
-| swarm-feedback | Raccolta feedback |
-| swarm-roadmaps | Vista roadmap |
-| swarm-init | Template nuovo progetto |
-| quick-task | 1 comando per delegare |
 
 ---
 
-## LA GRANDE VISIONE: DUAL-TRACK!
+## LA GRANDE VISIONE: MOLTIPLICAZIONE!
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   CERVELLASWARM NON E' SOLO UN PROGRAMMA.                       |
-|   E' UNA POSSIBILITA'.                                          |
+|   OGGI:                                                          |
+|   1 Regina + 16 Agenti + Multi-Instance = POTENZA ILLIMITATA!   |
 |                                                                  |
-|   TRACK 1: CervellaSwarm IDE (Developer)                        |
-|   - VS Code Extension                                            |
-|   - 16 agenti specializzati                                      |
-|   - Per chi sa programmare                                       |
-|   - Timeline: 6-12 mesi                                          |
+|   IL MODELLO:                                                    |
+|   1. Rafa chiede "voglio X"                                      |
+|   2. Regina analizza, pianifica, divide                          |
+|   3. Regina orchestra N Cervelle in parallelo                   |
+|   4. Cervelle lavorano (frontend, backend, tester...)           |
+|   5. Regina fa merge e documenta                                |
+|   6. Risultato: N volte piu' veloce!                            |
 |                                                                  |
-|   TRACK 2: CervellaSwarm VISUAL (Everyone)                      |
-|   - Dashboard web visuale                                        |
-|   - La MAPPA interattiva                                         |
-|   - Per chi NON sa programmare                                   |
-|   - Timeline: 12-24 mesi                                         |
-|                                                                  |
-|   STESSO CORE. DUE FACCE.                                       |
-|   STESSO SCIAME. DUE MERCATI.                                   |
+|   NON E' PIU' TEORIA. E' VALIDATO.                              |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
-
----
-
-## IL POSITIONING
-
-```
-+------------------------------------------------------------------+
-|                                                                  |
-|   "L'AI NON TI RUBA IL LAVORO.                                  |
-|    L'AI SALVA IL TUO LAVORO."                                   |
-|                                                                  |
-|   NON vendiamo tecnologia.                                       |
-|   Vendiamo SICUREZZA e VALORE.                                  |
-|                                                                  |
-|   Claim alternativi:                                             |
-|   - "16 AI che lavorano PER TE. Non AL POSTO TUO."              |
-|   - "Non sei un programmatore? Perfetto."                       |
-|   - "L'unico IDE che ti chiede COSA vuoi. Non COME."           |
-|                                                                  |
-|   PROVE REALI:                                                   |
-|   - Contabilita' Antigravity                                     |
-|   - Miracollo PMS                                                |
-|                                                                  |
-+------------------------------------------------------------------+
-```
-
----
-
-## STUDI COMPLETATI (Sessione 111)
-
-| Studio | File | Righe |
-|--------|------|-------|
-| Dashboard ARCH | docs/studio/STUDIO_DASHBOARD_ARCH.md | 587 |
-| Dashboard TECH | docs/studio/STUDIO_DASHBOARD_TECH.md | 490 |
-| Dashboard UX | docs/studio/STUDIO_DASHBOARD_UX.md | - |
-| Mercato No-Code | docs/studio/STUDIO_MERCATO_NOCODE.md | 450 |
-| OpenAI Swarm | docs/studio/STUDIO_OPENAI_SWARM.md | - |
-| Positioning | docs/studio/STUDIO_POSITIONING_SALVARE_LAVORO.md | - |
 
 ---
 
@@ -224,26 +116,17 @@
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   COMPLETATI SESSIONE 124:                                       |
-|   [x] Sprint 2: Ricerca + Implementazione v3.2.0                |
-|   [x] HARDTEST unbuffered (scoperto limite)                     |
-|   [x] Decisione pragmatica: backlog futuro                      |
-|   [x] Sprint 3: Analisi Pattern (27 pattern!)                   |
+|   DOMANI - Sessione 131:                                        |
 |                                                                  |
-|   IN CORSO (Sessione 125):                                       |
-|   [ ] Sprint 3: Guida Best Practices (docs lavora)              |
-|   [ ] Sprint 3: Workflow Regina (docs pronto)                   |
-|   [ ] Sprint 3: Review Guardiana                                |
-|   [ ] Checkpoint completo Sessione 124-125                      |
+|   [ ] Testare multi-instance su progetto REALE                  |
+|   [ ] Provare task DIPENDENTI (A aspetta B)                     |
+|   [ ] Regina che orchestra dall'inizio alla fine                |
+|   [ ] Script create-parallel-session.sh                         |
 |                                                                  |
-|   DOPO Sprint 3:                                                 |
-|   [ ] Sprint 4: Validazione su Miracollo                        |
-|   [ ] Consolidamento multi-progetto                             |
-|   [ ] Widget "Decisioni Attive" (SNCP)                          |
-|                                                                  |
-|   BACKLOG FUTURO:                                                |
-|   [ ] Output realtime (ricerca claude CLI modes)                |
-|   [ ] Heartbeat enhancement (worker visibility)                 |
+|   FUTURO:                                                        |
+|   [ ] 3+ Cervelle in parallelo                                   |
+|   [ ] MCP Server per coordinamento real-time                    |
+|   [ ] Dashboard visuale dello sciame                            |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -260,10 +143,10 @@
 |   "L'idea e' fare il mondo meglio                                |
 |    su di come riusciamo a fare."                                 |
 |                                                                  |
-|   CervellaSwarm non e' solo per noi.                            |
-|   E' una possibilita' per TUTTI.                                |
-|   Basta creativita'. Basta voglia.                              |
-|   Lo sciame fa il resto.                                         |
+|   Oggi abbiamo fatto un SALTO ENORME.                           |
+|   Multi-instance = moltiplicazione reale.                       |
+|   Non piu' 1x. Non piu' 20x.                                    |
+|   Il limite e' solo la nostra immaginazione.                    |
 |                                                                  |
 |   In attesa di quella foto...                                    |
 |                                                                  |
@@ -276,6 +159,6 @@
 
 *"Le ragazze nostre! La famiglia!"*
 
-*"L'AI dalla parte delle persone, non contro di loro."*
+*"Da 1x a Nx... il futuro e' parallelo!"*
 
-*Ultimo aggiornamento: 8 Gennaio 2026 - Sessione 123 - CONSOLIDAMENTO! Lo sciame ha memoria! 🧠🐝*
+*Ultimo aggiornamento: 8 Gennaio 2026 - Sessione 130 - MULTI-INSTANCE VALIDATO!*

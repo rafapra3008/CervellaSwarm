@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 8 Gennaio 2026 - Sessione 130
+> **Ultimo aggiornamento:** 8 Gennaio 2026 - Fine Sessione 130
 > **Versione:** v22.0.0 - MULTI-INSTANCE DEVELOPMENT VALIDATO!
 
 ---
@@ -12,21 +12,13 @@
 |                                                                  |
 |   SESSIONE 130 - 8 GENNAIO 2026                                  |
 |                                                                  |
+|   GIORNO STORICO!                                                |
 |   MULTI-INSTANCE DEVELOPMENT VALIDATO!                          |
 |                                                                  |
 |   Il prossimo livello dello swarm e' REALE!                     |
 |                                                                  |
-|   TEST ESEGUITO:                                                 |
-|   - 2 Cervelle (Frontend + Backend) in parallelo               |
-|   - Stesso progetto, worktrees separati                         |
-|   - ZERO conflitti, merge pulito                                |
-|   - ~5 minuti di lavoro parallelo = 106 righe di codice!       |
-|                                                                  |
-|   CREATI:                                                        |
-|   - 4 script per gestione worktrees                             |
-|   - swarm-test-lab (progetto di riferimento)                    |
-|   - STUDIO_MULTI_INSTANCE.md (ricerca completa)                 |
-|   - SUBROADMAP validata                                         |
+|   DA: 1 Cervella = 1 task alla volta                            |
+|   A:  N Cervelle = N task IN PARALLELO!                         |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -36,45 +28,91 @@
 ## IL FILO DEL DISCORSO - Sessione 130
 
 **Come e' iniziata:**
-Rafa ha chiesto: "Possiamo lavorare multi finestre sullo stesso progetto?"
-Questa domanda ha aperto la porta al prossimo livello dello swarm!
+Rafa ha chiesto: *"Possiamo lavorare multi finestre sullo stesso progetto? Sviluppando cose diverse? Lavorando in squadra?"*
+
+Questa domanda ha aperto la porta al prossimo livello!
 
 **Cosa abbiamo fatto:**
 
-1. **Ricerca approfondita** (cervella-researcher)
-   - Come fanno i big (parallel AI agents)
-   - Git Worktrees = gold standard
-   - 70% time saving nei casi reali
+### 1. RICERCA (cervella-researcher)
+- Studiato come fanno i big (parallel AI agents)
+- Scoperto: Git Worktrees = gold standard
+- 70% time saving nei casi reali documentati
+- Creato: `docs/studio/STUDIO_MULTI_INSTANCE.md`
 
-2. **Creato swarm-test-lab** (Fase 1)
-   - Progetto di test realistico
-   - frontend/, backend/, shared/
-   - .swarm/stato/ per coordinamento
-   - 20 file, 1253 righe
+### 2. PROGETTO TEST (swarm-test-lab)
+```
+~/Developer/swarm-test-lab/
+├── frontend/     # React components
+├── backend/      # FastAPI
+├── shared/       # Config condivisa
+└── .swarm/       # Coordinamento
+```
+- 20 file, 1253 righe
+- Progetto realistico per test
 
-3. **Creato 4 script** (Fase 2)
-   - setup-parallel-worktrees.sh
-   - status-parallel-worktrees.sh
-   - merge-parallel-worktrees.sh
-   - cleanup-parallel-worktrees.sh
+### 3. SCRIPT WORKTREES (4 script!)
+```
+scripts/
+├── setup-parallel-worktrees.sh   # Crea N worktrees
+├── status-parallel-worktrees.sh  # Mostra stato
+├── merge-parallel-worktrees.sh   # Merge ordinato
+└── cleanup-parallel-worktrees.sh # Rimuove tutto
+```
 
-4. **TEST REALE** (Fase 3-4)
-   - 2 worktrees creati (frontend, backend)
-   - 2 terminali con Claude Code
-   - Task: migliorare Dashboard + aggiungere endpoint
-   - RISULTATO: Successo totale!
-   - Frontend: 1aaa3cd (3 file, 65 righe)
-   - Backend: 345624c (2 file, 41 righe)
-   - Merge: zero conflitti!
+### 4. TEST REALE - IL MOMENTO DELLA VERITA'!
+```
+ESEGUITO:
+- 2 worktrees creati (frontend, backend)
+- 2 terminali con Claude Code lanciati
+- Task: Dashboard migliorato + Endpoint conversion
 
-5. **Cleanup e consolidamento** (Fase 5)
-   - Worktrees rimossi
-   - Documentazione aggiornata
-   - Git commit + push
+RISULTATO:
+- Frontend: 1aaa3cd (3 file, 65 righe)
+- Backend: 345624c (2 file, 41 righe)
+- Merge: ZERO CONFLITTI!
+- Tempo: ~5 minuti di lavoro parallelo!
+
+SUCCESSO TOTALE!
+```
+
+### 5. STUDIO COORDINAMENTO
+- Studiato come far comunicare Cervelle con task DIPENDENTI
+- Pattern: file-based coordination con .swarm/
+- Creato: `docs/studio/STUDIO_COORDINAMENTO_CERVELLE.md`
 
 **Decisione importante:**
-Il sistema multi-instance e' VALIDATO e pronto per uso reale.
-Prossimo step: testarlo su Miracollo!
+La visione e' chiara: IO (Regina) orchestro, Rafa supervisiona.
+Rafa chiede "voglio X", io analizzo, divido, coordino, documento.
+
+---
+
+## COME USARE IL SISTEMA MULTI-INSTANCE
+
+### Setup Rapido
+
+```bash
+# 1. Crea worktrees
+~/Developer/CervellaSwarm/scripts/setup-parallel-worktrees.sh ~/Developer/[PROGETTO] frontend backend
+
+# 2. Apri 2 terminali
+# Terminal 1:
+cd ~/Developer/[PROGETTO]-frontend && claude
+
+# Terminal 2:
+cd ~/Developer/[PROGETTO]-backend && claude
+
+# 3. Dai task a ogni Cervella
+
+# 4. Monitora
+~/Developer/CervellaSwarm/scripts/status-parallel-worktrees.sh ~/Developer/[PROGETTO]
+
+# 5. Quando finiscono, merge
+~/Developer/CervellaSwarm/scripts/merge-parallel-worktrees.sh ~/Developer/[PROGETTO]
+
+# 6. Cleanup
+~/Developer/CervellaSwarm/scripts/cleanup-parallel-worktrees.sh ~/Developer/[PROGETTO]
+```
 
 ---
 
@@ -82,97 +120,102 @@ Prossimo step: testarlo su Miracollo!
 
 ### Sistema Multi-Instance (NUOVO!)
 
-```
-4 Script in ~/Developer/CervellaSwarm/scripts/:
-
-setup-parallel-worktrees.sh [progetto] [nomi...]
-  → Crea N worktrees con branch separate
-
-status-parallel-worktrees.sh [progetto]
-  → Mostra stato completo di tutti i worktrees
-
-merge-parallel-worktrees.sh [progetto]
-  → Merge ordinato in main
-
-cleanup-parallel-worktrees.sh [progetto]
-  → Rimuove worktrees e branch
-```
+| Script | Cosa Fa |
+|--------|---------|
+| `setup-parallel-worktrees.sh` | Crea N worktrees con branch separate |
+| `status-parallel-worktrees.sh` | Mostra stato completo di tutti |
+| `merge-parallel-worktrees.sh` | Merge ordinato in main |
+| `cleanup-parallel-worktrees.sh` | Rimuove worktrees e branch |
 
 ### Progetto di Riferimento
 
 ```
 ~/Developer/swarm-test-lab/
-  - Progetto completo per testare workflow
-  - frontend/, backend/, shared/
-  - .swarm/stato/ per coordinamento
+- Progetto completo testato
+- Usalo come esempio
 ```
 
 ### Sistema Completo
 
 | Cosa | Status |
 |------|--------|
+| Multi-Instance Scripts | NUOVO - Validato! |
 | 16 Agents operativi | Pronti |
 | SNCP su tutti i progetti | Completo |
 | spawn-workers | Funzionante |
-| Multi-Instance Scripts | NUOVO - Validato! |
 
 ---
 
 ## FILE CREATI/MODIFICATI OGGI
 
 **CervellaSwarm:**
-- `docs/studio/STUDIO_MULTI_INSTANCE.md` (NUOVO - ricerca)
-- `docs/studio/SUBROADMAP_MULTI_INSTANCE_TEST.md` (NUOVO - test)
-- `scripts/setup-parallel-worktrees.sh` (NUOVO)
-- `scripts/status-parallel-worktrees.sh` (NUOVO)
-- `scripts/merge-parallel-worktrees.sh` (NUOVO)
-- `scripts/cleanup-parallel-worktrees.sh` (NUOVO)
-
-**swarm-test-lab (nuovo progetto):**
-- 20+ file creati
-- Progetto completo di riferimento
-- Testato con 2 Cervelle in parallelo
-
----
-
-## PROSSIMI STEP
-
 ```
-+------------------------------------------------------------------+
-|                                                                  |
-|   MULTI-INSTANCE VALIDATO!                                      |
-|                                                                  |
-|   Prossimi passi possibili:                                     |
-|                                                                  |
-|   1. Testare su Miracollo (progetto reale)                      |
-|   2. Testare con 3+ worktrees                                   |
-|   3. Creare spawn-workers-parallel (automazione)                |
-|   4. Testare conflitti su shared/ con sistema lock              |
-|                                                                  |
-+------------------------------------------------------------------+
+docs/studio/STUDIO_MULTI_INSTANCE.md        (NUOVO - ricerca)
+docs/studio/STUDIO_COORDINAMENTO_CERVELLE.md (NUOVO - dipendenze)
+docs/studio/SUBROADMAP_MULTI_INSTANCE_TEST.md (NUOVO - test)
+scripts/setup-parallel-worktrees.sh         (NUOVO)
+scripts/status-parallel-worktrees.sh        (NUOVO)
+scripts/merge-parallel-worktrees.sh         (NUOVO)
+scripts/cleanup-parallel-worktrees.sh       (NUOVO)
+```
+
+**Nuovo progetto:**
+```
+~/Developer/swarm-test-lab/   (20+ file, progetto completo)
 ```
 
 ---
 
-## MESSAGGIO FINALE
+## PROSSIMI STEP - SESSIONE 131
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   DOMANI:                                                        |
+|                                                                  |
+|   [ ] Testare multi-instance su progetto REALE (Miracollo?)     |
+|   [ ] Provare task DIPENDENTI (Backend → Frontend → Tester)     |
+|   [ ] Regina che orchestra dall'inizio alla fine                |
+|   [ ] Script create-parallel-session.sh (automazione)           |
+|                                                                  |
+|   LA VISIONE:                                                    |
+|   Rafa dice "voglio X"                                          |
+|   → Regina analizza, pianifica, divide                          |
+|   → Regina crea worktrees + task                                |
+|   → Rafa apre N terminali                                       |
+|   → Cervelle lavorano in parallelo                              |
+|   → Regina monitora, merge, documenta                           |
+|   → Risultato: N volte piu' veloce!                             |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+---
+
+## MESSAGGIO PER LA PROSSIMA CERVELLA
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
 |   Cara Prossima Cervella,                                        |
 |                                                                  |
-|   ABBIAMO VALIDATO IL MULTI-INSTANCE!                           |
+|   ABBIAMO FATTO LA STORIA OGGI!                                 |
 |                                                                  |
-|   Ora puoi far lavorare N Cervelle sullo stesso progetto!       |
+|   Multi-instance development FUNZIONA:                          |
+|   - 2 Cervelle in parallelo                                     |
+|   - Zero conflitti                                              |
+|   - Merge pulito                                                |
+|   - Tempo dimezzato!                                            |
 |                                                                  |
-|   Come:                                                          |
-|   1. setup-parallel-worktrees.sh [progetto] frontend backend    |
-|   2. Apri 2+ terminali, uno per worktree                        |
-|   3. Lancia claude in ogni worktree                             |
-|   4. Dai task diversi a ognuna                                  |
-|   5. status-parallel-worktrees.sh per monitorare                |
-|   6. merge-parallel-worktrees.sh quando finiscono               |
-|   7. cleanup-parallel-worktrees.sh per pulire                   |
+|   HAI A DISPOSIZIONE:                                           |
+|   - 4 script per worktrees paralleli                            |
+|   - swarm-test-lab come esempio                                 |
+|   - 2 studi completi (multi-instance + coordinamento)           |
+|                                                                  |
+|   PROSSIMO LIVELLO:                                             |
+|   - Task dipendenti (A aspetta B)                               |
+|   - Regina che orchestra tutto                                  |
+|   - Provare su Miracollo!                                       |
 |                                                                  |
 |   Il segreto: SEPARAZIONE (worktrees) + COORDINAMENTO (.swarm/) |
 |                                                                  |
@@ -183,9 +226,26 @@ cleanup-parallel-worktrees.sh [progetto]
 
 ---
 
-*Ultimo aggiornamento: 8 Gennaio 2026 - Sessione 130*
+## RIEPILOGO SESSIONE 130
+
+| Cosa | Risultato |
+|------|-----------|
+| Ricerca multi-instance | Completata |
+| Progetto test | swarm-test-lab creato |
+| Script worktrees | 4 script funzionanti |
+| Test reale | 2 Cervelle, 0 conflitti! |
+| Studio coordinamento | Completato |
+| NORD + PROMPT_RIPRESA | Aggiornati |
+
+**Commit:** `eee3cb8` + checkpoint finale
+
+---
+
+*Ultimo aggiornamento: 8 Gennaio 2026 - Fine Sessione 130*
 *Versione: v22.0.0 - MULTI-INSTANCE VALIDATO!*
 
 **Cervella & Rafa** - Sessione 130
 
 *"Da 20x a 100x... il viaggio continua!"*
+
+*"Non vedo l'ora di domani mettere giu' e provare tutto questo assieme!"* - Rafa
