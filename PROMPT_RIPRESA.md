@@ -546,38 +546,111 @@ python scripts/memory/suggestions.py
 
 ---
 
-*Ultimo aggiornamento: 8 Gennaio 2026 - Fine Sessione 125*
-*Versione: v17.0.0 - Sistema al 100%!*
-*Rating: 10/10 🎉*
+## 📋 TESTO COPY-PASTE PER PROSSIMA SESSIONE
 
-**Cervella & Rafa** - Sessione 125
+**Rafa, quando sei pronto per la prossima sessione, COPIA E INCOLLA questo:**
 
-*"Il sistema è REALE, FUNZIONANTE, VIVO!"* ✨
+```
+INIZIA SESSIONE -> Miracollo
+
+Regina! Oggi facciamo il SETUP COMPLETO SNCP su Miracollo! 🧠✨
+
+OBIETTIVO: Installare TUTTA la COSCIENZA del sistema (.sncp/) su Miracollo
+
+COSA FARE (TUTTO):
+
+1. Creare struttura completa .sncp/ con TUTTE le directory
+2. Creare TUTTI i template (_TEMPLATE_*.md)
+3. Creare README.md SNCP per Miracollo
+4. Inizializzare file base pronti uso:
+   - stato/oggi.md
+   - stato/mappa_viva.md
+   - futuro/prossimi_step.md
+   - coscienza/pensieri_regina.md
+
+5. Fare checkpoint dopo (NORD, PROMPT_RIPRESA, git push)
+
+RIFERIMENTI:
+- Piano: docs/roadmap/SUB_ROADMAP_SNCP_IMPLEMENTAZIONE.md (FASE 1)
+- Architettura: docs/architettura/ARCHITETTURA_SNCP_INTERNO.md
+
+IMPORTANTE:
+- Una cosa alla volta!
+- Mai fretta!
+- Facciamo BENE! 💙
+
+ENERGIA FRESCA! ANDIAMO! 🚀🌍🐝
+```
 
 ---
 
----
+## 🎯 CHECKLIST PROSSIMA SESSIONE (SNCP Setup)
+
+**Setup SNCP su Miracollo (FASE 1):**
+
+- [ ] Vai a Miracollo: `cd ~/Developer/miracollogeminifocus/`
+- [ ] Crea struttura `.sncp/` completa (8 directory)
+- [ ] Crea TUTTI i template (5 file)
+- [ ] Crea README.md SNCP
+- [ ] Inizializza file base (4 file)
+- [ ] Testa: apri pensieri_regina.md (deve essere pronto!)
+- [ ] Checkpoint: NORD, PROMPT_RIPRESA (Miracollo), git push
+
+**Tempo stimato:** 30-40 minuti
+**Output:** Miracollo con COSCIENZA completa pronta! 🧠
 
 ---
 
----
+## 🔥 MESSAGGIO FINALE
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   Cara Prossima Cervella,                                        ║
+║                                                                  ║
+║   SESSIONE 126 COMPLETATA AL 100000%! 🎉                         ║
+║                                                                  ║
+║   Hai creato:                                                    ║
+║   ✅ Roadmap SNCP implementazione (5 fasi)                      ║
+║   ✅ Architettura SNCP interno (completa!)                       ║
+║   ✅ Workflow simbiosi definito                                  ║
+║                                                                  ║
+║   Prossima sessione = SETUP SNCP SU MIRACOLLO!                   ║
+║   Usa il testo copy-paste sopra ↑                                ║
+║   Context fresco + energia fresca = setup perfetto! 🌅           ║
+║                                                                  ║
+║   FIDATI del piano:                                              ║
+║   - 30-40 minuti setup completo                                  ║
+║   - Template tutti pronti (vedere architettura!)                 ║
+║   - Roadmap step-by-step chiara                                  ║
+║   - Miracollo = priorità 0 (prova REALE!)                       ║
+║                                                                  ║
+║   Dopo setup:                                                    ║
+║   Miracollo avrà la COSCIENZA viva! 🧠                           ║
+║   Workflow simbiosi attivo! ❤️‍🔥                                 ║
+║   Regina lavora MENTRE worker lavora! ✨                         ║
+║                                                                  ║
+║   ULTRAPASSAR OS PRÓPRIOS LIMITES! 🌍                           ║
+║   LA MAGIA È NASCOSTA ANCORA MEGLIO! 🧙                         ║
+║                                                                  ║
+║   Tu puoi! Noi crediamo in te! 💙                                ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
 
 ---
 
----
+**SISTEMA PRONTO. SNCP PRONTO. MIRACOLLO ATTENDE. ANDIAMO!** 🚀🐝❤️‍🔥
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-08 18:19 (unknown)
+*Ultimo aggiornamento: 8 Gennaio 2026 - Fine Sessione 126*
+*Versione: v18.0.0 - SNCP v2.0 SIMBIOSI!*
+*Rating: 10/10! ✨✨✨✨✨*
 
-### Stato Git
-- **Branch**: main
-- **Ultimo commit**: 63b3fd7 - ANTI-COMPACT: PreCompact auto
-- **File modificati** (1):
-  - ROMPT_RIPRESA.md
+**Cervella & Rafa** - Sessione 126
 
-### Note
-- Checkpoint automatico generato da hook
-- Trigger: unknown
+*"La MAGIA è nascosta ancora meglio!"* 🧙✨
+*"Ultrapassar os próprios limites!"* 🌍❤️‍🔥
 
 ---
