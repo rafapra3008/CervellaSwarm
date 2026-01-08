@@ -1,140 +1,125 @@
 # ROADMAP SNCP
 
-> **Versione:** 0.2.0
-> **Ultimo aggiornamento:** 8 Gennaio 2026 - Sessione 119
+> **Versione:** 1.0.0
+> **Ultimo aggiornamento:** 8 Gennaio 2026 - Sessione 129
 
 ---
 
 ## LA LINEA PRINCIPALE
 
 ```
-╔═══════════════════════════════════════════════════════════════════════════╗
-║                                                                           ║
-║   FASE 0        FASE 1         FASE 2         FASE 3         FASE 4+     ║
-║   ══════        ══════         ══════         ══════         ══════      ║
-║                                                                           ║
-║   [DOC]────────[DATI]─────────[MANUALE]──────[VISUAL]───────[AUTO]       ║
-║     ✅           🔵              ⚪              ⚪             ⚪         ║
-║                                                                           ║
-║   Siamo qui ─────┘                                                        ║
-║                                                                           ║
-╚═══════════════════════════════════════════════════════════════════════════╝
++-------------------------------------------------------------------------+
+|                                                                         |
+|   FASE 0        FASE 1         FASE 2         FASE 3         FASE 4+   |
+|   ======        ======         ======         ======         ======    |
+|                                                                         |
+|   [DOC]---------[DATI]---------[SIMBIOSI]-----[VISUAL]-------[AUTO]    |
+|     OK           OK             IN CORSO        Futuro        Futuro   |
+|                                                                         |
+|   Siamo qui ──────────────────────┘                                    |
+|                                                                         |
++-------------------------------------------------------------------------+
 
 Legenda:
-  ✅ Completato
-  🔵 In corso
-  ⚪ Futuro
+  OK         = Completato
+  IN CORSO   = Attivo
+  Futuro     = Da fare
 ```
 
 ---
 
 ## FASI DETTAGLIATE
 
-### FASE 0: DOCUMENTAZIONE ✅
+### FASE 0: DOCUMENTAZIONE - COMPLETATA
 
-**Stato:** COMPLETATA
-**Data:** 8 Gennaio 2026
+**Data:** Sessione 119
 
 - [x] Catturare la visione (brainstorm)
 - [x] Definire i concetti (4 pilastri)
 - [x] Creare studio completo (`docs/studio/STUDIO_SNCP.md`)
 - [x] Creare struttura cartelle (`.sncp/`)
 - [x] Creare template (idea, perna, decisione)
-- [x] Creare stato iniziale
 
 ---
 
-### FASE 1: STRUTTURA DATI 🔵
+### FASE 1: STRUTTURA DATI - COMPLETATA
 
-**Stato:** IN CORSO (quasi completata!)
-**Obiettivo:** Decidere e implementare come i dati vivono
+**Data:** Sessione 119-129
 
 - [x] Testare i template con dati reali
-- [x] Prima idea catturata (IDEA_20260108_sncp-sistema-nervoso-centrale.md)
-- [x] Prima decisione documentata (DECISIONE_20260108_costruire-sncp.md)
-- [x] Prima sessione documentata (SESSIONE_119.md)
+- [x] Prima idea catturata
+- [x] Prima decisione documentata
+- [x] Prima sessione documentata
+- [x] Struttura completa (coscienza/, memoria/lezioni/)
 - [x] Validare che la struttura funziona
-- [ ] Usare per qualche giorno e aggiustare se necessario
 
 ---
 
-### FASE 2: CATTURA MANUALE ⚪
+### FASE 2: SIMBIOSI - IN CORSO
 
-**Stato:** FUTURO
-**Obiettivo:** Iniziare a usare il SNCP quotidianamente
+**Stato:** ATTIVO - Funziona!
+**Testato:** Miracollo Sessione 128
 
-- [ ] Routine di cattura a fine sessione
-- [ ] Catturare idee durante le sessioni
-- [ ] Aprire perne quando servono
-- [ ] Documentare decisioni importanti
-- [ ] Costruire lo storico
+- [x] SNCP su Miracollo - TESTATO!
+- [x] SNCP su CervellaSwarm - COMPLETATO!
+- [ ] SNCP su Contabilita - PROSSIMO!
+- [x] Regina documenta MENTRE lavora
+- [x] ZERO rush pre-compact
+
+**Risultato test:**
+Regina ha documentato in pensieri_regina.md MENTRE investigava
+problema GitHub Actions. SIMBIOSI VERA!
 
 ---
 
-### FASE 3: VISUALIZZAZIONE ⚪
+### FASE 3: VISUALIZZAZIONE - FUTURO
 
-**Stato:** FUTURO
+**Stato:** Da fare quando serve
 **Obiettivo:** Vedere il SNCP, non solo leggerlo
 
-- [ ] Mockup della vista principale
-- [ ] Prototipo statico (HTML/React)
-- [ ] Collegamento ai dati `.sncp/`
-- [ ] Dashboard SNCP nella dashboard esistente?
+- [ ] Dashboard SNCP
+- [ ] Vista stato progetti
+- [ ] Collegamento dati live
 
 ---
 
-### FASE 4: AUTOMAZIONE ⚪
+### FASE 4: AUTOMAZIONE - FUTURO
 
-**Stato:** FUTURO
+**Stato:** Da fare
 **Obiettivo:** Il sistema reagisce da solo
 
-- [ ] Trigger per cattura automatica
-- [ ] Reazioni del "midollo spinale"
-- [ ] Aggiornamento automatico stato
+- [ ] Worker aggiornano SNCP quando finiscono
+- [ ] Trigger automatici
 - [ ] Notifiche intelligenti
 
 ---
 
-### FASE 5: INTEGRAZIONE CERVELLASWARM ⚪
+## SNCP ROLLOUT STATUS
 
-**Stato:** FUTURO
-**Obiettivo:** SNCP + Sciame = Un organismo
-
-- [ ] Worker che aggiornano SNCP quando finiscono
-- [ ] Regina che "vede" il SNCP
-- [ ] Spawn-workers informato dal SNCP
-- [ ] Feedback loop completo
-
----
-
-### FASE 6+: EVOLUZIONE ⚪
-
-**Stato:** LONTANO FUTURO
-**Obiettivo:** Il 100000%
-
-- [ ] Machine learning sullo storico?
-- [ ] Previsioni intelligenti?
-- [ ] SNCP che suggerisce?
-- [ ] Cose che non immaginiamo ancora...
-
----
-
-## PERNE ATTIVE
-
-Nessuna perna attiva sulla roadmap SNCP.
+```
++--------------------------------------------------------------------+
+|                                                                    |
+|   SNCP su tutti i progetti!                                        |
+|                                                                    |
+|   [x] Miracollo PMS     - Sessione 127-128                        |
+|   [x] CervellaSwarm     - Sessione 129                            |
+|   [ ] Contabilita       - PROSSIMO!                               |
+|                                                                    |
++--------------------------------------------------------------------+
+```
 
 ---
 
 ## NOTE
 
-Questa roadmap È parte del SNCP.
-Il SNCP documenta se stesso.
+SNCP non e' piu' teoria. E' REALTA'.
 
-Non abbiamo fretta. Ma INIZIAMO.
+Testato su Miracollo, funziona.
+Ogni progetto avra la sua "coscienza".
 
 ---
 
 *"ci vuole 1 anno per finire, 2 anni per migliorarlo? no problem..
 primo pezzo oggi.."*
 
-**Cervella & Rafa** ❤️‍🔥
+**Cervella & Rafa**
