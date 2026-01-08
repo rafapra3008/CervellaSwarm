@@ -18,31 +18,30 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 120 - 8 Gennaio 2026: HARDTEST + FIX CRITICO!**
+**SESSIONE 121 - 8 Gennaio 2026: SISTEMA SEMPLIFICATO!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   HARDTEST COMPLETO + FIX APPLICATO!                            |
+|   SISTEMA SEMPLIFICATO - DISCIPLINA > BLOCCHI TECNICI           |
 |                                                                  |
 |   Sessione 119: SNCP nasce (brainstorm)                         |
-|   Sessione 120: HARDTEST famiglia + FIX blocco Regina           |
+|   Sessione 120: HARDTEST famiglia                               |
+|   Sessione 121: Semplificazione sistema                         |
 |                                                                  |
-|   PROBLEMA TROVATO:                                              |
-|   - Blocco Regina NON ERA ATTIVO! (PreToolUse mancante)         |
+|   SCOPERTA:                                                      |
+|   - Bug Claude Code: PreToolUse NON blocca Edit/Write           |
+|   - Issue #3514 ancora APERTA                                   |
 |                                                                  |
-|   FIX APPLICATO:                                                 |
-|   - PreToolUse aggiunto a settings.json                         |
-|   - Attivo dalla prossima sessione                              |
+|   DECISIONE:                                                     |
+|   - Rimosso blocco tecnico (non funziona)                       |
+|   - Sistema basato su DISCIPLINA e REGOLE                       |
+|   - Semplice > Complesso                                         |
 |                                                                  |
-|   HARDTEST: 8 test, 7 PASSATI!                                  |
-|   - spawn-workers singolo/parallelo: OK                         |
-|   - Task lifecycle: OK                                          |
-|   - Task tool: OK                                                |
-|   - Unicode: OK                                                  |
-|   - MAX_WORKERS: OK                                              |
-|                                                                  |
-|   RICERCA: Edge cases documentati (12KB analisi)                |
+|   COME LAVORIAMO:                                                |
+|   - Regina: legge, coordina, edita SOLO docs di stato           |
+|   - Worker: editano codice via spawn-workers                    |
+|   - Niente blocchi tecnici, solo buon senso                     |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -146,16 +145,18 @@
 |   [x] Test spawn-workers - PASSATO! Worker editano!             |
 |   [x] SNCP nasce - Sessione 119                                 |
 |   [x] HARDTEST famiglia - Sessione 120                          |
-|   [x] FIX blocco Regina - PreToolUse aggiunto                   |
+|   [x] Sistema semplificato - Sessione 121                       |
 |                                                                  |
-|   PROSSIMA SESSIONE:                                            |
-|   [ ] Verificare blocco Regina funziona (dopo restart)          |
+|   SISTEMA ATTUALE:                                               |
+|   - Regina: coordina + edita docs di stato                      |
+|   - Worker: editano codice via spawn-workers                    |
+|   - Disciplina > Blocchi tecnici                                |
 |                                                                  |
 |   DA FARE:                                                       |
 |   1. Widget "Decisioni Attive"                                  |
 |   2. SISTEMA MEMORIA su altri progetti                          |
 |   3. Popolare SNCP con decisioni/idee passate                   |
-|   4. FIX SVEGLIA REGINA (se serve)                              |
+|   4. Ottimizzazione context (load_context.py)                   |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -190,4 +191,4 @@
 
 *"L'AI dalla parte delle persone, non contro di loro."*
 
-*Ultimo aggiornamento: 8 Gennaio 2026 - Sessione 120 - HARDTEST + FIX blocco Regina!*
+*Ultimo aggiornamento: 8 Gennaio 2026 - Sessione 121 - Sistema semplificato!*
