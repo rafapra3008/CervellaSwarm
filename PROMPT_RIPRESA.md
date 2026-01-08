@@ -1,33 +1,41 @@
 # PROMPT RIPRESA - CervellaSwarm
 
 > **Ultimo aggiornamento:** 8 Gennaio 2026 - Fine Sessione 121
-> **Versione:** v14.0.0 - SISTEMA SEMPLIFICATO!
+> **Versione:** v14.1.0 - SESSIONE D'ORO! Ricerche + Scoperte + Piano Futuro!
 
 ---
 
-## CARA PROSSIMA CERVELLA - Sessione 121 Conclusa
+## CARA PROSSIMA CERVELLA - LEGGI TUTTO! È ORO!
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 121: SEMPLIFICAZIONE SISTEMA                         |
+|   SESSIONE 121: UNA DELLE PIÙ IMPORTANTI!                       |
 |                                                                  |
-|   DISCIPLINA > BLOCCHI TECNICI                                  |
+|   Abbiamo fatto:                                                |
+|   1. Analisi context overhead (19% all'avvio)                   |
+|   2. Scoperto bug Claude Code (issue #3514)                     |
+|   3. Semplificato il sistema (disciplina > blocchi)             |
+|   4. Studiato OpenAI Swarm (pattern geniali!)                   |
+|   5. Trovato soluzione moderna (tmux headless!)                 |
+|   6. Piano per spawn-workers v4                                 |
 |                                                                  |
-|   Abbiamo scoperto un bug di Claude Code (issue #3514):         |
-|   PreToolUse con exit code 2 NON blocca Edit/Write.             |
-|                                                                  |
-|   Invece di cercare workaround complessi, abbiamo deciso:       |
-|   SEMPLIFICARE. Tornare alle basi. Disciplina e regole.         |
-|                                                                  |
-|   "Semplice > Complesso" - sempre!                              |
+|   TUTTO È DOCUMENTATO QUI SOTTO!                                |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## COME LAVORIAMO ORA
+## PARTE 1: SISTEMA SEMPLIFICATO
+
+### Cosa Abbiamo Fatto
+
+Il blocco Regina (PreToolUse) NON FUNZIONAVA - bug di Claude Code (issue #3514).
+
+**Decisione:** Rimuovere complessità, tornare alla semplicità.
+
+### Come Lavoriamo Ora
 
 ```
 +------------------------------------------------------------------+
@@ -49,97 +57,248 @@
 +------------------------------------------------------------------+
 ```
 
----
+### File Modificato
 
-## IL FILO DEL DISCORSO - Sessione 121
-
-### Come e Iniziata
-
-Rafa ha chiesto: "Perche il 19% del contesto e gia usato all'avvio?"
-
-### L'Analisi del Context
-
-Ho analizzato cosa viene caricato automaticamente:
-- CLAUDE.md globale (487 righe)
-- COSTITUZIONE.md (317 righe)
-- CLAUDE.md progetto (199 righe)
-- Hook load_context.py (memoria swarm)
-
-Ho lanciato cervella-researcher per trovare ottimizzazioni.
-Report creato: `reports/RICERCA_CONTEXT_OPTIMIZATION.md`
-
-**Trovato:** Possiamo ridurre overhead del 37-59% senza toccare la personalita.
-
-### La Scoperta del Bug
-
-Quando ho provato a verificare il blocco Regina (dalla sessione 120), ho scoperto che NON funzionava.
-
-Ho investigato e trovato:
-- **Issue #3514** su GitHub - BUG CONFERMATO
-- PreToolUse con exit code 2 blocca solo Bash, NON Edit/Write
-- Il bug e ancora APERTO, nessun fix ufficiale
-
-### La Decisione
-
-Ho fatto ricerca approfondita (best practices multi-agent systems):
-- Semplicita > Complessita
-- Regole + Disciplina > Blocchi tecnici
-- Il nostro sistema file-based e corretto
-- La gerarchia Regina/Worker e il pattern vincente
-
-**Decisione finale:** Rimuovere il blocco che non funziona e tornare alla semplicita.
-
-### L'Implementazione
-
-1. Rimosso PreToolUse dal settings.json
-2. Aggiornato NORD.md
-3. Aggiornato questo PROMPT_RIPRESA.md
+`~/.claude/settings.json` - Rimossa sezione PreToolUse (non funzionava)
 
 ---
 
-## STATO ATTUALE
+## PARTE 2: ANALISI CONTEXT OVERHEAD
 
-### Sistema Famiglia - SEMPLIFICATO
+### Il Problema
 
-| Componente | Status | Note |
-|------------|--------|------|
-| spawn-workers | FUNZIONA | Testato sessione 120 |
-| Task tool interno | FUNZIONA | Per task veloci |
-| MAX_WORKERS | FUNZIONA | Limite 5 |
-| Blocco Regina | RIMOSSO | Bug Claude Code, non funzionava |
-| watcher-regina | FUNZIONA | AUTO-SVEGLIA |
-| Lifecycle task | FUNZIONA | .md -> .ready -> .working -> .done |
+Ogni sessione parte con **19% di context già usato**.
 
-### SNCP (da Sessione 119)
+### Cosa Consuma
 
-| Fase | Stato |
-|------|-------|
-| Fase 0: Documentazione | Completata |
-| Fase 1: Struttura Dati | Completata |
-| Fase 2: Cattura Manuale | Prossima |
+| File | Righe | Note |
+|------|-------|------|
+| ~/.claude/CLAUDE.md | 487 | SACRO - non toccare |
+| ~/.claude/COSTITUZIONE.md | 317 | SACRO - non toccare |
+| CervellaSwarm/CLAUDE.md | 199 | Progetto |
+| Hook load_context.py | ~50 | Memoria swarm |
 
-Struttura in `.sncp/`
+### Report Completo
 
-### Ottimizzazione Context (da completare)
+**File:** `reports/RICERCA_CONTEXT_OPTIMIZATION.md`
 
-Report: `reports/RICERCA_CONTEXT_OPTIMIZATION.md`
+**Quick wins identificati:**
+- load_context.py: eventi da 20 a 5, task da 100 a 50 char
+- Statistiche: solo top 5 agent invece di tutti
+- Risparmio stimato: **37-59%**
 
-Quick wins identificati:
-- load_context.py: eventi 5, stats top 5, task 50 char
-- Risparmio stimato: 37%
+### Da Fare (Prossima Sessione)
+
+Delegare a cervella-backend le modifiche a load_context.py.
 
 ---
 
-## FILE CREATI/MODIFICATI
+## PARTE 3: SCOPERTA BUG CLAUDE CODE
 
-### Sessione 121
+### Il Bug
 
-| File | Cosa |
-|------|------|
-| ~/.claude/settings.json | RIMOSSO PreToolUse (blocco non funzionante) |
-| reports/RICERCA_CONTEXT_OPTIMIZATION.md | Report ottimizzazione context |
-| NORD.md | Aggiornato sessione 121 |
-| PROMPT_RIPRESA.md | Questo file |
+**Issue #3514** su GitHub - ANCORA APERTA
+
+PreToolUse hooks con exit code 2:
+- ✅ Bloccano Bash
+- ❌ NON bloccano Edit/Write
+
+### Impatto
+
+Il blocco Regina che avevamo implementato NON POTEVA funzionare.
+
+### Decisione
+
+Invece di cercare workaround complessi → **Semplificare**
+
+"Disciplina > Blocchi tecnici"
+
+---
+
+## PARTE 4: STUDIO OPENAI SWARM (IMPORTANTE!)
+
+### Come Separano il Context
+
+```
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║   PATTERN GENIALE DI OPENAI:                                    ║
+║                                                                  ║
+║   LLM Context (PICCOLO):                                        ║
+║   └─ Solo istruzioni dell'agente ATTIVO                        ║
+║   └─ Cambia ad ogni handoff                                    ║
+║                                                                  ║
+║   context_variables (PYTHON DICT):                              ║
+║   └─ Dati condivisi tra agenti                                  ║
+║   └─ FUORI dalla finestra LLM                                   ║
+║   └─ Persiste attraverso handoff                                ║
+║   └─ Accessibile a tutti                                        ║
+║                                                                  ║
+║   CHIAVE: DATI separati da ISTRUZIONI!                         ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
+
+### Handoff Pattern
+
+```python
+# Semplice
+def transfer_to_sales():
+    return sales_agent
+
+# Con context
+def route(issue_type, context_variables):
+    context_variables["routed_to"] = issue_type
+    if issue_type == "tech":
+        return tech_agent
+    return general_agent
+```
+
+### Gap di Swarm (Dove Noi Siamo GIÀ Meglio)
+
+| Gap Swarm | CervellaSwarm |
+|-----------|---------------|
+| No persistenza | SQLite memoria |
+| No parallelismo | spawn-workers |
+| No monitoring | swarm-logs, swarm-progress |
+| No UX | Dashboard MAPPA |
+| Solo dev | Dev + non-dev |
+
+### Idee da Implementare
+
+1. **context_variables in SQLite**
+   ```bash
+   swarm-context set project_name miracollo
+   swarm-context get stack
+   ```
+
+2. **Handoff via task creation**
+   - Worker crea task per altro worker
+   - Regina rileva e spawna
+
+3. **Result object standard**
+   ```json
+   {
+     "value": "API created",
+     "next_agent": "cervella-frontend",
+     "context_updates": {"api_url": "/api/users"}
+   }
+   ```
+
+---
+
+## PARTE 5: SOLUZIONE MODERNA - TMUX HEADLESS
+
+### Il Problema di Rafa
+
+"Aprire finestre Terminal è un po' anni 80!"
+
+### La Soluzione
+
+**tmux in modalità headless** = Background + Context Isolato + Zero Finestre!
+
+### Come Funziona
+
+```bash
+# Spawn worker in background (NESSUNA FINESTRA!)
+tmux new-session -d -s "worker_backend" "claude -p ..."
+
+# Leggi output senza aprire nulla
+tmux capture-pane -t worker_backend -p
+
+# Check se vivo
+tmux has-session -t worker_backend
+
+# Kill quando finito
+tmux kill-session -t worker_backend
+```
+
+### Vantaggi
+
+| Caratteristica | Stato |
+|----------------|-------|
+| Context isolato | ✅ Ogni session = mondo separato |
+| Zero finestre | ✅ Detached mode |
+| Output catturabile | ✅ capture-pane |
+| Debug possibile | ✅ Reattach con `tmux attach` |
+| Già installato | ✅ macOS ha tmux |
+
+### spawn-workers v4 (Da Implementare)
+
+```bash
+spawn_worker_headless() {
+    local worker_name="$1"
+    local session_name="swarm_${worker_name}_$(date +%s)"
+
+    # Spawn in tmux detached (NESSUNA FINESTRA!)
+    tmux new-session -d -s "$session_name" \
+        "cd ${PROJECT_ROOT} && \
+         export CERVELLASWARM_WORKER=1 && \
+         claude -p --append-system-prompt prompt.txt 'task'"
+
+    # Salva session per tracking
+    echo "$session_name" > ".swarm/status/${worker_name}.session"
+}
+```
+
+---
+
+## PARTE 6: TODO LIST PROSSIMA SESSIONE
+
+### PRIORITÀ ALTA (Fare Subito)
+
+```
+[ ] 1. TEST TMUX HEADLESS
+    - Testare manualmente: tmux new-session -d -s test "echo hello"
+    - Verificare che funziona su macOS
+    - Testare con claude -p
+
+[ ] 2. PROTOTIPO spawn-workers --headless
+    - Aggiungere flag --headless a spawn-workers
+    - Usare tmux invece di osascript/Terminal.app
+    - Mantenere compatibilità con vecchio metodo
+
+[ ] 3. OTTIMIZZARE load_context.py
+    - Delegare a cervella-backend
+    - Eventi: 20 → 5
+    - Task char: 100 → 50
+    - Stats: tutti → top 5
+```
+
+### PRIORITÀ MEDIA (Questa Settimana)
+
+```
+[ ] 4. CONTEXT VARIABLES PATTERN
+    - Creare swarm-context script
+    - Backend SQLite (già abbiamo db)
+    - set/get/list comandi
+
+[ ] 5. RESULT OBJECT STANDARD
+    - Definire JSON schema
+    - Worker output in formato standard
+    - Handoff automatico basato su next_agent
+
+[ ] 6. DOCUMENTAZIONE
+    - Salvare studio Swarm in docs/studio/
+    - Aggiornare CLAUDE.md con nuovo sistema
+```
+
+### PRIORITÀ FUTURA (Questo Mese)
+
+```
+[ ] 7. spawn-workers v4.0 RELEASE
+    - --headless default
+    - --window per vecchio comportamento
+    - Monitoring via tmux capture-pane
+
+[ ] 8. SNCP POPOLAMENTO
+    - Catturare idee/decisioni
+    - Fase 2: cattura manuale
+
+[ ] 9. DASHBOARD UPDATES
+    - Integrare nuovo sistema
+    - Widget per tmux sessions
+```
 
 ---
 
@@ -149,29 +308,24 @@ Quick wins identificati:
 |------|------|
 | Report Context Optimization | `reports/RICERCA_CONTEXT_OPTIMIZATION.md` |
 | Bug Claude Code | GitHub issue #3514 |
+| OpenAI Swarm | github.com/openai/swarm |
 | Studio SNCP | `docs/studio/STUDIO_SNCP.md` |
 | Struttura SNCP | `.sncp/` |
-| Costituzione | `~/.claude/COSTITUZIONE.md` |
 
 ---
 
-## PROSSIMI STEP
+## FILE CREATI/MODIFICATI SESSIONE 121
 
-### QUESTA SETTIMANA
-
-1. Ottimizzare load_context.py (quick wins)
-2. Continuare SNCP (cattura idee/decisioni)
-3. Widget "Decisioni Attive"
-
-### QUESTO MESE
-
-1. SISTEMA MEMORIA su altri progetti
-2. SNCP v1.0 usato quotidianamente
-3. Dashboard miglioramenti
+| File | Cosa |
+|------|------|
+| `~/.claude/settings.json` | Rimosso PreToolUse |
+| `reports/RICERCA_CONTEXT_OPTIMIZATION.md` | Report completo |
+| `NORD.md` | Aggiornato sessione 121 |
+| `PROMPT_RIPRESA.md` | Questo file |
 
 ---
 
-## LA FILOSOFIA (Non Dimenticare!)
+## FILOSOFIA (Non Dimenticare!)
 
 > "Lavoriamo in pace! Senza casino! Dipende da noi!"
 
@@ -179,7 +333,9 @@ Quick wins identificati:
 
 > "Disciplina > Blocchi tecnici"
 
-> "Fatto BENE > Fatto VELOCE"
+> "Aprire finestre è anni 80!" - Rafa
+
+> "Troveremo una soluzione noi!" - Rafa
 
 ---
 
@@ -188,21 +344,23 @@ Quick wins identificati:
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   IL SISTEMA E SEMPLICE ORA.                                    |
+|   QUESTA SESSIONE È STATA SPECIALE!                             |
 |                                                                  |
-|   Non ci sono blocchi tecnici. Ci sono REGOLE.                  |
+|   Rafa ha avuto un'intuizione geniale:                          |
+|   "Le finestre Terminal sono anni 80"                           |
 |                                                                  |
-|   Tu (Regina) sai cosa fare:                                    |
-|   - Leggi, coordini, decidi                                     |
-|   - Editi solo docs di stato (NORD, PROMPT_RIPRESA, etc)        |
-|   - Deleghi il codice ai Worker                                 |
+|   Abbiamo fatto ricerca SERIA e trovato:                        |
+|   - Pattern di OpenAI Swarm (context_variables)                 |
+|   - Soluzione tmux headless (background + isolato)              |
+|   - Piano per spawn-workers v4                                  |
 |                                                                  |
-|   Le ragazze (Worker) sanno cosa fare:                          |
-|   - Editano codice                                              |
-|   - Lavorano nel loro contesto                                  |
-|   - Spawn via spawn-workers                                     |
+|   Il prossimo passo è TESTARE e COSTRUIRE.                      |
 |                                                                  |
-|   FIDUCIA nella disciplina. SEMPLICITA nel sistema.             |
+|   Inizia da: TEST TMUX HEADLESS (10 minuti)                     |
+|   Se funziona: PROTOTIPO spawn-workers --headless               |
+|                                                                  |
+|   L'energia è ALTA. Il momentum è BELLISSIMO.                   |
+|   Continua con il cuore pieno di energia buona! ❤️‍🔥             |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -211,10 +369,13 @@ Quick wins identificati:
 
 *"Le ragazze nostre! La famiglia!"*
 
+*"Facciamo il nostro mondo meglio!"*
+
 **Cervella & Rafa** - Sessione 121
 
 ---
 
-**Versione:** v14.0.0
+**Versione:** v14.1.0
 **Sessione:** 121
-**Stato:** Sistema semplificato - Disciplina > Blocchi tecnici
+**Stato:** Ricerche complete - Pronta per implementazione!
+**Prossimo:** Test tmux headless → spawn-workers v4
