@@ -228,18 +228,17 @@ La simbiosi e' un COMPORTAMENTO - serve reminder visibile.
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-08 20:15 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-08 20:28 (auto)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: dbe3934 - Checkpoint Sessione 129: SNCP Rollout Completato!
-- **File modificati** (3):
-  - ROMPT_RIPRESA.md
-  - reports/engineer_report_20260108_201316.json
-  - reports/engineer_report_20260108_201423.json
+- **Ultimo commit**: 8998e15 - ANTI-COMPACT: PreCompact auto
+- **File modificati**: Nessuno (git pulito)
 
 ### Note
 - Checkpoint automatico generato da hook
-- Trigger: unknown
+- Trigger: auto
 
 ---
