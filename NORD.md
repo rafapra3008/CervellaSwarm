@@ -18,23 +18,31 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 118 - 7 Gennaio 2026: SISTEMA COMPLETO!**
+**SESSIONE 120 - 8 Gennaio 2026: HARDTEST + FIX CRITICO!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SISTEMA REGINA/WORKER: FUNZIONA!                              |
+|   HARDTEST COMPLETO + FIX APPLICATO!                            |
 |                                                                  |
-|   Sessione 117: Hook fix + Design Dashboard                     |
-|   Sessione 118: Test spawn-workers PASSATO!                     |
+|   Sessione 119: SNCP nasce (brainstorm)                         |
+|   Sessione 120: HARDTEST famiglia + FIX blocco Regina           |
 |                                                                  |
-|   - Regina BLOCCATA da edit diretti (exit 2)                    |
-|   - Worker LIBERI (CERVELLASWARM_WORKER=1)                      |
-|   - Dashboard MAPPA attiva su localhost:5173                    |
-|   - API backend su localhost:8100                               |
+|   PROBLEMA TROVATO:                                              |
+|   - Blocco Regina NON ERA ATTIVO! (PreToolUse mancante)         |
 |                                                                  |
-|   Il sistema di delegazione FUNZIONA!                           |
-|   La Regina coordina, i Worker eseguono.                        |
+|   FIX APPLICATO:                                                 |
+|   - PreToolUse aggiunto a settings.json                         |
+|   - Attivo dalla prossima sessione                              |
+|                                                                  |
+|   HARDTEST: 8 test, 7 PASSATI!                                  |
+|   - spawn-workers singolo/parallelo: OK                         |
+|   - Task lifecycle: OK                                          |
+|   - Task tool: OK                                                |
+|   - Unicode: OK                                                  |
+|   - MAX_WORKERS: OK                                              |
+|                                                                  |
+|   RICERCA: Edge cases documentati (12KB analisi)                |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -136,17 +144,18 @@
 |   COMPLETATI:                                                    |
 |   [x] Test hook fixati - PASSATO! (Sessione 118)                |
 |   [x] Test spawn-workers - PASSATO! Worker editano!             |
+|   [x] SNCP nasce - Sessione 119                                 |
+|   [x] HARDTEST famiglia - Sessione 120                          |
+|   [x] FIX blocco Regina - PreToolUse aggiunto                   |
 |                                                                  |
-|   IN CORSO:                                                      |
-|   [ ] Dashboard dati reali - Worker frontend al lavoro          |
+|   PROSSIMA SESSIONE:                                            |
+|   [ ] Verificare blocco Regina funziona (dopo restart)          |
 |                                                                  |
 |   DA FARE:                                                       |
 |   1. Widget "Decisioni Attive"                                  |
 |   2. SISTEMA MEMORIA su altri progetti                          |
-|      → Applicare DECISIONI_TECNICHE a Miracollo                 |
-|      → Applicare a Contabilita                                  |
-|   3. FIX SVEGLIA REGINA (quando serve)                          |
-|      → docs/roadmap/ROADMAP_SVEGLIA_REGINA.md                   |
+|   3. Popolare SNCP con decisioni/idee passate                   |
+|   4. FIX SVEGLIA REGINA (se serve)                              |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -181,4 +190,4 @@
 
 *"L'AI dalla parte delle persone, non contro di loro."*
 
-*Ultimo aggiornamento: 7 Gennaio 2026 - Sessione 118 - Sistema Regina/Worker COMPLETO!*
+*Ultimo aggiornamento: 8 Gennaio 2026 - Sessione 120 - HARDTEST + FIX blocco Regina!*
