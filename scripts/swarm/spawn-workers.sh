@@ -12,12 +12,13 @@
 #   ./spawn-workers.sh --all                  # Tutti i worker comuni
 #   ./spawn-workers.sh --list                 # Lista worker disponibili
 #
-# Versione: 2.9.0
-# Data: 2026-01-06
+# Versione: 3.0.0
+# Data: 2026-01-08
 # Apple Style: Auto-close, Graceful shutdown, Notifiche macOS
 # v2.0.0: Config centralizzata ~/.swarm/config
 #
 # CHANGELOG:
+# v3.0.0: HEADLESS MODE! --headless usa tmux invece di Terminal.app. Zero finestre!
 # v2.9.0: FIX AUTO-SVEGLIA! Cerca watcher ANCHE in ~/.claude/scripts/ (globale). Funziona in TUTTI i progetti!
 # v2.8.0: MAX WORKERS! Limite default 5 per evitare sovraccarico. Flag --max-workers N per cambiare.
 # v2.7.0: AUTO-SVEGLIA SEMPRE! Default=true. Check anti-watcher-duplicati. Flag --no-auto-sveglia per disabilitare.
@@ -49,6 +50,11 @@ AUTO_SVEGLIA=true
 # MAX WORKERS (v2.8.0) - Limite per evitare sovraccarico sistema
 # ============================================================================
 MAX_WORKERS=5
+
+# ============================================================================
+# HEADLESS MODE (v3.0.0) - tmux invece di Terminal.app
+# ============================================================================
+HEADLESS_MODE=false
 
 # ============================================================================
 # CONFIGURAZIONE CENTRALIZZATA (v2.0.0)
@@ -624,6 +630,73 @@ APPLESCRIPTEOF
     fi
 }
 
+# ============================================================================
+# HEADLESS MODE (v3.0.0) - Spawn worker in tmux invece di Terminal.app
+# ============================================================================
+spawn_worker_headless() {
+    local worker_name="$1"
+    local prompt
+    prompt=$(get_worker_prompt "$worker_name")
+
+    if [ -z "$prompt" ]; then
+        print_error "Worker '$worker_name' non trovato!"
+        return 1
+    fi
+
+    print_info "Spawning cervella-${worker_name} (headless)..."
+
+    # Salva prompt in file temporaneo
+    local prompt_file="${SWARM_DIR}/prompts/worker_${worker_name}.txt"
+    mkdir -p "${SWARM_DIR}/prompts"
+    printf '%s' "$prompt" > "$prompt_file"
+
+    # Nome sessione tmux univoco
+    local session_name="swarm_${worker_name}_$(date +%s)"
+
+    # Trova claude
+    local claude_path
+    claude_path=$(get_claude_bin)
+    if [[ -z "$claude_path" ]]; then
+        print_error "Claude CLI non trovato!"
+        return 1
+    fi
+
+    # Crea directories
+    mkdir -p "${SWARM_DIR}/status"
+    mkdir -p "${SWARM_DIR}/logs"
+
+    # Prompt iniziale
+    local initial_prompt="Controlla .swarm/tasks/ per task .ready assegnati a te e inizia a lavorare. Se non ci sono task, termina dicendo 'Nessun task per me'."
+
+    # Log file
+    local log_file="${SWARM_DIR}/logs/worker_${worker_name}_$(date +%Y%m%d_%H%M%S).log"
+
+    # Salva session name per tracking
+    echo "$session_name" > "${SWARM_DIR}/status/worker_${worker_name}.session"
+
+    # Salva timestamp start
+    date +%s > "${SWARM_DIR}/status/worker_${worker_name}.start"
+
+    # Spawn in tmux detached (NESSUNA FINESTRA!)
+    tmux new-session -d -s "$session_name" \
+        "cd ${PROJECT_ROOT} && \
+         export CERVELLASWARM_WORKER=1 && \
+         ${claude_path} -p --append-system-prompt \"\$(cat ${prompt_file})\" \"${initial_prompt}\" 2>&1 | tee \"${log_file}\"; \
+         echo 'WORKER_DONE' >> \"${log_file}\""
+
+    # Imposta remain-on-exit per catturare output dopo fine
+    tmux set-option -t "$session_name" remain-on-exit on 2>/dev/null
+
+    if tmux has-session -t "$session_name" 2>/dev/null; then
+        print_success "cervella-${worker_name} spawned (headless)! Session: ${session_name}"
+        echo "$(date '+%Y-%m-%d %H:%M:%S') - SPAWNED (headless): cervella-${worker_name} [${session_name}]" >> "${SWARM_DIR}/logs/spawn.log"
+        return 0
+    else
+        print_error "Errore spawn headless cervella-${worker_name}"
+        return 1
+    fi
+}
+
 show_usage() {
     echo "Uso: $0 [opzioni]"
     echo ""
@@ -647,6 +720,8 @@ show_usage() {
     echo "  --guardiane            Spawna tutte le guardiane"
     echo "  --list                 Lista worker disponibili"
     echo "  --no-auto-sveglia      Disabilita AUTO-SVEGLIA (default: attivo!)"
+    echo "  --headless             Usa tmux headless (no finestre Terminal)"
+    echo "  --window               Usa Terminal.app (default)"
     echo "  --help                 Mostra questo help"
     echo ""
     echo "  AUTO-SVEGLIA e' ATTIVO di default! La Regina viene svegliata automaticamente."
@@ -656,6 +731,7 @@ show_usage() {
     echo "  $0 --all                   # Spawna tutti i worker comuni"
     echo "  $0 --guardiane             # Spawna tutte le guardiane (Opus)"
     echo "  $0 --docs --no-auto-sveglia  # Docs senza svegliare la Regina"
+    echo "  $0 --headless --backend    # Backend in tmux (no finestre!)"
     echo ""
 }
 
@@ -760,6 +836,12 @@ main() {
                     exit 1
                 fi
                 ;;
+            --headless)
+                HEADLESS_MODE=true
+                ;;
+            --window)
+                HEADLESS_MODE=false
+                ;;
             *)
                 print_error "Opzione sconosciuta: $1"
                 show_usage
@@ -800,10 +882,18 @@ main() {
     failed=0
 
     for worker in $workers_to_spawn; do
-        if spawn_worker "$worker"; then
-            spawned=$((spawned + 1))
+        if [ "$HEADLESS_MODE" = true ]; then
+            if spawn_worker_headless "$worker"; then
+                spawned=$((spawned + 1))
+            else
+                failed=$((failed + 1))
+            fi
         else
-            failed=$((failed + 1))
+            if spawn_worker "$worker"; then
+                spawned=$((spawned + 1))
+            else
+                failed=$((failed + 1))
+            fi
         fi
         # Piccola pausa tra spawn per evitare race condition
         sleep 0.5

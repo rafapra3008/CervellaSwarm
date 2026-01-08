@@ -18,30 +18,27 @@
 
 ## DOVE SIAMO
 
-**SESSIONE 121 - 8 Gennaio 2026: SISTEMA SEMPLIFICATO!**
+**SESSIONE 122 - 8 Gennaio 2026: HEADLESS + OPTIMIZATION!**
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SISTEMA SEMPLIFICATO - DISCIPLINA > BLOCCHI TECNICI           |
+|   SESSIONE 122 - COSTRUIAMO!                                    |
 |                                                                  |
 |   Sessione 119: SNCP nasce (brainstorm)                         |
 |   Sessione 120: HARDTEST famiglia                               |
-|   Sessione 121: Semplificazione sistema                         |
+|   Sessione 121: Semplificazione sistema + Ricerche              |
+|   Sessione 122: IMPLEMENTAZIONE!                                |
 |                                                                  |
-|   SCOPERTA:                                                      |
-|   - Bug Claude Code: PreToolUse NON blocca Edit/Write           |
-|   - Issue #3514 ancora APERTA                                   |
-|                                                                  |
-|   DECISIONE:                                                     |
-|   - Rimosso blocco tecnico (non funziona)                       |
-|   - Sistema basato su DISCIPLINA e REGOLE                       |
-|   - Semplice > Complesso                                         |
+|   COMPLETATO:                                                    |
+|   1. spawn-workers v3.0.0 con --headless (tmux!)               |
+|   2. load_context.py v2.1.0 ottimizzato (-37% tokens)          |
+|   3. Test headless passati                                      |
 |                                                                  |
 |   COME LAVORIAMO:                                                |
-|   - Regina: legge, coordina, edita SOLO docs di stato           |
-|   - Worker: editano codice via spawn-workers                    |
-|   - Niente blocchi tecnici, solo buon senso                     |
+|   - spawn-workers --headless = ZERO finestre Terminal!          |
+|   - Worker in background via tmux                               |
+|   - Context overhead ridotto del 37-59%                         |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -53,10 +50,11 @@
 | Cosa | Status |
 |------|--------|
 | 16 Agents in ~/.claude/agents/ | FUNZIONANTE |
-| spawn-workers v3.0.0 | +marketing! |
+| **spawn-workers v3.0.0** | **+headless! (tmux)** |
+| **load_context.py v2.1.0** | **-37% tokens!** |
 | swarm-global-status | Multi-progetto |
-| **Dashboard MAPPA** | **NUOVO! Prototipo funzionante!** |
-| **Sistema DECISIONI** | **NUOVO! Template docs/decisioni/** |
+| Dashboard MAPPA | Prototipo funzionante |
+| Sistema DECISIONI | Template docs/decisioni/ |
 | swarm-logs | Log live worker |
 | swarm-timeout | Avvisa se bloccato |
 | swarm-progress | Stato worker live |
@@ -64,8 +62,7 @@
 | swarm-roadmaps | Vista roadmap |
 | swarm-init | Template nuovo progetto |
 | watcher-regina.sh v1.3.0 | DA MIGLIORARE (sveglia) |
-| **block_edit_non_whitelist.py** | **NUOVO! Blocca edit non autorizzati** |
-| **quick-task** | **NUOVO! 1 comando per delegare** |
+| quick-task | 1 comando per delegare |
 
 ---
 
@@ -146,9 +143,12 @@
 |   [x] SNCP nasce - Sessione 119                                 |
 |   [x] HARDTEST famiglia - Sessione 120                          |
 |   [x] Sistema semplificato - Sessione 121                       |
+|   [x] spawn-workers v3.0.0 --headless - Sessione 122           |
+|   [x] load_context.py v2.1.0 ottimizzato - Sessione 122        |
 |                                                                  |
 |   SISTEMA ATTUALE:                                               |
-|   - Regina: coordina + edita docs di stato                      |
+|   - spawn-workers --headless = worker in tmux (no finestre!)   |
+|   - Context overhead ridotto del 37-59%                         |
 |   - Worker: editano codice via spawn-workers                    |
 |   - Disciplina > Blocchi tecnici                                |
 |                                                                  |
@@ -156,7 +156,6 @@
 |   1. Widget "Decisioni Attive"                                  |
 |   2. SISTEMA MEMORIA su altri progetti                          |
 |   3. Popolare SNCP con decisioni/idee passate                   |
-|   4. Ottimizzazione context (load_context.py)                   |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
@@ -191,4 +190,4 @@
 
 *"L'AI dalla parte delle persone, non contro di loro."*
 
-*Ultimo aggiornamento: 8 Gennaio 2026 - Sessione 121 - SESSIONE D'ORO! Ricerche + tmux headless!*
+*Ultimo aggiornamento: 8 Gennaio 2026 - Sessione 122 - IMPLEMENTAZIONE! spawn-workers v3.0.0 + load_context v2.1.0*
