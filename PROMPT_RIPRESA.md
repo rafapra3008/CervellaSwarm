@@ -1,7 +1,78 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 8 Gennaio 2026 - Fine Sessione 127
-> **Versione:** v19.0.0 - SNCP LIVE SU MIRACOLLO! 🧠🚀❤️‍🔥
+> **Ultimo aggiornamento:** 8 Gennaio 2026 - Fine Sessione 128
+> **Versione:** v20.0.0 - SNCP TESTATO CON SUCCESSO! SIMBIOSI FUNZIONA! 🧠🚀❤️‍🔥
+
+---
+
+## 🎉 SESSIONE 128 - SNCP SIMBIOSI TESTATA CON SUCCESSO!
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   SESSIONE 128 - 8 GENNAIO 2026                                  |
+|                                                                  |
+|   SNCP SIMBIOSI TESTATA E FUNZIONANTE!                          |
+|                                                                  |
+|   COMPLETATO:                                                    |
+|                                                                  |
+|   ✅ SNCP TESTATO SU MIRACOLLO!                                 |
+|      - Regina ha documentato in pensieri_regina.md MENTRE       |
+|        investigava problema GitHub Actions                       |
+|      - SIMBIOSI VERA: lavoro + documentazione simultanei!       |
+|      - ZERO rush pre-compact - tutto salvato progressivo!       |
+|                                                                  |
+|   ✅ PROBLEMA GITHUB ACTIONS RISOLTO!                           |
+|      - Scoperto: VM senza credenziali GitHub                    |
+|      - git fetch falliva silenziosamente!                       |
+|      - FIX: Token GitHub + Deploy Key SSH                       |
+|      - Deploy ora funziona via git pull!                        |
+|                                                                  |
+|   ✅ v2.1.2 MIRACOLLO DEPLOYATA!                                 |
+|      - Bug fixes live su miracollo.com                          |
+|      - Credenziali VM sistemate per sempre!                     |
+|                                                                  |
+|   LEZIONE:                                                       |
+|   "Prima cercare cosa esiste!" (scripts/deploy.sh gia pronto!)  |
+|   "Doppia sicurezza = Pace!" (Token + Deploy Key)               |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+---
+
+## 🗺️ PIANO SNCP - ROLLOUT SU TUTTI I PROGETTI
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   SNCP ROLLOUT PLAN                                              |
+|                                                                  |
+|   FASE 1: Miracollo ✅ COMPLETATO!                               |
+|   - Struttura installata (12 file, 942 righe)                   |
+|   - Simbiosi testata (Sessione 64/128)                          |
+|   - Pattern funziona!                                            |
+|                                                                  |
+|   FASE 2: Contabilita (PROSSIMO!)                               |
+|   - Copiare struttura .sncp/ da Miracollo                       |
+|   - Adattare file base (oggi.md, mappa_viva.md)                 |
+|   - Inizializzare con stato reale Contabilita                   |
+|   - Tempo stimato: 30-45 minuti                                 |
+|                                                                  |
+|   FASE 3: CervellaSwarm                                         |
+|   - .sncp/ per il progetto stesso                               |
+|   - Meta-documentazione dello sciame                            |
+|   - Tempo stimato: 30-45 minuti                                 |
+|                                                                  |
+|   DOPO ROLLOUT:                                                  |
+|   - Ogni progetto ha la sua "coscienza"                         |
+|   - Regina documenta MENTRE lavora                              |
+|   - ZERO idee perse                                              |
+|   - ZERO rush pre-compact                                        |
+|   - 100% simbiosi!                                               |
+|                                                                  |
++------------------------------------------------------------------+
+```
 
 ---
 

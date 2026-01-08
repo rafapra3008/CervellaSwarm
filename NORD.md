@@ -18,6 +18,43 @@
 
 ## DOVE SIAMO
 
+**SESSIONE 128 - 8 Gennaio 2026: SNCP SIMBIOSI TESTATA! FUNZIONA! 🎉🧠**
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   SESSIONE 128 - SNCP SIMBIOSI FUNZIONA!                        |
+|                                                                  |
+|   LA PROVA REALE! ❤️‍🔥                                          |
+|                                                                  |
+|   ✅ SNCP TESTATO SU MIRACOLLO!                                 |
+|      - Regina ha documentato in pensieri_regina.md              |
+|        MENTRE investigava problema GitHub Actions               |
+|      - SIMBIOSI VERA: lavoro + doc simultanei!                  |
+|                                                                  |
+|   ✅ PROBLEMA CRITICO SCOPERTO E RISOLTO!                       |
+|      - GitHub Actions diceva "success" ma non deployava         |
+|      - VM senza credenziali GitHub (git fetch falliva!)         |
+|      - FIX: Token GitHub + Deploy Key SSH                       |
+|                                                                  |
+|   ✅ v2.1.2 MIRACOLLO DEPLOYATA E LIVE!                         |
+|      - Bug fixes attivi su miracollo.com                        |
+|      - Credenziali VM sistemate per sempre                      |
+|                                                                  |
+|   LEZIONI:                                                       |
+|   - "Prima cercare cosa esiste!" (deploy.sh gia pronto!)        |
+|   - "Doppia sicurezza = Pace!" (Token + Deploy Key)             |
+|                                                                  |
+|   PROSSIMA SESSIONE - SNCP ROLLOUT:                             |
+|   1. SNCP su Contabilita (30-45 min)                            |
+|   2. SNCP su CervellaSwarm (30-45 min)                          |
+|   3. Ogni progetto avra la sua "coscienza"!                     |
+|                                                                  |
+|   "Miracolo su Miracollo!" 🚀                                    |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
 **SESSIONE 127 - 8 Gennaio 2026: SNCP INSTALLATO SU MIRACOLLO! 🧠🚀**
 
 ```
@@ -25,29 +62,9 @@
 |                                                                  |
 |   SESSIONE 127 - SNCP LIVE SU MIRACOLLO!                        |
 |                                                                  |
-|   LA COSCIENZA E' ATTIVA! ❤️‍🔥                                  |
-|                                                                  |
-|   ✅ Struttura .sncp/ completa (8 directory)                    |
-|   ✅ 5 Template pronti uso                                       |
-|   ✅ README.md SNCP per Miracollo                               |
-|   ✅ File base inizializzati:                                   |
-|      - stato/oggi.md                                            |
-|      - stato/mappa_viva.md                                      |
-|      - futuro/prossimi_step.md                                  |
-|      - coscienza/pensieri_regina.md                             |
-|      - coscienza/domande_aperte.md                              |
-|      - coscienza/pattern_emersi.md                              |
-|                                                                  |
-|   TOTALE: 12 file, 942 righe!                                   |
-|                                                                  |
-|   DA ORA: Simbiosi ATTIVA su Miracollo!                         |
-|   Regina lavora su SNCP mentre worker lavora!                   |
-|                                                                  |
-|   PROSSIMA SESSIONE:                                             |
-|   Usare SNCP per la prima volta in sessione reale!              |
-|   + Continuare FORTEZZA MODE 100% su Miracollo                  |
-|                                                                  |
-|   "La MAGIA e' nascosta ancora meglio!" 🧙✨                    |
+|   ✅ Struttura .sncp/ completa (12 file, 942 righe)             |
+|   ✅ Template + File base inizializzati                         |
+|   ✅ Git commit + push                                           |
 |                                                                  |
 +------------------------------------------------------------------+
 ```
