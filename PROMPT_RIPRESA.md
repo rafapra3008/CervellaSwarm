@@ -489,11 +489,15 @@ python scripts/memory/suggestions.py
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-08 15:58 (unknown)
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-08 16:57 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 781a897 - ANTI-COMPACT: PreCompact auto
+- **Ultimo commit**: 940617f - ANTI-COMPACT: PreCompact auto
 - **File modificati** (1):
   - ROMPT_RIPRESA.md
 
