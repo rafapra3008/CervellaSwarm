@@ -1,7 +1,7 @@
 # PROMPT RIPRESA - CervellaSwarm
 
 > **Ultimo aggiornamento:** 9 Gennaio 2026 - Sessione 141
-> **Versione:** v60.0.0 - RESET: Il Prodotto Vero
+> **Versione:** v61.0.0 - PLUGIN MVP CREATO!
 
 ---
 
@@ -10,41 +10,47 @@
 | Cosa | Stato |
 |------|-------|
 | Ricerca + Decisioni | COMPLETATE |
-| Landing + Marketing | IN PAUSA (pronte per dopo) |
-| **IL PRODOTTO VERO** | **DA COSTRUIRE** |
+| Landing + Marketing | IN PAUSA |
+| **PLUGIN MVP** | **CREATO E VALIDATO!** |
 
 ---
 
-## RESET - 9 Gennaio 2026
+## Sessione 141 - GRANDE PROGRESSO!
 
-**Realizzazione di Rafa:**
-> "Prima dobbiamo creare in sé la CervellaSwarm...
-> perché non abbiamo il prodotto ancora"
+### Cosa Fatto
 
-**Cosa mancava:** Un prodotto che altri possono installare e usare.
+1. **RESET** - Capito che mancava il prodotto vero
+2. **STUDIO** - Ricerca su Claude Code plugins
+3. **SCOPERTA** - CervellaSwarm puo essere un PLUGIN!
+4. **CREAZIONE** - Plugin MVP con 16 agenti convertiti
 
-**Nuova direzione:** Prima COSTRUIRE, poi VENDERE.
+### Plugin Creato
+
+```
+plugin/
+├── .claude-plugin/plugin.json    # Validato OK!
+├── agents/                       # 16 agenti .json
+├── commands/init-sncp.md         # Comando /init-sncp
+└── templates/sncp/               # Template SNCP
+```
+
+### Validazione
+
+```bash
+claude plugin validate ./plugin
+# ✔ Validation passed
+```
 
 ---
 
-## Nuova Roadmap
+## Prossimi Step
 
-| Fase | Obiettivo | Status |
-|------|-----------|--------|
-| A | Studiare come costruire | DA FARE |
-| B | Decidere architettura MVP | DA FARE |
-| C | Costruire MVP funzionante | DA FARE |
-| D | Validare su altri computer | DA FARE |
-| E | Tornare a marketing | DOPO |
-
----
-
-## Prossimo Step Concreto
-
-**FASE A.1.1:** Studiare come funziona Claude Code
-- Documentazione Anthropic
-- Come si configurano agenti custom
-- Limiti e possibilità
+| Step | Azione |
+|------|--------|
+| 1 | Testare plugin: `claude --plugin-dir ./plugin` |
+| 2 | Verificare agenti funzionano |
+| 3 | Pubblicare su GitHub |
+| 4 | Testare installazione da zero |
 
 ---
 
@@ -52,23 +58,22 @@
 
 | Cosa | Dove |
 |------|------|
-| Reset completo | `.sncp/idee/RESET_GENNAIO_2026.md` |
-| Roadmap nuova | `.sncp/idee/ROADMAP_PRODOTTO_VERO.md` |
-| Ricerche (pronte) | `.sncp/idee/ricerche_prodotto/` |
-| Landing (in pausa) | `landing/` |
+| Plugin MVP | `plugin/` |
+| Studio completo | `.sncp/idee/STUDIO_CLAUDE_CODE_COMPLETO.md` |
+| Reset | `.sncp/idee/RESET_GENNAIO_2026.md` |
+| Roadmap | `.sncp/idee/ROADMAP_PRODOTTO_VERO.md` |
 
 ---
 
-## In Pausa (ma pronto)
+## Per Testare
 
-- Landing page (4 pagine in `landing/`)
-- Marketing plan (`MARKETING_VENDITA_MASTER.md`)
-- Video script (`TEASER_SCRIPT_STORYBOARD.md`)
-- Email/Payment setup
+```bash
+cd ~/Developer/CervellaSwarm
+claude --plugin-dir ./plugin
+```
 
 ---
 
-*"Dobbiamo vedere la cosa vera... averla... provarla...
-installarla su altri computer... avere fiducia"*
+*"La soluzione era sotto i nostri occhi!"*
 
-*Con il cuore pieno di energia buona!*
+*Plugin VALIDATO! Con il cuore pieno!*
