@@ -55,3 +55,15 @@ DOPO AVER SCRITTO UN FILE:
 ---
 
 *Documentato per fix futuro*
+
+---
+
+## BUG CORRELATO: Hook PROMPT_RIPRESA timing
+
+**Problema:** L'hook `update_prompt_ripresa.py` a volte fallisce con "Error editing file" perché cerca di scrivere mentre Regina sta ancora modificando.
+
+**Causa:** Race condition - hook triggered durante edit attivo.
+
+**Impatto:** BASSO - file finale è sempre corretto, solo warning visibile.
+
+**Fix Proposto:** Aggiungere retry con delay nell'hook, o check se file è locked.
