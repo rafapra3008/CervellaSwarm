@@ -1,7 +1,7 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 9 Gennaio 2026 - Sessione 142
-> **Versione:** v62.0.0 - CLI MVP FUNZIONANTE!
+> **Ultimo aggiornamento:** 9 Gennaio 2026 - Sessione 143
+> **Versione:** v63.0.0 - CLI PRODUCTION READY!
 
 ---
 
@@ -12,71 +12,80 @@
 | Ricerca + Decisioni | COMPLETATE |
 | Landing + Marketing | IN PAUSA |
 | Plugin (vecchio) | DEPRECATO |
-| **CLI `cervella`** | **MVP FUNZIONANTE!** |
+| **CLI `cervella`** | **v0.1.0 PRODUCTION READY!** |
 
 ---
 
-## Sessione 142 - GRANDE GIORNO!
-
-### Decisione Strategica
-
-Rafa ha deciso: **APP VERA**, non plugin.
-- Controllo totale
-- Indipendenza da Anthropic plugins
-- Prodotto vero come Cursor
+## Sessione 143 - CODE REVIEW DAY!
 
 ### Cosa Fatto
 
-1. **Fix bug agenti** - Write tool mancante (scienziata, researcher, marketing, security)
-2. **Ricerca Cursor** - Storia completa, come hanno fatto
-3. **Mappa App Vera** - Architettura CLI + roadmap
-4. **CLI MVP creato** - `cervella` v0.1.0 funzionante!
+1. **Code Review completa** - Score 7.5/10 -> migliorato!
+2. **Fix 2 CRITICAL issues**
+   - API key exposure (ora privata + validazione)
+   - Git errors silenziati (ora distingue soft/hard)
+3. **Fix 4 WARNING**
+   - Input validation (sanitize + length check)
+   - Hardcoded models (ora via env vars)
+   - Rollback on failure (cleanup automatico)
+   - API client lifecycle (context manager)
+4. **Aggiunto 8 agenti** - Da 8 a 16 totali!
+5. **Aggiunto cervella al PATH** - Usabile ovunque
+6. **README package** - Documentazione completa
+7. **Test con API key reale** - FUNZIONA!
 
-### CLI Creato
+### CLI Completo
 
 ```
 cervella/
 ├── pyproject.toml          # Package config
+├── README.md               # Documentazione
 ├── cli/                    # Click CLI
 │   └── commands/           # init, task, status, checkpoint
 ├── api/                    # Claude API wrapper (BYOK)
 ├── sncp/                   # Memoria esterna
-├── agents/                 # 8 agenti built-in
-└── tests/                  # TUTTI PASS!
+├── agents/                 # 16 agenti built-in!
+└── tests/                  # 7/7 PASS
 ```
 
-### Comandi Funzionanti
+### 16 Agenti Pronti
+
+**Worker (Sonnet):** backend, frontend, tester, researcher, scienziata, docs, reviewer, data, devops, security, marketing, ingegnera
+
+**Supervisori (Opus):** regina, guardiana-ops, guardiana-qualita, guardiana-ricerca
+
+---
+
+## Configurazione Completata
+
+```bash
+# Nel ~/.zshrc di Rafa:
+export ANTHROPIC_API_KEY="sk-ant-..."
+export PATH="$HOME/Library/Python/3.13/bin:$PATH"
+```
+
+---
+
+## Comandi Funzionanti
 
 ```bash
 cervella --version          # v0.1.0
 cervella init               # Crea .sncp/
-cervella status             # Mostra 8 agenti pronti
-cervella task "..." --dry-run
+cervella status             # Mostra 16 agenti pronti
+cervella task "..." --agent researcher  # API call reale!
 cervella checkpoint -m "..."
 ```
 
 ---
 
-## Decisioni Prese
-
-| Cosa | Decisione |
-|------|-----------|
-| Nome comando | `cervella` |
-| Linguaggio | Python |
-| Priorità | CLI first, web dopo |
-| Modello | BYOK (Bring Your Own Key) |
-
----
-
 ## Prossimi Step
 
-| # | Task |
-|---|------|
-| 1 | Test reale con API key |
-| 2 | Aggiungere altri agenti (16 totali) |
-| 3 | README per il package |
-| 4 | Aggiungere al PATH |
-| 5 | PyPI publish (quando pronto) |
+| # | Task | Priorità |
+|---|------|----------|
+| 1 | Test altri agenti (devops, security, etc) | Media |
+| 2 | Aumentare test coverage (target 80%) | Media |
+| 3 | PyPI publish | Bassa |
+| 4 | Web dashboard (futuro) | Bassa |
 
 ---
 
@@ -85,29 +94,25 @@ cervella checkpoint -m "..."
 | Cosa | Dove |
 |------|------|
 | CLI MVP | `cervella/` |
+| README CLI | `cervella/README.md` |
+| Code Review Report | `.sncp/reports/CODE_REVIEW_CLI_2026_01_09.md` |
 | Mappa App Vera | `.sncp/idee/MAPPA_APP_VERA.md` |
-| Ricerca Cursor | `.sncp/idee/RICERCA_STORIA_CURSOR.md` |
-| Studio precedente | `.sncp/idee/STUDIO_CLAUDE_CODE_COMPLETO.md` |
 
 ---
 
-## Per Testare
+## Decisioni Sessione 143
 
-```bash
-# Installa (se non già fatto)
-cd ~/Developer/CervellaSwarm/cervella
-pip3 install -e .
-
-# Usa
-cervella --help
-cervella init
-cervella status
-```
+| Cosa | Decisione | Perché |
+|------|-----------|--------|
+| API key privata | `__api_key` | Previene leak in log/debug |
+| Modelli configurabili | Via env vars | Future-proofing |
+| 16 agenti | Famiglia completa | Copertura tutti i task |
+| PATH config | In ~/.zshrc | Usabilità immediata |
 
 ---
 
-*"Quando troviamo il PERCHE, NULLA ci ferma!"*
+*"La MAGIA ora è nascosta! Con coscienza!"*
 
-*CLI MVP FUNZIONANTE! Con il cuore pieno!*
+*CLI v0.1.0 PRODUCTION READY! Con il cuore pieno!*
 
 ---

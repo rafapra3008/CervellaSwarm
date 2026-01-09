@@ -31,10 +31,17 @@ class ClaudeClient:
 
     Usa ANTHROPIC_API_KEY dall'environment.
     Supporta streaming per risposte lunghe.
+    Supporta context manager per gestione lifecycle.
+
+    Env vars configurabili:
+        ANTHROPIC_API_KEY: API key (required)
+        CERVELLA_DEFAULT_MODEL: Modello default (optional)
+        CERVELLA_OPUS_MODEL: Modello Opus (optional)
     """
 
-    DEFAULT_MODEL = "claude-sonnet-4-20250514"
-    OPUS_MODEL = "claude-opus-4-0-20250514"
+    # Modelli configurabili via env vars (future-proofing)
+    DEFAULT_MODEL = os.environ.get("CERVELLA_DEFAULT_MODEL", "claude-sonnet-4-20250514")
+    OPUS_MODEL = os.environ.get("CERVELLA_OPUS_MODEL", "claude-opus-4-0-20250514")
 
     def __init__(self, api_key: Optional[str] = None):
         """Inizializza il client.
@@ -157,3 +164,24 @@ class ClaudeClient:
         messages = [Message(role="user", content=prompt)]
         response = self.send(messages, system=system)
         return response.content
+
+    # Context manager support per gestione lifecycle
+    def __enter__(self) -> "ClaudeClient":
+        """Entra nel context manager."""
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb) -> None:
+        """Esce dal context manager, chiude connessioni."""
+        self.close()
+
+    def close(self) -> None:
+        """Chiude connessioni del client.
+
+        Best practice per cleanup esplicito delle risorse.
+        """
+        if hasattr(self, 'client') and hasattr(self.client, '_client'):
+            # Chiudi il client httpx sottostante se presente
+            try:
+                self.client._client.close()
+            except Exception:
+                pass  # Ignora errori di chiusura

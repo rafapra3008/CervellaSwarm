@@ -11,6 +11,23 @@ from rich.spinner import Spinner
 console = Console()
 
 
+def _sanitize_task(description: str) -> str:
+    """Sanitizza input task per sicurezza.
+
+    Rimuove caratteri di controllo e pattern sospetti.
+    """
+    # Rimuovi caratteri di controllo (mantieni solo printable e whitespace)
+    cleaned = "".join(c for c in description if c.isprintable() or c in "\n\t ")
+
+    # Pattern sospetti che potrebbero indicare prompt injection
+    suspicious = ["<|endoftext|>", "<|im_end|>", "SYSTEM:", "ASSISTANT:", "Human:"]
+    for pattern in suspicious:
+        if pattern.lower() in cleaned.lower():
+            raise click.ClickException(f"Contenuto non permesso nel task: pattern sospetto rilevato")
+
+    return cleaned.strip()
+
+
 @click.command()
 @click.argument("description", required=True)
 @click.option("--agent", "-a", default=None, help="Specifica agente (default: Regina decide)")
@@ -28,6 +45,21 @@ def task(description: str, agent: str, dry_run: bool):
 
         cervella task "Analizza i competitor" --agent scienziata
     """
+    # Validazione input
+    if not description or not description.strip():
+        console.print("[red]Errore:[/red] La descrizione del task non può essere vuota.")
+        raise click.Abort()
+
+    # Sanitizza per sicurezza
+    description = _sanitize_task(description)
+
+    # Warning se troppo lungo
+    if len(description) > 5000:
+        console.print(f"[yellow]Warning:[/yellow] Task molto lungo ({len(description)} chars).")
+        console.print("[yellow]Potrebbe consumare molti token.[/yellow]")
+        if not click.confirm("Continuare?"):
+            raise click.Abort()
+
     console.print(Panel.fit(
         f"[bold]Task:[/bold] {description}",
         title="Cervella",

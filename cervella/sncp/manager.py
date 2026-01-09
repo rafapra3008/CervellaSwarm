@@ -59,28 +59,41 @@ class SNSCPManager:
         return self.sncp_path.exists()
 
     def initialize(self) -> None:
-        """Inizializza struttura SNCP.
+        """Inizializza struttura SNCP con rollback su errori.
 
         Crea la cartella .sncp/ con tutte le sottocartelle
         e i file di configurazione iniziali.
+
+        Se qualsiasi operazione fallisce, la struttura parziale
+        viene rimossa per evitare stati inconsistenti.
+
+        Raises:
+            RuntimeError: Se inizializzazione fallisce (con cleanup automatico).
         """
-        # Crea struttura cartelle
-        self._create_structure(self.sncp_path, self.STRUCTURE)
+        import shutil
 
-        # Crea config.yaml
-        config = {
-            "project_name": self.project_path.name,
-            "created": datetime.now().isoformat(),
-            "cervella_version": "0.1.0",
-            "agents": {
-                "default_model": "sonnet",
-                "enabled": ["backend", "frontend", "tester", "researcher"],
-            },
-        }
-        self._write_yaml(self.sncp_path / "config.yaml", config)
+        # Se esiste già, non fare nulla
+        if self.sncp_path.exists():
+            return
 
-        # Crea README
-        readme = """# SNCP - Sistema Nervoso Centrale Persistente
+        try:
+            # Crea struttura cartelle
+            self._create_structure(self.sncp_path, self.STRUCTURE)
+
+            # Crea config.yaml
+            config = {
+                "project_name": self.project_path.name,
+                "created": datetime.now().isoformat(),
+                "cervella_version": "0.1.0",
+                "agents": {
+                    "default_model": "sonnet",
+                    "enabled": ["backend", "frontend", "tester", "researcher"],
+                },
+            }
+            self._write_yaml(self.sncp_path / "config.yaml", config)
+
+            # Crea README
+            readme = """# SNCP - Sistema Nervoso Centrale Persistente
 
 Questa cartella contiene la memoria esterna di Cervella.
 
@@ -101,10 +114,10 @@ Questa cartella contiene la memoria esterna di Cervella.
 ---
 *Generato da Cervella*
 """
-        (self.sncp_path / "README.md").write_text(readme)
+            (self.sncp_path / "README.md").write_text(readme)
 
-        # Crea stato iniziale coscienza
-        stato = f"""# Stato Corrente
+            # Crea stato iniziale coscienza
+            stato = f"""# Stato Corrente
 
 > Ultimo aggiornamento: {datetime.now().strftime("%Y-%m-%d %H:%M")}
 
@@ -119,7 +132,16 @@ Questa cartella contiene la memoria esterna di Cervella.
 ---
 *"Lavoriamo in PACE!"*
 """
-        (self.sncp_path / "coscienza" / "stato_corrente.md").write_text(stato)
+            (self.sncp_path / "coscienza" / "stato_corrente.md").write_text(stato)
+
+        except Exception as e:
+            # Rollback: rimuovi struttura parziale
+            if self.sncp_path.exists():
+                shutil.rmtree(self.sncp_path, ignore_errors=True)
+            raise RuntimeError(
+                f"Inizializzazione SNCP fallita: {e}. "
+                "Struttura parziale rimossa automaticamente."
+            ) from e
 
     def _create_structure(self, base: Path, structure: dict) -> None:
         """Crea ricorsivamente la struttura cartelle."""
