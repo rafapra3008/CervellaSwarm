@@ -1,7 +1,133 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 9 Gennaio 2026 - Fine Sessione 131
-> **Versione:** v23.0.0 - COORDINAMENTO DIPENDENZE COMPLETATO!
+> **Ultimo aggiornamento:** 9 Gennaio 2026 - Fine Sessione 133
+> **Versione:** v24.1.0 - PATTERN BORIS VALIDATO!
+
+---
+
+## SESSIONE 133 - DUE PATTERN VALIDATI!
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   SESSIONE 133 - 9 GENNAIO 2026                                  |
+|                                                                  |
+|   DUE PATTERN PARALLELI VALIDATI:                               |
+|                                                                  |
+|   1. Task Tool Interno (3 Cervelle parallele)                   |
+|   2. Pattern Boris (2 git clones + tmux)                        |
+|                                                                  |
+|   ENTRAMBI FUNZIONANO!                                          |
+|   Rafa non fa nulla di manuale.                                 |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+---
+
+## IL FILO DEL DISCORSO - Sessione 133
+
+**Come e' iniziata:**
+Rafa ha chiesto di analizzare il report dell'ingegnera e modernizzare il workflow.
+
+**Cosa abbiamo fatto:**
+
+### 1. ANALISI REPORT INGEGNERA
+- 54 file grandi -> Sono docs, OK cosi'
+- 67 funzioni grandi -> Funzionano, refactor quando serve
+- **Conclusione:** Tech debt esiste ma NON blocca
+
+### 2. TEST TASK TOOL INTERNO
+- Lanciate 3 Cervelle in parallelo (researcher, ingegnera, docs)
+- Risultati istantanei
+- L'ingegnera ha mostrato "bounded autonomy" (si e' fermata perche' il task era fuori scope)
+
+### 3. RICERCA BORIS CHERNY
+- Boris (creatore Claude Code) usa 5 Claude paralleli
+- Pattern: git clones separati + iTerm2 notifications
+- Opus sempre + Plan Mode + CLAUDE.md in git
+
+### 4. TEST PATTERN BORIS (SUCCESSO!)
+- Creati 2 git clones automaticamente
+- Lanciate 2 sessioni Claude in tmux
+- **Entrambe hanno completato in ~15 secondi!**
+- File creati correttamente nei rispettivi clones
+
+### 5. DOCUMENTAZIONE CREATA
+- `docs/guide/PATTERN_BORIS_MULTI_CLONE.md` - Come usare il pattern
+- `docs/guide/WORKFLOW_REGINA_MODERNO.md` - Workflow Task tool
+
+### 6. MIA ANALISI PERSONALE
+**FILE:** `docs/studio/ANALISI_REGINA_SESSIONE_133.md`
+
+Contiene:
+- Pro/contro di entrambi i pattern
+- Quando usare cosa
+- Domande aperte per domani
+- Raccomandazioni
+
+**LEGGI QUESTO FILE DOMANI PER DECIDERE INSIEME!**
+
+---
+
+## I DUE PATTERN VALIDATI
+
+### Pattern 1: Task Tool Interno (DEFAULT)
+```
+IO lancio cervella-* con Task tool
+-> Lavorano nel mio contesto
+-> Risultati istantanei
+-> Per task veloci (<15 min)
+```
+
+### Pattern 2: Boris (git clones + tmux)
+```
+IO creo git clones separati
+-> Lancio sessioni Claude in tmux
+-> Lavorano in parallelo VERO
+-> Per task grossi o indipendenti
+```
+
+---
+
+## CLONES ATTIVI
+
+Dopo il test, esistono:
+- `~/Developer/CervellaSwarm-regina-A`
+- `~/Developer/CervellaSwarm-regina-B`
+
+**Decisione:** Tenere o eliminare? Da discutere domani.
+
+---
+
+## WORKFLOW MODERNO (Come Funziona)
+
+```
+RAFA: "Voglio X"
+
+IO (Regina):
+|-- Analizzo cosa serve
+|-- Lancio Cervelle in parallelo (Task tool)
+|   |-- cervella-backend (lavora nascosta)
+|   |-- cervella-frontend (lavora nascosta)
+|   +-- cervella-tester (lavora nascosta)
+|-- Ricevo output automaticamente
+|-- Coordino e verifico
++-- Riporto: "Fatto! Ecco il risultato"
+
+RAFA: supervisiona e approva
+
+TU NON FAI NULLA DI MANUALE!
+```
+
+---
+
+## SESSIONE 132 - PRIMO VOLO SU MIRACOLLO
+
+- 2 Cervelle parallele su Miracollo + 1 background
+- Fase 5 Miracollo = 100% (WhatsApp funziona!)
+- Background tasks testati e funzionanti
+- Handoff: .swarm/handoff/HANDOFF_20260109_005500.md
 
 ---
 
@@ -278,3 +404,26 @@ tests/test_coordinamento_dipendenze.sh           (NUOVO - 10 test)
 |                                                                  |
 +------------------------------------------------------------------+
 ```
+
+---
+
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-09 01:39 (unknown)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: d0b0718 - Sessione 132: PRIMO VOLO MULTI-INSTANCE SU MIRACOLLO!
+- **File modificati** (2):
+  - eports/scientist_prompt_20260109.md
+  - ANALISI_ARCHIVED.md
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: unknown
+
+---
