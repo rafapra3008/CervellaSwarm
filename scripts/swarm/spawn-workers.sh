@@ -12,12 +12,14 @@
 #   ./spawn-workers.sh --all                  # Tutti i worker comuni
 #   ./spawn-workers.sh --list                 # Lista worker disponibili
 #
-# Versione: 3.2.0
-# Data: 2026-01-08
+# Versione: 3.4.0
+# Data: 2026-01-09
 # Apple Style: Auto-close, Graceful shutdown, Notifiche macOS
 # v2.0.0: Config centralizzata ~/.swarm/config
 #
 # CHANGELOG:
+# v3.4.0: COMMON LIBRARY! Source common.sh per funzioni condivise (DRY). Backward compatible.
+# v3.3.0: VALIDAZIONE PROGETTO! Non crea piu .swarm/ nel posto sbagliato. Richiede progetto valido.
 # v3.2.0: OUTPUT REALTIME! stdbuf -oL per unbuffered output. Vediamo progresso worker in tempo reale!
 # v3.1.0: HEADLESS DEFAULT! --headless è ora il comportamento standard. Usa --window per finestre.
 # v3.0.0: HEADLESS MODE! --headless usa tmux invece di Terminal.app. Zero finestre!
@@ -42,6 +44,16 @@
 # Aggiunto: Supporto Guardiane (Opus)
 
 set -e
+
+# ============================================================================
+# COMMON LIBRARY (v3.4.0) - Funzioni condivise
+# ============================================================================
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ -f "${SCRIPT_DIR}/common.sh" ]]; then
+    source "${SCRIPT_DIR}/common.sh"
+fi
+# Nota: Le funzioni locali sotto sono mantenute per backward compatibility
+# Verranno rimosse in una versione futura quando common.sh sara' diffuso
 
 # ============================================================================
 # AUTO-SVEGLIA (v2.7.0) - SEMPRE ATTIVO! La Regina viene svegliata automaticamente!
@@ -163,8 +175,16 @@ find_project_root() {
     return 1
 }
 
-PROJECT_ROOT="$(find_project_root)"
-SWARM_DIR="${PROJECT_ROOT}/.swarm"
+# Cerca project root - VALIDA che esista davvero!
+if PROJECT_ROOT="$(find_project_root)"; then
+    SWARM_DIR="${PROJECT_ROOT}/.swarm"
+    PROJECT_VALID=true
+else
+    # Non trovato .swarm/ - NON creare automaticamente!
+    PROJECT_ROOT="$(pwd)"
+    SWARM_DIR="${PROJECT_ROOT}/.swarm"
+    PROJECT_VALID=false
+fi
 
 # Colori
 RED='\033[0;31m'
@@ -769,14 +789,25 @@ main() {
         echo ""
     fi
 
-    # Verifica .swarm/ esiste
-    if [ ! -d "${SWARM_DIR}" ]; then
-        print_warning ".swarm/ non trovato. Creo struttura..."
+    # VALIDAZIONE PROGETTO (v3.3.0): Non creare .swarm/ nel posto sbagliato!
+    if [ "$PROJECT_VALID" = false ]; then
+        print_error "Non sei in un progetto CervellaSwarm!"
+        print_error "Nessuna directory .swarm/ trovata in questa cartella o superiori."
+        echo ""
+        print_info "Per usare spawn-workers devi essere in un progetto con .swarm/"
+        print_info "Oppure crea la struttura manualmente: mkdir -p .swarm/tasks"
+        echo ""
+        exit 1
+    fi
+
+    # Verifica struttura .swarm/ completa
+    if [ ! -d "${SWARM_DIR}/tasks" ]; then
+        print_warning "Struttura .swarm/ incompleta. Completo..."
         mkdir -p "${SWARM_DIR}/tasks"
         mkdir -p "${SWARM_DIR}/status"
         mkdir -p "${SWARM_DIR}/logs"
         mkdir -p "${SWARM_DIR}/handoff"
-        print_success "Struttura .swarm/ creata!"
+        print_success "Struttura .swarm/ completata!"
     fi
 
     # Parse argomenti

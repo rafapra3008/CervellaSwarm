@@ -6,14 +6,24 @@ Gestisce la creazione, monitoraggio e stato dei task per il sistema Multi-Finest
 Usa file marker (.ready, .working, .done) per sincronizzazione tra agenti.
 """
 
-__version__ = "1.2.0"
-__version_date__ = "2026-01-05"
+__version__ = "1.3.0"
+__version_date__ = "2026-01-09"
+# v1.3.0: Migliorato error handling - logging, eccezioni specifiche, gestione permessi
 # v1.2.0: Fix race condition in mark_working() - ora ATOMICO con exclusive create!
 
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List, Dict
 from datetime import datetime
 import re
+import logging
+import os
+
+# Setup logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 SWARM_DIR = ".swarm"
 TASKS_DIR = f"{SWARM_DIR}/tasks"
@@ -61,10 +71,26 @@ def validate_task_id(task_id: str) -> bool:
 
 
 def ensure_tasks_dir() -> Path:
-    """Assicura che la directory tasks esista."""
+    """
+    Assicura che la directory tasks esista.
+
+    Returns:
+        Path alla directory tasks
+
+    Raises:
+        PermissionError: Se non si hanno i permessi per creare la directory
+        OSError: Se la creazione fallisce per altri motivi
+    """
     tasks_path = Path(TASKS_DIR)
-    tasks_path.mkdir(parents=True, exist_ok=True)
-    return tasks_path
+    try:
+        tasks_path.mkdir(parents=True, exist_ok=True)
+        return tasks_path
+    except PermissionError:
+        logger.error(f"Permessi insufficienti per creare {tasks_path}")
+        raise
+    except OSError as e:
+        logger.error(f"Errore creazione directory {tasks_path}: {e}")
+        raise
 
 
 def create_task(task_id: str, agent: str, description: str, risk_level: int = 1) -> str:
@@ -155,8 +181,12 @@ def list_tasks() -> list:
                 if line.startswith('- Assegnato a:'):
                     agent = line.split(':', 1)[1].strip()
                     break
-        except Exception:
-            pass
+        except PermissionError:
+            logger.warning(f"Permessi insufficienti per leggere {task_file}")
+        except UnicodeDecodeError:
+            logger.warning(f"Encoding non valido in {task_file}")
+        except OSError as e:
+            logger.warning(f"Errore lettura {task_file}: {e}")
 
         tasks.append({
             'task_id': task_id,
@@ -180,14 +210,14 @@ def mark_ready(task_id: str) -> bool:
         True se successo, False altrimenti
     """
     if not validate_task_id(task_id):
-        print(f"Errore: Task ID non valido: {task_id}")
+        logger.error(f"Task ID non valido: {task_id}")
         return False
 
     ensure_tasks_dir()
 
     task_file = Path(TASKS_DIR) / f"{task_id}.md"
     if not task_file.exists():
-        print(f"Errore: Task {task_id} non esiste!")
+        logger.error(f"Task {task_id} non esiste!")
         return False
 
     ready_file = Path(TASKS_DIR) / f"{task_id}.ready"
@@ -210,14 +240,14 @@ def mark_working(task_id: str) -> bool:
         False se fallito (task già preso da altro worker o errore)
     """
     if not validate_task_id(task_id):
-        print(f"Errore: Task ID non valido: {task_id}")
+        logger.error(f"Task ID non valido: {task_id}")
         return False
 
     ensure_tasks_dir()
 
     task_file = Path(TASKS_DIR) / f"{task_id}.md"
     if not task_file.exists():
-        print(f"Errore: Task {task_id} non esiste!")
+        logger.error(f"Task {task_id} non esiste!")
         return False
 
     working_file = Path(TASKS_DIR) / f"{task_id}.working"
@@ -230,7 +260,7 @@ def mark_working(task_id: str) -> bool:
             f.write(f"started: {datetime.now().isoformat()}\n")
         return True
     except FileExistsError:
-        print(f"Task {task_id} già in lavorazione da altro worker!")
+        logger.warning(f"Task {task_id} già in lavorazione da altro worker!")
         return False
 
 
@@ -245,19 +275,19 @@ def ack_received(task_id: str) -> bool:
         True se successo, False altrimenti
     """
     if not validate_task_id(task_id):
-        print(f"Errore: Task ID non valido: {task_id}")
+        logger.error(f"Task ID non valido: {task_id}")
         return False
 
     ensure_tasks_dir()
 
     task_file = Path(TASKS_DIR) / f"{task_id}.md"
     if not task_file.exists():
-        print(f"Errore: Task {task_id} non esiste!")
+        logger.error(f"Task {task_id} non esiste!")
         return False
 
     ack_file = Path(TASKS_DIR) / f"{task_id}.ack_received"
     ack_file.touch()
-    print(f"ACK_RECEIVED: {task_id}")
+    logger.info(f"ACK_RECEIVED: {task_id}")
     return True
 
 
@@ -272,19 +302,19 @@ def ack_understood(task_id: str) -> bool:
         True se successo, False altrimenti
     """
     if not validate_task_id(task_id):
-        print(f"Errore: Task ID non valido: {task_id}")
+        logger.error(f"Task ID non valido: {task_id}")
         return False
 
     ensure_tasks_dir()
 
     task_file = Path(TASKS_DIR) / f"{task_id}.md"
     if not task_file.exists():
-        print(f"Errore: Task {task_id} non esiste!")
+        logger.error(f"Task {task_id} non esiste!")
         return False
 
     ack_file = Path(TASKS_DIR) / f"{task_id}.ack_understood"
     ack_file.touch()
-    print(f"ACK_UNDERSTOOD: {task_id}")
+    logger.info(f"ACK_UNDERSTOOD: {task_id}")
     return True
 
 
@@ -299,14 +329,14 @@ def mark_done(task_id: str) -> bool:
         True se successo, False altrimenti
     """
     if not validate_task_id(task_id):
-        print(f"Errore: Task ID non valido: {task_id}")
+        logger.error(f"Task ID non valido: {task_id}")
         return False
 
     ensure_tasks_dir()
 
     task_file = Path(TASKS_DIR) / f"{task_id}.md"
     if not task_file.exists():
-        print(f"Errore: Task {task_id} non esiste!")
+        logger.error(f"Task {task_id} non esiste!")
         return False
 
     done_file = Path(TASKS_DIR) / f"{task_id}.done"
@@ -381,7 +411,7 @@ def cleanup_task(task_id: str, remove_markers: bool = True) -> bool:
         True se successo, False altrimenti
     """
     if not validate_task_id(task_id):
-        print(f"Errore: Task ID non valido: {task_id}")
+        logger.error(f"Task ID non valido: {task_id}")
         return False
 
     tasks_path = Path(TASKS_DIR)
