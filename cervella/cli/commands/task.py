@@ -2,7 +2,9 @@
 cervella task - Delega un task agli agenti
 """
 
+import os
 import click
+from pathlib import Path
 from rich.console import Console
 from rich.panel import Panel
 from rich.live import Live
@@ -45,6 +47,15 @@ def task(description: str, agent: str, dry_run: bool):
 
         cervella task "Analizza i competitor" --agent scienziata
     """
+    cwd = os.getcwd()
+    sncp_path = Path(cwd) / ".sncp"
+
+    # Check inizializzazione
+    if not sncp_path.exists():
+        console.print("[red]Errore:[/red] Cervella non inizializzata.")
+        console.print("Esegui prima: [cyan]cervella init[/cyan]")
+        raise click.Abort()
+
     # Validazione input
     if not description or not description.strip():
         console.print("[red]Errore:[/red] La descrizione del task non può essere vuota.")
@@ -59,6 +70,26 @@ def task(description: str, agent: str, dry_run: bool):
         console.print("[yellow]Potrebbe consumare molti token.[/yellow]")
         if not click.confirm("Continuare?"):
             raise click.Abort()
+
+    # Tier e Usage check
+    from tier.tier_manager import TierManager
+    tier_mgr = TierManager(sncp_path)
+
+    # Check se può usare l'agente richiesto
+    if agent:
+        can_use, msg = tier_mgr.can_use_agent(agent)
+        if not can_use:
+            console.print(f"[red]Errore:[/red] {msg}")
+            raise click.Abort()
+
+    # Check usage limits
+    can_run, msg = tier_mgr.can_run_task()
+    if not can_run:
+        console.print(f"[red]Errore:[/red] {msg}")
+        raise click.Abort()
+    elif msg:
+        # Warning se vicino al limite
+        console.print(f"[yellow]Warning:[/yellow] {msg}")
 
     console.print(Panel.fit(
         f"[bold]Task:[/bold] {description}",
@@ -83,6 +114,9 @@ def task(description: str, agent: str, dry_run: bool):
 
         with console.status("[bold blue]Regina sta analizzando...[/bold blue]"):
             result = runner.run_task(description, agent_name=agent)
+
+        # Record task usage (solo se completato con successo)
+        tier_mgr.record_task()
 
         console.print("\n[green]Task completato![/green]")
         console.print(Panel(result.output, title="Risultato", border_style="green"))

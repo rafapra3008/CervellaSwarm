@@ -5,23 +5,23 @@
 
 ---
 
-## FASE 1: Decisioni (Prossime Sessioni)
+## FASE 1: Decisioni (COMPLETATA - Sessione 144)
 
 | # | Task | Effort | Status |
 |---|------|--------|--------|
-| 1.1 | Decidere BYOK vs Bundled | 1 giorno | DA FARE |
-| 1.2 | Guardare demo competitor | 30 min | DA FARE |
+| 1.1 | Decidere BYOK vs Bundled | 1 giorno | **FATTO** - BYOK per MVP |
+| 1.2 | Guardare demo competitor | 30 min | Opzionale |
 
 ---
 
-## FASE 2: Completare Prodotto
+## FASE 2: Completare Prodotto (IN CORSO)
 
-| # | Task | Effort | Dipende da |
-|---|------|--------|------------|
-| 2.1 | Implementare tier limits CLI | 2-3 giorni | 1.1 |
-| 2.2 | Tracking usage | 2 giorni | 2.1 |
-| 2.3 | License key system | 3-4 giorni | 2.1 |
-| 2.4 | Test coverage 80%+ | 1 sett | - |
+| # | Task | Effort | Status |
+|---|------|--------|--------|
+| 2.1 | Implementare tier limits CLI | 2-3 giorni | **FATTO** - Sessione 144 |
+| 2.2 | Tracking usage | 2 giorni | **FATTO** - Sessione 144 |
+| 2.3 | License key system | 3-4 giorni | **PROSSIMO** |
+| 2.4 | Test coverage 80%+ | 1 sett | DA FARE |
 
 ---
 
@@ -99,11 +99,12 @@ Settimana 9:     Public launch
 1. ✅ CLI funzionante (FATTO)
 2. ✅ 16 agenti (FATTO)
 3. ✅ Pricing strategy (FATTO)
-4. ⬜ BYOK vs Bundled decision
-5. ⬜ Tier limits nel codice
-6. ⬜ Billing (Stripe)
-7. ⬜ License proprietaria
-8. ⬜ Terms of Service + Privacy Policy
+4. ✅ BYOK vs Bundled decision (FATTO - Sessione 144)
+5. ✅ Tier limits nel codice (FATTO - Sessione 144)
+6. ⬜ License key system
+7. ⬜ Billing (Stripe)
+8. ⬜ License proprietaria
+9. ⬜ Terms of Service + Privacy Policy
 
 ---
 

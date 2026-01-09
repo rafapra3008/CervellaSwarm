@@ -1,17 +1,17 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 9 Gennaio 2026 - Sessione 143
-> **Versione:** v63.0.0 - CLI PRODUCTION READY + PRICING DEFINITO
+> **Ultimo aggiornamento:** 9 Gennaio 2026 - Sessione 144
+> **Versione:** v64.0.0 - TIER SYSTEM IMPLEMENTATO
 
 ---
 
 ## TL;DR per Prossima Cervella
 
-**Dove siamo:** CLI v0.1.0 funzionante con 16 agenti, testato con API reale.
+**Dove siamo:** CLI v0.1.0 con TIER SYSTEM funzionante. BYOK deciso per MVP.
 
-**Cosa manca:** Decidere BYOK vs Bundled, tier system nel codice, billing, launch.
+**Cosa manca:** License key system, billing Stripe, legal, launch.
 
-**Prossimo step:** Leggere decisione BYOK in `.sncp/memoria/decisioni/20260109_BYOK_vs_bundled_da_decidere.md`
+**Prossimo step:** Implementare license key system (FASE 2.3 della roadmap)
 
 ---
 
@@ -25,11 +25,53 @@
 | Plugin (vecchio) | DEPRECATO | Sostituito da CLI |
 | **CLI `cervella`** | **v0.1.0 READY** | 16 agenti, test OK |
 | **Pricing Strategy** | **DEFINITO** | $0/$20/$40/$60+ tier flat |
-| **BYOK vs Bundled** | **DA DECIDERE** | Critico per business model |
+| **BYOK vs Bundled** | **DECISO: BYOK** | Per MVP, zero rischio |
+| **Tier System** | **IMPLEMENTATO** | Free/Pro/Team/Enterprise |
 
 ---
 
-## Sessione 143 - Cosa Fatto
+## Sessione 144 - Cosa Fatto
+
+### 1. Decisione BYOK
+- **DECISO: BYOK per MVP**
+- Zero rischio finanziario, già funzionante
+- Pivot a Bundled possibile post-PMF
+- Documentato in `.sncp/memoria/decisioni/20260109_BYOK_vs_bundled_da_decidere.md`
+
+### 2. Tier System Implementato
+Nuovi file creati:
+- `cervella/tier/__init__.py`
+- `cervella/tier/tier_manager.py`
+- `cervella/cli/commands/upgrade.py`
+
+Modifiche:
+- `cervella/cli/commands/status.py` - Mostra tier + usage
+- `cervella/cli/commands/task.py` - Check tier prima di eseguire
+- `cervella/cli/__init__.py` - Registrato comando upgrade
+
+### 3. Tier Disponibili
+
+| Tier | Agenti | Task/mese | Prezzo |
+|------|--------|-----------|--------|
+| Free | 3 base | 50 | $0 |
+| Pro | 16 tutti | Illimitati | $20 |
+| Team | 16 tutti | Illimitati | $40 |
+| Enterprise | 16+ | Illimitati | $60+ |
+
+### 4. Nuovi Comandi CLI
+```bash
+cervella status              # Mostra tier + usage + agenti
+cervella upgrade             # Confronto tier
+cervella upgrade --set pro   # Dev mode: imposta tier
+```
+
+### 5. Persistenza
+- Tier e usage salvati in `.sncp/tier.yaml`
+- Reset automatico usage ogni mese
+
+---
+
+## Sessione 143 - Cosa Fatto (Precedente)
 
 ### 1. Code Review Day (Venerdì)
 - cervella-reviewer ha analizzato tutto il CLI
@@ -261,5 +303,30 @@ cervella status
 
 *Sessione 143: CLI Production Ready + Pricing Definito*
 *Con il cuore pieno!*
+
+---
+
+---
+
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-09 19:28 (unknown)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: 1fb6f3a - Aggiunte decisioni security/legal + roadmap completa launch
+- **File modificati** (4):
+  - ROMPT_RIPRESA.md
+  - reports/scientist_prompt_20260109.md
+  - reports/engineer_report_20260109_184637.json
+  - reports/engineer_report_20260109_192201.json
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: unknown
 
 ---

@@ -20,12 +20,13 @@ def main():
 
 
 # Import e registra i comandi
-from cli.commands import init, task, status, checkpoint
+from cli.commands import init, task, status, checkpoint, upgrade
 
 main.add_command(init.init)
 main.add_command(task.task)
 main.add_command(status.status)
 main.add_command(checkpoint.checkpoint)
+main.add_command(upgrade.upgrade)
 
 
 if __name__ == "__main__":

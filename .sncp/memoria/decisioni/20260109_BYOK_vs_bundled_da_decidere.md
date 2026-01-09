@@ -1,7 +1,8 @@
 # Decisione da Prendere: BYOK vs Bundled Claude
 
 > Data: 2026-01-09 - Sessione 143
-> Status: DA DECIDERE
+> Status: **DECISO** - BYOK per MVP (Sessione 144, 9 Gen 2026)
+> Decisione: Opzione A - BYOK
 
 ## La Domanda
 
@@ -108,13 +109,24 @@ Quando:
 
 ---
 
-## Prossimi Step
+## Decisione Finale
 
-- [ ] Ricerca dettagliata costi API Anthropic
-- [ ] Calcolo break-even per vari scenari usage
-- [ ] User interviews: preferiscono BYOK o tutto incluso?
-- [ ] Decisione finale pre-launch
+**BYOK per MVP** - Deciso 9 Gennaio 2026, Sessione 144
+
+### Perché BYOK:
+1. Già implementato e funzionante nel CLI
+2. Zero rischio finanziario per noi
+3. Margine 100% sul subscription
+4. Validiamo il prodotto prima di complicare
+5. Privacy: non vediamo i prompt degli utenti
+6. Pivot a Bundled possibile post-PMF se utenti lo chiedono
+
+### Prossimi Step Post-Decisione:
+- [x] Decisione presa: BYOK
+- [ ] Implementare tier limits nel CLI
+- [ ] Tracking usage per analytics
+- [ ] License key system
 
 ---
 
-*Decisione critica per il business model - da prendere con dati*
+*"Prima validare, poi complicare." - Decisione presa con il cuore pieno!*
