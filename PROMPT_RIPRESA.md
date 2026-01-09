@@ -11,7 +11,7 @@
 |------|-------|
 | FASE 1: CLAUDE.md + PROMPT_RIPRESA snelli | COMPLETATA |
 | FASE 2.2: DNA Famiglia (16 membri) | COMPLETATA |
-| FASE 2.3: CLAUDE.md globale snello | IN CORSO |
+| FASE 2.3: CLAUDE.md globale snello | COMPLETATA (-75%) |
 | FASE 3: Rollout Miracollo | Da fare |
 
 ---
@@ -19,12 +19,13 @@
 ## Ultima Sessione - 135
 
 **Cosa fatto:**
-- Aggiornati tutti 16 DNA con sezione REGOLE CONTEXT-SMART
-- 12 Worker (Sonnet) + 3 Guardiane (Opus) + 1 Orchestrator
-- Ogni DNA ora ha: max 500 token, usa SNCP, regola 5 min, output strutturato
+- FASE 2.2: 16/16 DNA con REGOLE CONTEXT-SMART
+- FASE 2.3: CLAUDE.md globale snellito (527 → 130 linee, -75%)
 
 **File modificati:**
 - `~/.claude/agents/cervella-*.md` (tutti e 16)
+- `~/.claude/CLAUDE.md` (snellito)
+- Backup: `~/.claude/CLAUDE_ORIGINALE_GLOBALE.md`
 
 ---
 
