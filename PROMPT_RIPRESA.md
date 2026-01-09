@@ -73,17 +73,21 @@
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-09 12:30 (Sessione 139)
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-09 12:36 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 45babb7 - Sessione 138: Regole SNCP + Support Miracollo DB
+- **Ultimo commit**: 87fe85e - Docs: Bug timing hook documentato
 - **File modificati** (5):
-  - sncp/idee/PRODOTTO_MAPPA_MASTER.md
+  - DS_Store
   - PROMPT_RIPRESA.md
-  - .sncp/idee/ricerche_prodotto/TODO_VSCODE_COPILOT_MULTIAGENT.md
-  - reports/engineer_report_20260109_112213.json
-  - reports/engineer_report_20260109_112214.json
+  - docs/.DS_Store
+  - reports/scientist_prompt_20260109.md
+  - .sncp/memoria/decisioni/2026-01-09_istat_export_endpoint.md
 
 ### Note
 - Checkpoint automatico generato da hook
