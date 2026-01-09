@@ -1,26 +1,55 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 9 Gennaio 2026 - Fine Sessione 134
-> **Versione:** v48.0.0 - CODE REVIEW + DOUBLE REVIEW!
+> **Ultimo aggiornamento:** 9 Gennaio 2026 - Sessione 134 (parte 2)
+> **Versione:** v49.0.0 - LA NOSTRA STRADA DEFINITA!
 
 ---
 
-## SESSIONE 134 - CODE REVIEW DAY!
+## SESSIONE 134 - LA NOSTRA STRADA!
 
 ```
 +------------------------------------------------------------------+
 |                                                                  |
-|   SESSIONE 134 - 9 GENNAIO 2026                                  |
+|   SESSIONE 134 (parte 2) - 9 GENNAIO 2026                       |
 |                                                                  |
+|   RICERCA CONTEXT OPTIMIZATION + BORIS MULTI-SESSIONE           |
+|                                                                  |
+|   OBIETTIVO DEFINITO:                                           |
+|   - Context startup: da 22-25K a 8-10K token (-60%)             |
+|   - Worker paralleli: 2-3 max (stabilizzare prima di scalare)   |
+|   - Regola 5 min: Task tool vs Spawn                            |
+|                                                                  |
+|   VALIDATO 2x dalla Guardiana Qualita'                          |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+### DECISIONI CHIAVE
+
+| Decisione | Perche' |
+|-----------|---------|
+| Git clones (non GitButler) | Funzionano, zero dipendenze |
+| 2-3 worker max | Prima stabilizzare, poi scalare |
+| CLAUDE.md snello | -60% token startup |
+| SNCP come memoria | Disco infinito, context no |
+
+### FILE CREATI
+
+Tutto in `.sncp/idee/`:
+- `LA_NOSTRA_STRADA_ROADMAP_FINALE.md` - **LEGGI QUESTO!**
+- `RICERCA_BORIS_MULTI_SESSIONE.md`
+- `GUARDIANA_ANALISI_NOSTRA_STRADA.md`
+- Altri 4 file di ricerca
+
+---
+
+## SESSIONE 134 (parte 1) - CODE REVIEW
+
+```
++------------------------------------------------------------------+
 |   CODE REVIEW SETTIMANALE + DOUBLE REVIEW                       |
-|                                                                  |
-|   9 FIX TOTALI:                                                  |
-|   - 6 dalla code review                                         |
-|   - 3 dalla double review                                       |
-|                                                                  |
-|   Punteggio: 8.2/10 -> MIGLIORATO!                             |
+|   9 FIX TOTALI - Punteggio: 8.2/10                              |
 |   Tutti i test passano: 23/23                                   |
-|                                                                  |
 +------------------------------------------------------------------+
 ```
 
@@ -93,9 +122,10 @@ Rafa ha chiesto di verificare che non mancasse nulla. Ho trovato:
 
 ## PROSSIMA SESSIONE
 
-1. **Leggere** `docs/studio/ANALISI_REGINA_SESSIONE_133.md` (analisi pattern paralleli)
-2. **Decidere** se tenere git clones regina-A/B o eliminarli
-3. **Usare** i pattern validati su Miracollo per task reali
+1. **Leggere** `.sncp/idee/LA_NOSTRA_STRADA_ROADMAP_FINALE.md` - La roadmap completa
+2. **Iniziare** FASE 1: CLAUDE.md progetto snello (40 linee)
+3. **Benchmark** context con /context prima e dopo
+4. **Testare** worker paralleli con watcher
 
 ---
 
@@ -504,19 +534,18 @@ tests/test_coordinamento_dipendenze.sh           (NUOVO - 10 test)
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-09 04:48 (auto)
+---
+
+## AUTO-CHECKPOINT: 2026-01-09 04:53 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 40bffcc - Sessione 134: DOUBLE REVIEW - Security Fix + Cleanup
-- **File modificati** (4):
-  - NORD.md
-  - PROMPT_RIPRESA.md
-  - ROADMAP_SACRA.md
-  - reports/engineer_report_20260109_044437.json
+- **Ultimo commit**: b341ac4 - Checkpoint Sessione 134: CODE REVIEW DAY completato!
+- **File modificati** (1):
+  - reports/engineer_report_20260109_045034.json
 
 ### Note
 - Checkpoint automatico generato da hook
-- Trigger: auto
+- Trigger: unknown
 
 ---
