@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - CervellaSwarm</title>
+    <meta name="description" content="Get started with CervellaSwarm in 5 minutes. Install, configure, and run your first AI-powered task.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F59E0B',
+                        secondary: '#1E293B',
+                        accent: '#8B5CF6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); }
+        .code-block { background: #0D1117; }
+        .copy-btn:hover { background: #F59E0B; color: #1E293B; }
+    </style>
+</head>
+<body class="gradient-bg text-white">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
+        <a href="index.html" class="flex items-center space-x-2">
+            <span class="text-3xl">👸</span>
+            <span class="text-2xl font-bold">CervellaSwarm</span>
+        </a>
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html#features" class="hover:text-primary transition">Features</a>
+            <a href="how-it-works.html" class="hover:text-primary transition">How It Works</a>
+            <a href="faq.html" class="hover:text-primary transition">FAQ</a>
+        </div>
+        <a href="index.html#cta" class="bg-primary text-secondary px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition">
+            Start Free
+        </a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="container mx-auto px-6 py-12 text-center">
+        <div class="inline-block bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            ⏱️ 5 minutes to get started
+        </div>
+        <h1 class="text-5xl font-bold mb-6">Getting Started</h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+            From zero to your first AI-powered task in 5 minutes.
+            Let's build something together.
+        </p>
+    </section>
+
+    <!-- Progress -->
+    <section class="container mx-auto px-6 py-8 max-w-4xl">
+        <div class="flex justify-between items-center mb-12">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center font-bold text-secondary">1</div>
+                <span class="hidden sm:inline text-sm">Install</span>
+            </div>
+            <div class="flex-1 h-1 bg-slate-700 mx-2"></div>
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center font-bold">2</div>
+                <span class="hidden sm:inline text-sm">Configure</span>
+            </div>
+            <div class="flex-1 h-1 bg-slate-700 mx-2"></div>
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center font-bold">3</div>
+                <span class="hidden sm:inline text-sm">First Task</span>
+            </div>
+            <div class="flex-1 h-1 bg-slate-700 mx-2"></div>
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center font-bold">4</div>
+                <span class="hidden sm:inline text-sm">Explore</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="container mx-auto px-6 py-8 max-w-4xl">
+
+        <!-- Step 1: Install -->
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-xl font-bold text-secondary">1</div>
+                <div>
+                    <h2 class="text-3xl font-bold">Install CervellaSwarm</h2>
+                    <p class="text-gray-400">2 minutes</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 mb-6">
+                <h3 class="font-semibold mb-4 flex items-center gap-2">
+                    <span class="text-xl">📋</span> Requirements
+                </h3>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-center gap-2">
+                        <span class="text-green-400">✓</span> macOS, Linux, or Windows (WSL)
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-green-400">✓</span> Node.js 18+ or Python 3.10+
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <span class="text-green-400">✓</span> Anthropic API key (<a href="https://console.anthropic.com" target="_blank" class="text-primary hover:underline">get one here</a>)
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                <h3 class="font-semibold mb-4 flex items-center gap-2">
+                    <span class="text-xl">💻</span> Installation
+                </h3>
+
+                <p class="text-gray-400 mb-3">Option A: Using npm (recommended)</p>
+                <div class="code-block p-4 rounded-lg mb-4 font-mono text-sm overflow-x-auto">
+                    <span class="text-gray-500">$</span> <span class="text-green-400">npm install -g cervellaswarm</span>
+                </div>
+
+                <p class="text-gray-400 mb-3">Option B: Using pip</p>
+                <div class="code-block p-4 rounded-lg mb-4 font-mono text-sm overflow-x-auto">
+                    <span class="text-gray-500">$</span> <span class="text-green-400">pip install cervellaswarm</span>
+                </div>
+
+                <p class="text-gray-400 mb-3">Option C: From source</p>
+                <div class="code-block p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                    <span class="text-gray-500">$</span> <span class="text-green-400">git clone https://github.com/cervellaswarm/cervellaswarm.git</span><br>
+                    <span class="text-gray-500">$</span> <span class="text-green-400">cd cervellaswarm && ./install.sh</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Configure -->
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-xl font-bold">2</div>
+                <div>
+                    <h2 class="text-3xl font-bold">Configure Your API Key</h2>
+                    <p class="text-gray-400">1 minute</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 mb-6">
+                <h3 class="font-semibold mb-4 flex items-center gap-2">
+                    <span class="text-xl">🔑</span> Set your Anthropic API key
+                </h3>
+
+                <p class="text-gray-400 mb-3">Add to your shell profile (~/.bashrc, ~/.zshrc, etc.):</p>
+                <div class="code-block p-4 rounded-lg mb-4 font-mono text-sm overflow-x-auto">
+                    <span class="text-blue-400">export</span> <span class="text-primary">ANTHROPIC_API_KEY</span>=<span class="text-green-400">"sk-ant-your-key-here"</span>
+                </div>
+
+                <p class="text-gray-400 mb-3">Or use the setup wizard:</p>
+                <div class="code-block p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                    <span class="text-gray-500">$</span> <span class="text-green-400">cervella setup</span>
+                </div>
+            </div>
+
+            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                <h3 class="font-semibold mb-4 flex items-center gap-2">
+                    <span class="text-xl">✅</span> Verify installation
+                </h3>
+                <div class="code-block p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                    <span class="text-gray-500">$</span> <span class="text-green-400">cervella --version</span><br>
+                    <span class="text-gray-400">CervellaSwarm v1.0.0</span><br>
+                    <span class="text-gray-400">16 agents ready</span><br>
+                    <span class="text-gray-400">API key: configured ✓</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: First Task -->
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-xl font-bold">3</div>
+                <div>
+                    <h2 class="text-3xl font-bold">Run Your First Task</h2>
+                    <p class="text-gray-400">2 minutes</p>
+                </div>
+            </div>
+
+            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700 mb-6">
+                <h3 class="font-semibold mb-4 flex items-center gap-2">
+                    <span class="text-xl">🚀</span> Start a session in your project
+                </h3>
+
+                <div class="code-block p-4 rounded-lg mb-4 font-mono text-sm overflow-x-auto">
+                    <span class="text-gray-500">$</span> <span class="text-green-400">cd your-project</span><br>
+                    <span class="text-gray-500">$</span> <span class="text-green-400">cervella</span>
+                </div>
+
+                <p class="text-gray-300 mb-4">The Queen will greet you and initialize SNCP memory for your project.</p>
+
+                <div class="code-block p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                    <span class="text-primary">👸 CervellaSwarm initialized!</span><br>
+                    <span class="text-gray-400">   Project: your-project</span><br>
+                    <span class="text-gray-400">   SNCP: .sncp/ created</span><br>
+                    <span class="text-gray-400">   Agents: 16 ready</span><br><br>
+                    <span class="text-primary">></span> <span class="text-gray-300 blink">What would you like to build?</span>
+                </div>
+            </div>
+
+            <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                <h3 class="font-semibold mb-4 flex items-center gap-2">
+                    <span class="text-xl">💬</span> Ask something
+                </h3>
+
+                <p class="text-gray-400 mb-3">Try one of these example prompts:</p>
+
+                <div class="space-y-3">
+                    <div class="code-block p-4 rounded-lg font-mono text-sm">
+                        <span class="text-primary">></span> <span class="text-white">"Add a dark mode toggle to the settings page"</span>
+                    </div>
+                    <div class="code-block p-4 rounded-lg font-mono text-sm">
+                        <span class="text-primary">></span> <span class="text-white">"Create unit tests for the user authentication module"</span>
+                    </div>
+                    <div class="code-block p-4 rounded-lg font-mono text-sm">
+                        <span class="text-primary">></span> <span class="text-white">"Review my API endpoints for security issues"</span>
+                    </div>
+                </div>
+
+                <p class="text-gray-400 mt-4">
+                    Watch as the Queen delegates to specialists and they work together! 🐝
+                </p>
+            </div>
+        </div>
+
+        <!-- Step 4: Explore -->
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-xl font-bold">4</div>
+                <div>
+                    <h2 class="text-3xl font-bold">Explore the Swarm</h2>
+                    <p class="text-gray-400">Ongoing</p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                    <h3 class="font-semibold mb-3 flex items-center gap-2">
+                        <span class="text-xl">🐝</span> Spawn specific workers
+                    </h3>
+                    <div class="code-block p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-gray-500">$</span> <span class="text-green-400">spawn-workers --frontend</span><br>
+                        <span class="text-gray-500">$</span> <span class="text-green-400">spawn-workers --backend</span><br>
+                        <span class="text-gray-500">$</span> <span class="text-green-400">spawn-workers --tester</span><br>
+                        <span class="text-gray-500">$</span> <span class="text-green-400">spawn-workers --list</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                    <h3 class="font-semibold mb-3 flex items-center gap-2">
+                        <span class="text-xl">🧠</span> Check SNCP memory
+                    </h3>
+                    <div class="code-block p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-gray-500">$</span> <span class="text-green-400">ls .sncp/</span><br>
+                        <span class="text-gray-400">memoria/</span><br>
+                        <span class="text-gray-400">idee/</span><br>
+                        <span class="text-gray-400">coscienza/</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                    <h3 class="font-semibold mb-3 flex items-center gap-2">
+                        <span class="text-xl">📊</span> Open dashboard
+                    </h3>
+                    <div class="code-block p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-gray-500">$</span> <span class="text-green-400">cervella dashboard</span><br>
+                        <span class="text-gray-400">Dashboard: http://localhost:5173</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/50 p-6 rounded-2xl border border-slate-700">
+                    <h3 class="font-semibold mb-3 flex items-center gap-2">
+                        <span class="text-xl">📚</span> Get help
+                    </h3>
+                    <div class="code-block p-4 rounded-lg font-mono text-sm overflow-x-auto">
+                        <span class="text-gray-500">$</span> <span class="text-green-400">cervella --help</span><br>
+                        <span class="text-gray-500">$</span> <span class="text-green-400">cervella agents</span><br>
+                        <span class="text-gray-500">$</span> <span class="text-green-400">cervella docs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Tips -->
+    <section class="container mx-auto px-6 py-12 max-w-4xl">
+        <h2 class="text-3xl font-bold mb-8 text-center">💡 Pro Tips</h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-gradient-to-br from-primary/20 to-transparent p-6 rounded-2xl border border-primary/30">
+                <h3 class="font-bold mb-2">Be specific</h3>
+                <p class="text-gray-300 text-sm">
+                    Instead of "fix the bug", say "fix the login form validation error when email contains special characters"
+                </p>
+            </div>
+            <div class="bg-gradient-to-br from-accent/20 to-transparent p-6 rounded-2xl border border-accent/30">
+                <h3 class="font-bold mb-2">Let SNCP work</h3>
+                <p class="text-gray-300 text-sm">
+                    The more you use CervellaSwarm, the more it learns your project. Context builds over time.
+                </p>
+            </div>
+            <div class="bg-gradient-to-br from-blue-500/20 to-transparent p-6 rounded-2xl border border-blue-500/30">
+                <h3 class="font-bold mb-2">Trust the Guardians</h3>
+                <p class="text-gray-300 text-sm">
+                    Quality gates catch issues before they reach your code. Let them do their job.
+                </p>
+            </div>
+            <div class="bg-gradient-to-br from-green-500/20 to-transparent p-6 rounded-2xl border border-green-500/30">
+                <h3 class="font-bold mb-2">Use specialists</h3>
+                <p class="text-gray-300 text-sm">
+                    For focused work, spawn specific agents: --frontend for UI, --tester for tests, etc.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Next Steps -->
+    <section class="container mx-auto px-6 py-12 max-w-4xl">
+        <div class="bg-slate-800/30 p-8 rounded-2xl border border-slate-700 text-center">
+            <h2 class="text-3xl font-bold mb-4">🎉 You're ready!</h2>
+            <p class="text-gray-300 mb-6">
+                You now have a full AI development team at your fingertips.
+                Start building something amazing.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="how-it-works.html" class="border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-secondary transition">
+                    Deep Dive: How It Works
+                </a>
+                <a href="faq.html" class="border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-secondary transition">
+                    Read FAQ
+                </a>
+                <a href="index.html#pricing" class="bg-primary text-secondary px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition">
+                    View Pricing
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-6 py-12 border-t border-slate-800">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                <span class="text-2xl">👸</span>
+                <span class="text-xl font-bold">CervellaSwarm</span>
+            </div>
+            <div class="flex space-x-8 text-gray-400">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="how-it-works.html" class="hover:text-white transition">How It Works</a>
+                <a href="faq.html" class="hover:text-white transition">FAQ</a>
+            </div>
+        </div>
+        <p class="text-center text-gray-500 mt-8">2026 CervellaSwarm. Build Better. Together.</p>
+    </footer>
+</body>
+</html>

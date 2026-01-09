@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - CervellaSwarm</title>
+    <meta name="description" content="Learn how CervellaSwarm coordinates 16 AI agents to build software faster.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F59E0B',
+                        secondary: '#1E293B',
+                        accent: '#8B5CF6',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg { background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); }
+        .step-line { background: linear-gradient(to bottom, #F59E0B, #8B5CF6); }
+    </style>
+</head>
+<body class="gradient-bg text-white">
+    <!-- Navigation -->
+    <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
+        <a href="index.html" class="flex items-center space-x-2">
+            <span class="text-3xl">👸</span>
+            <span class="text-2xl font-bold">CervellaSwarm</span>
+        </a>
+        <div class="hidden md:flex space-x-8">
+            <a href="index.html#features" class="hover:text-primary transition">Features</a>
+            <a href="index.html#pricing" class="hover:text-primary transition">Pricing</a>
+            <a href="faq.html" class="hover:text-primary transition">FAQ</a>
+        </div>
+        <a href="index.html#cta" class="bg-primary text-secondary px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition">
+            Start Free
+        </a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="container mx-auto px-6 py-16 text-center">
+        <h1 class="text-5xl font-bold mb-6">How It Works</h1>
+        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+            From your request to working code in 4 simple steps.
+            The swarm handles the complexity.
+        </p>
+    </section>
+
+    <!-- Steps -->
+    <section class="container mx-auto px-6 py-12 max-w-4xl">
+
+        <!-- Step 1 -->
+        <div class="flex gap-8 mb-16">
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-2xl font-bold text-secondary">1</div>
+                <div class="w-1 h-full step-line mt-4"></div>
+            </div>
+            <div class="flex-1 pb-8">
+                <h2 class="text-3xl font-bold mb-4">You Ask</h2>
+                <p class="text-gray-300 text-lg mb-6">
+                    Tell the Queen what you want to build. Use natural language -
+                    just like talking to a senior developer.
+                </p>
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 font-mono">
+                    <p class="text-gray-400 mb-2">$ cervella</p>
+                    <p class="text-primary">> "Add a user authentication system with OAuth support"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex gap-8 mb-16">
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center text-2xl font-bold">2</div>
+                <div class="w-1 h-full step-line mt-4"></div>
+            </div>
+            <div class="flex-1 pb-8">
+                <h2 class="text-3xl font-bold mb-4">The Queen Analyzes</h2>
+                <p class="text-gray-300 text-lg mb-6">
+                    The Queen (orchestrator) breaks down your request, reads your codebase context
+                    from SNCP memory, and creates a plan.
+                </p>
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 font-mono text-sm">
+                    <p class="text-primary">[Queen] Analyzing request...</p>
+                    <p class="text-gray-400">[Queen] Reading context from .sncp/memoria/</p>
+                    <p class="text-gray-400">[Queen] Found: React frontend, FastAPI backend</p>
+                    <p class="text-primary">[Queen] Creating task plan...</p>
+                    <p class="text-green-400">[Queen] Delegating to 4 specialists</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex gap-8 mb-16">
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-2xl font-bold">3</div>
+                <div class="w-1 h-full step-line mt-4"></div>
+            </div>
+            <div class="flex-1 pb-8">
+                <h2 class="text-3xl font-bold mb-4">The Swarm Works</h2>
+                <p class="text-gray-300 text-lg mb-6">
+                    Specialized agents work in parallel - each one expert in their domain.
+                    They coordinate automatically, no micromanagement needed.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-blue-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🎨</span>
+                            <span class="font-semibold">Frontend</span>
+                        </div>
+                        <p class="text-sm text-gray-400">Building login UI, OAuth buttons, form validation...</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-blue-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">⚙️</span>
+                            <span class="font-semibold">Backend</span>
+                        </div>
+                        <p class="text-sm text-gray-400">Creating auth endpoints, JWT tokens, OAuth flow...</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-blue-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🧪</span>
+                            <span class="font-semibold">Tester</span>
+                        </div>
+                        <p class="text-sm text-gray-400">Writing unit tests, integration tests, edge cases...</p>
+                    </div>
+                    <div class="bg-slate-800/50 p-4 rounded-xl border border-blue-500/50">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🔒</span>
+                            <span class="font-semibold">Security</span>
+                        </div>
+                        <p class="text-sm text-gray-400">Checking vulnerabilities, OWASP compliance...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex gap-8 mb-16">
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-2xl font-bold">4</div>
+            </div>
+            <div class="flex-1">
+                <h2 class="text-3xl font-bold mb-4">Quality Gates Verify</h2>
+                <p class="text-gray-300 text-lg mb-6">
+                    Before any code reaches your project, 3 Guardians (powered by Claude Opus)
+                    verify quality, security, and best practices.
+                </p>
+                <div class="bg-slate-800/50 p-6 rounded-xl border border-green-500/50 font-mono text-sm">
+                    <p class="text-purple-400">[Guardian-Quality] Code review... <span class="text-green-400">PASSED</span></p>
+                    <p class="text-purple-400">[Guardian-Ops] Security audit... <span class="text-green-400">PASSED</span></p>
+                    <p class="text-purple-400">[Guardian-Research] Best practices... <span class="text-green-400">PASSED</span></p>
+                    <p class="text-green-400 mt-4">All checks passed. Code ready for merge.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- The 16 Agents -->
+    <section class="container mx-auto px-6 py-16">
+        <h2 class="text-4xl font-bold text-center mb-4">Meet the Team</h2>
+        <p class="text-gray-400 text-center mb-12">16 specialists, each with their expertise</p>
+
+        <div class="max-w-4xl mx-auto">
+            <!-- Queen -->
+            <div class="text-center mb-8">
+                <div class="inline-block bg-gradient-to-r from-primary to-yellow-400 p-1 rounded-2xl">
+                    <div class="bg-slate-900 px-8 py-4 rounded-xl">
+                        <span class="text-4xl">👸</span>
+                        <p class="font-bold mt-2">The Queen</p>
+                        <p class="text-sm text-gray-400">Orchestrator (Opus)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guardians -->
+            <div class="flex justify-center gap-4 mb-8">
+                <div class="bg-slate-800/50 px-6 py-4 rounded-xl border border-purple-500/50 text-center">
+                    <span class="text-3xl">🛡️</span>
+                    <p class="font-semibold mt-2">Quality</p>
+                    <p class="text-xs text-gray-400">Opus</p>
+                </div>
+                <div class="bg-slate-800/50 px-6 py-4 rounded-xl border border-purple-500/50 text-center">
+                    <span class="text-3xl">🛡️</span>
+                    <p class="font-semibold mt-2">Ops</p>
+                    <p class="text-xs text-gray-400">Opus</p>
+                </div>
+                <div class="bg-slate-800/50 px-6 py-4 rounded-xl border border-purple-500/50 text-center">
+                    <span class="text-3xl">🛡️</span>
+                    <p class="font-semibold mt-2">Research</p>
+                    <p class="text-xs text-gray-400">Opus</p>
+                </div>
+            </div>
+
+            <!-- Workers -->
+            <div class="flex flex-wrap justify-center gap-3">
+                <div class="bg-slate-800/50 px-4 py-3 rounded-lg border border-blue-500/30 text-center">
+                    <span class="text-2xl">🎨</span>
+                    <p class="text-sm">Frontend</p>
+                </div>
+                <div class="bg-slate-800/50 px-4 py-3 rounded-lg border border-blue-500/30 text-center">
+                    <span class="text-2xl">⚙️</span>
+                    <p class="text-sm">Backend</p>
+                </div>
+                <div class="bg-slate-800/50 px-4 py-3 rounded-lg border border-blue-500/30 text-center">
+                    <span class="text-2xl">🧪</span>
+                    <p class="text-sm">Tester</p>
+                </div>
+                <div class="bg-slate-800/50 px-4 py-3 rounded-lg border border-blue-500/30 text-center">
+                    <span class="text-2xl">📋</span>
+                    <p class="text-sm">Reviewer</p>
+                </div>
+                <div class="bg-slate-800/50 px-4 py-3 rounded-lg border border-blue-500/30 text-center">
+                    <span class="text-2xl">🔬</span>
+                    <p class="text-sm">Researcher</p>
+                </div>
+                <div class="bg-slate-800/50 px-4 py-3 rounded-lg border border-blue-500/30 text-center">
+                    <span class="text-2xl">🚀</span>
+                    <p class="text-sm">DevOps</p>
+                </div>
+                <div class="bg-slate-800/50 px-4 py-3 rounded-lg border border-blue-500/30 text-center">
+                    <span class="text-2xl">🔒</span>
+                    <p class="text-sm">Security</p>
+                </div>
+                <div class="bg-slate-800/50 px-4 py-3 rounded-lg border border-blue-500/30 text-center">
+                    <span class="text-2xl">📝</span>
+                    <p class="text-sm">Docs</p>
+                </div>
+                <div class="bg-slate-800/50 px-4 py-3 rounded-lg border border-blue-500/30 text-center">
+                    <span class="text-2xl">📊</span>
+                    <p class="text-sm">Data</p>
+                </div>
+                <div class="bg-slate-800/50 px-4 py-3 rounded-lg border border-blue-500/30 text-center">
+                    <span class="text-2xl">📈</span>
+                    <p class="text-sm">Marketing</p>
+                </div>
+                <div class="bg-slate-800/50 px-4 py-3 rounded-lg border border-blue-500/30 text-center">
+                    <span class="text-2xl">👷</span>
+                    <p class="text-sm">Engineer</p>
+                </div>
+                <div class="bg-slate-800/50 px-4 py-3 rounded-lg border border-blue-500/30 text-center">
+                    <span class="text-2xl">🔬</span>
+                    <p class="text-sm">Scientist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SNCP Memory -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="max-w-4xl mx-auto bg-slate-800/30 p-8 rounded-2xl border border-slate-700">
+            <div class="flex items-start gap-6">
+                <div class="text-6xl">🧠</div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-4">SNCP: The Shared Brain</h2>
+                    <p class="text-gray-300 mb-4">
+                        Every agent shares a persistent memory system called SNCP (Sistema Nervoso Centrale del Progetto).
+                        It remembers your decisions, your code patterns, your preferences.
+                    </p>
+                    <p class="text-primary font-semibold">
+                        You explain once. The swarm remembers forever.
+                    </p>
+                    <div class="mt-6 font-mono text-sm bg-slate-900 p-4 rounded-lg">
+                        <p class="text-gray-500">.sncp/</p>
+                        <p class="text-gray-400 ml-4">memoria/decisioni/  <span class="text-gray-600"># Why you chose React</span></p>
+                        <p class="text-gray-400 ml-4">idee/              <span class="text-gray-600"># Feature ideas</span></p>
+                        <p class="text-gray-400 ml-4">coscienza/         <span class="text-gray-600"># Session context</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container mx-auto px-6 py-16 text-center">
+        <h2 class="text-4xl font-bold mb-4">Ready to Try?</h2>
+        <p class="text-gray-300 mb-8">Start free with your own API key. No credit card required.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="index.html#cta" class="bg-primary text-secondary px-8 py-4 rounded-lg text-xl font-bold hover:bg-yellow-400 transition">
+                Start Building Free
+            </a>
+            <a href="faq.html" class="border-2 border-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-white hover:text-secondary transition">
+                Read FAQ
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-6 py-12 border-t border-slate-800">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                <span class="text-2xl">👸</span>
+                <span class="text-xl font-bold">CervellaSwarm</span>
+            </div>
+            <div class="flex space-x-8 text-gray-400">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="faq.html" class="hover:text-white transition">FAQ</a>
+                <a href="#" class="hover:text-white transition">Docs</a>
+                <a href="#" class="hover:text-white transition">GitHub</a>
+            </div>
+        </div>
+        <p class="text-center text-gray-500 mt-8">2026 CervellaSwarm. Build Better. Together.</p>
+    </footer>
+</body>
+</html>

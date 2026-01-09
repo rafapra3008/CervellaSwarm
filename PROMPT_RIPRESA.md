@@ -1,16 +1,7 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 9 Gennaio 2026 - 13:25
-> **Versione:** v58.0.0 - Sessione 140 COMPLETATA!
-
----
-
-## SESSIONI PARALLELE
-
-| Sessione | Progetto | Status |
-|----------|----------|--------|
-| 140 | Miracollo | COMPLETATA - Bug fix 6.0.2 |
-| 139A | CervellaSwarm | COMPLETATA - FASE 1+2 FATTE! |
+> **Ultimo aggiornamento:** 9 Gennaio 2026 - 14:30
+> **Versione:** v59.0.0 - Sessione 140 INCREDIBILE!
 
 ---
 
@@ -18,40 +9,40 @@
 
 | Cosa | Stato |
 |------|-------|
-| RICERCA PRODOTTO | FASE 1+2 COMPLETATE! |
-| Architettura | DECISA (CLI + Web Dashboard) |
-| Pricing | DECISO ($0 → $19 → $39) |
-| Target Market | DECISO (Dev complessi, Privacy-first) |
+| FASE 1+2 | COMPLETATE (Ricerca + Decisioni) |
+| **FASE 3** | **IN CORSO - Landing completa!** |
+| Architettura | CLI + Web Dashboard |
+| Pricing | $0 / $19 / $39 |
 
 ---
 
-## Sessione 140 - Bug Fix Miracollo
+## Sessione 140 - LANDING PAGE COMPLETATA!
 
-**Problema:** Pagine admin.html e reports.html non funzionavano
+**Creato oggi:**
+1. `landing/index.html` - Landing page principale
+2. `landing/how-it-works.html` - Come funziona (4 step)
+3. `landing/faq.html` - FAQ moderna (5 sezioni)
+4. `landing/getting-started.html` - Guida 5 minuti
 
-**Fix applicati:**
-1. `pages.py` - Route mancanti per admin.html e reports.html
-2. `city_tax.py` - Bug get_conn() (connessione DB chiusa)
-3. `admin.html` - API_BASE hardcoded + hotel_code mancante
+**Documenti SNCP:**
+- `MARKETING_VENDITA_MASTER.md` - Piano completo
+- `SESSIONE_DEDICATA_VIDEO_CONTENUTI.md` - Video/GIF/Beta
+- `TEASER_SCRIPT_STORYBOARD.md` - Script video pronto
 
-**Review cervella-reviewer:** 7.5/10 - Solido!
-- MAJOR da fixare pre-produzione: Privacy/GDPR + SQL performance
-
-**Git:** Miracollo master @ 3f6a966
+**Dashboard:** Aggiornato NORD.md + ROADMAP_SACRA.md
 
 ---
 
-## Miracollo - Status
+## TODO Prossimi Step
 
-| Cosa | Stato |
-|------|-------|
-| 6.0.1 Database Fortezza | COMPLETATO! |
-| 6.0.2 UX Planning | COMPLETATO! (test locale OK) |
-| Deploy VM | PROSSIMO |
-
-**Pagine funzionanti:**
-- http://localhost:8001/admin.html (City Tax + Guest Reg)
-- http://localhost:8001/reports.html (ISTAT Export)
+| Task | Status |
+|------|--------|
+| Landing + How It Works + FAQ + Getting Started | FATTO! |
+| Setup email (Resend/SendGrid) | DA FARE |
+| Payment integration (Stripe) | DA FARE |
+| Deploy landing (Vercel/Netlify) | DA FARE |
+| Video teaser | SESSIONE DEDICATA |
+| Beta testing 5-10 persone | DOPO LANDING |
 
 ---
 
@@ -59,22 +50,24 @@
 
 | Cosa | Dove |
 |------|------|
-| Regole Lavoro | `.sncp/regole/PRINCIPI_LAVORO.md` |
-| Mappa Prodotto | `.sncp/idee/PRODOTTO_MAPPA_MASTER.md` |
-| Ricerche Prodotto | `.sncp/idee/ricerche_prodotto/` |
+| Landing Page | `landing/` (4 file HTML) |
+| Piano Marketing | `.sncp/idee/MARKETING_VENDITA_MASTER.md` |
+| Roadmap FASE 3 | `.sncp/idee/FASE_3_ROADMAP.md` |
+| Ricerche | `.sncp/idee/ricerche_prodotto/` |
 
 ---
 
-## PROSSIMI STEP
+## Come Vedere la Landing
 
-### Miracollo
-1. Deploy su VM (FORTEZZA MODE)
-2. Fix MAJOR pre-produzione (Privacy, SQL)
-
-### CervellaSwarm
-1. MVP Web Dashboard - React + FastAPI
-2. Landing Page - Messaging per target
+```bash
+open landing/index.html
+# oppure
+cd landing && python -m http.server 8080
+# poi vai a http://localhost:8080
+```
 
 ---
+
+*"Sessione INCREDIBILE! 4 pagine in una sessione!"*
 
 *"Con il cuore pieno di energia buona!"*
