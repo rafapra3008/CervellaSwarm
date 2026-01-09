@@ -62,6 +62,24 @@ def checkpoint(message: str, git: bool):
             console.print("[green]Git commit creato![/green]")
 
         except subprocess.CalledProcessError as e:
-            console.print(f"[yellow]Git warning:[/yellow] {e}")
+            # Distingui tra errori soft e hard
+            stderr = e.stderr.decode() if e.stderr else ""
+            stdout = e.stdout.decode() if e.stdout else ""
+            output = stderr + stdout
+
+            # Errore soft: niente da committare (exit code 1 con messaggio specifico)
+            if e.returncode == 1 and ("nothing to commit" in output.lower() or
+                                       "niente da sottoporre" in output.lower() or
+                                       "no changes added" in output.lower()):
+                console.print("[yellow]Nessuna modifica da committare.[/yellow]")
+            else:
+                # Errore serio: mostra dettagli e interrompi
+                console.print(f"[red]Errore Git (code {e.returncode}):[/red]")
+                if stderr:
+                    console.print(f"[red]{stderr}[/red]")
+                if stdout:
+                    console.print(f"[dim]{stdout}[/dim]")
+                console.print("\n[yellow]Azione richiesta:[/yellow] Risolvi il problema e riprova.")
+                raise click.Abort()
 
     console.print("\n[bold]Stato salvato.[/bold] Buon lavoro!")

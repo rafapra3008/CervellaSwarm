@@ -41,15 +41,28 @@ class ClaudeClient:
 
         Args:
             api_key: API key Anthropic. Se None, usa ANTHROPIC_API_KEY env var.
+
+        Raises:
+            ValueError: Se API key non trovata o formato invalido.
         """
-        self.api_key = api_key or os.environ.get("ANTHROPIC_API_KEY")
-        if not self.api_key:
+        resolved_key = api_key or os.environ.get("ANTHROPIC_API_KEY")
+
+        if not resolved_key:
             raise ValueError(
                 "API key non trovata. "
                 "Imposta ANTHROPIC_API_KEY o passa api_key al costruttore."
             )
 
-        self.client = anthropic.Anthropic(api_key=self.api_key)
+        # Valida formato API key (previene errori e leak di dati sensibili errati)
+        if not resolved_key.startswith("sk-ant-"):
+            raise ValueError(
+                "Formato API key invalido. "
+                "La key deve iniziare con 'sk-ant-'."
+            )
+
+        # Memorizza come attributo privato per prevenire esposizione accidentale
+        self.__api_key = resolved_key
+        self.client = anthropic.Anthropic(api_key=self.__api_key)
 
     def send(
         self,
