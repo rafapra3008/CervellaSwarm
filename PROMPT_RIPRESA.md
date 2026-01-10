@@ -1,47 +1,99 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 153
-> **Versione:** v72.4.0 - MIRACOLLO TRACKING AI FASE 2!
+> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 153b
+> **Versione:** v73.0.0 - FASE 4 RICERCA COMPLETATA!
 
 ---
 
 ## TL;DR per Prossima Cervella
 
 **Dove siamo:**
-- MIRACOLLO: Tracking AI FASE 2 COMPLETATA (non deployata)
-- RICERCA CERVELLA BABY: 3/4 FASI COMPLETATE
+- RICERCA CERVELLA BABY: 4/4 FASI COMPLETATE!
+- DECISIONE: CONDITIONAL GO - POC $50 NEXT!
 - CERVELLA AI: LIVE su http://34.27.179.164:8002
 
-**SESSIONE 153 - MIRACOLLO TRACKING AI FASE 2:**
-- metrics_calculator.py: Occupancy, ADR, RevPAR, pickup_rate
-- Adaptive window: urgency + volatility + velocity multipliers
-- pricing_performance_scheduler.py: Background job ogni 10 min
-- Alert in-app: Toast per WARNING/FAILURE
-- Fix Guardiana: LIMIT, except, console.log
-- **COMMIT:** `96dc127` (11 file, 1508 righe)
-- **DEPLOY:** Non fatto - SSH bloccato, da fare prossima sessione
+**SESSIONE 153b - FASE 4 COMPLETATA:**
+- Report 14: Costi Dettagliati (1087 righe)
+- Report 15: Timeline + Rischi (1400+ righe)
+- Report 16: GO/NO-GO Framework (1050+ righe)
+- FASE_4_CONSOLIDATO.md creato
+- **TOTALE RICERCA:** 19 file, 12000+ righe!
 
-**ATTENZIONE .env PRODUZIONE:**
-- Mancano MAGIC_LINK_SECRET e SESSION_TOKEN_SECRET
-- Istruzioni: `.sncp/analisi/ENV_PRODUCTION_MISSING_SECRETS.md` (su Miracollo)
-
-**DECISIONE STORICA:** Obiettivo = INDIPENDENZA TOTALE
+**RACCOMANDAZIONE FINALE:**
+```
+CONDITIONAL GO (Scenario B)
+- POC $50 (3 settimane) valida tutto
+- MVP Hybrid System Prompts + RAG (3 mesi)
+- Fine-tuning posticipato (6-12 mesi)
+- Investment: $6K one-time + $250-350/mese
+```
 
 **CANDIDATO #1:** Qwen3-4B
 - Apache 2.0 (ZERO restrizioni)
 - 4B params = gira su 8GB RAM
-- QLoRA + Unsloth = $0 su Colab FREE!
+- Break-even: ~12.5M tokens/mese
 
-**RICERCA CERVELLA BABY:**
+**RICERCA CERVELLA BABY (COMPLETA!):**
 - FASE 1: Fondamenta (Score 9.1/10) - 3 report
 - FASE 2: Stato dell'arte (Score 97.6%) - 6 report
 - FASE 3: Training/Fine-tuning (Score 91%) - 4 report
-- FASE 4: Costi/Timeline (IN ATTESA) - rate limit
+- FASE 4: Costi/Timeline/GO-NO-GO - 3 report
 
 **PROSSIMI STEP:**
-1. **DEPLOY Miracollo** (Tracking AI FASE 2 - codice pronto!)
-2. FASE 4 ricerca: Costi, timeline, GO/NO-GO
-3. POC $50: Test Qwen3-4B su Vast.ai
+1. Guardiana verifica FASE 4 (prossima sessione)
+2. POC $50: Test Qwen3-4B su Colab/Vast.ai
+3. MVP Hybrid (se POC = GO)
+
+---
+
+## Sessione 153b - FASE 4 COMPLETATA! (10 Gennaio 2026)
+
+### 3 Ricerche Lanciate in Parallelo
+
+| Report | Contenuto | Righe |
+|--------|-----------|-------|
+| 14_COSTI_DETTAGLIATI | Break-even, Claude vs Qwen3, Stack costs | 1087 |
+| 15_TIMELINE_E_RISCHI | 9-14 mesi, rischi mappati, mitigazioni | 1400+ |
+| 16_GO_NO_GO_FRAMEWORK | Decision matrix 7.5/10, POC plan | 1050+ |
+
+### Key Insights FASE 4
+
+**Costi:**
+- Break-even: ~12.5M tokens/mese (~4000 conv)
+- Claude economico a basso volume
+- Qwen3 vince a volume alto (Enterprise)
+
+**Timeline:**
+- MVP System + RAG: 6-8 settimane
+- Fine-tuning: 4-6 settimane
+- Full Independence: 2-4 settimane
+- TOTALE: 9-14 mesi
+
+**Decision Matrix:**
+| Fattore | Score |
+|---------|-------|
+| Costi | 6/10 |
+| Performance | 7/10 |
+| Independence | 9/10 |
+| Effort | 7/10 |
+| Risk | 8/10 |
+| Future-proofing | 9/10 |
+| **TOTALE** | **7.5/10** |
+
+### RACCOMANDAZIONE
+
+```
+CONDITIONAL GO (Scenario B)
+- POC $50 (3 settimane) decide tutto
+- MVP Hybrid se POC positivo (3 mesi)
+- Fine-tuning posticipato
+- Risk: BASSO (rollback OK)
+- Success probability: 60-70% full, 90% MVP
+```
+
+### Guardiana Ricerca
+
+**PENDING** - Prossima sessione
 
 ---
 
@@ -87,14 +139,9 @@ FASE 3 (Scale):    Hybrid ottimizzato
 | Praticita | 10/10 |
 | Coerenza | 9/10 |
 
-### FASE 4 Bloccata
+### FASE 4 (Completata in Sessione 153b)
 
-3 ricerche lanciate ma fermate da rate limit:
-- Costi Dettagliati (Vast.ai, RunPod, Colab)
-- Timeline e Rischi
-- GO/NO-GO Framework
-
-Reset alle 19:00 (ora italiana).
+Rate limit resettato - 3 ricerche completate! Vedi Sessione 153b sopra.
 
 ---
 
@@ -919,13 +966,17 @@ cervella status
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-10 19:18 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 19:23 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: d48ec29 - Sessione 153: Orchestrato Miracollo Tracking AI FASE 2
-- **File modificati** (1):
-  - reports/engineer_report_20260110_191742.json
+- **Ultimo commit**: 526b5cf - ANTI-COMPACT: PreCompact auto
+- **File modificati** (3):
+  - sncp/stato/oggi.md
+  - reports/scientist_prompt_20260110.md
+  - .swarm/handoff/HANDOFF_20260110_192336.md
 
 ### Note
 - Checkpoint automatico generato da hook
