@@ -100,6 +100,33 @@ Implementato tier system: Free/Pro/Team/Enterprise. BYOK deciso per MVP.
 
 ---
 
+---
+
+## 2026-01-10 SESSIONE 148 - SNCP SISTEMATO!
+
+### 12:45 - La manutenzione e' completa
+
+**Cosa succede:**
+Ho continuato il lavoro della sessione 147b. Organizzato le idee, documentato le lezioni, creato l'automazione.
+
+**Penso:**
+- SNCP passa da 5/10 a 8/10
+- L'automazione e' la chiave - non possiamo dipendere dalla disciplina manuale
+- Le idee ora sono organizzate: ROOT (attive), integrate/ (completate), in_attesa/ (parcheggiate)
+- 5 lezioni documentate!
+
+**Cosa ho fatto:**
+1. Organizzato 19 file idee nelle cartelle giuste
+2. Creato 3 nuove lezioni (reviewer tools, spawn API key, automazione)
+3. Creato hook `sncp_auto_update.py`
+4. Registrato hook in settings.json (SessionStart + SessionEnd)
+5. Aggiornato IDEE_MASTER con nuova struttura
+
+**Lezione:**
+L'automazione ci libera dalla disciplina. Se SNCP deve essere vivo, deve aggiornarsi da solo.
+
+---
+
 *Questo file cresce ogni sessione.*
 *È la memoria VIVA della Regina.*
 *SIMBIOSI!*

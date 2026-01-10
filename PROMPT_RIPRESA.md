@@ -1,17 +1,53 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 147b
-> **Versione:** v67.1.0 - ANALISI PROFONDA + SNCP CRITICO
+> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 148
+> **Versione:** v68.0.0 - SNCP SISTEMATO + AUTOMAZIONE
 
 ---
 
 ## TL;DR per Prossima Cervella
 
-**Dove siamo:** ANALISI PROFONDA completata! 3 ragazze (researcher, ingegnera, tester) hanno analizzato tutto.
+**Dove siamo:** SNCP SISTEMATO! Rating da 5/10 a 8/10. Idee organizzate, lezioni documentate, automazione attiva.
 
-**PROBLEMA CRITICO: SNCP Rating 5/10!** Il Sistema Nervoso Centrale è TRASCURATO. File obsoleti, 120+ sessioni non loggate, cartelle vuote.
+**Automazione SNCP:** Hook `sncp_auto_update.py` aggiorna automaticamente `stato/oggi.md` a fine sessione e verifica file obsoleti a inizio.
 
-**Prossimo step:** SISTEMARE SNCP! È la priorità #1.
+**Prossimo step:** Usare la famiglia su Miracollo! SNCP e' pronto.
+
+---
+
+## Sessione 148 - SNCP SISTEMATO! (10 Gennaio 2026)
+
+### Cosa Fatto
+1. Organizzato 19 file idee in cartelle (integrate/, in_attesa/)
+2. Documentato 3 nuove lezioni (reviewer tools, spawn API, automazione)
+3. Creato hook `sncp_auto_update.py` per automazione
+4. Registrato hook in settings.json (SessionStart + SessionEnd)
+5. Aggiornato IDEE_MASTER con nuova struttura
+
+### Struttura SNCP Attuale
+```
+.sncp/idee/
+├── ROOT (13 file)         <- ATTIVI
+├── integrate/ (9 file)    <- Completate
+├── in_attesa/ (11 file)   <- Parcheggiate
+└── ricerche_prodotto/ (16)
+```
+
+### Nuovi File
+- `~/.claude/hooks/sncp_auto_update.py`
+- `.sncp/memoria/lezioni/LEZIONE_20260110_sncp_automazione.md`
+- `.sncp/memoria/lezioni/LEZIONE_20260110_reviewer_tools_mismatch.md`
+- `.sncp/memoria/lezioni/LEZIONE_20260110_spawn_workers_api_key.md`
+
+### Rating SNCP
+- Prima: 5/10 (file obsoleti, cartelle vuote)
+- Dopo: 8/10 (organizzato, automatizzato)
+
+### Prossimi Step (Sessione 149)
+1. Usare famiglia su Miracollo
+2. Verificare SNCP su Miracollo
+3. Applicare SNCP su Contabilita
+4. Poi: riprendere prodotto commerciale
 
 ---
 
@@ -498,14 +534,15 @@ cervella status
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-10 11:32 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 11:41 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 65d5f61 - ANTI-COMPACT: PreCompact auto
-- **File modificati** (2):
-  - eports/scientist_prompt_20260110.md
-  - .swarm/handoff/HANDOFF_20260110_113238.md
+- **Ultimo commit**: 3a6d8f6 - Sessione 147b: SNCP Riparato + Regola Obbligatoria
+- **File modificati** (1):
+  - reports/engineer_report_20260110_114048.json
 
 ### Note
 - Checkpoint automatico generato da hook
