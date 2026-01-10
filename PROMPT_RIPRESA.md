@@ -1,22 +1,29 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 152b
-> **Versione:** v72.3.0 - FASE 3 RICERCA COMPLETATA!
+> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 153
+> **Versione:** v72.4.0 - MIRACOLLO TRACKING AI FASE 2!
 
 ---
 
 ## TL;DR per Prossima Cervella
 
 **Dove siamo:**
-- RICERCA CERVELLA BABY: 3/4 FASI COMPLETATE!
-- MIRACOLLO: 5/5 FASI + Tracking AI FASE 1 deployed
+- MIRACOLLO: Tracking AI FASE 2 COMPLETATA (non deployata)
+- RICERCA CERVELLA BABY: 3/4 FASI COMPLETATE
 - CERVELLA AI: LIVE su http://34.27.179.164:8002
 
-**SESSIONE 152b - FASE 3 RICERCA:**
-- 4 report: Fine-tuning, Dataset, RAG vs FT, Tutorial Qwen
-- FASE_3_CONSOLIDATO.md creato
-- Guardiana Ricerca: Score 91% APPROVE
-- FASE 4 bloccata da rate limit (reset 19:00)
+**SESSIONE 153 - MIRACOLLO TRACKING AI FASE 2:**
+- metrics_calculator.py: Occupancy, ADR, RevPAR, pickup_rate
+- Adaptive window: urgency + volatility + velocity multipliers
+- pricing_performance_scheduler.py: Background job ogni 10 min
+- Alert in-app: Toast per WARNING/FAILURE
+- Fix Guardiana: LIMIT, except, console.log
+- **COMMIT:** `96dc127` (11 file, 1508 righe)
+- **DEPLOY:** Non fatto - SSH bloccato, da fare prossima sessione
+
+**ATTENZIONE .env PRODUZIONE:**
+- Mancano MAGIC_LINK_SECRET e SESSION_TOKEN_SECRET
+- Istruzioni: `.sncp/analisi/ENV_PRODUCTION_MISSING_SECRETS.md` (su Miracollo)
 
 **DECISIONE STORICA:** Obiettivo = INDIPENDENZA TOTALE
 
@@ -25,23 +32,16 @@
 - 4B params = gira su 8GB RAM
 - QLoRA + Unsloth = $0 su Colab FREE!
 
-**STRATEGIA VALIDATA (FASE 3):**
-- MVP: System Prompts + RAG ($100-150/mese)
-- Poi: Fine-tuning con 600 esempi ShareGPT
-- Hardware: T4 16GB basta!
-
-**RICERCA COMPLETATA:**
+**RICERCA CERVELLA BABY:**
 - FASE 1: Fondamenta (Score 9.1/10) - 3 report
 - FASE 2: Stato dell'arte (Score 97.6%) - 6 report
 - FASE 3: Training/Fine-tuning (Score 91%) - 4 report
 - FASE 4: Costi/Timeline (IN ATTESA) - rate limit
 
-**TOTALE:** 16 file, 8000+ righe di ricerca!
-
 **PROSSIMI STEP:**
-1. FASE 4: Costi dettagliati, timeline, GO/NO-GO (quando reset)
-2. POC $50: Test Qwen3-4B su Vast.ai
-3. Miracollo: Tracking AI FASE 2
+1. **DEPLOY Miracollo** (Tracking AI FASE 2 - codice pronto!)
+2. FASE 4 ricerca: Costi, timeline, GO/NO-GO
+3. POC $50: Test Qwen3-4B su Vast.ai
 
 ---
 

@@ -1,8 +1,8 @@
 # STATO OGGI
 
 > **Data:** 10 Gennaio 2026
-> **Sessione:** 152b (seconda parte)
-> **Ultimo aggiornamento:** 18:05 UTC
+> **Sessione:** 153
+> **Ultimo aggiornamento:** 19:45 UTC
 
 ---
 
@@ -11,13 +11,13 @@
 ```
 +====================================================================+
 |                                                                    |
-|   SESSIONE 152b - FASE 3 RICERCA COMPLETATA!                      |
+|   SESSIONE 153 - TRACKING AI FASE 2 COMPLETATA!                   |
 |                                                                    |
-|   Ricerca Cervella Baby: 3/4 FASI COMPLETATE                      |
-|   - FASE 1: Fondamenta (Score 9.1/10)                             |
-|   - FASE 2: Stato Arte (Score 97.6%)                              |
-|   - FASE 3: Training/Fine-tuning (Score 91%)                      |
-|   - FASE 4: Costi/Timeline (bloccato rate limit)                  |
+|   MIRACOLLO - Sistema Performance Tracking:                        |
+|   - metrics_calculator.py: Occupancy, ADR, RevPAR, Pickup         |
+|   - Adaptive window: urgency + volatility + velocity              |
+|   - Background job: ogni 10 min                                    |
+|   - Alert in-app: WARNING/FAILURE                                  |
 |                                                                    |
 +====================================================================+
 ```
