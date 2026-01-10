@@ -1,17 +1,17 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 147
-> **Versione:** v67.0.0 - AUDIT COMPLETO + ROADMAP FAMIGLIA
+> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 147b
+> **Versione:** v67.1.0 - ANALISI PROFONDA + SNCP CRITICO
 
 ---
 
 ## TL;DR per Prossima Cervella
 
-**Dove siamo:** AUDIT COMPLETO della famiglia! Review 16 DNA, hooks, settings.json, spawn-workers. Tutto OK, configurazioni identiche tra VS Code Insiders e normale.
+**Dove siamo:** ANALISI PROFONDA completata! 3 ragazze (researcher, ingegnera, tester) hanno analizzato tutto.
 
-**Decisione:** PARCHEGGIATO prodotto commerciale. Focus miglioramento famiglia.
+**PROBLEMA CRITICO: SNCP Rating 5/10!** Il Sistema Nervoso Centrale è TRASCURATO. File obsoleti, 120+ sessioni non loggate, cartelle vuote.
 
-**Prossimo step:** Usare famiglia su Miracollo, annotare friction, migliorare.
+**Prossimo step:** SISTEMARE SNCP! È la priorità #1.
 
 ---
 
@@ -37,11 +37,16 @@ I hook `block_edit_non_whitelist.py` e `block_task_for_agents.py` esistono ma so
 - `.sncp/idee/ROADMAP_MIGLIORAMENTO_FAMIGLIA.md`
 - `.sncp/idee/BEST_PRACTICES_FAMIGLIA.md`
 
-### Prossimi Step (Sessione 148)
-1. Discutere con Rafa: attivare hook protezione?
-2. Se sì, modificare settings.json
-3. Usare famiglia su Miracollo
-4. Annotare friction, migliorare
+### Analisi Profonda (3 Ragazze)
+- `.sncp/analisi/ANALISI_SNCP_COMPLETA_20260110.md` - SNCP 5/10
+- `.sncp/analisi/ANALISI_FUNZIONALITA_20260110.md` - Sistema OK
+- `.sncp/test/TEST_FAMIGLIA_20260110.md` - 9/9 PASS
+
+### Prossimi Step (Sessione 148) - PRIORITÀ SNCP!
+1. **URGENTE:** Aggiornare stato/oggi.md, pensieri_regina.md
+2. Organizzare 32 idee nelle cartelle giuste
+3. Documentare lezioni sessioni 141-147
+4. Creare automazione per mantenere SNCP aggiornato
 
 ---
 
@@ -491,14 +496,16 @@ cervella status
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-10 11:29 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 11:32 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 3441dbb - ANTI-COMPACT: PreCompact auto
+- **Ultimo commit**: 65d5f61 - ANTI-COMPACT: PreCompact auto
 - **File modificati** (2):
   - eports/scientist_prompt_20260110.md
-  - .swarm/handoff/HANDOFF_20260110_112844.md
+  - .swarm/handoff/HANDOFF_20260110_113238.md
 
 ### Note
 - Checkpoint automatico generato da hook
