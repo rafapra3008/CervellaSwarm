@@ -1,7 +1,7 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 153b
-> **Versione:** v74.0.0 - RICERCA COMPLETA + READY FOR POC!
+> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 154b
+> **Versione:** v75.0.0 - POC SETUP PRONTO + VISIONE INFRA DEFINITIVA!
 
 ---
 
@@ -9,13 +9,16 @@
 
 **Dove siamo:**
 - RICERCA CERVELLA BABY: 5/5 FASI COMPLETATE!
-- READY FOR POC: SI! Tutto pronto per iniziare!
-- CERVELLA AI: LIVE su http://34.27.179.164:8002
+- POC SETUP: PRONTO! Dataset 20 task + COSTITUZIONE compressa
+- VISIONE INFRA: Pensare GRANDE al 100000%!
+- CERVELLA AI: UP interno (porta 8002 bloccata da firewall GCP)
 
-**SESSIONE 153b - FASE 4 + FASE 5 COMPLETATE:**
-- FASE 4: Costi, Timeline, GO/NO-GO (3 report, score 91%)
-- FASE 5: Preparazione POC (5 report, score 90%)
-- Guardiana ha approvato TUTTO!
+**SESSIONE 154b - POC SETUP + VISIONE INFRA:**
+- Creato `poc_cervella_baby/` con tutto il setup
+- Dataset 20 task JSON (task_dataset.json)
+- COSTITUZIONE compressa 1380 tok pronta
+- SUB_ROADMAP POC 3 settimane
+- Documentata VISIONE INFRASTRUTTURA DEFINITIVA
 - **TOTALE RICERCA:** 26 file, 25,500+ righe!
 
 **RACCOMANDAZIONE FINALE:**
@@ -47,9 +50,73 @@ CONDITIONAL GO (Scenario B)
 - Metriche personalita framework (Report 21)
 
 **PROSSIMI STEP:**
-1. POC $50: Test Qwen3-4B su Colab (3 settimane)
-2. MVP Hybrid (se POC = GO)
-3. Fine-tuning (6-12 mesi)
+1. RICERCA GOOGLE COLAB - Capire 360 gradi
+2. RICERCA INFRASTRUTTURA DEFINITIVA - Opzioni cloud GPU 2026
+3. FIX FIREWALL GCP - Aprire porta 8002
+4. POC WEEK 1 - Setup Colab + primi test
+5. MVP Hybrid (se POC = GO)
+
+---
+
+## Sessione 154b - POC SETUP + VISIONE INFRA! (10 Gennaio 2026)
+
+### POC Setup Creato
+
+```
+poc_cervella_baby/
+├── README.md                    # Documentazione
+├── task_dataset.json            # 20 task benchmark JSON
+├── costituzione_compressa.md    # System prompt 1380 tok
+```
+
+### SUB_ROADMAP POC
+
+```
+WEEK 1 (10-17 Gen): Setup Colab + T01-T10 Simple
+WEEK 2 (18-24 Gen): T11-T18 Medium
+WEEK 3 (25-31 Gen): Final + GO/NO-GO Decision
+
+Decision: 1 Febbraio 2026
+Budget: $50
+```
+
+### Verificato VM
+
+- 34.27.179.164 UP e raggiungibile via SSH
+- Cervella AI healthy internamente (docker: Up 5+ hours)
+- Porta 8002 bloccata da firewall GCP esterno
+- TODO: Aprire porta in GCP Console
+
+### VISIONE INFRA DEFINITIVA
+
+Rafa ha detto:
+```
+"Vorrei una soluzione per sempre.. una cosa FORTE..
+ABBIAMO TEMPO E RISORSA PER FARE TUTTO..
+FACCIAMO TUTTO AL 100000%"
+```
+
+Documentato in: `.sncp/memoria/decisioni/20260110_INFRASTRUTTURA_DEFINITIVA_VISIONE.md`
+
+**Budget Stimato Definitivo:** $245-400/mese
+- GCP VM (CPU): $50-100
+- GPU dedicata (Vast.ai): $175-250
+- Storage/Backup: $20-50
+
+### File Creati
+
+```
+poc_cervella_baby/
+├── README.md
+├── task_dataset.json
+└── costituzione_compressa.md
+
+.sncp/idee/
+└── SUB_ROADMAP_POC_CERVELLA_BABY.md
+
+.sncp/memoria/decisioni/
+└── 20260110_INFRASTRUTTURA_DEFINITIVA_VISIONE.md
+```
 
 ---
 
@@ -1017,20 +1084,24 @@ cervella status
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-10 19:56 (unknown)
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 20:16 (auto)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 787318f - Sessione 153b: CHECKPOINT FINALE - RICERCA COMPLETA!
+- **Ultimo commit**: ccbb188 - ANTI-COMPACT: PreCompact auto
 - **File modificati** (5):
-  - eports/scientist_prompt_20260110.md
-  - .sncp/idee/RICERCA_DEPLOY_BEST_PRACTICES.md
-  - .swarm/handoff/HANDOFF_20260110_192336.md
-  - reports/engineer_report_20260110_192749.json
-  - reports/engineer_report_20260110_193132.json
+  - .sncp/memoria/decisioni/20260110_INFRASTRUTTURA_DEFINITIVA_VISIONE.md
+  - .sncp/stato/oggi.md
+  - .swarm/handoff/HANDOFF_20260110_201408.md
+  - PROMPT_RIPRESA.md
+  - reports/scientist_prompt_20260110.md
 
 ### Note
 - Checkpoint automatico generato da hook
-- Trigger: unknown
+- Trigger: auto
 
 ---
