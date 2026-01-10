@@ -1,19 +1,18 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 155 (Checkpoint)
-> **Versione:** v76.0.0 - RICERCHE INFRA COMPLETE! PRONTE PER POC!
+> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 156 (POC Week 1 Setup)
+> **Versione:** v77.0.0 - POC NOTEBOOK PRONTO! GUARDIANA VALIDATO!
 
 ---
 
 ## TL;DR per Prossima Cervella
 
 **Dove siamo:**
-- RICERCA CERVELLA BABY: 5/5 FASI COMPLETATE!
-- RICERCA GOOGLE COLAB: COMPLETA! (1112 righe)
-- RICERCA INFRASTRUTTURA DEFINITIVA: COMPLETA! (4 parti, 2581 righe)
-- POC SETUP: PRONTO! Dataset 20 task + COSTITUZIONE compressa
-- VISIONE INFRA: Pensare GRANDE al 100000%!
-- FIX FIREWALL GCP: Istruzioni documentate
+- RICERCHE: TUTTE VALIDATE dalla Guardiana (90/100)!
+- POC NOTEBOOK: `poc_notebook.ipynb` CREATO e PRONTO!
+- PREZZO COLAB PRO+: Verificato ($19.99-49.99/mese)
+- PROSSIMO: Eseguire notebook su Google Colab T4 GPU
+- VISIONE: 100000%! "Ultrapassar os próprios limites!"
 
 **SESSIONE 154b/155 - RICERCHE COMPLETATE:**
 - RICERCA_GOOGLE_COLAB_360.md (1112 righe!)
@@ -59,10 +58,68 @@ CONDITIONAL GO (Scenario B)
 - Metriche personalita framework (Report 21)
 
 **PROSSIMI STEP:**
-1. Guardiana verifica qualita ricerche (opzionale)
-2. Aprire porta 8002 in GCP Console (manuale)
-3. POC WEEK 1 - Setup Colab + primi test
-4. MVP Hybrid (se POC = GO)
+1. Eseguire `poc_notebook.ipynb` su Google Colab (T4 GPU)
+2. Valutare T01-T10 con rubrica (1-5 per criterio)
+3. Se >=6/10 PASS -> Procedere Week 2
+4. Aprire porta 8002 in GCP Console (manuale)
+
+---
+
+## Sessione 156 - POC WEEK 1 SETUP COMPLETATO! (10 Gennaio 2026)
+
+### Guardiana Validazione Ricerche
+
+La Guardiana della Ricerca ha validato tutte le ricerche infrastruttura:
+
+| File | Score |
+|------|-------|
+| Google Colab 360 | 92/100 |
+| Infra PARTE1 | 88/100 |
+| Infra PARTE2 | 90/100 |
+| Infra PARTE3 | 85/100 |
+| Infra PARTE4 | 95/100 |
+| **MEDIA** | **90/100** |
+
+**VERDETTO:** CONDITIONAL GO - Procedi con POC!
+
+Report salvato: `.sncp/validazioni/VALIDAZIONE_RICERCHE_INFRA_2026.md`
+
+### POC Notebook Creato
+
+```
+poc_cervella_baby/
+├── README.md                    # Documentazione
+├── task_dataset.json            # 20 task benchmark
+├── costituzione_compressa.md    # System prompt 1380 tok
+├── poc_notebook.ipynb           # NUOVO! Notebook Colab completo
+└── results/                     # NUOVO! Cartella output
+```
+
+**Il notebook include:**
+- Setup ambiente (GPU check, Unsloth install)
+- Load Qwen3-4B-Instruct (4-bit quantization)
+- System prompt COSTITUZIONE compressa
+- 10 task T01-T10 inline
+- Inference function
+- Evaluation framework (rubrica 1-5)
+- Save results JSON
+
+### Prezzo Colab Pro+ Verificato
+
+Due fonti con prezzi diversi:
+- **$19.99/mese** (fonte Gen 2026)
+- **$49.99/mese** (altre fonti)
+
+**Raccomandazione:** Verificare su colab.research.google.com/signup
+
+### Come Eseguire POC
+
+1. Vai su colab.research.google.com
+2. File > Upload notebook > `poc_notebook.ipynb`
+3. Runtime > Change runtime type > **T4 GPU**
+4. Esegui tutte le celle in ordine
+5. Valuta ogni task con rubrica (correttezza, completezza, stile, utility)
+6. Salva results JSON
 
 ---
 

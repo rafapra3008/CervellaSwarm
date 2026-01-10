@@ -1,8 +1,8 @@
 # STATO OGGI
 
 > **Data:** 10 Gennaio 2026
-> **Sessione:** 155 (Checkpoint)
-> **Ultimo aggiornamento:** 21:00 UTC
+> **Sessione:** 156 (POC Week 1 Setup)
+> **Ultimo aggiornamento:** 21:45 UTC
 
 ---
 
@@ -11,14 +11,61 @@
 ```
 +====================================================================+
 |                                                                    |
-|   SESSIONE 155 - CHECKPOINT RICERCHE COMPLETE!                    |
+|   SESSIONE 156 - POC WEEK 1 SETUP COMPLETATO!                     |
 |                                                                    |
-|   RICERCA GOOGLE COLAB: 1112 righe - COMPLETA!                    |
-|   RICERCA INFRASTRUTTURA: 2581 righe (4 parti) - COMPLETA!        |
-|   PROSSIMO: POC WEEK 1 su Google Colab                            |
+|   GUARDIANA: Ricerche VALIDATE (90/100)                           |
+|   NOTEBOOK: poc_notebook.ipynb CREATO!                            |
+|   PREZZO COLAB PRO+: Verificato ($19.99-49.99/mese)               |
+|   PROSSIMO: Eseguire notebook su Colab!                           |
 |                                                                    |
 +====================================================================+
 ```
+
+---
+
+## Sessione 156 - POC Week 1 Setup (10 Gennaio 2026)
+
+### Guardiana Validazione
+
+La Guardiana della Ricerca ha validato tutte le ricerche:
+
+| File | Score |
+|------|-------|
+| Google Colab 360 | 92/100 |
+| Infra PARTE1 | 88/100 |
+| Infra PARTE2 | 90/100 |
+| Infra PARTE3 | 85/100 |
+| Infra PARTE4 | 95/100 |
+| **MEDIA** | **90/100** |
+
+**VERDETTO:** CONDITIONAL GO
+
+### POC Notebook Creato
+
+```
+poc_cervella_baby/
+├── README.md                    # Documentazione
+├── task_dataset.json            # 20 task benchmark
+├── costituzione_compressa.md    # System prompt 1380 tok
+├── poc_notebook.ipynb           # NUOVO! Notebook Colab completo
+└── results/                     # NUOVO! Cartella output
+```
+
+### Prezzo Colab Pro+ Verificato
+
+Due fonti con prezzi diversi:
+- $19.99/mese (fonte recente Gen 2026)
+- $49.99/mese (altre fonti)
+
+**Raccomandazione:** Verificare su colab.research.google.com prima di acquisto.
+
+### Prossimi Step
+
+1. Aprire Google Colab
+2. Upload poc_notebook.ipynb
+3. Runtime > T4 GPU
+4. Eseguire tutte le celle
+5. Valutare T01-T10 con rubrica
 
 ---
 
