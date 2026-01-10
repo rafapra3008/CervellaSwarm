@@ -1,7 +1,7 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 154b
-> **Versione:** v75.0.0 - POC SETUP PRONTO + VISIONE INFRA DEFINITIVA!
+> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 155 (Checkpoint)
+> **Versione:** v76.0.0 - RICERCHE INFRA COMPLETE! PRONTE PER POC!
 
 ---
 
@@ -9,17 +9,21 @@
 
 **Dove siamo:**
 - RICERCA CERVELLA BABY: 5/5 FASI COMPLETATE!
+- RICERCA GOOGLE COLAB: COMPLETA! (1112 righe)
+- RICERCA INFRASTRUTTURA DEFINITIVA: COMPLETA! (4 parti, 2581 righe)
 - POC SETUP: PRONTO! Dataset 20 task + COSTITUZIONE compressa
 - VISIONE INFRA: Pensare GRANDE al 100000%!
-- CERVELLA AI: UP interno (porta 8002 bloccata da firewall GCP)
+- FIX FIREWALL GCP: Istruzioni documentate
 
-**SESSIONE 154b - POC SETUP + VISIONE INFRA:**
-- Creato `poc_cervella_baby/` con tutto il setup
-- Dataset 20 task JSON (task_dataset.json)
-- COSTITUZIONE compressa 1380 tok pronta
-- SUB_ROADMAP POC 3 settimane
-- Documentata VISIONE INFRASTRUTTURA DEFINITIVA
-- **TOTALE RICERCA:** 26 file, 25,500+ righe!
+**SESSIONE 154b/155 - RICERCHE COMPLETATE:**
+- RICERCA_GOOGLE_COLAB_360.md (1112 righe!)
+- RICERCA_INFRASTRUTTURA_DEFINITIVA_2026_PARTE1.md (424 righe)
+- RICERCA_INFRASTRUTTURA_DEFINITIVA_2026_PARTE2.md (694 righe)
+- RICERCA_INFRASTRUTTURA_DEFINITIVA_2026_PARTE3.md (489 righe)
+- RICERCA_INFRASTRUTTURA_DEFINITIVA_2026_PARTE4.md (974 righe)
+- ISTRUZIONI_FIREWALL_GCP.md documentato
+- **TOTALE NUOVA RICERCA:** 3693 righe!
+- **TOTALE RICERCA PROGETTO:** 29+ file, 29,000+ righe!
 
 **RACCOMANDAZIONE FINALE:**
 ```
@@ -42,6 +46,11 @@ CONDITIONAL GO (Scenario B)
 - FASE 4: Costi/Timeline/GO-NO-GO (91%) - 3 report
 - FASE 5: Preparazione POC (90%) - 5 report
 
+**RICERCHE AGGIUNTIVE (Sessione 154b/155):**
+- RICERCA_GOOGLE_COLAB_360.md - Tutto su Colab/Colab Pro
+- RICERCA_INFRASTRUTTURA_DEFINITIVA (4 parti) - Opzioni GPU cloud 2026
+- ISTRUZIONI_FIREWALL_GCP.md - Come aprire porta 8002
+
 **DELIVERABLES PRONTI:**
 - 20 task benchmark (Report 17)
 - COSTITUZIONE compressa 1380 tok (Report 18)
@@ -50,11 +59,54 @@ CONDITIONAL GO (Scenario B)
 - Metriche personalita framework (Report 21)
 
 **PROSSIMI STEP:**
-1. RICERCA GOOGLE COLAB - Capire 360 gradi
-2. RICERCA INFRASTRUTTURA DEFINITIVA - Opzioni cloud GPU 2026
-3. FIX FIREWALL GCP - Aprire porta 8002
-4. POC WEEK 1 - Setup Colab + primi test
-5. MVP Hybrid (se POC = GO)
+1. Guardiana verifica qualita ricerche (opzionale)
+2. Aprire porta 8002 in GCP Console (manuale)
+3. POC WEEK 1 - Setup Colab + primi test
+4. MVP Hybrid (se POC = GO)
+
+---
+
+## Sessione 155 - CHECKPOINT RICERCHE COMPLETE! (10 Gennaio 2026)
+
+### Ricerche Completate
+
+La sessione 154b aveva lanciato le ricerche ma e' andata in auto-compact mentre aspettava. I file sono stati scritti con successo!
+
+| File | Righe | Contenuto |
+|------|-------|-----------|
+| RICERCA_GOOGLE_COLAB_360.md | 1112 | Tutto su Colab: limiti, Pro, Pro+, costi, alternative |
+| RICERCA_INFRASTRUTTURA_DEFINITIVA_PARTE1.md | 424 | Opzioni cloud GPU 2026 |
+| RICERCA_INFRASTRUTTURA_DEFINITIVA_PARTE2.md | 694 | Comparativa provider |
+| RICERCA_INFRASTRUTTURA_DEFINITIVA_PARTE3.md | 489 | Architetture e costi |
+| RICERCA_INFRASTRUTTURA_DEFINITIVA_PARTE4.md | 974 | Raccomandazioni finali |
+| ISTRUZIONI_FIREWALL_GCP.md | ~50 | Come aprire porta 8002 |
+
+**TOTALE NUOVA RICERCA:** 3693 righe
+
+### Stato Progetto
+
+```
+RICERCA CERVELLA BABY        [####################] 100%
+  - 5/5 FASI complete (21 report)
+
+RICERCHE AGGIUNTIVE          [####################] 100%
+  - Google Colab 360 (1112 righe)
+  - Infrastruttura Definitiva (2581 righe in 4 parti)
+  - Firewall GCP istruzioni
+
+POC SETUP                    [####################] 100%
+  - 20 task benchmark
+  - COSTITUZIONE compressa 1380 tok
+  - SUB_ROADMAP 3 settimane
+
+PROSSIMO: POC WEEK 1         [....................] 0%
+```
+
+### Checkpoint Completo
+
+- PROMPT_RIPRESA.md aggiornato
+- oggi.md aggiornato
+- Git commit + push
 
 ---
 
@@ -1090,13 +1142,23 @@ cervella status
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-10 20:25 (unknown)
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 20:36 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 9e58aab - Sessione 154b: CHECKPOINT FINALE + Ricerca Colab lanciata
-- **File modificati** (1):
-  - reports/engineer_report_20260110_202422.json
+- **Ultimo commit**: 1624a57 - ANTI-COMPACT: PreCompact auto
+- **File modificati** (5):
+  - .sncp/idee/RICERCA_GOOGLE_COLAB_360.md
+  - .sncp/idee/RICERCA_INFRASTRUTTURA_DEFINITIVA_2026_PARTE1.md
+  - .sncp/idee/RICERCA_INFRASTRUTTURA_DEFINITIVA_2026_PARTE2.md
+  - .sncp/idee/RICERCA_INFRASTRUTTURA_DEFINITIVA_2026_PARTE3.md
+  - .sncp/idee/RICERCA_INFRASTRUTTURA_DEFINITIVA_2026_PARTE4.md
 
 ### Note
 - Checkpoint automatico generato da hook

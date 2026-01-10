@@ -1,8 +1,8 @@
 # STATO OGGI
 
 > **Data:** 10 Gennaio 2026
-> **Sessione:** 154b (seconda sessione oggi)
-> **Ultimo aggiornamento:** 20:50 UTC
+> **Sessione:** 155 (Checkpoint)
+> **Ultimo aggiornamento:** 21:00 UTC
 
 ---
 
@@ -11,11 +11,11 @@
 ```
 +====================================================================+
 |                                                                    |
-|   SESSIONE 154b - POC SETUP + VISIONE INFRA DEFINITIVA            |
+|   SESSIONE 155 - CHECKPOINT RICERCHE COMPLETE!                    |
 |                                                                    |
-|   RICERCA CERVELLA BABY: 5/5 FASI COMPLETE!                       |
-|   POC SETUP: PRONTO! Dataset 20 task + COSTITUZIONE compressa     |
-|   VISIONE INFRA: DOCUMENTATA! Pensare GRANDE al 100000%           |
+|   RICERCA GOOGLE COLAB: 1112 righe - COMPLETA!                    |
+|   RICERCA INFRASTRUTTURA: 2581 righe (4 parti) - COMPLETA!        |
+|   PROSSIMO: POC WEEK 1 su Google Colab                            |
 |                                                                    |
 +====================================================================+
 ```
@@ -26,96 +26,65 @@
 
 | Cosa | Stato | Note |
 |------|-------|------|
-| Cervella AI (Claude) | UP interno, porta 8002 bloccata | Fix firewall GCP pending |
-| Ricerca Cervella Baby | 5/5 COMPLETE! | 26 file, 25500+ righe |
-| POC Cervella Baby | SETUP PRONTO | Dataset 20 task JSON, COSTITUZIONE |
-| Infrastruttura Definitiva | VISIONE DOCUMENTATA | Ricerca da lanciare |
+| Ricerca Cervella Baby | 5/5 COMPLETE! | 21 report, 25500+ righe |
+| Ricerca Google Colab | COMPLETA! | 1112 righe |
+| Ricerca Infrastruttura | COMPLETA! | 4 parti, 2581 righe |
+| POC Setup | PRONTO | 20 task + COSTITUZIONE compressa |
+| Cervella AI (Claude) | UP interno | Porta 8002 da aprire in GCP |
 | Miracollo | LIVE | Zero-downtime deploy OK |
 
 ---
 
-## Sessione 154b - COSA FATTO
+## Sessione 155 - CHECKPOINT
 
-### 1. Letto Deliverables POC (FASE 5)
+### Ricerche Completate
 
-- Report 17: 20 task benchmark
-- Report 18: COSTITUZIONE compressa 1380 tok
-- Report 19-21: RAG, Integrazione, Metriche
+La sessione 154b aveva lanciato le ricerche ma e' andata in auto-compact.
+I file sono stati scritti con successo!
 
-### 2. Creato Setup POC Completo
+| File | Righe |
+|------|-------|
+| RICERCA_GOOGLE_COLAB_360.md | 1112 |
+| RICERCA_INFRASTRUTTURA_DEFINITIVA_PARTE1.md | 424 |
+| RICERCA_INFRASTRUTTURA_DEFINITIVA_PARTE2.md | 694 |
+| RICERCA_INFRASTRUTTURA_DEFINITIVA_PARTE3.md | 489 |
+| RICERCA_INFRASTRUTTURA_DEFINITIVA_PARTE4.md | 974 |
+| **TOTALE** | **3693** |
 
-```
-poc_cervella_baby/
-├── README.md                    # Documentazione
-├── task_dataset.json            # 20 task benchmark JSON
-├── costituzione_compressa.md    # System prompt 1380 tok
-```
-
-### 3. Creato SUB_ROADMAP POC
-
-```
-.sncp/idee/SUB_ROADMAP_POC_CERVELLA_BABY.md
-
-WEEK 1: Setup + T01-T10 Simple
-WEEK 2: T11-T18 Medium
-WEEK 3: Final + GO/NO-GO Decision
-
-Decision: 1 Febbraio 2026
-```
-
-### 4. Verificato VM
-
-- 34.27.179.164 UP e raggiungibile via SSH
-- Cervella AI healthy (docker ps: Up 5 hours)
-- Miracollo backend healthy
-- Porta 8002 bloccata da firewall GCP esterno
-
-### 5. Documentato VISIONE INFRA DEFINITIVA
-
-Rafa:
-```
-"Vorrei una soluzione per sempre.. una cosa FORTE..
-ABBIAMO TEMPO E RISORSA PER FARE TUTTO..
-FACCIAMO TUTTO AL 100000%"
-```
-
-Documentato in:
-`.sncp/memoria/decisioni/20260110_INFRASTRUTTURA_DEFINITIVA_VISIONE.md`
-
----
-
-## File Creati Sessione 154b
+### File Staged per Commit
 
 ```
-poc_cervella_baby/
-├── README.md
-├── task_dataset.json (20 task!)
-└── costituzione_compressa.md
-
-.sncp/idee/
-└── SUB_ROADMAP_POC_CERVELLA_BABY.md
-
-.sncp/memoria/decisioni/
-└── 20260110_INFRASTRUTTURA_DEFINITIVA_VISIONE.md
+.sncp/idee/RICERCA_GOOGLE_COLAB_360.md
+.sncp/idee/RICERCA_INFRASTRUTTURA_DEFINITIVA_2026_PARTE1.md
+.sncp/idee/RICERCA_INFRASTRUTTURA_DEFINITIVA_2026_PARTE2.md
+.sncp/idee/RICERCA_INFRASTRUTTURA_DEFINITIVA_2026_PARTE3.md
+.sncp/idee/RICERCA_INFRASTRUTTURA_DEFINITIVA_2026_PARTE4.md
+.sncp/istruzioni/ISTRUZIONI_FIREWALL_GCP.md
+.sncp/stato/oggi.md
+.swarm/handoff/HANDOFF_20260110_202558.md
+PROMPT_RIPRESA.md
+reports/engineer_report_20260110_202628.json
+reports/scientist_prompt_20260110.md
 ```
 
 ---
 
-## Sessione 154 Precedente (RECAP)
+## Statistiche Ricerca Progetto
 
-- Architettura Zero-Downtime Miracollo COMPLETATA
-- Nginx migrato in Docker
-- Docker Rollout funzionante
-- GitHub Actions v3.0.0
+```
+RICERCA CERVELLA BABY (21 report):     25,500+ righe
+RICERCHE AGGIUNTIVE (5 file):           3,693 righe
+--------------------------------------------
+TOTALE RICERCA:                        29,000+ righe
+```
 
 ---
 
-## Prossimi Step (Sessione 155)
+## Prossimi Step
 
-1. **RICERCA GOOGLE COLAB** - Capire 360 gradi
-2. **RICERCA INFRASTRUTTURA DEFINITIVA** - Opzioni cloud GPU 2026
-3. **FIX FIREWALL GCP** - Aprire porta 8002
-4. **POC WEEK 1** - Setup Colab + primi test
+1. **POC WEEK 1** - Setup Google Colab + primi test Qwen3-4B
+2. **Aprire porta 8002** - GCP Console (manuale)
+3. **MVP Hybrid** - Se POC = GO
 
 ---
 
@@ -124,9 +93,9 @@ poc_cervella_baby/
 ```
 [##################################################] 100000%
 
-VISIONE: GRANDE! Non micro-soluzioni!
+RICERCA: 29,000+ righe COMPLETE!
 POC: PRONTO! 20 task, COSTITUZIONE compressa
-RICERCA: 25500+ righe COMPLETE
+VISIONE: GRANDE! Non micro-soluzioni!
 
 "Abbiamo tempo e risorsa per fare tutto!"
 "Facciamo tutto al 100000%!"
@@ -134,5 +103,5 @@ RICERCA: 25500+ righe COMPLETE
 
 ---
 
-*Aggiornato: 10 Gennaio 2026 - Sessione 154b*
-*"Non micro-soluzioni. SOLUZIONE DEFINITIVA!"*
+*Aggiornato: 10 Gennaio 2026 - Sessione 155 (Checkpoint)*
+*"RICERCHE COMPLETE! PRONTI PER POC!"*
