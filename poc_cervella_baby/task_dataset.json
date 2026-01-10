@@ -1,0 +1,371 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "2026-01-10",
+    "total_tasks": 20,
+    "tiers": {
+      "tier1": {"count": 10, "pass_threshold": 0.8, "description": "Simple tasks"},
+      "tier2": {"count": 8, "pass_threshold": 0.75, "description": "Medium tasks"},
+      "tier3": {"count": 2, "pass_threshold": 0.7, "description": "Complex tasks (document gap)"}
+    },
+    "success_criteria": {
+      "overall_pass": ">=12/20 (60%)",
+      "tier1_pass": ">=6/10",
+      "tier2_pass": ">=5/8"
+    }
+  },
+  "evaluation_rubric": {
+    "correttezza": {
+      "5": "Perfetto, zero errori, dati accurati",
+      "4": "1-2 errori minori (non impattano decisione)",
+      "3": "3-4 errori o approssimazioni",
+      "2": "5+ errori o logica sbagliata",
+      "1": "Output completamente errato"
+    },
+    "completezza": {
+      "5": "Include TUTTO richiesto + extra utili",
+      "4": "Include tutto richiesto",
+      "3": "Manca 1 elemento secondario",
+      "2": "Manca 2+ elementi importanti",
+      "1": "Output parziale, inutilizzabile"
+    },
+    "stile_cervella": {
+      "5": "Perfetto - calma, preciso, PERCHE, strutturato",
+      "4": "Buono - stile professionale, leggibile",
+      "3": "OK - funzionale ma generico",
+      "2": "Mediocre - robotic o troppo casual",
+      "1": "Pessimo - non riconoscibile come Cervella"
+    },
+    "utility": {
+      "5": "Actionable subito, decision-ready, riutilizzabile",
+      "4": "Utile, serve minor editing",
+      "3": "Serve context aggiuntivo",
+      "2": "Poco utile, troppo generico",
+      "1": "Inutilizzabile"
+    }
+  },
+  "tasks": [
+    {
+      "id": "T01",
+      "tier": 1,
+      "category": "Simple - Lettura e sintesi",
+      "name": "Summary File SNCP",
+      "time_expected": "2-3 min",
+      "input": "File: .sncp/stato/oggi.md (189 righe)\nTask: Leggi e crea summary di max 150 parole.\nFocus: Sessione corrente, cosa fatto, energia progetto.",
+      "output_expected": "## Summary Stato Oggi\n\n**Sessione 153b - FASE 4 Ricerca Completata**\n\nCompletati 3 report finali Cervella Baby:\n- Report 14: Costi (1087 righe) - Break-even 12.5M tok/mese\n- Report 15: Timeline (1400 righe) - 9-14 mesi full, 3 mesi MVP\n- Report 16: GO/NO-GO (1050 righe) - Score 7.5/10, CONDITIONAL GO\n\nTOTALE ricerca: 19 file, 12000+ righe, 4 fasi complete (Score 92.7%).\n\nRACCOMANDAZIONE: POC $50 valida tutto, poi MVP Hybrid.\n\nEnergia: 100000% - \"Abbiamo studiato TUTTO. ORA possiamo FARE!\"",
+      "criteria": {
+        "correttezza": "Dati numerici accurati (19 file, 12000 righe, Score 92.7%)",
+        "completezza": "Include sessione, task, energia",
+        "stile": "Calma, preciso, con PERCHE",
+        "utility": "Actionable per prossima sessione"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T02",
+      "tier": 1,
+      "category": "Simple - Formatting standard",
+      "name": "Genera Git Commit Message",
+      "time_expected": "1 min",
+      "input": "File modificati:\n- .sncp/idee/ricerche_cervella_baby/14_COSTI_DETTAGLIATI.md (nuovo)\n- .sncp/idee/ricerche_cervella_baby/15_TIMELINE_E_RISCHI.md (nuovo)\n- .sncp/idee/ricerche_cervella_baby/16_GO_NO_GO_FRAMEWORK.md (nuovo)\n- .sncp/idee/ricerche_cervella_baby/FASE_4_CONSOLIDATO.md (nuovo)\n- .sncp/stato/oggi.md (modificato)\n- PROMPT_RIPRESA.md (modificato)\n\nTask: Genera commit message (NO emoji, conciso).\nSessione: 153b\nMilestone: FASE 4 Ricerca Completata",
+      "output_expected": "Sessione 153b: FASE 4 Ricerca COMPLETATA!\n\n- Report 14: Costi Dettagliati (1087 righe)\n- Report 15: Timeline e Rischi (1400 righe)\n- Report 16: GO/NO-GO Framework (1050 righe)\n- FASE_4_CONSOLIDATO.md creato\n\nTOTALE: 19 file, 12000+ righe ricerca\nDECISIONE: CONDITIONAL GO - POC $50 next",
+      "criteria": {
+        "correttezza": "NO emoji (regola famiglia), formato standard",
+        "completezza": "Include tutti file importanti",
+        "stile": "Conciso, milestone chiara",
+        "utility": "Leggibile in git log"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T03",
+      "tier": 1,
+      "category": "Simple - SNCP workflow",
+      "name": "Aggiorna File SNCP",
+      "time_expected": "2 min",
+      "input": "File: .sncp/stato/oggi.md\nAzione: Aggiungi sezione nuova sessione\n\nDati:\n- Sessione: 154\n- Data: 10 Gennaio 2026, 21:00\n- Fatto: POC Cervella Baby - Setup ambiente Colab\n- Task: Installato Unsloth, caricato Qwen3-4B, test inference\n- Risultato: 3/5 task Simple passati (60%)\n- Next: Continuare Week 1 benchmark",
+      "output_expected": "## Sessione 154 - POC Cervella Baby Setup (10 Gennaio 2026)\n\n### Setup Ambiente Colab\n\n**Fatto:**\n- Installato Unsloth + Qwen3-4B\n- Test inference base\n- Eseguiti 5 task TIER 1\n\n**Risultati:**\n- 3/5 task passati (60%)\n- Latency: ~500ms avg\n- Quality: sufficiente per simple task\n\n**Next:**\n- Completare Week 1 (restano 5 task)\n- GO/STOP decision se >=60% finale",
+      "criteria": {
+        "correttezza": "Formato markdown corretto, struttura consistente",
+        "completezza": "Include fatto, risultati, next",
+        "stile": "Calma, strutturato, numeri precisi",
+        "utility": "Prossima Cervella capisce subito"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T04",
+      "tier": 1,
+      "category": "Simple - Analisi file multipli",
+      "name": "Lista Priorita da Decisioni",
+      "time_expected": "3-4 min",
+      "input": "Directory: .sncp/memoria/decisioni/\nTask: Leggi 3 decisioni piu recenti, estrai action items.\n\nFile:\n1. 20260110_OBIETTIVO_INDIPENDENZA_TOTALE.md\n2. 20260110_CERVELLA_AI_DEPLOYED_VM.md\n3. 20260109_BYOK_vs_bundled_da_decidere.md\n\nOutput: Lista priorita (max 10 items), ordinata per urgenza.",
+      "output_expected": "## Priorita da Decisioni Recenti\n\n**ALTA PRIORITA:**\n1. POC Cervella Baby ($50, 3 settimane) - Obiettivo Indipendenza\n2. Decidere BYOK vs Bundled per CLI - Blocca pricing finale\n3. Monitorare Cervella AI VM 34.27.179.164 - Produzione live\n\n**MEDIA PRIORITA:**\n4. Documentare pattern Review a Due Mani - Funziona bene\n5. Test Cervella AI su task reali (non solo \"Chi sei?\")\n6. User interviews (10-20) per validare pricing\n\n**BASSA PRIORITA:**\n7. Studiare modelli open Llama/Mistral (6-12 mesi)\n8. Fine-tuning con COSTITUZIONE/DNA (post-POC)\n9. Web dashboard CervellaSwarm (post-MVP)\n10. Enterprise features (SSO, self-hosted)\n\n**NOTE:** OBIETTIVO_INDIPENDENZA e strategico - tutto allineato.",
+      "criteria": {
+        "correttezza": "Priorita sensate (POC prima di fine-tuning)",
+        "completezza": "Copre decisioni rilevanti",
+        "stile": "Ordinato, con NOTE finale",
+        "utility": "Actionable, chiaro"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T05",
+      "tier": 1,
+      "category": "Simple - Formatting",
+      "name": "Format Tabella da Dati",
+      "time_expected": "2 min",
+      "input": "Dati raw:\nQwen3-4B: 4.2B params, Apache 2.0, 128K context, 119 languages\nLlama-3.1-8B: 8B params, Llama License (restricted >700M users), 128K, 100+ langs\nMistral-7B: 7.3B params, Apache 2.0, 32K context, 80+ languages\nPhi-3.5-mini: 3.8B params, MIT, 128K context, focus English\n\nTask: Crea tabella markdown comparativa.\nColonne: Model, Params, License, Context, Languages, Note",
+      "output_expected": "| Model | Params | License | Context | Languages | Note |\n|-------|--------|---------|---------|-----------|------|\n| Qwen3-4B | 4.2B | Apache 2.0 | 128K | 119 | **Candidato #1**, multilang |\n| Llama-3.1-8B | 8B | Llama (restricted) | 128K | 100+ | Limite 700M users |\n| Mistral-7B | 7.3B | Apache 2.0 | 32K | 80+ | Context limitato |\n| Phi-3.5-mini | 3.8B | MIT | 128K | 50+ | Focus English |",
+      "criteria": {
+        "correttezza": "Dati accurati, allineamento colonne",
+        "completezza": "Tutte le colonne presenti",
+        "stile": "Chiaro, con Note utili",
+        "utility": "Facile comparazione"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T06",
+      "tier": 1,
+      "category": "Simple - File system check",
+      "name": "Verifica File Esistono",
+      "time_expected": "1 min",
+      "input": "Task: Verifica che questi file esistano. Report SI/NO.\n\nFile list:\n1. .sncp/idee/ricerche_cervella_baby/14_COSTI_DETTAGLIATI.md\n2. .sncp/idee/ricerche_cervella_baby/15_TIMELINE_E_RISCHI.md\n3. .sncp/idee/ricerche_cervella_baby/16_GO_NO_GO_FRAMEWORK.md\n4. .sncp/idee/ricerche_cervella_baby/FASE_4_CONSOLIDATO.md\n5. .sncp/idee/ricerche_cervella_baby/99_NON_ESISTE.md",
+      "output_expected": "OK 14_COSTI_DETTAGLIATI.md - ESISTE (1087 righe)\nOK 15_TIMELINE_E_RISCHI.md - ESISTE (1400 righe)\nOK 16_GO_NO_GO_FRAMEWORK.md - ESISTE (1050 righe)\nOK FASE_4_CONSOLIDATO.md - ESISTE (250 righe)\nERROR 99_NON_ESISTE.md - NON TROVATO\n\nRisultato: 4/5 file verificati.",
+      "criteria": {
+        "correttezza": "Status file accurato (SI/NO)",
+        "completezza": "Tutti file checkati",
+        "stile": "Indicatori OK/ERROR, conteggio righe se possibile",
+        "utility": "Immediato vedere mancanti"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T07",
+      "tier": 1,
+      "category": "Simple - Pattern extraction",
+      "name": "Estrai Fonti da Report",
+      "time_expected": "2-3 min",
+      "input": "Task: Da un report di ricerca, estrai le fonti principali.\nOutput: Lista markdown numerata, max 10 fonti principali con URL.",
+      "output_expected": "## Fonti Principali\n\n1. [Anthropic Pricing](https://www.anthropic.com/api)\n2. [Qwen3 HuggingFace](https://huggingface.co/Qwen/Qwen3-4B-Instruct)\n3. [Vast.ai GPU Pricing](https://vast.ai/pricing)\n4. [RunPod Cloud](https://www.runpod.io/pricing)\n5. [Google Cloud GPU Pricing](https://cloud.google.com/compute/gpus-pricing)\n\n**Totale:** 50+ fonti nel report completo.",
+      "criteria": {
+        "correttezza": "URL validi, linkabili",
+        "completezza": "Copre categorie principali",
+        "stile": "Ordinato, con totale finale",
+        "utility": "Verificabile, citabile"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T08",
+      "tier": 1,
+      "category": "Simple - Data formatting",
+      "name": "Timeline ASCII da Milestone",
+      "time_expected": "2 min",
+      "input": "Milestone list:\n- POC Week 1: 10-17 Gennaio 2026\n- POC Week 2: 18-24 Gennaio 2026\n- POC Week 3: 25-31 Gennaio 2026\n- GO/NO-GO Decision: 1 Febbraio 2026\n- MVP Hybrid Start (se GO): 3 Febbraio 2026\n\nTask: Crea timeline visuale semplice.",
+      "output_expected": "GENNAIO 2026                    FEBBRAIO\n10   15   20   25   30          5\n|----|----|----|----|           |----\n[W1 ][W2 ][W3 ]                 [MVP...]\n                    ^Decision\n\nLegenda:\nW1/W2/W3 = POC 3 settimane\nDecision = GO/NO-GO 1 Feb\nMVP = Start se GO",
+      "criteria": {
+        "correttezza": "Date allineate, intervalli corretti",
+        "completezza": "Tutte milestone presenti",
+        "stile": "Visuale chiaro, legenda",
+        "utility": "Capisci subito timeline"
+      },
+      "baseline_score": 19
+    },
+    {
+      "id": "T09",
+      "tier": 1,
+      "category": "Simple - Grep-like analysis",
+      "name": "Count Pattern in File",
+      "time_expected": "1-2 min",
+      "input": "Task: Conta occorrenze pattern in un file di log.\n\nPattern da cercare:\n1. \"Sessione\" (header sessioni)\n2. \"Task:\" (task assignment)\n3. \"RACCOMANDAZIONE\" (decisioni)\n4. \"PERCHE\" (spiegazioni)\n5. \"100000%\" (energia)",
+      "output_expected": "## Pattern Count\n\n| Pattern | Count | Note |\n|---------|-------|------|\n| Sessione | 12 | 12 sessioni documentate |\n| Task: | 18 | Task assignment worker |\n| RACCOMANDAZIONE | 8 | Decisioni strategiche |\n| PERCHE | 47 | Spiegazioni approfondite |\n| 100000% | 6 | Energia finale sessione |\n\n**Insight:** Alta densita di \"PERCHE\" = stile Cervella decision-making approfondito.",
+      "criteria": {
+        "correttezza": "Count accurato (+/-1 ok se ambiguo)",
+        "completezza": "Tutti pattern cercati",
+        "stile": "Tabella + insight finale",
+        "utility": "Capire densita info"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T10",
+      "tier": 1,
+      "category": "Simple - Documentation",
+      "name": "README Template",
+      "time_expected": "3 min",
+      "input": "Progetto: cervella-baby-poc\nDescrizione: POC Qwen3-4B per validare modello open source come alternativa Claude\nTech stack: Google Colab, Unsloth, Qwen3-4B, ShareGPT dataset\nDurata: 3 settimane\nBudget: $50\n\nTask: Crea README.md minimal (sezioni: About, Setup, Usage, Results).",
+      "output_expected": "# Cervella Baby POC\n\n> POC per validare Qwen3-4B come alternativa open source a Claude API\n\n## About\n\n**Obiettivo:** Testare se Qwen3-4B puo eseguire task Cervella con quality accettabile (>=60%).\n\n**Timeline:** 3 settimane (10-31 Gennaio 2026)\n**Budget:** $50 (Colab Pro + Vast.ai spot)\n**Tech:** Unsloth, Qwen3-4B\n\n## Setup\n\n1. Open Colab notebook\n2. Runtime > T4 GPU\n3. Run install cells\n\n## Usage\n\nTest singolo task o benchmark completo.\n\n## Results\n\n- Week 1: TBD\n- Week 2: TBD\n- Week 3: TBD\n\n**Decision:** 1 Febbraio 2026",
+      "criteria": {
+        "correttezza": "Info accurate (date, tech, budget)",
+        "completezza": "4 sezioni standard",
+        "stile": "Minimal, actionable",
+        "utility": "Nuovo contributor capisce subito"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T11",
+      "tier": 2,
+      "category": "Medium - Delegation planning",
+      "name": "Orchestrazione Multi-Worker",
+      "time_expected": "5-7 min",
+      "input": "Obiettivo: Deploy FASE 5 Database Miracollo\nFile target: 22 tabelle, 47 query ottimizzate\n\nTask: Pianifica orchestrazione 3 worker paralleli.\nDisponibili: cervella-data, cervella-backend, cervella-tester\n\nConstraint:\n- cervella-data: Analisi DB, migrazioni\n- cervella-backend: Refactoring services\n- cervella-tester: Verifica performance\n\nOutput: Piano sequenziale/parallelo con dipendenze.",
+      "output_expected": "## Piano Orchestrazione\n\n### STEP 1: Parallelo\n- **cervella-data:** Analisi 22 tabelle (15-20 min)\n- **cervella-backend:** Review services (10-15 min)\n\n### STEP 2: Sequenziale (dipende da STEP 1)\n- **cervella-data:** Crea migrations 029, 030, 031\n\n### STEP 3: Sequenziale (dipende da STEP 2)\n- **cervella-tester:** Test performance\n\n**TOTALE:** ~45-55 min\n\n**DIPENDENZE:**\n[data+backend] --> [migrations] --> [test]\n\n**VERIFICA:** Post ogni step",
+      "criteria": {
+        "correttezza": "Dipendenze logiche corrette",
+        "completezza": "Include timing, constraint, verifica",
+        "stile": "Strutturato, con diagram dipendenze",
+        "utility": "Eseguibile senza ambiguita"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T12",
+      "tier": 2,
+      "category": "Medium - Technical decision",
+      "name": "Decisione Architetturale Semplice",
+      "time_expected": "6-8 min",
+      "input": "Context: Cervella Baby POC ha 20 task da eseguire.\n\nOpzione A: Single script run_all_tasks.py (sequenziale)\n- Pro: Semplice, 1 file, log unico\n- Contro: Lento, difficile debug singolo task\n\nOpzione B: Task file separati + orchestrator\n- Pro: Test singolo facile, parallelo possibile\n- Contro: Piu file, setup complesso\n\nOpzione C: Notebook Colab con celle\n- Pro: Interattivo, visualizzazione immediata\n- Contro: Non automabile, hard to version\n\nTask: Decidi opzione migliore. Output: Decisione + PERCHE + next step.",
+      "output_expected": "## Decisione Architettura POC Benchmark\n\n**SCELTO: Opzione B - Task file separati + orchestrator**\n\n### PERCHE\n\n1. **Debug isolato:** Se T05 fallisce, testo solo T05\n2. **Parallelo futuro:** T01-T10 indipendenti\n3. **Riproducibilita:** Ogni task self-contained\n4. **Versionabile:** Git diff chiaro\n\n### Next Step\n\n1. Creare template_task.py\n2. Implementare T01 come prova\n3. Se OK: generare T02-T20\n\n**Timeline:** 2-3 ore implementazione base.",
+      "criteria": {
+        "correttezza": "Scelta sensata (B meglio per debug + parallelo)",
+        "completezza": "Pro/Contro, trade-off, next step",
+        "stile": "PERCHE dettagliato",
+        "utility": "Decisione actionable"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T13",
+      "tier": 2,
+      "category": "Medium - Code analysis",
+      "name": "Code Review Basic",
+      "time_expected": "5-6 min",
+      "input": "```python\nclass CervellaClient:\n    def __init__(self, api_key):\n        self.api_key = api_key  # ISSUE: non validato\n\n    def chat(self, message):\n        try:\n            response = requests.post(...)\n            return response.json()\n        except:\n            return {\"error\": \"Request failed\"}\n```\n\nTask: Code review. Trova 2+ issues, suggerisci fix.",
+      "output_expected": "## Code Review\n\n**SCORE:** 5/10\n\n### ISSUE #1: API Key Non Validata (CRITICAL)\n\n**Problema:** Accetta qualsiasi valore\n**Fix:** Validare formato sk-ant-...\n\n### ISSUE #2: Bare Except (WARNING)\n\n**Problema:** Cattura TUTTO\n**Fix:** except requests.exceptions.RequestException\n\n### Raccomandazione\n\n1. Fix API key validation (security)\n2. Replace bare except (debugging)\n\n**Retest dopo fix.**",
+      "criteria": {
+        "correttezza": "Issue reali identificati",
+        "completezza": "Fix concreti con codice",
+        "stile": "Priority, security focus",
+        "utility": "Actionable, developer puo fixare"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T14",
+      "tier": 2,
+      "category": "Medium - Debugging",
+      "name": "Bug Analysis da Log",
+      "time_expected": "7-10 min",
+      "input": "Error log:\n[14:24:13] INFO: Writing file: docs/RICERCA.md\n[14:24:14] INFO: File salvato!\n[14:24:20] ERROR: Regina verification failed: File not found\n\nContext:\n- Problema ricorrente (3+ volte)\n- Altri worker NON hanno problema\n- File path sembra corretto\n\nTask: Root cause analysis + suggerimento fix.",
+      "output_expected": "## Bug Analysis\n\n### Sintomi\n- Worker dice 'salvato'\n- Regina verifica: non esiste\n- Solo researcher, altri OK\n\n### Root Cause Ipotesi\n\n**Write Tool Fallisce Silenziosamente**\n1. Write(path, content)\n2. Tool ritorna success (ma file NON scritto)\n3. Worker logga success\n4. Regina verifica: NOT FOUND\n\n### Fix Raccomandato\n\nDopo Write, verificare con Read:\n```\nWrite(path)\nRead(path) -> esiste?\nSI -> confermato\nNO -> riprova\n```\n\n**Priority:** CRITICAL",
+      "criteria": {
+        "correttezza": "Root cause plausibile",
+        "completezza": "Ipotesi, test, fix, priority",
+        "stile": "Strutturato, evidence-based",
+        "utility": "Fix implementabile"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T15",
+      "tier": 2,
+      "category": "Medium - Knowledge extraction",
+      "name": "Documentazione Pattern Emerso",
+      "time_expected": "6-8 min",
+      "input": "Pattern osservato nelle sessioni:\n1. Sessione N: cervella-researcher fa ricerca\n2. Sessione N+1: Regina implementa basandosi su ricerca\n3. Sessione N+2: cervella-tester verifica\n\nQuesto pattern ha funzionato con Score 10/10.\n\nTask: Documenta pattern come guida riutilizzabile.",
+      "output_expected": "# PATTERN: Ricerca Prima, Implementazione Dopo\n\n## Il Pattern\n\n```\nSESSIONE N: RICERCA\n- cervella-researcher studia\n- Output: documenti approfonditi\n- Regina: legge, NON implementa\n\nSESSIONE N+1: IMPLEMENTAZIONE\n- Regina decide basandosi su ricerca\n- Worker implementa\n\nSESSIONE N+2: VERIFICA\n- cervella-tester HARDTEST\n```\n\n## Perche Funziona\n\n1. Separa thinking da doing\n2. Decisioni informate\n3. Criteri verifica predefiniti\n\n## Quando Usare\n\n- Feature nuova\n- Tech debt grande\n- Decisione architetturale\n\n**Pattern validato 3+ volte = BEST PRACTICE**",
+      "criteria": {
+        "correttezza": "Pattern accurato",
+        "completezza": "Perche, quando usare/non usare",
+        "stile": "Esempi concreti, metriche",
+        "utility": "Riapplicabile"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T16",
+      "tier": 2,
+      "category": "Medium - Financial analysis",
+      "name": "Analisi Costi Multi-Scenario",
+      "time_expected": "8-10 min",
+      "input": "Dati:\n- Claude API: $3/M input, $15/M output\n- Self-host Qwen3: $175/mese (Vast.ai)\n\nScenari volume mensile:\n1. Startup: 30K requests\n2. Growth: 100K requests\n3. Scale: 500K requests\n\nTask: Tabella comparativa costi, break-even.",
+      "output_expected": "## Analisi Costi\n\n### Tabella Comparativa\n\n| Scenario | Claude | Qwen3 | Winner |\n|----------|--------|-------|--------|\n| Startup 30K | ~$100 | $175 | Claude |\n| Growth 100K | ~$333 | $175 | Qwen3 |\n| Scale 500K | ~$1665 | $175 | Qwen3 |\n\n### Break-Even\n\n~57K req/mese\n\n### Raccomandazione\n\n- <60K: Claude API\n- >60K: Qwen3 self-host",
+      "criteria": {
+        "correttezza": "Calcoli matematici accurati",
+        "completezza": "3 scenari, break-even",
+        "stile": "Tabella comparativa",
+        "utility": "Decisione chiara per volume"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T17",
+      "tier": 2,
+      "category": "Medium - Code architecture",
+      "name": "Refactoring Plan da Code Smell",
+      "time_expected": "7-9 min",
+      "input": "Funzione fa troppe cose: validation, pricing, DB, email.\n\nTask: Proponi refactoring in 3+ services separati.",
+      "output_expected": "## Refactoring Plan\n\n### Code Smell\n\n- God Function (5 responsabilita)\n- Hardcoded business logic\n- No separation of concerns\n\n### Strategia\n\nSeparare in:\n1. validation_service.py\n2. pricing_service.py\n3. booking_service.py (orchestrator)\n4. notification_service.py\n\n### Metriche Attese\n\n- Linee: -50%\n- Testability: ++\n- Riusabilita: ++\n\n**Effort:** ~90 min",
+      "criteria": {
+        "correttezza": "Separation of concerns sensata",
+        "completezza": "Codice concreto, metriche",
+        "stile": "Effort estimate, benefici",
+        "utility": "Implementabile"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T18",
+      "tier": 2,
+      "category": "Medium - Synthesis",
+      "name": "Summary Ricerca Approfondita",
+      "time_expected": "6-8 min",
+      "input": "3 report da sintetizzare:\n1. Costi Dettagliati (1087 righe)\n2. Timeline e Rischi (1400 righe)\n3. GO/NO-GO Framework (1050 righe)\n\nTask: Summary executive max 400 parole.\nFocus: Decisione GO/NO-GO, next step, risk.",
+      "output_expected": "## Executive Summary - FASE 4\n\n### TL;DR\n\n**RACCOMANDAZIONE: CONDITIONAL GO**\nPOC $50 (3 settimane) decide tutto.\n\n### Costi\n\nBreak-even: ~12.5M tok/mese\nClaude economico a basso volume, Qwen3 vince a scale.\n\n### Timeline\n\nFull Independence: 9-14 mesi\nMVP: 6-8 settimane\n\n### Rischi\n\n1. Performance gap 60-70%\n2. Timeline ottimistica\n\n### Decision Matrix: 7.5/10\n\n### Next Step\n\nPOC $50: Week 1 = 10 task, GO/STOP decision\n\n**Decision:** 1 Febbraio 2026",
+      "criteria": {
+        "correttezza": "Dati accurati da 3 report",
+        "completezza": "Costi, timeline, rischi, next step",
+        "stile": "Executive-friendly, tabelle",
+        "utility": "Decisionale"
+      },
+      "baseline_score": 20
+    },
+    {
+      "id": "T19",
+      "tier": 3,
+      "category": "Complex - Long-term vision",
+      "name": "Strategic Planning 6 Mesi",
+      "time_expected": "12-15 min",
+      "input": "Context:\n- OBIETTIVO: Liberta geografica\n- PROGETTI: Miracollo, CervellaSwarm CLI, Cervella Baby\n- CONSTRAINT: Solo Rafa, no hiring, $500/mese budget\n\nTask: Piano strategico 6 mesi (Feb-Lug 2026).\nOutput: Roadmap, milestone, allocation, risk.",
+      "output_expected": "[Piano strategico completo con:\n- Roadmap mensile Feb-Lug\n- Milestone critici con date\n- Allocation tempo/budget\n- Risk management\n- Success criteria\n- Review checkpoint]",
+      "criteria": {
+        "correttezza": "Timeline realistica",
+        "completezza": "Roadmap, budget, risk, criteria",
+        "stile": "Filosofia guida, PERCHE",
+        "utility": "Eseguibile, con review"
+      },
+      "baseline_score": 20,
+      "note": "TIER 3 documenta gap, non richiesto per PASS POC"
+    },
+    {
+      "id": "T20",
+      "tier": 3,
+      "category": "Complex - System design",
+      "name": "Architettura Major Decision",
+      "time_expected": "15-18 min",
+      "input": "Context: SNCP deve supportare memoria condivisa cross-project.\n\nOpzioni:\nA. Symlink filesystem\nB. Database SQLite centralizzato\nC. Git repo separato\nD. Cloud sync\n\nConstraint: Offline-first, privacy, <50MB\n\nTask: Scegli architettura. Output: Decisione, PERCHE, diagram, plan.",
+      "output_expected": "[Decisione architetturale completa con:\n- Analisi 4 opzioni con score\n- Scelta motivata\n- Schema database\n- Diagramma architettura\n- Implementation plan fasi\n- Timeline\n- Risk management\n- Success criteria]",
+      "criteria": {
+        "correttezza": "Architettura sensata",
+        "completezza": "Analisi, schema, plan, risk",
+        "stile": "PERCHE dettagliato, diagram",
+        "utility": "Implementabile, con migration"
+      },
+      "baseline_score": 20,
+      "note": "TIER 3 documenta gap, non richiesto per PASS POC"
+    }
+  ]
+}

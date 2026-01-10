@@ -1015,16 +1015,19 @@ cervella status
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-10 19:30 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 19:56 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 326472d - Sessione 153b: FASE 4 Ricerca COMPLETATA!
-- **File modificati** (4):
-  - sncp/stato/oggi.md
-  - reports/scientist_prompt_20260110.md
+- **Ultimo commit**: 787318f - Sessione 153b: CHECKPOINT FINALE - RICERCA COMPLETA!
+- **File modificati** (5):
+  - eports/scientist_prompt_20260110.md
+  - .sncp/idee/RICERCA_DEPLOY_BEST_PRACTICES.md
   - .swarm/handoff/HANDOFF_20260110_192336.md
   - reports/engineer_report_20260110_192749.json
+  - reports/engineer_report_20260110_193132.json
 
 ### Note
 - Checkpoint automatico generato da hook
