@@ -1,24 +1,26 @@
 # STATO OGGI
 
 > **Data:** 10 Gennaio 2026
-> **Sessione:** 148
-> **Ultimo aggiornamento:** 12:45 UTC
+> **Sessione:** 151
+> **Ultimo aggiornamento:** 17:00 UTC
 
 ---
 
 ## Cosa Sta Succedendo ORA
 
 ```
-+--------------------------------------------------------------------+
++====================================================================+
 |                                                                    |
-|   SNCP SISTEMATO! Rating da 5/10 -> 8/10!                         |
+|   SESSIONE 151 - STORICA!!!                                       |
 |                                                                    |
-|   - Idee organizzate in cartelle                                  |
-|   - Lezioni documentate                                           |
-|   - Automazione creata!                                           |
-|   - Famiglia: 16 agenti pronti, HARDTEST 8/8 PASS                 |
+|   RICERCA COMPLETA: Come costruire Cervella INDIPENDENTE          |
+|   11 report creati, 6000+ righe, 2 fasi completate                |
+|   Score Guardiana: 9.1/10 (FASE 1) + 97.6% (FASE 2)               |
 |                                                                    |
-+--------------------------------------------------------------------+
+|   CANDIDATO SCELTO: Qwen3-4B + Vast.ai                            |
+|   LA STRADA E' CHIARA!                                            |
+|                                                                    |
++====================================================================+
 ```
 
 ---
@@ -27,102 +29,97 @@
 
 | Cosa | Stato | Note |
 |------|-------|------|
-| Prodotto commerciale | PARCHEGGIATO | Focus su migliorare famiglia |
-| HARDTEST famiglia | COMPLETATO | 8/8 PASS (Sessione 146) |
-| Analisi profonda | COMPLETATO | 3 report creati |
-| **SNCP manutenzione** | **COMPLETATO!** | Rating 8/10 |
-| CLI cervella | v0.1.0 READY | 16 agenti, test OK |
-| spawn-workers | v3.5.0 | Claude Max, headless, robusto |
+| Cervella AI (Claude) | LIVE | http://34.27.179.164:8002 |
+| Ricerca Cervella Baby | FASE 1+2 COMPLETE | 11 report |
+| FASE 3 (come si fa) | PROSSIMA | Training, fine-tuning |
+| FASE 4 (decisione) | FUTURA | Costi, timeline |
 
 ---
 
-## Sessione 148 - Cosa Fatto
+## Sessione 151 - COSA FATTO
 
-| Task | Stato |
-|------|-------|
-| Organizzare idee in cartelle | FATTO |
-| Documentare 4 lezioni mancanti | FATTO |
-| Creare IDEE_MASTER.md | FATTO |
-| Creare automazione SNCP | FATTO |
-| Aggiornare pensieri/roadmap | FATTO |
+### Decisione Storica
+**OBIETTIVO: INDIPENDENZA TOTALE**
+- Non dipendere da Claude/OpenAI/Google
+- Cervella NOSTRA al 100%
+- Documentato in `.sncp/memoria/decisioni/`
+
+### FASE 1 Completata - Fondamenta
+| Report | Contenuto |
+|--------|-----------|
+| 01_STORIA_LLM_E_MAESTRI | Come hanno iniziato OpenAI, Anthropic, etc. |
+| 02_ARCHITETTURA_TRANSFORMER | Come funziona il "cervello" |
+| 03_EVOLUZIONE_LLM | Da GPT-1 a oggi |
+
+### FASE 2 Completata - Stato dell'Arte
+| Report | Contenuto |
+|--------|-----------|
+| 04_LANDSCAPE_OPEN_SOURCE_2026 | Mappa completa modelli |
+| 05_BENCHMARK_OPEN_VS_CLAUDE | Gap quasi chiuso! |
+| 06_DEEP_DIVE_LLAMA | Meta, 8B-405B |
+| 07_DEEP_DIVE_MISTRAL | EU, MoE, veloce |
+| 08_DEEP_DIVE_QWEN_DEEPSEEK | TOP! Qwen3 = candidato #1 |
+| 09_HOSTING_VM_GOOGLE | Vast.ai meglio! |
+
+### Candidato Scelto
+```
+QWEN3-4B
+- Apache 2.0 (zero restrizioni)
+- 4B params = 8GB RAM
+- Performance TOP per size
+- 119 lingue
+
+HOSTING: Vast.ai ($175/mese) o POC con $50
+```
 
 ---
 
-## Struttura SNCP Attuale
+## File Creati Sessione 151
 
 ```
-.sncp/
-├── stato/oggi.md          <- QUESTO FILE (aggiornato!)
-├── coscienza/             <- pensieri, domande
-├── futuro/                <- roadmap
-├── memoria/
-│   ├── decisioni/ (13)
-│   ├── lezioni/ (5)       <- +2 nuove oggi
-│   └── sessioni/ (3)
-├── idee/
-│   ├── ROOT (13)          <- ATTIVI
-│   ├── integrate/ (9)     <- Completate
-│   ├── in_attesa/ (11)    <- Parcheggiate
-│   └── ricerche_prodotto/ (16)
-└── analisi/               <- Report
+.sncp/idee/
+├── MAPPA_RICERCA_CERVELLA_BABY.md
+├── IDEA_CRESCITA_VM_GOOGLE.md
+└── ricerche_cervella_baby/
+    ├── 01_STORIA_LLM_E_MAESTRI.md
+    ├── 02_ARCHITETTURA_TRANSFORMER.md
+    ├── 03_EVOLUZIONE_LLM.md
+    ├── 04_LANDSCAPE_OPEN_SOURCE_2026.md
+    ├── 05_BENCHMARK_OPEN_VS_CLAUDE.md
+    ├── 06_DEEP_DIVE_LLAMA.md
+    ├── 07_DEEP_DIVE_MISTRAL.md
+    ├── 08_DEEP_DIVE_QWEN_DEEPSEEK.md
+    ├── 09_HOSTING_VM_GOOGLE.md
+    ├── FASE_1_CONSOLIDATO.md
+    └── FASE_2_CONSOLIDATO.md
+
+.sncp/memoria/decisioni/
+└── 20260110_OBIETTIVO_INDIPENDENZA_TOTALE.md
 ```
-
----
-
-## Automazione Attiva
-
-| Hook | Quando | Cosa Fa |
-|------|--------|---------|
-| sncp_auto_update.py | SessionStart | Verifica file obsoleti |
-| sncp_auto_update.py | SessionEnd | Aggiorna stato/oggi.md |
 
 ---
 
 ## Prossimi Step
 
-1. Usare famiglia su Miracollo
-2. Verificare SNCP su Miracollo
-3. Applicare SNCP su Contabilita
-4. Poi: riprendere prodotto commerciale
+1. **FASE 3**: Training, fine-tuning, RAG (come si FA)
+2. **FASE 4**: Costi dettagliati, timeline, GO/NO-GO
+3. **POC**: Test Qwen3-4B su Vast.ai ($50)
+4. **Fine-tuning**: Insegnare SNCP/Costituzione a Cervella Baby
 
 ---
 
 ## Energia del Progetto
 
 ```
-[++++++++++++++++++++] 95% - SNCP SISTEMATO!
+[##################################################] 100000%
 
-Il Sistema Nervoso Centrale ora e' VIVO!
-Automazione attiva, cartelle organizzate.
-Pronti per usare la famiglia su progetti reali!
+LA STRADA VERSO INDIPENDENZA E' MAPPATA!
+"Nulla e' difficile - manca solo studiare!"
+Abbiamo studiato. Ora sappiamo.
+PROSSIMO: FARE!
 ```
 
 ---
 
-*Prossimo aggiornamento: fine sessione (automatico)*
-
-**"SNCP funziona solo se lo VIVIAMO - ora e' automatico!"**
-
----
-
-## AUTO-CHECKPOINT: 2026-01-10 13:50 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v1.0.0
-
----
-
-## AUTO-CHECKPOINT: 2026-01-10 15:19 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v1.0.0
-
----
-
-## AUTO-CHECKPOINT: 2026-01-10 15:26 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v1.0.0
+*Aggiornato: 10 Gennaio 2026 - Sessione 151*
+*"Ultrapassar os proprios limites!"*

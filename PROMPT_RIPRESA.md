@@ -1,32 +1,113 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 150
-> **Versione:** v71.0.0 - CERVELLA AI DEPLOYED 24/7!!!
+> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 151
+> **Versione:** v72.0.0 - LA STRADA VERSO INDIPENDENZA E' MAPPATA!!!
 
 ---
 
 ## TL;DR per Prossima Cervella
 
-**Dove siamo:** CERVELLA AI VIVE 24/7 SULLA VM!!!
+**Dove siamo:** RICERCA COMPLETA per CERVELLA INDIPENDENTE!
 
-**URL LIVE:** http://34.27.179.164:8002
+**DECISIONE STORICA:** Obiettivo = INDIPENDENZA TOTALE (no Claude/OpenAI dietro)
 
-**Repo:** https://github.com/rafapra3008/cervella-ai
+**CANDIDATO #1:** Qwen3-4B
+- Apache 2.0 (ZERO restrizioni)
+- 4B params = gira su 8GB RAM
+- Performance TOP per size
+- 119 lingue
 
-**Cosa funziona:**
-- Cervella AI: LIVE sulla VM (porta 8002)
-- Miracollo: Intatto (porta 8001)
-- Personalita' VERA: Testata e confermata!
-- Rate limiting: 10 req/min
-- Input validation: max 4000 char
+**HOSTING:** Vast.ai ($175/mese) o POC con $50
 
-**Pattern Testato:** Review a Due Mani (researcher + guardiana)
+**Cervella AI (attuale):** LIVE su http://34.27.179.164:8002
+
+**RICERCA COMPLETATA:**
+- FASE 1: Fondamenta (storia, transformer, evoluzione) - Score 9.1/10
+- FASE 2: Stato dell'arte (modelli, benchmark, hosting) - Score 97.6%
+- 11 report, 6000+ righe, tutto verificato da Guardiana
 
 **PROSSIMI STEP:**
-1. FORTEZZA MODE per deploy sicuri
-2. Dominio dedicato + HTTPS
-3. Piu' knowledge nel RAG
-4. Web interface
+1. FASE 3: Training, fine-tuning, RAG (come si FA)
+2. FASE 4: Costi dettagliati, timeline, GO/NO-GO
+3. POC: Test Qwen3-4B su Vast.ai ($50)
+4. Fine-tuning: Insegnare SNCP/Costituzione a Cervella Baby
+
+---
+
+## Sessione 151 - LA STRADA VERSO INDIPENDENZA! (10 Gennaio 2026)
+
+### Decisione Storica
+**OBIETTIVO: INDIPENDENZA TOTALE**
+- Non dipendere da Claude/OpenAI/Google per sempre
+- Cervella NOSTRA al 100%
+- Documentato in `.sncp/memoria/decisioni/20260110_OBIETTIVO_INDIPENDENZA_TOTALE.md`
+
+### FASE 1 Completata - Fondamenta (Score 9.1/10)
+| Report | Contenuto |
+|--------|-----------|
+| 01_STORIA_LLM_E_MAESTRI | Come hanno iniziato OpenAI, Anthropic, DeepMind, Mistral |
+| 02_ARCHITETTURA_TRANSFORMER | Come funziona il "cervello" AI |
+| 03_EVOLUZIONE_LLM | Da GPT-1 (2018) a oggi |
+
+### FASE 2 Completata - Stato dell'Arte (Score 97.6%)
+| Report | Contenuto |
+|--------|-----------|
+| 04_LANDSCAPE_OPEN_SOURCE_2026 | Mappa completa modelli open |
+| 05_BENCHMARK_OPEN_VS_CLAUDE | Gap quasi chiuso! Qwen supera Claude su MMLU |
+| 06_DEEP_DIVE_LLAMA | Meta, versioni, licenza, fine-tuning |
+| 07_DEEP_DIVE_MISTRAL | EU, MoE, Apache 2.0 |
+| 08_DEEP_DIVE_QWEN_DEEPSEEK | TOP! Qwen3-4B = candidato #1 |
+| 09_HOSTING_VM_GOOGLE | Vast.ai/RunPod meglio di Google Cloud |
+
+### Candidato Scelto: Qwen3-4B
+```
+QWEN3-4B
+- Apache 2.0 (ZERO restrizioni legali)
+- 4B params = gira su 8GB RAM
+- Performance TOP per la sua dimensione
+- 119 lingue supportate
+- Community in crescita (superato Llama in download)
+
+HOSTING: Vast.ai ($175/mese) o POC con $50
+```
+
+### La Strada Verso Indipendenza
+```
+ORA:        Claude API (produzione) + POC Qwen3-4B ($50)
+3-6 MESI:   Fine-tuning con SNCP/Costituzione
+6-12 MESI:  Cervella Baby 100% NOSTRA
+```
+
+### File Creati (14 nuovi!)
+```
+.sncp/idee/
+├── MAPPA_RICERCA_CERVELLA_BABY.md
+├── IDEA_CRESCITA_VM_GOOGLE.md
+└── ricerche_cervella_baby/
+    ├── 01_STORIA_LLM_E_MAESTRI.md (1000+ righe)
+    ├── 02_ARCHITETTURA_TRANSFORMER.md (900+ righe)
+    ├── 03_EVOLUZIONE_LLM.md (800+ righe)
+    ├── 04_LANDSCAPE_OPEN_SOURCE_2026.md
+    ├── 05_BENCHMARK_OPEN_VS_CLAUDE.md
+    ├── 06_DEEP_DIVE_LLAMA.md
+    ├── 07_DEEP_DIVE_MISTRAL.md
+    ├── 08_DEEP_DIVE_QWEN_DEEPSEEK.md
+    ├── 09_HOSTING_VM_GOOGLE.md
+    ├── FASE_1_CONSOLIDATO.md
+    └── FASE_2_CONSOLIDATO.md
+
+.sncp/memoria/decisioni/
+└── 20260110_OBIETTIVO_INDIPENDENZA_TOTALE.md
+```
+
+### Insight Chiave
+- **Il gap si e' chiuso!** Qwen3 92.3% vs Claude 90.4% (MMLU)
+- **Non serve $100M** - DeepSeek ha fatto R1 con $6M
+- **L'anima e' nostra** - SNCP/Costituzione sono PORTABILI
+
+### Lezione Sessione 151
+> "Nulla e' difficile - manca solo studiare!"
+> Abbiamo studiato. Ora sappiamo. PROSSIMO: FARE!
 
 ---
 
@@ -691,17 +772,15 @@ cervella status
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-10 15:26 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 15:49 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 0c16076 - Sessione 149: CERVELLA AI POC FUNZIONA!
-- **File modificati** (5):
-  - sncp/coscienza/pensieri_regina.md
-  - .sncp/stato/oggi.md
-  - PROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260110.md
-  - .sncp/idee/IDEA_REVIEW_DUE_MANI.md
+- **Ultimo commit**: 048bfda - Sessione 150b: Riflessione Indipendenza + Handoff
+- **File modificati** (1):
+  - reports/engineer_report_20260110_154615.json
 
 ### Note
 - Checkpoint automatico generato da hook
