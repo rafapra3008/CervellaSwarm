@@ -44,10 +44,15 @@
 - Dopo: 8/10 (organizzato, automatizzato)
 
 ### Prossimi Step (Sessione 149)
-1. Usare famiglia su Miracollo
-2. Verificare SNCP su Miracollo
-3. Applicare SNCP su Contabilita
-4. Poi: riprendere prodotto commerciale
+1. **Context Optimization - Pattern Boris Multi-Sessione**
+   - Applicare ricerca Boris per ottimizzare context
+   - File: `.sncp/idee/integrate/RICERCA_BORIS_MULTI_SESSIONE.md`
+2. Usare famiglia su Miracollo (test reale)
+3. Poi: riprendere prodotto commerciale
+
+### Note dalla Verifica
+- **Miracollo DB path corretto:** `backend/data/miracollo.db` (non backend/miracollo.db)
+- **Contabilita database.py:** NON TOCCARE (decisione documentata)
 
 ---
 
