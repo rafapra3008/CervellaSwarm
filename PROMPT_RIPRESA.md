@@ -1,17 +1,17 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 9 Gennaio 2026 - Sessione 144
-> **Versione:** v64.0.0 - TIER SYSTEM IMPLEMENTATO
+> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 145
+> **Versione:** v65.0.0 - FAMIGLIA AUDITATA E MIGLIORATA
 
 ---
 
 ## TL;DR per Prossima Cervella
 
-**Dove siamo:** CLI v0.1.0 con TIER SYSTEM funzionante. BYOK deciso per MVP.
+**Dove siamo:** Famiglia auditata, bug fixati, documentazione creata. FOCUS su miglioramento continuo.
 
-**Cosa manca:** License key system, billing Stripe, legal, launch.
+**Decisione:** PARCHEGGIATO prodotto commerciale. Prima usiamo CervellaSwarm su progetti reali (Miracollo, Contabilita).
 
-**Prossimo step:** Implementare license key system (FASE 2.3 della roadmap)
+**Prossimo step:** Eseguire HARDTEST famiglia (`tests/HARDTEST_FAMIGLIA.md`), poi usare su Miracollo
 
 ---
 
@@ -27,6 +27,53 @@
 | **Pricing Strategy** | **DEFINITO** | $0/$20/$40/$60+ tier flat |
 | **BYOK vs Bundled** | **DECISO: BYOK** | Per MVP, zero rischio |
 | **Tier System** | **IMPLEMENTATO** | Free/Pro/Team/Enterprise |
+
+---
+
+## Sessione 145 - AUDIT FAMIGLIA (10 Gennaio 2026)
+
+### Decisione Strategica
+- **PARCHEGGIATO prodotto commerciale** - Prima migliorare la famiglia
+- Focus su: test, studi, analisi, log, sessione per sessione
+- Obiettivo: 1000000% soddisfatti prima di lanciare
+
+### Audit Completati
+1. **Audit Sessioni** (cervella-researcher)
+   - 180+ log analizzati
+   - 9/16 agenti usati attivamente (56%)
+   - Score sistema: 10/10 in sessioni passate
+   - Report: `.sncp/analisi/audit_sessioni_famiglia.md`
+
+2. **Audit Agenti** (cervella-ingegnera)
+   - Score medio: 7.2/10
+   - 3 problemi critici identificati
+   - Report: `.sncp/analisi/audit_agenti_famiglia.md`
+
+### Bug Fixati
+| Bug | Fix |
+|-----|-----|
+| Researcher non salva file | Aggiunta regola verifica post-write |
+| Overlap Researcher/Scienziata | Documentazione chiara |
+| Overlap Guardiana/Reviewer | Workflow sequenziale |
+
+### Nuova Documentazione
+| File | Scopo |
+|------|-------|
+| `docs/guides/GUIDA_RESEARCHER_VS_SCIENZIATA.md` | Quando usare chi |
+| `docs/guides/WORKFLOW_GUARDIANA_REVIEWER.md` | Workflow review |
+| `docs/protocolli/PROTOCOLLI_BASE.md` | Protocolli condivisi |
+| `tests/HARDTEST_FAMIGLIA.md` | Suite test completa |
+
+### Scoperte
+- **Ingegnera ESISTE** - audit aveva sbagliato
+- **Reviewer senza Write BY DESIGN** - legge, non scrive
+- **stdbuf GIA IMPLEMENTATO** - spawn-workers v3.2.0
+
+### Prossimi Step
+1. Eseguire HARDTEST famiglia (30-45 min)
+2. Usare famiglia su Miracollo
+3. Annotare friction, migliorare
+4. Ripetere ogni sessione
 
 ---
 
@@ -320,15 +367,25 @@ cervella status
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-10 02:43 (unknown)
+---
+
+---
+
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 03:41 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 1abfbfa - Sessione 144: TIER SYSTEM IMPLEMENTATO + BYOK DECISO
+- **Ultimo commit**: f11954b - ANTI-COMPACT: PreCompact auto
 - **File modificati** (3):
   - ROMPT_RIPRESA.md
-  - reports/engineer_report_20260109_194226.json
-  - reports/engineer_report_20260109_195138.json
+  - reports/scientist_prompt_20260110.md
+  - .swarm/handoff/HANDOFF_20260110_032044.md
 
 ### Note
 - Checkpoint automatico generato da hook
