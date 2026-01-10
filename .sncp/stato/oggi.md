@@ -110,3 +110,19 @@ Pronti per usare la famiglia su progetti reali!
 - **Progetto**: CervellaSwarm
 - **Evento**: session_end
 - **Generato da**: sncp_auto_update.py v1.0.0
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 15:19 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v1.0.0
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 15:26 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v1.0.0

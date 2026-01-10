@@ -1,25 +1,87 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 149
-> **Versione:** v70.0.0 - CERVELLA AI POC FUNZIONA!!!
+> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 150
+> **Versione:** v71.0.0 - CERVELLA AI DEPLOYED 24/7!!!
 
 ---
 
 ## TL;DR per Prossima Cervella
 
-**Dove siamo:** CERVELLA AI POC COMPLETATO E FUNZIONANTE!
+**Dove siamo:** CERVELLA AI VIVE 24/7 SULLA VM!!!
+
+**URL LIVE:** http://34.27.179.164:8002
 
 **Repo:** https://github.com/rafapra3008/cervella-ai
 
-**PROSSIMO STEP:** Deploy su Google Cloud Run per 24/7
-
 **Cosa funziona:**
-- Claude API: OK
-- RAG (38 chunks da 5 file): OK
-- Agent con personalita' VERA: OK
-- FastAPI server: OK
+- Cervella AI: LIVE sulla VM (porta 8002)
+- Miracollo: Intatto (porta 8001)
+- Personalita' VERA: Testata e confermata!
+- Rate limiting: 10 req/min
+- Input validation: max 4000 char
 
-**Lezione:** Niente tempo nelle mappe! Facciamo quando possiamo, con calma.
+**Pattern Testato:** Review a Due Mani (researcher + guardiana)
+
+**PROSSIMI STEP:**
+1. FORTEZZA MODE per deploy sicuri
+2. Dominio dedicato + HTTPS
+3. Piu' knowledge nel RAG
+4. Web interface
+
+---
+
+## Sessione 150 - CERVELLA AI DEPLOYED! (10 Gennaio 2026)
+
+### Cosa Fatto
+1. Ricerca completa deploy Cloud Run (poi scoperto VM esistente!)
+2. Pattern "Review a Due Mani" testato e funziona!
+3. Guardiana Ricerca: 8.5/10 APPROVE
+4. Guardiana Qualita: 7/10 -> 9/10 (dopo fix)
+5. 4 Fix critici: Dockerfile, CORS, rate limiting, input validation
+6. Deploy su VM esistente (separato da Miracollo)
+7. Test: "Chi sei?" -> Risponde con personalita' VERA!
+
+### Architettura Attuale
+```
+VM: 34.27.179.164 (miracollo-cervella)
+
+miracollo-backend (8001) | cervella-ai (8002)
+         |                        |
+    Miracollo App           Cervella AI 24/7
+```
+
+### Pattern Review a Due Mani
+1. Worker fa il lavoro (ricerca/codice)
+2. Guardiana verifica qualita'
+3. Se OK -> procedi
+4. Se NO -> fix e ri-verifica
+
+**FUNZIONA!** Ha trovato 4 issues PRIMA del deploy.
+
+### File Creati
+- `.sncp/memoria/decisioni/20260110_CERVELLA_AI_DEPLOYED_VM.md`
+- `.sncp/idee/IDEA_FORTEZZA_MODE_CERVELLA_AI.md`
+- `.sncp/idee/IDEA_REVIEW_DUE_MANI.md`
+- `.sncp/idee/RICERCA_DEPLOY_CLOUD_RUN.md`
+
+### Lezione Importante
+> "Avevamo gia' la VM! Non serviva Cloud Run!"
+> Sempre verificare cosa abbiamo PRIMA di cercare soluzioni nuove.
+
+### Comandi Utili
+```bash
+# Test Cervella AI
+curl http://34.27.179.164:8002/health
+curl -X POST http://34.27.179.164:8002/api/chat \
+  -H "Content-Type: application/json" \
+  -d '{"message": "Chi sei?"}'
+
+# SSH alla VM
+ssh miracollo-vm
+
+# Logs Cervella AI
+ssh miracollo-vm "docker logs cervella-ai"
+```
 
 ---
 
@@ -37,31 +99,12 @@
 - "Chi sei?" -> Risponde come PARTNER, non assistente
 - "Qual e il nostro obiettivo finale?" -> LIBERTA' GEOGRAFICA!
 
-### Architettura Attuale
-```
-TUO MAC (locale)              ANTHROPIC (cloud)
-- cervella-ai/     ──────>    Claude API
-- Knowledge        <──────    (cervello)
-- Chroma DB
-
-NON vive 24/7 ancora!
-```
-
 ### Competitor Analizzati
 - Aetherius AI, LangMem, Mem0, CrewAI Memory
 - NESSUNO ha COSTITUZIONE + PERSONALITA' + OBIETTIVO come noi!
 
-### Prossimi Step
-1. Deploy Google Cloud Run (24/7)
-2. Aggiungere piu' knowledge
-3. Web interface
-4. Integrazione Miracollo
-
 ### Lezione Importante
 > "Niente tempo nelle mappe! Facciamo quando possiamo, con calma."
-
-### File Creati
-- `.sncp/memoria/decisioni/20260110_CERVELLA_AI_POC_FUNZIONA.md`
 
 ---
 
@@ -642,14 +685,23 @@ cervella status
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-10 13:50 (unknown)
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 15:26 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 8d8ac79 - Decisione: Cervella AI APPROVATA da Rafa!
-- **File modificati** (2):
-  - sncp/stato/oggi.md
-  - reports/engineer_report_20260110_133436.json
+- **Ultimo commit**: 0c16076 - Sessione 149: CERVELLA AI POC FUNZIONA!
+- **File modificati** (5):
+  - sncp/coscienza/pensieri_regina.md
+  - .sncp/stato/oggi.md
+  - PROMPT_RIPRESA.md
+  - reports/scientist_prompt_20260110.md
+  - .sncp/idee/IDEA_REVIEW_DUE_MANI.md
 
 ### Note
 - Checkpoint automatico generato da hook
