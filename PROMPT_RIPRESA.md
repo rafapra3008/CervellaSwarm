@@ -489,17 +489,16 @@ cervella status
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-10 11:28 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 11:29 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 8ec0979 - Sessione 147b: Fix alias VS Code Insiders
-- **File modificati** (5):
-  - swarm/tasks/TASK_TEST_FAQ_v124.done
-  - .swarm/tasks/TASK_TEST_FAQ_v124.md
-  - .swarm/tasks/TASK_TEST_FAQ_v124.ready
-  - .swarm/tasks/TASK_TEST_FAQ_v124_output.md
-  - .swarm/tasks/TASK_TEST_HEADLESS.done
+- **Ultimo commit**: 3441dbb - ANTI-COMPACT: PreCompact auto
+- **File modificati** (2):
+  - eports/scientist_prompt_20260110.md
+  - .swarm/handoff/HANDOFF_20260110_112844.md
 
 ### Note
 - Checkpoint automatico generato da hook
