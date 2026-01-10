@@ -1,23 +1,22 @@
 # PROMPT RIPRESA - CervellaSwarm
 
 > **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 153b
-> **Versione:** v73.0.0 - FASE 4 RICERCA COMPLETATA!
+> **Versione:** v74.0.0 - RICERCA COMPLETA + READY FOR POC!
 
 ---
 
 ## TL;DR per Prossima Cervella
 
 **Dove siamo:**
-- RICERCA CERVELLA BABY: 4/4 FASI COMPLETATE!
-- DECISIONE: CONDITIONAL GO - POC $50 NEXT!
+- RICERCA CERVELLA BABY: 5/5 FASI COMPLETATE!
+- READY FOR POC: SI! Tutto pronto per iniziare!
 - CERVELLA AI: LIVE su http://34.27.179.164:8002
 
-**SESSIONE 153b - FASE 4 COMPLETATA:**
-- Report 14: Costi Dettagliati (1087 righe)
-- Report 15: Timeline + Rischi (1400+ righe)
-- Report 16: GO/NO-GO Framework (1050+ righe)
-- FASE_4_CONSOLIDATO.md creato
-- **TOTALE RICERCA:** 19 file, 12000+ righe!
+**SESSIONE 153b - FASE 4 + FASE 5 COMPLETATE:**
+- FASE 4: Costi, Timeline, GO/NO-GO (3 report, score 91%)
+- FASE 5: Preparazione POC (5 report, score 90%)
+- Guardiana ha approvato TUTTO!
+- **TOTALE RICERCA:** 26 file, 25,500+ righe!
 
 **RACCOMANDAZIONE FINALE:**
 ```
@@ -33,16 +32,62 @@ CONDITIONAL GO (Scenario B)
 - 4B params = gira su 8GB RAM
 - Break-even: ~12.5M tokens/mese
 
-**RICERCA CERVELLA BABY (COMPLETA!):**
-- FASE 1: Fondamenta (Score 9.1/10) - 3 report
-- FASE 2: Stato dell'arte (Score 97.6%) - 6 report
-- FASE 3: Training/Fine-tuning (Score 91%) - 4 report
-- FASE 4: Costi/Timeline/GO-NO-GO - 3 report
+**RICERCA CERVELLA BABY (5/5 FASI!):**
+- FASE 1: Fondamenta (91%) - 3 report
+- FASE 2: Stato dell'arte (97.6%) - 6 report
+- FASE 3: Training/Fine-tuning (91%) - 4 report
+- FASE 4: Costi/Timeline/GO-NO-GO (91%) - 3 report
+- FASE 5: Preparazione POC (90%) - 5 report
+
+**DELIVERABLES PRONTI:**
+- 20 task benchmark (Report 17)
+- COSTITUZIONE compressa 1380 tok (Report 18)
+- RAG architecture design (Report 19)
+- Integrazione infra plan (Report 20)
+- Metriche personalita framework (Report 21)
 
 **PROSSIMI STEP:**
-1. Guardiana verifica FASE 4 (prossima sessione)
-2. POC $50: Test Qwen3-4B su Colab/Vast.ai
-3. MVP Hybrid (se POC = GO)
+1. POC $50: Test Qwen3-4B su Colab (3 settimane)
+2. MVP Hybrid (se POC = GO)
+3. Fine-tuning (6-12 mesi)
+
+---
+
+## Sessione 153b - FASE 5 PREPARAZIONE POC! (10 Gennaio 2026)
+
+### 5 Ricerche Completate
+
+| Report | Contenuto | Righe |
+|--------|-----------|-------|
+| 17_TASK_BENCHMARK | 20 task reali per POC | 2515 |
+| 18_COSTITUZIONE_COMPRESSION | Prompt compresso 1380 tok | 1220 |
+| 19_SNCP_RAG_ARCHITECTURE | Design RAG completo | 2030 |
+| 20_INTEGRAZIONE_INFRA | API, routing, fallback | 2598 |
+| 21_METRICHE_PERSONALITA | Framework evaluation | 2100 |
+
+### Guardiana FASE 5: 90% APPROVED
+
+| Report | Score |
+|--------|-------|
+| R17 Task Benchmark | 9/10 |
+| R18 COSTITUZIONE | 9/10 |
+| R19 RAG Architecture | 9/10 |
+| R20 Integrazione | 9/10 |
+| R21 Metriche | 10/10 |
+
+### Ready for POC
+
+```
+TUTTO PRONTO:
+- 20 task da testare
+- COSTITUZIONE compressa
+- Architettura RAG
+- Piano integrazione
+- Metriche personalita
+- 10 gold standard examples
+
+POC PUO INIZIARE!
+```
 
 ---
 
