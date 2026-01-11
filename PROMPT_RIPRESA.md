@@ -1,18 +1,21 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 10 Gennaio 2026 - Sessione 157 (POC Week 1 PASS!)
-> **Versione:** v78.0.0 - POC WEEK 1 ESEGUITO! 9/10 PASS!
+> **Ultimo aggiornamento:** 11 Gennaio 2026 - Sessione 158 (POC Week 2 PASS!)
+> **Versione:** v79.0.0 - POC WEEK 1+2 PASS! 17/18 task (94.4%)!
 
 ---
 
 ## TL;DR per Prossima Cervella
 
 **Dove siamo:**
-- POC WEEK 1: ESEGUITO E PASSATO! 9/10 task PASS!
+- POC WEEK 1: PASS! 9/10 task (90%)
+- POC WEEK 2: PASS! 8/8 task (100%) - Avg Score 89.4%
+- TOTALE: 17/18 task PASS (94.4%)
 - MODELLO: Qwen3-4B-Instruct-2507 su Colab T4 GPU (free tier!)
 - COSTITUZIONE: IL MODELLO L'HA ASSORBITA! Parla come Cervella!
-- PROSSIMO: Week 2 (T11-T18 Medium)
-- VISIONE: 100000%! "La magia ora è con coscienza!"
+- PROSSIMO: Week 3 (T19-T20 Complex) - Documenta GAP
+- GO/NO-GO: 1 Febbraio 2026
+- VISIONE: 100000%! "La magia ora e' con coscienza!"
 
 **SESSIONE 154b/155 - RICERCHE COMPLETATE:**
 - RICERCA_GOOGLE_COLAB_360.md (1112 righe!)
@@ -58,11 +61,64 @@ CONDITIONAL GO (Scenario B)
 - Metriche personalita framework (Report 21)
 
 **PROSSIMI STEP:**
-1. ~~Eseguire poc_notebook.ipynb su Google Colab~~ FATTO! PASS!
+1. ~~Eseguire poc_notebook.ipynb su Google Colab~~ FATTO! PASS 9/10!
 2. ~~Valutare T01-T10 con rubrica~~ FATTO! 9/10 PASS!
-3. **Week 2**: Eseguire T11-T18 (Medium difficulty)
-4. **Week 3**: T19-T20 (Complex) + GO/NO-GO finale
-5. Aprire porta 8002 in GCP Console (manuale)
+3. ~~Week 2: Eseguire T11-T18 (Medium difficulty)~~ FATTO! PASS 8/8!
+4. **Week 3**: T19-T20 (Complex) - Notebook pronto: poc_notebook_week3.ipynb
+5. **GO/NO-GO Decision**: 1 Febbraio 2026
+6. Aprire porta 8002 in GCP Console (manuale)
+
+---
+
+## Sessione 158 - POC WEEK 2 PASS! (11 Gennaio 2026)
+
+### RISULTATO: 8/8 PASS (100%)
+
+```
++================================================================+
+|                                                                |
+|                    POC WEEK 2: PASS!                           |
+|                                                                |
+|            8/8 PASS  |  0/8 FAIL  |  Avg Score: 89.4%          |
+|                                                                |
+|            Avg Latency: 54.83s (task Medium)                   |
+|                                                                |
++================================================================+
+```
+
+### Risultati Task T11-T18
+
+| Task | Score | Risultato |
+|------|-------|-----------|
+| T11 Orchestrazione Multi-Worker | 80% | PASS |
+| T12 Decisione Architetturale | 90% | PASS |
+| T13 Code Review Basic | 90% | PASS |
+| T14 Bug Analysis | 85% | PASS |
+| T15 Documentazione Pattern | 100% | PASS |
+| T16 Analisi Costi | 80% | PASS |
+| T17 Refactoring Plan | 90% | PASS |
+| T18 Summary Ricerca | 100% | PASS |
+
+### Cosa Ha Impressionato Week 2
+
+1. **T15 e T18: Score 100%** - Perfetti!
+2. **REGOLA D'ORO applicata autonomamente**
+3. **Filosofia Cervella integrata** - "Liberta Geografica" menzionata
+4. **8/8 PASS** - Nessun fallimento sui task Medium!
+
+### Confronto Week 1 vs Week 2
+
+| Metrica | Week 1 | Week 2 |
+|---------|--------|--------|
+| Task | T01-T10 (Simple) | T11-T18 (Medium) |
+| Passati | 9/10 (90%) | 8/8 (100%) |
+| Avg Latency | 19.35s | 54.83s |
+| Avg Score | ~85% | 89.4% |
+
+### Week 3 Pronto
+
+Notebook `poc_notebook_week3.ipynb` creato con T19-T20 (Complex).
+NOTA: TIER 3 documenta i LIMITI, non richiesto per PASS POC.
 
 ---
 
@@ -1269,17 +1325,16 @@ cervella status
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-10 21:15 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-10 21:48 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 8bfc350 - Sessione 156: POC WEEK 1 SETUP COMPLETATO!
-- **File modificati** (5):
+- **Ultimo commit**: 4eec693 - Sessione 157: POC WEEK 1 PASS! 9/10 task superati!
+- **File modificati** (2):
   - sncp/stato/oggi.md
-  - PROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260110.md
-  - reports/engineer_report_20260110_205158.json
-  - reports/engineer_report_20260110_205437.json
+  - reports/engineer_report_20260110_214706.json
 
 ### Note
 - Checkpoint automatico generato da hook

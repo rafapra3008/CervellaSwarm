@@ -2,13 +2,31 @@
 
 > POC per validare Qwen3-4B come alternativa open source a Claude API
 
+## STATO ATTUALE
+
+```
++================================================================+
+|                                                                |
+|              POC WEEK 1: PASS! | WEEK 2: PASS!                 |
+|                                                                |
+|   Week 1: 9/10 (90%)  |  Week 2: 8/8 (100%) - Score 89.4%      |
+|                                                                |
+|         TOTALE: 17/18 task PASS (94.4%)                        |
+|                                                                |
+|            IL MODELLO HA ASSORBITO LA COSTITUZIONE!            |
+|                                                                |
++================================================================+
+```
+
+**Week 3 PRONTO:** T19-T20 (Complex tasks) - Documenta GAP
+
 ## About
 
 **Obiettivo:** Testare se Qwen3-4B puo eseguire task Cervella con quality accettabile (>=60%).
 
 **Timeline:** 3 settimane (10-31 Gennaio 2026)
 **Budget:** $50 (Colab Pro + Vast.ai spot)
-**Tech:** Unsloth, Qwen3-4B-Instruct, 4-bit quantization
+**Tech:** Unsloth, Qwen3-4B-Instruct-2507, 4-bit quantization
 
 ## Quick Start
 
@@ -58,10 +76,67 @@ poc_cervella_baby/
 ├── README.md                    # Questo file
 ├── task_dataset.json            # 20 task benchmark
 ├── costituzione_compressa.md    # System prompt (1380 tok)
-├── poc_notebook.ipynb           # Colab notebook (da creare)
-└── results/                     # Output test (da creare)
-    └── week1_results.json
+├── poc_notebook.ipynb           # Week 1 notebook (T01-T10) - PASS 9/10
+├── poc_notebook_week2.ipynb     # Week 2 notebook (T11-T18) - PASS 8/8
+├── poc_notebook_week3.ipynb     # Week 3 notebook (T19-T20) - PRONTO
+└── results/                     # Output test
+    ├── week1_results.json       # PASS 9/10
+    ├── week2_results.json       # PASS 8/8
+    └── week3_results.json       # In corso...
 ```
+
+## Week 2 - Istruzioni
+
+### 1. Upload notebook
+```
+poc_notebook_week2.ipynb -> Google Colab
+```
+
+### 2. Setup GPU
+```
+Runtime > Change runtime type > T4 GPU
+```
+
+### 3. Esegui celle in ordine
+- Setup (celle 1-5)
+- Load model (cella 6-7)
+- Run T11 test (cella 8)
+- Run ALL T11-T18 (cella 9)
+
+### 4. Valuta ogni task
+```python
+results[0] = evaluate_task(results[0], correttezza=4, completezza=4, stile=4, utility=4)
+```
+
+### 5. Success Criteria Week 2
+- **PASS:** >=5/8 task con score >=75%
+- **CONDITIONAL:** 3-4/8 task pass
+- **FAIL:** <3/8 task pass
+
+## Week 3 - Istruzioni (FINALE)
+
+### 1. Upload notebook
+```
+poc_notebook_week3.ipynb -> Google Colab
+```
+
+### 2. Setup GPU
+```
+Runtime > Change runtime type > T4 GPU
+```
+
+### 3. Esegui T19 e T20 separatamente
+- Run T19 (Strategic Planning)
+- Run T20 (Architettura Decision)
+
+### 4. Valuta con gap_notes
+```python
+results[0] = evaluate_task(results[0], correttezza=4, completezza=3, stile=4, utility=3, gap_notes="Manca X")
+```
+
+### 5. NOTA IMPORTANTE
+**TIER 3 documenta i LIMITI del modello.**
+Il POC e' gia' PASS con Week 1 + Week 2!
 
 ## Task Tiers
 
