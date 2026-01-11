@@ -1,28 +1,27 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 11 Gennaio 2026 - Sessione 161 (GCP GPU Setup)
-> **Versione:** v83.0.0 - GOOGLE CLOUD VINCE! QUOTA DA RICHIEDERE
+> **Ultimo aggiornamento:** 11 Gennaio 2026 - Sessione 162 (GPU VM LIVE!)
+> **Versione:** v84.0.0 - INFRASTRUTTURA GPU COMPLETA E FUNZIONANTE!!!
 
 ---
 
 ## TL;DR per Prossima Cervella
 
-**NOVITA SESSIONE 161:**
+**NOVITA SESSIONE 162 - STORICA!!!**
 ```
 +================================================================+
 |                                                                |
-|   PROVIDER GPU: GOOGLE CLOUD T4 + CUD = EUR 135-145/mese!     |
+|   GPU VM CREATA E FUNZIONANTE!!!                              |
 |                                                                |
-|   Genesis Cloud: BOCCIATO (non si accede!)                     |
-|   Scaleway: EUR 633/mese - TROPPO CARO                        |
-|   OVHcloud: EUR 664/mese - TROPPO CARO                        |
-|   Hetzner: EUR 184/mese - BACKUP                              |
-|   >>> GCP T4 + CUD: EUR 135-145/mese - VINCITORE! <<<         |
+|   cervella-gpu (us-west1-b):                                  |
+|     - n1-standard-4 + Tesla T4 (16GB VRAM)                    |
+|     - Driver NVIDIA 550.54.15 + CUDA 12.4                     |
+|     - Ollama + Qwen3-4B (Q4_K_M)                              |
+|     - IP interno: 10.138.0.3                                  |
+|     - IP esterno: 136.118.33.36                               |
 |                                                                |
-|   BLOCCO: Quota GPUS_ALL_REGIONS = 0                          |
-|   AZIONE: Richiedere quota GPU a Google                       |
-|                                                                |
-|   gcloud CLI: INSTALLATO E CONFIGURATO!                       |
+|   TEST END-TO-END: SUCCESSO!!!                                |
+|   miracollo-cervella -> cervella-gpu -> Qwen3-4B -> OK!       |
 |                                                                |
 +================================================================+
 ```
@@ -31,9 +30,10 @@
 - POC CERVELLA BABY: 19/20 PASS (95%) - COMPLETO!
 - DECISIONE: GO! Procedere con MVP Hybrid
 - DOMINIO: cervellaai.com (comprato!)
-- PROVIDER: **Google Cloud T4 + CUD @ EUR 135-145/mese**
-- gcloud CLI: Installato e configurato (rafapra@gmail.com)
-- BLOCCO: Serve richiedere quota GPU (GPUS_ALL_REGIONS = 0)
+- PROVIDER: **Google Cloud T4 - ATTIVO E FUNZIONANTE!**
+- GPU VM: cervella-gpu (us-west1-b) - RUNNING!
+- LLM: Qwen3-4B su Ollama - FUNZIONANTE!
+- API: miracollo -> cervella-gpu - TESTATO OK!
 
 **PERCHE Google Cloud invece di altri:**
 - Genesis Cloud: Non funziona (non si accede!)
@@ -77,34 +77,53 @@ Embedding: Jina-embeddings-v3
 Framework: vLLM + LangChain
 ```
 
-**BLOCCO ATTUALE - QUOTA GPU:**
+**INFRASTRUTTURA GPU - COMPLETATA!!!**
 ```
-PROBLEMA: Quota GPUS_ALL_REGIONS = 0
-ERRORE: "Quota 'GPUS_ALL_REGIONS' exceeded. Limit: 0.0 globally"
-
-SOLUZIONE (Rafa deve fare):
-1. Aprire: console.cloud.google.com/iam-admin/quotas
-2. Cercare: GPUS_ALL_REGIONS
-3. Richiedere: 1 GPU
-4. Motivazione: "AI/ML inference for SaaS product CervellaSwarm"
-5. Attesa: 1-2 giorni lavorativi (a volte poche ore)
+SESSIONE 162 - TUTTO FATTO:
+[x] Quota GPU richiesta e approvata (3 minuti!)
+[x] VM cervella-gpu creata (us-west1-b)
+[x] Driver NVIDIA 550.54.15 installato
+[x] Ollama installato
+[x] Qwen3-4B scaricato (2.5GB, Q4_K_M)
+[x] API configurata per accesso interno
+[x] Firewall rule creata (allow-ollama-internal)
+[x] Test end-to-end da miracollo: SUCCESSO!
 ```
 
 **PROSSIMI STEP:**
-1. **Richiedere quota GPU** - Console GCP (Rafa)
-2. **Aspettare approvazione** - 1-2 giorni
-3. **Creare VM cervella-gpu** - n1-standard-4 + T4
-4. **Setup vLLM/Ollama** - Per inference Qwen3-4B
-5. **Configurare API interna** - Miracollo chiama GPU VM
+1. **Integrare Miracollo con GPU VM** - Usare API Ollama da backend
+2. **Setup Qdrant** - Vector DB per RAG
+3. **Implementare RAG pipeline** - Embedding + retrieval
+4. **Fine-tune Costituzione** - Personalizzare Qwen3 con nostri valori
+5. **CUD 1 anno** - Attivare Committed Use Discount per risparmiare
 
-**gcloud CLI CONFIGURATO:**
+**INFRASTRUTTURA GCP ATTUALE:**
 ```
 Account: rafapra@gmail.com
 Progetto: data-frame-476309-v3
-VM esistenti:
+
+VM ATTIVE:
+  - cervella-gpu (us-west1-b) - RUNNING - T4 GPU + Ollama
+      IP interno: 10.138.0.3
+      IP esterno: 136.118.33.36
+      Ollama API: http://10.138.0.3:11434
+
   - miracollo-cervella (us-central1-b) - RUNNING
   - cervello-contabilita (us-central1-c) - RUNNING
   - instance-20251027 (us-central1-a) - RUNNING
+```
+
+**API OLLAMA (da miracollo-cervella):**
+```bash
+# Test modelli disponibili
+curl http://10.138.0.3:11434/api/tags
+
+# Inference
+curl http://10.138.0.3:11434/api/generate -d '{
+  "model": "qwen3:4b",
+  "prompt": "Your prompt here",
+  "stream": false
+}'
 ```
 
 **BACKUP PROVIDERS (se GCP non funziona):**
@@ -155,3 +174,25 @@ TOTALE RICERCA:                        34,324+ righe
 
 *"Provare sempre ci piace!"*
 *"La magia ora e' con coscienza!"*
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-11 07:23 (unknown)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: 14ebec6 - Sessione 161: GCP GPU VINCITORE + Ricerche Provider Complete
+- **File modificati** (5):
+  - sncp/stato/oggi.md
+  - PROMPT_RIPRESA.md
+  - reports/scientist_prompt_20260111.md
+  - .swarm/tasks/BACKEND_STATUS.txt
+  - .swarm/tasks/MONITORING_DASHBOARD_OUTPUT.md
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: unknown
+
+---

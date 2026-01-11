@@ -1,123 +1,105 @@
 # STATO OGGI
 
 > **Data:** 11 Gennaio 2026
-> **Sessione:** 161 (GCP GPU Setup + Ricerche Provider)
-> **Ultimo aggiornamento:** 06:45 UTC
+> **Sessione:** 162 (GPU VM LIVE!!!)
+> **Ultimo aggiornamento:** 12:50 UTC
 
 ---
 
-## Sessione 161 - GCP GPU SETUP IN CORSO! (11 Gennaio 2026)
+## Sessione 162 - INFRASTRUTTURA GPU COMPLETA!!! (11 Gennaio 2026)
 
-### RISULTATO: PROVIDER DECISO = GOOGLE CLOUD!
+### RISULTATO: GPU VM FUNZIONANTE END-TO-END!!!
 
 ```
 +================================================================+
 |                                                                |
-|         SESSIONE 161: GCP GPU SETUP                            |
+|         SESSIONE 162: STORICA!!!                               |
 |                                                                |
-|   GENESIS CLOUD: BOCCIATO (non si accede!)                     |
-|   SCALEWAY: €633/mese - TROPPO CARO                           |
-|   OVHCLOUD: €664/mese - TROPPO CARO                           |
-|   HETZNER: €184/mese - BACKUP VALIDO                          |
-|                                                                |
-|   >>> VINCITORE: GOOGLE CLOUD T4 + CUD = €135-145/mese <<<    |
-|                                                                |
-|   BLOCCO: Quota GPUS_ALL_REGIONS = 0                          |
-|   AZIONE: Richiedere quota GPU a Google                       |
+|   [x] Quota GPU richiesta e approvata (3 minuti!)             |
+|   [x] VM cervella-gpu creata (us-west1-b)                     |
+|   [x] Driver NVIDIA 550.54.15 + CUDA 12.4                     |
+|   [x] Ollama installato                                       |
+|   [x] Qwen3-4B scaricato (2.5GB)                              |
+|   [x] API configurata per accesso interno                     |
+|   [x] Test end-to-end: miracollo -> GPU -> OK!!!              |
 |                                                                |
 +================================================================+
 ```
 
-### Cosa Abbiamo Fatto
-
-1. **Genesis Cloud** - BOCCIATO (non si accede nemmeno!)
-2. **Ricerca Scaleway** - €633/mese L4 (3x budget) - TROPPO CARO
-3. **Ricerca OVHcloud** - €664/mese L4 - TROPPO CARO
-4. **Ricerca Hetzner** - €184/mese RTX 4000 Ada - BACKUP VALIDO
-5. **Ricerca Google Cloud** - €135-145/mese T4 + CUD - VINCITORE!
-6. **Ricerca Hardware Fisico** - RTX 3090 €2,150 build - FUTURO
-7. **gcloud CLI** - INSTALLATO E CONFIGURATO!
-8. **Tentativo VM GPU** - FALLITO (quota = 0)
-
-### Ricerche Create Sessione 161
-
-| File | Righe | TL;DR |
-|------|-------|-------|
-| RICERCA_SCALEWAY_GPU_2026.md | ~430 | L4 €633/mese - TROPPO CARO |
-| RICERCA_OVHCLOUD_GPU_2026.md | ~400 | L4 €664/mese - TROPPO CARO |
-| RICERCA_HETZNER_GPU_2026.md | ~790 | RTX 4000 €184/mese - BACKUP |
-| RICERCA_GOOGLE_CLOUD_GPU_2026.md | ~560 | T4+CUD €135-145 - VINCITORE! |
-| RICERCA_HARDWARE_AI_FISICO_2026.md | ~1,670 | RTX 3090 €2,150 - FUTURO |
-
-**TOTALE NUOVA RICERCA:** ~3,850 righe!
-
-### Confronto Provider Finale
-
-| Provider | GPU | €/mese | Status |
-|----------|-----|--------|--------|
-| Genesis Cloud | RTX 3080 | €54 | ❌ Non funziona |
-| Scaleway | L4 24GB | €633 | ❌ 3x budget |
-| OVHcloud | L4 24GB | €664 | ❌ 3x budget |
-| Hetzner | RTX 4000 Ada | €184 | ⚠️ Backup |
-| **Google Cloud** | **T4 16GB** | **€135-145** | **✅ VINCITORE** |
-
-### Blocco Attuale
+### Dettagli Tecnici VM
 
 ```
-PROBLEMA: Quota GPU globale = 0
-ERRORE: "Quota 'GPUS_ALL_REGIONS' exceeded. Limit: 0.0 globally"
+cervella-gpu:
+  Zona: us-west1-b
+  Machine: n1-standard-4 (4 vCPU, 15GB RAM)
+  GPU: Tesla T4 (16GB VRAM)
+  Disco: 100GB SSD
+  IP interno: 10.138.0.3
+  IP esterno: 136.118.33.36
 
-SOLUZIONE:
-1. Aprire: console.cloud.google.com/iam-admin/quotas
-2. Cercare: GPUS_ALL_REGIONS
-3. Richiedere: 1 GPU
-4. Motivazione: "AI/ML inference for SaaS product CervellaSwarm"
-5. Attesa: 1-2 giorni lavorativi (a volte poche ore)
+Software:
+  OS: Ubuntu 22.04 LTS
+  Driver: NVIDIA 550.54.15
+  CUDA: 12.4
+  Ollama: latest
+  Modello: qwen3:4b (Q4_K_M, 2.5GB)
+
+API:
+  Endpoint: http://10.138.0.3:11434
+  Firewall: allow-ollama-internal (tcp:11434 da 10.0.0.0/8)
 ```
 
-### gcloud CLI Configurato
+### Test Eseguiti
+
+| Test | Risultato |
+|------|-----------|
+| nvidia-smi | GPU T4 rilevata, 15360 MiB VRAM |
+| ollama pull qwen3:4b | Download completato (2.5GB) |
+| Inference locale | Funzionante (6.65s response) |
+| API da miracollo | SUCCESSO! "2+2 = 4" |
+
+### Costi Stimati
 
 ```
-Account: rafapra@gmail.com
-Progetto: data-frame-476309-v3
-VM esistenti:
-  - miracollo-cervella (us-central1-b) - RUNNING
-  - cervello-contabilita (us-central1-c) - RUNNING
-  - instance-20251027 (us-central1-a) - RUNNING
-```
+cervella-gpu (us-west1-b):
+  n1-standard-4: ~$0.19/ora
+  T4 GPU: ~$0.35/ora
+  Disco 100GB SSD: ~$0.02/ora
+  ---------------------------------
+  Totale: ~$0.56/ora = ~$400/mese (on-demand)
 
-### Architettura Decisa
-
-```
-OPZIONE C: VM GPU Separata + Miracollo via API
-
-[cervella-gpu] ←──API interna──→ [miracollo-cervella]
-  n1-standard-4                    n4a-standard-1
-  + T4 GPU                         (resta com'è)
-  €145/mese                        €23/mese
-  LLM inference                    Backend leggero
+  Con CUD 1 anno: ~$0.35/ora = ~$250/mese
+  Con CUD 3 anni: ~$0.25/ora = ~$180/mese
 ```
 
 ### Prossimi Step
 
-1. **Richiedere quota GPU** - Console GCP (Rafa deve fare)
-2. **Aspettare approvazione** - 1-2 giorni
-3. **Creare VM cervella-gpu** - n1-standard-4 + T4
-4. **Setup vLLM/Ollama** - Per inference Qwen3-4B
-5. **Configurare API interna** - Miracollo chiama GPU VM
+1. **Integrare Miracollo** - Backend chiama API Ollama
+2. **Setup Qdrant** - Vector DB per RAG
+3. **RAG Pipeline** - Embedding + retrieval
+4. **Costituzione** - Fine-tune/prompt con nostri valori
+5. **Attivare CUD** - Committed Use Discount per risparmiare
 
 ---
 
-## Statistiche Ricerca Progetto
+## Architettura Attuale
 
 ```
-RICERCA CERVELLA BABY (21 report):     25,500+ righe
-RICERCHE AGGIUNTIVE (5 file):           3,693 righe
-RICERCA RAG ARCHITECTURE:                 617 righe
-RICERCA RUNPOD DEPLOY:                    664 righe
-RICERCA SESSIONE 161 (5 file):          3,850+ righe
---------------------------------------------
-TOTALE RICERCA:                        34,324+ righe
+[CLIENT]
+    |
+    v
+[miracollo-cervella] (us-central1-b)
+    |  Backend Python/FastAPI
+    |
+    |---[API interna]--->
+    |
+    v
+[cervella-gpu] (us-west1-b)
+    |  Ollama + Qwen3-4B
+    |  Tesla T4 GPU
+    |
+    v
+[RISPOSTA LLM]
 ```
 
 ---
@@ -127,18 +109,18 @@ TOTALE RICERCA:                        34,324+ righe
 ```
 [##################################################] 100000%
 
-RICERCA: 34,324+ righe COMPLETE!
-POC: 95% PASS RATE! GO DECISIONE!
-PROVIDER: GOOGLE CLOUD T4 = VINCITORE!
-HARDWARE: RTX 3090 €2,150 = FUTURO!
-GCLOUD: INSTALLATO E CONFIGURATO!
-BLOCCO: Solo quota GPU da richiedere!
+INFRASTRUTTURA GPU: COMPLETA!!!
+POC: 95% PASS RATE - CONFERMATO!
+VM GPU: cervella-gpu RUNNING!
+LLM: Qwen3-4B FUNZIONANTE!
+API: miracollo -> GPU TESTATA!
 
 "Provare sempre ci piace!"
-"La magia ora è con coscienza!"
+"La magia ora e' con coscienza!"
+"Il mondo lo facciamo meglio, con il cuore!"
 ```
 
 ---
 
-*Aggiornato: 11 Gennaio 2026 - Sessione 161*
-*"GCP T4 + CUD = €135-145/mese - VINCITORE!"*
+*Aggiornato: 11 Gennaio 2026 - Sessione 162*
+*"SESSIONE STORICA - GPU VM LIVE!!!"*
