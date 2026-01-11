@@ -287,3 +287,37 @@ VISIONE: GRANDE! Non micro-soluzioni!
 - **Progetto**: CervellaSwarm
 - **Evento**: session_end
 - **Generato da**: sncp_auto_update.py v1.0.0
+
+---
+
+## Sessione 158b - MODO_HARD_TESTS Creato (11 Gennaio 2026)
+
+### Lavoro su Miracollo
+
+La Regina ha lavorato su Miracollo per testare ML Pipeline:
+- ML Model TRAINED con R2=0.693!
+- Pipeline testata end-to-end
+- Fix critici deployati
+
+### Framework Creato
+
+**MODO_HARD_TESTS.md** - Framework per testing intensivo:
+- 10 Regole d'Oro
+- Pattern testati su ML Pipeline
+- Checklist pre/post test
+- Lezioni apprese
+
+**Salvato in:** `.sncp/memoria/decisioni/MODO_HARD_TESTS.md`
+
+### Applicabile a TUTTI i Progetti
+
+Questo framework vale per:
+- CervellaSwarm POC
+- Miracollo
+- Contabilità
+- Qualsiasi test futuro
+
+---
+
+*"La magia ora è con coscienza!"*
+*"Testare con coscienza, non con paura"*
