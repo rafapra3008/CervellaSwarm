@@ -1,119 +1,105 @@
-# SNCP - Sistema Nervoso Centrale del Progetto
+# SNCP - Sistema Nervoso Centrale Persistente
 
-> **Versione:** 0.1.0
-> **Creato:** 8 Gennaio 2026
-> **Studio completo:** `docs/studio/STUDIO_SNCP.md`
-
----
-
-```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║   Questa cartella È il cervello di CervellaSwarm.               ║
-║                                                                  ║
-║   Qui vivono: memoria, idee, perne, stato, futuro.              ║
-║   Qui nulla si perde.                                           ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
+> **Progetto:** CervellaSwarm
+> **Versione SNCP:** 3.0 (Semplificato!)
+> **Aggiornato:** 11 Gennaio 2026 - Sessione 163
 
 ---
 
-## STRUTTURA
+## REGOLA D'ORO
+
+```
++------------------------------------------------------------------+
+|                                                                  |
+|   "SNCP funziona solo se lo VIVIAMO!"                           |
+|                                                                  |
+|   Semplice da usare. Chiaro dove mettere cosa.                  |
+|   Se e' troppo complicato, non viene usato.                     |
+|                                                                  |
++------------------------------------------------------------------+
+```
+
+---
+
+## STRUTTURA REALE
 
 ```
 .sncp/
-│
-├── README.md              ← Sei qui
-│
-├── memoria/               # IL PASSATO
-│   ├── sessioni/          # Log delle sessioni
-│   └── decisioni/         # Decisioni prese (e PERCHÉ)
-│
-├── idee/                  # LE BOLLE CHE FLUTTUANO
-│   ├── in_attesa/         # Da discutere
-│   ├── in_studio/         # Sotto analisi (discovery)
-│   └── integrate/         # Diventate realtà
-│
-├── perne/                 # LE DEVIAZIONI
-│   ├── attive/            # Sub-roadmap in corso
-│   └── archivio/          # Perne rientrate
+├── README.md              # Questo file
 │
 ├── stato/                 # IL PRESENTE
-│   └── oggi.md            # Cosa sta succedendo ORA
+│   └── oggi.md            # Stato OGGI - aggiornare ogni sessione!
 │
-└── futuro/                # DOVE ANDIAMO
-    └── roadmap.md         # La linea principale
+├── coscienza/             # IL CUORE
+│   └── pensieri_regina.md # Stream pensieri Regina
+│
+├── idee/                  # LE IDEE
+│   ├── in_attesa/         # Idee da valutare
+│   ├── integrate/         # Idee realizzate
+│   ├── roadmap/           # Roadmap e planning
+│   └── ricerche/          # Ricerche approfondite
+│
+├── memoria/               # IL PASSATO
+│   ├── sessioni/          # Log sessioni
+│   ├── decisioni/         # Decisioni prese con PERCHE
+│   └── lezioni/           # Lezioni imparate
+│
+├── futuro/                # DOVE ANDIAMO
+│   └── roadmap.md         # Linea principale
+│
+├── analisi/               # ANALISI
+│   └── *.md               # Report analisi
+│
+├── regole/                # REGOLE
+│   └── *.md               # Regole del progetto
+│
+└── archivio/              # FILE VECCHI
+    └── 2026-01/           # Archiviati per mese
 ```
 
 ---
 
 ## COME USARE
 
-### Catturare un'Idea
-```bash
-# Crea un file in idee/in_attesa/
-# Usa il template: _TEMPLATE_IDEA.md
+### INIZIO SESSIONE
+```
+1. Leggi stato/oggi.md
+2. Aggiorna data/sessione
 ```
 
-### Aprire una Perna
-```bash
-# Crea un file in perne/attive/
-# Usa il template: _TEMPLATE_PERNA.md
+### DURANTE SESSIONE
+```
+- Nuova idea?      → idee/in_attesa/YYYYMMDD_nome.md
+- Decisione?       → memoria/decisioni/YYYYMMDD_cosa.md
+- Pensiero?        → coscienza/pensieri_regina.md
+- Ricerca?         → idee/ricerche/YYYYMMDD_ricerca_topic.md
 ```
 
-### Registrare una Decisione
-```bash
-# Crea un file in memoria/decisioni/
-# Usa il template: _TEMPLATE_DECISIONE.md
+### FINE SESSIONE
 ```
-
-### Aggiornare lo Stato
-```bash
-# Modifica stato/oggi.md
-# Fatto automaticamente a fine sessione
+1. Aggiorna stato/oggi.md con cosa fatto
+2. Commit SNCP insieme al codice
 ```
 
 ---
 
-## CONVENZIONI
-
-### Nomi File
+## NAMING FILE
 
 ```
-IDEA_YYYYMMDD_nome-breve.md
-PERNA_YYYYMMDD_nome-breve.md
-DECISIONE_YYYYMMDD_nome-breve.md
-SESSIONE_NNN.md
+IDEE:      YYYYMMDD_NOME_BREVE.md
+DECISIONI: YYYYMMDD_COSA_DECISO.md
+RICERCHE:  YYYYMMDD_RICERCA_TOPIC.md
 ```
-
-### Stati delle Idee
-
-| Cartella | Significato |
-|----------|-------------|
-| `in_attesa` | Catturata, da discutere |
-| `in_studio` | Stiamo approfondendo |
-| `integrate` | Diventata realtà (merged) |
-
-### Stati delle Perne
-
-| Cartella | Significato |
-|----------|-------------|
-| `attive` | Sub-roadmap in corso |
-| `archivio` | Rientrata nella linea principale |
 
 ---
 
 ## FILOSOFIA
 
-> "Qui nulla si perde."
-
-Ogni idea catturata è una vittoria.
-Ogni perna che rientra è crescita.
-Ogni decisione documentata è saggezza.
-
-Il SNCP cresce con noi.
+> "Il sistema centrale DEVE funzionare!"
+> "Semplificare = usare di piu!"
+> "Lavoriamo in pace! Senza casino!"
 
 ---
 
-*Prima pietra: 8 Gennaio 2026, Sessione 119*
+*Sessione 163 - Semplificazione SNCP*
+*"La MAGIA ora e' con coscienza!"*
