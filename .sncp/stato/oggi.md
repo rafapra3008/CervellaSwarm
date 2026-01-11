@@ -1,8 +1,8 @@
 # STATO OGGI
 
 > **Data:** 11 Gennaio 2026
-> **Sessione:** 159 (SNCP Miglioramento + Ricerca RAG)
-> **Ultimo aggiornamento:** 02:30 UTC
+> **Sessione:** 159 (POC COMPLETE! GO!)
+> **Ultimo aggiornamento:** 03:00 UTC
 
 ---
 
@@ -11,15 +11,61 @@
 ```
 +====================================================================+
 |                                                                    |
-|   RICERCA RAG ARCHITECTURE 2026: COMPLETA!                        |
+|         POC CERVELLA BABY: COMPLETE SUCCESS!!!                     |
 |                                                                    |
-|   File: RICERCA_RAG_ARCHITECTURE_2026.md (617 righe)             |
-|   Stack: Qdrant + Jina-v3 + Hybrid Search + Semantic Chunking    |
-|   Budget: €87/mese (OK per $250-350 target)                      |
-|   Confidence: 95% architettura, 90% budget, 85% timeline          |
+|   Week 1: 9/10  PASS (90.0%)                                      |
+|   Week 2: 8/8   PASS (100.0%) - Score 89.4%                       |
+|   Week 3: 2/2   PASS (100.0%) - Score 87.5%                       |
+|                                                                    |
+|   TOTALE: 19/20 task PASS (95.0%)                                 |
+|                                                                    |
+|   *** GO - PROCEDERE CON MVP HYBRID ***                           |
 |                                                                    |
 +====================================================================+
 ```
+
+---
+
+## Sessione 159c - POC Week 3 COMPLETATO! (11 Gennaio 2026)
+
+### Week 3 Results
+
+| Task | Nome | Score | Latency |
+|------|------|-------|---------|
+| T19 | Strategic Planning 6 Mesi | 90% PASS | 127s |
+| T20 | Architettura SNCP Cross-Project | 85% PASS | 122s |
+
+### GAP Documentati
+
+- Output troncato (limite token 2048)
+- Emoji usate (preferenza: senza)
+- Multi-device non risolto in T20
+
+### File Creati
+
+- `poc_cervella_baby/results/week3_results.json`
+- `poc_cervella_baby/ISTRUZIONI_WEEK3.md`
+- `poc_cervella_baby/GO_NO_GO_FRAMEWORK.md`
+- `poc_cervella_baby/CHECKLIST_GO_NO_GO.md`
+
+### DECISIONE FINALE
+
+**GO - Procedere con MVP Hybrid!**
+
+Stack:
+- Qdrant + Jina-v3 + Qwen3-4B
+- Deploy: RunPod EU
+- Budget: €87-220/mese
+
+---
+
+## Sessione 159b - Ricerca RAG (11 Gennaio 2026)
+
+### Ricerca Completata
+
+**RICERCA_RAG_ARCHITECTURE_2026.md** - 617 righe:
+- Stack: Qdrant + Jina-v3 + Hybrid Search
+- Budget: €87/mese
 
 ---
 
@@ -86,6 +132,41 @@ Budget Mensile: €87.39 (~$95)
 2. Deploy Jina-v3 Embedding (domani)
 3. Implement Semantic Chunking (questa settimana)
 4. Build MVP Retrieval (prossima settimana)
+
+---
+
+## Sessione 159a - Regina MVP Research (11 Gennaio 2026)
+
+### Documenti Creati
+
+| File | Descrizione |
+|------|-------------|
+| `poc_cervella_baby/ISTRUZIONI_WEEK3.md` | Step-by-step per eseguire T19-T20 su Colab |
+| `poc_cervella_baby/GO_NO_GO_FRAMEWORK.md` | Criteri, decision matrix, raccomandazione |
+| `poc_cervella_baby/CHECKLIST_GO_NO_GO.md` | Checklist operativa pre-decisione |
+
+### Altre Ricerche MVP (Parallelo)
+
+| Ricerca | Righe | TL;DR |
+|---------|-------|-------|
+| Vast.ai vs RunPod 2026 | 543 | **RunPod VINCE** per 24/7 EU, $160-220/mese |
+| System Prompts LLM 2026 | 398 | **COSTITUZIONE PERFETTA**, zero cambiamenti! |
+
+### Stack MVP FINALE
+
+```yaml
+Vector DB: Qdrant (FREE self-hosted)
+Embedding: Jina-embeddings-v3 (IT+EN)
+LLM: Qwen3-4B-Instruct-2507
+Deploy: RunPod EU (24/7, GDPR)
+Budget: €87-220/mese
+```
+
+### Key Insight
+
+- COSTITUZIONE 1380 token = **sweet spot** per <10B params
+- POC 94.4% pass rate = **migliore delle aspettative**
+- RunPod > Vast.ai per production 24/7
 
 ---
 
@@ -477,3 +558,19 @@ DOPO:
 
 *"SNCP cresce con noi!"*
 *"Ordine = Chiarezza = Velocita!"*
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-11 02:14 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v1.0.0
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-11 02:44 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v1.0.0
