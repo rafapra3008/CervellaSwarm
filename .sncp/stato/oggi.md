@@ -1,8 +1,42 @@
 # STATO OGGI
 
 > **Data:** 11 Gennaio 2026 (Domenica)
-> **Sessione:** 165 - Sprint 3.2 + Costituzione
-> **Ultimo aggiornamento:** 16:30 UTC
+> **Sessione:** 166 - Multi-Sessione + Context Discovery
+> **Ultimo aggiornamento:** 20:50 UTC
+
+---
+
+## Sessione 166 - MULTI-SESSIONE VALIDATO!
+
+```
++================================================================+
+|                                                                |
+|   SESSIONE 166: SISTEMA MULTI-SESSIONE PRONTO!                |
+|                                                                |
+|   1. MULTI-SESSIONE COMPLETO                                   |
+|      - Protocollo v1.0 documentato (451 righe)                 |
+|      - 9 script verificati e funzionanti                       |
+|      - Bug check-dependencies.sh FIXATO                        |
+|      - Test su progetto fake: PASSATO                          |
+|      - Integrazione SNCP per sessioni parallele                |
+|      - Template copia-incolla per Rafa                         |
+|                                                                |
+|   2. SCOPERTA: "Cache Invalidation Silente"                    |
+|      - Context scende SENZA auto-compact visibile              |
+|      - cache_read CROLLA a ~19,365 (core costante)             |
+|      - cache_create ESPLODE (ricostruzione compressa)          |
+|      - Pattern diverso da auto-compact!                        |
+|      - Da investigare con test controllato                     |
+|                                                                |
+|   FILE CREATI:                                                 |
+|   - 20260111_PROTOCOLLO_MULTI_SESSIONE_v1.md                   |
+|   - 20260111_TEST_MULTI_SESSIONE.md                            |
+|   - 20260111_TEMPLATE_INIZIO_SESSIONE_PARALLELA.md             |
+|   - 20260111_TEMPLATE_RAFA_INIZIO_PARALLELO.md                 |
+|   - .sncp/sessioni_parallele/_TEMPLATE/ (3 file)               |
+|                                                                |
++================================================================+
+```
 
 ---
 
@@ -138,3 +172,11 @@ miracollo-cervella: RUNNING
 
 ---
 *Analisi completata. Report pronto per Regina.*
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-11 21:04 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v2.0.0

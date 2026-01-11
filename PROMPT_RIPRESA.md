@@ -1,11 +1,43 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 11 Gennaio 2026 - Sessione 165
-> **Versione:** v88.0.0 - COSTITUZIONE CERVELLA AI!
+> **Ultimo aggiornamento:** 11 Gennaio 2026 - Sessione 166
+> **Versione:** v89.0.0 - SISTEMA MULTI-SESSIONE VALIDATO!
 
 ---
 
 ## TL;DR per Prossima Cervella
+
+**SESSIONE 166 - MULTI-SESSIONE PRONTO + SCOPERTA CONTEXT!**
+
+```
++================================================================+
+|                                                                |
+|   SESSIONE 166: SISTEMA MULTI-SESSIONE VALIDATO!              |
+|                                                                |
+|   1. MULTI-SESSIONE COMPLETO                                   |
+|      - Protocollo v1.0 con workflow 5 fasi                     |
+|      - 9 script testati e funzionanti                          |
+|      - Bug check-dependencies.sh FIXATO                        |
+|      - Integrazione SNCP per sessioni parallele                |
+|      - Template copia-incolla per Rafa                         |
+|                                                                |
+|   2. SCOPERTA: "Cache Invalidation Silente"                    |
+|      - Context scende SENZA auto-compact visibile              |
+|      - cache_read CROLLA a ~19,365 (core costante)             |
+|      - cache_create ESPLODE (ricostruzione compressa)          |
+|      - Diverso da auto-compact normale!                        |
+|                                                                |
+|   FILE CHIAVE:                                                 |
+|   - .sncp/idee/20260111_PROTOCOLLO_MULTI_SESSIONE_v1.md        |
+|   - .sncp/idee/20260111_TEMPLATE_INIZIO_SESSIONE_PARALLELA.md  |
+|   - .sncp/idee/20260111_TEMPLATE_RAFA_INIZIO_PARALLELO.md      |
+|   - .sncp/idee/DA_STUDIARE_CONTEXT_LIBERATION.md               |
+|   - .sncp/sessioni_parallele/_TEMPLATE/ (3 file)               |
+|                                                                |
++================================================================+
+```
+
+---
 
 **SESSIONE 165 - COSTITUZIONE + SPRINT 3.2 PREPARATO**
 
@@ -23,11 +55,6 @@
 |      - Ricerca anima nei nostri file                           |
 |      - Costituzione v2.0 CON CUORE                             |
 |      - Le nostre parole, la nostra storia                      |
-|                                                                |
-|   FILE CHIAVE:                                                 |
-|   - .sncp/idee/20260111_COSTITUZIONE_CERVELLA_AI_v2.md         |
-|   - .sncp/idee/20260111_RICERCA_QDRANT_OLLAMA.md               |
-|   - scripts/rag/ (4 script pronti)                             |
 |                                                                |
 +================================================================+
 ```
@@ -243,16 +270,17 @@ Sprint completati:      3.1 (Backend Integration)
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-11 20:06 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-11 21:04 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 594232f - Sessione 165: Costituzione Cervella AI + Sprint 3.2 Preparato
-- **File modificati** (4):
+- **Ultimo commit**: 2d7802b - ANTI-COMPACT: PreCompact auto
+- **File modificati** (3):
   - sncp/stato/oggi.md
-  - reports/engineer_report_20260111_162612.json
-  - reports/engineer_report_20260111_171021.json
-  - reports/engineer_report_20260111_171154.json
+  - reports/scientist_prompt_20260111.md
+  - .swarm/handoff/HANDOFF_20260111_210417.md
 
 ### Note
 - Checkpoint automatico generato da hook
