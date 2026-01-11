@@ -272,18 +272,22 @@ Sprint completati:      3.1 (Backend Integration)
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-11 21:04 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-11 21:33 (auto)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 2d7802b - ANTI-COMPACT: PreCompact auto
-- **File modificati** (3):
-  - sncp/stato/oggi.md
-  - reports/scientist_prompt_20260111.md
-  - .swarm/handoff/HANDOFF_20260111_210417.md
+- **Ultimo commit**: 626084d - Sessione 166: Multi-Sessione Validato + Context Discovery
+- **File modificati** (5):
+  - .sncp/idee/20260111_ANALISI_CACHE_CONTROL_VANTAGGIO_STRATEGICO.md
+  - .sncp/idee/20260111_RICERCA_CACHE_INVALIDATION.md
+  - .sncp/idee/20260111_RICERCA_CONTROLLO_CACHE.md
+  - .sncp/idee/CRITICO_WORKFLOW_LOCALE_VM_PRODUZIONE.md
+  - .sncp/stato/oggi.md
 
 ### Note
 - Checkpoint automatico generato da hook
-- Trigger: unknown
+- Trigger: auto
 
 ---
