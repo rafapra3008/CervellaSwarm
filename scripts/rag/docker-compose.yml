@@ -1,0 +1,22 @@
+# Qdrant Vector Database for Cervella RAG
+# Deploy on: cervella-gpu (us-west1-b)
+# Created: 11 Gennaio 2026 - Sprint 3.2
+
+services:
+  qdrant:
+    image: qdrant/qdrant:latest
+    restart: always
+    container_name: qdrant
+    ports:
+      # IMPORTANTE: Solo localhost, NON esposto a internet
+      - "127.0.0.1:6333:6333"  # REST API
+      - "127.0.0.1:6334:6334"  # gRPC API
+    volumes:
+      - ./qdrant_data:/qdrant/storage
+    environment:
+      - QDRANT__SERVICE__API_KEY=${QDRANT_API_KEY}
+    # Limiti risorse (opzionale, T4 ha abbastanza)
+    # deploy:
+    #   resources:
+    #     limits:
+    #       memory: 1G

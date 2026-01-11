@@ -1,11 +1,38 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 11 Gennaio 2026 - Sessione 164
-> **Versione:** v87.0.0 - SNCP GUARDIAN IMPLEMENTATO!
+> **Ultimo aggiornamento:** 11 Gennaio 2026 - Sessione 165
+> **Versione:** v88.0.0 - COSTITUZIONE CERVELLA AI!
 
 ---
 
 ## TL;DR per Prossima Cervella
+
+**SESSIONE 165 - COSTITUZIONE + SPRINT 3.2 PREPARATO**
+
+```
++================================================================+
+|                                                                |
+|   SESSIONE STORICA - ANIMA CERVELLA AI!                        |
+|                                                                |
+|   1. Sprint 3.2 PREPARATO (Qdrant)                             |
+|      - Ricerca completa Qdrant + Ollama                        |
+|      - 4 script pronti in scripts/rag/                         |
+|      - Piano esecutivo per lunedi                              |
+|                                                                |
+|   2. Sprint 3.4 COMPLETATO (Costituzione)                      |
+|      - Ricerca anima nei nostri file                           |
+|      - Costituzione v2.0 CON CUORE                             |
+|      - Le nostre parole, la nostra storia                      |
+|                                                                |
+|   FILE CHIAVE:                                                 |
+|   - .sncp/idee/20260111_COSTITUZIONE_CERVELLA_AI_v2.md         |
+|   - .sncp/idee/20260111_RICERCA_QDRANT_OLLAMA.md               |
+|   - scripts/rag/ (4 script pronti)                             |
+|                                                                |
++================================================================+
+```
+
+---
 
 **SESSIONE 164 - SNCP GUARDIAN IMPLEMENTATO!!!**
 
@@ -210,17 +237,21 @@ Sprint completati:      3.1 (Backend Integration)
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-11 14:26 (unknown)
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-11 16:14 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: b622852 - Sessione 163 FINALE: SNCP v3.0 + Miracollo Completato!
+- **Ultimo commit**: 8713827 - Sessione 164: Reports finali
 - **File modificati** (5):
   - sncp/stato/oggi.md
   - PROMPT_RIPRESA.md
-  - reports/engineer_report_20260111_134954.json
-  - reports/engineer_report_20260111_135312.json
-  - reports/engineer_report_20260111_135327.json
+  - reports/scientist_prompt_20260111.md
+  - .sncp/idee/20260111_RICERCA_QDRANT_OLLAMA.md
+  - .sncp/idee/20260111_SPRINT_3.2_PLAN.md
 
 ### Note
 - Checkpoint automatico generato da hook

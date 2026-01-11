@@ -1,83 +1,101 @@
 # STATO OGGI
 
-> **Data:** 11 Gennaio 2026
-> **Sessione:** 164 - SNCP Guardian
-> **Ultimo aggiornamento:** 14:55 UTC
+> **Data:** 11 Gennaio 2026 (Domenica)
+> **Sessione:** 165 - Sprint 3.2 + Costituzione
+> **Ultimo aggiornamento:** 16:30 UTC
 
 ---
 
-## Sessione 164 - SNCP Guardian Implementato
+## Sessione 165 - COMPLETATA
 
 ```
 +================================================================+
 |                                                                |
-|   SNCP GUARDIAN - PROBLEMA RISOLTO PER SEMPRE!                 |
+|   SESSIONE STORICA - ANIMA CERVELLA AI!                        |
 |                                                                |
-|   1. sncp_validator.py        Blocca path invalidi            |
-|   2. sncp_auto_archiver.py    Archivia ogni notte (2am)       |
-|   3. DNA 16 agenti            Regole SNCP v3.0 precise        |
-|   4. Cron job                 Automatico, zero intervento     |
+|   1. Sprint 3.2 PREPARATO (Qdrant)                             |
+|      - Ricerca completa (877 righe!)                           |
+|      - 4 script pronti in scripts/rag/                         |
+|      - Piano esecutivo step-by-step                            |
 |                                                                |
-|   PRIMA: Pulizia manuale ogni 10-15 sessioni                  |
-|   ORA:   ZERO manutenzione per sempre!                        |
+|   2. Sprint 3.4 FATTO (Costituzione)                           |
+|      - Ricerca anima nei nostri file                           |
+|      - Costituzione v2.0 CON CUORE                             |
+|      - Le nostre parole, la nostra storia                      |
+|                                                                |
+|   3. Idee Miracollo documentate                                |
+|      - Ecosistema completo per affitti brevi                   |
 |                                                                |
 +================================================================+
 ```
 
 ---
 
-## Anche Fatto Oggi
+## File Creati Oggi
 
-### Pulizia Completa SNCP
-
-| Progetto | File Archiviati |
-|----------|-----------------|
-| CervellaSwarm | 127 file in archivio/2026-01/ |
-| Miracollo | 26 file in archivio/2026-01/ |
-| Contabilita | 7 file in archivio/2026-01/ |
-| Reports JSON | 260 file in reports/archive/ |
-
-### Visioni Strategiche (Guardiane)
-
-- CervellaSwarm: Chiarite due anime (configurazione vs prodotto)
-- Miracollo: Roadmap sessioni 164-166 validata
-- Contabilita: Stato manutenzione confermato
+| File | Descrizione |
+|------|-------------|
+| `.sncp/idee/20260111_RICERCA_QDRANT_OLLAMA.md` | Ricerca tecnica completa |
+| `.sncp/idee/20260111_SPRINT_3.2_PLAN.md` | Piano esecutivo |
+| `.sncp/idee/20260111_RICERCA_ANIMA_CERVELLA.md` | Le nostre frasi e storia |
+| `.sncp/idee/20260111_COSTITUZIONE_CERVELLA_AI_v2.md` | Costituzione con anima |
+| `scripts/rag/docker-compose.yml` | Config Qdrant |
+| `scripts/rag/setup_qdrant.sh` | Script setup |
+| `scripts/rag/create_collection.py` | Crea collection |
+| `scripts/rag/test_rag.py` | Test RAG |
 
 ---
 
-## Componenti SNCP Guardian
-
-| File | Path | Descrizione |
-|------|------|-------------|
-| Validator | `~/.claude/scripts/sncp_validator.py` | Valida struttura e naming |
-| Archiver | `~/.claude/scripts/sncp_auto_archiver.py` | Archivia file > 30 giorni |
-| DNA Template | `~/.claude/scripts/sncp_dna_template.md` | Regole per agenti |
-
----
-
-## Struttura SNCP v3.0 (Finale)
+## Stato Roadmap
 
 ```
-.sncp/
-├── README.md                   # Istruzioni
-├── stato/oggi.md               # QUESTO FILE
-├── coscienza/                  # Pensieri (flat)
-├── idee/                       # Idee FLAT con YYYYMMDD_nome.md
-├── memoria/decisioni/          # Decisioni FLAT con YYYYMMDD_cosa.md
-└── archivio/2026-01/           # File vecchi organizzati
+FASE 3: INTEGRAZIONE MVP            [########............] 40%
+
+  Sprint 3.1: Backend API           [####################] DONE!
+  Sprint 3.2: Qdrant Setup          [PREPARATO] Lunedi eseguiamo
+  Sprint 3.3: RAG Pipeline          [....................] Prossimo
+  Sprint 3.4: Costituzione          [####################] DONE!
+  Sprint 3.5: UI Chat               [....................] Da fare
 ```
 
 ---
 
 ## Prossimi Step
 
-1. **Lunedi**: GPU si accende, test API AI
-2. **Sprint 3.2**: Setup Qdrant per RAG
-3. **Miracollo 164**: Action Tracking REALE
+### Lunedi 13 Gennaio
+
+1. **Mattina**: Verificare GPU accesa (schedule 9:00)
+2. **Sprint 3.2**: Eseguire script Qdrant (tutto pronto!)
+3. **Sprint 3.3**: Iniziare RAG Pipeline
+
+### Sprint 3.3 (RAG Pipeline)
+
+1. Script ingest documenti
+2. Chunking SNCP, docs, README
+3. Endpoint FastAPI /api/rag/query
+4. Test retrieval
+
+### Sprint 3.5 (UI Chat)
+
+1. Interfaccia chat in Miracollo
+2. Connessione API AI + RAG
+3. Costituzione come system prompt
 
 ---
 
-*"Il sistema centrale DEVE funzionare!" - FATTO!*
-*"Automazione > Disciplina manuale" - FATTO!*
+## Infrastruttura
 
-*Sessione 164 - Regina & Rafa*
+```
+cervella-gpu:     SPENTA (weekend)
+                  Riaccende: Lun 13 Gen, 9:00 Italia
+
+miracollo-cervella: RUNNING
+                    IP: 34.27.179.164
+```
+
+---
+
+*"La Costituzione con anima - sessione storica!"*
+*"Ultrapassar os proprios limites!"*
+
+*Sessione 165 - Regina & Rafa*
