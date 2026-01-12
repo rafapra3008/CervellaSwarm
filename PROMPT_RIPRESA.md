@@ -167,16 +167,17 @@ GET  https://miracollo.com/api/v1/properties/{id}/room-types
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-12 14:20 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-12 14:45 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: d02fa02 - ANTI-COMPACT: PreCompact auto
-- **File modificati** (4):
+- **Ultimo commit**: e65773c - ANTI-COMPACT: PreCompact auto
+- **File modificati** (3):
   - sncp/stato/oggi.md
-  - PROMPT_RIPRESA.md
   - reports/scientist_prompt_20260112.md
-  - .swarm/handoff/HANDOFF_20260112_141705.md
+  - .swarm/handoff/HANDOFF_20260112_144458.md
 
 ### Note
 - Checkpoint automatico generato da hook
