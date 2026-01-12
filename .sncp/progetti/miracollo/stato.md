@@ -1,24 +1,53 @@
 # Stato Miracollo
-> Ultimo aggiornamento: 12 Gennaio 2026 - Sessione 174
+> Ultimo aggiornamento: 12 Gennaio 2026 - Sessione 175
 
 ---
 
 ## TL;DR
 
 ```
-INFRASTRUTTURA: PULITA (nginx + backend-12)
-WHAT-IF: COMPLETO (FASE 1-5) ✅
-MIRACALLOOK: FASE 0-2 COMPLETATE! 🆕
-  - OAuth Gmail FUNZIONANTE
-  - Lettura email FUNZIONANTE
-  - http://localhost:8001
+INFRASTRUTTURA: PULITA (nginx + backend-13)
+WHAT-IF: COMPLETO (FASE 1-5) ✅ + BUG FIX DROPDOWN
+WORKFLOW: GITHUB ACTIONS FUNZIONA! ✅
+MIRACALLOOK: FASE 0-2 COMPLETATE
 ROOM MANAGER: IN PAUSA (decisioni architetturali richieste)
-TEST: 63 PASSATI (target 80%+ coverage)
+CODE REVIEW: 7.5/10 (target 9.5/10)
 ```
 
 ---
 
-## Sessione 174 - MIRACALLOOK NATO! 🎉
+## Sessione 175 - Code Review + Bug Fix + CI/CD
+
+### Completati
+1. [x] **Code Review What-If** - Score 7.5/10
+   - 47 issues trovati (4 critici, 9 alti)
+   - Report: `.sncp/progetti/miracollo/reports/code_review_whatif_20260112.md`
+   - Top 3: XSS, fake applyPrice, no auth
+
+2. [x] **Bug Fix Dropdown What-If**
+   - Problema: Metodi FASE 5 fuori dalla classe (SyntaxError riga 409)
+   - Soluzione: Guardiana Ops ha deployato file corretto
+   - Status: FUNZIONA!
+
+3. [x] **Fix Workflow GitHub Actions**
+   - Problema: `docker rollout` non installato su VM
+   - Soluzione: `docker compose up -d --build` (v3.1.0)
+   - Status: CHECK VERDE! (18 secondi)
+
+4. [x] **Sync Locale-VM**
+   - Commit 61b8b11 pushato
+   - What-If JS + API sync
+   - Workflow v3.1.0
+
+### Prossimi Step
+- [ ] Revenue Fix: Cancellare azioni
+- [ ] RateBoard Avanzata: Hard tests
+- [ ] What-If: Applica prezzo REALE (ora è fake!)
+- [ ] Fix issues critici code review (XSS, auth)
+
+---
+
+## Sessione 174 - MIRACALLOOK NATO!
 
 ### Cosa Fatto
 1. [x] Room Manager: DECISIONE di fermare sessione parallela (troppo veloce)

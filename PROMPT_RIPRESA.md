@@ -1,7 +1,7 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 12 Gennaio 2026 - Sessione 174
-> **Versione:** v97.0.0 - MIRACALLOOK NATO!
+> **Ultimo aggiornamento:** 12 Gennaio 2026 - Sessione 175
+> **Versione:** v98.0.0 - Code Review + CI/CD Fix
 
 ---
 
@@ -30,43 +30,40 @@
 
 ## TL;DR per Prossima Cervella
 
-**SESSIONE 174 - MIRACALLOOK NATO!**
+**SESSIONE 175 - CODE REVIEW + BUG FIX + CI/CD**
 
 ```
 +================================================================+
 |                                                                |
-|   SESSIONE 174: MIRACALLOOK - CLIENT EMAIL AI CREATO!          |
-|                                                                |
-|   MIRACALLOOK = Miracollo + Outlook (tipo Superhuman)          |
+|   SESSIONE 175: PROFESSIONALIZZAZIONE!                         |
 |                                                                |
 |   COMPLETATO:                                                  |
-|   [x] Ricerca Superhuman + Gmail API                           |
-|   [x] Google Cloud Project (miracollook)                       |
-|   [x] OAuth2 configurato (External + test users)               |
-|   [x] Backend FastAPI completo                                 |
-|   [x] Login Gmail FUNZIONA!                                    |
-|   [x] Lettura inbox FUNZIONA!                                  |
+|   [x] Code Review What-If: 7.5/10                              |
+|       - 47 issues (4 critici: XSS, fake applyPrice, no auth)   |
+|       - Report: .sncp/progetti/miracollo/reports/              |
+|                 code_review_whatif_20260112.md                 |
 |                                                                |
-|   LOCATION: miracollogeminifocus/miracallook/                  |
+|   [x] Bug Fix Dropdown What-If                                 |
+|       - Metodi FASE 5 erano fuori dalla classe                 |
+|       - Guardiana Ops ha deployato fix                         |
+|       - FUNZIONA!                                              |
 |                                                                |
-|   AVVIARE SERVER:                                              |
-|   cd miracallook/backend                                       |
-|   source venv/bin/activate                                     |
-|   uvicorn main:app --port 8001                                 |
+|   [x] Fix GitHub Actions Workflow                              |
+|       - docker rollout → docker compose up -d --build          |
+|       - Versione 3.1.0                                         |
+|       - CHECK VERDE! (18 secondi)                              |
 |                                                                |
-|   URL: http://localhost:8001                                   |
+|   COMMIT: 61b8b11 (Miracollo)                                  |
 |                                                                |
-|   PROSSIME FASI MIRACALLOOK:                                   |
-|   [ ] FASE 3: Invio email                                      |
-|   [ ] FASE 4: UI React                                         |
-|   [ ] FASE 5: Keyboard shortcuts                               |
-|   [ ] FASE 6-8: AI features (Claude)                           |
+|   PROSSIMI STEP:                                               |
+|   [ ] Revenue Fix: Cancellare azioni                           |
+|   [ ] RateBoard Avanzata: Hard tests                           |
+|   [ ] What-If: Applica prezzo REALE (ora è fake!)              |
+|   [ ] Fix issues critici code review                           |
 |                                                                |
-|   ROADMAP: .sncp/progetti/miracollo/moduli/miracallook/        |
-|            ROADMAP_MIRACALLOOK.md                              |
-|                                                                |
+|   MIRACALLOOK: FASE 0-2 COMPLETE (in pausa)                    |
 |   ROOM MANAGER: IN PAUSA (decisioni architetturali)            |
-|   WHAT-IF: COMPLETO (FASE 1-5)                                 |
+|   WHAT-IF: COMPLETO + BUG FIX                                  |
 |                                                                |
 +================================================================+
 ```
@@ -149,15 +146,20 @@ GET  https://miracollo.com/api/v1/properties/{id}/room-types
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-12 12:07 (unknown)
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-12 12:18 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: e946f66 - Sessione 173 FINALE: What-If FASE 3-4-5 + Workflow SOLO VM
-- **File modificati** (3):
-  - sncp/progetti/miracollo/moduli/miracallook/ROADMAP_MIRACALLOOK.md
-  - .sncp/stato/oggi.md
-  - reports/engineer_report_20260112_115004.json
+- **Ultimo commit**: 4eb6eaf - ANTI-COMPACT: PreCompact auto
+- **File modificati** (4):
+  - sncp/stato/oggi.md
+  - PROMPT_RIPRESA.md
+  - reports/scientist_prompt_20260112.md
+  - .swarm/handoff/HANDOFF_20260112_121213.md
 
 ### Note
 - Checkpoint automatico generato da hook
