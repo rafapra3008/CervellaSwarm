@@ -39,10 +39,16 @@
 |   - .sncp/idee/20260112_STRATEGIA_CONTAINER_MIRACOLLO.md       |
 |   - .sncp/reports/AUDIT_SESSIONI_PARALLELE_20260112.md         |
 |                                                                |
+|   TRIPLE CHECK REVENUE:                                        |
+|   [x] API Bucchi, Suggestions, History, Applications: OK       |
+|   [x] Frontend split caricato correttamente                    |
+|   [x] formatDateRange in core.js (fix verificato)             |
+|                                                                |
 |   PROSSIMI STEP:                                               |
-|   [ ] Creare docker-compose.prod.yml (questa settimana)        |
-|   [ ] Test manuale revenue.js split nel browser                |
-|   [ ] Validare ricerca GAP #3 #4 (ML + What-If)               |
+|   [ ] Testare GAP #2 Modal (con nuovo suggerimento)           |
+|   [ ] RateBoard hard tests (acceptance rate, RevPAR)          |
+|   [ ] docker-compose.prod.yml (mai più orfani)                |
+|   [ ] What-If Simulator MVP                                    |
 |                                                                |
 +================================================================+
 ```
