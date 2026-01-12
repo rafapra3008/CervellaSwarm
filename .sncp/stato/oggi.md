@@ -1,12 +1,12 @@
 # STATO OGGI
 
 > **Data:** 12 Gennaio 2026 (Domenica)
-> **Sessione:** 169 - AUDIT + FIX MIRACOLLO
-> **Ultimo aggiornamento:** 05:30 UTC
+> **Sessione:** 169 - AUDIT + FIX MIRACOLLO + RICERCA GAP #3 #4
+> **Ultimo aggiornamento:** 12:15 UTC
 
 ---
 
-## Sessione 169 - AUDIT COMPLETO + FIX
+## Sessione 169 - AUDIT COMPLETO + FIX + RICERCA ML
 
 ```
 +================================================================+
@@ -33,18 +33,120 @@
 |   - In corso: test_confidence_scorer.py                        |
 |                                                                |
 |   RESEARCHER:                                                  |
-|   - Studiando GAP #3 (ML) e GAP #4 (What-If)                   |
-|   - Creando roadmap dettagliata                                |
+|   [x] RICERCA GAP #3 (ML Training) COMPLETATA!                 |
+|   [x] RICERCA GAP #4 (What-If Simulator) COMPLETATA!          |
+|   [x] Roadmap 10 Sprint dettagliata (250-305h effort)          |
+|   [x] File: 20260112_RICERCA_GAP3_GAP4_ML_WHATIF.md            |
+|       - 1600+ righe ricerca approfondita                       |
+|       - Feature engineering 15-20 features                     |
+|       - Database schema PostgreSQL + partitioning              |
+|       - API endpoints FastAPI dettagliati                      |
+|       - UI wireframe What-If Simulator                         |
+|       - Architettura completa ML pipeline                      |
+|       - Algoritmi: XGBoost -> Q-Learning                       |
+|       - Retraining strategy: 7-14 giorni                       |
+|       - Minimum samples: 500+ (optimal 1000+)                  |
+|       - Feedback loop prevention (delayed eval)                |
+|       - React + TypeScript components                          |
+|       - Monitoring & drift detection                           |
 |                                                                |
 |   DA FARE:                                                     |
 |   [ ] Split file grandi (action_tracking, revenue.js)          |
 |   [ ] Copiare test su VM ed eseguirli                          |
 |   [ ] Push su GitHub                                           |
+|   [ ] Validare ricerca ML con Regina                           |
+|   [ ] Prioritize sprint GAP #3 #4                              |
 |                                                                |
 +================================================================+
 ```
 
 ---
+
+## 📊 Cervella-Researcher - RICERCA GAP #3 #4 (12:15)
+
+**Task:** Studio approfondito ML Training + What-If Simulator per Revenue Intelligence
+**Durata:** 2 ore ricerca + analisi + documentazione
+
+### Risultato
+✅ **RICERCA COMPLETATA - 1600+ RIGHE**
+
+**File creato:** `.sncp/idee/20260112_RICERCA_GAP3_GAP4_ML_WHATIF.md`
+
+### Cosa Ho Studiato
+
+**GAP #3 - ML Enhancement:**
+- Come funziona training nei big player (IDeaS, Duetto)
+- Collaborative AI model (impara da decisioni umane)
+- Feature engineering: 15-20 features (occupancy, pace, competitor, eventi, meteo)
+- Training samples: min 500, optimal 1000+
+- Retraining frequency: 7-14 giorni
+- Algoritmi: XGBoost (MVP) → Q-Learning (Advanced)
+- Feedback loop prevention (CRITICO!)
+- Database schema PostgreSQL partitioned
+- ML Pipeline con Celery tasks
+
+**GAP #4 - What-If Simulator:**
+- UI/UX best practices dai competitor
+- React + TypeScript components (Material-UI Slider)
+- Real-time vs Batch calculation
+- API FastAPI endpoints
+- Caching strategy (1h TTL)
+- Impact calculation (elasticity-based → ML-based)
+- Grafici interattivi (Recharts)
+- Spiegazioni natural language
+
+### Roadmap Creata
+
+**10 Sprint dettagliati:**
+1. Database Schema + Tracking (20-25h)
+2. Feature Engineering (30-35h)
+3. ML Model Base - XGBoost (40-50h)
+4. Feedback Loop + Delayed Evaluation (20-25h)
+5. What-If Simulator - Backend (30-35h)
+6. What-If Simulator - Frontend (40-50h)
+7. ML Model Advanced (30-35h)
+8. Monitoring + Drift Detection (20-25h)
+9. Retraining Automation (20-25h)
+10. Reinforcement Learning - OPZIONALE (60-80h)
+
+**Effort Totale:** 250-305h (senza RL) | 310-385h (con RL)
+
+### Raccomandazione Principale
+
+**APPROCCIO GRADUATO:**
+- Phase 1 (Sprint 1-4): Foundation + ML Basic - 6-8 settimane
+- Phase 2 (Sprint 5-6): What-If Simulator - 3-4 settimane
+- Phase 3 (Sprint 7-9): Production Ready - 3-4 settimane
+- Phase 4 (Sprint 10+): RL Advanced - OPZIONALE
+
+**PERCHÉ:** What-If dà valore SUBITO (anche con ML imperfetto), ML migliora gradualmente con dati reali.
+
+### Key Insights
+
+1. **Minimum samples:** 500 decisioni = 2-3 mesi raccolta dati
+2. **Feedback loop risk:** REALE - serve delayed evaluation (60 giorni)
+3. **Competitor approach:** Duetto = Collaborative AI (learns from human)
+4. **Retraining:** Non aspettare 5000 samples, fare incremental training
+5. **What-If value:** Building trust attraverso transparency
+6. **Architecture:** FastAPI + PostgreSQL partitioned + React TypeScript
+
+### Fonti Studiate
+
+- 15+ articoli industry (Duetto, IDeaS, Hotel Tech Report)
+- 8+ paper accademici (Q-Learning, Deep RL pricing)
+- Best practices PostgreSQL time-series
+- FastAPI ML deployment patterns
+- React UI component libraries (Material-UI, Recharts)
+
+### Next Action
+
+**VALIDAZIONE REGINA:**
+- Scope allineato con vision Miracollo?
+- Quali sprint prioritize? (1-4 critical, 5-6 high value)
+- Fare RL (Sprint 10) o fermarsi a XGBoost?
+- Assegnare sprint a worker (backend, frontend, tester)
+
+**Owner:** Regina (decisione strategica) → Backend/Frontend (implementazione)
 
 ---
 
@@ -101,102 +203,8 @@
 |       - Bug: campi changed_at vs date                          |
 |       - Log aggiunti per debug futuro                          |
 |   [~] GAP #2: Modal Preview fix applicato (da testare)         |
-|   [ ] GAP #3: ML Samples (prossima sessione)                   |
-|   [ ] GAP #4: Simula (prossima sessione)                       |
-|                                                                |
-+================================================================+
-```
-
----
-
-## Sessione 166 - GAME CHANGER: CACHE CONTROL!
-
-```
-+================================================================+
-|                                                                |
-|   SCOPERTA CRITICA: CACHE INVALIDATION CONTROLLABILE!         |
-|                                                                |
-|   🔥 RICERCA CACHE INVALIDATION COMPLETATA                     |
-|      - Cache lifetime: 5 min (reale: ~3 min)                   |
-|      - Hierarchy: tools → system → messages                    |
-|      - METODO TRIGGER: Modificare CLAUDE.md!                   |
-|      - /clear NON funziona (bug noto)                          |
-|      - Keepalive pattern da Aider (da studiare)                |
-|                                                                |
-|   📜 SCRIPT CREATO: invalidate-cache.sh                        |
-|      - Modifica temporanea CLAUDE.md                           |
-|      - Triggera invalidation system cache                      |
-|      - Context da 70% → 50% (~43k tokens liberati!)            |
-|      - Automatico, sicuro, ripetibile                          |
-|                                                                |
-|   💡 IMPLICAZIONI:                                             |
-|      - Possiamo evitare auto-compact al 77%!                   |
-|      - Sessioni potenzialmente infinite controllate            |
-|      - Cache management diventa parte workflow                 |
-|      - GAME CHANGER per CervellaSwarm!                         |
-|                                                                |
-|   FILE CREATI:                                                 |
-|   - .sncp/idee/20260111_RICERCA_CONTROLLO_CACHE.md             |
-|   - scripts/swarm/invalidate-cache.sh                          |
-|                                                                |
-+================================================================+
-```
-
----
-
-## Sessione 166 - MULTI-SESSIONE VALIDATO!
-
-```
-+================================================================+
-|                                                                |
-|   SESSIONE 166: SISTEMA MULTI-SESSIONE PRONTO!                |
-|                                                                |
-|   1. MULTI-SESSIONE COMPLETO                                   |
-|      - Protocollo v1.0 documentato (451 righe)                 |
-|      - 9 script verificati e funzionanti                       |
-|      - Bug check-dependencies.sh FIXATO                        |
-|      - Test su progetto fake: PASSATO                          |
-|      - Integrazione SNCP per sessioni parallele                |
-|      - Template copia-incolla per Rafa                         |
-|                                                                |
-|   2. SCOPERTA: "Cache Invalidation Silente"                    |
-|      - Context scende SENZA auto-compact visibile              |
-|      - cache_read CROLLA a ~19,365 (core costante)             |
-|      - cache_create ESPLODE (ricostruzione compressa)          |
-|      - Pattern diverso da auto-compact!                        |
-|      - Da investigare con test controllato                     |
-|                                                                |
-|   FILE CREATI:                                                 |
-|   - 20260111_PROTOCOLLO_MULTI_SESSIONE_v1.md                   |
-|   - 20260111_TEST_MULTI_SESSIONE.md                            |
-|   - 20260111_TEMPLATE_INIZIO_SESSIONE_PARALLELA.md             |
-|   - 20260111_TEMPLATE_RAFA_INIZIO_PARALLELO.md                 |
-|   - .sncp/sessioni_parallele/_TEMPLATE/ (3 file)               |
-|                                                                |
-+================================================================+
-```
-
----
-
-## Sessione 165 - COMPLETATA
-
-```
-+================================================================+
-|                                                                |
-|   SESSIONE STORICA - ANIMA CERVELLA AI!                        |
-|                                                                |
-|   1. Sprint 3.2 PREPARATO (Qdrant)                             |
-|      - Ricerca completa (877 righe!)                           |
-|      - 4 script pronti in scripts/rag/                         |
-|      - Piano esecutivo step-by-step                            |
-|                                                                |
-|   2. Sprint 3.4 FATTO (Costituzione)                           |
-|      - Ricerca anima nei nostri file                           |
-|      - Costituzione v2.0 CON CUORE                             |
-|      - Le nostre parole, la nostra storia                      |
-|                                                                |
-|   3. Idee Miracollo documentate                                |
-|      - Ecosistema completo per affitti brevi                   |
+|   [x] GAP #3: ML Samples - RICERCA COMPLETATA                  |
+|   [x] GAP #4: What-If Simulator - RICERCA COMPLETATA           |
 |                                                                |
 +================================================================+
 ```
@@ -207,6 +215,8 @@
 
 | File | Descrizione |
 |------|-------------|
+| **GAP #3 #4 RICERCA** | |
+| `.sncp/idee/20260112_RICERCA_GAP3_GAP4_ML_WHATIF.md` | **1600+ righe ricerca completa ML + What-If** |
 | **CACHE CONTROL (CRITICO!)** | |
 | `.sncp/idee/20260111_RICERCA_CONTROLLO_CACHE.md` | Ricerca completa cache invalidation |
 | `scripts/swarm/invalidate-cache.sh` | Script auto-invalidation cache |
@@ -244,17 +254,21 @@ FASE 3: INTEGRAZIONE MVP            [########............] 40%
 
 ## Prossimi Step
 
-### URGENTE: Test Cache Invalidation
+### URGENTE: Validazione Ricerca GAP #3 #4
 
-1. **Testare script:** `./scripts/swarm/invalidate-cache.sh`
-2. **Verificare:** Context % before/after in statusbar
-3. **Documentare:** Risultati in `.sncp/idee/`
+**Regina deve decidere:**
+1. Scope allineato con vision Miracollo?
+2. Priorità sprint? (1-4 = critical, 5-6 = high value)
+3. Fare Reinforcement Learning (Sprint 10) o fermarsi a XGBoost?
+4. Timeline: iniziare quando? (dopo RAG o parallelo?)
+5. Assegnare worker: backend, frontend, tester
 
 ### Lunedi 13 Gennaio
 
 1. **Mattina**: Verificare GPU accesa (schedule 9:00)
 2. **Sprint 3.2**: Eseguire script Qdrant (tutto pronto!)
 3. **Sprint 3.3**: Iniziare RAG Pipeline
+4. **NUOVO**: Decidere timeline GAP #3 #4
 
 ### Sprint 3.3 (RAG Pipeline)
 
@@ -320,122 +334,22 @@ miracollo-cervella: RUNNING
 
 ---
 
-*"Cache control = game changer! Possiamo controllare context!"*
+*"Studiare prima di agire - sempre! I big player hanno già risolto questi problemi!"*
+*"What-If Simulator = valore SUBITO + building trust!"*
 *"Lavoriamo in PACE! Senza CASINO! Dipende da NOI!"*
 
-*Sessione 166 - Regina & Rafa*
+*Sessione 169 - Researcher & Regina*
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-11 21:45 (cache_research_completed)
+## AUTO-CHECKPOINT: 2026-01-12 12:15 (gap3_gap4_research_completed)
 
-- **Progetto**: CervellaSwarm
-- **Evento**: cache_research_completed
-- **Scoperta**: Cache invalidation controllabile con CLAUDE.md modification
-- **Impact**: ALTO - Game changer per workflow
-- **File creati**: 2 (ricerca + script)
+- **Progetto**: Miracollo Revenue Intelligence
+- **Evento**: gap3_gap4_research_completed
+- **Scope**: ML Training + What-If Simulator ricerca completa
+- **Impact**: ALTO - Roadmap 10 sprint, 250-305h effort
+- **File creati**: 1 (1600+ righe)
 - **Generato da**: cervella-researcher
-
----
-
-## AUTO-CHECKPOINT: 2026-01-11 21:33 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
-
----
-
-## AUTO-CHECKPOINT: 2026-01-11 21:35 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
-
----
-
-## AUTO-CHECKPOINT: 2026-01-11 22:30 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
-
----
-
-## AUTO-CHECKPOINT: 2026-01-11 22:30 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
-
----
-
-## AUTO-CHECKPOINT: 2026-01-11 22:33 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
-
----
-
-## AUTO-CHECKPOINT: 2026-01-11 22:34 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
-
----
-
-## AUTO-CHECKPOINT: 2026-01-12 04:52 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
-
----
-
-## 📊 Cervella-Ingegnera - AUDIT VM MIRACOLLO (04:15)
-
-**Task:** Audit completo infrastruttura VM produzione
-**Durata:** 15 minuti analisi sistematica
-
-### Risultato
-⚠️ **5 CRITICI | 7 ALTO | 4 MEDIO | 3 BASSO**
-
-**Health Score: 4/10** - ATTENZIONE RICHIESTA
-
-**Report completo:** `.sncp/reports/AUDIT_MIRACOLLO_VM_20260112.md` (620 righe)
-
-### Top 5 Show-Stoppers
-1. **CRITICO:** NO GIT REPOSITORY - Zero version control
-2. **CRITICO:** Tabella DB mancante - Errori ogni 2 min
-3. **CRITICO:** Git credentials non configurate
-4. **CRITICO:** SSL certificates non verificabili
-5. **CRITICO:** Secrets esposti in docker inspect
-
-### Cosa Funziona ✅
-- VM stabile (11 giorni uptime)
-- Container healthy (nginx, backend, cervella-ai)
-- Backup automatici ogni 6h
-- API risponde correttamente
-- Disk/Memory ok (56% / 49%)
-
-### Cosa NON Funziona 🔴
-- NO repository Git (né miracollo né cervella-ai!)
-- 19 file Python sparsi in HOME
-- 2 container backend (1 inutile)
-- NO docker-compose (tutto manuale)
-- NO Alembic migrations
-- Notification worker ROTTO
-
-### Next Action URGENTE
-**P0:** Configurare Git + Clonare repo
-- 15 min setup git config
-- 30 min clone + credentials
-- **BLOCKER:** Decidere quale repo è source of truth
-
-**Owner:** Rafa (decisione repo) + cervella-backend (implementazione)
-
-### Effort Totale: 17 ore (2.5 giorni)
+- **Next**: Validazione Regina + prioritization sprint
 
 ---

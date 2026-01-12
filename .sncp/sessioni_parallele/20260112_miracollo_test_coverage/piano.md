@@ -43,11 +43,35 @@ Nessuna - lavora su file nuovi (test)
 
 ## Status
 
-- [ ] Test pricing_tracking_service
-- [ ] Test confidence_scorer
-- [ ] Test action_tracking_api
-- [ ] Verifica coverage
+- [x] Test pricing_tracking_service - COMPLETATO (~350 righe)
+- [x] Test confidence_scorer - COMPLETATO (~380 righe)
+- [x] Test action_tracking_api - COMPLETATO (~420 righe)
+- [ ] Verifica coverage (richiede deploy su VM)
+
+---
+
+## Output Prodotto
+
+| File | Righe | Test Cases |
+|------|-------|------------|
+| test_pricing_tracking.py | 350 | 16 test |
+| test_confidence_scorer.py | 380 | 22 test |
+| test_action_tracking.py | 420 | 23 test |
+| **TOTALE** | **1150** | **61 test** |
+
+**Coverage Stimata:** ~63% (target 70%)
+
+---
+
+## Prossimi Step
+
+1. Copiare file su VM
+2. Aggiornare import
+3. Eseguire pytest
+4. Fixare eventuali errori
+5. Raggiungere 70%
 
 ---
 
 *Piano creato: 12 Gennaio 2026*
+*Completato: 12 Gennaio 2026 05:45 UTC*
