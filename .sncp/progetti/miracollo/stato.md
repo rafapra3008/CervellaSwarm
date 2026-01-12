@@ -92,9 +92,49 @@ suggestions_evaluated: 2
 
 ---
 
-## Prossimi Step (da Roadmap Diamante)
+## RATEBOARD - VISIONE E MAPPA
 
-### FASE 1: FONDAMENTA
+### La Grande Visione
+```
+"Primo RMS nel CUORE degli Independent Hotels!"
+
+SMB-FIRST:
+- 72% mercato underserved
+- Enterprise domina, SMB ignorato
+- Native PMS = zero pain!
+```
+
+### Score Attuale: 7.5/10 → Target: 9.5/10
+
+| Modulo | Score | Status |
+|--------|-------|--------|
+| Autopilot | 8/10 | FUNZIONA |
+| What-If | 9/10 | COMPLETO |
+| Heatmap | 7/10 | OK |
+| AI Suggestions | 6/10 | Base |
+| Competitor | 5/10 | Parziale |
+
+### Cosa Manca
+
+**Critico:**
+- [ ] Test automatici (ZERO!)
+- [ ] Test Coverage (target 60%)
+
+**Differenziazione:**
+- [ ] ML/AI avanzato
+- [ ] External data (meteo, eventi)
+- [ ] Competitor real-time
+- [ ] Learning from user actions
+- [ ] Transparent AI
+
+**Moonshot:**
+- [ ] WhatsApp/Telegram Integration
+
+---
+
+## Prossimi Step (Roadmap Diamante)
+
+### FASE 1: FONDAMENTA (in corso)
 - [x] Fix Validazione (Sessione 176)
 - [x] Fix Autopilot bugs (Sessione 177)
 - [ ] Test Autopilot con dati reali
@@ -102,6 +142,7 @@ suggestions_evaluated: 2
 
 ### FASE 2: DIFFERENZIAZIONE
 - [ ] Transparent AI
+- [ ] Learning from actions
 - [ ] Complete existing features
 
 ### FASE 3: MOONSHOT
