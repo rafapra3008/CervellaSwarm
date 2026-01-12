@@ -1,47 +1,64 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 12 Gennaio 2026 - Sessione 169
-> **Versione:** v92.0.0 - AUDIT + FIX MIRACOLLO
+> **Ultimo aggiornamento:** 12 Gennaio 2026 - Sessione 170
+> **Versione:** v93.0.0 - PULIZIA INFRASTRUTTURA COMPLETATA
 
 ---
 
 ## TL;DR per Prossima Cervella
 
-**SESSIONE 169 - AUDIT COMPLETO + FIX MIRACOLLO**
+**SESSIONE 170 - AUDIT + PULIZIA + 63 TEST PASSATI!**
 
 ```
 +================================================================+
 |                                                                |
-|   SESSIONE 169: AUDIT + FIX + SESSIONE PARALLELA              |
+|   SESSIONE 170: GRANDE PULIZIA COMPLETATA!                    |
 |                                                                |
-|   INFRASTRUTTURA FIXATA:                                       |
-|   [x] SSH Key GitHub su VM configurata                         |
-|   [x] Remote cambiato da HTTPS a SSH (funziona!)              |
-|   [x] Migration 034-035 applicate (4 tabelle nuove)           |
-|   [x] GAP #2 Modal Preview fixato (campi aggiunti)            |
-|   [x] Error handling migliorato                                |
-|   [x] console.log condizionati a DEBUG mode                   |
+|   AUDIT SESSIONI PARALLELE:                                    |
+|   [x] 3 sessioni parallele auditate da Guardiana Qualita       |
+|   [x] Bug bloccante trovato: formatDateRange nel file sbagliato|
+|   [x] FIX applicato: spostata in revenue-core.js               |
 |                                                                |
-|   SESSIONE PARALLELA IN CORSO:                                 |
-|   - Tester sta creando test (coverage 30% -> 70%)             |
-|   - File: .sncp/sessioni_parallele/20260112_miracollo_test_coverage/
-|   - test_pricing_tracking.py: 619 righe CREATO               |
-|   - test_confidence_scorer.py: IN CORSO                       |
+|   PULIZIA INFRASTRUTTURA VM:                                   |
+|   [x] Container orfano backend-35 RIMOSSO                      |
+|   [x] Sistema ora pulito: solo nginx + backend-12              |
+|   [x] API HTTPS funziona perfettamente (6 applications)        |
+|   [x] Strategia container documentata (docker-compose futuro)  |
 |                                                                |
-|   RESEARCHER IN BACKGROUND:                                    |
-|   - Sta studiando GAP #3 (ML) e GAP #4 (What-If)              |
-|   - Output: .sncp/idee/20260112_RICERCA_GAP3_GAP4_ML_WHATIF.md |
+|   TEST COVERAGE:                                               |
+|   [x] 63 test passati! (pricing + confidence + action_tracking)|
+|   [x] test_pricing_tracking.py: 16 PASSED                      |
+|   [x] test_confidence_scorer.py: 24 PASSED                     |
+|   [x] test_action_tracking.py: 23 PASSED                       |
 |                                                                |
-|   DA FARE (PROSSIMA SESSIONE):                                 |
-|   [ ] Split action_tracking_api.py (950 righe -> 3 file)      |
-|   [ ] Split revenue.js (1282 righe -> 5 file)                 |
-|   [ ] Copiare test da SNCP a VM e eseguirli                   |
-|   [ ] Push commit su GitHub (SSH ora funziona!)               |
+|   PUSH GITHUB:                                                 |
+|   [x] CervellaSwarm: 52f5558 - Sessione 170                    |
+|   [x] Miracollo: 0538b87 - Split + test (4691 righe)           |
 |                                                                |
 |   FILE CREATI OGGI:                                            |
-|   - .sncp/idee/20260112_VISIONE_REVENUE_INTELLIGENCE_FUTURO.md |
-|   - .sncp/reports/GUARDIANA_AUDIT_REVENUE_20260112.md          |
-|   - .sncp/reports/AUDIT_MIRACOLLO_VM_20260112.md               |
+|   - .sncp/idee/20260112_STRATEGIA_CONTAINER_MIRACOLLO.md       |
+|   - .sncp/reports/AUDIT_SESSIONI_PARALLELE_20260112.md         |
+|                                                                |
+|   PROSSIMI STEP:                                               |
+|   [ ] Creare docker-compose.prod.yml (questa settimana)        |
+|   [ ] Test manuale revenue.js split nel browser                |
+|   [ ] Validare ricerca GAP #3 #4 (ML + What-If)               |
+|                                                                |
++================================================================+
+```
+
+---
+
+**SESSIONE 169 - AUDIT + FIX + SESSIONI PARALLELE**
+
+```
++================================================================+
+|                                                                |
+|   SESSIONE 169: Preparazione per sessione 170                 |
+|   - SSH Key GitHub configurata                                 |
+|   - Migration 034-035 applicate                                |
+|   - 3 sessioni parallele lanciate (tester, frontend, backend)  |
+|   - Ricerca GAP #3 #4 completata (1600+ righe)                |
 |                                                                |
 +================================================================+
 ```
