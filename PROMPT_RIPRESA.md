@@ -397,14 +397,17 @@ Sprint completati:      3.1 (Backend Integration)
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-12 04:52 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-12 05:47 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: c92f953 - Sessione 168: Protocollo Ibrido VM + Locale Definitivo
-- **File modificati** (2):
+- **Ultimo commit**: 8fc695f - ANTI-COMPACT: PreCompact auto
+- **File modificati** (3):
   - sncp/stato/oggi.md
-  - reports/engineer_report_20260111_233755.json
+  - reports/scientist_prompt_20260112.md
+  - .swarm/handoff/HANDOFF_20260112_054700.md
 
 ### Note
 - Checkpoint automatico generato da hook

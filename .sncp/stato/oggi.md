@@ -353,3 +353,11 @@ miracollo-cervella: RUNNING
 - **Next**: Validazione Regina + prioritization sprint
 
 ---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-12 05:47 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v2.0.0
