@@ -1,9 +1,9 @@
 # MAPPA MIRACOLLOOK - LA VERITÀ
 
 > **Creato:** 12 Gennaio 2026 - Sessione 176
-> **Aggiornato:** 12 Gennaio 2026 - Sessione 176 (P0 COMPLETATO!)
+> **Aggiornato:** 12 Gennaio 2026 - Sessione 178 (P0 + P1 COMPLETATI!)
 > **Metodo:** Analisi codice REALE (non "su carta")
-> **Status:** P0 COMPLETATO - USABILE!
+> **Status:** P1 COMPLETATO - PRODUTTIVO!
 
 ---
 
@@ -29,9 +29,9 @@
 
 ---
 
-## STATO REALE - 12 Gennaio 2026 (POST P0!)
+## STATO REALE - 12 Gennaio 2026 (POST P1!)
 
-### Backend (95% funzionale)
+### Backend (98% funzionale)
 
 ```
 COMPLETATO E FUNZIONANTE:
@@ -39,45 +39,50 @@ COMPLETATO E FUNZIONANTE:
 [x] Lettura inbox + singola email
 [x] Invio email (send con CC/BCC/HTML)
 [x] Reply (thread-aware)
+[x] Reply All (To + Cc destinatari)           ← NUOVO P1.3!
 [x] Forward
 [x] AI Summarization (Claude Haiku)
+[x] AI Batch Summaries (/inbox/summaries)     ← NUOVO P1.4!
 [x] Labels Gmail
-[x] Archive email (POST /gmail/archive)      ← NUOVO P0.4!
-[x] Trash email (POST /gmail/trash)          ← NUOVO P0.4!
-[x] Untrash email (POST /gmail/untrash)      ← NUOVO P0.4!
-[x] Database SQLite per token persistence    ← NUOVO P0.5!
+[x] Search Gmail (/gmail/search?q=...)        ← NUOVO P1.1!
+[x] Archive email (POST /gmail/archive)
+[x] Trash email (POST /gmail/trash)
+[x] Untrash email (POST /gmail/untrash)
+[x] Database SQLite per token persistence
 
-DA FARE (P1/P2):
+DA FARE (P2):
 [ ] Multi-user support
 [ ] Token auto-refresh
 [ ] Guest Detection (PMS integration)
 [ ] Rate limiting API AI
 ```
 
-### Frontend (95% funzionale)
+### Frontend (98% funzionale)
 
 ```
 COMPLETATO E FUNZIONANTE:
 [x] Layout ThreePanel (200px + 320px + flex + 280px)
 [x] Sidebar 8 categorie
-[x] EmailList con scroll
+[x] EmailList con scroll + AI summaries       ← NUOVO P1.4!
 [x] EmailDetail vista completa
 [x] GuestSidebar (con MOCK data)
-[x] Keyboard Shortcuts TUTTI (J/K/C/R/A/F/E/#//)
+[x] Keyboard Shortcuts TUTTI (J/K/C/R/A/F/E/#// + Shift+R)
 [x] Cmd+K Command Palette
 [x] Smart Bundles 11 regole
 [x] Design System Premium (Miracollo colors)
 [x] Dark Mode
-[x] ComposeModal FUNZIONANTE (CC/BCC, error handling, Cmd+Enter) ← NUOVO P0.1!
-[x] ReplyModal FUNZIONANTE (quoted text, Cmd+Enter)              ← NUOVO P0.2!
-[x] ForwardModal FUNZIONANTE (body_prefix, Cmd+Enter)            ← NUOVO P0.3!
-[x] Archive con feedback toast                                    ← NUOVO P0.4!
-[x] Delete con confirm + toast                                    ← NUOVO P0.4!
+[x] ComposeModal FUNZIONANTE (CC/BCC, error handling, Cmd+Enter)
+[x] ReplyModal FUNZIONANTE (quoted text, Cmd+Enter)
+[x] ReplyAllModal FUNZIONANTE (tutti destinatari) ← NUOVO P1.3!
+[x] ForwardModal FUNZIONANTE (body_prefix, Cmd+Enter)
+[x] Archive con feedback toast
+[x] Delete con confirm + toast
+[x] Search UI con SearchBar + debounce       ← NUOVO P1.1!
+[x] Refresh/Sync con bottone + Shift+R       ← NUOVO P1.5!
+[x] "Last synced" timestamp                   ← NUOVO P1.5!
 
-DA FARE (P1/P2):
-[ ] Search UI (input manca, shortcut / esiste)
+DA FARE (P2):
 [ ] VIP/Check-in auto (usa MOCK, non PMS reale)
-[ ] Reply All modal (A shortcut)
 ```
 
 ### STATO ATTUALE
@@ -85,17 +90,21 @@ DA FARE (P1/P2):
 ```
 +================================================================+
 |                                                                |
-|   MiracOllook ORA È USABILE!                                   |
+|   MiracOllook ORA È PRODUTTIVO!                                |
 |                                                                |
 |   [x] Puoi LEGGERE email                                       |
 |   [x] Puoi INVIARE email (C)                                   |
 |   [x] Puoi RISPONDERE (R)                                      |
+|   [x] Puoi RISPONDERE A TUTTI (A)           ← NUOVO!           |
 |   [x] Puoi INOLTRARE (F)                                       |
 |   [x] Puoi ARCHIVIARE (E)                                      |
 |   [x] Puoi ELIMINARE (#)                                       |
+|   [x] Puoi CERCARE (/)                      ← NUOVO!           |
+|   [x] Puoi REFRESHARE (Shift+R)             ← NUOVO!           |
+|   [x] Vedi AI SUMMARIES in lista            ← NUOVO!           |
 |   [x] Token PERSISTONO al restart                              |
 |                                                                |
-|   = DA DEMO A PRODOTTO REALE!                                  |
+|   = DA USABILE A PRODUTTIVO!                                   |
 |                                                                |
 +================================================================+
 ```
@@ -118,35 +127,44 @@ DA FARE (P1/P2):
 Sessione 176 - 12 Gennaio 2026
 ```
 
-### P1 - IMPORTANTE - IN CORSO!
+### P1 - IMPORTANTE - COMPLETATO!
 
 ```
-Obiettivo: Da USABILE a PRODUTTIVO
-Status: 2/5 COMPLETATI
+████████████████████ 100% COMPLETATO!
 
-6. [x] SEARCH UI                              ← FATTO Sessione 176!
+Obiettivo: Da USABILE a PRODUTTIVO
+Status: 5/5 COMPLETATI
+
+6. [x] SEARCH UI                              ← Sessione 176
    - Backend: GET /gmail/search?q=...
    - Frontend: SearchBar con debounce
    - Shortcut / per focus
    - Query Gmail: from:, to:, subject:, is:unread, etc.
 
-7. [x] RINOMINARE MiracAllook → MiracOllook   ← FATTO Sessione 176!
+7. [x] RINOMINARE MiracAllook → MiracOllook   ← Sessione 176
    - Backend: 10 file
    - Frontend: 4 file
    - Docs: 2 file
 
-8. [ ] REPLY ALL MODAL
-   - Come Reply ma con tutti i destinatari
-   - Shortcut A già funziona
+8. [x] REPLY ALL MODAL                        ← Sessione 178!
+   - Backend: reply_all parametro in /gmail/reply
+   - Frontend: ReplyModal con prop replyAll
+   - Mostra tutti destinatari (To + Cc)
+   - Shortcut A funziona!
 
-9. [ ] AI BATCH SUMMARIES
-   - Mostra summary in EmailList preview
-   - Cache locale per performance
+9. [x] AI BATCH SUMMARIES                     ← Sessione 178!
+   - Backend: /inbox/summaries già esistente
+   - Frontend: useEmails con merge automatico
+   - EmailListItem mostra summary con icona
+   - Cache TanStack Query
 
-10. [ ] REFRESH/SYNC
-    - Bottone refresh inbox
-    - Auto-refresh ogni X minuti
-    - Indicatore "last synced"
+10. [x] REFRESH/SYNC                          ← Sessione 178!
+    - Bottone refresh con icona animata
+    - Shortcut Shift+R
+    - "Last synced: Xm ago" timestamp
+    - Toast feedback dopo sync
+
+Sessione 176 + 178 - 12 Gennaio 2026
 ```
 
 ### P2 - VALORE AGGIUNTO (Differenziazione)
