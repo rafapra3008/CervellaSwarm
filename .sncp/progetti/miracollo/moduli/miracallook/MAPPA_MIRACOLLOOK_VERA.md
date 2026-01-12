@@ -320,13 +320,14 @@ FRONTEND (miracollogeminifocus/miracallook/frontend/):
 [x] Uso quotidiano possibile
 ```
 
-### P1 Complete (PRODUTTIVO)
+### P1 Complete (PRODUTTIVO) - FATTO!
 
 ```
-[ ] Posso cercare email
-[ ] Vedo AI summary in lista
-[ ] Sync automatico funziona
-[ ] Nome corretto "MiracOllook"
+[x] Posso cercare email (/ shortcut)
+[x] Vedo AI summary in lista
+[x] Sync/Refresh funziona (Shift+R)
+[x] Reply All funziona (A shortcut)
+[x] Nome corretto "MiracOllook"
 ```
 
 ### P2 Complete (MAGICO)
@@ -398,14 +399,14 @@ STATUS: Base completata, PMS in P2
 
 ## PROSSIMI STEP
 
-### PROSSIMA SESSIONE
+### PROSSIMA SESSIONE (P2)
 
 ```
-P1.1 [ ] Search UI
-P1.2 [ ] Rename MiracAllook → MiracOllook
-P1.3 [ ] Reply All modal
-P1.4 [ ] AI summaries in lista
-P1.5 [ ] Refresh/Sync
+P2.1 [ ] PMS Integration reale (Guest Detection)
+P2.2 [ ] Snippets PMS (/checkin, /conferma)
+P2.3 [ ] Smart Compose (AI suggerisce)
+P2.4 [ ] Multi-user support
+P2.5 [ ] Mobile responsive
 ```
 
 ---
@@ -415,14 +416,21 @@ P1.5 [ ] Refresh/Sync
 ```
 +================================================================+
 |                                                                |
-|   SESSIONE 176 STORICA!                                        |
+|   SESSIONE 176 + 178 STORICHE!                                 |
 |                                                                |
-|   Da DEMO a PRODOTTO REALE in una sessione.                    |
+|   P0 + P1 COMPLETATI = MiracOllook PRODUTTIVO!                 |
 |                                                                |
-|   P0 100% COMPLETATO:                                          |
+|   P0 (Sessione 176):                                           |
 |   - Send, Reply, Forward FUNZIONANO                            |
 |   - Archive, Delete FUNZIONANO                                 |
 |   - Token PERSISTONO                                           |
+|                                                                |
+|   P1 (Sessione 176 + 178):                                     |
+|   - Search UI con shortcut /                                   |
+|   - Reply All con shortcut A                                   |
+|   - AI Summaries in lista email                                |
+|   - Refresh/Sync con Shift+R                                   |
+|   - Nome corretto: MiracOllook                                 |
 |                                                                |
 |   "Non è sempre come immaginiamo...                            |
 |    ma alla fine è il 100000%!"                                 |
@@ -436,4 +444,5 @@ P1.5 [ ] Refresh/Sync
 
 *Mappa creata: 12 Gennaio 2026 - Sessione 176*
 *P0 completato: 12 Gennaio 2026 - Sessione 176*
+*P1 completato: 12 Gennaio 2026 - Sessione 178*
 *Metodo: Analisi codice reale + implementazione con sciame*
