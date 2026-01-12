@@ -1,7 +1,7 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 12 Gennaio 2026 - Sessione 175
-> **Versione:** v98.0.0 - Code Review + CI/CD Fix
+> **Ultimo aggiornamento:** 12 Gennaio 2026 - Sessione 175 FINALE
+> **Versione:** v99.0.0 - Revenue Fix Completato!
 
 ---
 
@@ -30,39 +30,34 @@
 
 ## TL;DR per Prossima Cervella
 
-**SESSIONE 175 - CODE REVIEW + BUG FIX + CI/CD**
+**SESSIONE 175 FINALE - TUTTO COMPLETATO!**
 
 ```
 +================================================================+
 |                                                                |
-|   SESSIONE 175: PROFESSIONALIZZAZIONE!                         |
+|   SESSIONE 175: CODE REVIEW + BUG FIX + REVENUE FIX            |
 |                                                                |
-|   COMPLETATO:                                                  |
-|   [x] Code Review What-If: 7.5/10                              |
-|       - 47 issues (4 critici: XSS, fake applyPrice, no auth)   |
-|       - Report: .sncp/progetti/miracollo/reports/              |
-|                 code_review_whatif_20260112.md                 |
+|   PARTE 1 - CODE REVIEW + CI/CD:                               |
+|   [x] Code Review What-If: 7.5/10 (47 issues)                  |
+|   [x] Bug Fix Dropdown What-If (metodi fuori classe)           |
+|   [x] Fix Workflow GitHub: docker compose (v3.1.0)             |
+|   [x] Commit 61b8b11 - CHECK VERDE!                            |
 |                                                                |
-|   [x] Bug Fix Dropdown What-If                                 |
-|       - Metodi FASE 5 erano fuori dalla classe                 |
-|       - Guardiana Ops ha deployato fix                         |
-|       - FUNZIONA!                                              |
-|                                                                |
-|   [x] Fix GitHub Actions Workflow                              |
-|       - docker rollout → docker compose up -d --build          |
-|       - Versione 3.1.0                                         |
-|       - CHECK VERDE! (18 secondi)                              |
-|                                                                |
-|   COMMIT: 61b8b11 (Miracollo)                                  |
+|   PARTE 2 - REVENUE FIX:                                       |
+|   [x] Migration 036: soft delete (deleted_at, deleted_by)      |
+|   [x] Endpoint DELETE /api/suggestions/applications/{id}       |
+|   [x] Frontend: bottone Cancella + confirm dialog              |
+|   [x] Commit befd6d9 - DEPLOYATO!                              |
 |                                                                |
 |   PROSSIMI STEP:                                               |
-|   [ ] Revenue Fix: Cancellare azioni                           |
-|   [ ] RateBoard Avanzata: Hard tests                           |
+|   [ ] RateBoard Hard tests                                     |
 |   [ ] What-If: Applica prezzo REALE (ora è fake!)              |
-|   [ ] Fix issues critici code review                           |
+|   [ ] Fix XSS + auth (code review)                             |
+|   [ ] Workflow: auto-migration                                 |
+|   [ ] Monitoring post-azione (idea Rafa!)                      |
 |                                                                |
-|   MIRACALLOOK: FASE 0-2 COMPLETE (in pausa)                    |
-|   ROOM MANAGER: IN PAUSA (decisioni architetturali)            |
+|   MIRACALLOOK: FASE 0-2 + RICERCA BIG PLAYERS (45 pagine!)     |
+|   ROOM MANAGER: IN PAUSA                                       |
 |   WHAT-IF: COMPLETO + BUG FIX                                  |
 |                                                                |
 +================================================================+

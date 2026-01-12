@@ -1,5 +1,5 @@
 # Stato Miracollo
-> Ultimo aggiornamento: 12 Gennaio 2026 - Sessione 175
+> Ultimo aggiornamento: 12 Gennaio 2026 - Sessione 175 FINALE
 
 ---
 
@@ -7,349 +7,78 @@
 
 ```
 INFRASTRUTTURA: PULITA (nginx + backend-13)
-WHAT-IF: COMPLETO (FASE 1-5) ✅ + BUG FIX DROPDOWN
+WHAT-IF: COMPLETO + BUG FIX ✅
 WORKFLOW: GITHUB ACTIONS FUNZIONA! ✅
-MIRACALLOOK: FASE 0-2 COMPLETATE
-ROOM MANAGER: IN PAUSA (decisioni architetturali richieste)
+REVENUE FIX: CANCELLA AZIONE COMPLETATO! ✅
+MIRACALLOOK: FASE 0-2 + RICERCA BIG PLAYERS ✅
+ROOM MANAGER: IN PAUSA
 CODE REVIEW: 7.5/10 (target 9.5/10)
 ```
 
 ---
 
-## Sessione 175 - Code Review + Bug Fix + CI/CD
+## Sessione 175 - COMPLETATA!
 
-### Completati
+### Parte 1: Code Review + Bug Fix + CI/CD
+
 1. [x] **Code Review What-If** - Score 7.5/10
-   - 47 issues trovati (4 critici, 9 alti)
    - Report: `.sncp/progetti/miracollo/reports/code_review_whatif_20260112.md`
-   - Top 3: XSS, fake applyPrice, no auth
+   - 47 issues (4 critici: XSS, fake applyPrice, no auth)
 
 2. [x] **Bug Fix Dropdown What-If**
-   - Problema: Metodi FASE 5 fuori dalla classe (SyntaxError riga 409)
-   - Soluzione: Guardiana Ops ha deployato file corretto
-   - Status: FUNZIONA!
+   - Problema: Metodi FASE 5 fuori dalla classe
+   - Guardiana Ops ha deployato fix - FUNZIONA!
 
 3. [x] **Fix Workflow GitHub Actions**
-   - Problema: `docker rollout` non installato su VM
-   - Soluzione: `docker compose up -d --build` (v3.1.0)
-   - Status: CHECK VERDE! (18 secondi)
+   - `docker rollout` → `docker compose up -d --build` (v3.1.0)
+   - Commit: 61b8b11 - CHECK VERDE!
 
-4. [x] **Sync Locale-VM**
-   - Commit 61b8b11 pushato
-   - What-If JS + API sync
-   - Workflow v3.1.0
+### Parte 2: Revenue Fix - Cancella Azione
+
+4. [x] **Migration 036: Soft Delete**
+   - Campi: `deleted_at`, `deleted_by`
+   - Eseguita su VM da Guardiana Ops
+
+5. [x] **Backend + Frontend**
+   - Endpoint: `DELETE /api/suggestions/applications/{id}`
+   - Bottone 🗑️ Cancella + confirm dialog
+   - Commit: befd6d9
 
 ### Prossimi Step
-- [ ] Revenue Fix: Cancellare azioni
-- [ ] RateBoard Avanzata: Hard tests
+
+- [ ] RateBoard Hard tests
 - [ ] What-If: Applica prezzo REALE (ora è fake!)
-- [ ] Fix issues critici code review (XSS, auth)
+- [ ] Fix XSS + auth (code review)
+- [ ] Workflow: auto-migration (TODO)
+- [ ] Monitoring post-azione (idea Rafa)
 
 ---
 
-## Sessione 174 - MIRACALLOOK NATO!
+## Sessione 174 - MIRACALLOOK + RICERCA
 
-### Cosa Fatto
-1. [x] Room Manager: DECISIONE di fermare sessione parallela (troppo veloce)
-2. [x] **MIRACALLOOK CREATO!** Client email AI tipo Superhuman
-   - Ricerca Superhuman + Gmail API
-   - Google Cloud Project creato (miracollook)
-   - OAuth2 configurato + test users
-   - Backend FastAPI funzionante
-   - Login Gmail FUNZIONA!
-   - Lettura inbox FUNZIONA!
-
-### Miracallook - Stato
-
-**Location:** `miracollogeminifocus/miracallook/`
-
-**Completato:**
-- FASE 0: Studio + Roadmap ✅
-- FASE 1: OAuth2 + Login ✅
-- FASE 2: Lettura Email ✅
-
-**Prossimo:**
-- FASE 3: Invio Email
-- FASE 4: UI React
-- FASE 5: Keyboard shortcuts
-- FASE 6-8: AI features
-
-**Server:** `cd miracallook/backend && source venv/bin/activate && uvicorn main:app --port 8001`
-
-**URL:** http://localhost:8001
-
-**Endpoints:**
-```
-GET /               -> Homepage
-GET /auth/login     -> Inizia OAuth
-GET /auth/callback  -> OAuth callback
-GET /gmail/inbox    -> Lista email (JSON)
-GET /gmail/inbox/html -> Lista email (HTML)
-GET /gmail/message/{id} -> Singola email
-GET /gmail/profile  -> Profilo Gmail
-GET /gmail/labels   -> Labels
-```
-
-**Roadmap:** `.sncp/progetti/miracollo/moduli/miracallook/ROADMAP_MIRACALLOOK.md`
+- Miracallook FASE 0-2 completate
+- Ricerca Big Players Email (45 pagine!)
+- File: `.sncp/progetti/miracollo/moduli/miracallook/studi/BIG_PLAYERS_EMAIL_RESEARCH.md`
 
 ---
 
-## Sessione 173 - COMPLETATA CON SUCCESSO!
+## API Live
 
-### Completati
-1. [x] Workflow SOLO VM documentato (workflow/20260112_WORKFLOW_SOLO_VM_DEFINITIVO.md)
-2. [x] Salvato lavoro VM (commit 8939531)
-3. [x] FASE 3 What-If: Grafico Price vs Occupancy (commit 26a623c)
-4. [x] FASE 4 What-If: AI Explanation Avanzata (commit 357b5a1)
-   - Strategia PREMIUM/VOLUME/OTTIMALE/MODERATO
-   - Contesto temporale (giorno, stagione, weekend)
-   - Barra confidence visuale
-   - Consiglio personalizzato
-5. [x] FASE 5 What-If: Bottoni Azione (commit a19e624)
-   - Reset / Salva Scenario / Applica Prezzo
-   - Modale conferma applicazione
-   - Lista scenari salvati (localStorage)
-6. [x] Bug fix dropdown vuoti (funzioni fuori classe)
-
-### Prossima Sessione
-- [ ] Revenue Fix: Cancellare azioni (nota in idee/TODO_REVENUE_CANCELLA_AZIONE.md)
-- [ ] RateBoard Avanzata: Hard tests + miglioramenti
-
-### Code Review
-- Score attuale: 7.0/10 → target 9.5/10
-- Report: reports/code_review_whatif_sessione173.md
-
-### Lezione Appresa - Sessioni Parallele
 ```
-La sessione parallela Room Manager non è andata come sperato.
-
-LEZIONE: Una cosa alla volta, SEMPRE.
-```
-
-### DECISIONE WORKFLOW (12 Gen 2026)
-```
-WORKFLOW: SOLO VM - DEFINITIVO
-
-- Tutto il lavoro su VM produzione
-- Lab = branch temporaneo sulla stessa VM
-- UNA cosa alla volta
-- NIENTE sessioni parallele
-- Commit ogni feature completata
-- Pull locale settimanale (backup)
-
-Documento: workflow/20260112_WORKFLOW_SOLO_VM_DEFINITIVO.md
-```
-
-### Sync Completato (Sessione 173)
-```
-- VM commit 8939531 -> GitHub -> Locale
-- What-If ora presente anche in locale
-- Tutti allineati!
+https://miracollo.com/what-if.html
+DELETE /api/suggestions/applications/{id}  🆕
 ```
 
 ---
 
-## Stato GAP
+## Commit Sessione 175
 
-| GAP | Descrizione | Status |
-|-----|-------------|--------|
-| #1 | Price History | RISOLTO |
-| #2 | Modal Preview | RISOLTO (testato 12 Gen) |
-| #3 | ML Samples | Ricerca completata |
-| #4 | What-If Simulator | **Struttura backend mappata + Roadmap pronta** ✅ |
-
----
-
-## What-If Simulator - COMPLETO AL 100%!
-
-**Status**: TUTTO LIVE su miracollo.com - Sessione 172
-
-**URL**: https://miracollo.com/what-if.html
-
-**Endpoints Attivi**:
-```
-GET  /api/v1/what-if/health       -> OK
-POST /api/v1/what-if/simulate     -> OK
-GET  /api/v1/what-if/price-curve  -> OK
-GET  /api/v1/properties           -> OK (Naturae Lodge)
-GET  /api/v1/properties/1/room-types -> OK (5 tipologie)
-```
-
-**Sessione 172 - TUTTO COMPLETATO**:
-- [x] Code Review (7.5/10 -> target 9.5 documentato)
-- [x] Ricerca struttura backend VM (700+ righe)
-- [x] Backend API What-If deployato
-- [x] Frontend UI deployato (slider, cards, explanation)
-- [x] Endpoint properties/room-types creati
-- [x] TODO rimossi dal codice
-- [x] Menu aggiornato (12 file HTML!)
-- [x] Regole permanenti aggiunte (Costituzione, No-ops Rafa, Checklist Deploy)
-
-**Prossimo Step**:
-1. [ ] Test con utenti reali
-2. [ ] Feedback e iterazione
-3. [ ] FASE 3-6 roadmap (grafico, AI avanzata, azioni)
+| Repo | Commit | Cosa |
+|------|--------|------|
+| Miracollo | 61b8b11 | Workflow fix + What-If sync |
+| Miracollo | befd6d9 | Revenue Fix: Cancella Azione |
+| CervellaSwarm | 12e60e4 | Sessione 175 checkpoint |
 
 ---
 
-## Room Manager - MVP CREATO! (Sessione 172)
-
-**Status**: Backend + Frontend MVP completato
-
-**Branch**: `feature/room-manager`
-**Worktree**: `~/Developer/miracollo-worktrees/room-manager/`
-**Commit**: d81b6ce (2230 righe!)
-
-**File Backend Creati**:
-- `routers/room_manager/__init__.py`
-- `routers/room_manager/schemas.py` (Pydantic models)
-- `routers/room_manager/services.py` (RoomService, HousekeepingService)
-- `routers/room_manager/router.py` (API endpoints)
-
-**File Frontend Creati**:
-- `room-manager.html` (dashboard con grid camere)
-- `css/room-manager.css` (dark theme coerente)
-- `js/room-manager.js` (API calls, UI interattiva)
-
-**Ricerca Completata**:
-- `moduli/room_manager/studi/big_players_research.md` (1606 righe)
-- TOP 10 PMS analizzati, gap identificati
-
-**Prossimi Step**:
-1. [ ] Migration database (rooms, housekeeping_tasks)
-2. [ ] Test locale
-3. [ ] Deploy su Lab VM
-
----
-
-## Prossimi Step
-
-1. [ ] **What-If Simulator Backend** - Implementare what_if_api.py + service
-2. [ ] **What-If Simulator Frontend** - UI con slider
-3. [ ] docker-compose.prod.yml
-4. [ ] RateBoard hard tests
-5. [ ] ML Base (dopo What-If)
-6. [ ] Room Manager MVP (post-What-If)
-
----
-
-## Sessione 171 - Cosa Fatto
-
-```
-[x] SNCP riorganizzato per progetti
-    - .sncp/progetti/miracollo/
-    - .sncp/progetti/cervellaswarm/
-    - .sncp/progetti/contabilita/
-
-[x] Regole aggiornate in 3 posti
-    - ~/.claude/CLAUDE.md (globale)
-    - CervellaSwarm/CLAUDE.md
-    - PROMPT_RIPRESA.md
-
-[x] GAP #2 Modal Preview TESTATO e RISOLTO
-
-[x] Roadmap What-If Simulator creata (6 fasi)
-
-[x] STRUTTURA BACKEND VM MAPPATA ✅
-    - 700+ righe documentazione
-    - Pattern architetturale identificato
-    - Template completi router + service
-    - Piano inserimento (2 file + 2 righe)
-    - Checklist implementazione
-
-[x] Sessione parallela Room Manager avviata
-
-[x] BIG PLAYERS RICERCA COMPLETATA
-    - 10 player analizzati
-    - Trend 2026 mappati
-    - Gap mercato identificati
-    - Pricing strategy raccomandato
-    - Go-to-market strategy pronta
-```
-
----
-
-## Infrastruttura VM
-
-- **Container attivi:** nginx, backend-12
-- **API:** https://miracollo.com/api
-- **Health:** OK (version 1.7.0)
-- **Commit:** 0538b87 (master)
-
----
-
-## Roadmap Attive
-
-| Roadmap | File | Status |
-|---------|------|--------|
-| GAP Chiusura | `roadmaps/ROADMAP_GAP_CHIUSURA.md` | #1 #2 chiusi |
-| What-If | `roadmaps/ROADMAP_WHATIF_SIMULATOR.md` | **READY TO IMPLEMENT!** 🚀 |
-| Revenue 7-10 | `roadmaps/20260112_ROADMAP_REVENUE_7_TO_10.md` | Riferimento |
-
----
-
-## File Chiave
-
-| File | Contenuto |
-|------|-----------|
-| `roadmaps/ROADMAP_WHATIF_SIMULATOR.md` | Piano What-If 6 fasi |
-| `idee/20260112_STRUTTURA_BACKEND_VM.md` | **MAPPA BACKEND COMPLETA** (700+ righe) |
-| `idee/20260112_RICERCA_GAP3_GAP4_ML_WHATIF.md` | Ricerca ML + What-If |
-| `roadmaps/ROADMAP_GAP_CHIUSURA.md` | Stato GAP |
-| `moduli/room_manager/studi/big_players_research.md` | **BIG PLAYERS PMS (NEW!)** |
-| `reports/MAPPA_REVENUE_INTELLIGENCE_166.md` | Mappa sistema |
-| `workflow/20260111_PROTOCOLLO_IBRIDO_DEFINITIVO.md` | Protocollo VM + Locale |
-
----
-
-## Principio Guida
-
-> "RateBoard PERFETTO > Nuove Features"
-> "Una cosa alla volta, fatta BENE"
-> "Ultrapassar os próprios limites!"
-
----
-
-*Aggiornare questo file a ogni sessione*
-
----
-
-## UPDATE: 12 Gennaio 2026 - Analisi PMS Esistente
-
-**Azione:** Analisi approfondita codebase Miracollo per Room Manager  
-**Eseguita da:** Cervella Ingegnera
-
-**Risultato:** ⚠️ SOVRAPPOSIZIONI CRITICHE TROVATE
-
-### Scoperte Principali
-
-1. **Housekeeping GIA' ESISTE** - Router + API + colonne DB funzionanti
-2. **Planning GIA' MOSTRA stato camere** - Integrazione completa
-3. **Room Manager DUPLICA endpoint** - Rischio technical debt
-
-### Valore Aggiunto Room Manager
-
-✅ Task system housekeeping strutturato  
-✅ Maintenance tracking  
-✅ Audit trail stati camera  
-✅ Services layer (RoomService, HousekeepingService)  
-
-### Duplicazioni Trovate
-
-❌ Endpoint cambio stato camera (2 router)  
-❌ Due campi stato (`housekeeping_status` + `status`)  
-❌ Vista camere (planning.html + room-manager.html)  
-
-### Decisioni Architetturali Richieste
-
-1. **Stati camera:** Un campo o due? (`status` vs `housekeeping_status`)
-2. **Router:** Consolidare in uno o mantenere separati?
-3. **Frontend:** Una vista o due (receptionist vs governante)?
-
-### Report Completo
-
-Path: `.sncp/progetti/miracollo/moduli/room_manager/studi/ANALISI_PMS_ESISTENTE.md`
-
-**Raccomandazione:** Consolidare PRIMA di proseguire sviluppo.
-
----
+*"Una cosa alla volta, fatta BENE!"*
