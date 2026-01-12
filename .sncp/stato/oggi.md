@@ -460,3 +460,11 @@ miracollo-cervella: RUNNING
 - **Progetto**: CervellaSwarm
 - **Evento**: session_end
 - **Generato da**: sncp_auto_update.py v2.0.0
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-12 14:17 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v2.0.0
