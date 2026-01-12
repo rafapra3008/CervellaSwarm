@@ -1,101 +1,60 @@
 # Fix Errori Agenti - Script Swarm
 
 > **Data:** 12 Gennaio 2026
-> **Status:** DA FIXARE
+> **Status:** COMPLETATO ✅
+> **Sessione Fix Finale:** 173
 
 ---
 
-## PROBLEMA
+## PROBLEMA ORIGINALE
 
-14 agenti hanno riferimenti a `scripts/swarm/` che:
-1. Non esistono
-2. Richiedono tool Bash (non disponibile per tutti)
-3. Causano errori all'avvio
-
-**Agenti interessati:**
-- cervella-backend
-- cervella-frontend
-- cervella-data
-- cervella-devops
-- cervella-docs
-- cervella-ingegnera
-- cervella-marketing
-- cervella-orchestrator
-- cervella-scienziata
-- cervella-security
-- cervella-tester
-- cervella-guardiana-qualita
-- cervella-guardiana-ops
-- cervella-guardiana-ricerca
+14 agenti avevano riferimenti a `scripts/swarm/` che:
+1. Non esistevano
+2. Richiedevano tool Bash (non disponibile per tutti)
+3. Causavano errori all'avvio
 
 ---
 
-## CAUSA ROOT
+## FIX APPLICATI
 
-Sezione "PROTOCOLLI COMUNICAZIONE SWARM" nei DNA contiene:
-```bash
-scripts/swarm/update-status.sh WORKING "message"
-scripts/swarm/heartbeat-worker.sh &
-scripts/swarm/ask-regina.sh QUESTION "..."
+### Sessione 172
+- Rimosso contenuto duplicato da 13 agenti
+- Fix riferimenti `scripts/swarm/`
+- Fix errori EISDIR
+
+### Sessione 173 (Finale)
+- Completato fix `cervella-orchestrator.md` (rimosso ~320 righe sporche)
+- Fixato emoji mancanti in `cervella-ingegnera.md` e `cervella-scienziata.md`
+- Triple check completato su tutti i 16 agenti
+
+---
+
+## VERIFICA FINALE
+
+| Check | Status |
+|-------|--------|
+| Contenuto duplicato | NESSUNO |
+| Riferimenti scripts/swarm/ | NESSUNO |
+| Frontmatter corretto | 16/16 |
+| Sezione COSTITUZIONE | 16/16 |
+| Model opus (regina+guardiane) | 4/4 |
+| Model sonnet (worker) | 12/12 |
+| TODO/FIXME incompleti | NESSUNO |
+
+---
+
+## STRUTTURA FINALE
+
 ```
+GERARCHIA (per dimensione file):
+- Worker:     314-509 righe (12 agenti)
+- Guardiane:  575-706 righe (3 agenti)
+- Regina:     807 righe     (1 agente)
 
-Ma:
-1. Script non esistono
-2. Agenti senza tool Bash non possono eseguirli
-3. Read su `.swarm/` causa EISDIR
-
----
-
-## FIX GIA' APPLICATO
-
-**cervella-researcher.md** - Sessione 172
-- Sostituita sezione script con istruzioni sui tool disponibili
-- Aggiunto warning EISDIR
-
----
-
-## FIX DA APPLICARE
-
-Per ogni agente:
-1. Rimuovere riferimenti a `scripts/swarm/`
-2. Sostituire con istruzioni appropriate per i tool disponibili
-3. Aggiungere sezione "TOOL DISPONIBILI"
-
-**Template fix:**
-```markdown
-## TOOL DISPONIBILI
-
-I tuoi tool:
-- [lista tool specifici per agente]
-
-NON HAI:
-- [tool non disponibili]
-
-## COMUNICAZIONE
-
-La tua comunicazione e' il RISULTATO che restituisci.
-La Regina leggera' il tuo output.
+TOTALE: 7653 righe di DNA per 16 agenti
 ```
 
 ---
 
-## PRIORITA'
-
-- ALTA: Guardiane (usate frequentemente)
-- MEDIA: Worker specializzati
-- BASSA: Agenti meno usati
-
----
-
-## PIANO
-
-1. [ ] Fix cervella-guardiana-qualita
-2. [ ] Fix cervella-guardiana-ops
-3. [ ] Fix cervella-guardiana-ricerca
-4. [ ] Fix cervella-backend
-5. [ ] Fix cervella-frontend
-6. [ ] Fix altri (batch)
-
----
-
-*Da completare in prossima sessione dedicata*
+*Completato: 12 Gennaio 2026 - Sessione 173*
+*"La famiglia è pronta!"* 🐝👑

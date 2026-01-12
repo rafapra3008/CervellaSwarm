@@ -30,34 +30,35 @@ WHAT-IF API: LIVE su miracollo.com! ✅
 
 ---
 
-## What-If Simulator - FASE 1 LIVE!
+## What-If Simulator - COMPLETO AL 100%!
 
-**Status**: API DEPLOYATA su miracollo.com - Sessione 172
+**Status**: TUTTO LIVE su miracollo.com - Sessione 172
+
+**URL**: https://miracollo.com/what-if.html
 
 **Endpoints Attivi**:
 ```
-GET  /api/v1/what-if/health      -> OK
-POST /api/v1/what-if/simulate    -> OK
-GET  /api/v1/what-if/price-curve -> OK
+GET  /api/v1/what-if/health       -> OK
+POST /api/v1/what-if/simulate     -> OK
+GET  /api/v1/what-if/price-curve  -> OK
+GET  /api/v1/properties           -> OK (Naturae Lodge)
+GET  /api/v1/properties/1/room-types -> OK (5 tipologie)
 ```
 
-**File Deployati**:
-- `routers/what_if_api.py` (344 righe)
-- `services/what_if_calculator.py` (incluso nel router per MVP)
-- `main.py` aggiornato (+2 righe)
-
-**Sessione 172 - Cosa Fatto**:
-- [x] Code Review (7.5/10 -> target 9.5)
+**Sessione 172 - TUTTO COMPLETATO**:
+- [x] Code Review (7.5/10 -> target 9.5 documentato)
 - [x] Ricerca struttura backend VM (700+ righe)
-- [x] Creazione moduli Python What-If
-- [x] Deploy via Guardiana Ops
-- [x] Health check OK
+- [x] Backend API What-If deployato
+- [x] Frontend UI deployato (slider, cards, explanation)
+- [x] Endpoint properties/room-types creati
+- [x] TODO rimossi dal codice
+- [x] Menu aggiornato (12 file HTML!)
 - [x] Regole permanenti aggiunte (Costituzione, No-ops Rafa, Checklist Deploy)
 
 **Prossimo Step**:
-1. [ ] FASE 2: Frontend UI (slider + impact cards)
-2. [ ] Integrare con DB reale (sostituire fallback)
-3. [ ] Test con dati Nido Lodge
+1. [ ] Test con utenti reali
+2. [ ] Feedback e iterazione
+3. [ ] FASE 3-6 roadmap (grafico, AI avanzata, azioni)
 
 ---
 
