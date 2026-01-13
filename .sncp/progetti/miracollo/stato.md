@@ -1,5 +1,5 @@
 # Stato Miracollo
-> Ultimo aggiornamento: 13 Gennaio 2026 - Sessione 188 WEATHER INTEGRATION COMPLETA!
+> Ultimo aggiornamento: 13 Gennaio 2026 - Sessione 189 (SNCP Cleanup)
 
 ---
 
@@ -205,16 +205,16 @@ IMPLEMENTATO:
 | 1.3 | GET /api/weather/forecast | **FATTO** | 7 endpoint |
 | 1.3 | GET /api/weather/impact | **FATTO** | Con multiplier |
 | 1.3 | Documentazione API | TODO | Swagger auto |
-| 1.4 | Integrazione suggerimenti_engine | TODO | Prossimo step |
-| 1.4 | Tipo WEATHER_BOOST | TODO | Prossimo step |
-| 1.4 | Tipo WEATHER_PROMO | TODO | Prossimo step |
+| 1.4 | Integrazione suggerimenti_engine | **FATTO** | Sessione 188 |
+| 1.4 | Tipo WEATHER_BOOST | **FATTO** | Sessione 188 |
+| 1.4 | Tipo WEATHER_PROMO | **FATTO** | Sessione 188 |
 | 1.4 | Tests integrazione | TODO | pytest |
 | 1.5 | WeatherWidget component | TODO | Frontend |
 | 1.5 | CSS styling | TODO | Frontend |
 | 1.5 | Integrazione Rateboard | TODO | Frontend |
 | 1.5 | Auto-refresh | TODO | Frontend |
 
-**Progress Meteo: 60% (Backend 100%, Frontend 0%)**
+**Progress Meteo: 80% (Backend 100%, Integration 100%, Frontend 0%)**
 
 ### FASE 4C: EVENTI LOCALI - ROADMAP PRONTA
 
@@ -273,42 +273,50 @@ backend/
 
 ---
 
-## PROSSIMI STEP PRIORITIZZATI
+## PROSSIMI STEP PRIORITIZZATI (Aggiornato Sessione 189)
 
 ```
-IMMEDIATO (prossima sessione):
-1. [ ] Aggiungere WEATHER_API_KEY al .env produzione
-2. [ ] Test endpoint su staging/prod
-3. [ ] Integrare weather in suggerimenti_engine.py
++================================================================+
+|   PERCORSO 9.2 → 9.5 (mancano 0.3 punti)                       |
++================================================================+
 
-SPRINT 1 (dopo integrazione):
-4. [ ] WeatherWidget frontend
-5. [ ] Unit tests weather service
-6. [ ] Deploy completo
+SPRINT A: CHIUDERE WEATHER (+0.1)
+├── 1. [ ] WeatherWidget frontend
+├── 2. [ ] Test staging con weather
+├── 3. [ ] .env produzione (WEATHER_API_KEY)
+└── 4. [ ] Deploy produzione
 
-SPRINT 2 (dopo meteo):
-7. [ ] FASE 4: EVENTI LOCALI (3 settimane)
+SPRINT B: EVENTI LOCALI (+0.2)
+├── 1. [ ] Database schema eventi
+├── 2. [ ] EventService backend
+├── 3. [ ] API endpoints eventi
+├── 4. [ ] UI gestione eventi
+└── 5. [ ] Integrazione suggerimenti
 
-SPRINT 3 (dopo eventi):
-8. [ ] Competitor Scraping URL reale
-9. [ ] Test Autopilot staging
+BONUS (non bloccanti per 9.5):
+├── [ ] Unit tests weather
+├── [ ] Unit tests eventi
+├── [ ] Competitor Scraping (serve URL da Rafa)
+└── [ ] Autopilot test staging
 ```
+
+**PRIORITÀ:** Sprint A → Sprint B → Bonus
 
 ---
 
 ## TL;DR
 
 ```
-RATEBOARD:          9.1/10 -> Target 9.5/10
-FESTIVITA:          GIA FATTO (calendar_events.py)
-METEO BACKEND:      FATTO! (weather_service.py + weather.py)
-METEO FRONTEND:     TODO (WeatherWidget)
-EVENTI LOCALI:      ROADMAP PRONTA (3 settimane)
+RATEBOARD:          9.2/10 → Target 9.5/10 (manca 0.3!)
+FESTIVITA:          ✓ FATTO (calendar_events.py)
+METEO BACKEND:      ✓ FATTO (weather_service.py)
+METEO INTEGRATION:  ✓ FATTO (suggerimenti_engine.py)
+METEO FRONTEND:     TODO (WeatherWidget) → +0.1
+EVENTI LOCALI:      ROADMAP PRONTA → +0.2
 COMPETITOR:         POC 85% (serve URL)
 AUTOPILOT:          Codice OK, da testare
 
->>> SESSIONE 188: WEATHER API IMPLEMENTATA E TESTATA! <<<
->>> Cortina -1.7C - API funziona! <<<
+>>> PROSSIMO: Sprint A (Weather Frontend) → Sprint B (Eventi) <<<
 ```
 
 ---
@@ -330,4 +338,4 @@ AUTOPILOT:          Codice OK, da testare
 *"Fatto BENE > Fatto VELOCE"*
 *"Una cosa alla volta, standard 100000%!"*
 
-*Aggiornato: 13 Gennaio 2026 - Sessione 188*
+*Aggiornato: 13 Gennaio 2026 - Sessione 189 (SNCP Cleanup)*
