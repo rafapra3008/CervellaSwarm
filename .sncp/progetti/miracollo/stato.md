@@ -1,9 +1,39 @@
 # Stato Miracollo
-> Ultimo aggiornamento: 13 Gennaio 2026 - Sessione 186 POC COMPETITOR SCRAPING!
+> Ultimo aggiornamento: 13 Gennaio 2026 - Sessione 186 PLAYWRIGHT VITTORIA!
 
 ---
 
-## SESSIONE 186 - POC COMPETITOR SCRAPING COMPLETATO! 🎯
+## SESSIONE 186 (cont.) - PLAYWRIGHT FUNZIONA! GRATIS!
+
+```
++================================================================+
+|                                                                |
+|   SFIDA VINTA! SCRAPING GRATIS CON PLAYWRIGHT!                 |
+|                                                                |
+|   Tentativo 1: httpx diretto → FALLITO (AWS WAF blocca)        |
+|   Tentativo 2: Playwright    → SUCCESSO! 1.4 MB HTML!          |
+|                                                                |
+|   Non serve ScrapingBee ($49/mese)!                            |
+|   Playwright = browser Chrome controllato da Python            |
+|   Booking lo vede come utente normale!                         |
+|                                                                |
+|   CREATO:                                                      |
+|   ✅ playwright_scraping_client.py (nuovo!)                    |
+|   ✅ Test con hotel Roma: 22 elementi con €                    |
+|   ✅ Documentato su SNCP                                       |
+|                                                                |
+|   STRATEGIA CONFERMATA:                                        |
+|   - Scraping ~1x settimana per tendenze                        |
+|   - Scraping ~1x giorno per buchi/gap                          |
+|   - NON aggressivo, NON per prezzo più basso auto              |
+|   - È "table stakes" per credibilità                           |
+|                                                                |
++================================================================+
+```
+
+---
+
+## SESSIONE 186 - POC COMPETITOR SCRAPING COMPLETATO!
 
 ```
 +================================================================+
@@ -20,19 +50,20 @@
 |   ✅ Script: daily_competitor_scrape.py (350 righe)            |
 |   ✅ Config: scraping_config.py (380 righe)                    |
 |   ✅ Docs: COMPETITOR_SCRAPING_POC.md (completa!)              |
+|   ✅ playwright_scraping_client.py (NUOVO - gratis!)           |
 |                                                                |
 |   FEATURES:                                                    |
-|   - ScrapingBee client per bypass anti-bot                     |
+|   - Playwright client per bypass anti-bot (GRATIS!)            |
 |   - Booking.com parser (HTML → prezzi)                         |
-|   - Rate limiting automatico (2s tra req)                      |
+|   - Rate limiting automatico (5-10s tra req)                   |
 |   - Retry exponential backoff (3x)                             |
 |   - API REST completa (5 endpoint)                             |
 |   - Script CRON per automazione                                |
 |                                                                |
 |   READY FOR:                                                   |
-|   1. Test con API key ScrapingBee                              |
-|   2. Integrazione frontend                                     |
-|   3. Setup CRON per scraping giornaliero                       |
+|   1. Integrare Playwright nel POC                              |
+|   2. Test con competitor REALE (URL Booking vero)              |
+|   3. Setup CRON per scraping settimanale                       |
 |                                                                |
 +================================================================+
 ```

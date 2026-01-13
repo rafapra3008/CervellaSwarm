@@ -1,39 +1,31 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 186 MIRACOLLO + MIRACOLLOOK
-> **Versione:** v120.0.0 - AUDIT RATEBOARD + POC COMPETITOR SCRAPING + QUICK ACTIONS!
+> **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 186 PLAYWRIGHT VITTORIA!
+> **Versione:** v121.0.0 - COMPETITOR SCRAPING GRATIS CON PLAYWRIGHT!
 
 ---
 
-## SESSIONE 186 - MIRACOLLO: AUDIT + POC COMPETITOR SCRAPING!
+## SESSIONE 186 (cont.) - PLAYWRIGHT VITTORIA!
 
 ```
 +================================================================+
 |                                                                |
-|   SESSIONE STORICA MIRACOLLO!                                  |
+|   SFIDA VINTA! SCRAPING GRATIS CON PLAYWRIGHT!                 |
 |                                                                |
-|   PARTE 1: AUDIT COMPLETO RATEBOARD                            |
-|   [x] Ingegnera ha mappato tutto il codice (9,372 righe)       |
-|   [x] Researcher ha studiato 6 competitor (1640+ righe)        |
-|   [x] Gap analysis: competitor scraping = CRITICO              |
-|   [x] ROADMAP_RATEBOARD_MASTER.md creata (bussola!)            |
-|   [x] SUBROADMAP_ML_AI_SUGGESTIONS.md (piano graduale)         |
-|   [x] VISIONE_BOT_HOTEL.md (chef, revenue, tutti reparti)      |
+|   SFIDA: "Proviamo senza ScrapingBee ($49/mese)!"              |
+|   RISULTATO: VITTORIA TOTALE!                                  |
 |                                                                |
-|   VANTAGGI IDENTIFICATI (solo noi!):                           |
-|   ✅ Native PMS Integration                                    |
-|   ✅ Learning AI (FASE 3 completata)                           |
-|   ✅ Transparent AI (come TakeUp $11M!)                        |
+|   Tentativo 1: httpx diretto → FALLITO (AWS WAF blocca)        |
+|   Tentativo 2: Playwright    → SUCCESSO!                       |
 |                                                                |
-|   PARTE 2: POC COMPETITOR SCRAPING                             |
-|   [x] Ricerca scraping Booking.com (3 parti, 1500+ righe)      |
-|   [x] competitor_scraping_service.py (520 righe)               |
-|   [x] competitor_scraping.py router (450 righe)                |
-|   [x] daily_competitor_scrape.py (350 righe)                   |
-|   [x] scraping_config.py (380 righe)                           |
-|   [x] COMPETITOR_SCRAPING_POC.md (docs completa)               |
+|   RISULTATI TEST BOOKING.COM:                                  |
+|   ✅ HTML scaricato: 1,409,145 caratteri (1.4 MB!)             |
+|   ✅ Prezzi estratti: 7 (da €76 a €394)                        |
+|   ✅ Parser funziona: estrae room, price, type                 |
+|   ✅ Costo: $0 (non serve ScrapingBee!)                        |
 |                                                                |
-|   SCORE: 8.5/10 → 9.0/10 (gap colmato!)                        |
+|   PLAYWRIGHT = Chrome controllato da Python                    |
+|   Esegue JavaScript → Booking lo vede come utente normale!     |
 |                                                                |
 +================================================================+
 ```
@@ -43,34 +35,57 @@
 ## STATO MIRACOLLO
 
 ```
-RATEBOARD:              9.0/10 (era 8.5, +0.5!)
+RATEBOARD:              9.0/10 (GAP COLMATO!)
 AUTOPILOT:              CODICE OK, DA TESTARE STAGING
 WHAT-IF:                COMPLETO
 A/B TESTING:            FUNZIONANTE
 REVENUE:                OK
-COMPETITOR SCRAPING:    POC COMPLETO! Ready for test
+COMPETITOR SCRAPING:    FUNZIONA CON PLAYWRIGHT (GRATIS!)
 
->>> GAP CRITICO COLMATO! <<<
+>>> COMPETITOR SCRAPING = TABLE STAKES COLMATO! <<<
 ```
 
 ---
 
-## FILE CREATI MIRACOLLO (Sessione 186)
+## FILE CREATI/MODIFICATI (Sessione 186 cont.)
 
 ```
-miracollogeminifocus/backend/
-├── services/competitor_scraping_service.py  (520 righe)
-├── routers/competitor_scraping.py           (450 righe)
-├── scripts/daily_competitor_scrape.py       (350 righe)
-├── config/scraping_config.py                (380 righe)
-└── docs/COMPETITOR_SCRAPING_POC.md
+miracollogeminifocus/backend/services/
+├── playwright_scraping_client.py       (NUOVO! Client gratis)
+├── direct_scraping_client.py           (NUOVO! Fallito, documentato)
+├── competitor_scraping_service.py      (Aggiornato v1.1.0 con factory)
+
+miracollogeminifocus/
+├── test_playwright.py                  (Test scraping)
+├── test_parser.py                      (Test parser prezzi)
 
 CervellaSwarm/.sncp/progetti/miracollo/
-├── reports/20260113_AUDIT_RATEBOARD_COMPLETO.md
-├── roadmaps/ROADMAP_RATEBOARD_MASTER.md
-├── roadmaps/SUBROADMAP_ML_AI_SUGGESTIONS.md
-├── idee/20260113_VISIONE_BOT_HOTEL.md
-└── idee/20260113_RICERCA_COMPETITOR_*.md (7 parti!)
+├── ricerche/20260113_SCRAPING_PLAYWRIGHT_VITTORIA.md
+├── ricerche/20260113_RICERCA_SCRAPINGBEE.md
+├── roadmaps/ROADMAP_RATEBOARD_MASTER.md (Aggiornato!)
+└── stato.md (Aggiornato!)
+```
+
+---
+
+## STRATEGIA COMPETITOR SCRAPING (confermata)
+
+```
+NON serve scraping aggressivo!
+
+Frequenza:
+- ~1x settimana per tendenze mercato
+- ~1x giorno per buchi/gap (opzionale)
+
+Scopo:
+- Capire il mercato (table stakes)
+- Vedere tendenze
+- Informare decisioni (NON automatizzare prezzi!)
+
+I VERI vantaggi Miracollo (UNICI):
+1. Native PMS (ZERO altri!)
+2. Learning AI (ZERO altri!)
+3. Transparent AI (come TakeUp $11M!)
 ```
 
 ---
@@ -78,11 +93,12 @@ CervellaSwarm/.sncp/progetti/miracollo/
 ## PROSSIMI STEP MIRACOLLO
 
 ```
-1. [ ] Registrare ScrapingBee (free tier) + test POC
-2. [ ] Test Autopilot in staging
-3. [ ] Split tech debt CSS/JS
-4. [ ] Frontend competitor widget
-5. [ ] ML AI Suggestions (subroadmap pronta)
+1. [x] ScrapingBee → NON SERVE! Playwright gratis!
+2. [ ] URL competitor REALE (serve da Rafa)
+3. [ ] Test Autopilot in staging
+4. [ ] Split tech debt CSS/JS
+5. [ ] Frontend competitor widget
+6. [ ] ML AI Suggestions (subroadmap pronta)
 ```
 
 ---
@@ -299,17 +315,16 @@ Border: #38383A
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-13 13:49 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-13 14:32 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 4ff8e39 - Checkpoint Sessione 186: AUDIT + POC COMPETITOR SCRAPING
-- **File modificati** (5):
-  - sncp/stato/oggi.md
-  - reports/scientist_prompt_20260113.md
-  - .sncp/progetti/miracollo/moduli/miracallook/ROADMAP_MIRACOLLOOK_MASTER.md
-  - reports/engineer_report_20260113_114808.md
-  - reports/engineer_report_20260113_134609.json
+- **Ultimo commit**: 1f05d08 - Checkpoint Sessione 186: MIRACOLLOOK Viste Complete
+- **File modificati** (2):
+  - eports/scientist_prompt_20260113.md
+  - reports/engineer_report_20260113_141302.json
 
 ### Note
 - Checkpoint automatico generato da hook

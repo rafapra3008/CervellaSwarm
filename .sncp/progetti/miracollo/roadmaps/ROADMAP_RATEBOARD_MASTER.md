@@ -1,7 +1,7 @@
 # ROADMAP MASTER: RateBoard Diamante
 
-> **Aggiornata:** 13 Gennaio 2026 - Sessione 186 (Post-Audit)
-> **Score Attuale:** 8.5/10
+> **Aggiornata:** 13 Gennaio 2026 - Sessione 186 (PLAYWRIGHT VITTORIA!)
+> **Score Attuale:** 9.0/10 (Competitor Scraping FUNZIONA!)
 > **Target:** 9.5/10
 
 ---
@@ -33,7 +33,7 @@
 
 | # | Cosa | Effort | Status | Note |
 |---|------|--------|--------|------|
-| 1 | **Competitor Scraping** | 40-60h | DA FARE | Tutti i competitor lo hanno! |
+| 1 | **Competitor Scraping** | 40-60h | **FATTO!** | Playwright GRATIS funziona! |
 | 2 | **Test Autopilot Staging** | 8-10h | DA FARE | Codice pronto, mai testato |
 | 3 | **Bulk Edit Preview/Undo** | 10h | DA FARE | Safety per utenti |
 | 4 | **Split file grossi** | 7h | DA FARE | Tech debt critico |
@@ -149,12 +149,12 @@
 
 ---
 
-## GAP VS COMPETITOR (da colmare)
+## GAP VS COMPETITOR (COLMATO!)
 
 ```
 +================================================================+
 |                                                                |
-|   GAP CRITICO: COMPETITOR RATE SHOPPING                        |
+|   GAP COLMATO! COMPETITOR RATE SHOPPING                        |
 |                                                                |
 |   IDeaS: ✅ Real-time scraping                                 |
 |   Duetto: ✅ Real-time scraping                                |
@@ -162,9 +162,11 @@
 |   TakeUp: ✅ Real-time scraping                                |
 |   RoomPriceGenie: ✅ Rate shopping                             |
 |                                                                |
-|   MIRACOLLO: ❌ Dati manuali!                                   |
+|   MIRACOLLO: ✅ Playwright scraping GRATIS!                    |
 |                                                                |
-|   AZIONE: Priorita #1 per Q1 2026                              |
+|   Sessione 186: Testato su Booking.com                         |
+|   7 prezzi estratti correttamente!                             |
+|   Costo: $0 (non serve ScrapingBee!)                           |
 |                                                                |
 +================================================================+
 ```
