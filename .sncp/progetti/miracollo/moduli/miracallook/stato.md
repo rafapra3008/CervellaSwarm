@@ -1,7 +1,7 @@
 # STATO - Miracollook
 
-> **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 187
-> **Status:** RESIZE PANNELLI + ATTACHMENTS! FASE 1 al 75%!
+> **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 187 (Finale)
+> **Status:** RESIZE + ATTACHMENTS VIEW! Da testare download dopo restart backend
 
 ---
 
@@ -70,6 +70,20 @@ ATTACHMENTS VIEW       [####################] 100% COMPLETA!
 |                                                                |
 +================================================================+
 ```
+
+### TEST EFFETTUATI DA RAFA
+
+```
+RESIZE PANNELLI:     FUNZIONA! Testato con due dimensioni diverse
+ATTACHMENTS LISTA:   FUNZIONA! Mostra nome file, size, icona
+ATTACHMENTS DOWNLOAD: 404 -> Backend riavviato, DA RITESTARE
+COMPOSE SUBJECT:     BUG - Email arriva senza oggetto (da investigare)
+```
+
+### BUG DA FIXARE (Prossima Sessione)
+
+1. **Download 404** - Testare dopo restart, se persiste investigare
+2. **Compose senza subject** - Email inviate mostrano "(nessun oggetto)"
 
 ---
 

@@ -317,14 +317,17 @@ Border: #38383A
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-13 14:32 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-13 15:34 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 1f05d08 - Checkpoint Sessione 186: MIRACOLLOOK Viste Complete
-- **File modificati** (2):
-  - eports/scientist_prompt_20260113.md
-  - reports/engineer_report_20260113_141302.json
+- **Ultimo commit**: e434114 - Checkpoint Sessione 187: MIRACOLLOOK Resize + Attachments
+- **File modificati** (3):
+  - sncp/progetti/miracollo/moduli/miracallook/stato.md
+  - .sncp/stato/oggi.md
+  - reports/engineer_report_20260113_150313.json
 
 ### Note
 - Checkpoint automatico generato da hook
