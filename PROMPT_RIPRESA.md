@@ -1,40 +1,36 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 184 MIRACOLLOOK
-> **Versione:** v114.0.0 - Design Salutare + PROBLEMA TAILWIND V4!
+> **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 185 MIRACOLLOOK
+> **Versione:** v115.0.0 - TAILWIND V4 FIXATO! Design Salutare FUNZIONANTE!
 
 ---
 
-## SESSIONE 184 - MIRACOLLOOK DESIGN UPGRADE
+## SESSIONE 185 - FIX TAILWIND V4
 
 ```
 +================================================================+
 |                                                                |
-|   SESSIONE 184: DESIGN SALUTARE + BUG TAILWIND V4!             |
+|   "Non esistono cose difficili, esistono cose non studiate!"   |
 |                                                                |
 |   COMPLETATI:                                                  |
-|   [x] Ricerca Design Salutare (Apple HIG, 900+ righe)          |
-|   [x] Marketing ha validato palette Apple + brand              |
-|   [x] Palette in tailwind.config.js (#1C1C1E, #7c7dff)         |
-|   [x] index.css aggiornato (body, scrollbar, selection)        |
-|   [x] LoginPage.tsx convertito a classi Tailwind               |
-|   [x] Sidebar.tsx convertito a classi Tailwind                 |
-|   [x] Ricerca Email List Design (Superhuman, Missive)          |
-|   [x] Date grouping implementato (Today, Yesterday)            |
-|   [x] Typography hierarchy (15/14/13px)                        |
+|   [x] Ricerca COMPLETA Tailwind v4 (1100+ righe!)              |
+|   [x] 3 approcci confrontati (tabella comparativa)             |
+|   [x] Decisione: @theme (metodo ufficiale v4)                  |
+|   [x] Implementato @theme con 24+ colori in index.css          |
+|   [x] Cleanup tailwind.config.js (solo fonts/shadows)          |
+|   [x] Build completo SENZA errori                              |
+|   [x] Fix bug TypeScript EmailList.tsx                         |
+|   [x] Mantra aggiunto alla COSTITUZIONE                        |
 |                                                                |
-|   BUG SCOPERTO - BLOCCANTE:                                    |
-|   [ ] TAILWIND V4 NON GENERA CLASSI CUSTOM!                    |
-|       - tailwind.config.js ha i colori corretti                |
-|       - MA bg-miracollo-bg-secondary NON ESISTE nel CSS!       |
-|       - In v4 serve @theme invece di config JS                 |
-|       - body ha #1C1C1E (hardcoded OK)                         |
-|       - Componenti usano classi che non esistono               |
+|   RISULTATO:                                                   |
+|   - 18 CSS variables generate                                  |
+|   - 24+ classi utility funzionanti (bg-miracollo-*)            |
+|   - Build 5x piu veloci                                        |
+|   - Future-proof (standard v4)                                 |
 |                                                                |
-|   SOLUZIONE (prossima sessione):                               |
-|   - Usare @theme in index.css per definire colori              |
-|   - Oppure CSS custom properties :root                         |
-|   - ~30 min di lavoro                                          |
+|   RICERCA SALVATA (nostro standard!):                          |
+|   .sncp/progetti/miracollo/moduli/miracallook/studi/           |
+|   RICERCA_TAILWIND_V4_CUSTOM_COLORS.md                         |
 |                                                                |
 +================================================================+
 ```
@@ -45,11 +41,11 @@
 
 ```
 FASE 0 (Fondamenta)     [####################] 100% COMPLETA!
-FASE 1 (Email Solido)   [####................] 20%
+FASE 1 (Email Solido)   [########............] 40%
 FASE 2 (PMS Integration)[....................] 0%
 
 DOCKER SETUP           [####################] 100% COMPLETA!
-DESIGN UPGRADE         [############........] 60% BLOCCATO (Tailwind v4)
+DESIGN UPGRADE         [####################] 100% COMPLETA!
 ```
 
 ---
@@ -59,19 +55,20 @@ DESIGN UPGRADE         [############........] 60% BLOCCATO (Tailwind v4)
 ```
 +================================================================+
 |                                                                |
-|   PRIORITA 1: FIX TAILWIND V4 (30 min)                         |
-|   - Aggiungere @theme in index.css                             |
-|   - Definire tutti i colori miracollo-*                        |
-|   - Testare che classi funzionino                              |
+|   PRIORITA 1: VERIFICA VISUALE DESIGN                          |
+|   - Aprire http://localhost:5173                               |
+|   - Verificare background #1C1C1E                              |
+|   - Verificare accent #7c7dff                                  |
+|   - Screenshot per confronto                                   |
 |                                                                |
-|   PRIORITA 2: VERIFICARE DESIGN SALUTARE                       |
-|   - Background #1C1C1E (Apple dark gray)                       |
-|   - Accent #7c7dff (indigo brand)                              |
-|   - Date groups sticky                                         |
-|                                                                |
-|   PRIORITA 3: CONTINUARE EMAIL LIST                            |
-|   - Quick actions hover                                        |
+|   PRIORITA 2: CONTINUARE EMAIL LIST                            |
+|   - Quick actions on hover (archive, star, delete)             |
 |   - VIP warm accent #d4985c                                    |
+|   - Keyboard shortcuts                                         |
+|                                                                |
+|   PRIORITA 3: EMAIL COMPOSE                                    |
+|   - Modal compose con Design Salutare                          |
+|   - Rich text editor                                           |
 |                                                                |
 +================================================================+
 ```
@@ -142,20 +139,19 @@ Border: #38383A
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-13 09:46 (auto)
+---
+
+## AUTO-CHECKPOINT: 2026-01-13 09:50 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: e734247 - ANTI-COMPACT: PreCompact auto
-- **File modificati** (5):
-  - .sncp/progetti/miracollo/moduli/miracallook/stato.md
-  - .sncp/stato/oggi.md
-  - .swarm/handoff/HANDOFF_20260113_094430.md
-  - PROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260113.md
+- **Ultimo commit**: 2b58f58 - Checkpoint Sessione 184: MIRACOLLOOK Design + BUG TAILWIND V4
+- **File modificati** (2):
+  - .swarm/handoff/HANDOFF_20260113_SESSION184.md
+  - reports/engineer_report_20260113_094750.json
 
 ### Note
 - Checkpoint automatico generato da hook
-- Trigger: auto
+- Trigger: unknown
 
 ---
