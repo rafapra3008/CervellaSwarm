@@ -1,47 +1,40 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 183 MIRACOLLO BUG FIX
-> **Versione:** v113.0.0 - FIX MULTIPLI + DEBUG AI PANEL!
+> **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 184 MIRACOLLOOK
+> **Versione:** v114.0.0 - Design Salutare + PROBLEMA TAILWIND V4!
 
 ---
 
-## SESSIONE 183 - MIRACOLLO BUG FIX!
+## SESSIONE 184 - MIRACOLLOOK DESIGN UPGRADE
 
 ```
 +================================================================+
 |                                                                |
-|   SESSIONE 183: FIX MULTIPLI + DEBUG AI PANEL                  |
+|   SESSIONE 184: DESIGN SALUTARE + BUG TAILWIND V4!             |
 |                                                                |
 |   COMPLETATI:                                                  |
-|   [x] Fix A/B Testing API (get_db context manager) - 8 fix!    |
-|   [x] Fix A/B Testing migration 033 (tabelle create)           |
-|   [x] Fix CSP onclick inline in revenue.html (5 rimossi)       |
-|   [x] Fix room-types API call (aggiunto hotel_code)            |
-|   [x] Fix room-types array handling (API ritorna array)        |
-|   [x] SSH config sistemato (alias miracollo.com funziona!)     |
-|   [x] Rateboard griglia ORA SI VEDE!                           |
-|   [x] AI Suggestions panel si apre (con singola camera)        |
+|   [x] Ricerca Design Salutare (Apple HIG, 900+ righe)          |
+|   [x] Marketing ha validato palette Apple + brand              |
+|   [x] Palette in tailwind.config.js (#1C1C1E, #7c7dff)         |
+|   [x] index.css aggiornato (body, scrollbar, selection)        |
+|   [x] LoginPage.tsx convertito a classi Tailwind               |
+|   [x] Sidebar.tsx convertito a classi Tailwind                 |
+|   [x] Ricerca Email List Design (Superhuman, Missive)          |
+|   [x] Date grouping implementato (Today, Yesterday)            |
+|   [x] Typography hierarchy (15/14/13px)                        |
 |                                                                |
-|   BUG ANCORA APERTO - PROSSIMA SESSIONE:                       |
-|   [ ] AI Panel non si espande con "Tutte le camere"            |
-|       - Debug logs AGGIUNTI in rateboard-core.js               |
-|       - Log mostrano: max-height 48px quando collapsed=false   |
-|       - CSS sembra applicato al contrario!                     |
-|       - File: frontend/css/rateboard.css                       |
-|       - File: frontend/js/rateboard/rateboard-core.js          |
+|   BUG SCOPERTO - BLOCCANTE:                                    |
+|   [ ] TAILWIND V4 NON GENERA CLASSI CUSTOM!                    |
+|       - tailwind.config.js ha i colori corretti                |
+|       - MA bg-miracollo-bg-secondary NON ESISTE nel CSS!       |
+|       - In v4 serve @theme invece di config JS                 |
+|       - body ha #1C1C1E (hardcoded OK)                         |
+|       - Componenti usano classi che non esistono               |
 |                                                                |
-|   COMMITS OGGI (Miracollo):                                    |
-|   - 9561f98: Fix AI Suggestions panel toggle                   |
-|   - fb5662f: Fix CSP compliance onclick                        |
-|   - 581e128: Fix A/B Testing API get_db (8 occorrenze)         |
-|   - a8a14ac: Fix room-types API hotel_code                     |
-|   - 7058895: Fix room-types array handling                     |
-|   - c090b04: Simplify AI panel CSS + debug logs                |
-|                                                                |
-|   COSA ABBIAMO IMPARATO:                                       |
-|   - Rafa sa usare la Console del browser per debug!            |
-|   - SSH alias miracollo.com ora funziona                       |
-|   - Debug logs sono ESSENZIALI per capire i bug                |
+|   SOLUZIONE (prossima sessione):                               |
+|   - Usare @theme in index.css per definire colori              |
+|   - Oppure CSS custom properties :root                         |
+|   - ~30 min di lavoro                                          |
 |                                                                |
 +================================================================+
 ```
@@ -56,33 +49,29 @@ FASE 1 (Email Solido)   [####................] 20%
 FASE 2 (PMS Integration)[....................] 0%
 
 DOCKER SETUP           [####################] 100% COMPLETA!
-DESIGN UPGRADE         [########............] 40% IN CORSO
+DESIGN UPGRADE         [############........] 60% BLOCCATO (Tailwind v4)
 ```
 
 ---
 
-## PROSSIMA SESSIONE - OPZIONI
+## PROSSIMA SESSIONE - PRIORITA
 
 ```
 +================================================================+
 |                                                                |
-|   OPZIONE A: DESIGN SALUTARE (PALETTE APPLE)                   |
-|   - Background #0a0e1a -> #1C1C1E                              |
-|   - Text hierarchy con opacity                                 |
-|   - Stima: 1-2 ore                                             |
-|   - Impatto: Design piu leggero per gli occhi                  |
+|   PRIORITA 1: FIX TAILWIND V4 (30 min)                         |
+|   - Aggiungere @theme in index.css                             |
+|   - Definire tutti i colori miracollo-*                        |
+|   - Testare che classi funzionino                              |
 |                                                                |
-|   OPZIONE B: RESIZE PANNELLI                                   |
-|   - Installare react-resizable-panels                          |
-|   - Implementare drag resize                                   |
-|   - Stima: 7-11 ore                                            |
-|   - Impatto: UX come Missive/Linear                            |
+|   PRIORITA 2: VERIFICARE DESIGN SALUTARE                       |
+|   - Background #1C1C1E (Apple dark gray)                       |
+|   - Accent #7c7dff (indigo brand)                              |
+|   - Date groups sticky                                         |
 |                                                                |
-|   OPZIONE C: EMAIL LIST DESIGN (Sprint 2)                      |
-|   - Spacing migliorato                                         |
-|   - Raggruppamento per data (Today, Yesterday)                 |
-|   - Colori stati (unread, starred)                             |
-|   - Impatto: Core UX dell'app                                  |
+|   PRIORITA 3: CONTINUARE EMAIL LIST                            |
+|   - Quick actions hover                                        |
+|   - VIP warm accent #d4985c                                    |
 |                                                                |
 +================================================================+
 ```
@@ -104,93 +93,67 @@ Frontend: http://localhost:5173
 
 ---
 
-## COMMITS SESSIONE 183
+## FILE IMPORTANTI SESSIONE 184
 
 ```
-MIRACOLLOOK:
-d409089 - Sessione 183: Fix Tailwind v4 + Audit Colori + Nuova Palette
+SNCP (ricerche e specs):
+- .sncp/progetti/miracollo/moduli/miracallook/stato.md
+- .sncp/progetti/miracollo/moduli/miracallook/PALETTE_DESIGN_SALUTARE_VALIDATA.md
+- .sncp/progetti/miracollo/moduli/miracallook/EMAIL_LIST_SPECS_FINAL.md
+- .sncp/progetti/miracollo/moduli/miracallook/studi/RICERCA_EMAIL_LIST_DESIGN.md
+- .sncp/progetti/miracollo/moduli/miracallook/studi/RICERCA_DESIGN_SALUTARE.md
 
-CERVELLASWARM:
-5ebc5d6 - Sessione 183: SNCP Miracollook + Ricerche
-```
-
----
-
-## DOCUMENTI CREATI
-
-| File | Contenuto |
-|------|-----------|
-| RICERCA_TAILWIND_V4_SIZING.md | Root cause @tailwind vs @import |
-| AUDIT_COLORI_MIRACOLLOOK.md | Audit palette + raccomandazioni WCAG |
-| RICERCA_RESIZE_PANNELLI.md | Studio react-resizable-panels |
-| RICERCA_DESIGN_SALUTARE.md | Apple HIG + eye-friendly design |
-
----
-
-## PALETTE ATTUALE (Post Sessione 183)
-
-```
-Background:
-  miracollo-bg: #0a0e1a
-  miracollo-bg-card: #1e2642      (aggiornato)
-  miracollo-bg-hover: #2a3352     (aggiornato)
-
-Text:
-  miracollo-text: #f8fafc
-  miracollo-text-muted: #8b9cb5   (aggiornato)
-
-Border:
-  miracollo-border: #475569       (aggiornato)
-
-Accent (nuovi):
-  miracollo-accent-light: #a5b4fc
-  miracollo-accent-secondary-light: #c4b5fd
+CODICE (modifiche):
+- miracollook/frontend/tailwind.config.js
+- miracollook/frontend/src/index.css
+- miracollook/frontend/src/components/Auth/LoginPage.tsx
+- miracollook/frontend/src/components/Sidebar/Sidebar.tsx
+- miracollook/frontend/src/components/EmailList/EmailList.tsx
+- miracollook/frontend/src/components/EmailList/EmailListItem.tsx
 ```
 
 ---
 
-## PALETTE PROPOSTA (Apple Style - DA DECIDERE)
+## PALETTE TARGET (quando fix funziona)
 
 ```
-Background:  #0a0e1a  ->  #1C1C1E (Apple dark)
-Text:        #f8fafc  ->  #FFFFFF / #EBEBF5
-Accent:      #6366f1  ->  #0A84FF (Apple blue)
-```
-
----
-
-## NOTE TECNICHE
-
-```
-Tailwind: v4.1.18 (usa @import "tailwindcss", NON @tailwind!)
-React: 19
-Vite: con hot reload in Docker
-Nome: Miracollook (una parola, lowercase)
+Background: #1C1C1E (Apple), #2C2C2E, #3A3A3C
+Text: #FFFFFF, #EBEBF5, #9B9BA5
+Accent: #7c7dff (indigo brand), #d4985c (warm VIP)
+Semantic: #30D158, #FFD60A, #FF6B6B, #0A84FF
+Border: #38383A
 ```
 
 ---
 
-*Aggiornato: 13 Gennaio 2026 - Sessione 183*
-*"I dettagli fanno SEMPRE la differenza!"*
-*"Design che fa bene agli occhi = utenti felici!"*
+## CITAZIONI SESSIONE
+
+```
+"I dettagli fanno SEMPRE la differenza!"
+"Nulla e complesso - solo non ancora studiato!"
+"Ultrapassar os proprios limites!"
+```
 
 ---
 
----
+*Pronta!* Rafa, prossima sessione fix Tailwind v4 e poi Design Salutare sara REALE!
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-13 09:43 (unknown)
+## AUTO-CHECKPOINT: 2026-01-13 09:45 (auto)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 05be76e - Checkpoint Sessione 183: Miracollo Bug Fix + Debug
-- **File modificati** (2):
-  - sncp/stato/oggi.md
-  - reports/engineer_report_20260113_093739.json
+- **Ultimo commit**: e734247 - ANTI-COMPACT: PreCompact auto
+- **File modificati** (5):
+  - .sncp/progetti/miracollo/moduli/miracallook/stato.md
+  - .sncp/stato/oggi.md
+  - .swarm/handoff/HANDOFF_20260113_094430.md
+  - PROMPT_RIPRESA.md
+  - reports/scientist_prompt_20260113.md
 
 ### Note
 - Checkpoint automatico generato da hook
-- Trigger: unknown
+- Trigger: auto
 
 ---

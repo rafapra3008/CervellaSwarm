@@ -1,7 +1,7 @@
 # STATO - Miracollook
 
 > **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 184
-> **Status:** DESIGN SALUTARE IMPLEMENTATO!
+> **Status:** PROBLEMA TAILWIND V4 IDENTIFICATO - Fix necessario
 
 ---
 
@@ -29,61 +29,86 @@ FASE 1 (Email Solido)   [####................] 20%
 FASE 2 (PMS Integration)[....................] 0%
 
 DOCKER SETUP           [####################] 100% COMPLETA!
-DESIGN UPGRADE         [############........] 60%  ← SESSIONE 184!
+DESIGN UPGRADE         [############........] 60%  <- BLOCCATO!
 ```
 
 ---
 
-## SESSIONE 184 - DESIGN SALUTARE!
+## SESSIONE 184 - COSA ABBIAMO FATTO
 
 ```
 +================================================================+
 |                                                                |
-|   PALETTE "DESIGN SALUTARE" IMPLEMENTATA!                      |
+|   1. DESIGN SALUTARE - PALETTE APPLE                           |
+|      - Ricerca completa (900+ righe Apple HIG)                 |
+|      - Marketing ha validato palette                           |
+|      - File modificati:                                        |
+|        * tailwind.config.js (#1C1C1E, #7c7dff)                 |
+|        * index.css (body, scrollbar, selection)                |
+|        * LoginPage.tsx (classi Tailwind)                       |
+|        * Sidebar.tsx (classi Tailwind)                         |
 |                                                                |
-|   Obiettivo: -30% eye strain (Apple tested)                    |
+|   2. EMAIL LIST DESIGN                                         |
+|      - Ricerca completa (Superhuman, Missive, Apple Mail)      |
+|      - Marketing ha validato specs                             |
+|      - Date grouping implementato (Today, Yesterday)           |
+|      - Typography hierarchy (15/14/13px)                       |
 |                                                                |
-|   1. FOUNDATION APPLE                                          |
-|      - Background: #0a0e1a -> #1C1C1E (Apple Secondary)        |
-|      - Riduce halation del 30%                                 |
-|      - Shadows/elevation ora visibili                          |
-|                                                                |
-|   2. BRAND MIRACOLLOOK                                         |
-|      - Accent: #6366f1 -> #7c7dff (piu luminoso per dark)      |
-|      - Logo colors preservati (#a5b4fc, #c4b5fd)               |
-|      - Nuovo warm accent: #d4985c (VIP/starred)                |
-|                                                                |
-|   3. TEXT HIERARCHY (Apple)                                    |
-|      - Primary: #FFFFFF                                        |
-|      - Secondary: #EBEBF5                                      |
-|      - Muted: #9B9BA5                                          |
-|                                                                |
-|   4. SEMANTIC COLORS (Apple standard)                          |
-|      - Success: #30D158                                        |
-|      - Warning: #FFD60A                                        |
-|      - Danger: #FF6B6B (softened)                              |
-|      - Info: #0A84FF                                           |
-|                                                                |
-|   FILE MODIFICATI:                                             |
-|      - tailwind.config.js                                      |
-|      - index.css                                               |
-|      - LoginPage.tsx                                           |
-|      - Sidebar.tsx                                             |
-|                                                                |
-|   VALIDAZIONE: Guardiana Qualita -> PASS 10/10                 |
+|   3. PROBLEMA SCOPERTO: TAILWIND V4!                           |
+|      - Le classi custom (bg-miracollo-*) NON funzionano!       |
+|      - Tailwind v4 usa @theme invece di config JS              |
+|      - body ha #1C1C1E (OK) ma componenti no!                  |
+|      - SERVE FIX con @theme o CSS variables                    |
 |                                                                |
 +================================================================+
 ```
 
 ---
 
-## SESSIONE 183 - Recap
+## PROBLEMA TAILWIND V4 - DETTAGLI
 
 ```
-1. FIX TAILWIND V4 - @import "tailwindcss" (risolto!)
-2. FIX LOGO - gradient chiaro
-3. RICERCA Design Salutare - Apple style
-4. RICERCA Resize Pannelli - react-resizable-panels
++================================================================+
+|   PROBLEMA:                                                    |
+|   In Tailwind v4.1.18, i colori definiti in tailwind.config.js |
+|   NON generano automaticamente classi come bg-miracollo-bg     |
+|                                                                |
+|   SINTOMO:                                                     |
+|   - body { background: #1C1C1E } OK (hardcoded index.css)      |
+|   - bg-miracollo-bg-secondary NON ESISTE nel CSS!              |
+|   - Componenti mostrano colori vecchi/ereditati                |
+|                                                                |
+|   SOLUZIONE (da implementare):                                 |
+|   Usare @theme in index.css (stile Tailwind v4):               |
+|                                                                |
+|   @theme {                                                     |
+|     --color-miracollo-bg: #1C1C1E;                             |
+|     --color-miracollo-bg-secondary: #2C2C2E;                   |
+|     ...                                                        |
+|   }                                                            |
+|                                                                |
+|   Oppure CSS custom properties in :root                        |
++================================================================+
+```
+
+---
+
+## FILE CREATI/MODIFICATI SESSIONE 184
+
+```
+SNCP (CervellaSwarm/.sncp/progetti/miracollo/moduli/miracallook/):
+- PALETTE_DESIGN_SALUTARE_VALIDATA.md
+- ROADMAP_DESIGN_SALUTARE.md
+- EMAIL_LIST_SPECS_FINAL.md
+- studi/RICERCA_EMAIL_LIST_DESIGN.md
+
+CODICE (miracollook/frontend/):
+- tailwind.config.js (palette Apple - MA non funziona!)
+- src/index.css (body OK, glassmorphism OK)
+- src/components/Auth/LoginPage.tsx (classi Tailwind)
+- src/components/Sidebar/Sidebar.tsx (classi Tailwind)
+- src/components/EmailList/EmailList.tsx (date groups)
+- src/components/EmailList/EmailListItem.tsx (typography)
 ```
 
 ---
@@ -104,35 +129,35 @@ docker compose down
 
 ---
 
-## PROSSIMI STEP
+## PROSSIMA SESSIONE - PRIORITA
 
 ```
 +================================================================+
 |                                                                |
-|   1. RESIZE PANNELLI (7-11 ore)                                |
-|      - Libreria: react-resizable-panels                        |
-|      - Sidebar, List, Detail ridimensionabili                  |
-|      - UX come Missive/Linear                                  |
+|   PRIORITA 1: FIX TAILWIND V4 (BLOCCANTE!)                     |
+|   - Definire colori con @theme in index.css                    |
+|   - Oppure CSS custom properties :root                         |
+|   - Testare che classi bg-miracollo-* funzionino               |
 |                                                                |
-|   2. EMAIL LIST DESIGN                                         |
-|      - Spacing migliorato                                      |
-|      - Raggruppamento per data (Today, Yesterday)              |
-|      - Colori stati (unread con warm accent)                   |
+|   PRIORITA 2: VERIFICARE DESIGN SALUTARE                       |
+|   - Dopo fix, background deve essere #1C1C1E                   |
+|   - Accent indigo #7c7dff visibile                             |
+|   - Date groups sticky funzionanti                             |
 |                                                                |
-|   3. POLISH FINALE                                             |
-|      - Light mode support (prefers-color-scheme)               |
-|      - User preference storage                                 |
+|   PRIORITA 3: CONTINUARE EMAIL LIST                            |
+|   - Quick actions hover                                        |
+|   - VIP warm accent                                            |
 |                                                                |
 +================================================================+
 ```
 
 ---
 
-## PALETTE COLORI (Sessione 184 - NUOVA!)
+## PALETTE COLORI TARGET (quando fix funziona)
 
 ```
 Background (Apple foundation):
-  miracollo-bg: #1C1C1E           (era #0a0e1a)
+  miracollo-bg: #1C1C1E
   miracollo-bg-secondary: #2C2C2E
   miracollo-bg-tertiary: #3A3A3C
   miracollo-bg-hover: #3A3A3C
@@ -143,9 +168,9 @@ Text (Apple hierarchy):
   miracollo-text-muted: #9B9BA5
 
 Accent (Brand Miracollook):
-  miracollo-accent: #7c7dff       (era #6366f1)
-  miracollo-accent-light: #a5b4fc (logo)
-  miracollo-accent-warm: #d4985c  (VIP/starred)
+  miracollo-accent: #7c7dff
+  miracollo-accent-light: #a5b4fc
+  miracollo-accent-warm: #d4985c
 
 Semantic (Apple standard):
   miracollo-success: #30D158
@@ -159,17 +184,6 @@ Border:
 
 ---
 
-## FILE IMPORTANTI
-
-| File | Descrizione |
-|------|-------------|
-| PALETTE_DESIGN_SALUTARE_VALIDATA.md | Specs palette finale |
-| ROADMAP_DESIGN_SALUTARE.md | Piano implementazione |
-| RICERCA_DESIGN_SALUTARE.md | Studio Apple style |
-| RICERCA_RESIZE_PANNELLI.md | Studio resize panels |
-
----
-
 ## NOTE
 
 ```
@@ -177,11 +191,12 @@ Nome corretto: Miracollook (una parola, lowercase)
 Porta backend: 8002
 Porta frontend: 5173
 SNCP: CervellaSwarm/.sncp/progetti/miracollo/moduli/miracallook/
-Versione: 1.1.0 (Design Salutare!)
-Tailwind: v4.1.18 (usa @import "tailwindcss")
+Versione: 1.1.0-blocked (Tailwind v4 issue)
+Tailwind: v4.1.18 (PROBLEMA: config JS non genera classi!)
 ```
 
 ---
 
 *Aggiornato: 13 Gennaio 2026 - Sessione 184*
-*"Design che fa bene agli occhi = utenti felici!"*
+*"I dettagli fanno SEMPRE la differenza!"*
+*"Nulla e complesso - solo non ancora studiato!"*
