@@ -1,11 +1,70 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 189 PERFORMANCE P1 MIRACOLLOOK!
-> **Versione:** v125.0.0 - VELOCITA SUPERHUMAN!
+> **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 189 WEATHER FRONTEND MIRACOLLO!
+> **Versione:** v126.0.0 - METEO VISIBILE!
 
 ---
 
-## SESSIONE 189 - MIRACOLLOOK PERFORMANCE P1
+## SESSIONE 189 PARTE 2 - MIRACOLLO WEATHER FRONTEND
+
+```
++================================================================+
+|                                                                |
+|   SPRINT A COMPLETATO - WEATHER FRONTEND!                      |
+|                                                                |
+|   WeatherWidget in Revenue Intelligence:                       |
+|   - Sezione dedicata sopra overview-cards                      |
+|   - Temp attuale + neve 3gg + neve 7gg + impatto demand        |
+|   - Auto-refresh 30 min, dark mode, responsive                 |
+|                                                                |
+|   RATEBOARD: 9.2 → 9.3/10 (+0.1!)                             |
+|   TARGET: 9.5/10 (manca 0.2 = Eventi Locali)                  |
+|                                                                |
++================================================================+
+```
+
+### File Creati Miracollo (Sessione 189)
+
+| File | Tipo | Descrizione |
+|------|------|-------------|
+| `frontend/css/weather-widget.css` | CSS | ~180 righe, dark mode |
+| `frontend/js/weather-widget.js` | JS | ~250 righe, API calls |
+| `frontend/revenue.html` | HTML | Integrato widget |
+
+### Come Funziona
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│  🌨️ WEATHER FORECAST                           Cortina     │
+│  ┌────────┐  ┌────────┐  ┌────────┐  ┌───────────────────┐ │
+│  │ -2°C ☁️│  │ 15cm ❄️│  │ 28cm ❄️│  │   +25% demand    │ │
+│  │  Oggi  │  │  3gg   │  │  7gg   │  │    Impatto       │ │
+│  └────────┘  └────────┘  └────────┘  └───────────────────┘ │
+└─────────────────────────────────────────────────────────────┘
+
+API: /api/weather/status + /api/weather/metrics/{hotel_id}
+```
+
+### Stato Meteo Completo
+
+```
+METEO BACKEND:      ✓ 100% (weather_service.py - Sessione 188)
+METEO INTEGRATION:  ✓ 100% (suggerimenti_engine.py - Sessione 188)
+METEO FRONTEND:     ✓ 100% (weather-widget.js - Sessione 189)
+METEO DEPLOY:       TODO (serve .env WEATHER_API_KEY)
+```
+
+### Prossimi Step Miracollo
+
+```
+1. [ ] Deploy Weather su staging/produzione
+2. [ ] Sprint B: Eventi Locali (3 settimane, +0.2)
+3. [ ] Target 9.5/10 RATEBOARD
+```
+
+---
+
+## SESSIONE 189 PARTE 1 - MIRACOLLOOK PERFORMANCE P1
 
 ```
 +================================================================+
