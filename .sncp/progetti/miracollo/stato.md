@@ -1,5 +1,42 @@
 # Stato Miracollo
-> Ultimo aggiornamento: 13 Gennaio 2026 - Sessione 183 BUG FIX + DEPLOY
+> Ultimo aggiornamento: 13 Gennaio 2026 - Sessione 183 BUG FIX
+
+---
+
+## SESSIONE 183 - BUG FIX + DEBUG
+
+```
++================================================================+
+|                                                                |
+|   SESSIONE 183: FIX MULTIPLI + DEBUG AI PANEL                  |
+|                                                                |
+|   COMPLETATI:                                                  |
+|   [x] Fix A/B Testing API (get_db context manager)             |
+|   [x] Fix A/B Testing migration 033 (tabelle create)           |
+|   [x] Fix CSP onclick inline in revenue.html                   |
+|   [x] Fix room-types API call (aggiunto hotel_code)            |
+|   [x] Fix room-types array handling (API ritorna array)        |
+|   [x] SSH config sistemato (alias miracollo.com)               |
+|   [x] Rateboard griglia ora si vede!                           |
+|   [x] AI Suggestions panel si apre (con singola camera)        |
+|                                                                |
+|   BUG ANCORA APERTO:                                           |
+|   [ ] AI Panel non si espande con "Tutte le camere"            |
+|       - Debug logs aggiunti (rateboard-core.js)                |
+|       - CSS sembra invertito (log mostrano max-height 48px     |
+|         quando collapsed=false)                                |
+|       - Da investigare prossima sessione                       |
+|                                                                |
+|   COMMITS OGGI:                                                |
+|   - 9561f98: Fix AI Suggestions panel toggle                   |
+|   - fb5662f: Fix CSP compliance onclick                        |
+|   - 581e128: Fix A/B Testing API get_db                        |
+|   - a8a14ac: Fix room-types API hotel_code                     |
+|   - 7058895: Fix room-types array handling                     |
+|   - c090b04: Simplify AI panel CSS + debug logs                |
+|                                                                |
++================================================================+
+```
 
 ---
 
@@ -10,8 +47,9 @@
 | File legacy revenue.js | `frontend/revenue.js` (1296 righe) | BASSA | Duplicato, sistema usa moduli separati |
 | hotelId hardcoded | `revenue-suggestions.js`, `revenue.js` (4 occorrenze) | MEDIA | Funziona, ma no multi-hotel |
 | What-If Apply | `revenue-suggestions.js:558` | BASSA | Placeholder TODO |
+| AI Panel CSS invertito | `rateboard.css` | ALTA | Debug logs aggiunti, da fixare |
 
-*Aggiunto: 13 Gennaio 2026 - Sessione 183*
+*Aggiornato: 13 Gennaio 2026 - Sessione 183*
 
 ---
 
@@ -21,12 +59,13 @@
 INFRASTRUTTURA: PULITA (nginx + backend-14)
 AUTOPILOT: FUNZIONANTE IN PRODUZIONE!
 WHAT-IF: COMPLETO E FUNZIONANTE!
-RATEBOARD: 9.0/10 (FASE 1-2-3 INTEGRATE + DEPLOY!)
+RATEBOARD: 8.5/10 (bug AI panel con tutte le camere)
+A/B TESTING: FUNZIONANTE (migration + API fix)
+REVENUE: CSP FIXATO (onclick rimossi)
 WORKFLOW GIT: PROTETTO con hooks automatici
-AMBIENTE LOCALE: CONFIGURATO per test
-MIRACOLLOOK: P0 + P1 parziale
+SSH: CONFIGURATO (miracollo.com alias)
 
->>> SESSIONE 180: CONSOLIDAMENTO COMPLETATO + DEPLOY! <<<
+>>> SESSIONE 183: MOLTI FIX, UN BUG APERTO <<<
 ```
 
 ---

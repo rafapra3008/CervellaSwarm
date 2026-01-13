@@ -1,46 +1,47 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 183 MIRACOLLOOK
-> **Versione:** v112.0.0 - FIX TAILWIND V4 + AUDIT COLORI + RICERCHE!
+> **Ultimo aggiornamento:** 13 Gennaio 2026 - Sessione 183 MIRACOLLO BUG FIX
+> **Versione:** v113.0.0 - FIX MULTIPLI + DEBUG AI PANEL!
 
 ---
 
-## SESSIONE 183 - MIRACOLLOOK DESIGN UPGRADE!
+## SESSIONE 183 - MIRACOLLO BUG FIX!
 
 ```
 +================================================================+
 |                                                                |
-|   SESSIONE 183: FIX CRITICI + AUDIT COLORI + RICERCHE          |
+|   SESSIONE 183: FIX MULTIPLI + DEBUG AI PANEL                  |
 |                                                                |
-|   1. FIX TAILWIND V4 (BUG CRITICO RISOLTO!)                    |
-|      - Problema: @tailwind directives NON supportate in v4     |
-|      - Soluzione: @import "tailwindcss" in index.css           |
-|      - Icone sidebar ora funzionano! (w-5 h-5 OK)              |
-|      - Documentato: RICERCA_TAILWIND_V4_SIZING.md              |
+|   COMPLETATI:                                                  |
+|   [x] Fix A/B Testing API (get_db context manager) - 8 fix!    |
+|   [x] Fix A/B Testing migration 033 (tabelle create)           |
+|   [x] Fix CSP onclick inline in revenue.html (5 rimossi)       |
+|   [x] Fix room-types API call (aggiunto hotel_code)            |
+|   [x] Fix room-types array handling (API ritorna array)        |
+|   [x] SSH config sistemato (alias miracollo.com funziona!)     |
+|   [x] Rateboard griglia ORA SI VEDE!                           |
+|   [x] AI Suggestions panel si apre (con singola camera)        |
 |                                                                |
-|   2. FIX LOGO MIRACOLLOOK                                      |
-|      - Problema: gradient scuro invisibile su bg               |
-|      - Soluzione: gradient chiaro #a5b4fc -> #c4b5fd           |
-|      - Nome corretto: "Miracollook" (non MiracOllook)          |
+|   BUG ANCORA APERTO - PROSSIMA SESSIONE:                       |
+|   [ ] AI Panel non si espande con "Tutte le camere"            |
+|       - Debug logs AGGIUNTI in rateboard-core.js               |
+|       - Log mostrano: max-height 48px quando collapsed=false   |
+|       - CSS sembra applicato al contrario!                     |
+|       - File: frontend/css/rateboard.css                       |
+|       - File: frontend/js/rateboard/rateboard-core.js          |
 |                                                                |
-|   3. AUDIT COLORI + NUOVA PALETTE                              |
-|      - Guardiana Qualita: audit completo WCAG                  |
-|      - text-muted: #64748b -> #8b9cb5 (6.0:1 contrasto)        |
-|      - border: #2d3654 -> #475569 (piu visibile)               |
-|      - glassmorphism: border 0.08 -> 0.15                      |
-|      - Documentato: AUDIT_COLORI_MIRACOLLOOK.md                |
+|   COMMITS OGGI (Miracollo):                                    |
+|   - 9561f98: Fix AI Suggestions panel toggle                   |
+|   - fb5662f: Fix CSP compliance onclick                        |
+|   - 581e128: Fix A/B Testing API get_db (8 occorrenze)         |
+|   - a8a14ac: Fix room-types API hotel_code                     |
+|   - 7058895: Fix room-types array handling                     |
+|   - c090b04: Simplify AI panel CSS + debug logs                |
 |                                                                |
-|   4. RICERCA RESIZE PANNELLI                                   |
-|      - Libreria: react-resizable-panels (bvaughn)              |
-|      - 316k+ npm, TypeScript, ARIA, localStorage               |
-|      - Stima: 7-11 ore implementazione                         |
-|      - Documentato: RICERCA_RESIZE_PANNELLI.md                 |
-|                                                                |
-|   5. RICERCA DESIGN SALUTARE (Apple Style)                     |
-|      - Apple #1C1C1E riduce eye strain 30% vs nero puro        |
-|      - Miracollook #0a0e1a troppo scuro!                       |
-|      - Palette Apple proposta per prossima sessione            |
-|      - Documentato: RICERCA_DESIGN_SALUTARE.md                 |
+|   COSA ABBIAMO IMPARATO:                                       |
+|   - Rafa sa usare la Console del browser per debug!            |
+|   - SSH alias miracollo.com ora funziona                       |
+|   - Debug logs sono ESSENZIALI per capire i bug                |
 |                                                                |
 +================================================================+
 ```
@@ -175,17 +176,17 @@ Nome: Miracollook (una parola, lowercase)
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-13 08:55 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-13 09:36 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: bdd17ff - Checkpoint Sessione 183: SNCP + Ricerca Design Salutare
-- **File modificati** (5):
-  - eports/scientist_prompt_20260113.md
-  - .swarm/handoff/HANDOFF_20260113_060439.md
-  - reports/engineer_report_20260113_081452.json
-  - reports/engineer_report_20260113_082034.json
-  - reports/engineer_report_20260113_084131.json
+- **Ultimo commit**: b291535 - ANTI-COMPACT: PreCompact auto
+- **File modificati** (3):
+  - sncp/stato/oggi.md
+  - reports/scientist_prompt_20260113.md
+  - .swarm/handoff/HANDOFF_20260113_093609.md
 
 ### Note
 - Checkpoint automatico generato da hook
