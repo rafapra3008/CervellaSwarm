@@ -1,8 +1,49 @@
 # STATO PROGETTO MIRACOLLO
 
-> **Data:** 2026-01-14 16:00 - Sessione 202 CHECKPOINT
+> **Data:** 2026-01-14 17:00 - Sessione 203
 > **Score:** 9.5/10 STABILE
-> **Versione:** 1.7.0
+> **Versione:** 1.7.1
+
+---
+
+## SESSIONE 203 - FIX ML + WHATSAPP SECURITY
+
+```
++================================================================+
+|   SESSIONE 203 - 14 Gennaio 2026                                |
++================================================================+
+
+FATTO OGGI:
+
+1. WHATSAPP RATE LIMITING (v2.4.0)
+   - 100 req/min per IP (anti-DoS)
+   - 10 msg/min per phone (anti-spam)
+   - HTTP 429 quando superato
+   - Zero dipendenze esterne (in-memory)
+
+2. ML BUG FIX CRITICI
+   - Bug filename mismatch (model_hotel_X vs hotel_X_model)
+   - Bug pickle/joblib incompatibility
+   - Confidence scorer ora funziona!
+
+3. PRIMO MODELLO ML TRAINATO!
+   - 15,245 samples
+   - R2 Score: 0.383
+   - CV R2: 0.361 (+/- 0.061)
+   - Top features: weekend, day_of_week, tipo_prezzo
+
+4. CONFIDENCE MIGLIORATA
+   - PRIMA: 50.0% (tutto fallback)
+   - DOPO: 67.0% (2/3 componenti REALI!)
+
+FILES:
+- whatsapp.py v2.4.0 (rate limiting)
+- confidence_scorer.py (bug fix)
+- models/model_hotel_1.pkl (NUOVO!)
+- models/scaler_hotel_1.pkl (NUOVO!)
+
++================================================================+
+```
 
 ---
 

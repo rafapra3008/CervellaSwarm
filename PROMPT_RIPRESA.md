@@ -1,7 +1,71 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 202 CHECKPOINT
-> **Versione:** v2.7.0 - MIRACOLLO VERIFICA REALE + PRICING INFRA!
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 203 CHECKPOINT
+> **Versione:** v2.8.0 - MIRACOLLO ML TRAINING + WHATSAPP SECURITY!
+
+---
+
+## SESSIONE 203 MIRACOLLO - ML FIXES + WHATSAPP SECURITY!
+
+```
++================================================================+
+|                                                                |
+|   SESSIONE 203 MIRACOLLO - FIX + TRAINING ML!                  |
+|   14 Gennaio 2026                                              |
+|                                                                |
+|   1. WHATSAPP RATE LIMITING (v2.4.0)                           |
+|      - 100 req/min per IP (anti-DoS)                           |
+|      - 10 msg/min per phone (anti-spam)                        |
+|      - HTTP 429 quando superato                                |
+|      - Zero dipendenze esterne (in-memory)                     |
+|                                                                |
+|   2. ML BUG FIX CRITICI                                        |
+|      - Bug filename mismatch FIXATO                            |
+|        (model_hotel_X vs hotel_X_model)                        |
+|      - Bug pickle/joblib incompatibility FIXATO                |
+|      - Confidence scorer ora funziona!                         |
+|                                                                |
+|   3. PRIMO MODELLO ML TRAINATO!                                |
+|      - 15,245 samples                                          |
+|      - R2 Score: 0.383                                         |
+|      - CV R2: 0.361 (+/- 0.061)                                |
+|      - Top features: weekend, day_of_week, tipo_prezzo         |
+|                                                                |
+|   4. CONFIDENCE MIGLIORATA                                     |
+|      - PRIMA: 50.0% (tutto fallback)                           |
+|      - DOPO: 67.0% (2/3 componenti REALI!)                     |
+|                                                                |
++================================================================+
+```
+
+### Files Modificati Sessione 203
+
+```
+miracollogeminifocus/backend/
+├── routers/whatsapp.py (v2.4.0 - rate limiting)
+├── ml/confidence_scorer.py (bug fix filename + joblib)
+└── ml/models/
+    ├── model_hotel_1.pkl (NUOVO - trained model!)
+    ├── scaler_hotel_1.pkl (NUOVO - feature scaler)
+    └── metadata_hotel_1.json (NUOVO - training metadata)
+
+CervellaSwarm/.sncp/progetti/miracollo/
+├── stato.md (AGGIORNATO)
+└── reports/BACKEND_20260114_ml_fixes_session203.md (NUOVO)
+```
+
+### Prossimi Step Miracollo
+
+```
+TODO:
+[ ] Refactoring variance pipeline (enhancement ML)
+[ ] Test suite WhatsApp
+
+QUANDO RAFA DECIDE:
+[ ] Deploy migration 040 in produzione
+[ ] Attivare limiti pricing
+[ ] Setup UptimeRobot (guida pronta)
+```
 
 ---
 
@@ -252,13 +316,21 @@ echo "y" | ./scripts/sncp/compact-state.sh FILE  # Compattazione
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-14 15:14 (unknown)
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 15:40 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 6ea6553 - Sessione 203: Reset Filosofico - Su Carta != Reale
-- **File modificati** (1):
-  - reports/engineer_report_20260114_151358.json
+- **Ultimo commit**: de73581 - Sessione 202: SNCP Miracollo + Checkpoint
+- **File modificati** (5):
+  - sncp/stato/oggi.md
+  - PROMPT_RIPRESA.md
+  - .sncp/progetti/miracollo/reports/FRONTEND_20260114_landing_fase5_mobile_polish.md
+  - reports/engineer_report_20260114_153833.json
+  - reports/engineer_report_20260114_153848.json
 
 ### Note
 - Checkpoint automatico generato da hook

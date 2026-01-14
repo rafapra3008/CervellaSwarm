@@ -1,8 +1,48 @@
 # STATO OGGI
 
 > **Data:** 14 Gennaio 2026 (Martedi)
-> **Sessione:** 202 - P1 COMPLETATI
-> **Ultimo aggiornamento:** Sessione 202
+> **Sessione:** 203 - MIRACOLLO ML + SECURITY
+> **Ultimo aggiornamento:** Sessione 203
+
+---
+
+## Sessione 203 - MIRACOLLO ML TRAINING + WHATSAPP SECURITY
+
+```
++================================================================+
+|                                                                |
+|   SESSIONE 203 MIRACOLLO: FIX + ML TRAINING!                   |
+|                                                                |
+|   1. WHATSAPP RATE LIMITING (v2.4.0)                           |
+|      [x] 100 req/min per IP (anti-DoS)                         |
+|      [x] 10 msg/min per phone (anti-spam)                      |
+|      [x] HTTP 429 quando superato                              |
+|      [x] Zero dipendenze esterne (in-memory)                   |
+|                                                                |
+|   2. ML BUG FIX CRITICI                                        |
+|      [x] Bug filename mismatch FIXATO                          |
+|      [x] Bug pickle/joblib incompatibility FIXATO              |
+|      [x] Confidence scorer ora funziona!                       |
+|                                                                |
+|   3. PRIMO MODELLO ML TRAINATO!                                |
+|      - 15,245 samples                                          |
+|      - R2 Score: 0.383                                         |
+|      - CV R2: 0.361 (+/- 0.061)                                |
+|      - Top features: weekend, day_of_week, tipo_prezzo         |
+|                                                                |
+|   4. CONFIDENCE MIGLIORATA                                     |
+|      - PRIMA: 50.0% (tutto fallback)                           |
+|      - DOPO: 67.0% (2/3 componenti REALI!)                     |
+|                                                                |
+|   FILES MODIFICATI:                                            |
+|   - whatsapp.py v2.4.0 (rate limiting)                         |
+|   - confidence_scorer.py (bug fix)                             |
+|   - models/model_hotel_1.pkl (NUOVO!)                          |
+|   - models/scaler_hotel_1.pkl (NUOVO!)                         |
+|   - models/metadata_hotel_1.json (NUOVO!)                      |
+|                                                                |
++================================================================+
+```
 
 ---
 
@@ -247,6 +287,22 @@ miracollo-cervella:  RUNNING - IP: 34.27.179.164
 ---
 
 ## AUTO-CHECKPOINT: 2026-01-14 14:43 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v2.0.0
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 15:40 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v2.0.0
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 15:40 (session_end)
 
 - **Progetto**: CervellaSwarm
 - **Evento**: session_end
