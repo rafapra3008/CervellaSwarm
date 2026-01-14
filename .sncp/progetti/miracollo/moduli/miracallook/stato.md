@@ -1,7 +1,7 @@
 # STATO - Miracollook
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 194
-> **Status:** v2.3.0 - QUALITY 9.5/10! + DRAFTS + BULK ACTIONS!
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 195
+> **Status:** v2.4.0 - THREAD VIEW IMPLEMENTATO!
 
 ---
 
@@ -27,9 +27,75 @@
 FASE 0 (Fondamenta)     [####################] 100% COMPLETA!
 FASE PERFORMANCE P1     [####################] 100% MERGED!
 FASE PERFORMANCE P2     [####################] 100% MERGED!
-FASE 1 (Email Solido)   [###############.....] 75% <<< PROSSIMO!
+FASE 1 (Email Solido)   [##################..] 85% <<< PROGRESSO!
 FASE 2 (PMS Integration)[....................] 0%
 ```
+
+---
+
+## SESSIONE 195 - THREAD VIEW IMPLEMENTATO!
+
+```
++================================================================+
+|                                                                |
+|   THREAD VIEW - "Conversazioni raggruppate come Gmail!"        |
+|                                                                |
+|   BACKEND (threads.py - 200 righe):                            |
+|   - GET /gmail/threads - Lista thread (threads.list API)       |
+|   - GET /gmail/threads/{id} - Espandi thread (threads.get)     |
+|   - Supporta format: minimal, metadata, full                   |
+|   - Messaggi ordinati cronologicamente (internalDate)          |
+|                                                                |
+|   FRONTEND HOOKS:                                              |
+|   - types/thread.ts - Thread, ThreadMessage types              |
+|   - useThreads.ts - useThreads(), useThread(), useThreadExpansion |
+|   - api.ts - getThreads(), getThread() methods                 |
+|                                                                |
+|   FRONTEND COMPONENTS (ThreadList/):                           |
+|   - ThreadList.tsx - Container principale                      |
+|   - ThreadListItem.tsx - Row collapsed (72px, counter, chevron)|
+|   - ThreadExpandedView.tsx - Vista espansa con header          |
+|   - ThreadMessage.tsx - Singolo messaggio (collapsed/expanded) |
+|                                                                |
+|   KEYBOARD SHORTCUTS:                                          |
+|   - ; -> Expand all messages in thread                         |
+|   - : (Shift+;) -> Collapse all messages                       |
+|   - o -> Toggle thread expand/collapse                         |
+|                                                                |
+|   DESIGN SPECS:                                                |
+|   - Message counter "(N)" badge                                |
+|   - Chevron icon con rotation animation                        |
+|   - Unread dot indicator                                       |
+|   - Dark mode, cyan accent #6366f1                             |
+|                                                                |
+|   SPRINT 2 ALTI: 60% (Bulk OK, Thread OK, Labels pending)      |
+|                                                                |
++================================================================+
+```
+
+### File Creati/Modificati Sessione 195
+
+| File | Tipo | Righe | Descrizione |
+|------|------|-------|-------------|
+| `backend/gmail/threads.py` | NUOVO | 200 | Endpoint threads.list + threads.get |
+| `backend/gmail/api.py` | MOD | +1 | Include threads router |
+| `frontend/src/types/thread.ts` | NUOVO | 40 | TypeScript types |
+| `frontend/src/hooks/useThreads.ts` | NUOVO | 100 | React hooks |
+| `frontend/src/services/api.ts` | MOD | +20 | API methods |
+| `frontend/src/hooks/useKeyboardShortcuts.ts` | MOD | +20 | Thread shortcuts |
+| `frontend/src/components/ThreadList/ThreadList.tsx` | NUOVO | 130 | Container |
+| `frontend/src/components/ThreadList/ThreadListItem.tsx` | NUOVO | 140 | Row collapsed |
+| `frontend/src/components/ThreadList/ThreadExpandedView.tsx` | NUOVO | 80 | Vista espansa |
+| `frontend/src/components/ThreadList/ThreadMessage.tsx` | NUOVO | 120 | Singolo msg |
+
+### Ricerche Sessione 195
+
+| File | Descrizione |
+|------|-------------|
+| `ricerche/20260114_THREAD_VIEW_API_Research.md` | Gmail API threads (986 righe!) |
+| `ricerche/THREAD_VIEW_UX_Research.md` | UX competitors (819 righe!) |
+| `decisioni/THREAD_VIEW_DESIGN_SPECS.md` | Design specs complete |
+| `roadmaps/THREAD_VIEW_IMPLEMENTATION.md` | Sub-roadmap implementazione |
 
 ---
 

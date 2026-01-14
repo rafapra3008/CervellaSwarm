@@ -1,7 +1,82 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 194
-> **Versione:** v133.0.0 - MIRACOLLOOK v2.3.0 + DRAFTS + BULK ACTIONS!
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 195
+> **Versione:** v134.0.0 - MIRACOLLOOK v2.4.0 + THREAD VIEW!
+
+---
+
+## SESSIONE 195 - THREAD VIEW IMPLEMENTATO!
+
+```
++================================================================+
+|                                                                |
+|   MIRACOLLOOK v2.4.0 - "Conversazioni come Gmail!"             |
+|                                                                |
+|   THREAD VIEW COMPLETO:                                        |
+|                                                                |
+|   BACKEND (threads.py - 200 righe):                            |
+|   - GET /gmail/threads - Lista thread raggruppati              |
+|   - GET /gmail/threads/{id} - Espandi thread (tutti i msg)     |
+|   - Format: minimal, metadata, full                            |
+|   - Messaggi ordinati cronologicamente                         |
+|                                                                |
+|   FRONTEND HOOKS:                                              |
+|   - types/thread.ts - Thread, ThreadMessage types              |
+|   - useThreads.ts - useThreads, useThread, useThreadExpansion  |
+|   - api.ts - getThreads(), getThread()                         |
+|                                                                |
+|   UI COMPONENTS (ThreadList/):                                 |
+|   - ThreadList.tsx - Container principale                      |
+|   - ThreadListItem.tsx - Row 72px con counter e chevron        |
+|   - ThreadExpandedView.tsx - Header + Expand/Collapse All      |
+|   - ThreadMessage.tsx - Singolo messaggio collapsable          |
+|                                                                |
+|   KEYBOARD SHORTCUTS:                                          |
+|   - ; -> Expand all messages                                   |
+|   - : -> Collapse all messages                                 |
+|   - o -> Toggle thread                                         |
+|                                                                |
+|   RICERCHE (1800+ righe!):                                     |
+|   - Gmail API threads research                                 |
+|   - UX competitors (Gmail, Superhuman, Outlook, Apple Mail)    |
+|   - Design specs complete                                      |
+|                                                                |
+|   STATO SPRINT:                                                |
+|   [x] Sprint 1 CRITICI: 100%                                   |
+|   [x] Sprint 2: 60% (Bulk + Thread OK, Labels pending)         |
+|                                                                |
++================================================================+
+```
+
+### File Creati/Modificati Sessione 195
+
+| File | Tipo | Descrizione |
+|------|------|-------------|
+| `backend/gmail/threads.py` | NUOVO | 2 endpoint threads |
+| `backend/gmail/api.py` | MOD | Include threads router |
+| `frontend/src/types/thread.ts` | NUOVO | TypeScript types |
+| `frontend/src/hooks/useThreads.ts` | NUOVO | React hooks |
+| `frontend/src/services/api.ts` | MOD | API methods |
+| `frontend/src/hooks/useKeyboardShortcuts.ts` | MOD | Thread shortcuts |
+| `frontend/src/components/ThreadList/*` | NUOVO | 5 componenti UI |
+
+### Prossimi Step Miracollook
+
+```
+SPRINT 2 (rimanente ~3h):
+[x] Thread View (4h) - FATTO!
+[ ] Labels Custom (3h) <<< PROSSIMO
+
+SPRINT 3 (~14h):
+[ ] Upload Attachments (4h)
+[ ] Contacts Autocomplete (6h)
+[ ] Templates risposte (4h)
+
+SPRINT 4 (~12h):
+[ ] Settings page (8h)
+[ ] Firma email (2h)
+[ ] Light mode (2h)
+```
 
 ---
 
