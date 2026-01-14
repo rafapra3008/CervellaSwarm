@@ -1,7 +1,51 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 207 SNCP TOOLS
-> **Versione:** v2.15.0 - SNCP INIT + VERIFY-SYNC
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 208 ROOM MANAGER FASE 1
+> **Versione:** v2.16.0 - ROOM MANAGER BACKEND FUNZIONANTE
+
+---
+
+## SESSIONE 208 - ROOM MANAGER FASE 1 COMPLETATA! (14 Gennaio 2026 sera)
+
+```
++================================================================+
+|   MIRACOLLO - ROOM MANAGER BACKEND FUNZIONANTE!                |
+|   14 Gennaio 2026 (sera)                                       |
++================================================================+
+
+FASE 1 COMPLETATA:
+------------------
+✅ Analisi backend (2 router paralleli mappati)
+✅ Fix 10 placeholder hotel_id -> lookup reale
+✅ Fix import path services.py
+✅ Guardiana Qualita: 9/10 APPROVATO
+✅ Migration 036 applicata (4 tabelle nuove)
+✅ Dati test creati (hotel ALLE, 5 camere)
+✅ Test API: 5/5 PASSED!
+
+COSA ABBIAMO ORA:
+- Backend Room Manager FUNZIONANTE
+- DB con schema completo
+- API testate: rooms, floor-plan, housekeeping, mark-dirty
+- Helper get_hotel_id_from_code() per lookup
+
+TABELLE NUOVE (Migration 036):
+- rooms.status (colonna aggiunta)
+- housekeeping_tasks
+- maintenance_requests
+- room_status_history (audit trail)
+
+GIT:
+- Commit: 9f1c9e8 (feature/room-manager)
+- Worktree: ~/Developer/miracollo-worktrees/room-manager/
+
+PROSSIMO:
+[ ] FASE 2: Services Layer (completare RoomService, HousekeepingService)
+[ ] FASE 3: Trigger automatici
+[ ] FASE 4: Frontend room-manager.html
+
++================================================================+
+```
 
 ---
 
