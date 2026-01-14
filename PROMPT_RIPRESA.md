@@ -1,11 +1,90 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 207 MENTE LOCALE FINALE
-> **Versione:** v2.13.0 - DECISIONI STRATEGICHE + ROADMAP CERVELLASWARM
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 207 ROOM MANAGER PLANNING
+> **Versione:** v2.14.0 - ROOM MANAGER PIANO COMPLETO
 
 ---
 
-## SESSIONE 207 - MENTE LOCALE FINALE (14 Gennaio 2026 sera)
+## SESSIONE 207 - ROOM MANAGER + CLEANUP (14 Gennaio 2026 sera)
+
+```
++================================================================+
+|   SESSIONE 207 - FOCUS MIRACOLLO                               |
+|   14 Gennaio 2026 (sera)                                       |
++================================================================+
+
+PARTE 1: SUBSCRIPTION DEPLOY (Parcheggiato)
+-------------------------------------------
+✅ Migration 040 deployata in produzione
+✅ 4 tabelle + 3 tier (FREE, PRO €29, ENT €79)
+⏸️ PARCHEGGIATO - limiti log-only
+
+PARTE 2: COMPETITOR SCRAPING (Parcheggiato)
+-------------------------------------------
+✅ Scoperto: schema + script GIA' ESISTEVANO!
+✅ Fix Playwright default v1.1.0
+✅ 6 competitor Alleghe seedati
+❌ Parser Booking obsoleto
+⏸️ PARCHEGGIATO
+
+PARTE 3: IDEA MEMORIA SWARM
+---------------------------
+Problema: docs vs codice non sincronizzati
+Potenziale feature CervellaSwarm!
+File: cervellaswarm/idee/20260114_PROBLEMA_MEMORIA_SWARM.md
+
+PARTE 4: ROOM MANAGER PLANNING COMPLETO!
+----------------------------------------
+✅ Guardiana Qualita: 8/10 APPROVATO
+✅ Ingegnera: architettura 6 fasi
+✅ Researcher: ricerca VDA + hardware
+✅ PIANO AZIONE REALE creato!
+✅ DECISIONI RAFA CONFERMATE!
+
+DECISIONI CONFERMATE:
+- Opzione B: due campi (status + housekeeping_status)
+- Frontend separati (planning + room-manager)
+
+PIANO 6 FASI (14-18 ore totali):
+  FASE 0: Decisioni ✅ FATTO
+  FASE 1: Consolidamento Backend (4-5h)
+  FASE 2: Services Layer (2-3h)
+  FASE 3: Trigger Automatici (2-3h)
+  FASE 4: Frontend Room-Manager (3-4h)
+  FASE 5: Test & Deploy (2-3h)
+  FASE 6: VDA Hardware (futuro - VANTAGGIO COMPETITIVO!)
+
+FILE CHIAVE ROOM MANAGER:
+- PIANO: room_manager/PIANO_AZIONE_ROOM_MANAGER.md
+- ARCHITETTURA: room_manager/reports/20260114_INGEGNERA_ARCHITETTURA.md
+- QUALITA: room_manager/reports/20260114_GUARDIANA_QUALITA_VERIFICA.md
+- VDA: room_manager/studi/20260114_RICERCA_VDA_HARDWARE.md
+
+GIT:
+- Miracollo: 6d35243 (Playwright fix) PUSHED!
+
++================================================================+
+```
+
+### Stato Room Manager
+
+```
+COSA ESISTE GIA':
+[x] Branch feature/room-manager
+[x] Worktree ~/Developer/miracollo-worktrees/room-manager/
+[x] Backend MVP (858 righe)
+[x] Frontend MVP (dashboard)
+[x] Migration 036 (3 tabelle nuove)
+[x] Ricerca Big Players (1606 righe!)
+
+PROSSIMA SESSIONE:
+[ ] FASE 1: Consolidamento Backend
+[ ] Fix hotel_id placeholder (11 occorrenze)
+```
+
+---
+
+## SESSIONE 207 PRECEDENTE - MENTE LOCALE FINALE (14 Gennaio 2026)
 
 ```
 +====================================================================+

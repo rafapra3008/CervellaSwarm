@@ -1,16 +1,16 @@
 # STATO PROGETTO MIRACOLLO
 
-> **Data:** 2026-01-14 19:15 - Sessione 207
+> **Data:** 2026-01-14 20:30 - Sessione 207 FINALE
 > **Score:** 9.5/10 STABILE
 > **Versione:** 1.8.2
 
 ---
 
-## SESSIONE 207 - SUBSCRIPTION + COMPETITOR (14 Gennaio 2026 sera)
+## SESSIONE 207 COMPLETA - 14 Gennaio 2026 sera
 
 ```
 +================================================================+
-|   SESSIONE 207 - 14 Gennaio 2026 sera                          |
+|   SESSIONE 207 COMPLETA - 14 Gennaio 2026 sera                 |
 +================================================================+
 
 PARTE 1: SUBSCRIPTION DEPLOY (PARCHEGGIATO)
@@ -20,29 +20,44 @@ PARTE 1: SUBSCRIPTION DEPLOY (PARCHEGGIATO)
 ✅ Naturae Lodge: FREE tier (trial 30gg)
 ⏸️ PARCHEGGIATO - limiti log-only
 
-PARTE 2: COMPETITOR SCRAPING
+PARTE 2: COMPETITOR SCRAPING (PARCHEGGIATO)
 -------------------------------------------
-✅ DB schema: GIA' ESISTEVA (migration 009, Dicembre!)
-✅ Script scheduler: GIA' ESISTEVA (daily_competitor_scrape.py)
-✅ Fix Playwright default (no API key required) - v1.1.0
-✅ Deploy + Playwright installato in prod
-✅ 6 competitor Alleghe seedati con URL REALI
-✅ Scraping funziona (scarica 2.1MB HTML)
-❌ Parser Booking.com: selettori obsoleti (0 prezzi estratti)
-⏸️ PARCHEGGIATO - parser da rivedere in futuro
+✅ DB schema: GIA' ESISTEVA (migration 009)
+✅ Script: GIA' ESISTEVA (daily_competitor_scrape.py)
+✅ Fix Playwright default v1.1.0
+✅ 6 competitor Alleghe seedati
+❌ Parser Booking.com: selettori obsoleti
+⏸️ PARCHEGGIATO
 
-DECISIONE RAFA:
-"Basta prendere ogni tanto i prezzi... abbiamo deciso di fare
-ben leggero questa cosa. Non cambia la vita sapere i prezzi
-dei competitor se abbiamo una buona base nostra."
+PARTE 3: IDEA MEMORIA SWARM
+---------------------------
+Documentato problema docs vs codice.
+File: cervellaswarm/idee/20260114_PROBLEMA_MEMORIA_SWARM.md
+Potenziale feature CervellaSwarm!
 
-PARTE 3: IDEA IMPORTANTE - MEMORIA SWARM
-----------------------------------------
-Scoperto problema documentazione vs codice.
-Documentato: .sncp/progetti/cervellaswarm/idee/20260114_PROBLEMA_MEMORIA_SWARM.md
-Potenziale vantaggio competitivo per CervellaSwarm!
+PARTE 4: ROOM MANAGER - PIANIFICAZIONE COMPLETA!
+------------------------------------------------
+✅ Guardiana Qualita: verifica 8/10 APPROVATO
+✅ Ingegnera: architettura + piano 6 fasi
+✅ Researcher: ricerca VDA + hardware
+✅ PIANO AZIONE REALE creato!
+✅ DECISIONI RAFA CONFERMATE:
+   - Opzione B: due campi (status + housekeeping_status)
+   - Frontend separati (planning + room-manager)
 
-GIT: 6d35243 (fix Playwright default) - PUSHED!
+PIANO ROOM MANAGER:
+  FASE 0: Decisioni ✅ FATTO
+  FASE 1: Consolidamento Backend (4-5h)
+  FASE 2: Services Layer (2-3h)
+  FASE 3: Trigger Automatici (2-3h)
+  FASE 4: Frontend Room-Manager (3-4h)
+  FASE 5: Test & Deploy (2-3h)
+  FASE 6: VDA Hardware (futuro)
+  TOTALE: 14-18 ore
+
+GIT SESSIONE 207:
+- Miracollo: 6d35243 (Playwright fix) - PUSHED!
+- CervellaSwarm: da committare
 
 +================================================================+
 ```
