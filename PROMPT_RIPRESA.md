@@ -1,7 +1,7 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 192 EVENTI LOCALI!
-> **Versione:** v130.0.0 - SPRINT B EVENTI LOCALI COMPLETATO!
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 192 (Parallela)
+> **Versione:** v131.0.0 - AUDIT COMPLETO CERVELLASWARM + EVENTI LOCALI!
 
 ---
 
@@ -75,6 +75,63 @@ POST   /api/events/seed          Seed dati iniziali
 [ ] Test staging
 [ ] Deploy produzione
 [ ] Integrare UI in Revenue Intelligence
+```
+
+---
+
+## SESSIONE 192 (Parallela) - CERVELLASWARM AUDIT COMPLETO!
+
+```
++================================================================+
+|                                                                |
+|   AUDIT COMPLETO CERVELLASWARM - "Se documentiamo = facciamo!" |
+|                                                                |
+|   SCORE ATTUALE:                                               |
+|   - SNCP (Memoria):     7.0/10  --> target 9.5                 |
+|   - Sistema Log:        6.0/10  --> target 9.5                 |
+|   - Agenti (Cervelle):  7.8/10  --> target 9.5                 |
+|   - Infrastruttura:     8.0/10  --> target 9.5                 |
+|   - MEDIA:              7.2/10                                 |
+|                                                                |
+|   SCOPERTA IMPORTANTE:                                         |
+|   I big player (CrewAI, LangChain, Microsoft) usano i          |
+|   NOSTRI stessi pattern! Abbiamo la struttura giusta.          |
+|   Manca: Automazione + Compaction + Chiarezza ruoli            |
+|                                                                |
+|   DELIVERABLES (3500+ righe documentazione):                   |
+|   - MAPPA_9.5_MASTER.md (la bussola!)                          |
+|   - STUDIO_SNCP_9.5.md                                         |
+|   - STUDIO_LOGGING_9.5_*.md (4 file)                           |
+|   - STUDIO_AGENTI_9.5_*.md (4 file)                            |
+|   - AUDIT_INFRA_20260114.md                                    |
+|                                                                |
+|   EFFORT: 80-100h su 2-3 mesi per 9.5 su tutto                 |
+|                                                                |
++================================================================+
+```
+
+### Problemi Critici Identificati
+
+| Area | Problema | Fix |
+|------|----------|-----|
+| SNCP | oggi.md = 950 righe! | Compaction automatica |
+| Log | NO trace_id | Distributed tracing |
+| Agenti | Researcher vs Scienziata | Chiarire ruoli |
+| Infra | Cron non installato | Setup weekly_retro |
+
+### Quick Wins Pronti
+
+```
+[ ] Pulire oggi.md (950-->300 righe)
+[ ] Merge miracallook/miracollook (typo cartella)
+[ ] RUOLI_CHEAT_SHEET.md
+[ ] Setup cron weekly_retro
+```
+
+### Path MAPPA
+
+```
+.sncp/progetti/cervellaswarm/MAPPA_9.5_MASTER.md
 ```
 
 ---
@@ -919,17 +976,19 @@ Border: #38383A
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-13 21:08 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 05:53 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 74146ad - Sessione 191: MIRACOLLOOK Documentazione Riorganizzata!
+- **Ultimo commit**: 525ae35 - Sessione 192: Checkpoint - Eventi Locali SNCP
 - **File modificati** (5):
-  - sncp/stato/oggi.md
-  - PROMPT_RIPRESA.md
+  - sncp/progetti/miracollo/moduli/miracallook/MAPPA_FUNZIONI.md
+  - .sncp/stato/oggi.md
   - reports/scientist_prompt_20260113.md
-  - reports/engineer_report_20260113_195929.json
-  - reports/engineer_report_20260113_201149.json
+  - .sncp/progetti/miracollo/moduli/miracollook/ricerche/20260114_ANALISI_Performance.md
+  - .sncp/progetti/miracollo/moduli/miracollook/ricerche/20260114_RICERCA_MarkRead.md
 
 ### Note
 - Checkpoint automatico generato da hook
