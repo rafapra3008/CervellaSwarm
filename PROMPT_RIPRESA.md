@@ -1,7 +1,95 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 195
-> **Versione:** v135.0.0 - MIRACOLLOOK v2.5.0 + SPRINT 2 COMPLETO!
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 196
+> **Versione:** v136.0.0 - MENUMASTER PROTOTIPO MVP FUNZIONANTE!
+
+---
+
+## SESSIONE 196 - MENUMASTER NUOVO PROGETTO!
+
+```
++================================================================+
+|                                                                |
+|   MENUMASTER - Progetto Nuovo da Zero!                         |
+|                                                                |
+|   "Menu digitale professionale in 5 minuti"                    |
+|   "Il Canva dei menu digitali"                                 |
+|                                                                |
+|   COSA ABBIAMO FATTO:                                          |
+|                                                                |
+|   RICERCA (2800+ righe):                                       |
+|   - Competitor Analysis (Leggimenu, Plateform, Toast, Menubly) |
+|   - Architettura Studio (FastAPI + PostgreSQL + React)         |
+|   - UX Research (mobile-first, best practices)                 |
+|   - Guardiana Ricerca: 8.3/10 APPROVED                         |
+|                                                                |
+|   BACKEND MVP:                                                 |
+|   - FastAPI + PostgreSQL 15 + SQLAlchemy 2.0                   |
+|   - Auth JWT (register/login/me) FUNZIONANTE                   |
+|   - CRUD Categories con tenant isolation                       |
+|   - CRUD Dishes con tenant isolation                           |
+|   - QR Code endpoints (implementati)                           |
+|   - 3 Alembic migrations                                       |
+|                                                                |
+|   FRONTEND:                                                    |
+|   - Vite + React 18 + TypeScript + Tailwind                    |
+|   - 5 pagine (Login, Register, Dashboard, MenuEditor, Public)  |
+|   - Build OK (296KB JS, 17KB CSS)                              |
+|                                                                |
+|   DOCKER:                                                      |
+|   - docker-compose.yml (dev)                                   |
+|   - docker-compose.prod.yml (prod)                             |
+|   - Makefile con 20+ comandi                                   |
+|                                                                |
+|   BUG FIXATI:                                                  |
+|   - Enum case mismatch (FREE vs free)                          |
+|   - bcrypt/passlib conflict (pin 4.0.1)                        |
+|   - Tabelle mancanti (nuova migration)                         |
+|   - Tenant isolation nelle API                                 |
+|                                                                |
++================================================================+
+```
+
+### Path Progetto MenuMaster
+
+```
+/Users/rafapra/Developer/MenuMaster/
+├── backend/           # FastAPI app
+├── frontend/          # React app
+├── research/          # Competitor, UX analysis
+├── docs/              # Architettura, roadmap
+└── docker-compose.yml
+```
+
+### Come Avviare MenuMaster
+
+```bash
+cd /Users/rafapra/Developer/MenuMaster
+make dev   # oppure docker-compose up -d
+# API: http://localhost:8000/docs
+# Frontend: cd frontend && npm run dev -> http://localhost:5173
+```
+
+### Prossimi Step MenuMaster
+
+```
+SPRINT 2:
+[ ] Frontend collegato a API reali
+[ ] QR Code generation completo
+[ ] Public menu view
+[ ] Image upload (Cloudflare R2)
+```
+
+### SNCP MenuMaster
+
+```
+.sncp/progetti/menumaster/
+├── stato.md           # Stato corrente (LEGGERE!)
+├── idee/
+├── decisioni/
+├── reports/
+└── roadmaps/
+```
 
 ---
 
@@ -1189,14 +1277,21 @@ Border: #38383A
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-14 08:53 (unknown)
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 09:54 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: d77f1eb - Sessione 194: SNCP Update Miracollook v2.3.0
-- **File modificati** (2):
+- **Ultimo commit**: 7fd32c3 - Sessione 195: SPRINT 2 COMPLETO! Thread View + Labels Custom
+- **File modificati** (5):
   - sncp/stato/oggi.md
-  - reports/engineer_report_20260114_084534.json
+  - PROMPT_RIPRESA.md
+  - .sncp/progetti/miracollo/handoff/
+  - reports/engineer_report_20260114_094746.json
+  - reports/engineer_report_20260114_095021.json
 
 ### Note
 - Checkpoint automatico generato da hook
