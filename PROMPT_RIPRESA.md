@@ -1,7 +1,144 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 211 STUDIO VDA PARTE 2
-> **Versione:** v2.19.0 - STUDIO VDA ETHEOS AVANZATO!
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 211 CervellaSwarm
+> **Versione:** v2.21.0 - SNCP 9.4/10 + STUDIO COMUNICAZIONE INTERNA!
+
+---
+
+## SESSIONE 211 - CERVELLASWARM: MONUMENTALE! (14 Gennaio 2026 sera)
+
+```
++================================================================+
+|   CERVELLASWARM - SESSIONE MONUMENTALE!                        |
+|   14 Gennaio 2026 (sera)                                        |
++================================================================+
+
+4 PARTI IN UNA SESSIONE!
+------------------------
+
+PARTE 1 - SEMPLIFICAZIONE SNCP v4.0:
+- Struttura: 14 → 10 cartelle
+- Archiviato: coscienza/, perne/
+- README SNCP aggiornato
+- Commit: 119e5d1
+
+PARTE 2 - AUDIT + FIX CRITICO:
+- Ingegnera: Audit completo sistema
+- TROVATO: symlink "su carta" NON esistevano!
+- Guardiana: CONFERMATO problema
+- FIX: Creati symlink sncp-init + verify-sync
+- TESTATI e FUNZIONANO!
+- Score: 8.2 → 9.2 (+1.0 punto!)
+- Commit: 730e308
+
+PARTE 3 - TEST AUTOMATICI + LAUNCHD:
+- Launchd daily: VERIFICATO funziona!
+- Test suite creata: 3 test, 17 check
+- TUTTI I TEST PASSANO!
+- Score: 9.2 → 9.4 (+0.2 punti)
+- Commit: 1353bd6
+
+PARTE 4 - STUDIO COMUNICAZIONE INTERNA:
+- Researcher: Studio approfondito 600+ righe
+- Pattern: Orchestrator-Worker + Hierarchical + Blackboard
+- Gap trovati: Worker non READ SNCP, no event system
+- Quick wins: READ-FIRST protocol, Watcher auto-start
+- Guardiana: APPROVA 9/10
+- VANTAGGIO COMPETITIVO: spawn-workers = finestre SEPARATE!
+
+SCORE FINALE: 9.4/10 (era 8.2!)
+GAP AL TARGET: 0.1 punti!
+
+REPORT CREATI:
+- 20260114_AUDIT_SISTEMA_COMPLETO.md
+- 20260114_STUDIO_COMUNICAZIONE_INTERNA.md
+- SUB_ROADMAP_GAP_0.3_AL_TARGET.md
+- tests/sncp/*.sh (4 file test)
+
+PROSSIMI STEP (Comunicazione Interna):
+--------------------------------------
+SETTIMANA 1:
+[ ] REC-2: Worker prompt "READ SNCP FIRST"
+[ ] REC-3: Watcher auto-start DEFAULT
+
+SETTIMANA 2:
+[ ] REC-1: Hook verifica output SNCP
+
+"SU CARTA != REALE" - La Costituzione aveva ragione!
+"Spawn-workers con finestre SEPARATE = VANTAGGIO COMPETITIVO!"
+
++================================================================+
+```
+
+---
+
+## SESSIONE 212 - STUDIO ROOM MANAGER COMPLETATO! (14 Gennaio 2026 sera)
+
+```
++================================================================+
+|   MIRACOLLO - STUDIO ROOM MANAGER COMPLETATO!                   |
+|   14 Gennaio 2026 (sera) - Sessione 212                         |
++================================================================+
+
+LAVORO EPICO COMPLETATO!
+------------------------
+
+1. VDA ETHEOS - PARTE 3 FINALE
+   - Screenshot 22-26 analizzati (ultimi 5!)
+   - Activity Log: 462K eventi access control + 10K eventi keys
+   - Zone speciali: Accesso Principale, Atrio, Custode
+   - 26 screenshot TOTALI analizzati!
+
+2. RICERCA BIG PLAYERS (4 cervelle in parallelo!)
+   - MEWS: Cloud-native #1, API-first, 3 stati semplici, UI moderna
+   - OPERA CLOUD: Enterprise gold standard, discrepancy system
+   - CLOUDBEDS: SMB focus, mobile-first, bulk actions
+   - SCIDOO: Italiano, domotica NATIVA, PIN automatici!
+
+3. CONFRONTO DEFINITIVO
+   - Tabella comparativa tutti i player
+   - Best practices da ogni competitor
+   - Posizionamento Miracollo definito
+
+4. ARCHITETTURA DECISA!
+   - MIRACOLLO = MEGLIO di Scidoo (domotica) + MEGLIO di Mews (UI/API)
+   - 4 stati core: dirty, clean, inspected, occupied
+   - Mobile app housekeeping offline-first
+   - VDA hardware integration NATIVA
+   - Energy dashboard (USP!)
+
+DOCUMENTI CREATI (6 nuovi!):
+----------------------------
+.sncp/progetti/miracollo/moduli/room_manager/studi/
+├── 20260114_ANALISI_VDA_ETHEOS_PARTE3.md
+├── 20260114_RICERCA_MEWS.md (790+ righe!)
+├── 20260114_RICERCA_OPERA_CLOUD.md (1500+ righe!)
+├── 20260114_RICERCA_CLOUDBEDS.md (700+ righe!)
+├── 20260114_RICERCA_SCIDOO.md (760+ righe!)
+└── 20260114_CONFRONTO_DEFINITIVO.md
+
+.sncp/progetti/miracollo/moduli/room_manager/
+└── ROADMAP_ROOM_MANAGER.md
+
+IL NOSTRO VANTAGGIO COMPETITIVO:
+--------------------------------
+1. PMS + HARDWARE INTEGRATO (nessun altro lo fa!)
+2. VDA già installato (112 dispositivi!)
+3. Energy dashboard NATIVO
+4. Offline-first per location remote
+5. Pricing trasparente
+
+PROSSIMI STEP:
+--------------
+- Iniziare MVP Room Manager (Backend + Frontend)
+- VDA MODBUS integration
+- Mobile app housekeeping
+
+"La semplicità di Mews + La domotica di Scidoo + L'hardware di VDA
+ = IL MEGLIO DI TUTTI!"
+
++================================================================+
+```
 
 ---
 
