@@ -1,8 +1,8 @@
 # SNCP - Sistema Nervoso Centrale Persistente
 
 > **Progetto:** CervellaSwarm
-> **Versione SNCP:** 3.0 (Semplificato!)
-> **Aggiornato:** 11 Gennaio 2026 - Sessione 163
+> **Versione SNCP:** 4.0 (Semplificato + Automatizzato!)
+> **Aggiornato:** 14 Gennaio 2026 - Sessione 211
 
 ---
 
@@ -16,69 +16,104 @@
 |   Semplice da usare. Chiaro dove mettere cosa.                  |
 |   Se e' troppo complicato, non viene usato.                     |
 |                                                                  |
+|   ORA AUTOMATICO: Hook pre/post sessione + Launchd!             |
+|                                                                  |
 +------------------------------------------------------------------+
 ```
 
 ---
 
-## STRUTTURA REALE
+## STRUTTURA REALE (v4.0)
 
 ```
 .sncp/
 ├── README.md              # Questo file
 │
-├── stato/                 # IL PRESENTE
-│   └── oggi.md            # Stato OGGI - aggiornare ogni sessione!
+├── progetti/              # CUORE - Un folder per progetto!
+│   ├── cervellaswarm/     # CervellaSwarm
+│   ├── miracollo/         # Miracollo
+│   └── contabilita/       # Contabilita
 │
-├── coscienza/             # IL CUORE
-│   └── pensieri_regina.md # Stream pensieri Regina
+├── stato/                 # STATO GLOBALE
+│   └── oggi.md            # Stato OGGI (tutti i progetti)
 │
-├── idee/                  # LE IDEE
-│   ├── in_attesa/         # Idee da valutare
-│   ├── integrate/         # Idee realizzate
-│   ├── roadmap/           # Roadmap e planning
-│   └── ricerche/          # Ricerche approfondite
+├── memoria/               # DECISIONI GLOBALI
+│   └── decisioni/         # Decisioni architetturali cross-progetto
 │
-├── memoria/               # IL PASSATO
-│   ├── sessioni/          # Log sessioni
-│   ├── decisioni/         # Decisioni prese con PERCHE
-│   └── lezioni/           # Lezioni imparate
+├── idee/                  # IDEE CORRENTI
+│   └── *.md               # Idee in valutazione
 │
-├── futuro/                # DOVE ANDIAMO
-│   └── roadmap.md         # Linea principale
+├── handoff/               # PASSAGGI SESSIONE
+│   └── *.md               # Handoff tra sessioni
 │
-├── analisi/               # ANALISI
-│   └── *.md               # Report analisi
+├── reports/               # REPORT GLOBALI
+│   └── daily/             # Health check giornalieri
 │
-├── regole/                # REGOLE
-│   └── *.md               # Regole del progetto
+├── sessioni_parallele/    # TEMPLATE
+│   └── _TEMPLATE/         # Template per sessioni parallele
 │
-└── archivio/              # FILE VECCHI
-    └── 2026-01/           # Archiviati per mese
+├── validazioni/           # VALIDAZIONI
+│   └── *.md               # Report validazione
+│
+└── archivio/              # ARCHIVIO (automatico!)
+    ├── 2026-01/           # Per mese
+    └── 2026-W03/          # Per settimana
+```
+
+---
+
+## STRUTTURA PROGETTO (dentro progetti/)
+
+Ogni progetto ha la stessa struttura:
+
+```
+.sncp/progetti/{nome}/
+├── stato.md          # UNICA fonte di verita per il progetto
+├── CONFIG.md         # Configurazione (stack, path, convenzioni)
+├── decisioni/        # Decisioni specifiche del progetto
+├── idee/             # Idee specifiche
+├── reports/          # Report e audit
+├── roadmaps/         # Piani attivi
+├── workflow/         # Protocolli specifici
+└── moduli/           # Sotto-moduli (es: room_manager)
 ```
 
 ---
 
 ## COME USARE
 
-### INIZIO SESSIONE
+### INIZIO SESSIONE (Automatico!)
 ```
-1. Leggi stato/oggi.md
-2. Aggiorna data/sessione
+Hook pre-session fa:
+1. Check stato SNCP
+2. Mostra ultimo aggiornamento
+3. Warning se docs vecchi
+
+Tu fai:
+1. Leggi progetti/{nome}/stato.md del progetto
+2. Leggi PROMPT_RIPRESA.md per contesto
 ```
 
 ### DURANTE SESSIONE
 ```
-- Nuova idea?      → idee/in_attesa/YYYYMMDD_nome.md
-- Decisione?       → memoria/decisioni/YYYYMMDD_cosa.md
-- Pensiero?        → coscienza/pensieri_regina.md
-- Ricerca?         → idee/ricerche/YYYYMMDD_ricerca_topic.md
+- Lavoro su progetto?  → progetti/{nome}/...
+- Decisione globale?   → memoria/decisioni/YYYYMMDD_cosa.md
+- Idea corrente?       → idee/YYYYMMDD_nome.md
+- Ricerca?             → progetti/{nome}/ricerche/YYYYMMDD_topic.md
+- Report?              → progetti/{nome}/reports/YYYYMMDD_report.md
 ```
 
-### FINE SESSIONE
+### FINE SESSIONE (Automatico!)
 ```
-1. Aggiorna stato/oggi.md con cosa fatto
-2. Commit SNCP insieme al codice
+Hook post-session fa:
+1. Verifica coerenza docs/codice
+2. Warning se stato.md non aggiornato
+3. Reminder per commit
+
+Tu fai:
+1. Aggiorna progetti/{nome}/stato.md
+2. Aggiorna PROMPT_RIPRESA.md (se lavoro significativo)
+3. Commit
 ```
 
 ---
@@ -86,10 +121,22 @@
 ## NAMING FILE
 
 ```
-IDEE:      YYYYMMDD_NOME_BREVE.md
-DECISIONI: YYYYMMDD_COSA_DECISO.md
-RICERCHE:  YYYYMMDD_RICERCA_TOPIC.md
+GENERALE:    YYYYMMDD_NOME_BREVE.md
+DECISIONI:   YYYYMMDD_COSA_DECISO.md
+RICERCHE:    YYYYMMDD_RICERCA_TOPIC.md
+REPORT:      YYYYMMDD_TIPO_cosa.md
 ```
+
+---
+
+## AUTOMAZIONI ATTIVE
+
+| Quando | Cosa | Hook/Script |
+|--------|------|-------------|
+| Inizio sessione | Check stato SNCP | sncp_pre_session_hook.py |
+| Fine sessione | Verifica coerenza | sncp_verify_sync_hook.py |
+| Login Mac | Daily maintenance | Launchd daily |
+| Ogni Lunedi | Weekly archive | Launchd weekly |
 
 ---
 
@@ -154,9 +201,19 @@ verify-sync --verbose
 > "Semplificare = usare di piu!"
 > "Lavoriamo in pace! Senza casino!"
 > "La memoria e' il fondamento dell'intelligenza collettiva."
+> "Avere attrezzature ma non usarle = non averle" (ORA SI USANO DA SOLE!)
 
 ---
 
-*Sessione 163 - Semplificazione SNCP*
-*Sessione 207 - Aggiunto sncp-init wizard*
-*"La MAGIA ora e' con coscienza!"*
+## CHANGELOG
+
+| Sessione | Cosa |
+|----------|------|
+| 163 | Semplificazione iniziale |
+| 207 | sncp-init wizard + verify-sync |
+| 209 | Hook automatici + Launchd manutenzione |
+| 211 | Pulizia struttura v4.0 (rimosse 4 cartelle obsolete) |
+
+---
+
+*"SNCP: Da manuale a AUTOMATICO!"*

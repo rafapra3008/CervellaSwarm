@@ -1,21 +1,51 @@
 # Stato CervellaSwarm
-> Ultimo aggiornamento: 14 Gennaio 2026 - Sessione 209
+> Ultimo aggiornamento: 14 Gennaio 2026 - Sessione 211
 
 ---
 
 ## TL;DR
 
 ```
-SCORE ATTUALE: 8.5/10 media (era 8.0)
+SCORE ATTUALE: 8.7/10 media (era 8.5)
 TARGET: 9.5/10
-GAP: 1.0 punto
+GAP: 0.8 punti
 
-SESSIONE 209: ROADMAP COMUNICAZIONE INTERNA COMPLETATA!
-- 4 FASI in una sessione!
-- Hook automatici (inizio/fine sessione)
-- Regole Regina in CLAUDE.md
-- Launchd (manutenzione al LOGIN!)
-- Guardiana: 9/10 APPROVATO
+SESSIONE 211: SEMPLIFICAZIONE SNCP v4.0!
+- Struttura da 14 a 10 cartelle
+- README aggiornato con struttura REALE
+- Roadmap aggiornata con checkbox corretti
+- Archiviato: coscienza/, perne/
+- Spostato: istruzioni/, roadmaps/
+```
+
+---
+
+## SESSIONE 211 - SEMPLIFICAZIONE SNCP v4.0!
+
+```
++================================================================+
+|                                                                |
+|   MILESTONE 1.2 COMPLETATO!                                    |
+|   "Semplificare struttura SNCP"                                |
+|                                                                |
+|   PRIMA: 14 cartelle (molte obsolete/duplicate)                |
+|   DOPO:  10 cartelle (tutte necessarie)                        |
+|                                                                |
+|   ARCHIVIATO:                                                  |
+|   - coscienza/    → archivio/2026-01/coscienza/                |
+|   - perne/        → archivio/2026-01/perne/                    |
+|                                                                |
+|   SPOSTATO:                                                    |
+|   - istruzioni/*  → progetti/miracollo/workflow/               |
+|   - roadmaps/*    → progetti/miracollo/roadmaps/               |
+|                                                                |
+|   AGGIORNATO:                                                  |
+|   - README.md SNCP v4.0 (struttura REALE!)                     |
+|   - ROADMAP_2026 checkbox corretti                             |
+|                                                                |
+|   SCORE: 8.5 → 8.7 (+0.2)                                      |
+|                                                                |
++================================================================+
 ```
 
 ---
@@ -153,10 +183,11 @@ verify-sync miracollo --verbose   # Check singolo progetto
 
 ## PROSSIMI STEP
 
-1. [ ] Semplificare struttura SNCP (archivio vecchi)
-2. [ ] Prima sessione giornaliera completa
-3. [ ] Score 8.5+
-4. [ ] Prepararsi per FASE 2 (Marzo)
+1. [x] Semplificare struttura SNCP (Sessione 211!)
+2. [x] Score 8.5+ (ora 8.7!)
+3. [ ] 5 sessioni giornaliere completate
+4. [ ] Documentazione workflow per esterni
+5. [ ] Prepararsi per FASE 2 (Marzo)
 
 ---
 

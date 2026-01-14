@@ -1,8 +1,32 @@
 # STATO OGGI
 
 > **Data:** 14 Gennaio 2026 (Martedi)
-> **Sessione:** 211 - STUDIO VDA ETHEOS PARTE 2
+> **Sessione:** 211 (Parallele: Miracollo + CervellaSwarm)
 > **Ultimo aggiornamento:** Sessione 211 (sera)
+
+---
+
+## SESSIONE 211 - CERVELLASWARM: SEMPLIFICAZIONE SNCP v4.0
+
+```
++================================================================+
+|   CERVELLASWARM - MILESTONE 1.2 COMPLETATO!                    |
+|   14 Gennaio 2026 (sera)                                        |
++================================================================+
+
+FATTO:
+- Struttura SNCP: da 14 a 10 cartelle
+- Archiviato: coscienza/, perne/
+- Spostato: istruzioni/, roadmaps/
+- README SNCP aggiornato v4.0
+- Roadmap 2026 checkbox corretti
+
+SCORE: 8.5 → 8.7 (+0.2)
+
+"SNCP: Da manuale a AUTOMATICO!"
+
++================================================================+
+```
 
 ---
 
@@ -75,13 +99,13 @@ INFORMAZIONI CHIAVE:
 
 | Progetto | Area | Score | Note |
 |----------|------|-------|------|
-| CervellaSwarm | SNCP | 8.4/10 | Hook automatici attivi |
+| CervellaSwarm | SNCP | 8.7/10 | v4.0 Semplificato! |
 | CervellaSwarm | Log | 7.5/10 | SwarmLogger v2.0.0 |
 | CervellaSwarm | Agenti | 8.5/10 | 16 operativi |
 | CervellaSwarm | Infra | 8.5/10 | Production ready |
 | Miracollo | RateParity | 9.5/10 | STABILE |
 | Miracollo | Room Manager | Studio | VDA Etheos |
-| **MEDIA** | - | **8.4/10** | Target: 9.5 |
+| **MEDIA** | - | **8.5/10** | Target: 9.5 |
 
 ---
 

@@ -98,14 +98,17 @@ FONDAMENTA      PRODOTTO        UTENTI          SCALA
 **Settimana 15-20 Gennaio:**
 - [x] Ricerca Cursor completata
 - [x] Struttura sessioni definita
-- [ ] sncp-init.sh creato e testato
-- [ ] Prima sessione giornaliera
+- [x] sncp-init.sh creato e testato (8.8/10 Guardiana!)
+- [x] verify-sync.sh funzionante (Sessione 207)
+- [x] Hook automatici pre/post sessione (Sessione 209)
+- [x] Launchd manutenzione automatica (Sessione 209)
+- [x] Score: 8.0 → 8.5 (RAGGIUNTO!)
 
 **Settimana 21-27 Gennaio:**
-- [ ] verify-sync.sh funzionante
 - [ ] Semplificazione SNCP (archivio vecchi)
 - [ ] 5 sessioni giornaliere completate
-- [ ] Score: 7.8 → 8.2
+- [ ] Documentazione workflow per esterni
+- [ ] Score: 8.5 → 8.7
 
 **Settimana 28 Gen - 3 Feb:**
 - [ ] Workflow consolidato
@@ -293,23 +296,21 @@ Dic ░░░░░░░░░░░░░░░░░░░░░░░░█�
 
 ---
 
-## PROSSIMI PASSI IMMEDIATI (Oggi/Domani)
+## PROSSIMI PASSI IMMEDIATI (Aggiornato)
 
-### OGGI (14 Gennaio):
-1. [x] Roadmap creata (questo file!)
-2. [ ] Creare sncp-init.sh
-3. [ ] Testare su progetto nuovo
+### COMPLETATO (14-15 Gennaio):
+- [x] Roadmap creata
+- [x] sncp-init.sh creato e testato (8.8/10!)
+- [x] verify-sync.sh funzionante
+- [x] Hook automatici configurati
+- [x] Launchd manutenzione attivo
+- [x] Score: 8.0 → 8.5
 
-### DOMANI (15 Gennaio):
-1. [ ] Prima sessione giornaliera CervellaSwarm
-2. [ ] Testare sncp-init.sh
-3. [ ] Iniziare semplificazione struttura
-
-### QUESTA SETTIMANA:
-1. [ ] 5 sessioni giornaliere
-2. [ ] sncp-init.sh funzionante
-3. [ ] verify-sync.sh bozza
-4. [ ] Score: 7.8 → 8.0
+### PROSSIMO (Sessione 211+):
+1. [ ] Semplificazione struttura SNCP
+2. [ ] Archivio file vecchi/obsoleti
+3. [ ] 5 sessioni giornaliere
+4. [ ] Score: 8.5 → 8.7
 
 ---
 
