@@ -3,14 +3,17 @@
 Hook SessionStart CervellaSwarm - Caricamento Contesto Sciame
 
 Carica automaticamente all'avvio sessione:
+- COSTITUZIONE.md (chi siamo - PRIMA DI TUTTO!)
 - NORD.md (dove siamo)
 - PROMPT_RIPRESA.md (stato attuale)
 - Check CODE REVIEW day (Lunedi/Venerdi)
 - Reminder regole Sciame
 
-Versione: 1.0.0
-Data: 2026-01-03
+Versione: 2.0.0
+Data: 2026-01-14
 Cervella & Rafa
+
+v2.0.0 - Aggiunta COSTITUZIONE obbligatoria!
 """
 
 import json
@@ -20,6 +23,9 @@ from datetime import datetime
 
 # Path progetto
 PROJECT_ROOT = Path(__file__).parent.parent.parent
+
+# Path Costituzione (GLOBALE - vale per TUTTI!)
+COSTITUZIONE_PATH = Path.home() / ".claude/COSTITUZIONE.md"
 
 
 def load_file_summary(file_path: Path, max_lines: int = 100) -> str:
@@ -50,7 +56,10 @@ def check_if_review_day() -> tuple:
 def main():
     """Entry point hook."""
     try:
-        # Carica file chiave
+        # PRIMA DI TUTTO: COSTITUZIONE! (chi siamo)
+        costituzione = load_file_summary(COSTITUZIONE_PATH, max_lines=150)
+
+        # Carica file chiave progetto
         nord = load_file_summary(PROJECT_ROOT / "NORD.md", max_lines=60)
         prompt_ripresa = load_file_summary(PROJECT_ROOT / "PROMPT_RIPRESA.md", max_lines=100)
 
@@ -63,6 +72,11 @@ def main():
         # Header
         context_parts.append("# CERVELLASWARM - Sessione Iniziata")
         context_parts.append(f"*Workspace: CervellaSwarm | {datetime.now().strftime('%Y-%m-%d %H:%M')}*")
+        context_parts.append("")
+
+        # COSTITUZIONE - PRIMA DI TUTTO!
+        context_parts.append("## COSTITUZIONE - Chi Siamo")
+        context_parts.append(costituzione)
         context_parts.append("")
 
         # CODE REVIEW reminder se lunedi/venerdi
