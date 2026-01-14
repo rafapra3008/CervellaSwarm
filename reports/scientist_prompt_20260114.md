@@ -1,4 +1,4 @@
-# 🔬 SCIENTIST PROMPT - 2026-01-13
+# 🔬 SCIENTIST PROMPT - 2026-01-14
 
 ## Progetto: CervellaSwarm 🐝
 
@@ -53,11 +53,11 @@ Cerca e analizza:
 
 ## 📝 OUTPUT ATTESO
 
-Scrivi il report in: `reports/DAILY_RESEARCH_20260113.md`
+Scrivi il report in: `reports/DAILY_RESEARCH_20260114.md`
 
 **Struttura:**
 ```markdown
-# DAILY RESEARCH - 2026-01-13
+# DAILY RESEARCH - 2026-01-14
 
 ## 🆕 NOVITÀ TECNOLOGIE
 [cosa hai trovato]
@@ -87,4 +87,4 @@ Scrivi il report in: `reports/DAILY_RESEARCH_20260113.md`
 ---
 
 *Generato automaticamente da La Scienziata - SessionStart Hook*
-*2026-01-13 20:05:54*
+*2026-01-14 05:52:57*

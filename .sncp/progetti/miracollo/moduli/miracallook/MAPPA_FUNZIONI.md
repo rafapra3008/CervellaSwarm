@@ -44,8 +44,31 @@ Poi: PMS + WhatsApp = 11/10 (la MAGIA!)
 | Archive/Trash/Star/Snooze | HAVE | - | - |
 | **Mark as Read/Unread** | NEED | 2h | CRITICO |
 | **Drafts (bozze)** | NEED | 6h | CRITICO |
-| **Bulk Actions** | NEED | 5h | ALTO |
+| **Bulk Actions (selezione multipla)** | NEED | 5h | ALTO |
 | **Thread View** | NEED | 4h | ALTO |
+
+### BULK ACTIONS - Dettaglio
+
+| Feature | Descrizione | Priorità |
+|---------|-------------|----------|
+| Checkbox selezione | Checkbox su ogni email per selezione multipla | CRITICO |
+| Select All | Bottone per selezionare tutte le email visibili | ALTO |
+| Bulk Archive | Archivia tutte le email selezionate | ALTO |
+| Bulk Trash | Cestina tutte le email selezionate | ALTO |
+| Bulk Mark Read | Marca come lette tutte le selezionate | ALTO |
+| Bulk Mark Unread | Marca come non lette tutte le selezionate | ALTO |
+| Bulk Star | Aggiungi stella a tutte le selezionate | MEDIO |
+| Bulk Move to Label | Sposta in label tutte le selezionate | MEDIO |
+| Counter selezione | "3 selezionate" nella toolbar | ALTO |
+| Deselect All | Bottone per deselezionare tutto | ALTO |
+| Keyboard Shift+Click | Range selection con Shift | MEDIO |
+| Keyboard Cmd+A | Select All shortcut | MEDIO |
+
+**Pattern UI (come Gmail):**
+- Checkbox a sinistra di ogni email
+- Toolbar contestuale quando >= 1 selezionata
+- Counter "X selezionate"
+- Azioni bulk nella toolbar
 
 ### ORGANIZZAZIONE
 

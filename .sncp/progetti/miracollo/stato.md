@@ -1,5 +1,42 @@
 # Stato Miracollo
-> Ultimo aggiornamento: 14 Gennaio 2026 - Sessione 192 (EVENTI LOCALI IMPLEMENTATI!)
+> Ultimo aggiornamento: 14 Gennaio 2026 - Sessione 193 (EVENTI LOCALI DEPLOYED!)
+
+---
+
+## SESSIONE 193 - EVENTI LOCALI DEPLOYED IN PRODUZIONE!
+
+```
++================================================================+
+|                                                                |
+|   DEPLOY COMPLETATO!                                           |
+|                                                                |
+|   API: GET /api/events/ -> 200 OK                              |
+|                                                                |
+|   6 EVENTI SEED CREATI:                                        |
+|   1. Coppa Mondo Sci Femminile (18-19 Gen) - HIGH              |
+|   2. Olimpiadi Milano-Cortina 2026 (6-22 Feb) - EXTREME        |
+|   3. Paralimpiadi (6-15 Mar) - EXTREME                         |
+|   4. Dolomiti Ski Jazz (7-15 Mar) - MEDIUM                     |
+|   5. Wellness Week Alleghe (15-22 Giu) - LOW                   |
+|   6. Mercatini Natale Cortina (8 Dic - 6 Gen) - MEDIUM         |
+|                                                                |
+|   FIX APPLICATI:                                               |
+|   - Migration 039: h.nome -> h.name (VIEW)                     |
+|   - event_service.py: nome -> name (query hotels)              |
+|                                                                |
+|   CONFIGURAZIONE SSH UNIFICATA:                                |
+|   - Alias ufficiale: miracollo-vm                              |
+|   - Documentato per tutta la famiglia                          |
+|                                                                |
+|   RATEBOARD: 9.5/10 TARGET RAGGIUNTO!                          |
+|                                                                |
++================================================================+
+```
+
+### Container Info (Aggiornato!)
+- Nome: `miracollo-backend-1` (NON miracollo-pms-production!)
+- Path host: `/app/miracollo/` (NON /opt/miracollo!)
+- Database: `/app/miracollo/backend/data/miracollo.db`
 
 ---
 
