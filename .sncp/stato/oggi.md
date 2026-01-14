@@ -186,3 +186,11 @@ cervella-gpu:        SPENTA (schedule weekend)
 - **Progetto**: CervellaSwarm
 - **Evento**: session_end
 - **Generato da**: sncp_auto_update.py v2.0.0
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 21:09 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v2.0.0

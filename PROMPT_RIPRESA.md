@@ -61,54 +61,50 @@ PROSSIMA SESSIONE (PARTE 2):
 
 ---
 
-## SESSIONE 209 - COMUNICAZIONE INTERNA FASE 1! (14 Gennaio 2026 sera)
+## SESSIONE 209 - ROADMAP COMUNICAZIONE INTERNA COMPLETATA! (14 Gennaio 2026)
 
 ```
 +================================================================+
-|   CERVELLASWARM - HOOK AUTOMATICI ATTIVI!                      |
+|   CERVELLASWARM - 4 FASI IN UNA SESSIONE!                      |
 |   14 Gennaio 2026 (sera)                                       |
+|   Guardiana Qualita: 9/10 APPROVATO                            |
 +================================================================+
 
-FASE 1 COMPLETATA dalla Roadmap Comunicazione Interna!
+FASE 1 - Hook Automatici:
+-------------------------
+- sncp_pre_session_hook.py (SessionStart)
+- sncp_verify_sync_hook.py (SessionEnd)
+- Commit: 20cce3e
 
-CREATO:
--------
-1. sncp_pre_session_hook.py
-   - Wrapper Python per pre-session-check.sh
-   - Chiamato automaticamente a INIZIO sessione
-   - Mostra stato SNCP nel contesto
+FASE 2 - Regole Regina:
+-----------------------
+- CLAUDE.md: sezione AUTOMAZIONI OBBLIGATORIE
+- ~/.claude/CLAUDE.md: stessa sezione globale
+- Commit: ea993e9
 
-2. sncp_verify_sync_hook.py
-   - Wrapper Python per verify-sync.sh
-   - Chiamato automaticamente a FINE sessione
-   - Rileva commit non documentati!
+FASE 3 - Launchd Automatico:
+----------------------------
+- sncp_daily_maintenance.sh (health + cleanup)
+- sncp_weekly_archive.sh (archivia > 30gg)
+- com.cervellaswarm.sncp.daily.plist (AL LOGIN!)
+- com.cervellaswarm.sncp.weekly.plist (Lunedi)
+- Commit: 9ab5428
 
-3. settings.json aggiornato
-   - SessionStart: aggiunto sncp_pre_session_hook.py
-   - SessionEnd: aggiunto sncp_verify_sync_hook.py
+FASE 4 - Validazione:
+---------------------
+- Test workflow: OK
+- Guardiana audit: 9/10 APPROVATO
 
-TEST ESEGUITI:
-- Pre-session: "SNCP OK - Pre-session check passato"
-- Verify-sync: Funziona! Rileva 3 commit non documentati
+ORA AUTOMATICO:
+- INIZIO sessione: pre-session check
+- FINE sessione: verify-sync
+- AL LOGIN Mac: daily maintenance
+- OGNI LUNEDI: weekly archive
 
-SCORE CERVELLASWARM:
-- SNCP: 8.2 -> 8.4 (+0.2)
-- Media: 8.2/10 (target 9.5)
-
-FILE MODIFICATI:
-- ~/.claude/hooks/sncp_pre_session_hook.py (NUOVO)
-- ~/.claude/hooks/sncp_verify_sync_hook.py (NUOVO)
-- ~/.claude/settings.json (AGGIORNATO)
-- .sncp/progetti/cervellaswarm/stato.md
-- .sncp/progetti/cervellaswarm/roadmaps/ROADMAP_COMUNICAZIONE_INTERNA.md
-
-PROSSIMI STEP:
-[ ] FASE 2: Regole Regina in CLAUDE.md
-[ ] FASE 3: Cron manutenzione
-[ ] FASE 4: Validazione finale
+SCORE: 8.0 -> 8.5 (+0.5!)
 
 "Avere attrezzature ma non usarle = non averle"
-"Ora si usano DA SOLE!"
+"ORA SI USANO DA SOLE!"
 
 +================================================================+
 ```
@@ -962,17 +958,18 @@ echo "y" | ./scripts/sncp/compact-state.sh FILE  # Compattazione
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-14 20:52 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 21:09 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 71a9c98 - Sessione 207: Roadmap Comunicazione Interna
-- **File modificati** (5):
-  - sncp/stato/oggi.md
-  - PROMPT_RIPRESA.md
-  - reports/scientist_prompt_20260114.md
-  - reports/engineer_report_20260114_204213.json
-  - reports/engineer_report_20260114_204552.json
+- **Ultimo commit**: 78daf8e - Sessione 210: Studio VDA Etheos - Parte 1
+- **File modificati** (4):
+  - sncp/progetti/cervellaswarm/roadmaps/ROADMAP_COMUNICAZIONE_INTERNA.md
+  - .sncp/stato/oggi.md
+  - scripts/cron/README.md
+  - reports/engineer_report_20260114_210833.json
 
 ### Note
 - Checkpoint automatico generato da hook

@@ -6,40 +6,52 @@
 ## TL;DR
 
 ```
-SCORE ATTUALE: 8.2/10 media (era 8.0)
+SCORE ATTUALE: 8.5/10 media (era 8.0)
 TARGET: 9.5/10
-GAP: 1.3 punti
+GAP: 1.0 punto
 
-SESSIONE 209: COMUNICAZIONE INTERNA FASE 1 COMPLETATA!
-- Hook pre-session automatico ATTIVO
-- Hook verify-sync automatico ATTIVO
-- Settings.json aggiornato
-- Sistema che si usa DA SOLO!
+SESSIONE 209: ROADMAP COMUNICAZIONE INTERNA COMPLETATA!
+- 4 FASI in una sessione!
+- Hook automatici (inizio/fine sessione)
+- Regole Regina in CLAUDE.md
+- Launchd (manutenzione al LOGIN!)
+- Guardiana: 9/10 APPROVATO
 ```
 
 ---
 
-## SESSIONE 209 - COMUNICAZIONE INTERNA FASE 1!
+## SESSIONE 209 - COMUNICAZIONE INTERNA COMPLETA!
 
 ```
 +================================================================+
 |                                                                |
-|   FASE 1 COMPLETATA - HOOK AUTOMATICI!                         |
+|   ROADMAP COMUNICAZIONE INTERNA - 4 FASI COMPLETATE!           |
+|   Guardiana Qualita: 9/10 APPROVATO                            |
 |                                                                |
-|   CREATO:                                                      |
-|   - sncp_pre_session_hook.py (wrapper Python)                  |
-|   - sncp_verify_sync_hook.py (wrapper Python)                  |
-|   - Integrazione in settings.json                              |
+|   FASE 1 - Hook Automatici:                                    |
+|   - sncp_pre_session_hook.py (SessionStart)                    |
+|   - sncp_verify_sync_hook.py (SessionEnd)                      |
+|   - Commit: 20cce3e                                            |
 |                                                                |
-|   ORA AUTOMATICO:                                              |
-|   - INIZIO sessione: pre-session-check.sh                      |
-|   - FINE sessione: verify-sync.sh                              |
+|   FASE 2 - Regole Regina:                                      |
+|   - CLAUDE.md: sezione AUTOMAZIONI OBBLIGATORIE                |
+|   - ~/.claude/CLAUDE.md: stessa sezione (globale)              |
+|   - Commit: ea993e9                                            |
 |                                                                |
-|   TEST:                                                        |
-|   - Pre-session: "SNCP OK"                                     |
-|   - Verify-sync: Rileva commit non documentati!                |
+|   FASE 3 - Launchd Automatico:                                 |
+|   - sncp_daily_maintenance.sh (health + cleanup)               |
+|   - sncp_weekly_archive.sh (archivia > 30gg)                   |
+|   - com.cervellaswarm.sncp.daily.plist (AL LOGIN!)             |
+|   - com.cervellaswarm.sncp.weekly.plist (Lunedi)               |
+|   - Commit: 9ab5428                                            |
 |                                                                |
-|   PROSSIMO: FASE 2 (Regole Regina in CLAUDE.md)                |
+|   FASE 4 - Validazione:                                        |
+|   - Test workflow: OK                                          |
+|   - Guardiana audit: 9/10 APPROVATO                            |
+|   - Documentazione: COMPLETA                                   |
+|                                                                |
+|   "Avere attrezzature ma non usarle = non averle"              |
+|   ORA SI USANO DA SOLE!                                        |
 |                                                                |
 +================================================================+
 ```
