@@ -1,7 +1,7 @@
 # MenuMaster per Sesto Grado - Stato Progetto
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 198 (Checkpoint)
-> **Status:** DESIGN SPECS COMPLETATE - Pronto per Implementazione
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 199 (Checkpoint)
+> **Status:** IMPLEMENTAZIONE 70% - CORS da fixare
 
 ---
 
@@ -22,223 +22,149 @@
 
 ---
 
-## SESTO GRADO - BRAND IDENTITY
+## SESSIONE 199 - COSA ABBIAMO FATTO
 
-### Chi e Sesto Grado
-- Ristorante gestito dalla **famiglia Pra**
-- Location: dentro **Naturae Lodge** (Alleghe, Dolomiti)
-- Payoff: **"Unconventional Experience"**
-- Sito: https://6grado.com/
+### FASE 2A: Brand Colors - COMPLETATA
+- `tailwind.config.js` - Palette Sesto Grado aggiunta
+  - #E97E21 (arancio brand)
+  - #7D3125 (marrone logotipo)
+  - #B1B073, #776E1E (verdi varianti)
+  - Dark theme: #1C1C1E, #2C2C2E, #38383A
+- `index.css` - CSS variables dark theme
 
-### Colori Istituzionali
+### FASE 2B: Simplified Flow - COMPLETATA
+- `App.tsx` - Rimosso ProtectedRoute
+- `DashboardLayout.tsx` - Accesso diretto, header "6° SESTO GRADO"
 
-| Nome | HEX | Pantone | Uso |
-|------|-----|---------|-----|
-| **ARANCIO** | #E97E21 | 717 PC | Pittogramma, payoff |
-| **MARRONE** | #7D3125 | 506 PC | Logotipo |
-| **VERDE CHIARO** | #B1B073 | 5777 PC | Variante |
-| **VERDE SCURO** | #776E1E | 5825 PC | Variante |
+### FASE 2C: Dark Theme - COMPLETATA
+Tutti i componenti aggiornati:
+- `Dashboard.tsx` - Dark background
+- `MenuEditor.tsx` - Full dark theme
+- `Button.tsx` - Brand orange/brown
+- `Card.tsx` - Dark card style
+- `Input.tsx` - Dark inputs
+- `CategoryCard.tsx` - Dark theme
+- `DishCard.tsx` - Dark theme + brand accents
+- `DishForm.tsx` - Dark form elements
 
-### Font Istituzionale
-- **ABOLITION** (Regular e Oblique)
-- Solo MAIUSCOLE
-- Stile: bold, geometrico, montagna
+### FASE 3A: Database Categories - COMPLETATA
+- Tenant "sesto-grado" creato
+- 5 categorie create (BISTROT LEGGERO, BISTROT UNCONVENTIONAL, DESSERT, KIDS, PIZZA)
 
-### Logo
-- Pittogramma "6°" con interruzione = simbolo grado arrampicata
-- Puo essere usato solo o con logotipo "SESTO GRADO"
+### FASE 3B: Database Dishes - COMPLETATA
+- `seed_sesto_grado.py` - Script seed creato
+- 43 piatti REALI inseriti con:
+  - Nome IT/EN (translations JSONB)
+  - Descrizioni complete
+  - Prezzi reali
+  - Allergeni EU corretti
+  - Tag dietetici (GF, VEG, VEGAN)
 
----
-
-## STRUTTURA MENU COMPLETA
-
-### 5 Menu Distinti
-
-| Menu | Orario | Piatti | Range Prezzi |
-|------|--------|--------|--------------|
-| **BISTROT LEGGERO** | 12:00-14:30 | 12 | 5-22 EUR |
-| **BISTROT UNCONVENTIONAL** | 19:00-21:30 | 12 | 13-25 EUR |
-| **DESSERT** | - | 5 | 12-14 EUR |
-| **KIDS** | - | 4 | 10-12 EUR |
-| **PIZZA** | - | 10 | 12-21 EUR |
-
-**TOTALE: 43 piatti**
-
----
-
-### BISTROT LEGGERO (Pranzo 12:00-14:30)
-
-| Piatto | Descrizione | Prezzo | Allergeni | Note |
-|--------|-------------|--------|-----------|------|
-| Selezione Salumi e Formaggi Locali | Carne salada di cervo, Speck affumicato, Salame nostrano, Petto d'anatra, Blu 61, Piave stravecchio, Pecorino di Salcis, Millefoglie al Marzamino, Toma di bufala | 18 | 7,10,12 | GF |
-| Insalatona Light | Insalata di foglia, Cappuccio viola, Finocchio, Uova bio, Ceci, Arancia | 16 | 3 | GF, Veg |
-| Spaghettoni - Pesto | Grano duro Senatore Capelli | 15 | 7,8 | GF option |
-| Spaghettoni - Carbonara | Con guanciale, Uova bio | 15 | 1,3,7,12 | |
-| Spaghettoni - Ragu | Lunga cottura 24 ore | 15 | 1,6,9 | |
-| Spaghettoni - Pomodoro | Stracciatella, Basilico | 14 | 1,7 | GF option |
-| Tagliata di Pollo | Cotto a bassa temperatura | 14 | - | GF |
-| Medaglione di Filetto di Manzo | - | 22 | - | GF |
-| Patatine Fritte | Fatte in casa | 5 | - | |
-| Verdure alla Griglia | - | 7 | - | GF, Veg |
-| Hamburger di Chianina | Macelleria Costa, Insalata, Pomodoro, Formaggio Morlacco, Speck croccante, Porcini | 22 | 1,7,12 | |
-| Veggy Burger | Pane alle erbe e noci, Insalata, Pomodoro secco, Cappuccio viola, Stracciatella, Pesto | 18 | 1,7,8 | Veg |
-| Club Sandwich | Insalata, Pomodoro, Formaggio, Uova bio, Bacon, Fesa tacchino, Salsa rosa fatta in casa | 18 | 1,3,7,12 | |
-| Club Sandwich Veggy | Insalata, Pomodoro, Formaggio, Verdure grigliate, Uova bio, Salsa rosa fatta in casa | 18 | 1,3,7,12 | Veg |
+### FASE 3C: API Connection - COMPLETATA
+- `public.py` - Endpoint filtrato per tenant_id
+- `useMenu.ts` - Hook connesso a public API con slug 'sesto-grado'
 
 ---
 
-### BISTROT UNCONVENTIONAL (Cena 19:00-21:30)
+## PROBLEMA PENDENTE: CORS
 
-| Piatto | Descrizione | Prezzo | Allergeni | Note |
-|--------|-------------|--------|-----------|------|
-| Selezione Salumi e Formaggi Locali | (come pranzo) | 18 | 7,10,12 | GF |
-| Tartare di Cervo | Crumble al pecorino, Zabaione alle erbe, Sedano ghiacciato | 18 | 3,9,10 | GF |
-| Trota Affumicata | Caviale di limone e pepe, Yogurt al finocchio, Pompelmo, Mela | 18 | 4,7 | GF |
-| Croccante di Fillo | Hummus di ceci, Porcini, Barbabietola fermentata, Grue di cacao | 13 | 1 | Vegan |
-| Caramella Nera | Porcini, Ricotta di malga, Tartufo, Brodo al fieno | 18 | 1,7 | GF option |
-| Canederlo | Zucca, Morlacco e Lavanda km0, Cappuccio viola | 16 | 1,3,7 | |
-| Zuppa d'Orzo | Latte di mandorla, Carota alla curcuma, Verza in foglia, Cumino | 15 | 1,8 | Vegan |
-| Gnocco di Mais Corvino | Zafferano delle Dolomiti, Cicorietta di campo, Vaniglia, Pomodoro semi dry, Pinoli | 15 | 6,8 | GF, Vegan |
-| Tataki di Manzo | Chips di topinambur, Teriyaki, Cardoncello | 25 | 11 | GF |
-| Salmerino | Pisello, Porro fritto, Nastro di verdure | 25 | 4 | GF |
-| Capriolo | Stinco di capriolo, Purea di carote e patate, Riduzione di Valpolicella Ripasso, Mirtillo acido | 22 | 12 | GF |
-| Cecina di Montagna | Carciofini in tempura, Castagna, Ravelli, Maionese alla curcuma, Pane carasau | 16 | 1,6 | Vegan option |
-
----
-
-### DESSERT
-
-| Piatto | Descrizione | Prezzo | Allergeni | Note |
-|--------|-------------|--------|-----------|------|
-| Spuma Calda al Cioccolato | Pampepato, Composta di pere | 12 | 1,3,7,8 | |
-| Sottobosco | Wafer all'orzo, Mirtilli rossi, Zabaione con polvere di funghi | 14 | 1,3,7 | |
-| Creme Brule al Miele di Tiglio | Insalata di agrumi, Cialde croccanti alla cannella | 14 | 1,3,7,8,12 | |
-| Tiramisu Sesto Grado | Mousse al mascarpone, Savoiardo fatto in casa, Crema al caffe | 14 | 3,7 | GF |
-| Mont Civetta Blanc | Meringa, Crema di castagne, Panna cotta alla fava Tonka | 14 | 3,7 | GF |
-
----
-
-### KIDS
-
-| Piatto | Descrizione | Prezzo | Allergeni | Note |
-|--------|-------------|--------|-----------|------|
-| La Pasta | Con salsa a scelta | 10 | 1,3 | GF option |
-| Gnocchi | Con salsa a scelta | 12 | 1,3 | |
-| Polpettine di Melanzana | Eggplant balls | 10 | 1,3,6,7,10 | |
-| Milanese Baby | Con patatine rustiche o piccola insalata | 12 | 1,3,7 | |
-
----
-
-### PIZZA
-
-| Piatto | Descrizione | Prezzo | Allergeni | Note |
-|--------|-------------|--------|-----------|------|
-| Margherita | Pomodoro San Marzano DOP, Mozzarella di Agerola DOP | 12 | 1,7 | |
-| Tonno e Cipolla | Pomodoro, Mozzarella, Tonno pinna gialla, Cipolla di Tropea IGP caramellata | 14 | 1,4,7 | |
-| Vegetariana | Pomodoro, Mozzarella, Verdure grigliate di stagione | 14 | 1,7 | Veg |
-| Capricciosa | Pomodoro, Mozzarella, Cuore di carciofo, Olive taggiasche, Prosciutto cotto, Funghi porcini | 15 | 1,7 | |
-| Oro Verde | Mozzarella, Mortadella di cinghiale, Stracciatella, Pistacchio | 16 | 1,7,8,12 | |
-| Al Casar Non Far Sapere | Mozzarella, Ricotta vaccina di malga, Morlacco del Grappa, Caprino stagionato al fieno, Blu 61, Bacche di ribes fresco | 16 | 1,7 | |
-| Contro Tempo | Mozzarella, Porchettina di maialetto da latte home made, Marmellatina di Granny alla cannella, Pecorino in foglia di noce | 19 | 1,7,8 | |
-| Autunno | Mozzarella, Radicchio trevigiano, Gorgonzola, Pera, Noci | 19 | 1,7,8 | |
-| Malga e D'intorni | Mozzarella, Speck affumicato di malga, Granella di castagna, Porro fritto | 19 | 1,7 | |
-| Deluxe | Mozzarella, Dadolata di zucca al rosmarino, Porcini, Toma di montagna, Tartufo | 21 | 1,7 | |
-
-**Note Pizza:**
-- Farina semintegrale macinata a pietra
-- Lunga lievitazione
-- Prodotti di altissima qualita
-- Possibilita di mozzarella vegana
-
----
-
-## SISTEMA ALLERGENI EU (Reg. 1169/2011)
-
-| Cod | Allergene | Icona |
-|-----|-----------|-------|
-| 1 | Glutine (cereali) | - |
-| 2 | Crostacei | - |
-| 3 | Uova | - |
-| 4 | Pesce | - |
-| 5 | Arachidi | - |
-| 6 | Soia | - |
-| 7 | Latte (lattosio) | - |
-| 8 | Frutta a guscio | - |
-| 9 | Sedano | - |
-| 10 | Senape | - |
-| 11 | Sesamo | - |
-| 12 | Solfiti | - |
-| 13 | Lupini | - |
-| 14 | Molluschi | - |
-
-### Icone Speciali (usate nei menu)
-- **GF** = Gluten Free
-- **Veg** = Vegetariano
-- **Vegan** = Vegano
-
----
-
-## CODICE ESISTENTE
-
-### Path Progetto
 ```
-/Users/rafapra/Developer/MenuMaster/
-├── backend/           # FastAPI + PostgreSQL
-├── frontend/          # React + Vite + Tailwind
-├── research/          # Competitor, UX analysis
-└── docs/              # ROADMAP, architettura
+Access to XMLHttpRequest at 'http://localhost:8000/api/v1/public/menu/sesto-grado/categories'
+from origin 'http://localhost:5174' has been blocked by CORS policy
 ```
 
-### Stato Attuale
-- Sprint 2 completato
-- Guardiana Qualita: 7.5/10
-- Frontend su porta 5174 (esclusiva)
-- Backend su porta 8000 (Docker)
+### Causa Probabile
+Il backend e stato riavviato dopo le modifiche a `public.py` e il CORS middleware potrebbe non essere configurato correttamente per la nuova porta frontend (5174).
 
-### Cosa Funziona
-- Auth (login/register) - MA NON SERVE per uso interno
-- CRUD Categorie e Piatti
-- QR Code generation + download
-- Menu pubblico mobile-first
-- Image upload
-
-### Cosa Adattare
-- Rimuovere/semplificare auth (accesso diretto)
-- Applicare brand Sesto Grado (colori, font)
-- Struttura 5 menu invece di categorie generiche
-- Sistema allergeni EU integrato
-- Export PDF con design brand
+### Fix da Applicare (Sessione 200)
+Verificare in `backend/app/main.py` il CORSMiddleware:
+```python
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5174", "http://localhost:5173"],  # <-- porta 5174!
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+```
 
 ---
 
-## ROADMAP
+## FILE MODIFICATI (da committare in MenuMaster)
 
-### FASE 1: DESIGN (COMPLETATA!)
-- [x] Consultare cervella-marketing per UI/UX
-- [x] Definire wireframe interfaccia
-- [x] Design specs salvate in SNCP
-- [ ] Approvazione finale design con Rafa (prossima sessione)
+### Frontend
+- `frontend/tailwind.config.js` - Brand colors
+- `frontend/src/index.css` - Dark theme CSS
+- `frontend/src/App.tsx` - No auth
+- `frontend/src/layouts/DashboardLayout.tsx` - Brand header
+- `frontend/src/pages/Dashboard.tsx` - Dark theme
+- `frontend/src/pages/MenuEditor.tsx` - Dark theme
+- `frontend/src/components/ui/Button.tsx` - Brand colors
+- `frontend/src/components/ui/Card.tsx` - Dark card
+- `frontend/src/components/ui/Input.tsx` - Dark inputs
+- `frontend/src/components/menu/CategoryCard.tsx` - Dark theme
+- `frontend/src/components/menu/DishCard.tsx` - Dark theme
+- `frontend/src/components/menu/DishForm.tsx` - Dark form
+- `frontend/src/hooks/useMenu.ts` - Public API connection
 
-### FASE 2: ADATTAMENTO FRONTEND
-- [ ] Applicare colori brand (#E97E21, #7D3125)
-- [ ] Configurare font Abolition
-- [ ] Semplificare flow (no login)
-- [ ] Creare struttura 5 menu
+### Backend
+- `backend/app/api/v1/public.py` - Tenant filtering
+- `backend/seed_sesto_grado.py` - Seed script (NUOVO)
 
-### FASE 3: DATI E BACKEND
-- [ ] Seed 43 piatti reali
-- [ ] Sistema allergeni
-- [ ] Multi-lingua IT/EN
+---
 
-### FASE 4: FUNZIONALITA
+## ROADMAP AGGIORNATA
+
+### FASE 1: DESIGN - COMPLETATA
+- [x] Design specs
+- [x] Brand identity
+- [x] Approvazione Rafa
+
+### FASE 2: FRONTEND - COMPLETATA
+- [x] Colori brand (#E97E21, #7D3125)
+- [x] Dark theme su tutto
+- [x] Semplificato flow (no login)
+- [ ] Font Abolition (non ancora)
+
+### FASE 3: DATI - COMPLETATA
+- [x] Seed 5 menu
+- [x] Seed 43 piatti reali
+- [x] Sistema allergeni EU
+- [x] Multi-lingua IT/EN
+
+### FASE 4: INTEGRAZIONE - 50%
+- [x] API pubblica per tenant
+- [ ] FIX CORS (prossimo step!)
+- [ ] Test integrazione completa
+
+### FASE 5: FUNZIONALITA - 0%
 - [ ] Export PDF con brand
 - [ ] QR codes personalizzati
 - [ ] Preview menu pubblico
 
-### FASE 5: TEST E POLISH
+### FASE 6: TEST E POLISH - 0%
 - [ ] Test con Rafa
 - [ ] Iterazioni
 - [ ] Deploy (se serve)
+
+---
+
+## PROSSIMO STEP (Sessione 200)
+
+**1. FIX CORS - PRIORITA MASSIMA**
+```bash
+# Verificare CORSMiddleware in main.py
+# Porta 5174 deve essere in allow_origins
+```
+
+**2. TEST INTEGRAZIONE**
+- Frontend carica categorie da API
+- Frontend carica piatti da API
+- CRUD funziona
+
+**3. SE TEMPO**
+- Export PDF
+- QR codes
 
 ---
 
@@ -246,28 +172,30 @@
 
 | Data | Decisione | Perche |
 |------|-----------|--------|
-| 14 Gen 2026 | Uso INTERNO senza login pubblico | Solo famiglia Pra usa lo strumento |
+| 14 Gen 2026 | Uso INTERNO senza login | Solo famiglia Pra |
 | 14 Gen 2026 | 5 menu separati | Struttura reale Sesto Grado |
-| 14 Gen 2026 | Porta 5174 esclusiva | Non conflitto con altri progetti |
-| 14 Gen 2026 | Riutilizzo codice MenuMaster | Base solida, risparmio tempo |
+| 14 Gen 2026 | Porta 5174 | Non conflitto altri progetti |
+| 14 Gen 2026 | Dark theme | Eleganza brand |
+| 14 Gen 2026 | Public API con slug | Multi-tenancy senza auth |
 
 ---
 
-## PROSSIMO STEP (Sessione 199)
+## DATABASE (Docker)
 
-**Approvare design e iniziare implementazione**
+```bash
+# Containers
+docker ps
+# menumaster-backend, menumaster-db
 
-1. Rivedere design specs con Rafa
-2. Applicare colori brand al frontend
-3. Semplificare flow (no login)
-4. Creare struttura 5 menu
+# Reset seed
+docker exec -i menumaster-backend python seed_sesto_grado.py
 
-**File da leggere:**
-- `.sncp/progetti/menumaster/stato.md` (questo file)
-- `.sncp/progetti/menumaster/idee/20260114_DESIGN_SPECS_UI.md` (design)
+# Verificare dati
+curl http://localhost:8000/api/v1/public/menu/sesto-grado/categories
+curl http://localhost:8000/api/v1/public/menu/sesto-grado/dishes
+```
 
 ---
 
 *"Fatto BENE > Fatto VELOCE"*
 *"Una cosa alla volta, standard 100000%!"*
-*"Ultrapassar os proprios limites!"*

@@ -1,61 +1,73 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 198
-> **Versione:** v138.0.0 - MENUMASTER per SESTO GRADO - Design Specs Complete!
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 199
+> **Versione:** v139.0.0 - MENUMASTER IMPLEMENTAZIONE 70% - CORS da fixare!
 
 ---
 
-## SESSIONE 198 - MENUMASTER per SESTO GRADO
+## SESSIONE 199 - MENUMASTER IMPLEMENTAZIONE
 
 ```
 +================================================================+
 |                                                                |
-|   MENUMASTER per SESTO GRADO                                   |
-|   Strumento INTERNO gestione menu famiglia Pra                 |
+|   MENUMASTER per SESTO GRADO - IMPLEMENTAZIONE 70%!            |
 |                                                                |
-|   SESSIONE 198 - COMPLETATO:                                   |
+|   SESSIONE 199 - COMPLETATO:                                   |
 |                                                                |
-|   [x] Studiato Brand Manual Sesto Grado                        |
-|       - Colori: Arancio #E97E21, Marrone #7D3125               |
-|       - Font: ABOLITION (maiuscole)                            |
-|       - Logo: 6 gradi (arrampicata)                            |
+|   [x] FASE 2A: Brand Colors                                    |
+|       - tailwind.config.js con palette Sesto Grado             |
+|       - #E97E21 arancio, #7D3125 marrone                        |
+|       - Dark theme: #1C1C1E, #2C2C2E, #38383A                  |
 |                                                                |
-|   [x] Analizzati 3 menu PDF                                    |
-|       - Bistrot Leggero (pranzo) - 12 piatti                   |
-|       - Bistrot Unconventional (cena) - 12 piatti              |
-|       - Dessert - 5 piatti                                     |
-|       - Kids - 4 piatti                                        |
-|       - Pizza - 10 piatti                                      |
-|       TOTALE: 43 piatti con allergeni EU                       |
+|   [x] FASE 2B: Simplified Flow                                 |
+|       - Rimosso ProtectedRoute (no auth)                       |
+|       - Header "6° SESTO GRADO" con brand                      |
 |                                                                |
-|   [x] Design Specs UI/UX (cervella-marketing)                  |
-|       - Layout 3-column (sidebar/editor/preview)               |
-|       - Dark theme con accenti arancio/marrone                 |
-|       - Mobile responsive                                      |
-|       - Flow edit < 30 secondi                                 |
+|   [x] FASE 2C: Dark Theme su TUTTI i componenti                |
+|       - Dashboard, MenuEditor, Button, Card, Input             |
+|       - CategoryCard, DishCard, DishForm                       |
 |                                                                |
-|   [x] SNCP completo documentato                                |
-|       - stato.md con tutti i 43 piatti                         |
-|       - Design specs salvate                                   |
+|   [x] FASE 3A: Database Categories                             |
+|       - Tenant "sesto-grado" creato                            |
+|       - 5 menu (Bistrot L, Bistrot U, Dessert, Kids, Pizza)    |
+|                                                                |
+|   [x] FASE 3B: Database Dishes                                 |
+|       - seed_sesto_grado.py script creato                      |
+|       - 43 piatti REALI con allergeni EU + tag dietetici       |
+|                                                                |
+|   [x] FASE 3C: API Connection                                  |
+|       - public.py filtrato per tenant_id                       |
+|       - useMenu.ts con slug 'sesto-grado'                      |
+|                                                                |
+|   [!] PROBLEMA: CORS error!                                    |
+|       - Frontend localhost:5174 bloccato                       |
+|       - Backend localhost:8000 non accetta richieste           |
+|       - FIX: Verificare CORSMiddleware in main.py              |
 |                                                                |
 +================================================================+
+```
+
+### PROSSIMA SESSIONE 200 - PRIORITA
+
+```
+1. FIX CORS in backend/app/main.py
+   - Aggiungere localhost:5174 in allow_origins
+
+2. TEST integrazione frontend-backend
+   - Categorie si caricano
+   - Piatti si caricano
+   - CRUD funziona
+
+3. SE TEMPO:
+   - Export PDF
+   - QR codes
 ```
 
 ### SNCP MenuMaster (LEGGERE!)
 
 ```
-.sncp/progetti/menumaster/stato.md              # Stato completo + 43 piatti
-.sncp/progetti/menumaster/idee/20260114_DESIGN_SPECS_UI.md  # Design UI/UX
-```
-
-### Prossimi Step (Sessione 199)
-
-```
-1. Approvare design specs con Rafa
-2. Applicare colori brand (#E97E21, #7D3125)
-3. Semplificare flow (no login - uso interno)
-4. Creare struttura 5 menu
-5. Seed 43 piatti reali
+.sncp/progetti/menumaster/stato.md              # Stato AGGIORNATO sessione 199
+.sncp/progetti/menumaster/roadmaps/SESSIONE_199_IMPLEMENTAZIONE.md
 ```
 
 ### Come Avviare MenuMaster
@@ -69,6 +81,10 @@ docker-compose up -d
 # Frontend (porta ESCLUSIVA 5174!)
 cd frontend && npm run dev
 # UI: http://localhost:5174
+
+# Verificare API dati Sesto Grado
+curl http://localhost:8000/api/v1/public/menu/sesto-grado/categories
+curl http://localhost:8000/api/v1/public/menu/sesto-grado/dishes
 ```
 
 ---
@@ -1362,18 +1378,22 @@ Border: #38383A
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-14 10:40 (unknown)
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 11:32 (auto)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: b5418e7 - ANTI-COMPACT: PreCompact auto
+- **Ultimo commit**: 5222670 - ANTI-COMPACT: PreCompact auto
 - **File modificati** (3):
-  - sncp/stato/oggi.md
+  - .sncp/progetti/menumaster/roadmaps/SESSIONE_199_IMPLEMENTAZIONE.md
+  - PROMPT_RIPRESA.md
   - reports/scientist_prompt_20260114.md
-  - .swarm/handoff/HANDOFF_20260114_104039.md
 
 ### Note
 - Checkpoint automatico generato da hook
-- Trigger: unknown
+- Trigger: auto
 
 ---
