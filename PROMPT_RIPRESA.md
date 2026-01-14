@@ -1,7 +1,70 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 200
-> **Versione:** v140.0.0 - MENUMASTER PROTOTIPO COMPLETO!
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 201
+> **Versione:** v141.0.0 - CERVELLASWARM SCORE 7.5/10!
+
+---
+
+## SESSIONE 201 - CERVELLASWARM QUICK WINS + P0 CRITICI!
+
+```
++================================================================+
+|                                                                |
+|   SESSIONE 201: CervellaSwarm da 7.2 a 7.5/10!                 |
+|                                                                |
+|   QUICK WINS COMPLETATI:                                       |
+|   [x] oggi.md compaction (1078 -> 186 righe, -83%)             |
+|   [x] Merge miracallook/miracollook (typo eliminato)           |
+|   [x] RUOLI_CHEAT_SHEET.md (docs/) - chi fa cosa               |
+|   [x] Cron weekly_retro (lunedi 8:00)                          |
+|                                                                |
+|   P0 CRITICI COMPLETATI:                                       |
+|   [x] SwarmLogger v2.0.0 - Distributed Tracing!                |
+|       - trace_id, span_id, parent_span_id                      |
+|       - Context manager span() per nesting                     |
+|       - child_logger() per worker                              |
+|       - get_trace() per debugging                              |
+|   [x] Log rotation cron (ogni giorno 3:00)                     |
+|       - Puliti 46 worker logs > 7 giorni                       |
+|                                                                |
+|   COMMITS:                                                     |
+|   - f09092c: Quick Wins completati                             |
+|   - 255bbf7: P0 Critici - SwarmLogger v2.0.0                   |
+|                                                                |
++================================================================+
+```
+
+### Score CervellaSwarm Aggiornati
+
+```
+SNCP (Memoria)      7.0 -> 7.5  (+0.5)
+SISTEMA LOG         6.0 -> 7.0  (+1.0) <- SwarmLogger v2.0.0!
+AGENTI (Cervelle)   7.8 -> 8.2  (+0.4)
+INFRASTRUTTURA      8.0 -> 8.5  (+0.5)
+
+MEDIA:              7.2 -> 7.5  (+0.3)
+TARGET:             9.5
+GAP:                2.3 -> 2.0
+```
+
+### CRON JOBS ATTIVI
+
+```
+Lunedi 8:00:  weekly_retro_cron.sh (report settimanale)
+Ogni 3:00:    log_rotate_cron.sh (pulizia log)
+```
+
+### MAPPA Aggiornata
+
+File: `.sncp/progetti/cervellaswarm/MAPPA_9.5_MASTER.md`
+
+### Prossimi Step (P1 ALTO)
+
+```
+1. SNCP automazione updates
+2. LOG basic alerting (Slack)
+3. AGENTI JSON manifests top 5
+```
 
 ---
 
@@ -132,13 +195,16 @@ cd frontend && npm run dev
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-14 13:00 (unknown)
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 14:15 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 315a068 - Sessione 200: MenuMaster Prototipo Completo
-- **File modificati** (1):
-  - reports/engineer_report_20260114_125558.json
+- **Ultimo commit**: f1aa631 - ANTI-COMPACT: PreCompact auto
+- **File modificati** (2):
+  - eports/scientist_prompt_20260114.md
+  - .swarm/handoff/HANDOFF_20260114_141541.md
 
 ### Note
 - Checkpoint automatico generato da hook
