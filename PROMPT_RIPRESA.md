@@ -1,11 +1,77 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 203
-> **Versione:** v143.0.0 - RESET FILOSOFICO!
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 202 MIRACOLLOOK
+> **Versione:** v2.6.0 - UPLOAD ATTACHMENTS + CONTEXT MENU RICERCATO!
 
 ---
 
-## SESSIONE 203 - RESET: "SU CARTA" != "REALE"
+## SESSIONE 202 MIRACOLLOOK - Upload Attachments + Context Menu!
+
+```
++================================================================+
+|                                                                |
+|   MIRACOLLOOK v2.6.0 - SPRINT 3 IN PROGRESS!                   |
+|                                                                |
+|   COMPLETATO OGGI:                                             |
+|                                                                |
+|   1. CONTEXT MENU - RICERCA APPROFONDITA (2000+ righe!)        |
+|      - Gmail, Outlook, Superhuman, Apple Mail analizzati       |
+|      - UX Strategy hotel-specific                              |
+|      - Design specs pronti per implementazione                 |
+|      - DIFFERENZIATORE: Hotel Actions (Link Booking, etc.)     |
+|                                                                |
+|   2. UPLOAD ATTACHMENTS - IMPLEMENTATO!                        |
+|      Backend:                                                  |
+|      - compose.py + utils.py con MIMEMultipart                 |
+|      - Endpoint /send accetta UploadFile                       |
+|      - Validazione 25MB, MIME auto-detection                   |
+|      - requirements.txt: aggiunto python-multipart             |
+|                                                                |
+|      Frontend:                                                 |
+|      - useAttachments.ts - Hook gestione files                 |
+|      - AttachmentPicker.tsx - UI con preview                   |
+|      - api.ts - FormData per upload                            |
+|      - ComposeModal.tsx - Picker integrato                     |
+|                                                                |
+|      AUDIT GUARDIANA QUALITA: PASSED 9/10                      |
+|                                                                |
+|   DA TESTARE:                                                  |
+|   - Test manuale UI attachments                                |
+|                                                                |
++================================================================+
+```
+
+### Files SNCP Creati Oggi
+
+```
+studi/
+├── RICERCA_CONTEXT_MENU.md (indice)
+├── RICERCA_CONTEXT_MENU_PARTE1-4.md
+├── CONTEXT_MENU_UX_STRATEGY.md
+
+decisioni/
+├── CONTEXT_MENU_DESIGN_SPECS.md
+├── UPLOAD_ATTACHMENTS_SPECS.md
+
+roadmaps/
+└── SPRINT_UPLOAD_ATTACHMENTS.md
+
+reports/
+└── AUDIT_ATTACHMENTS_20260114.md
+```
+
+### Prossimi Step
+
+```
+1. [ ] Test manuale Upload Attachments
+2. [ ] Contacts Autocomplete (6h)
+3. [ ] Templates risposte (4h)
+4. [ ] Context Menu implementazione (~13h)
+```
+
+---
+
+## SESSIONE 203 CERVELLASWARM - RESET: "SU CARTA" != "REALE"
 
 ```
 +================================================================+

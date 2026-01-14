@@ -438,45 +438,31 @@ Frontend: http://localhost:5173 - OK
 ## PROSSIMI STEP
 
 ```
+FASE 1 EMAIL SOLIDO: ✅ 100% COMPLETO!
+
 SPRINT 1 - CRITICI: ✅ COMPLETO!
-[x] Mark as Read/Unread     (2h) - FATTO Sessione 192!
-[x] Drafts auto-save        (6h) - FATTO Sessione 194!
+[x] Mark as Read/Unread     (2h) - Sessione 192
+[x] Drafts auto-save        (6h) - Sessione 194
 
 SPRINT 2 - ALTI: ✅ COMPLETO!
-[x] Bulk Actions            (5h) - FATTO Sessione 194!
-[x] Thread View             (4h) - FATTO Sessione 195!
-[x] Labels Custom           (3h) - FATTO Sessione 195!
+[x] Bulk Actions            (5h) - Sessione 194
+[x] Thread View             (4h) - Sessione 195
+[x] Labels Custom           (3h) - Sessione 195
 
->>> CONTEXT MENU - RICERCA COMPLETA! (Sessione 202) <<<
+SPRINT 3 - COMPOSIZIONE: IN PROGRESS
+[x] Upload Attachments      (4h) - Sessione 202! Audit 9/10
+[ ] Contacts Autocomplete   (6h) <<< PROSSIMO
+[ ] Templates risposte      (4h)
 
-SPRINT CONTEXT MENU (~13h):
+CONTEXT MENU: RICERCATO, PRONTO (~13h)
 [ ] Sprint 1: Menu base     (3h) - Gmail-equivalent
 [ ] Sprint 2: Hotel Actions (6h) - IL DIFFERENZIATORE!
 [ ] Sprint 3: Polish        (4h) - Snooze smart + analytics
-
-SPRINT 3 - COMPOSIZIONE (~14h):
-[ ] Upload Attachments      (4h) <<< PROSSIMO
-[ ] Contacts Autocomplete   (6h)
-[ ] Templates risposte      (4h)
 
 SPRINT 4 - POLISH (~12h):
 [ ] Settings Page           (8h)
 [ ] Firma email             (2h)
 [ ] Light mode toggle       (2h)
-
-SPRINT 2 - ALTI (~7h): (OLD - COMPLETATO!)
-[x] Bulk Actions            (5h) - FATTO Sessione 194!
-[ ] Thread View             (4h) <<< PROSSIMO
-[ ] Labels Custom           (3h)
-
-SPRINT 3 - COMPOSIZIONE (~14h):
-[ ] Upload Attachments      (4h)
-[ ] Contacts Autocomplete   (6h)
-[ ] Templates risposte      (4h)
-
-SPRINT 4 - POLISH (~12h):
-[ ] Settings Page           (8h)
-[ ] Firma email             (2h)
 [ ] Light mode              (2h)
 
 POI:
