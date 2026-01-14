@@ -70,6 +70,89 @@ data/
 
 ---
 
+---
+
+## SNCP Maintenance (Sessione 209)
+
+### Daily Maintenance
+
+Health check automatico + cleanup file temporanei.
+
+```bash
+# Ogni giorno alle 8:30
+30 8 * * * /Users/rafapra/Developer/CervellaSwarm/scripts/cron/sncp_daily_maintenance.sh
+```
+
+**Cosa fa:**
+- Esegue health-check.sh e salva report
+- Pulisce file temporanei (.DS_Store, *.bak)
+- Verifica dimensioni file (warning se > 300 righe)
+- Genera statistiche SNCP
+
+**Test manuale:**
+```bash
+/Users/rafapra/Developer/CervellaSwarm/scripts/cron/sncp_daily_maintenance.sh
+```
+
+### Weekly Archive
+
+Archivia file vecchi (> 30 giorni) per mantenere SNCP pulito.
+
+```bash
+# Ogni Lunedi alle 6:00
+0 6 * * 1 /Users/rafapra/Developer/CervellaSwarm/scripts/cron/sncp_weekly_archive.sh
+```
+
+**Cosa fa:**
+- Archivia file da idee/, reports/, decisioni/
+- Mantiene stato.md e roadmaps/ sempre attivi
+- Pulisce archivi > 90 giorni
+- Genera report settimanale
+
+**Test manuale:**
+```bash
+/Users/rafapra/Developer/CervellaSwarm/scripts/cron/sncp_weekly_archive.sh
+```
+
+### LAUNCHD (Raccomandato - Nativo Apple)
+
+Meglio di cron! Esegue anche quando apri il Mac.
+
+```bash
+# Verifica agents attivi
+launchctl list | grep cervellaswarm
+
+# Daily: AL LOGIN + ore 8:30
+~/Library/LaunchAgents/com.cervellaswarm.sncp.daily.plist
+
+# Weekly: Lunedi ore 6:00
+~/Library/LaunchAgents/com.cervellaswarm.sncp.weekly.plist
+
+# Ricaricare dopo modifiche
+launchctl unload ~/Library/LaunchAgents/com.cervellaswarm.sncp.daily.plist
+launchctl load ~/Library/LaunchAgents/com.cervellaswarm.sncp.daily.plist
+```
+
+### Crontab (Alternativa)
+
+```bash
+# Copia e incolla tutto nel crontab (crontab -e)
+
+# CervellaSwarm Weekly Retro - ogni lunedi alle 8:00
+0 8 * * 1 /Users/rafapra/Developer/CervellaSwarm/scripts/cron/weekly_retro_cron.sh
+
+# CervellaSwarm Log Rotation - ogni giorno alle 3:00
+0 3 * * * /Users/rafapra/Developer/CervellaSwarm/scripts/cron/log_rotate_cron.sh
+
+# SNCP Daily Maintenance - ogni giorno alle 8:30
+30 8 * * * /Users/rafapra/Developer/CervellaSwarm/scripts/cron/sncp_daily_maintenance.sh
+
+# SNCP Weekly Archive - ogni lunedi alle 6:00
+0 6 * * 1 /Users/rafapra/Developer/CervellaSwarm/scripts/cron/sncp_weekly_archive.sh
+```
+
+---
+
 **Created:** 2026-01-01
-**Last Updated:** 2026-01-01
-**Version:** 1.0.0
+**Last Updated:** 2026-01-14 (Sessione 209 - SNCP Maintenance)
+**Version:** 2.0.0

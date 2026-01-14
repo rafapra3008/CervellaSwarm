@@ -1,8 +1,8 @@
 # ROADMAP - Comunicazione Interna Automatica
 
 > **Data:** 14 Gennaio 2026
-> **Sessione:** 207 (planning) / 209 (FASE 1 + FASE 2)
-> **Status:** IN CORSO - FASE 1 + FASE 2 COMPLETATE!
+> **Sessione:** 207 (planning) / 209 (FASE 1 + 2 + 3!)
+> **Status:** QUASI COMPLETA - Solo FASE 4 (Validazione) rimasta!
 > **Priorità:** ALTA - "Avere attrezzature ma non usarle = non averle"
 
 ---
@@ -104,12 +104,26 @@
     - Hook automatici come enforcement
 ```
 
-### FASE 3 - Cron Manutenzione (1h)
+### FASE 3 - Cron Manutenzione (1h) - COMPLETATA + UPGRADE!
 ```
-[ ] Creare sncp_daily_maintenance.sh
-[ ] Creare sncp_weekly_archive.sh
-[ ] Aggiungere a crontab
-[ ] Verificare funzionamento
+[X] Creare sncp_daily_maintenance.sh
+    - Health check automatico
+    - Cleanup file temporanei
+    - Verifica dimensioni (warning se > 300 righe)
+    - Statistiche SNCP
+[X] Creare sncp_weekly_archive.sh
+    - Archivia file > 30 giorni
+    - Pulisce archivi > 90 giorni
+    - Genera report settimanale
+[X] UPGRADE: Launchd invece di cron!
+    - com.cervellaswarm.sncp.daily.plist (AL LOGIN + 8:30)
+    - com.cervellaswarm.sncp.weekly.plist (Lunedi 6:00)
+    - Nativo Apple, piu robusto di cron
+    - Se Mac spento → recupera al prossimo login
+[X] Verificare funzionamento
+    - Daily: TESTATO OK (eseguito al load!)
+    - Weekly: TESTATO OK
+    - Launchd agents: ATTIVI
 ```
 
 ### FASE 4 - Validazione (1h)

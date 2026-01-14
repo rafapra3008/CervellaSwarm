@@ -1,0 +1,22 @@
+
+============================================
+SNCP DAILY MAINTENANCE - 2026-01-14
+============================================
+=== SNCP Daily Health Check ===
+Health check salvato: /Users/rafapra/Developer/CervellaSwarm/.sncp/reports/daily/health_2026-01-14.txt
+Warning: 1 issue trovati
+=== Cleanup file temporanei ===
+Cleanup completato
+=== Verifica dimensioni file ===
+WARNING: miracollo/stato.md ha 488 righe (max 300)
+ATTENZIONE: 1 file troppo grandi - considera compattazione
+=== Statistiche SNCP ===
+  cervellaswarm: 37 file
+  contabilita: 1 file
+  crypto-research: 16 file
+  menumaster: 3 file
+  miracollo: 235 file
+  Dimensione totale SNCP: 6.5M
+
+Manutenzione completata!
+============================================
