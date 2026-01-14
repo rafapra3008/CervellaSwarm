@@ -1,16 +1,16 @@
 # PROMPT RIPRESA - CervellaSwarm
 
 > **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 195
-> **Versione:** v134.0.0 - MIRACOLLOOK v2.4.0 + THREAD VIEW!
+> **Versione:** v135.0.0 - MIRACOLLOOK v2.5.0 + SPRINT 2 COMPLETO!
 
 ---
 
-## SESSIONE 195 - THREAD VIEW IMPLEMENTATO!
+## SESSIONE 195 - SPRINT 2 COMPLETO! Thread + Labels
 
 ```
 +================================================================+
 |                                                                |
-|   MIRACOLLOOK v2.4.0 - "Conversazioni come Gmail!"             |
+|   MIRACOLLOOK v2.5.0 - "Sprint 2 finito, FASE 1 al 100%!"      |
 |                                                                |
 |   THREAD VIEW COMPLETO:                                        |
 |                                                                |
@@ -41,9 +41,15 @@
 |   - UX competitors (Gmail, Superhuman, Outlook, Apple Mail)    |
 |   - Design specs complete                                      |
 |                                                                |
+|   LABELS CUSTOM (stesso giorno!):                              |
+|   - Backend: CRUD labels (create, update, delete)              |
+|   - Backend: Apply/remove labels to messages                   |
+|   - Frontend: useLabels hooks + LabelPicker component          |
+|   - Sidebar: Sezione Labels con create inline                  |
+|                                                                |
 |   STATO SPRINT:                                                |
 |   [x] Sprint 1 CRITICI: 100%                                   |
-|   [x] Sprint 2: 60% (Bulk + Thread OK, Labels pending)         |
+|   [x] Sprint 2 ALTI: 100% (Bulk + Thread + Labels!)            |
 |                                                                |
 +================================================================+
 ```
@@ -63,11 +69,16 @@
 ### Prossimi Step Miracollook
 
 ```
-SPRINT 2 (rimanente ~3h):
-[x] Thread View (4h) - FATTO!
-[ ] Labels Custom (3h) <<< PROSSIMO
+SPRINT 1 CRITICI: 100% COMPLETO!
+[x] Mark Read/Unread
+[x] Drafts auto-save
 
-SPRINT 3 (~14h):
+SPRINT 2 ALTI: 100% COMPLETO!
+[x] Bulk Actions
+[x] Thread View
+[x] Labels Custom
+
+SPRINT 3 (~14h): <<< PROSSIMO
 [ ] Upload Attachments (4h)
 [ ] Contacts Autocomplete (6h)
 [ ] Templates risposte (4h)

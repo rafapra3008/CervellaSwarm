@@ -1,7 +1,7 @@
 # STATO - Miracollook
 
 > **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 195
-> **Status:** v2.4.0 - THREAD VIEW IMPLEMENTATO!
+> **Status:** v2.5.0 - THREAD VIEW + LABELS CUSTOM!
 
 ---
 
@@ -27,7 +27,7 @@
 FASE 0 (Fondamenta)     [####################] 100% COMPLETA!
 FASE PERFORMANCE P1     [####################] 100% MERGED!
 FASE PERFORMANCE P2     [####################] 100% MERGED!
-FASE 1 (Email Solido)   [##################..] 85% <<< PROGRESSO!
+FASE 1 (Email Solido)   [####################] 100% SPRINT 2 COMPLETO!
 FASE 2 (PMS Integration)[....................] 0%
 ```
 
@@ -68,8 +68,38 @@ FASE 2 (PMS Integration)[....................] 0%
 |   - Unread dot indicator                                       |
 |   - Dark mode, cyan accent #6366f1                             |
 |                                                                |
-|   SPRINT 2 ALTI: 60% (Bulk OK, Thread OK, Labels pending)      |
+|   SPRINT 2 ALTI: 100% COMPLETO!                                |
 |                                                                |
++================================================================+
+```
+
+### Labels Custom (stesso giorno!)
+
+```
++================================================================+
+|   LABELS CUSTOM - "Organizza come vuoi!"                       |
++================================================================+
+
+BACKEND (labels.py - 280 righe):
+- POST /gmail/labels - Crea label con colori
+- PUT /gmail/labels/{id} - Modifica nome/colore
+- DELETE /gmail/labels/{id} - Elimina label
+- POST /messages/{id}/labels - Applica labels
+- DELETE /messages/{id}/labels - Rimuovi labels
+
+FRONTEND:
+- types/label.ts - TypeScript types
+- useLabels.ts - 6 custom hooks
+- api.ts - 6 API methods
+- LabelPicker.tsx - Selezione labels
+- Sidebar.tsx - Sezione Labels con create inline
+
+FEATURES:
+- Crea labels dalla sidebar (click +)
+- Input inline con Enter per creare
+- Lista labels utente con colori
+- Protezione labels di sistema
+
 +================================================================+
 ```
 
@@ -78,6 +108,7 @@ FASE 2 (PMS Integration)[....................] 0%
 | File | Tipo | Righe | Descrizione |
 |------|------|-------|-------------|
 | `backend/gmail/threads.py` | NUOVO | 200 | Endpoint threads.list + threads.get |
+| `backend/gmail/labels.py` | NUOVO | 280 | CRUD labels custom |
 | `backend/gmail/api.py` | MOD | +1 | Include threads router |
 | `frontend/src/types/thread.ts` | NUOVO | 40 | TypeScript types |
 | `frontend/src/hooks/useThreads.ts` | NUOVO | 100 | React hooks |
