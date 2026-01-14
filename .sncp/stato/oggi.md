@@ -1,8 +1,57 @@
 # STATO OGGI
 
 > **Data:** 14 Gennaio 2026 (Martedi)
-> **Sessione:** 201 - QUICK WINS CervellaSwarm
-> **Ultimo aggiornamento:** Sessione 201
+> **Sessione:** 202 - P1 COMPLETATI
+> **Ultimo aggiornamento:** Sessione 202
+
+---
+
+## Sessione 202 - P1 COMPLETATI! SNCP + LOG + AGENTI
+
+```
++================================================================+
+|                                                                |
+|   SESSIONE 202: DA 7.5 A 7.8/10!                               |
+|                                                                |
+|   SNCP SPRINT 2 - AUTOMAZIONE BASE:                            |
+|   [x] pre-session-check.sh - verifica stato all'avvio          |
+|   [x] post-session-update.sh - prompt fine sessione            |
+|   [x] health-check.sh - dashboard ASCII completa               |
+|   [x] compact-state.sh - compattazione automatica              |
+|   [x] 5 worker templates con SNCP output section               |
+|   [x] _SNCP_WORKER_OUTPUT.md - template condiviso              |
+|                                                                |
+|   LOG P1 - SISTEMA ALERTING:                                   |
+|   [x] src/alerting/ - sistema completo                         |
+|   [x] ConsoleNotifier, FileNotifier, SlackNotifier             |
+|   [x] PatternDetector (keywords, spikes, stuck)                |
+|   [x] check-alerts.sh + alert_check_cron.sh                    |
+|   [!] Alerting PARCHEGGIATO - controlliamo manualmente         |
+|                                                                |
+|   AGENTI P1 - JSON MANIFESTS v1.1.0:                           |
+|   [x] output_schema per 5 agenti top                           |
+|       backend, frontend, researcher, guardiana-qualita, tester |
+|   [!] JSON per tutti 16 PARCHEGGIATO - "su carta != reale"     |
+|                                                                |
+|   SCORE AGGIORNATI:                                            |
+|   SNCP:     7.5 -> 8.0  (+0.5) <- Automazione!                 |
+|   LOG:      7.0 -> 7.5  (+0.5) <- Alerting!                    |
+|   AGENTI:   8.2 -> 8.5  (+0.3) <- output_schema!               |
+|   INFRA:    8.5 -> 8.5  (=)                                    |
+|                                                                |
+|   MEDIA:    7.5 -> 7.8  (+0.3)                                 |
+|   GAP:      2.0 -> 1.7                                         |
+|                                                                |
+|   COMMIT: cdff8f6 - PUSHED!                                    |
+|                                                                |
++================================================================+
+```
+
+### Decisioni Sessione 202
+
+1. **Alerting parcheggiato** - Sistema pronto, attiviamo quando serve. Per ora controlliamo insieme durante sessioni.
+2. **JSON schema parcheggiato** - Completare tutti 16 è "su carta", non porta valore finché non c'è validazione automatica.
+3. **Focus su REALE** - Meglio usare e testare quello che abbiamo che aggiungere altra "carta".
 
 ---
 
