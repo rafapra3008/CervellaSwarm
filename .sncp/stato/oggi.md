@@ -25,8 +25,8 @@ PARTE 2 - AUDIT E FIX:
 - FIX: Creati symlink sncp-init + verify-sync
 - TESTATI: Entrambi funzionano!
 
-SCORE: 8.2 (audit) → 9.2 (dopo fix) = +1.0 punto!
-GAP al target: 0.3 punti
+SCORE: 8.2 → 9.2 → 9.4 = +1.2 punti totali!
+GAP al target: 0.1 punti (quasi al 9.5!)
 
 "SU CARTA != REALE" - La Costituzione aveva ragione!
 
@@ -104,13 +104,13 @@ INFORMAZIONI CHIAVE:
 
 | Progetto | Area | Score | Note |
 |----------|------|-------|------|
-| CervellaSwarm | SNCP | 9.2/10 | v4.0 + symlink FIXED! |
+| CervellaSwarm | SNCP | 9.4/10 | v4.0 + test automatici! |
 | CervellaSwarm | Log | 7.5/10 | SwarmLogger v2.0.0 |
 | CervellaSwarm | Agenti | 8.5/10 | 16 operativi |
-| CervellaSwarm | Infra | 9.0/10 | Hook + Launchd attivi |
+| CervellaSwarm | Infra | 9.5/10 | Hook + Launchd VERIFICATI! |
 | Miracollo | RateParity | 9.5/10 | STABILE |
 | Miracollo | Room Manager | Studio | VDA Etheos |
-| **MEDIA** | - | **8.7/10** | Target: 9.5 (gap: 0.8) |
+| **MEDIA** | - | **8.8/10** | Target: 9.5 (gap: 0.7) |
 
 ---
 
