@@ -1,7 +1,40 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 192 (Parallela)
-> **Versione:** v131.0.0 - AUDIT COMPLETO CERVELLASWARM + EVENTI LOCALI!
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 192 FINALE
+> **Versione:** v132.0.0 - MIRACOLLOOK 9.5/10 + EVENTI LOCALI!
+
+---
+
+## SESSIONE 192 - MIRACOLLOOK QUALITY 9.5/10!
+
+```
++================================================================+
+|                                                                |
+|   MIRACOLLOOK - "Da 8.5 a 9.5/10!"                             |
+|                                                                |
+|   IMPLEMENTATO:                                                |
+|   1. Mark Read/Unread (backend + frontend + shortcut U)        |
+|   2. Performance Superhuman (~40-80ms, target <100ms OK!)      |
+|      - React.memo + useCallback (18 handlers)                  |
+|      - Code splitting (5 modali lazy, -68KB)                   |
+|      - usePrefetchTopUnread (top 3 automatico)                 |
+|   3. Cleanup console.log (28 puliti)                           |
+|   4. CommandPalette navigazione (5 views)                      |
+|   5. Split api.py in 9 moduli (1756->max 403 righe)            |
+|                                                                |
+|   BACKEND SPLIT:                                               |
+|   api.py(28) compose.py(306) messages.py(368) views.py(247)    |
+|   attachments.py(207) actions.py(403) search.py(85)            |
+|   ai.py(192) utils.py(124) - TUTTI <500 RIGHE!                 |
+|                                                                |
+|   COMMITS MIRACOLLOOK:                                         |
+|   - 48e3d7e: Performance Superhuman + Mark Read/Unread         |
+|   - b46ff0b: Refactor Split api.py in 9 moduli                 |
+|                                                                |
+|   PROSSIMO: Drafts auto-save (6h)                              |
+|                                                                |
++================================================================+
+```
 
 ---
 
@@ -980,17 +1013,23 @@ Border: #38383A
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-14 06:09 (unknown)
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 06:42 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 86e3f89 - Sessione 192: AUDIT COMPLETO CervellaSwarm - 3500+ righe documentazione!
+- **Ultimo commit**: 9219f39 - ANTI-COMPACT: PreCompact auto
 - **File modificati** (5):
-  - sncp/progetti/miracollo/moduli/miracallook/MAPPA_FUNZIONI.md
-  - .sncp/progetti/miracollo/moduli/miracallook/stato.md
-  - .sncp/stato/oggi.md
-  - reports/scientist_prompt_20260113.md
-  - .sncp/progetti/miracollo/moduli/miracallook/reports/AUDIT_Performance_20260114.md
+  - sncp/stato/oggi.md
+  - .swarm/handoff/HANDOFF_20260114_062506.md
+  - PROMPT_RIPRESA.md
+  - reports/engineer_report_20260114_062538.json
+  - reports/scientist_prompt_20260114.md
 
 ### Note
 - Checkpoint automatico generato da hook
