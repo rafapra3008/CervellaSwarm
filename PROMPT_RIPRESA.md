@@ -1,7 +1,68 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 203 CHECKPOINT
-> **Versione:** v2.8.0 - MIRACOLLO ML TRAINING + WHATSAPP SECURITY!
+> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione EXTRA Landing Page
+> **Versione:** v2.8.1 - MIRACOLLO LANDING PAGE LIVE!
+
+---
+
+## SESSIONE EXTRA - LANDING PAGE MIRACOLLO LIVE!
+
+```
++================================================================+
+|                                                                |
+|   SESSIONE EXTRA - LANDING PAGE MIRACOLLO!                     |
+|   14 Gennaio 2026 (pomeriggio)                                 |
+|                                                                |
+|   SESSIONE SPECIFICA per creare e deployare la landing page    |
+|   di Miracollo su https://miracollo.com                        |
+|                                                                |
+|   COMPLETATO:                                                  |
+|                                                                |
+|   1. LANDING PAGE NUOVA (da zero!)                             |
+|      - Design viola/gradient moderno                           |
+|      - Hero con particelle canvas animate                      |
+|      - Effetto "sciame magnetico" + ESPLOSIONE!                |
+|      - Bento cards per features                                |
+|      - Stats con counter animation                             |
+|                                                                |
+|   2. COPY & MESSAGING                                          |
+|      - "Revenue Management con AI che capisce il tuo hotel"    |
+|      - "Il PMS con l'AI che ti dice il perché."                |
+|      - Tutto messaging rivisitato                              |
+|                                                                |
+|   3. FORM WAITLIST                                             |
+|      - Formspree integration (meeeoozk)                        |
+|      - AJAX submit con feedback                                |
+|      - "Entra in lista d'attesa"                               |
+|                                                                |
+|   4. BILINGUE IT/EN                                            |
+|      - index.html (italiano)                                   |
+|      - en/index.html (english)                                 |
+|      - Toggle lingua in alto a destra                          |
+|                                                                |
+|   5. DEPLOY PRODUZIONE                                         |
+|      - https://miracollo.com - LIVE!                           |
+|      - https://miracollo.com/en/ - LIVE!                       |
+|      - Problema risolto: cartella corretta                     |
+|        /home/rafapra/app/frontend/                             |
+|                                                                |
+|   FILES CREATI/MODIFICATI:                                     |
+|   - frontend/index.html (landing IT)                           |
+|   - frontend/en/index.html (landing EN)                        |
+|   - frontend/js/particles.js (sciame + esplosione!)            |
+|   - frontend/js/scroll-animations.js (counter, scroll)         |
+|                                                                |
++================================================================+
+```
+
+### Note Tecniche Deploy
+
+```
+IMPORTANTE PER FUTURO:
+- I file vanno in /home/rafapra/app/frontend/ (NON /app/miracollo/frontend/)
+- Nginx serve da quella cartella
+- rsync -avz file miracollo-vm:/home/rafapra/app/frontend/
+```
 
 ---
 

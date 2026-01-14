@@ -1,8 +1,40 @@
 # STATO OGGI
 
 > **Data:** 14 Gennaio 2026 (Martedi)
-> **Sessione:** 203 - MIRACOLLO ML + SECURITY
-> **Ultimo aggiornamento:** Sessione 203
+> **Sessione:** EXTRA - Landing Page Miracollo
+> **Ultimo aggiornamento:** Sessione EXTRA (pomeriggio)
+
+---
+
+## SESSIONE EXTRA - LANDING PAGE MIRACOLLO LIVE!
+
+```
++================================================================+
+|                                                                |
+|   SESSIONE EXTRA - LANDING PAGE MIRACOLLO!                     |
+|   14 Gennaio 2026 (pomeriggio)                                 |
+|                                                                |
+|   SESSIONE SPECIFICA per landing page.                         |
+|   https://miracollo.com - LIVE!                                |
+|                                                                |
+|   COMPLETATO:                                                  |
+|   [x] Landing nuova da zero (design viola/gradient)            |
+|   [x] Particelle canvas "sciame magnetico" + ESPLOSIONE        |
+|   [x] Copy: "Il PMS con l'AI che ti dice il perché."           |
+|   [x] Form waitlist Formspree                                  |
+|   [x] Bilingue IT/EN con toggle                                |
+|   [x] Deploy produzione (miracollo.com)                        |
+|                                                                |
+|   FILES:                                                       |
+|   - frontend/index.html (IT)                                   |
+|   - frontend/en/index.html (EN)                                |
+|   - frontend/js/particles.js                                   |
+|   - frontend/js/scroll-animations.js                           |
+|                                                                |
+|   NOTA DEPLOY: /home/rafapra/app/frontend/                     |
+|                                                                |
++================================================================+
+```
 
 ---
 
