@@ -1,22 +1,20 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 222
-> **CLI FUNZIONA CON API REALE! PRONTO PER npm publish!**
+> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 223
+> **MOMENTO STORICO: cervellaswarm@0.1.0 SU NPM!**
 
 ---
 
-## SESSIONE 222 - RISULTATO
+## SESSIONE 223 - RISULTATO
 
 ```
 +================================================================+
-|   CLI COMPLETA CON API ANTHROPIC REALE!                        |
+|   PACCHETTO PUBBLICATO SU NPM!                                 |
 |                                                                |
-|   - 112 test passano (erano 104)                               |
-|   - API Anthropic funziona!                                    |
-|   - Retry logic + timeout                                      |
-|   - Package npm ready (17.8 kB)                                |
+|   npm install -g cervellaswarm   FUNZIONA!                     |
+|   https://www.npmjs.com/package/cervellaswarm                  |
 |                                                                |
-|   CLI MVP PRONTO PER PUBBLICAZIONE!                            |
+|   FASE 2: 0% -> 50%                                            |
 +================================================================+
 ```
 
@@ -24,48 +22,44 @@
 
 ## COSA FUNZIONA
 
-| Feature | Stato |
-|---------|-------|
-| `cervellaswarm init` | OK |
-| `cervellaswarm task` | OK - API REALE! |
-| `cervellaswarm status` | OK |
-| `cervellaswarm resume` | OK |
-| Routing automatico | OK |
-| Retry su rate limit | OK |
-| Timeout 2 min | OK |
+```bash
+npm install -g cervellaswarm    # Installa globalmente
+cervellaswarm --help            # Mostra comandi
+cervellaswarm init              # Inizializza progetto
+cervellaswarm task "..."        # Esegue task con API REALE
+cervellaswarm status            # Mostra stato
+cervellaswarm resume            # Riprende sessione
+```
 
 ---
 
-## FILE CREATI/MODIFICATI
+## STATO TECNICO
 
-```
-packages/cli/
-├── src/agents/spawner.js     # RISCRITTO - Usa @anthropic-ai/sdk
-├── package.json              # +@anthropic-ai/sdk, +files field
-├── .env.example              # NUOVO
-├── .npmignore                # NUOVO
-├── LICENSE                   # NUOVO
-├── README.md                 # NUOVO - Per npm
-└── test/agents/spawner.test.js  # Aggiornato
-```
+| Cosa | Stato |
+|------|-------|
+| Package npm | v0.1.0 PUBBLICO |
+| 112 test | PASSANO |
+| API Anthropic | FUNZIONA |
+| Retry + timeout | IMPLEMENTATO |
 
 ---
 
 ## PROSSIMA SESSIONE
 
 ```
-1. [ ] Pubblicare su npm (npm publish)
-2. [ ] Testare installazione globale
-3. [ ] Aggiungere streaming output
-4. [ ] Documentazione avanzata
+1. [ ] Recap calmo di tutto il pacchetto
+2. [ ] Audit: test, README, struttura
+3. [ ] Getting Started per esterni
+4. [ ] Test flusso utente completo
+5. [ ] Trovare 5 tester esterni
 ```
 
 ---
 
 ## TL;DR
 
-**Sessione 222:** API REALE funziona! CLI pronta per npm publish.
+**Sessione 223:** MOMENTO STORICO! Pacchetto npm PUBBLICATO!
 
-**Prossimo:** `npm publish` e test installazione globale.
+**Prossimo:** Recap, audit, trovare tester.
 
 *"Un progresso al giorno = 365 progressi all'anno."*
