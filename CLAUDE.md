@@ -97,6 +97,21 @@ verify-sync [progetto]
 [ ] verify-sync eseguito (hook automatico lo fa!)
 ```
 
+### LIMITI FILE - OBBLIGATORI!
+
+```
++----------------------------------------------------------------+
+|   PROMPT_RIPRESA.md: MAX 300 RIGHE                             |
+|   - Se > 300: ARCHIVIA sessioni vecchie!                       |
+|   - Archivio: .sncp/progetti/{progetto}/archivio/              |
+|                                                                |
+|   oggi.md: MAX 60 RIGHE                                        |
+|   - Solo stato OGGI, non storico                               |
+|                                                                |
+|   VIOLAZIONE = ERRORE GRAVE!                                   |
++----------------------------------------------------------------+
+```
+
 ### HOOK AUTOMATICI ATTIVI
 
 | Momento | Hook | Cosa Fa |
