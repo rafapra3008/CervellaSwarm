@@ -1,19 +1,81 @@
 # Stato CervellaSwarm
-> Ultimo aggiornamento: 15 Gennaio 2026 - Sessione 213
+> Ultimo aggiornamento: 15 Gennaio 2026 - Sessione 214
 
 ---
 
 ## TL;DR
 
 ```
-SCORE ATTUALE: 9.4/10 REALE!
+SCORE ATTUALE: 9.5/10 REALE! (TARGET RAGGIUNTO!)
 TARGET: 9.5/10
-GAP: 0.1 punti (quasi al target!)
+GAP: 0 punti
 
-SESSIONE 213: REC-2 + SPLIT STATO COMPLETATI!
-- REC-2: AZIONE #2 READ SNCP FIRST in tutti 16 agenti!
-- REC-3: ERA GIA' FATTO (AUTO_SVEGLIA=true default)
-- Split miracollo/stato.md: 554 → 400 righe
+SESSIONE 214: PRE-FLIGHT + POST-FLIGHT IMPLEMENTATI!
+- PRE-FLIGHT CHECK: 3 domande core + 1 random in tutti 16 agenti
+- POST-FLIGHT CHECK: COSTITUZIONE-APPLIED in tutti 16 agenti
+- Score Guardiana Qualita: 9.5/10 APPROVATO!
+```
+
+---
+
+## SESSIONE 214 - PRE-FLIGHT + POST-FLIGHT! (15 Gennaio 2026 notte)
+
+```
++================================================================+
+|   SESSIONE 214 - LETTURA VERA COSTITUZIONE IMPLEMENTATA!        |
+|   15 Gennaio 2026 (notte)                                        |
++================================================================+
+
+PROBLEMA RISOLTO:
+-----------------
+La sessione 213 aveva identificato il problema:
+"Leggere la Costituzione != Interiorizzarla"
+Anche la Regina aveva questo problema!
+
+RICERCA FATTA:
+--------------
+- Paper Dic 2025: -61.8% performance con instruction nuances
+- Tecniche studiate: Self-Verification, CoVe, Constitutional AI
+- Best practices: Anthropic, OpenAI, Google
+- Report: .sncp/progetti/cervellaswarm/ricerche/RICERCA_20260115_LETTURA_VERA_COSTITUZIONE.md
+
+SOLUZIONE IMPLEMENTATA (3-Layer, Score 9.5/10):
+-----------------------------------------------
+
+LAYER 1 - PRE-FLIGHT CHECK (inizio task):
+  1. Obiettivo finale: [risposta]
+  2. SU CARTA = ___. REALE = ___.
+  3. Sono: [Partner]
+  4. [RANDOM da pool 6 domande rotanti]
+
+LAYER 2 - POST-FLIGHT CHECK (fine task):
+  COSTITUZIONE-APPLIED: [SI/NO]
+  Principio usato: [quale + come applicato]
+
+FILE MODIFICATI (16 agenti in ~/.claude/agents/):
+-------------------------------------------------
+Tutti e 16:
+- cervella-backend, frontend, researcher, data, tester
+- cervella-security, devops, docs, ingegnera, marketing
+- cervella-reviewer, scienziata
+- cervella-guardiana-qualita, guardiana-ops, guardiana-ricerca
+- cervella-orchestrator
+
+IMPATTO ATTESO:
+---------------
+- -60-80% episodi "lettura checkbox"
+- Verifica TEORIA (PRE) + AZIONE (POST)
+- Random previene memorizzazione meccanica
+
+VALIDAZIONE GUARDIANA:
+----------------------
+- Proposta originale (5 domande): 7/10
+- Versione modificata (3+1 + POST-FLIGHT): 8.5/10
+- Versione finale (con random pool): 9.5/10
+
+SCORE: 9.4 → 9.5 (+0.1) - TARGET RAGGIUNTO!
+
++================================================================+
 ```
 
 ---

@@ -1,7 +1,128 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 213B Miracollo
-> **Versione:** v2.24.0 - ROOM MANAGER MVP SESSIONE B!
+> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 214
+> **Versione:** v2.25.0 - PRE-FLIGHT + POST-FLIGHT IMPLEMENTATI!
+
+---
+
+## SESSIONE 214 - PRE-FLIGHT + POST-FLIGHT! (15 Gennaio 2026 notte) - CERVELLASWARM
+
+```
++================================================================+
+|   CERVELLASWARM - SESSIONE 214                                  |
+|   15 Gennaio 2026 (notte)                                       |
++================================================================+
+
+SCORE: 9.4 → 9.5/10 - TARGET RAGGIUNTO!
+
+PROBLEMA RISOLTO:
+-----------------
+"Leggere la Costituzione != Interiorizzarla"
+Sessione 213 aveva identificato che anche la Regina
+trattava la Costituzione come checkbox.
+
+RICERCA FATTA (Formula Magica applicata!):
+------------------------------------------
+- Paper accademico Dic 2025: -61.8% performance con nuances
+- Tecniche: Self-Verification, CoVe, Constitutional AI
+- Best practices: Anthropic, OpenAI, Google
+- Report completo: .sncp/progetti/cervellaswarm/ricerche/
+  RICERCA_20260115_LETTURA_VERA_COSTITUZIONE.md
+
+SOLUZIONE IMPLEMENTATA (Guardiana Qualita: 9.5/10):
+---------------------------------------------------
+
+PRE-FLIGHT CHECK (inizio task):
+  1. Obiettivo finale: _______
+  2. SU CARTA = ___. REALE = ___.
+  3. Sono: [ ] Assistente [x] Partner
+  4. [RANDOM da pool 6 domande - rotazione per minuto]
+
+POST-FLIGHT CHECK (fine task):
+  COSTITUZIONE-APPLIED: [SI/NO]
+  Principio usato: [quale + come applicato]
+
+FILE MODIFICATI:
+----------------
+Tutti 16 agenti in ~/.claude/agents/:
+- 12 Worker Sonnet + 3 Guardiane Opus + 1 Orchestrator Opus
+- PRE-FLIGHT dopo lettura Costituzione
+- POST-FLIGHT prima dell'output
+
+VALIDAZIONE GUARDIANA:
+----------------------
+- Proposta originale 5 domande: 7/10
+- Versione modificata 3+1: 8.5/10
+- Versione finale con random: 9.5/10
+
+IMPATTO ATTESO:
+---------------
+- -60-80% episodi "lettura checkbox"
+- Verifica TEORIA (PRE) + AZIONE (POST)
+- Random previene memorizzazione meccanica
+
+"Un po' ogni giorno fino al 100000%!"
+"La MAGIA ora ha COSCIENZA (SNCP)!"
+
++================================================================+
+```
+
+---
+
+## SESSIONE 214 - ROOM MANAGER MVP SESSIONE C! (15 Gennaio 2026 notte)
+
+```
++================================================================+
+|   MIRACOLLO - ROOM MANAGER MVP SESSIONE C                       |
+|   15 Gennaio 2026 (notte)                                        |
++================================================================+
+
+OBIETTIVO: Frontend Room Grid + Fix Backend
+
+COMPLETATO:
+-----------
+
+1. FIX BACKEND (Score 8.5 -> 9.0)
+   - except generico -> except json.JSONDecodeError
+   - Validazione event_type in log_activity
+   - Gestione connessione con context manager
+
+2. FRONTEND ROOM MANAGER (7 file, ~600 righe)
+   - room-manager.html (pagina principale)
+   - js/room-manager/config.js (configurazione)
+   - js/room-manager/api.js (chiamate API)
+   - js/room-manager/grid.js (render grid)
+   - js/room-manager/sidebar.js (dettaglio + activity)
+   - js/room-manager/core.js (entry point)
+   - css/room-manager.css (styling completo)
+
+3. FEATURES
+   - Grid camere per piano
+   - Filtri: piano, status, housekeeping, occupazione
+   - Click camera -> sidebar dettaglio
+   - Right-click -> cicla housekeeping status
+   - Activity log per camera
+   - Bottoni azione housekeeping
+   - Responsive (1024px, 768px)
+
+4. NAVIGATION
+   - Link Room Manager aggiunto in planning.html
+
+AUDIT GUARDIANA: 8.5/10 APPROVATO
+
+PROGRESSO MVP:
+--------------
+[##########] SESSIONE A: Backend Core         100%
+[##########] SESSIONE B: Activity Log         100%
+[##########] SESSIONE C: Frontend Grid        100% <- FATTO!
+[..........] SESSIONE D: Room Card + Activity 0%
+[..........] SESSIONE E: Test + Affinamenti   0%
+[..........] SESSIONE F: PWA Housekeeping     0%
+
+PROSSIMA: SESSIONE D (polish Room Card + Activity)
+
++================================================================+
+```
 
 ---
 
@@ -1372,20 +1493,26 @@ echo "y" | ./scripts/sncp/compact-state.sh FILE  # Compattazione
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-15 02:07 (unknown)
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-15 02:30 (auto)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: e9d9565 - Sessione 213: Room Manager MVP SNCP + Decisioni + Roadmap
+- **Ultimo commit**: 962f873 - Checkpoint finale Sessione 213B: oggi.md pulito
 - **File modificati** (5):
-  - .sncp/reports/daily/health_2026-01-15.txt
+  - .sncp/progetti/cervellaswarm/idee/20260115_TEMPLATE_PRE_POST_FLIGHT.md
+  - .sncp/progetti/cervellaswarm/reports/VALIDAZIONE_PRE_FLIGHT_CHECK.md
+  - .sncp/progetti/cervellaswarm/ricerche/RICERCA_20260115_LETTURA_VERA_COSTITUZIONE.md
+  - .sncp/progetti/cervellaswarm/stato.md
   - .sncp/stato/oggi.md
-  - PROMPT_RIPRESA.md
-  - logs/launchd_daily.log
-  - logs/sncp_daily.log
 
 ### Note
 - Checkpoint automatico generato da hook
-- Trigger: unknown
+- Trigger: auto
 
 ---
