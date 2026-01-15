@@ -16,3 +16,5 @@
   - Creato script compliance-check.sh per verifica regole
 - **2026-01-15 07:32** - NORD.md Aggiornato
   - Allineato a realta - FASE 1 95%, 3 GAP in corso
+- **2026-01-15 07:39** - Guardiana Audit
+  - Fix symlink compliance-check

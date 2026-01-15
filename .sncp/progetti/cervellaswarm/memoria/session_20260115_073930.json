@@ -1,0 +1,16 @@
+{
+  "project": "cervellaswarm",
+  "timestamp": "2026-01-15T06:39:30Z",
+  "timestamp_local": "2026-01-15 07:39:30",
+  "git": {
+    "commit": "7a2d3d5",
+    "message": "Sessione 217: 3 GAP critici implementati - FASE 1 = 100%!"
+  },
+  "files_saved": {
+    "stato_md": "/Users/rafapra/Developer/CervellaSwarm/.sncp/progetti/cervellaswarm/stato.md",
+    "prompt_ripresa": "/Users/rafapra/Developer/CervellaSwarm/.sncp/progetti/cervellaswarm/PROMPT_RIPRESA_cervellaswarm.md"
+  },
+  "stato_summary": "# Stato CervellaSwarm\> Ultimo aggiornamento: 15 Gennaio 2026 - Sessione 214\\---\\## TL;DR\\```\SCORE ATTUALE: 9.5/10 REALE! (TARGET RAGGIUNTO!)\TARGET: 9.5/10\GAP: 0 punti\\SESSIONE 214: PRE-FLIGHT + POST-FLIGHT IMPLEMENTATI!\- PRE-FLIGHT CHECK: 3 domande core + 1 random in tutti 16 agenti\- POST-FLIGHT CHECK: COSTITUZIONE-APPLIED in tutti 16 agenti\- Score Guardiana Qualita: 9.5/10 APPROVATO!\```\\---\\## SESSIONE 214 - PRE-FLIGHT + POST-FLIGHT! (15 Gennaio 2026 notte)\\```\+=================",
+  "prompt_summary": "# PROMPT RIPRESA - CervellaSwarm\\> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 217\> **Per SOLO questo progetto!**\\---\\## SESSIONE 217 - COMPLETATA (15 Gennaio 2026)\\```\+================================================================+\|   3 GAP CRITICI IMPLEMENTATI - FASE 1 = 100%!                   |\+================================================================+\\ANALISI INIZIALE:\- Letti studi: Cursor, Reset Gennaio, Multi-Agent Best Practices\- Identificati 3 GAP dalla rice",
+  "recovery_instructions": "Per ripristinare: leggi questo file e stato.md del progetto"
+}
