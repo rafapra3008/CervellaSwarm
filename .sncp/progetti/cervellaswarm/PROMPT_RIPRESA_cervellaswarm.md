@@ -1,58 +1,59 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 220
-> **RESUME + SESSION MANAGER COMPLETI!**
+> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 221
+> **HARDTESTS COMPLETI! 104 test passano!**
 
 ---
 
-## SESSIONE 220 - RISULTATO
+## SESSIONE 221 - RISULTATO
 
 ```
 +================================================================+
-|   CORE FUNZIONALITA COMPLETE!                                   |
+|   HARDTESTS CREATI E FUNZIONANTI!                              |
 |                                                                |
-|   - spawner.js -> Lancia claude CLI con prompt agente          |
-|   - writer.js -> Salva reports in SNCP                         |
-|   - manager.js -> Tracking sessioni per resume                 |
-|   - progress.js -> Utility display                             |
+|   - 104 test totali                                            |
+|   - npm test -> PASSA                                          |
+|   - Struttura test/ completa                                   |
+|   - CI/CD ready (run_hardtests.sh)                            |
 |                                                                |
-|   CLI MVP QUASI PRONTO!                                        |
+|   CLI MVP PRONTO PER POLISH!                                   |
 +================================================================+
 ```
 
 ---
 
-## COSA FUNZIONA ORA
+## STRUTTURA TEST
 
 ```
-cervellaswarm --help      OK
-cervellaswarm init        OK - Wizard 10 domande
-cervellaswarm status      OK - Mostra progetto
-cervellaswarm task        OK - Lancia agente + salva sessione
-cervellaswarm resume      OK - Mostra recap basato su tempo!
-cervellaswarm resume -l   OK - Lista sessioni recenti
+packages/cli/test/
+├── commands/           # 45 test
+│   ├── init.test.js
+│   ├── status.test.js
+│   ├── task.test.js
+│   └── resume.test.js
+├── agents/             # 37 test
+│   ├── router.test.js
+│   └── spawner.test.js
+├── helpers/            # Utility
+│   ├── mock-spawn.js
+│   ├── temp-dir.js
+│   └── console-capture.js
+├── integration/        # Test lenti
+│   └── wizard.test.js
+├── edge-cases.test.js  # 22 test
+└── run_hardtests.sh    # CI/CD
 ```
 
 ---
 
-## FILE IMPLEMENTATI
+## COMANDI TEST
 
-| File | Stato |
-|------|-------|
-| `commands/init.js` | COMPLETO |
-| `commands/status.js` | COMPLETO |
-| `commands/task.js` | COMPLETO |
-| `commands/resume.js` | COMPLETO |
-| `agents/router.js` | COMPLETO |
-| `agents/spawner.js` | COMPLETO |
-| `sncp/init.js` | COMPLETO |
-| `sncp/loader.js` | COMPLETO |
-| `sncp/writer.js` | COMPLETO |
-| `session/manager.js` | COMPLETO |
-| `display/progress.js` | COMPLETO |
-| `display/recap.js` | COMPLETO |
-| `wizard/questions.js` | COMPLETO |
-| `templates/constitution.js` | COMPLETO |
+```bash
+npm test              # 104 test
+npm run test:watch    # Watch mode
+npm run test:coverage # Coverage
+npm run hardtests     # Script bash
+```
 
 ---
 
@@ -69,7 +70,7 @@ cervellaswarm resume -l   OK - Lista sessioni recenti
 
 ## TL;DR
 
-**Sessione 220:** session/manager.js + resume COMPLETI! CLI MVP quasi pronto.
+**Sessione 221:** HARDTESTS completi! 104 test passano, CI/CD ready.
 
 **Prossimo:** Test reale + polish per npm publish.
 
