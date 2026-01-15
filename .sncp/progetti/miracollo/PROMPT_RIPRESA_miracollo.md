@@ -1,35 +1,52 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 226
+> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 227
 > **LEGGI E AGISCI. NON RI-ANALIZZARE.**
 
 ---
 
 ## STATO IN UNA RIGA
 
-**MIRACOLLOOK: 1.5 + 1.6 FATTI! FASE 1 ora 90%!**
+**MIRACOLLOOK: 1.7 Bulk Actions CODICE SCRITTO - DA TESTARE!**
 
 ---
 
-## SESSIONE 226: DUE FEATURE COMPLETATE!
+## SESSIONE 227: BULK ACTIONS IMPLEMENTATO
 
 ```
 +================================================================+
-|   1.5 RESIZABLE PANELS + 1.6 CONTEXT MENU IMPLEMENTATI!         |
+|   1.7 BULK ACTIONS - CODICE COMPLETATO, NON TESTATO             |
 |                                                                 |
-|   1.5 Resizable Panels:                                         |
-|   - ThreePanel.tsx con react-resizable-panels v4.4.1            |
-|   - localStorage persistence                                    |
+|   FILE CREATI:                                                  |
+|   - hooks/useSelection.ts (98 righe)                            |
+|   - components/BulkActions/BulkActionsBar.tsx (96 righe)        |
+|   - components/BulkActions/index.ts                             |
 |                                                                 |
-|   1.6 Context Menu (Sprint 1):                                  |
-|   - EmailContextMenu/ con useContextMenu hook                   |
-|   - Quick Actions: Reply, Forward, Archive, Star                |
-|   - Organize: Add Label, Move to, Assign, Mark Read/Unread     |
-|   - Keyboard nav (arrows + Enter + Escape)                      |
-|   - ARIA accessible                                             |
+|   FILE MODIFICATI:                                              |
+|   - EmailListItem.tsx (checkbox per email)                      |
+|   - EmailList.tsx (checkbox master + selection)                 |
+|   - App.tsx (bulk action handlers)                              |
+|   - api.ts (fix porta 8002 -> 8001)                             |
+|   - tailwind.config.js (animazioni)                             |
 |                                                                 |
-|   MAPPA aggiornata: FASE 1 90%                                  |
+|   BUILD: COMPILA OK                                             |
+|   TEST: NON FATTO (problema Service Worker)                     |
 +================================================================+
+```
+
+---
+
+## PROBLEMA AMBIENTE DEV
+
+```
+Service Worker VECCHIO interferisce con richieste API.
+Era configurato per porta 8002, ora porta corretta e' 8001.
+
+SOLUZIONE PROSSIMA SESSIONE:
+1. Browser DevTools -> Application -> Service Workers -> Unregister
+2. Storage -> Clear site data
+3. Chiudi e riapri Chrome
+4. Test su http://localhost:5173/
 ```
 
 ---
@@ -41,8 +58,17 @@ FASE 0 (Fondamenta)     [####################] 100%
 FASE P (Performance)    [####################] 100%
 FASE 1 (Email Solido)   [##################..] 90%
 FASE 2 (PMS Integration)[....................] 0%
+```
 
-STUDI: TUTTI PRONTI per FASE 1 + FASE 2!
+---
+
+## PROSSIMA SESSIONE
+
+```
+1. PRIMA: Pulire Service Worker nel browser
+2. POI: Testare 1.7 Bulk Actions visualmente
+3. SE OK: Commit codice Bulk Actions
+4. DOPO: Continuare con 1.8 Labels Custom
 ```
 
 ---
@@ -52,22 +78,9 @@ STUDI: TUTTI PRONTI per FASE 1 + FASE 2!
 | File | Cosa |
 |------|------|
 | **MAPPA** | `.sncp/progetti/miracollo/moduli/miracollook/MAPPA_COMPLETA_MIRACOLLOOK.md` |
-| **ThreePanel** | `miracallook/frontend/src/components/Layout/ThreePanel.tsx` |
-| **ContextMenu** | `miracallook/frontend/src/components/EmailContextMenu/` |
+| **useSelection** | `frontend/src/hooks/useSelection.ts` |
+| **BulkActionsBar** | `frontend/src/components/BulkActions/` |
 
 ---
 
-## PROSSIMA SESSIONE
-
-```
-IMPLEMENTARE (studi pronti):
-  1.7 Bulk Actions (2-3gg MVP)
-  1.8 Labels Custom (2-3gg)
-  1.9 Contacts Autocomplete (2-3gg)
-
-Context Menu Sprint 2-3 (Hotel Actions) = dopo PMS Integration
-```
-
----
-
-*"Due progressi oggi! FASE 1 quasi completa!"*
+*"Codice scritto, test pending. Un passo alla volta!"*

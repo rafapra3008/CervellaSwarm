@@ -1,25 +1,30 @@
 # STATO OGGI - 15 Gennaio 2026
 
-> **Sessione:** 227 - CervellaSwarm
-> **Ultimo aggiornamento:** 17:30
+> **Sessione:** 227 - Miracollook
+> **Ultimo aggiornamento:** 17:20
 
 ---
 
-## SESSIONE 227 - CERVELLASWARM
+## SESSIONE 227 - MIRACOLLOOK
 
 ```
 +================================================================+
-|   CLI HARDTESTED - 4 STEP COMPLETATI!                          |
+|   1.7 BULK ACTIONS - CODICE SCRITTO (non testato)              |
 |                                                                |
-|   FIX APPLICATI:                                               |
-|   [x] init -y ora crea .sncp                                   |
-|   [x] Warning se progetto gia' inizializzato                   |
-|   [x] Opzione --force per reinizializzare                      |
+|   FILE CREATI:                                                 |
+|   - useSelection.ts (hook selezione)                           |
+|   - BulkActionsBar/ (toolbar dinamica)                         |
 |                                                                |
-|   TEST: 114/114 PASS - Sicurezza OK                            |
+|   FILE MODIFICATI:                                             |
+|   - EmailListItem.tsx (checkbox)                               |
+|   - EmailList.tsx (checkbox master)                            |
+|   - App.tsx (bulk handlers)                                    |
+|   - api.ts (fix porta 8002 -> 8001)                            |
 |                                                                |
-|   STEP COMPLETATI:                                             |
-|   2.7 Task Command, 2.8 Router, 2.9 Spawner, 2.11 Testing      |
+|   BUILD: OK (compila senza errori)                             |
+|   TEST VISIVO: NON FATTO (problema Service Worker)             |
+|                                                                |
+|   NOTA: Codice da testare prossima sessione!                   |
 +================================================================+
 ```
 
@@ -29,28 +34,18 @@
 
 | Progetto | Stato |
 |----------|-------|
-| CervellaSwarm | FASE 2: 75% (+20%) - 27/56 step (48%) |
-| Miracollook | FASE 1: 90% |
+| CervellaSwarm | FASE 2: 75% |
+| Miracollook | FASE 1: 90% (1.7 in progress) |
 
 ---
 
-## PROSSIMA SESSIONE
+## PROBLEMA AMBIENTE DEV
 
 ```
-CervellaSwarm:
-  - Step 2.12: Error Handling
-  - Step 2.13: Help System
-  - Step 2.14: npm Publish Setup (studiare)
+Service Worker vecchio interferisce con le richieste.
+Soluzione: Unregister SW + Clear site data nel browser.
 ```
 
 ---
 
-*"CLI testata e funzionante! Un passo alla volta!"*
-
----
-
-## AUTO-CHECKPOINT: 2026-01-15 17:13 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
+*"Codice scritto, da testare!"*
