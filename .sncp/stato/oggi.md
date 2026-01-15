@@ -1,38 +1,38 @@
 # STATO OGGI
 
-> **Data:** 14 Gennaio 2026 (Martedi)
-> **Sessioni:** 211 CervellaSwarm + 212 Miracollo (parallele)
-> **Ultimo aggiornamento:** Fine giornata
+> **Data:** 15 Gennaio 2026 (Mercoledi)
+> **Sessioni:** 213 CervellaSwarm
+> **Ultimo aggiornamento:** Sessione 213
 
 ---
 
-## CERVELLASWARM - Sessione 211 MONUMENTALE!
+## CERVELLASWARM - Sessione 213 REC-2 IMPLEMENTATO!
 
 ```
-SCORE: 8.2 → 9.4 (+1.2 punti!)
-GAP al target 9.5: solo 0.1 punti!
+SCORE: 9.4/10 (stabile)
+GAP al target 9.5: 0.1 punti
 
-4 PARTI COMPLETATE:
-1. Semplificazione SNCP v4.0 (14→10 cartelle)
-2. Audit + Fix symlink CRITICO
-3. Test automatici (3 test, 17 check OK)
-4. Studio Comunicazione Interna (600+ righe)
+COMPLETATO:
+1. REC-2: AZIONE #2 READ SNCP FIRST in tutti 16 agenti!
+   - Impatto atteso: -30% duplicazione lavoro
+2. REC-3: ERA GIA' FATTO (AUTO_SVEGLIA=true default)
+3. Split miracollo/stato.md: 554 → 400 righe
 
-COMMIT: 4 pushed (119e5d1, 730e308, 1353bd6, 59f09b9)
+FILE MODIFICATI: 16 agenti in ~/.claude/agents/
 ```
 
 ---
 
-## MIRACOLLO - Sessione 212 Room Manager
+## IERI - Sessione 211+212 (14 Gennaio)
 
 ```
-STUDIO COMPLETATO:
-- VDA Etheos: 26 screenshot analizzati
-- Big players: Mews, Opera, Cloudbeds, Scidoo
+CERVELLASWARM:
+- Score: 8.2 → 9.4 (+1.2 punti!)
+- SNCP v4.0, Audit, Test, Studio Comunicazione
+
+MIRACOLLO:
+- Room Manager: Studio VDA + Big Players completato
 - Architettura DECISA!
-
-VANTAGGIO COMPETITIVO:
-PMS + Hardware integrato (nessun altro lo fa!)
 ```
 
 ---
@@ -41,19 +41,20 @@ PMS + Hardware integrato (nessun altro lo fa!)
 
 | Progetto | Area | Score | Note |
 |----------|------|-------|------|
-| CervellaSwarm | SNCP | 9.4/10 | v4.0 + test + audit |
+| CervellaSwarm | SNCP | 9.4/10 | REC-2 implementato! |
 | CervellaSwarm | Infra | 9.5/10 | Hook + Launchd OK |
 | Miracollo | RateParity | 9.5/10 | STABILE |
 | Miracollo | Room Manager | Studio | Architettura decisa |
-| **MEDIA** | - | **9.1/10** | Target: 9.5 |
+| **MEDIA** | - | **9.4/10** | Target: 9.5 |
 
 ---
 
 ## Prossimi Step
 
 ### CervellaSwarm
-- [ ] Worker prompt "READ SNCP FIRST"
-- [ ] Watcher auto-start DEFAULT
+- [x] REC-2: Worker prompt "READ SNCP FIRST"
+- [x] REC-3: Watcher auto-start DEFAULT (era gia' fatto!)
+- [ ] REC-1: Hook verifica output SNCP (richiede analisi)
 
 ### Miracollo
 - [ ] MVP Room Manager (Backend + Frontend)
@@ -61,5 +62,37 @@ PMS + Hardware integrato (nessun altro lo fa!)
 
 ---
 
-*"SU CARTA != REALE" - La Costituzione aveva ragione!*
-*14 Gennaio 2026*
+*"Non ri-fare, continua da dove altri hanno lasciato!"*
+*15 Gennaio 2026*
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 21:52 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v2.0.0
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 21:52 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v2.0.0
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 21:53 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v2.0.0
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 21:53 (session_end)
+
+- **Progetto**: CervellaSwarm
+- **Evento**: session_end
+- **Generato da**: sncp_auto_update.py v2.0.0

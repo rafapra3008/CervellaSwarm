@@ -1,7 +1,60 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 14 Gennaio 2026 - Sessione 211 CervellaSwarm
-> **Versione:** v2.21.0 - SNCP 9.4/10 + STUDIO COMUNICAZIONE INTERNA!
+> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 213 CervellaSwarm
+> **Versione:** v2.22.0 - REC-2 IMPLEMENTATO + SPLIT STATO!
+
+---
+
+## SESSIONE 213 - REC-2 IMPLEMENTATO! (15 Gennaio 2026)
+
+```
++================================================================+
+|   CERVELLASWARM - SESSIONE 213                                  |
+|   15 Gennaio 2026                                               |
++================================================================+
+
+REC-2: AZIONE #2 READ SNCP FIRST - COMPLETATO!
+----------------------------------------------
+Aggiunto a TUTTI i 16 agenti:
+
+  ## AZIONE #2 - READ SNCP FIRST
+  PRIMA di iniziare il task, leggi SNCP per context!
+  1. Read(".sncp/progetti/{progetto}/stato.md")
+  2. Glob(".sncp/progetti/{progetto}/reports/*{topic}*.md")
+  3. Glob(".sncp/progetti/{progetto}/ricerche/*{topic}*.md")
+
+  "Non ri-fare, continua da dove altri hanno lasciato!"
+
+FILE MODIFICATI: Tutti i 16 agenti in ~/.claude/agents/
+IMPATTO ATTESO: -30% duplicazione lavoro!
+
+REC-3: WATCHER AUTO-START - ERA GIA' FATTO!
+-------------------------------------------
+spawn-workers.sh v2.7.0 aveva gia':
+- AUTO_SVEGLIA=true di default
+- Anti-duplicati watcher
+- Fallback a path globale
+
+SPLIT MIRACOLLO/STATO.MD:
+-------------------------
+- PRIMA: 554 righe (> limite 500!)
+- DOPO: 400 righe (sotto limite!)
+- Sessioni 202-204 archiviate in:
+  archivio/SESSIONI_GENNAIO_2026.md
+
+SCORE: 9.4/10 (stabile)
+GAP AL TARGET: 0.1 punti
+
+PROSSIMI STEP:
+--------------
+[x] REC-2: Worker prompt "READ SNCP FIRST"
+[x] REC-3: Watcher auto-start DEFAULT (era gia' fatto!)
+[ ] REC-1: Hook verifica output SNCP (richiede analisi)
+
+"Non ri-fare, continua da dove altri hanno lasciato!"
+
++================================================================+
+```
 
 ---
 
@@ -1173,14 +1226,23 @@ echo "y" | ./scripts/sncp/compact-state.sh FILE  # Compattazione
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-14 21:19 (unknown)
+---
+
+---
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-14 21:53 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: cd3095e - Sessione 209: ROADMAP COMUNICAZIONE INTERNA COMPLETATA!
-- **File modificati** (2):
+- **Ultimo commit**: 34f9883 - Sessione 212: Studio Room Manager COMPLETATO!
+- **File modificati** (3):
   - sncp/stato/oggi.md
-  - reports/engineer_report_20260114_211540.json
+  - PROMPT_RIPRESA.md
+  - reports/engineer_report_20260114_215148.json
 
 ### Note
 - Checkpoint automatico generato da hook

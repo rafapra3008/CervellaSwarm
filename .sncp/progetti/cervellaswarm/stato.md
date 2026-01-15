@@ -1,5 +1,5 @@
 # Stato CervellaSwarm
-> Ultimo aggiornamento: 14 Gennaio 2026 - Sessione 211 (parte 2)
+> Ultimo aggiornamento: 15 Gennaio 2026 - Sessione 213
 
 ---
 
@@ -10,10 +10,75 @@ SCORE ATTUALE: 9.4/10 REALE!
 TARGET: 9.5/10
 GAP: 0.1 punti (quasi al target!)
 
-SESSIONE 211 (parte 3): TEST AUTOMATICI + LAUNCHD VERIFICATO!
-- Launchd: FUNZIONA (report daily creato!)
-- Test suite: 3 test, 17 check, TUTTI PASSATI!
-- Score: 9.2 → 9.4 (+0.2 punti!)
+SESSIONE 213: REC-2 + SPLIT STATO COMPLETATI!
+- REC-2: AZIONE #2 READ SNCP FIRST in tutti 16 agenti!
+- REC-3: ERA GIA' FATTO (AUTO_SVEGLIA=true default)
+- Split miracollo/stato.md: 554 → 400 righe
+```
+
+---
+
+## SESSIONE 213 - REC-2 + SPLIT STATO! (15 Gennaio 2026)
+
+```
++================================================================+
+|   SESSIONE 213 - COMUNICAZIONE INTERNA IMPLEMENTATA!           |
+|   15 Gennaio 2026                                               |
++================================================================+
+
+REC-2: AZIONE #2 READ SNCP FIRST - COMPLETATO!
+----------------------------------------------
+Aggiunto a TUTTI i 16 agenti la sezione:
+
+  ## AZIONE #2 - READ SNCP FIRST
+  PRIMA di iniziare il task, leggi SNCP per context!
+  1. Read(".sncp/progetti/{progetto}/stato.md")
+  2. Glob(".sncp/progetti/{progetto}/reports/*{topic}*.md")
+  3. Glob(".sncp/progetti/{progetto}/ricerche/*{topic}*.md")
+
+  "Non ri-fare, continua da dove altri hanno lasciato!"
+
+FILE MODIFICATI:
+- cervella-backend.md
+- cervella-frontend.md
+- cervella-researcher.md
+- cervella-data.md
+- cervella-tester.md
+- cervella-security.md
+- cervella-devops.md
+- cervella-docs.md
+- cervella-ingegnera.md
+- cervella-marketing.md
+- cervella-reviewer.md
+- cervella-scienziata.md
+- cervella-guardiana-qualita.md
+- cervella-guardiana-ops.md
+- cervella-guardiana-ricerca.md
+- cervella-orchestrator.md
+
+IMPATTO ATTESO: -30% duplicazione lavoro!
+
+REC-3: WATCHER AUTO-START - ERA GIA' FATTO!
+-------------------------------------------
+spawn-workers.sh v2.7.0 aveva gia':
+- AUTO_SVEGLIA=true di default
+- Anti-duplicati watcher
+- Fallback a path globale
+
+SPLIT MIRACOLLO/STATO.MD:
+-------------------------
+- PRIMA: 554 righe (> limite 500!)
+- DOPO: 400 righe (sotto limite!)
+- Sessioni 202-204 archiviate in:
+  archivio/SESSIONI_GENNAIO_2026.md
+
+REC-1 (PENDING):
+----------------
+Hook verifica output SNCP richiede analisi aggiuntiva.
+I worker hanno gia' istruzioni OUTPUT OBBLIGATORIO,
+ma l'enforcement automatico e' complesso per spawn-workers.
+
++================================================================+
 ```
 
 ---
