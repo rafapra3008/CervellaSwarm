@@ -12,7 +12,7 @@
     "start": "node bin/cervellaswarm.js",
     "test": "node --test test/commands/*.test.js test/agents/*.test.js test/utils/*.test.js test/edge-cases.test.js",
     "test:watch": "node --test --watch",
-    "test:coverage": "node --test --experimental-test-coverage",
+    "test:coverage": "node --test --experimental-test-coverage test/commands/*.test.js test/agents/*.test.js test/utils/*.test.js test/edge-cases.test.js",
     "test:commands": "node --test test/commands/",
     "test:agents": "node --test test/agents/",
     "test:session": "node --test test/session/",
