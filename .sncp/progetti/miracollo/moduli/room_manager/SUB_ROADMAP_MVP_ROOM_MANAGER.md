@@ -1,7 +1,7 @@
 # SUB-ROADMAP MVP ROOM MANAGER - MIRACOLLO
 
 > **Creata:** 15 Gennaio 2026 - Sessione 213
-> **Aggiornata:** 15 Gennaio 2026 - Sessione 213B
+> **Aggiornata:** 15 Gennaio 2026 - Sessione 215 (POLISH COMPLETATO!)
 > **Filosofia:** Una cosa alla volta, fino al 100000%!
 > **Principio:** "Non importa il TEMPO - abbiamo TEMPO!"
 
@@ -13,6 +13,11 @@
 SESSIONE A: Database + Backend Core      [####################] 100% COMPLETATA!
 SESSIONE B: Activity Log Backend         [####################] 100% COMPLETATA!
 SESSIONE C: Frontend Room Grid           [####################] 100% COMPLETATA!
+SESSIONE POLISH: Security + Accessibility[####################] 100% COMPLETATA!
+  - Score alzato: 8.5 → 9.5/10
+  - XSS protection, WCAG accessibility
+  - Parallel loading, Input validation
+
 SESSIONE D: Frontend Room Card + Activity[....................] 0%
 SESSIONE E: Test + Affinamenti           [....................] 0%
 SESSIONE F: PWA Housekeeping             [....................] 0%
@@ -247,7 +252,22 @@ frontend/
    - Dark mode support
 
 **Output:** Pagina Room Manager visibile, grid funziona
-**Audit:** 8.5/10 APPROVATO
+**Audit iniziale:** 8.5/10 → **Post-polish:** 9.5/10
+
+### SESSIONE POLISH: Security + Accessibility - COMPLETATA!
+
+**Obiettivo:** Alzare score da 8.5 a 9.5/10
+
+**Task:**
+1. [x] api.js - Timeout + validazione
+2. [x] sidebar.js - XSS protection (escapeHtml)
+3. [x] grid.js - aria-labels + keyboard navigation
+4. [x] core.js - Parallel loading + error handling
+5. [x] CSS - focus-visible + loading states
+6. [x] HTML - noscript + aria labels + role
+
+**Output:** Frontend robusto, sicuro, accessibile
+**Audit:** 9.5/10 TARGET RAGGIUNTO!
 
 ---
 
