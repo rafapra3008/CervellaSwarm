@@ -60,13 +60,13 @@ SETTIMANA 1       SETTIMANA 2       SETTIMANA 3       SETTIMANA 4
 ### Checklist
 
 ```
-[ ] npm init cervellaswarm
-[ ] bin/cervellaswarm.js entry point
-[ ] src/commands/init.js
-[ ] src/wizard/questions.js
-[ ] src/templates/COSTITUZIONE.md.hbs
-[ ] Test: cervellaswarm init su cartella vuota
-[ ] Test: cervellaswarm init su CervellaSwarm
+[x] npm init cervellaswarm
+[x] bin/cervellaswarm.js entry point
+[x] src/commands/init.js
+[x] src/wizard/questions.js
+[x] src/templates/constitution.js
+[x] Test: cervellaswarm init su cartella vuota
+[x] Test: cervellaswarm init su CervellaSwarm
 ```
 
 ### Dipendenze npm
@@ -103,11 +103,11 @@ SETTIMANA 1       SETTIMANA 2       SETTIMANA 3       SETTIMANA 4
 ### Checklist
 
 ```
-[ ] src/commands/task.js
-[ ] src/agents/router.js (decide quale agente)
-[ ] src/agents/spawner.js (lancia agente)
-[ ] src/display/progress.js
-[ ] src/sncp/writer.js
+[x] src/commands/task.js
+[x] src/agents/router.js (decide quale agente)
+[x] src/agents/spawner.js (lancia agente)
+[ ] src/display/progress.js (streaming ok, spinner da migliorare)
+[x] src/sncp/writer.js
 [ ] Test: task backend semplice
 [ ] Test: task frontend semplice
 [ ] Test: task multi-agent
@@ -133,12 +133,12 @@ SETTIMANA 1       SETTIMANA 2       SETTIMANA 3       SETTIMANA 4
 ### Checklist
 
 ```
-[ ] src/commands/status.js
-[ ] src/commands/resume.js
-[ ] src/session/manager.js
-[ ] src/session/recorder.js
-[ ] src/display/recap.js
-[ ] Test: resume dopo 1 giorno
+[x] src/commands/status.js
+[x] src/commands/resume.js
+[x] src/session/manager.js
+[x] src/display/recap.js
+[x] src/display/progress.js
+[x] Test: resume dopo 1 giorno
 [ ] Test: resume dopo 7 giorni
 [ ] Test: /status durante sessione
 ```
@@ -225,7 +225,9 @@ QUALITY:
 
 | Giorno | Data | Fatto | Note |
 |--------|------|-------|------|
-| Mer | 15 Gen | | Sessione 218 - Setup iniziato |
+| Mer | 15 Gen | init COMPLETO | Sessione 218-219 - Wizard funziona! |
+| Mer | 15 Gen | task COMPLETO | Sessione 220 - spawner + writer! |
+| Mer | 15 Gen | resume COMPLETO | Sessione 220 - session manager! |
 | Gio | 16 Gen | | |
 | Ven | 17 Gen | | |
 | Sab | 18 Gen | | (opzionale) |

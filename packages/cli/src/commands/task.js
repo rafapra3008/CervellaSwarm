@@ -13,6 +13,7 @@ import { loadProjectContext } from '../sncp/loader.js';
 import { routeTask } from '../agents/router.js';
 import { spawnAgent } from '../agents/spawner.js';
 import { saveTaskReport } from '../sncp/writer.js';
+import { createTaskSession } from '../session/manager.js';
 
 export async function taskCommand(description, options) {
   try {
@@ -56,12 +57,18 @@ export async function taskCommand(description, options) {
     // Execute task
     const result = await spawnAgent(agent, description, context);
 
-    // Save report
+    // Save report and session
     await saveTaskReport(description, agent, result);
+    await createTaskSession(description, agent, result);
 
     console.log('');
-    console.log(chalk.green.bold('  Task completed!'));
-    console.log(chalk.gray(`  One more step forward.`));
+    if (result.success) {
+      console.log(chalk.green.bold('  Task completed!'));
+      console.log(chalk.gray(`  One more step forward.`));
+    } else {
+      console.log(chalk.yellow.bold('  Task finished with issues.'));
+      console.log(chalk.gray(`  ${result.error || 'Check the output above.'}`));
+    }
     console.log('');
 
     // Suggest next step (no time pressure)

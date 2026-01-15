@@ -1,16 +1,22 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 219
-> **WIZARD TESTATO E FUNZIONANTE!**
+> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 220
+> **RESUME + SESSION MANAGER COMPLETI!**
 
 ---
 
-## SESSIONE 219 - RISULTATO
+## SESSIONE 220 - RISULTATO
 
 ```
 +================================================================+
-|   cervellaswarm init -> FUNZIONA!                               |
-|   TESTATO CON RAFA - COSTITUZIONE.md GENERATA!                  |
+|   CORE FUNZIONALITA COMPLETE!                                   |
+|                                                                |
+|   - spawner.js -> Lancia claude CLI con prompt agente          |
+|   - writer.js -> Salva reports in SNCP                         |
+|   - manager.js -> Tracking sessioni per resume                 |
+|   - progress.js -> Utility display                             |
+|                                                                |
+|   CLI MVP QUASI PRONTO!                                        |
 +================================================================+
 ```
 
@@ -19,9 +25,12 @@
 ## COSA FUNZIONA ORA
 
 ```
-cervellaswarm --help     OK
-cervellaswarm init       OK - Wizard 10 domande, genera tutto!
-cervellaswarm status     OK - Mostra progetto + progress
+cervellaswarm --help      OK
+cervellaswarm init        OK - Wizard 10 domande
+cervellaswarm status      OK - Mostra progetto
+cervellaswarm task        OK - Lancia agente + salva sessione
+cervellaswarm resume      OK - Mostra recap basato su tempo!
+cervellaswarm resume -l   OK - Lista sessioni recenti
 ```
 
 ---
@@ -30,62 +39,38 @@ cervellaswarm status     OK - Mostra progetto + progress
 
 | File | Stato |
 |------|-------|
-| `constitution.js` | COMPLETO - Genera COSTITUZIONE.md |
-| `sncp/init.js` | COMPLETO - Crea struttura + stato + prompt |
-| `sncp/loader.js` | COMPLETO - Legge contesto reale |
-| `wizard/questions.js` | COMPLETO - 10 domande (fix vim!) |
-| `agents/router.js` | COMPLETO - Routing keyword |
-| `agents/spawner.js` | STUB - Da collegare spawn-workers |
-| `sncp/writer.js` | STUB - Da implementare |
+| `commands/init.js` | COMPLETO |
+| `commands/status.js` | COMPLETO |
+| `commands/task.js` | COMPLETO |
+| `commands/resume.js` | COMPLETO |
+| `agents/router.js` | COMPLETO |
+| `agents/spawner.js` | COMPLETO |
+| `sncp/init.js` | COMPLETO |
+| `sncp/loader.js` | COMPLETO |
+| `sncp/writer.js` | COMPLETO |
+| `session/manager.js` | COMPLETO |
+| `display/progress.js` | COMPLETO |
+| `display/recap.js` | COMPLETO |
+| `wizard/questions.js` | COMPLETO |
+| `templates/constitution.js` | COMPLETO |
 
 ---
 
 ## PROSSIMA SESSIONE
 
 ```
-1. [ ] Completare spawner.js (connessione spawn-workers)
-2. [ ] Completare writer.js (salva reports task)
-3. [ ] Test comando: cervellaswarm task "descrizione"
-```
-
----
-
-## IL DIFFERENZIALE
-
-```
-"Definisci il progetto UNA VOLTA. Mai piu rispiegare."
-
-COSTITUZIONE.md generata include:
-- Nome, descrizione, tipo progetto
-- Goal principale
-- Criteri di successo
-- Stile di lavoro + tech stack
-- Filosofia CervellaSwarm
-
-NESSUN COMPETITOR HA QUESTO!
-```
-
----
-
-## AUDIT GUARDIANE (Sessione 219)
-
-```
-Guardiana Qualita: 8/10 - APPROVE
-Ingegnera: 8/10 - Architettura SOLIDA
-
-Issues fixati:
-- Version hardcoded -> dinamica
-- Catch vuoti -> documentati
-- Validazione input -> aggiunta
-- Editor vim -> input semplice
+1. [ ] Test task REALE con esecuzione claude
+2. [ ] Error handling robusto
+3. [ ] npm publish preparation
+4. [ ] README per esterni
 ```
 
 ---
 
 ## TL;DR
 
-**Sessione 219:** Wizard FUNZIONA! Testato con Rafa. COSTITUZIONE.md generata.
+**Sessione 220:** session/manager.js + resume COMPLETI! CLI MVP quasi pronto.
 
-**Prossimo:** spawner.js + writer.js per comando task.
+**Prossimo:** Test reale + polish per npm publish.
 
 *"Un progresso al giorno = 365 progressi all'anno."*

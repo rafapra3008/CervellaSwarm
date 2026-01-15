@@ -10,7 +10,7 @@
 
 import chalk from 'chalk';
 import { loadProjectContext } from '../sncp/loader.js';
-import { loadSessions, getLastSession } from '../session/manager.js';
+import { loadSessions, getLastSession, loadSession, formatSessionSummary } from '../session/manager.js';
 import { generateRecap } from '../display/recap.js';
 
 export async function resumeCommand(options) {
@@ -30,10 +30,16 @@ export async function resumeCommand(options) {
     if (options.list) {
       const sessions = await loadSessions();
       console.log('');
-      console.log(chalk.cyan.bold('  Recent Sessions:'));
-      sessions.slice(0, 10).forEach((session, i) => {
-        console.log(chalk.gray(`  ${i + 1}. ${session.date} - ${session.summary}`));
-      });
+      if (sessions.length === 0) {
+        console.log(chalk.gray('  No sessions yet.'));
+        console.log(chalk.white('  Run `cervellaswarm task "..."` to start.'));
+      } else {
+        console.log(chalk.cyan.bold('  Recent Sessions:'));
+        console.log('');
+        sessions.slice(0, 10).forEach((session, i) => {
+          console.log(chalk.gray(`  ${i + 1}. ${formatSessionSummary(session)}`));
+        });
+      }
       console.log('');
       return;
     }
