@@ -1,76 +1,48 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 215
+> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 216
 > **Per SOLO questo progetto!**
 
 ---
 
-## SESSIONE 215 - CLEANUP CRITICO (15 Gennaio 2026 notte)
+## SESSIONE 216 - CONTEXT MESH (15 Gennaio 2026)
 
 ```
 +================================================================+
-|   CLEANUP + PREVENZIONE ACCUMULO                                |
+|   PROMPT_RIPRESA SEPARATI PER PROGETTO                          |
 +================================================================+
 
-FATTO:
-- 287 JSON eliminati (17MB → 368KB)
-- 651K righe rimosse
-- Hook file_limits_guard.py attivo
+IMPLEMENTATO:
+- .sncp/PROMPT_RIPRESA_MASTER.md (tabella ecosistema)
+- PROMPT_RIPRESA_cervellaswarm.md (questo file!)
+- PROMPT_RIPRESA_miracollo.md
+- PROMPT_RIPRESA_contabilita.md
 
-LIMITI STABILITI:
-- PROMPT_RIPRESA: max 150 righe (per file)
-- oggi.md: max 60 righe
-- stato.md: max 500 righe
+HOOK AGGIORNATI:
+- file_limits_guard.py (nuovo! verifica 150/60/500)
+- session_start_swarm.py (carica file specifico)
+- update_prompt_ripresa.py (nuovi path)
 
-RICERCA COMPLETATA:
-- Multi-agent architettura VALIDATA
-- PROMPT_RIPRESA SEPARATO è meglio (Context Mesh)
+CLAUDE.MD: Aggiornati locale + globale
 
-+================================================================+
-```
-
----
-
-## SESSIONE 214 - PRE/POST FLIGHT CHECK (15 Gennaio 2026)
-
-```
-+================================================================+
-|   COSTITUZIONE IN CODICE                                        |
-+================================================================+
-
-IMPLEMENTATO: 9.5/10
-
-PRE-FLIGHT (inizio task):
-  1. Obiettivo finale
-  2. SU CARTA vs REALE
-  3. Partner non Assistente
-  4. Random da pool 6 domande
-
-POST-FLIGHT (fine task):
-  COSTITUZIONE-APPLIED: [SI/NO]
-  Principio usato: [quale]
-
-FILE: Tutti 16 agenti in ~/.claude/agents/
+AUDIT GUARDIANA: 9.0/10 - Sistema pronto!
 
 +================================================================+
 ```
 
 ---
 
-## SESSIONE 213 - REC-2 SNCP (15 Gennaio 2026)
+## ROADMAP - DOVE SIAMO
 
 ```
-+================================================================+
-|   READ SNCP FIRST                                               |
-+================================================================+
+FASE 1: FONDAMENTA (Gen-Feb)
+[##########] sncp-init.sh         100%
+[##########] verify-sync.sh       100%
+[##########] Hook automatici      100%
+[##########] Context Mesh         100% ← SESSIONE 216
+[..........] Docs per esterni     0%   ← PROSSIMO
 
-REC-2 in tutti 16 agenti:
-- Read stato.md prima di task
-- Grep reports e ricerche
-
-SCORE: 9.4/10
-
-+================================================================+
+Score: 8.5 → 9.0
 ```
 
 ---
@@ -81,27 +53,13 @@ SCORE: 9.4/10
 |------|------|
 | Stato | `.sncp/progetti/cervellaswarm/stato.md` |
 | NORD | `NORD.md` |
-| Roadmap | `ROADMAP_2026_PRODOTTO.md` |
-
----
-
-## IL NORD - DOVE SIAMO
-
-```
-FASE A: STUDIARE       [..........] 0%  ← QUI
-FASE B: DECIDERE       [..........] 0%
-FASE C: COSTRUIRE MVP  [..........] 0%
-FASE D: VALIDARE       [..........] 0%
-FASE E: GO TO MARKET   [..........] 0%
-
-"Prima COSTRUIRE, poi VENDERE."
-```
+| Roadmap | `.sncp/progetti/cervellaswarm/roadmaps/ROADMAP_2026_PRODOTTO.md` |
 
 ---
 
 ## TL;DR
 
-**Cleanup fatto, architettura validata. Ora COSTRUIRE il prodotto!**
+**Context Mesh implementato. Prossimo: documentazione per esterni.**
 
 ---
 
