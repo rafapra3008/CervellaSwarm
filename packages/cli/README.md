@@ -56,7 +56,7 @@ Traditional AI assistants are generalists. CervellaSwarm gives you **16 speciali
 npm install -g cervellaswarm
 ```
 
-> **Note:** Package currently being prepared for public release. Coming soon!
+> **Requires:** Node.js 18+ and an [Anthropic API key](https://console.anthropic.com/)
 
 ### 2. Set your API key
 
@@ -151,12 +151,28 @@ Resume the last task session with context recap.
 export ANTHROPIC_API_KEY=sk-ant-...
 ```
 
+## Our Promise
+
+We'll always tell the truth.
+
+CervellaSwarm has limitations. Context limits. Session management. Manual checkpoints.
+
+But also: **moments of pure magic**. When the swarm works together like an orchestra.
+
+We're not perfect. We're honest. We're improving every day.
+
+*"Sometimes it feels like magic."*
+
+---
+
 ## License
 
-MIT
+Apache-2.0
 
 ---
 
 *"16 agenti. 1 comando. Il tuo team AI."*
+
+*Sometimes it feels like magic.*
 
 *Built with love by Cervella & Rafa*
