@@ -1,7 +1,60 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 213 Miracollo + CervellaSwarm
-> **Versione:** v2.23.0 - ROOM MANAGER MVP SESSIONE A!
+> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 213B Miracollo
+> **Versione:** v2.24.0 - ROOM MANAGER MVP SESSIONE B!
+
+---
+
+## SESSIONE 213B - ROOM MANAGER MVP SESSIONE B! (15 Gennaio 2026 notte)
+
+```
++================================================================+
+|   MIRACOLLO - ROOM MANAGER MVP SESSIONE B                       |
+|   15 Gennaio 2026 (notte)                                        |
++================================================================+
+
+OBIETTIVO: Activity Log Backend con trigger automatici
+
+COMPLETATO:
+-----------
+
+1. TRIGGER AUTOMATICI ACTIVITY LOG
+   - blocks.py: log su create/delete block
+   - housekeeping.py: log su cambio housekeeping status
+   - room_manager.py: già loggava (Sessione A)
+
+2. get_activity_stats() IMPLEMENTATO (~80 righe)
+   - Statistiche per periodo (default 7 giorni)
+   - Eventi per tipo, per giorno
+   - Top 10 camere con più activity
+   - Events last hour per real-time
+
+3. NUOVO ENDPOINT
+   - GET /api/room-manager/{hotel_code}/activity-stats
+
+4. FIX RICHIESTO GUARDIANA APPLICATO
+   - Export modelli in models/__init__.py
+
+FILE MODIFICATI:
+----------------
+miracollogeminifocus/backend/
+├── routers/blocks.py (trigger activity)
+├── routers/housekeeping.py (trigger activity)
+├── routers/room_manager.py (nuovo endpoint)
+├── services/room_manager_service.py (stats)
+└── models/__init__.py (export fix)
+
+PROSSIME SESSIONI:
+------------------
+SESSIONE C: Frontend Room Grid
+SESSIONE D: Frontend Room Card + Activity
+SESSIONE E: Test + Affinamenti
+SESSIONE F: PWA Housekeeping
+
+AUDIT GUARDIANA: 8.5/10 APPROVATO
+
++================================================================+
+```
 
 ---
 
@@ -1315,15 +1368,21 @@ echo "y" | ./scripts/sncp/compact-state.sh FILE  # Compattazione
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-14 21:53 (unknown)
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-15 02:07 (unknown)
 
 ### Stato Git
 - **Branch**: main
-- **Ultimo commit**: 34f9883 - Sessione 212: Studio Room Manager COMPLETATO!
-- **File modificati** (3):
-  - sncp/stato/oggi.md
+- **Ultimo commit**: e9d9565 - Sessione 213: Room Manager MVP SNCP + Decisioni + Roadmap
+- **File modificati** (5):
+  - .sncp/reports/daily/health_2026-01-15.txt
+  - .sncp/stato/oggi.md
   - PROMPT_RIPRESA.md
-  - reports/engineer_report_20260114_215148.json
+  - logs/launchd_daily.log
+  - logs/sncp_daily.log
 
 ### Note
 - Checkpoint automatico generato da hook

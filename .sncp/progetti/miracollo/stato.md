@@ -1,8 +1,64 @@
 # STATO PROGETTO MIRACOLLO
 
-> **Data:** 2026-01-15 02:00 - Sessione 213 ROOM MANAGER MVP SESSIONE A
+> **Data:** 2026-01-15 02:30 - Sessione 213B ROOM MANAGER MVP SESSIONE B
 > **Score:** 9.5/10 STABILE
-> **Versione:** 1.9.0 (Room Manager MVP)
+> **Versione:** 1.9.1 (Room Manager MVP - Activity Log)
+
+---
+
+## SESSIONE 213B - ROOM MANAGER MVP SESSIONE B (15 Gennaio 2026 notte)
+
+```
++================================================================+
+|   ROOM MANAGER MVP - SESSIONE B COMPLETATA!                     |
+|   15 Gennaio 2026 (notte)                                        |
++================================================================+
+
+OBIETTIVO: Activity Log Backend con trigger automatici
+
+COMPLETATO:
+-----------
+
+1. TRIGGER AUTOMATICI ACTIVITY LOG
+   - blocks.py: log su create/delete block
+   - housekeeping.py: log su cambio housekeeping
+   - room_manager.py: già loggava (Sessione A)
+
+2. get_activity_stats() IMPLEMENTATO
+   - Statistiche per periodo (default 7 giorni)
+   - Eventi per tipo, per giorno, top camere
+   - Events last hour per real-time
+
+3. NUOVO ENDPOINT
+   - GET /api/room-manager/{hotel_code}/activity-stats
+
+4. FIX RICHIESTO GUARDIANA
+   - Export modelli in models/__init__.py
+
+AUDIT GUARDIANA: 8.5/10 APPROVATO
+---------------------------------
+- Migration SQL: 9/10
+- Service Layer: 8/10
+- Router/API: 9/10
+- Models: 7/10 (fixato!)
+- Coerenza: 10/10
+
+FILE MODIFICATI:
+----------------
+miracollogeminifocus/backend/
+├── routers/blocks.py (trigger activity)
+├── routers/housekeeping.py (trigger activity)
+├── routers/room_manager.py (nuovo endpoint stats)
+├── services/room_manager_service.py (get_activity_stats)
+└── models/__init__.py (export fix)
+
+CervellaSwarm/.sncp/progetti/miracollo/moduli/room_manager/
+└── reports/AUDIT_SESSIONE_A_20260115.md (NUOVO)
+
+PROSSIMA: SESSIONE C (Frontend Room Grid)
+
++================================================================+
+```
 
 ---
 

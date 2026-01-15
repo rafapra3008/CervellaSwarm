@@ -1,8 +1,22 @@
 # SUB-ROADMAP MVP ROOM MANAGER - MIRACOLLO
 
 > **Creata:** 15 Gennaio 2026 - Sessione 213
+> **Aggiornata:** 15 Gennaio 2026 - Sessione 213B
 > **Filosofia:** Una cosa alla volta, fino al 100000%!
 > **Principio:** "Non importa il TEMPO - abbiamo TEMPO!"
+
+---
+
+## PROGRESSO SESSIONI
+
+```
+SESSIONE A: Database + Backend Core      [####################] 100% COMPLETATA!
+SESSIONE B: Activity Log Backend         [####################] 100% COMPLETATA!
+SESSIONE C: Frontend Room Grid           [....................] 0%
+SESSIONE D: Frontend Room Card + Activity[....................] 0%
+SESSIONE E: Test + Affinamenti           [....................] 0%
+SESSIONE F: PWA Housekeeping             [....................] 0%
+```
 
 ---
 
@@ -178,27 +192,31 @@ frontend/
 
 ---
 
-### SESSIONE B: Activity Log Backend
+### SESSIONE B: Activity Log Backend - COMPLETATA!
 
 **Obiettivo:** Activity log completo con storico
 
 **Task:**
-1. [ ] Creare `room_activity_service.py`
-   - `get_room_activity(room_id, limit, offset)`
-   - `get_global_activity(hotel_id, filters, limit, offset)`
-   - `get_activity_stats(hotel_id, date_range)`
+1. [x] ~~Creare `room_activity_service.py`~~ (integrato in room_manager_service.py)
+   - [x] `get_room_activity(room_id, limit, offset)`
+   - [x] `get_global_activity(hotel_id, filters, limit, offset)`
+   - [x] `get_activity_stats(hotel_id, date_range)`
 
-2. [ ] Aggiungere endpoint activity
-   - `GET /api/room-manager/rooms/{id}/activity`
-   - `GET /api/room-manager/activity`
-   - `GET /api/room-manager/stats`
+2. [x] Aggiungere endpoint activity
+   - [x] `GET /api/room-manager/rooms/{id}/activity`
+   - [x] `GET /api/room-manager/{hotel_code}/activity`
+   - [x] `GET /api/room-manager/{hotel_code}/stats`
+   - [x] `GET /api/room-manager/{hotel_code}/activity-stats` (NUOVO!)
 
-3. [ ] Trigger automatici activity log
-   - Ogni cambio housekeeping_status -> log
-   - Ogni cambio status camera -> log
-   - Ogni creazione/eliminazione block -> log
+3. [x] Trigger automatici activity log
+   - [x] Ogni cambio housekeeping_status -> log (housekeeping.py + room_manager.py)
+   - [x] Ogni cambio status camera -> log (room_manager.py)
+   - [x] Ogni creazione/eliminazione block -> log (blocks.py)
 
 **Output:** Activity log popolato automaticamente
+
+**Audit Guardiana:** 8.5/10 APPROVATO
+**Fix applicato:** Export modelli in models/__init__.py
 
 ---
 
