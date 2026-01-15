@@ -25,7 +25,7 @@ LA MAGIA = PMS Integration + Guest Recognition + VELOCITA SUPERHUMAN!
 ```
 FASE 0: FONDAMENTA          [####################] 100% COMPLETA!
 FASE P: PERFORMANCE         [####################] 100% MERGED!
-FASE 1: EMAIL CLIENT SOLIDO [#################...] 85%
+FASE 1: EMAIL CLIENT SOLIDO [##################..] 90%
 FASE 2: PMS INTEGRATION     [....................] 0%
 FASE 3: HOTEL WORKFLOW      [....................] 0%
 FASE 4: MULTI-CHANNEL       [....................] 0%
@@ -182,7 +182,7 @@ FASE 4: MULTI-CHANNEL       [....................] 0%
 
 ---
 
-## FASE 1: EMAIL CLIENT SOLIDO [85%]
+## FASE 1: EMAIL CLIENT SOLIDO [90%]
 
 ### 1.1 Mark Read/Unread
 - **Status:** [FATTO] - Sessione 222
@@ -215,11 +215,10 @@ FASE 4: MULTI-CHANNEL       [....................] 0%
 - **Note:** react-resizable-panels v4.4.1 integrato in ThreePanel.tsx con persistence localStorage
 
 ### 1.6 Context Menu
-- **Status:** [DA FARE]
+- **Status:** [FATTO] - Sessione 226 (Sprint 1 Base)
 - **Studio:** `studi/RICERCA_CONTEXT_MENU*.md` (6 file, 2200 righe!), `studi/CONTEXT_MENU_UX_STRATEGY.md`, `decisioni/CONTEXT_MENU_DESIGN_SPECS.md`
 - **Dipende da:** 0.3, 1.1
-- **Note:** Specs COMPLETE, pronto per implementazione!
-- **Effort:** 5h
+- **Note:** EmailContextMenu/ con Quick Actions + Organize. Hotel Actions (Sprint 2-3) pending PMS Integration.
 
 ### 1.7 Bulk Actions
 - **Status:** [DA FARE]
@@ -440,7 +439,7 @@ FASE 4: MULTI-CHANNEL       [....................] 0%
 | Step | Feature | Effort | Studio |
 |------|---------|--------|--------|
 | ~~1.5~~ | ~~Resizable Panels~~ | ~~3h~~ | ✅ **FATTO Sessione 226** |
-| 1.6 | Context Menu | 5h | ✅ PRONTO (2200 righe!) |
+| ~~1.6~~ | ~~Context Menu~~ | ~~5h~~ | ✅ **FATTO Sessione 226** (Sprint 1) |
 | 1.7 | Bulk Actions | 7-10gg | ✅ PRONTO |
 | 1.8 | Labels Custom | 2-3gg | ✅ PRONTO |
 | 1.9 | Contacts Autocomplete | 2-3gg | ✅ PRONTO |
@@ -466,7 +465,7 @@ FASE 4: MULTI-CHANNEL       [....................] 0%
 | Metrica | Attuale | FASE 1 100% | FASE 2 100% |
 |---------|---------|-------------|-------------|
 | Health Score | 8.0/10 | 9.5/10 | 10/10 |
-| Features Complete | 85% | 100% | 120%+ |
+| Features Complete | 90% | 100% | 120%+ |
 | Test Coverage | 0% | 70% | 80% |
 | Differenziazione | Bassa | Media | ALTA (PMS!) |
 

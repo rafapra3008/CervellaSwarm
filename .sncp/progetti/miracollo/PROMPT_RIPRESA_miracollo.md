@@ -7,23 +7,28 @@
 
 ## STATO IN UNA RIGA
 
-**MIRACOLLOOK: 1.5 Resizable Panels FATTO! FASE 1 ora 85%!**
+**MIRACOLLOOK: 1.5 + 1.6 FATTI! FASE 1 ora 90%!**
 
 ---
 
-## SESSIONE 226: RESIZABLE PANELS COMPLETATO!
+## SESSIONE 226: DUE FEATURE COMPLETATE!
 
 ```
 +================================================================+
-|   1.5 RESIZABLE PANELS IMPLEMENTATO!                           |
-|                                                                |
-|   - ThreePanel.tsx con react-resizable-panels v4.4.1           |
-|   - Group, Panel, Separator API                                |
-|   - localStorage persistence per layout                        |
-|   - Collapsible sidebar e guest-sidebar                        |
-|   - Build OK, pronto per test manuale                          |
-|                                                                |
-|   MAPPA aggiornata: 1.5 [DA FARE] -> [FATTO]                   |
+|   1.5 RESIZABLE PANELS + 1.6 CONTEXT MENU IMPLEMENTATI!         |
+|                                                                 |
+|   1.5 Resizable Panels:                                         |
+|   - ThreePanel.tsx con react-resizable-panels v4.4.1            |
+|   - localStorage persistence                                    |
+|                                                                 |
+|   1.6 Context Menu (Sprint 1):                                  |
+|   - EmailContextMenu/ con useContextMenu hook                   |
+|   - Quick Actions: Reply, Forward, Archive, Star                |
+|   - Organize: Add Label, Move to, Assign, Mark Read/Unread     |
+|   - Keyboard nav (arrows + Enter + Escape)                      |
+|   - ARIA accessible                                             |
+|                                                                 |
+|   MAPPA aggiornata: FASE 1 90%                                  |
 +================================================================+
 ```
 
@@ -34,7 +39,7 @@
 ```
 FASE 0 (Fondamenta)     [####################] 100%
 FASE P (Performance)    [####################] 100%
-FASE 1 (Email Solido)   [#################...] 85%
+FASE 1 (Email Solido)   [##################..] 90%
 FASE 2 (PMS Integration)[....................] 0%
 
 STUDI: TUTTI PRONTI per FASE 1 + FASE 2!
@@ -46,36 +51,23 @@ STUDI: TUTTI PRONTI per FASE 1 + FASE 2!
 
 | File | Cosa |
 |------|------|
-| **MAPPA_COMPLETA** | `.sncp/progetti/miracollo/moduli/miracollook/MAPPA_COMPLETA_MIRACOLLOOK.md` |
-| **NORD** | `.sncp/progetti/miracollo/moduli/miracollook/NORD_MIRACOLLOOK.md` |
-| **ThreePanel.tsx** | `miracallook/frontend/src/components/Layout/ThreePanel.tsx` |
+| **MAPPA** | `.sncp/progetti/miracollo/moduli/miracollook/MAPPA_COMPLETA_MIRACOLLOOK.md` |
+| **ThreePanel** | `miracallook/frontend/src/components/Layout/ThreePanel.tsx` |
+| **ContextMenu** | `miracallook/frontend/src/components/EmailContextMenu/` |
 
 ---
 
 ## PROSSIMA SESSIONE
 
 ```
-IMPLEMENTARE (studi MICRO pronti):
-  1.6 Context Menu (5h) - 2200 righe di specs!
+IMPLEMENTARE (studi pronti):
   1.7 Bulk Actions (2-3gg MVP)
   1.8 Labels Custom (2-3gg)
+  1.9 Contacts Autocomplete (2-3gg)
 
-TUTTO PRONTO per completare FASE 1!
+Context Menu Sprint 2-3 (Hotel Actions) = dopo PMS Integration
 ```
 
 ---
 
-## REGOLA ANTI-BUGIE
-
-```
-MAI scrivere "FATTO" senza:
-1. Codice SCRITTO nel repository
-2. Codice COMMITTATO
-3. Feature TESTATA
-
-"SU CARTA != REALE"
-```
-
----
-
-*"Un passo alla volta. 1.5 FATTO. Next: 1.6 Context Menu."*
+*"Due progressi oggi! FASE 1 quasi completa!"*
