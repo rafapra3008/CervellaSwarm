@@ -1,61 +1,44 @@
 # STATO OGGI - 15 Gennaio 2026
 
-> **Sessione:** 216
-> **Ultimo aggiornamento:** 06:15
+> **Sessione:** 217
+> **Ultimo aggiornamento:** 08:00
 
 ---
 
-## SESSIONE 216 - MIRACOLLO
+## SESSIONE 217 - MIRACOLLO
 
 ```
-+================================================================+
-|   ROOM MANAGER MVP - DEPLOY + FIX                               |
-+================================================================+
+ROOM MANAGER MVP TESTATO E DOCUMENTATO!
 
-1. SISTEMA DEPLOY ROBUSTO
-   - deploy.sh riscritto (GIT invece di rsync)
-   - Zero conflitti, GitHub = fonte verità
-   - Trigger: "deploy miracollo"
+1. Fix container duplicato (app-backend-1)
+2. Fix duplicazione piani su refresh
+3. Test completo con Rafa - FUNZIONA!
 
-2. FIX PRODUZIONE
-   - Hotel code: NATURAE → NL
-   - Migration 041 applicata al DB
-   - Docker restart incluso nel deploy
+DOCUMENTAZIONE DEFINITIVA:
+- NORD.md aggiornato
+- ROADMAP_ROOM_MANAGER_COMPLETA.md creata
+- PROMPT_RIPRESA pulito
 
-3. ROOM MANAGER LIVE!
-   - https://miracollo.com/room-manager.html
-   - 11 camere caricate
-   - API funzionanti
-
-+================================================================+
+BLOCCO: VDA docs MODBUS (azione Rafa)
 ```
 
 ---
 
 ## COMMIT OGGI
 
-| Hash | Messaggio |
-|------|-----------|
-| `37c8992` | Fix hotel code NL |
-| `c3ae657` | Deploy script GIT-based |
-| `f02e6c7` | Sistema Deploy DEFINITIVO |
+| Repo | Hash | Messaggio |
+|------|------|-----------|
+| Miracollo | `825c075` | Fix grid duplicazione |
+| Miracollo | `3776567` | NORD + Roadmap |
+| Swarm | `f0c425c` | Roadmap completa |
 
 ---
 
 ## PROSSIMA SESSIONE
 
-1. Test manuale Room Manager completo
-2. Sessione D: Room Card + Activity polish
-3. Deploy finale quando pronto
+- SE docs VDA → FASE 1 roadmap
+- SE no docs → PWA o altro
 
 ---
 
-*"Fatto BENE > Fatto VELOCE"*
-
----
-
-## AUTO-CHECKPOINT: 2026-01-15 06:13 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
+*"NON SI RIDISCUTE. SI SEGUE."*
