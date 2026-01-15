@@ -1,40 +1,38 @@
 # STATO OGGI
 
 > **Data:** 15 Gennaio 2026 (Mercoledi)
-> **Sessioni:** 213 Miracollo + CervellaSwarm
-> **Ultimo aggiornamento:** Sessione 213 - 02:00
+> **Sessioni:** 213 + 213B Miracollo
+> **Ultimo aggiornamento:** Sessione 213B - 02:45
 
 ---
 
-## MIRACOLLO - Sessione 213 ROOM MANAGER MVP SESSIONE A!
+## MIRACOLLO - Room Manager MVP
 
 ```
 SCORE: 9.5/10 (stabile)
-VERSIONE: 1.9.0 (Room Manager MVP)
+VERSIONE: 1.9.1 (Room Manager MVP - Activity Log)
 
-COMPLETATO:
------------
-1. Migration 041_room_manager.sql APPLICATA
-   - Nuovi campi rooms (status, temperature, sensors)
-   - Tabella room_activity_log
-   - Tabella room_access_codes
-   - View v_room_manager_overview
+SESSIONE 213 (A) - Backend Core:
+--------------------------------
+- Migration 041_room_manager.sql APPLICATA
+- room_manager_service.py (~350 righe)
+- routers/room_manager.py (8 endpoint)
+- models/room.py (5 nuovi modelli)
 
-2. room_manager_service.py CREATO (~350 righe)
-   - Lista camere con status
-   - Update status + housekeeping
-   - Activity log automatico
+SESSIONE 213B - Activity Log Backend:
+-------------------------------------
+- Trigger automatici in blocks.py, housekeeping.py
+- get_activity_stats() implementato
+- Nuovo endpoint /activity-stats
+- Fix export modelli (richiesto Guardiana)
+- AUDIT GUARDIANA: 8.5/10 APPROVATO
 
-3. routers/room_manager.py CREATO (~230 righe)
-   - 8 endpoint API funzionanti
-
-4. models/room.py AGGIORNATO
-   - 5 nuovi modelli Pydantic
-
-DECISIONI RAFA:
-- Mobile Housekeeping = PWA (no app store!)
-- Touchscreen in camera = idea futura
-- Nonius TV = studiare per sostituire
+NOTA PROSSIMA SESSIONE:
+-----------------------
+Alzare score da 8.5 a 9.5 (nostro standard!)
+- Fix except generico
+- Validare event_type in log_activity
+- Migliorare gestione connessione
 ```
 
 ---
@@ -45,31 +43,22 @@ DECISIONI RAFA:
 |----------|------|-------|------|
 | CervellaSwarm | SNCP | 9.4/10 | Stabile |
 | Miracollo | RateParity | 9.5/10 | STABILE |
-| Miracollo | Room Manager | 1.9.0 | Backend Sessione A OK! |
-| **MEDIA** | - | **9.5/10** | Target raggiunto! |
+| Miracollo | Room Manager | 8.5/10 | Da alzare a 9.5! |
 
 ---
 
 ## Prossimi Step Room Manager
 
 ```
-SESSIONE A: COMPLETATA!
-SESSIONE B: Activity Log Backend (trigger automatici)
-SESSIONE C: Frontend Room Grid
-SESSIONE D: Frontend Room Card + Activity
-SESSIONE E: Test + Affinamenti
-SESSIONE F: PWA Housekeeping
+SESSIONE A: Backend Core      [##########] 100% FATTO!
+SESSIONE B: Activity Log      [##########] 100% FATTO!
+SESSIONE C: Frontend Grid     [..........] 0%  PROSSIMA
+SESSIONE D: Room Card         [..........] 0%
+SESSIONE E: Test              [..........] 0%
+SESSIONE F: PWA Housekeeping  [..........] 0%
 ```
 
 ---
 
 *"La semplicita di Mews + La domotica di Scidoo + L'hardware VDA = MIRACOLLO!"*
 *15 Gennaio 2026*
-
----
-
-## AUTO-CHECKPOINT: 2026-01-15 02:07 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
