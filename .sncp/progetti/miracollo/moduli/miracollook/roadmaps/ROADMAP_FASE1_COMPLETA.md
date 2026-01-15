@@ -191,7 +191,7 @@ Test: Scrivi "raf" in To → appare Rafa → click → email popolata
 ```
 SPRINT 1 - CRITICI
 [x] 1.1 Mark Read/Unread     15/01/2026 ✅
-[ ] 1.2 Drafts Auto-Save     ____/____/2026
+[x] 1.2 Drafts Auto-Save     15/01/2026 ✅
 
 SPRINT 2 - ALTI
 [ ] 2.1 Upload Attachments   ____/____/2026

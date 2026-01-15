@@ -96,7 +96,7 @@ NON ESISTONO (erano documentati come "fatti"):
 | Feature | Documentato | Realtà | Ore stimate |
 |---------|-------------|--------|-------------|
 | Mark Read/Unread | Sessione 222 | ✅ IMPLEMENTATO | ~1h |
-| Drafts auto-save | "Sessione 194" | ❌ ZERO CODICE | 6h |
+| Drafts auto-save | Sessione 222 | ✅ IMPLEMENTATO | ~2h |
 | Bulk Actions | "Sessione 194" | ❌ ZERO CODICE | 5h |
 | Thread View | "Sessione 195" | ❌ ZERO CODICE | 4h |
 | Labels Custom | "Sessione 195" | ❌ ZERO CODICE | 3h |
@@ -130,9 +130,10 @@ ricerche/COMPETITOR_*.md
 FASE 0 (Fondamenta)     [####################] 100% ✅
   OAuth, Inbox, Send, Reply, Forward, Archive, Trash, Search, AI
 
-FASE 1 (Email Solido)   [#######.............] 35%
+FASE 1 (Email Solido)   [##########..........] 50%
   ✅ Mark Read/Unread (Sessione 222)
-  Manca: Drafts, Bulk, Threads, Labels, Attachments
+  ✅ Drafts Auto-Save (Sessione 222)
+  Manca: Bulk, Threads, Labels, Attachments, Contacts, Context Menu
 
 FASE 2 (PMS Integration)[....................] 0%
   Guest detection, Context sidebar
@@ -145,11 +146,11 @@ FASE 3+ (WhatsApp, etc) [....................]  0%
 ## PROSSIMI STEP (REALI)
 
 ```
-PER COMPLETARE FASE 1 (~33h rimanenti):
+PER COMPLETARE FASE 1 (~27h rimanenti):
 
-CRITICI (6h):
+SPRINT 1 - CRITICI COMPLETATO! ✅
 [x] Mark Read/Unread         ✅ FATTO Sessione 222
-[ ] Drafts auto-save         6h
+[x] Drafts auto-save         ✅ FATTO Sessione 222
 
 ALTI (12h):
 [ ] Bulk Actions             5h
@@ -209,5 +210,7 @@ Backend:  http://localhost:8002
 ---
 
 *Ultimo aggiornamento: 15 Gennaio 2026 - Sessione 222*
-*Mark Read/Unread IMPLEMENTATO (commit 9d846a2)*
+*SPRINT 1 COMPLETATO: Mark Read/Unread + Drafts Auto-Save*
+*Commits: 9d846a2, f60f6b8*
+*FASE 1: 35% → 50%*
 *"SU CARTA != REALE" - Codice VERO, commit FATTO!*
