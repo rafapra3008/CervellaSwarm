@@ -95,7 +95,7 @@ NON ESISTONO (erano documentati come "fatti"):
 
 | Feature | Documentato | Realtà | Ore stimate |
 |---------|-------------|--------|-------------|
-| Mark Read/Unread | "Sessione 192" | ❌ ZERO CODICE | 2h |
+| Mark Read/Unread | Sessione 222 | ✅ IMPLEMENTATO | ~1h |
 | Drafts auto-save | "Sessione 194" | ❌ ZERO CODICE | 6h |
 | Bulk Actions | "Sessione 194" | ❌ ZERO CODICE | 5h |
 | Thread View | "Sessione 195" | ❌ ZERO CODICE | 4h |
@@ -130,8 +130,9 @@ ricerche/COMPETITOR_*.md
 FASE 0 (Fondamenta)     [####################] 100% ✅
   OAuth, Inbox, Send, Reply, Forward, Archive, Trash, Search, AI
 
-FASE 1 (Email Solido)   [######..............] 30%
-  Manca: Mark Read, Drafts, Bulk, Threads, Labels, Attachments
+FASE 1 (Email Solido)   [#######.............] 35%
+  ✅ Mark Read/Unread (Sessione 222)
+  Manca: Drafts, Bulk, Threads, Labels, Attachments
 
 FASE 2 (PMS Integration)[....................] 0%
   Guest detection, Context sidebar
@@ -144,10 +145,10 @@ FASE 3+ (WhatsApp, etc) [....................]  0%
 ## PROSSIMI STEP (REALI)
 
 ```
-PER COMPLETARE FASE 1 (~35h):
+PER COMPLETARE FASE 1 (~33h rimanenti):
 
-CRITICI (8h):
-[ ] Mark Read/Unread         2h
+CRITICI (6h):
+[x] Mark Read/Unread         ✅ FATTO Sessione 222
 [ ] Drafts auto-save         6h
 
 ALTI (12h):
@@ -207,6 +208,6 @@ Backend:  http://localhost:8002
 
 ---
 
-*Ultimo aggiornamento: 15 Gennaio 2026*
-*Riscritto con VERITÀ dopo audit*
-*"SU CARTA != REALE" - Mai più documentazione falsa!*
+*Ultimo aggiornamento: 15 Gennaio 2026 - Sessione 222*
+*Mark Read/Unread IMPLEMENTATO (commit 9d846a2)*
+*"SU CARTA != REALE" - Codice VERO, commit FATTO!*
