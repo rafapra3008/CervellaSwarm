@@ -1,18 +1,20 @@
 # STATO OGGI - 15 Gennaio 2026
 
-> **Sessione:** 222 CervellaSwarm
-> **Ultimo aggiornamento:** 12:00
+> **Sessione:** 222 Miracollook
+> **Ultimo aggiornamento:** 12:30
 
 ---
 
-## SESSIONE 222 - CLI FUNZIONA!
+## SESSIONE 222 - MIRACOLLOOK SPRINT 1 COMPLETATO!
 
 ```
 +================================================================+
-|   CLI CON API ANTHROPIC REALE!                                 |
-|   - spawner.js riscritto con @anthropic-ai/sdk                 |
-|   - 112 test passano                                           |
-|   - Package npm ready                                          |
+|   DUE FEATURE REALI IMPLEMENTATE!                              |
+|                                                                |
+|   1. Mark Read/Unread (commit 9d846a2)                         |
+|   2. Drafts Auto-Save (commit f60f6b8)                         |
+|                                                                |
+|   FASE 1: 30% → 50% (+20% oggi!)                               |
 +================================================================+
 ```
 
@@ -22,21 +24,43 @@
 
 | Task | Stato |
 |------|-------|
-| API Anthropic REALE | FATTO - Testato! |
-| Error handling + retry | FATTO |
-| npm publish prep | FATTO |
-| README per esterni | FATTO |
+| Mark Read/Unread backend | ✅ FATTO |
+| Mark Read/Unread frontend | ✅ FATTO |
+| Drafts API (6 endpoint) | ✅ FATTO |
+| Drafts auto-save hook | ✅ FATTO |
+| ComposeModal con recovery | ✅ FATTO |
+| Build verifica | ✅ PASSA |
+
+---
+
+## STATO MIRACOLLOOK
+
+```
+FASE 0: 100% ✅
+FASE 1: 50%  (+20% oggi!)
+  [x] Mark Read/Unread
+  [x] Drafts Auto-Save
+  [ ] Bulk Actions (5h)
+  [ ] Thread View (4h)
+  [ ] Upload Attachments (4h)
+  [ ] Labels (3h)
+  [ ] Context Menu (5h)
+  [ ] Contacts (6h)
+
+~27h rimanenti per FASE 1 completa
+```
 
 ---
 
 ## PROSSIMO
 
 ```
-1. npm publish
-2. Test installazione globale
-3. Streaming output
+Sprint 2 - ALTI:
+1. Upload Attachments (4h)
+2. Thread View (4h)
+3. Resizable Panels (4h)
 ```
 
 ---
 
-*"Un progresso al giorno = 365 progressi all'anno."*
+*"SU CARTA != REALE" - Oggi codice VERO, commit FATTI!*

@@ -1,13 +1,13 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 221
+> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 222
 > **LEGGI E AGISCI. NON RI-ANALIZZARE.**
 
 ---
 
 ## STATO IN UNA RIGA
 
-**Room Manager MVP LIVE. VDA hardware ordinato. MIRACOLLOOK: Audit completato, docs corrette.**
+**Room Manager MVP LIVE. VDA hardware ordinato. MIRACOLLOOK: SPRINT 1 COMPLETATO - 50%!**
 
 ---
 
@@ -22,46 +22,82 @@
 
 ---
 
-## SESSIONE 221: AUDIT VERITÀ MIRACOLLOOK
+## SESSIONE 222: MIRACOLLOOK SPRINT 1 COMPLETATO!
 
 ```
 +================================================================+
-|   SCOPERTA GRAVE!                                               |
+|   DUE FEATURE REALI IMPLEMENTATE!                              |
 |                                                                |
-|   Documentazione diceva "FATTO" per:                           |
-|   - Drafts, Bulk Actions, Thread View, Labels, Attachments     |
+|   1. Mark Read/Unread                                          |
+|      - Backend: POST /gmail/mark-read, /gmail/mark-unread      |
+|      - Frontend: hook + bottone + shortcut 'U'                 |
+|      - Commit: 9d846a2                                         |
 |                                                                |
-|   REALTÀ: ZERO codice! Solo ricerche (ottime) fatte.           |
+|   2. Drafts Auto-Save                                          |
+|      - Backend: 6 endpoint CRUD + send                         |
+|      - Frontend: useDraft hook + debounce 2s                   |
+|      - UX: "Saving.../Saved at HH:MM" + recovery prompt        |
+|      - Commit: f60f6b8                                         |
 |                                                                |
-|   STATO VERO MIRACOLLOOK:                                       |
-|   - FASE 0: 100% ✅ (OAuth, Inbox, Send, Reply, Archive, AI)   |
-|   - FASE 1: 30% (mancano ~35h)                                  |
-|   - FASE 2+: 0%                                                 |
-|                                                                |
-|   CORRETTO: stato.md, NORD, COSTITUZIONE riscritti             |
-|   AGGIUNTA: REGOLA ANTI-BUGIE + GUIDA_INIZIO_SESSIONE          |
+|   FASE 1: 30% → 50% (+20% sessione!)                           |
 +================================================================+
 ```
-
-**Docs Miracollook:** `.sncp/progetti/miracollo/moduli/miracollook/`
 
 ---
 
-## VDA - SESSIONE 220: GO CONFERMATO!
+## STATO MIRACOLLOOK
 
 ```
-HARDWARE ORDINATO (Amazon.it):
+FASE 0 (Fondamenta)     100% ✅
+  OAuth, Inbox, Send, Reply, Forward, Archive, Trash, Search, AI
+
+FASE 1 (Email Solido)   50%
+  ✅ Mark Read/Unread
+  ✅ Drafts Auto-Save
+  ❌ Bulk Actions (5h)
+  ❌ Thread View (4h)
+  ❌ Upload Attachments (4h)
+  ❌ Labels Custom (3h)
+  ❌ Context Menu (5h)
+  ❌ Contacts (6h)
+
+~27h rimanenti per FASE 1 completa
+```
+
+**Docs:** `.sncp/progetti/miracollo/moduli/miracollook/`
+**Roadmap:** `roadmaps/ROADMAP_FASE1_COMPLETA.md`
+
+---
+
+## VDA - Hardware Ordinato
+
+```
+HARDWARE (Amazon.it - arrivo 1-2 giorni):
 ├── USB-RS485 FTDI (DSD TECH SH-U11L) - €19
 ├── Multimetro Electraline - €12
-├── Cacciaviti precisione MAXWARE - €10
-└── Cavetti jumper ELEGOO 120pcs - €8
-TOTALE: ~€50 | Arrivo: 1-2 giorni
+├── Cacciaviti precisione - €10
+└── Cavetti jumper - €8
+TOTALE: ~€50
 
 PROSSIMO (quando arriva):
 1. Setup Mac: driver FTDI + ModbusSniffer
 2. Test converter funziona
-3. In hotel: trova punto tap sul bus RS-485
-4. Sniffing passivo (1-2 settimane)
+3. Sniffing passivo in hotel
+```
+
+---
+
+## PROSSIMA SESSIONE MIRACOLLOOK
+
+```
+Sprint 2 - ALTI (12h):
+1. Upload Attachments (4h) - ricerca pronta
+2. Thread View (4h) - ricerca pronta
+3. Resizable Panels (4h) - ricerca pronta
+
+Oppure:
+Sprint 3 - COMPLETAMENTO (15h):
+- Bulk Actions, Labels, Context Menu, Contacts
 ```
 
 ---
@@ -70,14 +106,13 @@ PROSSIMO (quando arriva):
 
 | Cosa | Path |
 |------|------|
-| **Miracollook stato VERO** | `.sncp/progetti/miracollo/moduli/miracollook/stato.md` |
-| **Miracollook NORD** | `.sncp/progetti/miracollo/moduli/miracollook/NORD_MIRACOLLOOK.md` |
+| **Miracollook stato** | `.sncp/progetti/miracollo/moduli/miracollook/stato.md` |
+| **Roadmap FASE 1** | `.sncp/progetti/miracollo/moduli/miracollook/roadmaps/ROADMAP_FASE1_COMPLETA.md` |
 | **Guida Sniffing VDA** | `.sncp/progetti/miracollo/idee/20260115_MODBUS_SNIFFING_GUIDA_PRATICA.md` |
-| **Server Hotel** | SSH rafael@192.168.200.5 |
 
 ---
 
-## REGOLA ANTI-BUGIE (NUOVA!)
+## REGOLA ANTI-BUGIE
 
 ```
 MAI scrivere "FATTO" senza:
@@ -90,5 +125,5 @@ MAI scrivere "FATTO" senza:
 
 ---
 
-*"La verità prima di tutto. Sempre."*
-*"Non esistono cose difficili, esistono cose non studiate!"*
+*"Un progresso al giorno = 365 progressi all'anno."*
+*"Fatto BENE > Fatto VELOCE"*
