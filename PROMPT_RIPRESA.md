@@ -5,6 +5,25 @@
 
 ---
 
+## SESSIONE 215 - CLEANUP CRITICO CERVELLASWARM (15 Gennaio 2026 notte)
+
+```
++================================================================+
+|   CERVELLASWARM - CLEANUP + PREVENZIONE ACCUMULO                |
++================================================================+
+
+CLEANUP: 287 JSON eliminati (17MB → 368KB), 651K righe rimosse
+HOOK: file_limits_guard.py (prevenzione automatica)
+LIMITI: PROMPT_RIPRESA max 300, oggi.md max 60
+RICERCA: Architettura VALIDATA, non serve altra ricerca
+
+PROSSIMO: USARE il sistema, non studiarlo
+
++================================================================+
+```
+
+---
+
 ## SESSIONE 215 - ROOM MANAGER MVP POLISH (15 Gennaio 2026)
 
 ```
@@ -171,3 +190,21 @@ Sessioni precedenti archiviate in:
 *"Un po' ogni giorno fino al 100000%!"*
 *"Fatto BENE > Fatto VELOCE"*
 *"I dettagli fanno SEMPRE la differenza!"*
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-15 03:05 (unknown)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: 3e998b4 - Checkpoint Sessione 215: Room Manager Polish
+- **File modificati** (3):
+  - sncp/stato/oggi.md
+  - reports/engineer_report_20260115_030317.json
+  - reports/engineer_report_20260115_030413.json
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: unknown
+
+---
