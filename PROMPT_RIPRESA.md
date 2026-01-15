@@ -142,3 +142,25 @@ Sessioni precedenti archiviate in:
 
 *"Un po' ogni giorno fino al 100000%!"*
 *"Fatto BENE > Fatto VELOCE"*
+
+---
+
+---
+
+## AUTO-CHECKPOINT: 2026-01-15 02:57 (unknown)
+
+### Stato Git
+- **Branch**: main
+- **Ultimo commit**: 090e133 - Checkpoint finale Sessione 214: Cleanup + Archivio
+- **File modificati** (5):
+  - sncp/stato/oggi.md
+  - PROMPT_RIPRESA.md
+  - reports/scientist_prompt_20260115.md
+  - .sncp/progetti/cervellaswarm/ricerche/RICERCA_20260115_MULTI_AGENT_BEST_PRACTICES.md
+  - reports/engineer_report_20260115_024338.json
+
+### Note
+- Checkpoint automatico generato da hook
+- Trigger: unknown
+
+---

@@ -1,7 +1,7 @@
 # STATO OGGI - 15 Gennaio 2026
 
-> **Sessioni:** 213 (A), 213B (B), 214 (C) - Room Manager MVP
-> **Ultimo:** 03:35
+> **Sessioni:** 213-215 - Room Manager MVP
+> **Ultimo:** 04:45
 
 ---
 
@@ -11,21 +11,31 @@
 PROGRESSO:
 [##########] A: Backend Core    100%
 [##########] B: Activity Log    100%
-[##########] C: Frontend Grid   100% <- OGGI
+[##########] C: Frontend Grid   100%
+[##########] POLISH: Security   100% <- SESSIONE 215
 [..........] D: Room Card       0%
 [..........] E: Test            0%
 [..........] F: PWA             0%
 
-SCORE: Backend 9.0 | Frontend 8.5 (da alzare!)
+SCORE: Backend 9.0 | Frontend 9.5 (TARGET RAGGIUNTO!)
 ```
+
+---
+
+## SESSIONE 215 - POLISH COMPLETATO
+
+- XSS protection (escapeHtml)
+- Timeout 10s su API
+- Accessibility (aria-labels, keyboard nav)
+- Loading states + focus-visible
 
 ---
 
 ## PROSSIMA SESSIONE
 
 1. Test manuale `/room-manager.html`
-2. Alzare frontend 8.5 → 9.5
-3. Sessione D: Room Card + Activity
+2. Sessione D: Room Card + Activity polish
+3. Deploy quando pronto
 
 ---
 
@@ -33,9 +43,9 @@ SCORE: Backend 9.0 | Frontend 8.5 (da alzare!)
 
 | Repo | Hash | Branch |
 |------|------|--------|
-| Miracollo | `a760926` | master |
-| CervellaSwarm | `71a4cd9` | main |
+| Miracollo | `f0cbf67` | master |
+| CervellaSwarm | `a2772d7` | main |
 
 ---
 
-*"Un po' ogni giorno fino al 100000%!"*
+*"I dettagli fanno SEMPRE la differenza!"*
