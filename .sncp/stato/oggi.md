@@ -1,59 +1,62 @@
 # STATO OGGI - 15 Gennaio 2026
 
-> **Sessione:** 220 Miracollo
-> **Ultimo aggiornamento:** 10:30
+> **Sessione:** 221 Miracollook
+> **Ultimo aggiornamento:** 11:30
 
 ---
 
-## SESSIONE 220 - VDA REVERSE ENGINEERING: GO!
+## SESSIONE 221 - AUDIT VERITÀ MIRACOLLOOK
 
 ```
 +================================================================+
-|   DECISIONE: GO per eliminare VDA                               |
-|   HARDWARE ORDINATO su Amazon.it                               |
+|   SCOPERTA GRAVE: Documentazione FALSA!                         |
+|   Diceva "FATTO" per 20+ ore di lavoro MAI eseguito             |
+|   CORRETTO: stato.md, NORD, COSTITUZIONE riscritti              |
 +================================================================+
 ```
 
 ---
 
-## ORDINI EFFETTUATI
-
-| Cosa | Prezzo | Status |
-|------|--------|--------|
-| USB-RS485 FTDI (DSD TECH SH-U11L) | €19 | Ordinato |
-| Multimetro Electraline | €12 | Ordinato |
-| Cacciaviti precisione MAXWARE | €10 | Ordinato |
-| Cavetti jumper ELEGOO 120pcs | €8 | Ordinato |
-| **TOTALE** | **~€50** | In arrivo 1-2 gg |
-
----
-
-## PROSSIMO (quando arriva hardware)
+## COSA È SUCCESSO
 
 ```
-1. Installa driver FTDI + ModbusSniffer su Mac
-2. Test converter funziona
-3. In hotel: identifica punto tap bus RS-485
-4. Sniffing passivo (1-2 settimane)
-5. Costruisci register map VDA
+PRIMA (documentazione):
+- FASE 1: 100% completa
+- Drafts, Bulk, Threads, Attachments: "FATTO"
+
+REALTÀ (verificata nel codice):
+- FASE 1: 30% completa
+- Tutto quello sopra: ZERO codice!
+
+CAUSA: Ricerche fatte, codice MAI scritto
 ```
 
 ---
 
-*"Non esistono cose difficili, esistono cose non studiate!"*
+## CORREZIONI FATTE
+
+| File | Azione |
+|------|--------|
+| stato.md | Riscritto con VERITÀ |
+| NORD_MIRACOLLOOK.md | Stato REALE |
+| COSTITUZIONE | Aggiunta REGOLA ANTI-BUGIE |
+| GUIDA_INIZIO_SESSIONE.md | NUOVA - 30 sec per iniziare |
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-15 10:44 (session_end)
+## REGOLA NUOVA
 
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
+```
+MAI "FATTO" senza: codice + commit + test
+"SU CARTA != REALE"
+```
 
 ---
 
-## AUTO-CHECKPOINT: 2026-01-15 11:11 (session_end)
+## VDA (dalla sessione 220)
 
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
+Hardware ordinato (~€50), arrivo 1-2 gg.
+
+---
+
+*"La verità prima di tutto. Sempre."*
