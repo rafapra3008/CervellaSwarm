@@ -1,46 +1,53 @@
 # STATO OGGI - 15 Gennaio 2026
 
-> **Sessione:** 223 CervellaSwarm
-> **Ultimo aggiornamento:** 13:40
+> **Sessione:** 223 Miracollook
+> **Ultimo aggiornamento:** 13:00
 
 ---
 
-## SESSIONE 223 - MOMENTO STORICO!
+## SESSIONE 223 - DUE FEATURE MIRACOLLOOK!
 
 ```
 +================================================================+
-|   cervellaswarm@0.1.0 PUBBLICATO SU NPM!                       |
+|   UPLOAD ATTACHMENTS + THREAD VIEW COMPLETATI!                 |
 |                                                                |
-|   npm install -g cervellaswarm  FUNZIONA!                      |
-|   https://www.npmjs.com/package/cervellaswarm                  |
+|   Backend:                                                     |
+|   - /gmail/send-with-attachments (FormData, max 25MB)          |
+|   - /gmail/thread/{id} (tutti i messaggi di una conversazione) |
 |                                                                |
-|   FASE 2: 0% -> 50%                                            |
+|   Frontend:                                                    |
+|   - useAttachments.ts + AttachmentPicker.tsx                   |
+|   - useThread.ts + ThreadView.tsx (collapsabile!)              |
+|                                                                |
+|   MIRACOLLOOK FASE 1: 50% -> 80% (+30% oggi!)                  |
 +================================================================+
 ```
 
 ---
 
-## COSA ABBIAMO FATTO
+## COMMIT OGGI
 
-| Task | Stato |
-|------|-------|
-| npm login | FATTO |
-| npm publish | FATTO! |
-| Test install globale | FUNZIONA! |
-| NORD aggiornato | FATTO |
+| Repo | Commit | Descrizione |
+|------|--------|-------------|
+| miracollogeminifocus | defee72 | Upload Attachments |
+| miracollogeminifocus | 2a5051e | Thread View |
+| CervellaSwarm | dc94e8b | SNCP Upload |
+| CervellaSwarm | 37c677e | SNCP Thread |
 
 ---
 
 ## PROSSIMA SESSIONE
 
 ```
-1. Recap calmo di tutto
-2. Audit pacchetto npm
-3. Getting Started per esterni
-4. Test completo flusso utente
+Sprint 3 - COMPLETAMENTO (~19h):
+- Resizable Panels (3h)
+- Bulk Actions (5h)
+- Labels Custom (3h)
+- Contacts Autocomplete (6h)
+- Context Menu (5h)
 ```
 
 ---
 
 *"Un progresso al giorno = 365 progressi all'anno."*
-*Oggi: MOMENTO STORICO!*
+*Oggi: +30% FASE 1 Miracollook!*

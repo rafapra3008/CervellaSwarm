@@ -1,45 +1,46 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 222
+> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 223
 > **LEGGI E AGISCI. NON RI-ANALIZZARE.**
 
 ---
 
 ## STATO IN UNA RIGA
 
-**Room Manager MVP LIVE. VDA hardware ordinato. MIRACOLLOOK: SPRINT 1 COMPLETATO - 50%!**
+**Room Manager MVP LIVE. VDA hardware ordinato. MIRACOLLOOK: SPRINT 2 COMPLETATO - 80%!**
 
 ---
 
 ## COSA È LIVE
 
 ```
-✅ PMS Core (prenotazioni, planning, ospiti, tariffe)
-✅ Rateboard AI (meteo, eventi, learning)
-✅ Room Manager MVP (grid, housekeeping, activity log)
-   URL: https://miracollo.com/room-manager.html
+PMS Core (prenotazioni, planning, ospiti, tariffe)
+Rateboard AI (meteo, eventi, learning)
+Room Manager MVP (grid, housekeeping, activity log)
+  URL: https://miracollo.com/room-manager.html
 ```
 
 ---
 
-## SESSIONE 222: MIRACOLLOOK SPRINT 1 COMPLETATO!
+## SESSIONE 223: MIRACOLLOOK SPRINT 2 COMPLETATO!
 
 ```
 +================================================================+
-|   DUE FEATURE REALI IMPLEMENTATE!                              |
+|   DUE FEATURE IMPLEMENTATE IN UNA SESSIONE!                    |
 |                                                                |
-|   1. Mark Read/Unread                                          |
-|      - Backend: POST /gmail/mark-read, /gmail/mark-unread      |
-|      - Frontend: hook + bottone + shortcut 'U'                 |
-|      - Commit: 9d846a2                                         |
+|   1. Upload Attachments                                        |
+|      - Backend: POST /gmail/send-with-attachments (FormData)   |
+|      - Frontend: useAttachments.ts + AttachmentPicker.tsx      |
+|      - Max 25MB, MIME detection, progress bar                  |
+|      - Commit: defee72                                         |
 |                                                                |
-|   2. Drafts Auto-Save                                          |
-|      - Backend: 6 endpoint CRUD + send                         |
-|      - Frontend: useDraft hook + debounce 2s                   |
-|      - UX: "Saving.../Saved at HH:MM" + recovery prompt        |
-|      - Commit: f60f6b8                                         |
+|   2. Thread View                                               |
+|      - Backend: GET /gmail/thread/{id}                         |
+|      - Frontend: useThread.ts + ThreadView.tsx                 |
+|      - Messaggi collapsabili, Expand/Collapse All              |
+|      - Commit: 2a5051e                                         |
 |                                                                |
-|   FASE 1: 30% → 50% (+20% sessione!)                           |
+|   FASE 1: 50% -> 80% (+30% sessione!)                          |
 +================================================================+
 ```
 
@@ -48,24 +49,24 @@
 ## STATO MIRACOLLOOK
 
 ```
-FASE 0 (Fondamenta)     100% ✅
+FASE 0 (Fondamenta)     100%
   OAuth, Inbox, Send, Reply, Forward, Archive, Trash, Search, AI
 
-FASE 1 (Email Solido)   50%
-  ✅ Mark Read/Unread
-  ✅ Drafts Auto-Save
-  ❌ Bulk Actions (5h)
-  ❌ Thread View (4h)
-  ❌ Upload Attachments (4h)
-  ❌ Labels Custom (3h)
-  ❌ Context Menu (5h)
-  ❌ Contacts (6h)
+FASE 1 (Email Solido)   80%
+  Mark Read/Unread
+  Drafts Auto-Save
+  Upload Attachments    <- Sessione 223!
+  Thread View           <- Sessione 223!
+  Resizable Panels (3h)
+  Bulk Actions (5h)
+  Labels Custom (3h)
+  Contacts (6h)
+  Context Menu (5h)
 
-~27h rimanenti per FASE 1 completa
+~19h rimanenti per FASE 1 completa
 ```
 
 **Docs:** `.sncp/progetti/miracollo/moduli/miracollook/`
-**Roadmap:** `roadmaps/ROADMAP_FASE1_COMPLETA.md`
 
 ---
 
@@ -73,11 +74,10 @@ FASE 1 (Email Solido)   50%
 
 ```
 HARDWARE (Amazon.it - arrivo 1-2 giorni):
-├── USB-RS485 FTDI (DSD TECH SH-U11L) - €19
-├── Multimetro Electraline - €12
-├── Cacciaviti precisione - €10
-└── Cavetti jumper - €8
-TOTALE: ~€50
+- USB-RS485 FTDI (DSD TECH SH-U11L) - 19E
+- Multimetro Electraline - 12E
+- Cacciaviti precisione - 10E
+- Cavetti jumper - 8E
 
 PROSSIMO (quando arriva):
 1. Setup Mac: driver FTDI + ModbusSniffer
@@ -90,14 +90,12 @@ PROSSIMO (quando arriva):
 ## PROSSIMA SESSIONE MIRACOLLOOK
 
 ```
-Sprint 2 - ALTI (12h):
-1. Upload Attachments (4h) - ricerca pronta
-2. Thread View (4h) - ricerca pronta
-3. Resizable Panels (4h) - ricerca pronta
-
-Oppure:
-Sprint 3 - COMPLETAMENTO (15h):
-- Bulk Actions, Labels, Context Menu, Contacts
+Sprint 3 - COMPLETAMENTO (19h):
+- Resizable Panels (3h) - ricerca pronta
+- Bulk Actions (5h)
+- Labels Custom (3h)
+- Contacts Autocomplete (6h)
+- Context Menu (5h) - ricerca dettagliata!
 ```
 
 ---
@@ -108,7 +106,6 @@ Sprint 3 - COMPLETAMENTO (15h):
 |------|------|
 | **Miracollook stato** | `.sncp/progetti/miracollo/moduli/miracollook/stato.md` |
 | **Roadmap FASE 1** | `.sncp/progetti/miracollo/moduli/miracollook/roadmaps/ROADMAP_FASE1_COMPLETA.md` |
-| **Guida Sniffing VDA** | `.sncp/progetti/miracollo/idee/20260115_MODBUS_SNIFFING_GUIDA_PRATICA.md` |
 
 ---
 
