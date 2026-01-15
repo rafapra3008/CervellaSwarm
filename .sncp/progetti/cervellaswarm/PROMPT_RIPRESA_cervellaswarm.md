@@ -1,34 +1,39 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 223
-> **MOMENTO STORICO: cervellaswarm@0.1.0 SU NPM!**
+> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 224
+> **PROTEZIONE FAMIGLIA COMPLETATA!**
 
 ---
 
-## SESSIONE 223 - RISULTATO
+## SESSIONE 224 - RISULTATO
 
 ```
 +================================================================+
-|   PACCHETTO PUBBLICATO SU NPM!                                 |
+|   LA FAMIGLIA E' AL SICURO!                                    |
 |                                                                |
-|   npm install -g cervellaswarm   FUNZIONA!                     |
-|   https://www.npmjs.com/package/cervellaswarm                  |
+|   GitHub repo: PUBBLICO → PRIVATO                              |
+|   npm package: RIMOSSO (codice era esposto!)                   |
+|   Ricerca Cursor: 770 righe business model                     |
 |                                                                |
-|   FASE 2: 0% -> 50%                                            |
+|   LEZIONE: "Prima PROTEGGERE, poi PUBBLICARE"                  |
 +================================================================+
 ```
 
 ---
 
-## COSA FUNZIONA
+## COSA ABBIAMO IMPARATO (Ricerca Cursor)
 
-```bash
-npm install -g cervellaswarm    # Installa globalmente
-cervellaswarm --help            # Mostra comandi
-cervellaswarm init              # Inizializza progetto
-cervellaswarm task "..."        # Esegue task con API REALE
-cervellaswarm status            # Mostra stato
-cervellaswarm resume            # Riprende sessione
+```
+CURSOR:
+- CLOSED SOURCE (non open!)
+- $1B ARR in 2 anni
+- $0 marketing (word of mouth)
+- Freemium: Free → $20/mo → $40/mo
+
+PER NOI:
+- Proteggere codice PRIMA di pubblicare
+- Bundle/offuscare sorgenti
+- User brings API key = zero costi!
 ```
 
 ---
@@ -37,20 +42,31 @@ cervellaswarm resume            # Riprende sessione
 
 | Cosa | Stato |
 |------|-------|
-| Package npm | v0.1.0 PUBBLICO |
-| 112 test | PASSANO |
+| GitHub repo | PRIVATO |
+| npm package | RIMOSSO (ripubblicare protetto) |
+| CLI locale | FUNZIONA (112 test passano) |
 | API Anthropic | FUNZIONA |
-| Retry + timeout | IMPLEMENTATO |
+
+---
+
+## GAP TROVATI NELLA ROADMAP
+
+```
+1. PROTEZIONE CODICE - non era prevista!
+2. INCOERENZA 16 vs 8 agenti nel README
+3. BUSINESS MODEL - mancava "user API key"
+4. ORDINE: prima proteggere, poi pubblicare
+```
 
 ---
 
 ## PROSSIMA SESSIONE
 
 ```
-1. [ ] Recap calmo di tutto il pacchetto
-2. [ ] Audit: test, README, struttura
-3. [ ] Getting Started per esterni
-4. [ ] Test flusso utente completo
+1. [ ] Ricerca: come proteggere codice JS/npm
+2. [ ] Implementare bundle/offuscamento
+3. [ ] Fixare README (16 agenti, non 8)
+4. [ ] Ripubblicare npm PROTETTO
 5. [ ] Trovare 5 tester esterni
 ```
 
@@ -58,8 +74,8 @@ cervellaswarm resume            # Riprende sessione
 
 ## TL;DR
 
-**Sessione 223:** MOMENTO STORICO! Pacchetto npm PUBBLICATO!
+**Sessione 224:** Famiglia PROTETTA! GitHub privato, npm rimosso.
 
-**Prossimo:** Recap, audit, trovare tester.
+**Prossimo:** Proteggere codice, poi ripubblicare.
 
-*"Un progresso al giorno = 365 progressi all'anno."*
+*"Prima PROTEGGERE, poi PUBBLICARE - come Cursor!"*
