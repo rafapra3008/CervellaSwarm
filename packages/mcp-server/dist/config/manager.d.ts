@@ -14,7 +14,10 @@ export declare function getDefaultModel(): string;
 export declare function getTimeout(): number;
 export declare function getMaxRetries(): number;
 export declare function isVerbose(): boolean;
+export declare function getTier(): "free" | "pro" | "team" | "enterprise";
+export declare function setTier(tier: "free" | "pro" | "team" | "enterprise"): void;
 export declare function getConfigPath(): string;
+export declare function getConfigDir(): string;
 export interface ValidationResult {
     valid: boolean;
     error?: string;

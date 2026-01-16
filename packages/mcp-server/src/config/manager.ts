@@ -17,6 +17,7 @@ interface ConfigSchema {
   maxRetries: number;
   verbose: boolean;
   telemetry: boolean;
+  tier: "free" | "pro" | "team" | "enterprise";
 }
 
 // Schema for validation
@@ -41,6 +42,11 @@ const schema = {
   },
   verbose: { type: "boolean" as const, default: false },
   telemetry: { type: "boolean" as const, default: false },
+  tier: {
+    type: "string" as const,
+    enum: ["free", "pro", "team", "enterprise"],
+    default: "free",
+  },
 };
 
 // Singleton config instance
@@ -59,6 +65,7 @@ function getConfig(): Conf<ConfigSchema> {
         maxRetries: 3,
         verbose: false,
         telemetry: false,
+        tier: "free",
       },
     });
   }
@@ -115,12 +122,25 @@ export function isVerbose(): boolean {
   return getConfig().get("verbose");
 }
 
+export function getTier(): "free" | "pro" | "team" | "enterprise" {
+  return getConfig().get("tier");
+}
+
+export function setTier(tier: "free" | "pro" | "team" | "enterprise"): void {
+  getConfig().set("tier", tier);
+}
+
 // ============================================
 // CONFIG PATH (for diagnostics)
 // ============================================
 
 export function getConfigPath(): string {
   return getConfig().path;
+}
+
+export function getConfigDir(): string {
+  const configPath = getConfig().path;
+  return configPath.substring(0, configPath.lastIndexOf("/"));
 }
 
 // ============================================

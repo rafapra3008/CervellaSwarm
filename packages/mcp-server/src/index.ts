@@ -20,7 +20,10 @@ import {
   getApiKeySource,
   validateApiKey,
   getConfigPath,
+  getConfigDir,
+  getTier,
 } from "./config/manager.js";
+import { getUsageTracker, QuotaStatus } from "./billing/usage.js";
 
 // Server metadata
 const SERVER_NAME = "cervellaswarm";
@@ -83,10 +86,33 @@ server.tool(
       };
     }
 
+    // Check quota before executing
+    const usageTracker = getUsageTracker(getConfigDir(), getTier);
+    const quotaResult = await usageTracker.checkQuota();
+
+    if (!quotaResult.allowed) {
+      return {
+        content: [
+          {
+            type: "text",
+            text: quotaResult.error || "Monthly limit reached.",
+          },
+        ],
+        isError: true,
+      };
+    }
+
+    // Show warning if approaching limit (but still allow)
+    let warningMessage = "";
+    if (quotaResult.status === QuotaStatus.WARNING && quotaResult.warning) {
+      warningMessage = `\n\n---\n\n⚠️ ${quotaResult.warning}`;
+    }
+
     try {
       const result = await spawnWorker(worker, task, context);
 
       if (!result.success) {
+        // Failed calls don't count toward quota
         return {
           content: [
             {
@@ -98,6 +124,13 @@ server.tool(
         };
       }
 
+      // Track successful call
+      await usageTracker.trackCall();
+
+      // Get updated usage for display
+      const stats = await usageTracker.getStats();
+      const usageInfo = `Usage: ${stats.calls}/${stats.limit} calls this month`;
+
       return {
         content: [
           {
@@ -105,9 +138,10 @@ server.tool(
             text:
               `Worker: cervella-${worker}\n` +
               `Duration: ${result.duration}\n` +
-              `Tokens: ${result.usage?.inputTokens || 0} in / ${result.usage?.outputTokens || 0} out\n\n` +
+              `Tokens: ${result.usage?.inputTokens || 0} in / ${result.usage?.outputTokens || 0} out\n` +
+              `${usageInfo}\n\n` +
               `---\n\n${result.output}\n\n---\n\n` +
-              `Next step: ${result.nextStep}`,
+              `Next step: ${result.nextStep}${warningMessage}`,
           },
         ],
       };
@@ -232,6 +266,24 @@ server.tool(
 
     return {
       content: [{ type: "text", text: status }],
+    };
+  }
+);
+
+/**
+ * Tool: check_usage
+ * Check current usage and quota status
+ */
+server.tool(
+  "check_usage",
+  "Check your current CervellaSwarm usage, remaining calls, and quota status.",
+  {},
+  async () => {
+    const usageTracker = getUsageTracker(getConfigDir(), getTier);
+    const message = await usageTracker.getUsageMessage();
+
+    return {
+      content: [{ type: "text", text: message }],
     };
   }
 );

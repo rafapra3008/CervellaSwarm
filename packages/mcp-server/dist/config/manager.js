@@ -30,6 +30,11 @@ const schema = {
     },
     verbose: { type: "boolean", default: false },
     telemetry: { type: "boolean", default: false },
+    tier: {
+        type: "string",
+        enum: ["free", "pro", "team", "enterprise"],
+        default: "free",
+    },
 };
 // Singleton config instance
 // Uses same projectName as CLI = same config file!
@@ -46,6 +51,7 @@ function getConfig() {
                 maxRetries: 3,
                 verbose: false,
                 telemetry: false,
+                tier: "free",
             },
         });
     }
@@ -91,11 +97,21 @@ export function getMaxRetries() {
 export function isVerbose() {
     return getConfig().get("verbose");
 }
+export function getTier() {
+    return getConfig().get("tier");
+}
+export function setTier(tier) {
+    getConfig().set("tier", tier);
+}
 // ============================================
 // CONFIG PATH (for diagnostics)
 // ============================================
 export function getConfigPath() {
     return getConfig().path;
+}
+export function getConfigDir() {
+    const configPath = getConfig().path;
+    return configPath.substring(0, configPath.lastIndexOf("/"));
 }
 /**
  * Validate API key by making a minimal test call
