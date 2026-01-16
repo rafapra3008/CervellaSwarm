@@ -1,7 +1,8 @@
 /**
- * Checkout Session Route
+ * Checkout Route
  *
- * Creates Stripe Checkout Session for subscription.
+ * Creates Stripe Payment Link for subscription.
+ * Uses Payment Links API (more reliable than Checkout Sessions).
  * CLI calls this, user completes payment in browser.
  *
  * Copyright 2026 Rafa & Cervella
@@ -17,11 +18,14 @@ interface CheckoutRequest {
   email: string;
 }
 
+// Cache for payment links (they're reusable)
+const paymentLinkCache: Record<string, string> = {};
+
 /**
  * POST /api/create-checkout-session
  *
- * Creates a Stripe Checkout Session for the specified tier.
- * Returns the checkout URL for the CLI to open in browser.
+ * Creates or retrieves a Stripe Payment Link for the specified tier.
+ * Returns the payment URL for the CLI to open in browser.
  */
 router.post("/create-checkout-session", async (req: Request, res: Response) => {
   try {
@@ -39,40 +43,48 @@ router.post("/create-checkout-session", async (req: Request, res: Response) => {
     }
 
     const priceId = getTierPriceId(tier);
-    // Use our API URL for success/cancel pages (they exist!)
-    const apiUrl = process.env.API_URL || "https://cervellaswarm-api.fly.dev";
 
-    // Create Checkout Session
-    // Note: removed payment_method_types to let Stripe auto-configure
-    const session = await stripe.checkout.sessions.create({
-      mode: "subscription",
+    // Check cache first
+    if (paymentLinkCache[tier]) {
+      res.json({
+        url: paymentLinkCache[tier],
+        tier,
+        note: "Payment Link - complete payment to activate subscription",
+      });
+      return;
+    }
+
+    // Create Payment Link (more reliable than Checkout Sessions)
+    const paymentLink = await stripe.paymentLinks.create({
       line_items: [
         {
           price: priceId,
           quantity: 1,
         },
       ],
-      customer_email: email,
-      client_reference_id: email, // Used to identify user in webhook
       metadata: {
-        tier, // Useful in webhook
+        tier,
         source: "cli",
       },
-      success_url: `${apiUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${apiUrl}/cancel`,
+      // Allow customer to adjust quantity? No for subscriptions
+      // after_completion handled by webhook
     });
 
+    // Cache for future use
+    paymentLinkCache[tier] = paymentLink.url;
+
     res.json({
-      url: session.url,
-      sessionId: session.id,
+      url: paymentLink.url,
+      tier,
+      note: "Payment Link - complete payment to activate subscription",
     });
   } catch (error) {
-    console.error("Checkout session error:", error);
+    console.error("Payment link error:", error);
 
     if (error instanceof Error) {
       res.status(500).json({ error: error.message });
     } else {
-      res.status(500).json({ error: "Failed to create checkout session" });
+      res.status(500).json({ error: "Failed to create payment link" });
     }
   }
 });

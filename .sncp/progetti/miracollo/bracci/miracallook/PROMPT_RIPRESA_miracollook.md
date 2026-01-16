@@ -1,7 +1,7 @@
 # PROMPT RIPRESA - Miracollook
 
-> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 242
-> **STATO:** Allotment funziona! Pronto per Design Salutare
+> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 243
+> **STATO:** Design Salutare IN CORSO - colori calm applicati, manca sfondo colonne
 
 ---
 
@@ -12,78 +12,45 @@ Porta :8002 dentro ecosistema Miracollo.
 
 ---
 
-## SESSIONE 242 - COSA ABBIAMO FATTO
+## SESSIONE 243 - DESIGN SALUTARE (PARZIALE)
 
 ```
 +================================================================+
-|   MIGRAZIONE COMPLETATA: react-resizable-panels -> Allotment   |
+|   APPLICATO:                                                    |
+|   - Testo #FFFFFF -> #EBEBF5 (soft white, -glow)               |
+|   - Colori calm: #778DA9 (blue-gray), #E0DED0 (warm)           |
+|   - Labels FOLDERS/CATEGORIES -> calm-blue                      |
+|   - Timestamps email -> calm-blue                               |
+|   - Separatore sidebar -> calm-blue                             |
 |                                                                |
-|   PROBLEMA: react-resizable-panels v4.4.1 bloccava i pannelli  |
-|   SOLUZIONE: Allotment (libreria Microsoft, usata da VS Code)  |
-|                                                                |
-|   RISULTATO: Pannelli funzionano! Build OK!                    |
+|   NON FATTO:                                                    |
+|   - Differenza sfondo tra colonne (Rafa ha screenshot studio)  |
+|   - Rafa dice "vedo ancora molto uguale"                       |
 +================================================================+
 ```
 
-### File Modificati
-- `package.json` - Allotment invece di react-resizable-panels
-- `ThreePanelResizable.tsx` - Riscritto con API Allotment
-- `index.css` - CSS per handle resize (viola accent)
-- `App.tsx` - Import aggiornato
-
-### Commit
-`68189a1` - Miracollook: Migrazione a Allotment per resizable panels
+### File Modificati Sessione 243
+- `tailwind.config.js` - miracollo-calm-blue, miracollo-calm-warm
+- `index.css` - classi .text-miracollo-calm-blue, border, bg
+- `Sidebar.tsx` - labels FOLDERS/CATEGORIES -> calm-blue
+- `EmailListItem.tsx` - timestamps -> calm-blue
 
 ---
 
-## PROSSIMA SESSIONE - Design Salutare
+## PROSSIMA SESSIONE - Completare Design Salutare
 
 ```
-OBIETTIVO: Applicare palette Apple eye-friendly
+OBIETTIVO: Applicare DIFFERENZA SFONDO tra colonne
 
-COSA FARE:
-1. Leggere PALETTE_DESIGN_SALUTARE_VALIDATA.md
-2. Applicare colori passo passo
-3. Verificare che pannelli NON si bloccano dopo ogni modifica
-4. Se si blocca -> identificare quale CSS causa il problema
+COSA SERVE:
+1. Rafa condivide screenshot dello studio originale
+2. Capire esattamente quale sfondo per ogni colonna
+3. Applicare e testare
 
-ATTENZIONE:
-- In passato il design salutare bloccava i pannelli
-- Ora con Allotment potrebbe funzionare
-- Fare un cambio alla volta e testare!
+RIFERIMENTI:
+- Studio completo: .sncp/.../studi/RICERCA_DESIGN_SALUTARE.md
+- Palette validata: .sncp/.../PALETTE_DESIGN_SALUTARE_VALIDATA.md
 ```
-
----
-
-## PALETTE DA APPLICARE
-
-```css
-/* Backgrounds */
---miracollo-bg: #1C1C1E;
---miracollo-bg-secondary: #2C2C2E;
-
-/* Text */
---miracollo-text: #FFFFFF;
---miracollo-text-secondary: rgba(235, 235, 245, 0.6);
-
-/* Accent */
---miracollo-accent: #7c7dff;
---miracollo-accent-warm: #d4985c;
-
-/* Border */
---miracollo-border: #38383A;
-```
-
----
-
-## FILE CHIAVE
-
-| File | Path | Stato |
-|------|------|-------|
-| ThreePanelResizable | `frontend/src/components/Layout/` | Allotment OK |
-| Palette Design | `.sncp/.../PALETTE_DESIGN_SALUTARE_VALIDATA.md` | Da applicare |
-| Studio Ricerca | `.sncp/.../studi/RICERCA_DESIGN_SALUTARE.md` | Completo |
-| Tailwind Config | `frontend/tailwind.config.js` | Colori definiti |
 
 ---
 
@@ -109,13 +76,14 @@ FATTO:
 [x] Search, AI Summary, Keyboard Shortcuts, Command Palette
 [x] Mark Read/Unread, Drafts Auto-Save
 [x] Upload Attachments, Thread View
-[x] Resizable Panels (Allotment) <- SESSIONE 242!
+[x] Resizable Panels (Allotment)
+[~] Design Salutare (parziale)
 
 DA FARE:
-[ ] 1.6 Context Menu (5h)
-[ ] 1.7 Bulk Actions (7-10gg)
-[ ] 1.8 Labels Custom (2-3gg)
-[ ] Design Salutare <- PROSSIMO!
+[ ] Design Salutare COMPLETO <- PROSSIMO!
+[ ] Context Menu
+[ ] Bulk Actions
+[ ] Labels Custom
 ```
 
 ---

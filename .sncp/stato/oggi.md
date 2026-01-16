@@ -1,38 +1,39 @@
 # STATO OGGI - 16 Gennaio 2026
 
-> **Sessione:** 241
-> **Focus:** Sprint 3 Stripe - Deploy + Test
+> **Sessione:** 243
+> **Focus:** MIRACOLLOOK - Design Salutare (inizio)
 
 ---
 
-## SESSIONE 241 - SPRINT 3 STRIPE
+## SESSIONE 243 - DESIGN SALUTARE
 
 ### Completato
-- Prodotti Stripe creati (Pro $20/m, Team $35/m)
-- Price IDs ottenuti
-- Fly.io account + CLI configurati
-- API deployata: https://cervellaswarm-api.fly.dev
-- Webhook Stripe configurato
-- Pagine /success e /cancel aggiunte
+- Testo: #FFFFFF -> #EBEBF5 (soft white, meno glow)
+- Colori calm aggiunti: #778DA9 (blue-gray), #E0DED0 (warm)
+- Labels "FOLDERS"/"CATEGORIES" -> calm-blue
+- Timestamps email -> calm-blue
+- Separatore sidebar -> calm-blue
+- Pannelli Allotment: FUNZIONANO (nessun blocco)
 
-### Problema Aperto
-- Stripe Checkout page: errore "apiKey is not set"
-- Succede su tutti i browser (Chrome, Safari, Arc)
-- Researcher suggeriva URL inesistenti - FIXATO ma non risolve
-- Ipotesi: profilo Stripe Sandbox incompleto?
+### Non Completato
+- Differenza sfondo colonne (Rafa vuole vedere screenshot studio)
+- Design salutare completo richiede piu lavoro
 
-### Commit
-- Da fare
-
----
-
-## PROSSIMA SESSIONE (242)
-
-**CERVELLASWARM:**
-- Investigare errore Stripe Checkout
-- Completare profilo Stripe se necessario
-- Test e2e quando funziona
+### File Modificati
+- tailwind.config.js - colori calm aggiunti
+- index.css - classi CSS calm
+- Sidebar.tsx - labels calm-blue
+- EmailListItem.tsx - timestamps calm-blue
 
 ---
 
-*"Non esistono cose difficili, esistono cose non studiate!"*
+## PROSSIMA SESSIONE (244)
+
+**MIRACOLLOOK:**
+- Rafa condivide screenshot studio design salutare
+- Applicare differenza sfondo colonne
+- Completare design salutare
+
+---
+
+*"I dettagli fanno SEMPRE la differenza!"*
