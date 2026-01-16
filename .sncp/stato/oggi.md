@@ -1,58 +1,44 @@
 # STATO OGGI - 16 Gennaio 2026
 
 > **Ultima Sessione:** 237
-> **Progetto:** CervellaSwarm
+> **Progetti:** CervellaSwarm + Miracollo
 
 ---
 
-## SESSIONE 237 - DUAL-MODE + MONETIZZAZIONE!
+## SESSIONE 237 - DOPPIA VITTORIA!
 
+### CervellaSwarm (inizio sessione)
+- MCP Server connesso
+- Strategia DUAL-MODE definita
+- SUBMAPPA creata (Score 9.5)
+
+### Miracollo (fine sessione)
 ```
-VITTORIE:
-1. MCP Server CONNESSO! (check_status funziona!)
-2. Cleanup config (.mcp.json consolidato)
-3. Strategia DUAL-MODE definita (BYOK + Sampling)
-4. Monetizzazione FREEMIUM definita
-5. SUBMAPPA creata (Score 9.5!)
-6. NORD aggiornato
-```
+SPRINT 1 RICEVUTE PDF - COMPLETATO!
 
----
+File creati:
+- backend/templates/receipts/receipt_template.html
+- backend/services/receipt_pdf_service.py
+- backend/routers/receipts.py (aggiornato)
+- backend/services/email/sender.py (aggiornato)
 
-## STRATEGIA APPROVATA
+Endpoint:
+- GET  /api/receipts/booking/{id}/pdf
+- GET  /api/receipts/booking/{id}/pdf/preview
+- POST /api/receipts/booking/{id}/email
 
-```
-DUAL-MODE (l'utente sceglie):
-- BYOK: Porta API key (power users)
-- Sampling: Usa abbonamento Claude (casual, Claude Max!)
-
-FREEMIUM:
-- Free: 50 calls/mo
-- Pro: $20/mo (500 calls)
-- Team: $35/user/mo (1K calls)
-- Margini: 95%+
+Test: PDF 43KB generato con successo!
 ```
 
 ---
 
-## FILE CREATI
+## PROSSIME SESSIONI
 
-| File | Contenuto |
-|------|-----------|
-| SUBMAPPA_DUALMODE_MONETIZZAZIONE.md | Roadmap 5 sprint, score 9.5 |
-| RICERCA_MCP_SAMPLING_DEEP.md | Come implementare Sampling |
-| RICERCA_MONETIZZAZIONE_MCP.md | Business model completo |
-
----
-
-## PROSSIMA SESSIONE
-
-```
-Sprint 1: BYOK Polish + API key validation
-Sprint 2: Metering & Limits
-Sprint 3: Stripe Integration
-```
+| Progetto | Prossimo Step |
+|----------|---------------|
+| CervellaSwarm | Sprint BYOK + Metering |
+| Miracollo | Checkout UI o Studio RT |
 
 ---
 
-*"Due opzioni per l'utente = piu utenti per noi!"*
+*"Una cosa alla volta, ROBUSTO e COMPLETO!"*

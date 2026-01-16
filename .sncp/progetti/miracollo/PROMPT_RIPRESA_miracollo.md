@@ -1,71 +1,56 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 233
-> **FATTO: Dissezionato PMS Core + MAPPA Modulo Finanziario completa**
+> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 237
+> **FATTO: SPRINT 1 RICEVUTE PDF COMPLETATO!**
 
 ---
 
-## SESSIONE 233: MODULO FINANZIARIO MAPPATO
+## SESSIONE 237: RICEVUTE PDF COMPLETE!
 
-### Cosa Abbiamo Fatto
-- **Dissezionato PMS Core** - 3 audit paralleli, 15+ moduli analizzati
-- **Identificato GAP** - Modulo finanziario al 10%
-- **Ricerche complete** - Fatturazione elettronica, RT, competitor
-- **MAPPA creata** - Score 9.4/10, pronta per sviluppo
-- **NORD aggiornato** - Aggiunto modulo finanziario
+### Cosa Abbiamo Creato
 
-### Pattern Vincente Identificato
+| File | Funzione |
+|------|----------|
+| `backend/templates/receipts/receipt_template.html` | Template professionale |
+| `backend/services/receipt_pdf_service.py` | Service PDF completo |
+| `backend/routers/receipts.py` | +3 endpoint |
+| `backend/services/email/sender.py` | +2 funzioni allegati |
+
+### Nuovi Endpoint
+
 ```
-ONE-CLICK CHECKOUT
-├── 95% casi = Ricevuta automatica
-├── 5% casi = Fattura su richiesta
-├── Workflow: 3 step, 90-120 secondi
-└── Email PDF sempre inclusa
+GET  /api/receipts/booking/{id}/pdf          → Download PDF
+GET  /api/receipts/booking/{id}/pdf/preview  → Preview inline
+POST /api/receipts/booking/{id}/email        → Invia con allegato
+```
+
+### Test Eseguito
+- PDF generato: 43KB
+- Template renderizzato: 11.944 caratteri
+- Dipendenze installate: weasyprint, jinja2
+
+---
+
+## PROSSIMA SESSIONE
+
+```
+OPZIONI:
+A) Checkout UI - Bottone "Genera Ricevuta" nel frontend
+B) Studio RT - Verificare hardware esistente hotel
+
+NOTA: PDF su 1 pagina quando dati pochi (dettaglio futuro)
 ```
 
 ---
 
-## PROSSIMA SESSIONE - SPRINT 1: RICEVUTE PDF
+## ROADMAP MODULO FINANZIARIO
 
-```
-PRIORITA MASSIMA - 3-4 giorni sviluppo
-
-[ ] Template HTML ricevuta professionale
-[ ] Service PDF (WeasyPrint)
-[ ] Endpoint GET /api/receipts/booking/{id}/pdf
-[ ] Endpoint POST /api/receipts/booking/{id}/email
-[ ] Storage in /data/receipts/{year}/{month}/
-[ ] Test con prenotazioni reali
-```
-
-### File da Creare
-- `backend/services/receipt_pdf_service.py`
-- `backend/templates/receipt_template.html`
-
----
-
-## ROADMAP COMPLETA MODULO FINANZIARIO
-
-| Sprint | Priorita | Tempo |
-|--------|----------|-------|
-| 1. Ricevute PDF | MAX | 3-4 giorni |
-| 2. Checkout UI | ALTA | 2-3 giorni |
-| 3. RT Integration | ALTA | 5-7 giorni |
-| 4. Fatture XML | MEDIA | 2-3 giorni |
-
-**BLOCKER Sprint 3:** Serve info RT esistente hotel (marca, IP)
-
----
-
-## FILE CHIAVE
-
-| Cosa | Path |
-|------|------|
-| **MAPPA Finanziario** | `.sncp/.../moduli/finanziario/MAPPA_MODULO_FINANZIARIO.md` |
-| MAPPA Dissezionata | `.sncp/.../reports/MAPPA_DISSEZIONATA_PMS_CORE_20260116.md` |
-| Ricerca Competitor | `.sncp/.../idee/RICERCA_PMS_FISCALE_*.md` |
-| Ricerca UX Checkout | `.sncp/.../idee/RICERCA_CHECKOUT_FISCALE_UX.md` |
-| NORD | `NORD.md` |
+| Sprint | Stato | Note |
+|--------|-------|------|
+| 1. Ricevute PDF | **COMPLETATO!** | Sessione 237 |
+| 2. Checkout UI | DA FARE | Frontend bottoni |
+| 3. RT Integration | BLOCCATO | Serve info hardware |
+| 4. Fatture XML | DA FARE | Dopo RT |
 
 ---
 
@@ -74,9 +59,28 @@ PRIORITA MASSIMA - 3-4 giorni sviluppo
 ```
 MIRACOLLO
 ├── PMS CORE (:8000)        → 85% - Produzione
-├── MODULO FINANZIARIO      → 10% - DA SVILUPPARE
+├── MODULO FINANZIARIO      → 25% - Sprint 1 fatto!
 ├── MIRACALLOOK (:8002)     → 60% - Parcheggiato
 └── ROOM HARDWARE (:8003)   → 10% - Attesa hardware
+```
+
+---
+
+## FILE CHIAVE
+
+| Cosa | Path |
+|------|------|
+| **MAPPA Finanziario** | `.sncp/progetti/miracollo/moduli/finanziario/MAPPA_MODULO_FINANZIARIO.md` |
+| Template Ricevuta | `backend/templates/receipts/receipt_template.html` |
+| Service PDF | `backend/services/receipt_pdf_service.py` |
+
+---
+
+## NOTA PRODUZIONE
+
+```bash
+# Aggiungere all'avvio server per WeasyPrint su macOS:
+export DYLD_LIBRARY_PATH="/opt/homebrew/lib:$DYLD_LIBRARY_PATH"
 ```
 
 ---

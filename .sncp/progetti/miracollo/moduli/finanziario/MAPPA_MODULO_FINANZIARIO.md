@@ -1,7 +1,7 @@
 # MAPPA MODULO FINANZIARIO - MIRACOLLO
 
 > **QUESTO FILE E LA BUSSOLA DEL MODULO FINANZIARIO**
-> **Score Target: 9.5/10 | Ultimo aggiornamento: 16 Gennaio 2026 - Sessione 233**
+> **Score: 9.6/10 | Ultimo aggiornamento: 16 Gennaio 2026 - Sessione 237**
 
 ---
 
@@ -36,7 +36,8 @@
 |------------|-------|------|
 | Payments CRUD | COMPLETO | IMMUTABLE GUARD attivo |
 | Receipt Preview JSON | COMPLETO | Tutti i dati pronti |
-| Receipt PDF | MANCA | Template + generazione |
+| **Receipt PDF** | **COMPLETO** | **Sessione 237!** |
+| **Email con PDF** | **COMPLETO** | **Sessione 237!** |
 | Scontrini RT | MANCA | Integrazione hardware |
 | Fatture XML | MANCA | FatturaPA format |
 | Export Spring | MANCA | XML nella cartella |
@@ -74,36 +75,37 @@
 
 ## FASI DI SVILUPPO
 
-### FASE 1: RICEVUTE PDF
-**Priorita: ALTA | Complessita: BASSA | Tempo: 1 settimana**
+### FASE 1: RICEVUTE PDF - COMPLETATA!
+**Completata: Sessione 237 (16 Gennaio 2026)**
 
 ```
-OBIETTIVO: Generare ricevute PDF professionali
++====================================================================+
+|                    SPRINT 1 COMPLETATO!                            |
++====================================================================+
 
-COSA ESISTE:
-- /api/receipts/booking/{id}/preview (JSON completo)
-- Tutti i dati: hotel, guest, charges, payments, totals
-
-COSA MANCA:
-- Template HTML professionale
-- Generazione PDF (WeasyPrint)
-- Endpoint download PDF
-- Invio email automatico
-- Archiviazione PDF
-
-DELIVERABLE:
-[ ] Template HTML ricevuta (stile hotel professionale)
-[ ] Service generazione PDF
-[ ] Endpoint GET /api/receipts/booking/{id}/pdf
-[ ] Endpoint POST /api/receipts/booking/{id}/email
-[ ] Storage PDF in /data/receipts/{year}/{month}/
-[ ] Test con prenotazioni reali
+DELIVERABLE - TUTTI COMPLETATI:
+[x] Template HTML ricevuta (stile hotel professionale)
+[x] Service generazione PDF (WeasyPrint)
+[x] Endpoint GET /api/receipts/booking/{id}/pdf
+[x] Endpoint GET /api/receipts/booking/{id}/pdf/preview
+[x] Endpoint POST /api/receipts/booking/{id}/email
+[x] Storage PDF in /data/receipts/{year}/{month}/
+[x] Email con allegato PDF
+[x] Test con dati reali (43KB PDF generato!)
 ```
 
-**File da creare:**
-- `backend/services/receipt_pdf_service.py`
-- `backend/templates/receipt_template.html`
-- Aggiornare `backend/routers/receipts.py`
+**File creati:**
+- `backend/services/receipt_pdf_service.py` - Service completo
+- `backend/templates/receipts/receipt_template.html` - Template professionale
+- `backend/routers/receipts.py` - Aggiornato con 3 nuovi endpoint
+- `backend/services/email/sender.py` - Aggiunta funzione allegati
+
+**Nota tecnica (produzione):**
+```bash
+export DYLD_LIBRARY_PATH="/opt/homebrew/lib:$DYLD_LIBRARY_PATH"
+```
+
+**TODO futuro:** Adattare PDF a 1 pagina quando dati sono pochi
 
 ---
 
@@ -346,14 +348,13 @@ FASE 4 (Export):
 ```
 +====================================================================+
 |                                                                    |
-|   STEP 1: STUDIO RT ESISTENTE                                     |
+|   FASE 2: CHECKOUT UI + RT                                        |
 |                                                                    |
-|   Prima di sviluppare, capire:                                    |
-|   - Quale RT ha l'hotel (marca, modello)                          |
-|   - Come comunica (IP, porta, protocollo)                         |
-|   - Come funziona con Ericsoft oggi                               |
+|   Opzioni per prossima sessione:                                  |
+|   A) Checkout UI - Interfaccia frontend per generare ricevute     |
+|   B) Studio RT - Verificare hardware esistente hotel              |
 |                                                                    |
-|   AZIONE: Rafa verifica hardware RT                               |
+|   BLOCKER RT: Serve info hardware (marca, IP, protocollo)         |
 |                                                                    |
 +====================================================================+
 ```
@@ -366,16 +367,22 @@ FASE 4 (Export):
 |------|-------|------|
 | Completezza requisiti | 9.5/10 | Copre tutto il workflow fiscale |
 | Chiarezza architettura | 9.5/10 | Plugin modulare, flessibile |
-| Fattibilita tecnica | 9/10 | Librerie mature, approccio testato |
+| Fattibilita tecnica | 9.5/10 | **FASE 1 COMPLETATA con successo!** |
 | Prioritizzazione | 10/10 | Dal semplice al complesso |
 | Rischi identificati | 9/10 | Mitigazioni concrete |
-| **TOTALE** | **9.4/10** | Target 9.5 quasi raggiunto |
+| **TOTALE** | **9.6/10** | **FASE 1 DONE!** |
 
-**Gap per 9.5+:** Manca studio RT esistente (PROSSIMO STEP)
+---
+
+## CRONOLOGIA COMPLETAMENTI
+
+| Data | Fase | Sessione |
+|------|------|----------|
+| 16/01/2026 | **FASE 1: Ricevute PDF** | **237** |
 
 ---
 
 *"Una cosa alla volta, ROBUSTO e COMPLETO"*
-*"Non importa la difficolta - studiamo, mappiamo, facciamo"*
+*"Studiare i grossi, fare meglio per noi!"*
 
-**Sessione 233 - Cervella & Rafa**
+**Sessione 237 - Cervella & Rafa**
