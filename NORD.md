@@ -2,7 +2,7 @@
 
 > **QUESTO FILE È SACRO. È LA NOSTRA BUSSOLA.**
 >
-> Aggiornato: 15 Gennaio 2026 - Sessione 224
+> Aggiornato: 16 Gennaio 2026 - Sessione 237
 
 ```
 +==================================================================+
@@ -44,12 +44,13 @@ FASE 1: FONDAMENTA               [####################] 100%!
   - PRE/POST-FLIGHT 16 agenti    FATTO
   - 3 GAP critici                FATTO (Sessione 217!)
 
-FASE 2: MVP PRODOTTO             [######..............] 30%
+FASE 2: MVP PRODOTTO             [########............] 40%
   - cervellaswarm init           FATTO!
   - cervellaswarm task           FATTO! (API Reale!)
   - 112 test passano             FATTO!
-  - PROTEZIONE CODICE            DA FARE! (Sessione 224)
-  - Package npm PROTETTO         DA FARE
+  - MCP Server connesso          FATTO! (Sessione 237!)
+  - DUAL-MODE architecture       IN CORSO (Sessione 237)
+  - Monetizzazione (Stripe)      DA FARE
   - 5 tester esterni             DA FARE
 
 FASE 3: PRIMI UTENTI             [....................] 0%
@@ -61,6 +62,31 @@ FASE 4: SCALA                    [....................] 0%
   - Revenue ricorrente           DA FARE
 
 SCORE ATTUALE: 9.5/10
+```
+
+---
+
+## SESSIONE 237 - DUAL-MODE + MONETIZZAZIONE!
+
+```
++==================================================================+
+|                                                                  |
+|   STRATEGIA DUAL-MODE: L'UTENTE SCEGLIE!                        |
+|                                                                  |
+|   BYOK: Porta API key (power users, automazione)                |
+|   Sampling: Usa abbonamento Claude (casual, Claude Max!)        |
+|                                                                  |
+|   MONETIZZAZIONE FREEMIUM:                                       |
+|   - Free: 50 calls/mo (acquisizione)                             |
+|   - Pro: $20/mo (500 calls)                                      |
+|   - Team: $35/user/mo (1K calls)                                 |
+|   - Enterprise: Custom                                           |
+|                                                                  |
+|   MARGINI: 95%+ (NOI non paghiamo MAI l'AI!)                    |
+|                                                                  |
+|   SUBMAPPA: .sncp/.../SUBMAPPA_DUALMODE_MONETIZZAZIONE.md       |
+|                                                                  |
++==================================================================+
 ```
 
 ---
@@ -111,9 +137,11 @@ SCORE ATTUALE: 9.5/10
 | Cosa | Dove |
 |------|------|
 | **MAPPA COMPLETA (BIBBIA!)** | `.sncp/progetti/cervellaswarm/roadmaps/MAPPA_COMPLETA_STEP_BY_STEP.md` |
+| **SUBMAPPA DUAL-MODE (NEW!)** | `.sncp/progetti/cervellaswarm/roadmaps/SUBMAPPA_DUALMODE_MONETIZZAZIONE.md` |
 | Roadmap visiva | `.sncp/progetti/cervellaswarm/roadmaps/ROADMAP_2026_PRODOTTO.md` |
 | Stato dettagliato | `.sncp/progetti/cervellaswarm/stato.md` |
-| Ricerche | `.sncp/progetti/cervellaswarm/ricerche/` |
+| Ricerca MCP Sampling | `.sncp/progetti/cervellaswarm/idee/RICERCA_MCP_SAMPLING_DEEP_20260116.md` |
+| Ricerca Monetizzazione | `.sncp/progetti/cervellaswarm/idee/RICERCA_MONETIZZAZIONE_MCP_20260116.md` |
 | Ricerca Cursor | `.sncp/progetti/cervellaswarm/ricerche/RICERCA_20260115_CURSOR_BUSINESS_MODEL.md` |
 | DNA Famiglia (16 membri) | `docs/DNA_FAMIGLIA.md` |
 

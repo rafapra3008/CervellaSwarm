@@ -1,67 +1,93 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 236
-> **FASE ATTUALE:** MCP Config CORRETTA - Test dopo riavvio!
+> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 237
+> **FASE ATTUALE:** Dual-Mode + Monetizzazione DEFINITI!
 
 ---
 
-## AZIONE IMMEDIATA
+## COSA E' SUCCESSO (Sessione 237)
 
 ```
 +================================================================+
-|   RIAVVIA CLAUDE CODE E TESTA!                                 |
+|   SESSIONE 237 - GRANDI VITTORIE!                              |
 |                                                                |
-|   Sessione 236 ha scoperto il VERO problema:                   |
-|   - settings.json NON è dove Claude legge MCP                  |
-|   - Claude legge da ~/.claude.json o .mcp.json                 |
-|   - Creato .mcp.json nel project root (fix corretto!)          |
-|                                                                |
-|   DOPO RIAVVIO:                                                |
-|   1. Terminale: claude mcp list                                |
-|      → Deve mostrare cervellaswarm connesso                    |
-|   2. In Claude: "usa check_status di cervellaswarm"            |
+|   1. MCP Server CONNESSO! (check_status risponde!)             |
+|   2. Config consolidata in .mcp.json                           |
+|   3. DUAL-MODE strategy definita (BYOK + Sampling)             |
+|   4. MONETIZZAZIONE Freemium definita                          |
+|   5. SUBMAPPA creata con Score 9.5!                            |
+|   6. NORD aggiornato                                           |
 +================================================================+
 ```
 
 ---
 
-## COSA È CAMBIATO (Sessione 235 → 236)
+## STRATEGIA DUAL-MODE
 
-| Sessione | Cosa pensavamo | Realtà |
-|----------|----------------|--------|
-| 235 | Config in settings.json | NON letto per MCP |
-| 236 | Studiato docs ufficiali | MCP va in .mcp.json |
+| Modalita | Come Funziona | Target |
+|----------|---------------|--------|
+| **BYOK** | User porta API key | Power users, automazione |
+| **Sampling** | MCP chiede a Claude Code | Casual, Claude Max users |
 
-**File creato:** `/Users/rafapra/Developer/CervellaSwarm/.mcp.json`
+**Vantaggio Sampling:** Claude Max ($200/mo) = CervellaSwarm GRATIS!
 
 ---
 
-## ROADMAP
+## MONETIZZAZIONE FREEMIUM
 
 ```
-FASE 0: Fondamenta           [####################] FATTO!
-FASE 1: POC MCP              [####################] FATTO!
-FASE 2: MCP Completo         [##########..........] IN CORSO
-  - Server funziona          [####################] OK
-  - Config .mcp.json         [####################] FATTO (Sessione 236!)
-  - Test REALE post-restart  [....................] PROSSIMO
-  - Resources SNCP           [....................] DOPO
-FASE 3: Polish & Launch      [....................]
+Free:       $0       50 calls/mo    (acquisizione)
+Pro:        $20/mo   500 calls      (freelancer)
+Team:       $35/user 1K calls       (agenzie)
+Enterprise: Custom   Unlimited      (corporate)
+
+MARGINI: 95%+ (noi NON paghiamo MAI l'AI!)
 ```
 
 ---
 
-## CLEANUP PENDING
+## ROADMAP (dalla SUBMAPPA)
 
-Config in `settings.json` (normale + insiders) può restare o essere rimossa.
-Non interferisce, ma è inutile ora.
+```
+Sprint 1: BYOK Polish + API key validation     [PROSSIMO]
+Sprint 2: Metering & Limits (50/500/1K calls)
+Sprint 3: Stripe Integration
+Sprint 4: Sampling Implementation
+Sprint 5: Polish
+
+Timeline: ~5 settimane per Score 9.5/10
+```
+
+---
+
+## FILE CHIAVE CREATI
+
+| File | Path |
+|------|------|
+| **SUBMAPPA** | `.sncp/.../roadmaps/SUBMAPPA_DUALMODE_MONETIZZAZIONE.md` |
+| Ricerca Sampling | `.sncp/.../idee/RICERCA_MCP_SAMPLING_DEEP_20260116.md` |
+| Ricerca Monetizzazione | `.sncp/.../idee/RICERCA_MONETIZZAZIONE_MCP_20260116.md` |
+
+---
+
+## AZIONE PROSSIMA SESSIONE
+
+```
+1. Leggere SUBMAPPA per contesto completo
+2. Sprint 1: BYOK Polish
+   - API key validation con test call
+   - Error messages user-friendly
+   - cervellaswarm doctor command
+3. Poi: Metering & Stripe
+```
 
 ---
 
 ## TL;DR
 
-**Sessione 236:** Scoperto che MCP config va in `.mcp.json`, non in `settings.json`. Fix applicato.
+**Sessione 237:** MCP funziona + strategia Dual-Mode + Freemium definiti!
 
-**ORA:** Riavvia → `claude mcp list` → test tool.
+**Prossimo:** Implementare BYOK polish, poi metering, poi Stripe.
 
-*"Studiare = Risolvere!"*
+*"Due opzioni per l'utente = piu utenti per noi!"*
+*"Margini 95%+ = LIBERTA GEOGRAFICA!"*

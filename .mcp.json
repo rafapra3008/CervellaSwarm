@@ -5,6 +5,21 @@
       "args": [
         "/Users/rafapra/Developer/CervellaSwarm/packages/mcp-server/dist/index.js"
       ]
+    },
+    "browser": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--browser",
+        "chromium",
+        "--caps",
+        "vision",
+        "--viewport-size",
+        "1280x720",
+        "--user-data-dir",
+        "/Users/rafapra/.claude/browser-profile"
+      ]
     }
   }
 }
