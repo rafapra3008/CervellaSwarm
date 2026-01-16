@@ -1,63 +1,59 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 232
-> **FATTO: MAPPA ECOSISTEMA + NORD.md + Cleanup documentazione**
+> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 233
+> **FATTO: Dissezionato PMS Core + MAPPA Modulo Finanziario completa**
 
 ---
 
-## ARCHITETTURA ECOSISTEMA
-
-```
-MIRACOLLO ECOSISTEMA
-│
-├── PMS CORE (:8000)        → 85% - Stabile, produzione
-├── MIRACALLOOK (:8002)     → 60% - Email client, backlog presente
-└── ROOM HARDWARE (:8003)   → 10% - Ricerca OK, attesa hardware
-```
-
----
-
-## SESSIONE 232: MAPPA COMPLETATA
+## SESSIONE 233: MODULO FINANZIARIO MAPPATO
 
 ### Cosa Abbiamo Fatto
-- 3 Audit paralleli (Researcher + Ingegnera + Guardiana)
-- **NORD.md CREATO** - Bussola strategica Miracollo
-- **stato.md RIDOTTO** - Da 712 a 136 righe
-- Archivio sessioni 207-215 creato
+- **Dissezionato PMS Core** - 3 audit paralleli, 15+ moduli analizzati
+- **Identificato GAP** - Modulo finanziario al 10%
+- **Ricerche complete** - Fatturazione elettronica, RT, competitor
+- **MAPPA creata** - Score 9.4/10, pronta per sviluppo
+- **NORD aggiornato** - Aggiunto modulo finanziario
 
-### Report Creati
-| Report | Contenuto |
-|--------|-----------|
-| `reports/MAPPA_STORIA_COMPLETA_20260116.md` | 231+ sessioni, storia completa |
-| `reports/AUDIT_ARCHITETTURA_3_BRACCI_20260116.md` | 130k righe codice REALE |
-| `reports/AUDIT_QUALITA_DOCUMENTAZIONE_20260116.md` | Gap e fix |
+### Pattern Vincente Identificato
+```
+ONE-CLICK CHECKOUT
+├── 95% casi = Ricevuta automatica
+├── 5% casi = Fattura su richiesta
+├── Workflow: 3 step, 90-120 secondi
+└── Email PDF sempre inclusa
+```
 
 ---
 
-## PROSSIMA SESSIONE - PMS CORE FOCUS
+## PROSSIMA SESSIONE - SPRINT 1: RICEVUTE PDF
 
-### Task 1: DISSEZIONARE PMS Core
 ```
-Obiettivo: Vedere OGNI dettaglio di cosa esiste
-├── Audit moduli esistenti
-├── Studiare cosa manca
-├── Creare sub-mappa specifica per modulo
-└── Identificare studi necessari
-```
+PRIORITA MASSIMA - 3-4 giorni sviluppo
 
-### Task 2: FOCUS FINANZIARIO
-```
-Il modulo fiscale (NON braccio separato!) include:
-├── Fatture (emissione, XML)
-├── Scontrini (RT)
-├── Registratore telematico
-├── Stampante fiscale (hardware)
-└── Export commercialista
+[ ] Template HTML ricevuta professionale
+[ ] Service PDF (WeasyPrint)
+[ ] Endpoint GET /api/receipts/booking/{id}/pdf
+[ ] Endpoint POST /api/receipts/booking/{id}/email
+[ ] Storage in /data/receipts/{year}/{month}/
+[ ] Test con prenotazioni reali
 ```
 
-**ORDINE CONSIGLIATO:**
-1. Prima DISSEZIONARE tutto PMS Core
-2. Poi focus specifico sul modulo fiscale
+### File da Creare
+- `backend/services/receipt_pdf_service.py`
+- `backend/templates/receipt_template.html`
+
+---
+
+## ROADMAP COMPLETA MODULO FINANZIARIO
+
+| Sprint | Priorita | Tempo |
+|--------|----------|-------|
+| 1. Ricevute PDF | MAX | 3-4 giorni |
+| 2. Checkout UI | ALTA | 2-3 giorni |
+| 3. RT Integration | ALTA | 5-7 giorni |
+| 4. Fatture XML | MEDIA | 2-3 giorni |
+
+**BLOCKER Sprint 3:** Serve info RT esistente hotel (marca, IP)
 
 ---
 
@@ -65,21 +61,33 @@ Il modulo fiscale (NON braccio separato!) include:
 
 | Cosa | Path |
 |------|------|
-| NORD (bussola) | `NORD.md` |
-| Stato bracci | `bracci/{braccio}/stato.md` |
-| Storia completa | `reports/MAPPA_STORIA_COMPLETA_20260116.md` |
+| **MAPPA Finanziario** | `.sncp/.../moduli/finanziario/MAPPA_MODULO_FINANZIARIO.md` |
+| MAPPA Dissezionata | `.sncp/.../reports/MAPPA_DISSEZIONATA_PMS_CORE_20260116.md` |
+| Ricerca Competitor | `.sncp/.../idee/RICERCA_PMS_FISCALE_*.md` |
+| Ricerca UX Checkout | `.sncp/.../idee/RICERCA_CHECKOUT_FISCALE_UX.md` |
+| NORD | `NORD.md` |
 
 ---
 
-## MAPPA PORTE
+## ARCHITETTURA ECOSISTEMA
 
-| Braccio | Backend | Frontend |
-|---------|---------|----------|
-| PMS Core | 8000 | 80/443 |
-| Miracallook | 8002 | 5173 |
-| Room Hardware | 8003 | - |
+```
+MIRACOLLO
+├── PMS CORE (:8000)        → 85% - Produzione
+├── MODULO FINANZIARIO      → 10% - DA SVILUPPARE
+├── MIRACALLOOK (:8002)     → 60% - Parcheggiato
+└── ROOM HARDWARE (:8003)   → 10% - Attesa hardware
+```
 
 ---
 
-*"Una cosa alla volta, ben organizzati!"*
-*"I dettagli fanno SEMPRE la differenza!"*
+## CONTESTO HOTEL
+
+- **Sistema attuale**: Ericsoft (riferimento workflow)
+- **Contabilita**: SCP Spring (XML in cartella)
+- **RT**: Da verificare marca/modello
+
+---
+
+*"Una cosa alla volta, ROBUSTO e COMPLETO!"*
+*"Studiare i grossi, fare meglio per noi!"*

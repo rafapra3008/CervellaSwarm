@@ -1,0 +1,205 @@
+{
+  "audit": {
+    "date": "2026-01-16",
+    "engineer": "cervella-ingegnera",
+    "target": "miracollogeminifocus/backend",
+    "health_score": 7.5,
+    "status": "SOLIDO"
+  },
+  "modules": {
+    "bookings": {
+      "completeness": 95,
+      "status": "MATURO",
+      "files": {
+        "router": "routers/bookings.py (521 lines)",
+        "model": "models/booking.py (118 lines)",
+        "services": ["booking_utils.py", "booking_conflicts.py"]
+      },
+      "endpoints": 8,
+      "capabilities": [
+        "CRUD prenotazioni base",
+        "Ricerca full-text",
+        "Gestione multi-ospiti",
+        "Compliance check",
+        "Validazione modifica passati",
+        "Room assignments",
+        "Soft delete"
+      ],
+      "gaps": [
+        "Manca endpoint CREATE booking standalone",
+        "GET singolo booking rimosso (in legacy)"
+      ]
+    },
+    "guests": {
+      "completeness": 90,
+      "status": "MATURO ma FRAMMENTATO",
+      "files": {
+        "router_anagrafica": "routers/guests.py (225 lines)",
+        "router_auth": "routers/guest_auth.py (540 lines)",
+        "router_checkin": "routers/guest_checkin/ (5 files)",
+        "model": "models/guest.py (130 lines)",
+        "services": ["guest_validation.py", "checkin_service.py", "magic_link_service.py"]
+      },
+      "endpoints": 13,
+      "capabilities": [
+        "CRUD ospiti completo",
+        "Tutti campi COMPLIANCE",
+        "Magic Link passwordless",
+        "Session JWT",
+        "Rate limiting IP",
+        "Multi-step checkin",
+        "Upload documenti",
+        "Consensi GDPR"
+      ],
+      "gaps": [
+        "Architettura frammentata (3 router)",
+        "Rate limiter in-memory (non production)",
+        "Manca integrazione compliance centralizzata"
+      ]
+    },
+    "planning": {
+      "completeness": 98,
+      "status": "COMPLETISSIMO ma FILE TROPPO GRANDE",
+      "files": {
+        "router_main": "routers/planning.py (722 lines) ⚠️",
+        "router_ops": "routers/planning_ops.py (650 lines)",
+        "router_swap": "routers/planning_swap.py (965 lines) 🔴"
+      },
+      "endpoints": 16,
+      "capabilities": [
+        "Vista planning visuale",
+        "Drag & Drop cambio camera",
+        "Resize date",
+        "Quick booking",
+        "Check-in/Check-out",
+        "Cancellazione",
+        "Room Change soggiorno",
+        "Swap singolo/multiplo/segmento",
+        "Validazione conflitti",
+        "History e Undo",
+        "Versioning ottimistico"
+      ],
+      "gaps": [
+        "CRITICO: planning.py 722 righe - Split urgente",
+        "CRITICO: planning_swap.py 965 righe - Split URGENTISSIMO",
+        "Logica duplicata con bookings.py"
+      ]
+    },
+    "rooms": {
+      "completeness": 85,
+      "status": "SOLIDO, APPENA SVILUPPATO",
+      "files": {
+        "router_housekeeping": "routers/housekeeping.py (126 lines)",
+        "router_blocks": "routers/blocks.py (201 lines)",
+        "router_manager": "routers/room_manager.py",
+        "model": "models/room.py (127 lines)",
+        "service": "services/room_manager_service.py (542 lines)"
+      },
+      "endpoints": 15,
+      "capabilities": [
+        "Stati housekeeping completi",
+        "Room blocks con validazione",
+        "Activity log automatico",
+        "Room Manager MVP",
+        "Status camera completo",
+        "Statistiche dashboard",
+        "Occupancy check",
+        "Preparato VDA"
+      ],
+      "gaps": [
+        "VDA integration pronta ma non implementata",
+        "Manca batch update housekeeping"
+      ]
+    },
+    "hotel": {
+      "completeness": 50,
+      "status": "MINIMALE",
+      "files": {
+        "router": "routers/hotels.py (46 lines)",
+        "model": "models/hotel.py"
+      },
+      "endpoints": 2,
+      "capabilities": [
+        "Lista hotel",
+        "Dettaglio hotel"
+      ],
+      "gaps": [
+        "Manca CREATE hotel",
+        "Manca UPDATE hotel",
+        "Manca DELETE hotel",
+        "Nessuna gestione configurazioni",
+        "Nessun multi-property"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "severity": "CRITICO",
+      "file": "routers/planning_swap.py",
+      "lines": 965,
+      "issue": "File troppo grande - Split urgente",
+      "recommendation": "Split in 4 file: single, multi, segment, utils",
+      "effort_days": 2
+    },
+    {
+      "severity": "CRITICO",
+      "file": "routers/planning.py",
+      "lines": 722,
+      "issue": "File troppo grande - Split urgente",
+      "recommendation": "Split in 4 file: view, booking_ops, booking_updates, room_change",
+      "effort_days": 2
+    },
+    {
+      "severity": "ALTO",
+      "module": "guests",
+      "issue": "Architettura frammentata",
+      "recommendation": "Unificare sotto /api/guests/ con sub-router",
+      "effort_days": 1
+    },
+    {
+      "severity": "ALTO",
+      "module": "bookings+planning",
+      "issue": "Duplicazione logica update booking",
+      "recommendation": "Centralizzare in services/booking_service.py",
+      "effort_days": 1
+    },
+    {
+      "severity": "MEDIO",
+      "module": "guest_auth",
+      "issue": "Rate limiter in-memory",
+      "recommendation": "Migrare a Redis",
+      "effort_hours": 4
+    }
+  ],
+  "metrics": {
+    "total_routers": 5,
+    "total_endpoints": 54,
+    "average_file_size": 450,
+    "large_files": 3,
+    "duplications": 1,
+    "todo_count": 0,
+    "fixme_count": 0
+  },
+  "recommendations": {
+    "priority_1_immediate": [
+      "Split planning_swap.py (965 lines)",
+      "Split planning.py (722 lines)"
+    ],
+    "priority_2_week": [
+      "Unifica Guest module",
+      "Centralizza booking updates"
+    ],
+    "priority_3_future": [
+      "Redis rate limiter",
+      "Espandi Hotel module"
+    ]
+  },
+  "health_breakdown": {
+    "architecture": 8,
+    "file_size": 5,
+    "duplication": 7,
+    "naming": 9,
+    "documentation": 8,
+    "testing": null
+  }
+}

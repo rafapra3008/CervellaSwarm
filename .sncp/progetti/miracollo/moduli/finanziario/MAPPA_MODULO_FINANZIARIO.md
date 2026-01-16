@@ -1,0 +1,381 @@
+# MAPPA MODULO FINANZIARIO - MIRACOLLO
+
+> **QUESTO FILE E LA BUSSOLA DEL MODULO FINANZIARIO**
+> **Score Target: 9.5/10 | Ultimo aggiornamento: 16 Gennaio 2026 - Sessione 233**
+
+---
+
+## VISIONE
+
+```
++====================================================================+
+|                                                                    |
+|   MODULO FINANZIARIO COMPLETO E ROBUSTO                           |
+|                                                                    |
+|   - Ricevute PDF professionali                                     |
+|   - Scontrini RT (registratore telematico)                        |
+|   - Fatture elettroniche XML                                       |
+|   - Export per commercialista (SCP Spring)                        |
+|                                                                    |
+|   "Una cosa alla volta, ROBUSTO e COMPLETO"                       |
+|                                                                    |
++====================================================================+
+```
+
+---
+
+## CONTESTO ATTUALE
+
+### Sistema in Uso (Hotel Rafa)
+- **PMS attuale**: Ericsoft (da studiare per capire workflow)
+- **Contabilita**: SCP Spring (importa XML da cartella)
+- **RT**: Stampante fiscale esistente (marca/modello da verificare)
+
+### Cosa Esiste in Miracollo
+| Componente | Stato | Note |
+|------------|-------|------|
+| Payments CRUD | COMPLETO | IMMUTABLE GUARD attivo |
+| Receipt Preview JSON | COMPLETO | Tutti i dati pronti |
+| Receipt PDF | MANCA | Template + generazione |
+| Scontrini RT | MANCA | Integrazione hardware |
+| Fatture XML | MANCA | FatturaPA format |
+| Export Spring | MANCA | XML nella cartella |
+
+---
+
+## ARCHITETTURA TARGET
+
+```
+                    +------------------+
+                    |   PMS MIRACOLLO  |
+                    +--------+---------+
+                             |
+              +--------------+--------------+
+              |              |              |
+     +--------v----+  +------v------+  +----v--------+
+     |  RICEVUTE   |  |  SCONTRINI  |  |   FATTURE   |
+     |    PDF      |  |     RT      |  |    XML      |
+     +------+------+  +------+------+  +------+------+
+            |                |                |
+     +------v------+  +------v------+  +------v------+
+     |   Email     |  | RT Provider |  | SCP Spring  |
+     |  Archivio   |  |   Plugin    |  |   Folder    |
+     +-------------+  +------+------+  +-------------+
+                             |
+              +--------------+--------------+
+              |              |              |
+     +--------v----+  +------v------+  +----v--------+
+     | Epson HTTP  |  | Custom XML  |  | Cloud API   |
+     | (Primario)  |  | (Backup)    |  | (Futuro)    |
+     +-------------+  +-------------+  +-------------+
+```
+
+---
+
+## FASI DI SVILUPPO
+
+### FASE 1: RICEVUTE PDF
+**Priorita: ALTA | Complessita: BASSA | Tempo: 1 settimana**
+
+```
+OBIETTIVO: Generare ricevute PDF professionali
+
+COSA ESISTE:
+- /api/receipts/booking/{id}/preview (JSON completo)
+- Tutti i dati: hotel, guest, charges, payments, totals
+
+COSA MANCA:
+- Template HTML professionale
+- Generazione PDF (WeasyPrint)
+- Endpoint download PDF
+- Invio email automatico
+- Archiviazione PDF
+
+DELIVERABLE:
+[ ] Template HTML ricevuta (stile hotel professionale)
+[ ] Service generazione PDF
+[ ] Endpoint GET /api/receipts/booking/{id}/pdf
+[ ] Endpoint POST /api/receipts/booking/{id}/email
+[ ] Storage PDF in /data/receipts/{year}/{month}/
+[ ] Test con prenotazioni reali
+```
+
+**File da creare:**
+- `backend/services/receipt_pdf_service.py`
+- `backend/templates/receipt_template.html`
+- Aggiornare `backend/routers/receipts.py`
+
+---
+
+### FASE 2: SCONTRINI RT (Registratore Telematico)
+**Priorita: ALTA | Complessita: MEDIA-ALTA | Tempo: 4-6 settimane**
+
+```
+OBIETTIVO: Emettere scontrini fiscali via RT
+
+NORMATIVA:
+- RT obbligatorio per corrispettivi (pagamenti non fatturati)
+- Chiusura giornaliera obbligatoria
+- NOVITA 2026: Obbligo POS-RT collegato (Marzo 2026)
+- XML 7.0 standard Agenzia Entrate
+
+ARCHITETTURA PLUGIN:
+- Interfaccia astratta RTProvider
+- EpsonHTTPProvider (priorita - 80% mercato)
+- CustomXMLProvider (backup)
+- MockProvider (testing/sviluppo)
+- CloudAPIProvider (futuro)
+
+DELIVERABLE:
+[ ] Studio RT esistente hotel (marca, modello, protocollo)
+[ ] Interfaccia astratta RTProvider
+[ ] MockProvider per testing
+[ ] EpsonHTTPProvider (HTTP/XML Epson)
+[ ] Service scontrino con retry logic
+[ ] Endpoint POST /api/fiscal/receipt
+[ ] Chiusura giornaliera automatica (23:55)
+[ ] Dashboard stato RT
+[ ] Gestione errori e ristampe
+[ ] Test con RT reale
+```
+
+**File da creare:**
+- `backend/services/fiscal/rt_provider.py` (interfaccia)
+- `backend/services/fiscal/epson_provider.py`
+- `backend/services/fiscal/mock_provider.py`
+- `backend/services/fiscal/fiscal_service.py`
+- `backend/routers/fiscal.py`
+
+---
+
+### FASE 3: FATTURE ELETTRONICHE XML
+**Priorita: MEDIA | Complessita: MEDIA | Tempo: 2-3 settimane**
+
+```
+OBIETTIVO: Generare fatture XML per SCP Spring
+
+NORMATIVA:
+- Fattura solo su RICHIESTA cliente (B2C) o sempre per P.IVA (B2B)
+- IVA: 10% pernottamenti, 22% servizi extra
+- Formato: XML FatturaPA v1.2.3
+- Numerazione progressiva annuale
+
+WORKFLOW SEMPLIFICATO:
+1. Operatore clicca "Emetti Fattura" su prenotazione
+2. Miracollo genera XML FatturaPA
+3. XML salvato in cartella Spring (es: /fatture/2026/)
+4. Spring importa e gestisce invio SDI
+5. Miracollo traccia stato (emessa, in Spring)
+
+DELIVERABLE:
+[ ] Studio formato XML FatturaPA
+[ ] Configurazione cartella Spring (settings hotel)
+[ ] Numerazione progressiva (tabella invoices)
+[ ] Generazione XML con python-a38
+[ ] Endpoint POST /api/invoices/booking/{id}/generate
+[ ] Salvataggio XML in cartella Spring
+[ ] Registro fatture emesse
+[ ] Note di credito
+[ ] Test con Spring reale
+```
+
+**File da creare:**
+- `backend/services/invoice_service.py`
+- `backend/models/invoice.py`
+- `backend/routers/invoices.py`
+- Migration: tabella `invoices`
+
+---
+
+### FASE 4: EXPORT COMMERCIALISTA
+**Priorita: BASSA | Complessita: BASSA | Tempo: 1 settimana**
+
+```
+OBIETTIVO: Export dati per commercialista
+
+DELIVERABLE:
+[ ] Export CSV/Excel pagamenti periodo
+[ ] Export CSV/Excel fatture emesse
+[ ] Report prima nota
+[ ] Report IVA periodica
+[ ] Endpoint GET /api/export/accountant
+```
+
+---
+
+## WORKFLOW OPERATIVO TARGET
+
+```
+CHECKOUT OSPITE
+      |
+      v
++-----+-----+
+| Tipo doc? |
++-----+-----+
+      |
+      +---------> RICEVUTA (default)
+      |               |
+      |               v
+      |          Genera PDF
+      |               |
+      |               v
+      |          Invia Email (opzionale)
+      |               |
+      |               v
+      |          Emetti Scontrino RT
+      |
+      +---------> FATTURA (su richiesta)
+                      |
+                      v
+                 Chiedi dati fiscali
+                      |
+                      v
+                 Genera XML FatturaPA
+                      |
+                      v
+                 Salva in cartella Spring
+                      |
+                      v
+                 Emetti Scontrino RT (se pagamento contestuale)
+```
+
+---
+
+## CONFIGURAZIONE HOTEL
+
+```
+SETTINGS DA AGGIUNGERE:
+
+fiscal_settings:
+  # RT
+  rt_enabled: true
+  rt_provider: "epson"  # epson, custom, cloud, mock
+  rt_ip: "192.168.1.100"
+  rt_port: 80
+  rt_daily_close_time: "23:55"
+
+  # Fatture
+  invoice_enabled: true
+  invoice_folder: "/path/to/spring/fatture"
+  invoice_prefix: "FE"
+  invoice_current_number: 1
+
+  # Azienda
+  company_name: "Hotel Example Srl"
+  company_vat: "IT12345678901"
+  company_fiscal_code: "12345678901"
+  company_address: "Via Roma 1"
+  company_city: "Milano"
+  company_postal_code: "20100"
+  company_country: "IT"
+
+  # IVA
+  vat_rate_accommodation: 10
+  vat_rate_services: 22
+```
+
+---
+
+## DIPENDENZE TECNICHE
+
+```
+LIBRERIE DA AGGIUNGERE:
+
+# PDF Generation
+weasyprint>=60.0        # HTML to PDF
+jinja2>=3.0             # Templates (gia presente)
+
+# XML Fatture
+python-a38>=0.1.0       # FatturaPA generation/validation
+
+# RT Communication
+requests>=2.28          # HTTP calls (gia presente)
+```
+
+---
+
+## RISCHI E MITIGAZIONI
+
+| Rischio | Impatto | Mitigazione |
+|---------|---------|-------------|
+| RT hardware incompatibile | ALTO | Studio preventivo modello esistente |
+| Formato XML Spring cambia | MEDIO | Configurazione template esterna |
+| Normativa cambia 2026 | MEDIO | Architettura plugin flessibile |
+| Timeout RT | BASSO | Retry logic + fallback manuale |
+
+---
+
+## METRICHE SUCCESSO
+
+```
+FASE 1 (Ricevute PDF):
+- [ ] PDF generato < 2 secondi
+- [ ] Email inviata < 5 secondi
+- [ ] 0 errori su 100 generazioni test
+
+FASE 2 (Scontrini RT):
+- [ ] Scontrino emesso < 3 secondi
+- [ ] Chiusura giornaliera automatica 100%
+- [ ] Recovery automatico dopo errore RT
+
+FASE 3 (Fatture XML):
+- [ ] XML valido 100% (validazione python-a38)
+- [ ] File in cartella Spring correttamente
+- [ ] Numerazione progressiva corretta
+
+FASE 4 (Export):
+- [ ] Export completo < 10 secondi
+- [ ] Formato compatibile Excel/Spring
+```
+
+---
+
+## CRONOLOGIA DECISIONI
+
+| Data | Decisione | Perche |
+|------|-----------|--------|
+| 16/01/2026 | Architettura plugin RT | Flessibilita, supporta hardware diversi |
+| 16/01/2026 | XML in cartella Spring | Semplice, Spring gestisce SDI |
+| 16/01/2026 | WeasyPrint per PDF | Open source, HTML templates |
+| 16/01/2026 | python-a38 per fatture | Libreria matura, validazione inclusa |
+
+---
+
+## PROSSIMO STEP
+
+```
++====================================================================+
+|                                                                    |
+|   STEP 1: STUDIO RT ESISTENTE                                     |
+|                                                                    |
+|   Prima di sviluppare, capire:                                    |
+|   - Quale RT ha l'hotel (marca, modello)                          |
+|   - Come comunica (IP, porta, protocollo)                         |
+|   - Come funziona con Ericsoft oggi                               |
+|                                                                    |
+|   AZIONE: Rafa verifica hardware RT                               |
+|                                                                    |
++====================================================================+
+```
+
+---
+
+## SCORE VALUTAZIONE
+
+| Area | Score | Note |
+|------|-------|------|
+| Completezza requisiti | 9.5/10 | Copre tutto il workflow fiscale |
+| Chiarezza architettura | 9.5/10 | Plugin modulare, flessibile |
+| Fattibilita tecnica | 9/10 | Librerie mature, approccio testato |
+| Prioritizzazione | 10/10 | Dal semplice al complesso |
+| Rischi identificati | 9/10 | Mitigazioni concrete |
+| **TOTALE** | **9.4/10** | Target 9.5 quasi raggiunto |
+
+**Gap per 9.5+:** Manca studio RT esistente (PROSSIMO STEP)
+
+---
+
+*"Una cosa alla volta, ROBUSTO e COMPLETO"*
+*"Non importa la difficolta - studiamo, mappiamo, facciamo"*
+
+**Sessione 233 - Cervella & Rafa**
