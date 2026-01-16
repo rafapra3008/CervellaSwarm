@@ -1,43 +1,39 @@
 # STATO OGGI - 16 Gennaio 2026
 
-> **Ultima Sessione:** 239
-> **Progetti:** CervellaSwarm
+> **Ultima Sessione:** 240
+> **Progetto:** Miracollook (email client)
 
 ---
 
-## SESSIONE 239 - SPRINT 2 COMPLETATO!
+## SESSIONE 240 - CODE CLEANUP MIRACOLLOOK
 
-### Metering & Limits - FATTO!
+### Completato
 
-```
-+================================================================+
-|   SPRINT 2 COMPLETATO!                                         |
-|                                                                |
-|   CREATI:                                                      |
-|   - billing/types.ts (interfacce)                              |
-|   - billing/tiers.ts (limiti 50/500/1K)                        |
-|   - billing/messages.ts (UX user-friendly)                     |
-|   - billing/usage.ts (UsageTracker completo)                   |
-|                                                                |
-|   FEATURES:                                                    |
-|   - Checksum integrity                                         |
-|   - Mutex serialization (race-safe)                            |
-|   - Backup & recovery                                          |
-|   - Lazy monthly reset                                         |
-|   - Warning 80%, Block 100%                                    |
-|   - Tool check_usage                                           |
-|                                                                |
-|   BUILD: OK | TEST: 134 passano                                |
-+================================================================+
-```
+| Task | Risultato |
+|------|-----------|
+| Split App.tsx | 570 → 318 righe (-44%) |
+| Rimosso App.css | File legacy eliminato |
+| Fix CommandPalette | Navigation funzionante |
+| Split gmail/api.py | 1821 → 8 moduli |
+| STUDIO drag/resize | Problema identificato! |
 
-### SCOPERTA: Context Guard (DIFFERENZIALE!)
+### Score Miracollook: 7.5 → 8.2/10
+
+---
+
+## SCOPERTA CRITICA - DRAG/RESIZE
 
 ```
-Il nostro CTX:53% e' UNICO!
-Nessun competitor fa: real-time + auto-handoff + git commit
-Possiamo venderlo come prodotto standalone!
-Report: .sncp/.../RICERCA_CONTEXT_TRACKING_CLAUDE_CODE.md
+PROBLEMA: react-resizable-panels installata ma MAI usata!
+          Usato CSS nativo "resize: horizontal" (non funziona)
+
+CAUSA: Breaking changes v4 non documentati
+       PanelGroup → Group
+       direction → orientation
+       data-* → aria-*
+
+SOLUZIONE PRONTA: 2-3h implementazione
+Report: .sncp/progetti/miracollo/idee/STUDIO_DRAG_RESIZE_PROBLEMA_20260116.md
 ```
 
 ---
@@ -45,10 +41,11 @@ Report: .sncp/.../RICERCA_CONTEXT_TRACKING_CLAUDE_CODE.md
 ## PROSSIMA SESSIONE
 
 ```
-1. Sprint 3: Stripe Integration
-2. Valutare: Context Guard come prodotto separato?
+1. Implementare drag/resize (codice pronto!)
+2. Testare Drafts error 500
+3. Continuare verso 9.5/10
 ```
 
 ---
 
-*"Un progresso al giorno = 365 progressi all'anno!"*
+*"Non esistono cose difficili, esistono cose non studiate!"*

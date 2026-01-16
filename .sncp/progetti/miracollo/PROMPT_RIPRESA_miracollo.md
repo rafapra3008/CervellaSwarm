@@ -1,56 +1,81 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 239
-> **STATO: Deploy BLOCCATO - fix services/__init__.py**
+> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 240
+> **STATO:** Code cleanup completato, drag/resize problema identificato
 
 ---
 
-## SESSIONE 239: CHECKOUT UI + DEPLOY BLOCCATO
+## SESSIONE 240: CODE CLEANUP MIRACOLLOOK
 
-### Fatto
-- Checkout UI completato (2 bottoni ricevuta)
-- Commit pushato: `c09f64a`
+### Completato
 
-### Problema Deploy
+| Task | Prima | Dopo |
+|------|-------|------|
+| App.tsx | 570 righe | 318 righe (-44%) |
+| App.css | legacy Vite | RIMOSSO |
+| CommandPalette | 3 TODO navigation | FUNZIONANTE |
+| gmail/api.py | 1821 righe | 8 moduli |
+
+### File Creati (Frontend)
+- `hooks/useEmailHandlers.ts` (182 righe)
+- `hooks/useBulkActions.ts` (111 righe)
+- `hooks/useFolderNavigation.ts` (69 righe)
+
+### File Creati (Backend)
+- `gmail/utils.py`, `inbox.py`, `message.py`, `actions.py`
+- `gmail/compose.py`, `drafts.py`, `search.py`, `ai.py`
+
+### Score: 7.5 → 8.2/10
+
+---
+
+## SCOPERTA CRITICA - DRAG/RESIZE
+
 ```
-planning_swap.py importa funzioni da services che non sono esportate.
-Errore: ImportError get_segments_snapshot, log_history, etc.
-
-VECCHIO CONTAINER FUNZIONA ANCORA!
-miracollo-backend-1 = UP, healthy
++================================================================+
+|   PROBLEMA IDENTIFICATO!                                       |
+|                                                                |
+|   react-resizable-panels@4.4.1 INSTALLATA ma MAI usata!        |
+|   Codice usava CSS nativo "resize: horizontal" (non funziona)  |
+|                                                                |
+|   Breaking changes v4:                                         |
+|   - PanelGroup → Group                                         |
+|   - PanelResizeHandle → Separator                              |
+|   - direction → orientation                                    |
+|   - data-* → aria-*                                            |
+|                                                                |
+|   SOLUZIONE PRONTA: ThreePanelResizable.tsx                    |
+|   Effort: 2-3 ore                                              |
++================================================================+
 ```
 
-### Fix Necessario
-Aggiungere export in `services/__init__.py` per:
-- get_segments_snapshot
-- log_history
-- validate_past_bookings
-- check_room_availability
-- update_booking_segments_room
-- update_main_room
-- auto_merge_segments
-- get_booking_swap_info
-- get_segment_swap_info
+**Report completo:** `.sncp/progetti/miracollo/idee/STUDIO_DRAG_RESIZE_PROBLEMA_20260116.md`
 
 ---
 
 ## PROSSIMA SESSIONE
 
 ```
-1. Fix services/__init__.py (trovare file sorgente, aggiungere export)
-2. Re-deploy
-3. Test ricevute PDF live
+1. Implementare drag/resize (codice pronto!)
+   - Creare ThreePanelResizable.tsx
+   - Aggiornare index.css (aria-* attributes)
+   - Migrare App.tsx al nuovo component
+
+2. Testare Drafts error 500 (serve backend running)
+
+3. Continuare verso 9.5/10
 ```
 
 ---
 
-## ROADMAP MODULO FINANZIARIO
+## BACKLOG MIRACOLLOOK
 
-| Sprint | Stato |
-|--------|-------|
-| 1. Ricevute PDF | Backend OK, Frontend OK |
-| 1B. Checkout UI | FATTO (commit pushato) |
-| 2. RT Integration | BLOCCATO (serve hardware) |
+| # | Task | Stato |
+|---|------|-------|
+| 1 | Drag/resize pannelli | PRONTO (codice ready) |
+| 2 | Drafts error 500 | Da testare |
+| 3 | Palette salutare | Validata, da applicare |
+| 4 | Star/Labels (1.8) | Futuro |
 
 ---
 
@@ -58,11 +83,18 @@ Aggiungere export in `services/__init__.py` per:
 
 ```
 MIRACOLLO
-├── PMS CORE (:8000)        → 85% - Produzione (vecchio container)
-├── MODULO FINANZIARIO      → 35% - Sprint 1 completo
+├── PMS CORE (:8000)        → 85% - Produzione
+├── MIRACOLLOOK (:8002)     → 65% - Code cleanup fatto
 └── ROOM HARDWARE (:8003)   → 10% - Attesa hardware
 ```
 
 ---
 
-*"Il vecchio container funziona - fix deploy prossima sessione"*
+## DECISIONE LAYOUT
+
+**LAYOUT FISSO confermato** per ora.
+Ma abbiamo la soluzione per drag/resize pronta se vogliamo.
+
+---
+
+*"Non esistono cose difficili, esistono cose non studiate!"*
