@@ -1,0 +1,1273 @@
+{
+  "timestamp": "16/01/2026 16:54",
+  "project": "/Users/rafapra/Developer/CervellaSwarm/.sncp/progetti/miracollo",
+  "results": {
+    "large_files": [
+      {
+        "file": "sessioni_parallele/20260112_miracollo_test_coverage/test_action_tracking.py",
+        "lines": 820,
+        "suggestion": "Split in moduli separati"
+      },
+      {
+        "file": "sessioni_parallele/20260112_miracollo_test_coverage/test_confidence_scorer.py",
+        "lines": 656,
+        "suggestion": "Split in moduli separati"
+      },
+      {
+        "file": "sessioni_parallele/20260112_miracollo_test_coverage/test_pricing_tracking.py",
+        "lines": 619,
+        "suggestion": "Split in moduli separati"
+      },
+      {
+        "file": "idee/20260115_VDA_MODBUS_REVERSE_ENGINEERING_PARTE2.md",
+        "lines": 991,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/RICERCA_CHECKOUT_FISCALE_UX.md",
+        "lines": 1060,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260115_VDA_MODBUS_REVERSE_ENGINEERING_PARTE3.md",
+        "lines": 1042,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260115_VDA_H155300_RCU_RESEARCH.md",
+        "lines": 1228,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260115_VDA_VE503_TERMOSTATI_RESEARCH.md",
+        "lines": 740,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260114_AUDIT_DIRECT_BOOKING.md",
+        "lines": 536,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260112_STRUTTURA_BACKEND_VM.md",
+        "lines": 764,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260116_RICERCA_PMS_FISCALE_PARTE1.md",
+        "lines": 751,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/RICERCA_TRANSPARENT_AI_20260112.md",
+        "lines": 916,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260112_STRATEGIA_CONTAINER_MIRACOLLO.md",
+        "lines": 539,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260113_RICERCA_COMPETITOR_SCRAPING_PARTE3.md",
+        "lines": 752,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260116_RICERCA_RT_REGISTRATORE_TELEMATICO_PARTE2.md",
+        "lines": 613,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260116_RICERCA_PMS_FISCALE_PARTE2.md",
+        "lines": 1136,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260115_VDA_DOCUMENTAZIONE_UFFICIALE.md",
+        "lines": 629,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260114_LANDING_STRATEGY.md",
+        "lines": 1105,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260113_RICERCA_EVENTI_LOCALI_PARTE3.md",
+        "lines": 805,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260116_RICERCA_RT_REGISTRATORE_TELEMATICO_PARTE3.md",
+        "lines": 908,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260116_RICERCA_PMS_FISCALE_PARTE3.md",
+        "lines": 1441,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260113_RICERCA_EVENTI_LOCALI_PARTE2.md",
+        "lines": 522,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260113_RICERCA_METEO_RMS.md",
+        "lines": 1296,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260112_RICERCA_GAP3_GAP4_ML_WHATIF.md",
+        "lines": 2008,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260113_RICERCA_COMPETITOR_SCRAPING_PARTE2.md",
+        "lines": 557,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260113_RICERCA_COMPETITOR_RMS_PARTE4.md",
+        "lines": 557,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260115_VDA_ARCHITETTURA_SISTEMA_RESEARCH.md",
+        "lines": 1022,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/RICERCA_LEARNING_FROM_ACTIONS.md",
+        "lines": 842,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260115_VDA_MODBUS_REVERSE_ENGINEERING_PARTE1.md",
+        "lines": 643,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260115_LEX_COMPUTECH_GATEWAY_RESEARCH.md",
+        "lines": 825,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/STUDIO_DRAG_RESIZE_PROBLEMA_20260116.md",
+        "lines": 831,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/20260115_MODBUS_SNIFFING_GUIDA_PRATICA.md",
+        "lines": 910,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "idee/RICERCA_FATTURAZIONE_ELETTRONICA_20260116.md",
+        "lines": 712,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "roadmaps/20260112_ROADMAP_REVENUE_7_TO_10.md",
+        "lines": 538,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "roadmaps/ROADMAP_EXTERNAL_DATA.md",
+        "lines": 1051,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "ricerca/RICERCA_WORKFLOW_MIRACOLLO_20260112.md",
+        "lines": 546,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "ricerche/VERIFICA_TRANSPARENT_AI_20260114.md",
+        "lines": 761,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "ricerche/20260113_RICERCA_SCRAPINGBEE.md",
+        "lines": 776,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "workflow/20260111_REGOLE_WORKFLOW_IBRIDO.md",
+        "lines": 532,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "workflow/20260111_RICERCA_WORKFLOW_IBRIDO_VM_LOCALE.md",
+        "lines": 854,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "archivio/SESSIONI_ARCHIVIATE_PRE_214.md",
+        "lines": 1204,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "reports/MAPPA_STORIA_COMPLETA_20260116.md",
+        "lines": 873,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "reports/AUTOPILOT_ANALYSIS_20260112.md",
+        "lines": 600,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "reports/20260115_INVESTIGAZIONE_SESSIONI_194_195_202.md",
+        "lines": 563,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "reports/20260113_RICERCA_COMPLETA_TODO_MIRACOLLO.md",
+        "lines": 668,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "reports/AUDIT_MIRACOLLO_VM_20260112.md",
+        "lines": 962,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "reports/AUDIT_ARCHITETTURA_3_BRACCI_20260116.md",
+        "lines": 677,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "reports/rateboard_audit_completo_20260112.md",
+        "lines": 996,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "reports/big_players_rms_research_20260112_PARTE3.md",
+        "lines": 1010,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/room_manager/RECAP_STUDI_20260115.md",
+        "lines": 909,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/rateboard/studi/rateboard_audit_completo_20260112.md",
+        "lines": 996,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/rateboard/studi/big_players_rms_research_20260112_PARTE3.md",
+        "lines": 1010,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/room_manager/studi/20260114_RICERCA_MEWS.md",
+        "lines": 791,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/room_manager/studi/20260115_RICERCA_ROOM_MANAGER_AVANZATO.md",
+        "lines": 1555,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/room_manager/studi/big_players_research.md",
+        "lines": 1606,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/room_manager/studi/ANALISI_PMS_ESISTENTE.md",
+        "lines": 618,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/room_manager/studi/20260114_RICERCA_CLOUDBEDS.md",
+        "lines": 709,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/room_manager/studi/20260114_RICERCA_OPERA_CLOUD.md",
+        "lines": 1588,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/room_manager/studi/20260114_RICERCA_VDA_HARDWARE.md",
+        "lines": 949,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/room_manager/studi/20260114_RICERCA_SCIDOO.md",
+        "lines": 762,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/room_manager/studi/20260114_CONFRONTO_DEFINITIVO.md",
+        "lines": 520,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "moduli/room_manager/reports/20260114_INGEGNERA_ARCHITETTURA.md",
+        "lines": 886,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/EMAIL_LIST_SPECS_FINAL.md",
+        "lines": 562,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/QUICK_ACTIONS_SPECS_VALIDATED.md",
+        "lines": 708,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/SIDEBAR_DESIGN_SPECS.md",
+        "lines": 856,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/MAPPA_COMPLETA_MIRACOLLOOK.md",
+        "lines": 531,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/RECAP_STUDI_20260115.md",
+        "lines": 909,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260115_VDA_MODBUS_REVERSE_ENGINEERING_PARTE2.md",
+        "lines": 991,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260114_RICERCA_MEWS.md",
+        "lines": 791,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260115_VDA_MODBUS_REVERSE_ENGINEERING_PARTE3.md",
+        "lines": 1042,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260115_RICERCA_ROOM_MANAGER_AVANZATO.md",
+        "lines": 1555,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260115_VDA_H155300_RCU_RESEARCH.md",
+        "lines": 1228,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/big_players_research.md",
+        "lines": 1606,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260115_VDA_VE503_TERMOSTATI_RESEARCH.md",
+        "lines": 740,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/ANALISI_PMS_ESISTENTE.md",
+        "lines": 618,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260115_VDA_DOCUMENTAZIONE_UFFICIALE.md",
+        "lines": 629,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260114_RICERCA_CLOUDBEDS.md",
+        "lines": 709,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260114_RICERCA_OPERA_CLOUD.md",
+        "lines": 1588,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260114_RICERCA_VDA_HARDWARE.md",
+        "lines": 949,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260115_VDA_ARCHITETTURA_SISTEMA_RESEARCH.md",
+        "lines": 1022,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260115_VDA_MODBUS_REVERSE_ENGINEERING_PARTE1.md",
+        "lines": 643,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260114_RICERCA_SCIDOO.md",
+        "lines": 762,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260114_CONFRONTO_DEFINITIVO.md",
+        "lines": 520,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/room-hardware/reports/20260114_INGEGNERA_ARCHITETTURA.md",
+        "lines": 886,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/RICERCA_DRAFTS_20260114.md",
+        "lines": 513,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/COMPETITOR_Shortwave.md",
+        "lines": 729,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/BASELINE_Email_Features.md",
+        "lines": 616,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/THREAD_VIEW_UX_Research.md",
+        "lines": 819,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/20260114_ANALISI_Performance.md",
+        "lines": 644,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/P2_ServiceWorker.md",
+        "lines": 709,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/COMPETITOR_Callbell.md",
+        "lines": 980,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/20260114_RICERCA_MarkRead.md",
+        "lines": 690,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/20260114_Performance_Round2.md",
+        "lines": 836,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/P2_useOptimistic.md",
+        "lines": 667,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/20260114_THREAD_VIEW_API_Research.md",
+        "lines": 988,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/P2_Prefetch.md",
+        "lines": 729,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/decisioni/THREAD_VIEW_DESIGN_SPECS.md",
+        "lines": 1219,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/ANALISI_CODEBASE_UI.md",
+        "lines": 530,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_GMAIL_ATTACHMENTS.md",
+        "lines": 1208,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/DESIGN_PATTERNS_EMAIL.md",
+        "lines": 1472,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_TAILWIND_V4_CUSTOM_COLORS.md",
+        "lines": 1107,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_CONTEXT_MENU_PARTE2.md",
+        "lines": 624,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_CONTEXT_MENU_PARTE3.md",
+        "lines": 971,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_UPLOAD_ATTACHMENTS.md",
+        "lines": 746,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_RESIZABLE_PANELS_V4.md",
+        "lines": 1359,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/CONTEXT_MENU_UX_STRATEGY.md",
+        "lines": 1315,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/BIG_PLAYERS_EMAIL_RESEARCH.md",
+        "lines": 2129,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_CONTEXT_MENU_PARTE4.md",
+        "lines": 1148,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_ATTACHMENTS_PERFORMANCE.md",
+        "lines": 1098,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/UX_STRATEGY_MIRACALLOOK.md",
+        "lines": 1049,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_EMAIL_LIST_DESIGN.md",
+        "lines": 817,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/STUDIO_MACRO_PMS_INTEGRATION.md",
+        "lines": 676,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/STUDIO_MACRO_TESTING_STRATEGY.md",
+        "lines": 513,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/STUDIO_MACRO_SETTINGS_UI.md",
+        "lines": 588,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_PERFORMANCE_EMAIL_CLIENTS.md",
+        "lines": 1700,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_QUICK_ACTIONS_KEYBOARD.md",
+        "lines": 805,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_RESIZE_PANNELLI.md",
+        "lines": 807,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/studi/RICERCA_DESIGN_SALUTARE.md",
+        "lines": 930,
+        "suggestion": "Split in sezioni separate"
+      },
+      {
+        "file": "bracci/miracallook/archivio/MAPPA_MIRACALLOOK.md",
+        "lines": 521,
+        "suggestion": "Split in sezioni separate"
+      }
+    ],
+    "large_functions": [
+      {
+        "file": "moduli/whatif/backend_properties_api.py",
+        "line": 115,
+        "lines": 87,
+        "name": "get_property_room_types"
+      },
+      {
+        "file": "moduli/whatif/backend_properties_api.py",
+        "line": 202,
+        "lines": 68,
+        "name": "_validate_property_exists"
+      },
+      {
+        "file": "moduli/whatif/services_what_if_calculator.py",
+        "line": 44,
+        "lines": 77,
+        "name": "calculate_impact"
+      },
+      {
+        "file": "moduli/whatif/services_what_if_calculator.py",
+        "line": 121,
+        "lines": 54,
+        "name": "generate_price_curve"
+      },
+      {
+        "file": "moduli/whatif/services_what_if_calculator.py",
+        "line": 175,
+        "lines": 57,
+        "name": "_get_current_price"
+      },
+      {
+        "file": "moduli/whatif/services_what_if_calculator.py",
+        "line": 232,
+        "lines": 61,
+        "name": "_get_current_occupancy"
+      },
+      {
+        "file": "moduli/whatif/services_what_if_calculator.py",
+        "line": 391,
+        "lines": 52,
+        "name": "_calculate_confidence"
+      },
+      {
+        "file": "moduli/whatif/services_what_if_calculator.py",
+        "line": 443,
+        "lines": 53,
+        "name": "_generate_explanation"
+      },
+      {
+        "file": "moduli/whatif/routers_what_if_api.py",
+        "line": 38,
+        "lines": 55,
+        "name": "simulate_price_impact"
+      },
+      {
+        "file": "moduli/whatif/routers_what_if_api.py",
+        "line": 93,
+        "lines": 64,
+        "name": "get_price_curve"
+      },
+      {
+        "file": "sessioni_parallele/20260112_miracollo_test_coverage/test_action_tracking.py",
+        "line": 37,
+        "lines": 91,
+        "name": "mock_db"
+      },
+      {
+        "file": "sessioni_parallele/20260112_miracollo_test_coverage/test_action_tracking.py",
+        "line": 276,
+        "lines": 51,
+        "name": "test_apply_action_success"
+      },
+      {
+        "file": "sessioni_parallele/20260112_miracollo_test_coverage/test_confidence_scorer.py",
+        "line": 280,
+        "lines": 62,
+        "name": "test_acceptance_rate_by_hotel"
+      },
+      {
+        "file": "sessioni_parallele/20260112_miracollo_test_coverage/test_pricing_tracking.py",
+        "line": 38,
+        "lines": 65,
+        "name": "mock_db"
+      },
+      {
+        "file": "sessioni_parallele/20260112_miracollo_test_coverage/test_pricing_tracking.py",
+        "line": 531,
+        "lines": 61,
+        "name": "test_full_tracking_flow"
+      },
+      {
+        "file": "sessioni_parallele/20260112_split_revenue_js/revenue-charts.js",
+        "line": 41,
+        "lines": 77,
+        "name": "function"
+      },
+      {
+        "file": "sessioni_parallele/20260112_split_revenue_js/revenue-charts.js",
+        "line": 118,
+        "lines": 80,
+        "name": "function"
+      },
+      {
+        "file": "sessioni_parallele/20260112_split_revenue_js/revenue-actions.js",
+        "line": 103,
+        "lines": 59,
+        "name": "function"
+      },
+      {
+        "file": "sessioni_parallele/20260112_split_revenue_js/revenue-actions.js",
+        "line": 162,
+        "lines": 71,
+        "name": "function"
+      },
+      {
+        "file": "sessioni_parallele/20260112_split_revenue_js/revenue-core.js",
+        "line": 73,
+        "lines": 56,
+        "name": "function"
+      },
+      {
+        "file": "sessioni_parallele/20260112_split_revenue_js/revenue-suggestions.js",
+        "line": 17,
+        "lines": 174,
+        "name": "function"
+      },
+      {
+        "file": "sessioni_parallele/20260112_split_revenue_js/revenue-suggestions.js",
+        "line": 201,
+        "lines": 112,
+        "name": "function"
+      },
+      {
+        "file": "sessioni_parallele/20260112_split_revenue_js/revenue-suggestions.js",
+        "line": 313,
+        "lines": 68,
+        "name": "function"
+      }
+    ],
+    "todos": [
+      {
+        "file": "moduli/whatif/services_what_if_calculator.py",
+        "line": 189,
+        "type": "TODO",
+        "content": "Adattare alla struttura DB reale"
+      },
+      {
+        "file": "idee/TODO_REVENUE_CANCELLA_AZIONE.md",
+        "line": 1,
+        "type": "TODO",
+        "content": "Cancellare Azione in Revenue Intelligence"
+      },
+      {
+        "file": "idee/20260114_AUDIT_DIRECT_BOOKING.md",
+        "line": 57,
+        "type": "TODO",
+        "content": "Trovati"
+      },
+      {
+        "file": "idee/20260114_AUDIT_DIRECT_BOOKING.md",
+        "line": 97,
+        "type": "TODO",
+        "content": "Trovati"
+      },
+      {
+        "file": "idee/20260114_AUDIT_DIRECT_BOOKING.md",
+        "line": 98,
+        "type": "TODO",
+        "content": "estrarre da prodotto se disponibile`"
+      },
+      {
+        "file": "idee/20260114_AUDIT_DIRECT_BOOKING.md",
+        "line": 162,
+        "type": "TODO",
+        "content": "Trovati"
+      },
+      {
+        "file": "idee/20260113_RICERCA_EVENTI_LOCALI_PARTE3.md",
+        "line": 407,
+        "type": "TODO",
+        "content": "Analizzare struttura HTML reale"
+      },
+      {
+        "file": "idee/20260113_RICERCA_EVENTI_LOCALI_PARTE3.md",
+        "line": 444,
+        "type": "TODO",
+        "content": "Implement"
+      },
+      {
+        "file": "idee/20260113_RICERCA_EVENTI_LOCALI_PARTE2.md",
+        "line": 456,
+        "type": "TODO",
+        "content": "Analyze HTML structure, find event containers"
+      },
+      {
+        "file": "idee/20260113_RICERCA_EVENTI_LOCALI_PARTE2.md",
+        "line": 478,
+        "type": "TODO",
+        "content": "Implement based on actual HTML"
+      },
+      {
+        "file": "idee/20260113_RICERCA_EVENTI_LOCALI_PARTE2.md",
+        "line": 484,
+        "type": "TODO",
+        "content": "Implement"
+      },
+      {
+        "file": "roadmaps/SUBROADMAP_9.5_TO_10.md",
+        "line": 157,
+        "type": "TODO",
+        "content": "Critici (12)"
+      },
+      {
+        "file": "roadmaps/SUBROADMAP_9.5_TO_10.md",
+        "line": 164,
+        "type": "TODO",
+        "content": "Funzionali (8)"
+      },
+      {
+        "file": "roadmaps/SUBROADMAP_9.5_TO_10.md",
+        "line": 171,
+        "type": "TODO",
+        "content": "Nice-to-have (8)"
+      },
+      {
+        "file": "ricerche/RICERCA_20260115_resizable_panels.md",
+        "line": 34,
+        "type": "BUG",
+        "content": "Fix Cruciale - v4.3.1"
+      },
+      {
+        "file": "workflow/20260111_RICERCA_WORKFLOW_IBRIDO_VM_LOCALE.md",
+        "line": 587,
+        "type": "BUG",
+        "content": "non critici"
+      },
+      {
+        "file": "workflow/20260111_RICERCA_WORKFLOW_IBRIDO_VM_LOCALE.md",
+        "line": 588,
+        "type": "BUG",
+        "content": "produzione critici"
+      },
+      {
+        "file": "reports/BACKEND_20260114_ml_fixes_session203.md",
+        "line": 30,
+        "type": "BUG",
+        "content": "1: Filename Mismatch"
+      },
+      {
+        "file": "reports/BACKEND_20260114_ml_fixes_session203.md",
+        "line": 56,
+        "type": "BUG",
+        "content": "2: pickle vs joblib"
+      },
+      {
+        "file": "reports/BACKEND_20260114_ml_fixes_session203.md",
+        "line": 140,
+        "type": "TODO",
+        "content": "Future"
+      },
+      {
+        "file": "reports/hardtest_rateboard_20260112.md",
+        "line": 53,
+        "type": "BUG",
+        "content": "#1: Internal Server Error - Room Type Inesistente"
+      },
+      {
+        "file": "reports/hardtest_rateboard_20260112.md",
+        "line": 71,
+        "type": "BUG",
+        "content": "#2: Internal Server Error - Data Invalida"
+      },
+      {
+        "file": "reports/hardtest_rateboard_20260112.md",
+        "line": 89,
+        "type": "BUG",
+        "content": "#3: Nessuna Validazione Range Prezzi"
+      },
+      {
+        "file": "reports/TEST_20260114_whatsapp_webhook.md",
+        "line": 64,
+        "type": "BUG",
+        "content": "Trovato"
+      },
+      {
+        "file": "moduli/room_manager/HANDOFF_SESSIONE_172.md",
+        "line": 102,
+        "type": "BUG",
+        "content": "Fixato"
+      },
+      {
+        "file": "moduli/room_manager/studi/20260115_RICERCA_ROOM_MANAGER_AVANZATO.md",
+        "line": 1133,
+        "type": "TODO",
+        "content": "Implementare quando abbiamo VDA lock register map"
+      },
+      {
+        "file": "moduli/room_manager/studi/20260115_RICERCA_ROOM_MANAGER_AVANZATO.md",
+        "line": 1167,
+        "type": "TODO",
+        "content": "Clear PIN registers"
+      },
+      {
+        "file": "moduli/room_manager/reports/20260114_GUARDIANA_QUALITA_VERIFICA.md",
+        "line": 71,
+        "type": "TODO",
+        "content": "Lookup hotel_id from hotel_code`"
+      },
+      {
+        "file": "moduli/room_manager/reports/ANALISI_BACKEND_FASE1.md",
+        "line": 116,
+        "type": "TODO",
+        "content": "Lookup hotel_id from hotel_code"
+      },
+      {
+        "file": "sessioni_parallele/20260112_split_revenue_js/LOG_COMPLETATO.md",
+        "line": 46,
+        "type": "BUG",
+        "content": "Fixato Durante Split"
+      },
+      {
+        "file": "bracci/room-hardware/HANDOFF_SESSIONE_172.md",
+        "line": 102,
+        "type": "BUG",
+        "content": "Fixato"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260115_RICERCA_ROOM_MANAGER_AVANZATO.md",
+        "line": 1133,
+        "type": "TODO",
+        "content": "Implementare quando abbiamo VDA lock register map"
+      },
+      {
+        "file": "bracci/room-hardware/studi/20260115_RICERCA_ROOM_MANAGER_AVANZATO.md",
+        "line": 1167,
+        "type": "TODO",
+        "content": "Clear PIN registers"
+      },
+      {
+        "file": "bracci/room-hardware/reports/20260114_GUARDIANA_QUALITA_VERIFICA.md",
+        "line": 71,
+        "type": "TODO",
+        "content": "Lookup hotel_id from hotel_code`"
+      },
+      {
+        "file": "bracci/room-hardware/reports/ANALISI_BACKEND_FASE1.md",
+        "line": 116,
+        "type": "TODO",
+        "content": "Lookup hotel_id from hotel_code"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/P2_useOptimistic.md",
+        "line": 161,
+        "type": "BUG",
+        "content": "Confermato"
+      },
+      {
+        "file": "bracci/miracallook/ricerche/P2_useOptimistic.md",
+        "line": 655,
+        "type": "BUG",
+        "content": "e Incompatibilit\u00e0"
+      },
+      {
+        "file": "bracci/miracallook/studi/INDEX.md",
+        "line": 72,
+        "type": "TODO",
+        "content": "- Studi Futuri"
+      },
+      {
+        "file": "bracci/miracallook/reports/TESTER_TAILWIND_FIX.md",
+        "line": 136,
+        "type": "BUG",
+        "content": "Bloccante: TypeScript"
+      }
+    ],
+    "duplicates": [
+      {
+        "files": [
+          "idee/20260115_VDA_MODBUS_REVERSE_ENGINEERING_PARTE2.md",
+          "bracci/room-hardware/studi/20260115_VDA_MODBUS_REVERSE_ENGINEERING_PARTE2.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "idee/20260116_VDA_ROSETTA_STONE_PIANO.md",
+          "bracci/room-hardware/studi/20260116_VDA_ROSETTA_STONE_PIANO.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "idee/20260115_VDA_MODBUS_REVERSE_ENGINEERING_PARTE3.md",
+          "bracci/room-hardware/studi/20260115_VDA_MODBUS_REVERSE_ENGINEERING_PARTE3.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "idee/20260115_VDA_H155300_RCU_RESEARCH.md",
+          "bracci/room-hardware/studi/20260115_VDA_H155300_RCU_RESEARCH.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "idee/20260115_VDA_VE503_TERMOSTATI_RESEARCH.md",
+          "bracci/room-hardware/studi/20260115_VDA_VE503_TERMOSTATI_RESEARCH.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "idee/20260115_VDA_DOCUMENTAZIONE_UFFICIALE.md",
+          "bracci/room-hardware/studi/20260115_VDA_DOCUMENTAZIONE_UFFICIALE.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "idee/20260115_VDA_ARCHITETTURA_SISTEMA_RESEARCH.md",
+          "bracci/room-hardware/studi/20260115_VDA_ARCHITETTURA_SISTEMA_RESEARCH.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "idee/20260115_VDA_MODBUS_REVERSE_ENGINEERING_PARTE1.md",
+          "bracci/room-hardware/studi/20260115_VDA_MODBUS_REVERSE_ENGINEERING_PARTE1.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "reports/big_players_rms_research_20260112_PARTE1.md",
+          "moduli/rateboard/studi/big_players_rms_research_20260112_PARTE1.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "reports/big_players_rms_research_20260112_INDEX.md",
+          "moduli/rateboard/studi/big_players_rms_research_20260112_INDEX.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "reports/big_players_rms_research_20260112_PARTE2.md",
+          "moduli/rateboard/studi/big_players_rms_research_20260112_PARTE2.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "reports/rateboard_audit_completo_20260112.md",
+          "moduli/rateboard/studi/rateboard_audit_completo_20260112.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "reports/big_players_rms_research_20260112_PARTE3.md",
+          "moduli/rateboard/studi/big_players_rms_research_20260112_PARTE3.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/ROADMAP_ROOM_MANAGER.md",
+          "bracci/room-hardware/ROADMAP_ROOM_MANAGER.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/RECAP_STUDI_20260115.md",
+          "bracci/room-hardware/RECAP_STUDI_20260115.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/HANDOFF_SESSIONE_172_FINALE.md",
+          "bracci/room-hardware/HANDOFF_SESSIONE_172_FINALE.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/PIANO_AZIONE_ROOM_MANAGER.md",
+          "bracci/room-hardware/PIANO_AZIONE_ROOM_MANAGER.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/DECISIONI_ARCHITETTURA.md",
+          "bracci/room-hardware/DECISIONI_ARCHITETTURA.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/README.md",
+          "bracci/room-hardware/README.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/SUB_ROADMAP_MVP_ROOM_MANAGER.md",
+          "bracci/room-hardware/SUB_ROADMAP_MVP_ROOM_MANAGER.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/HANDOFF_SESSIONE_172.md",
+          "bracci/room-hardware/HANDOFF_SESSIONE_172.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/DECISIONI_SESSIONE_213.md",
+          "bracci/room-hardware/DECISIONI_SESSIONE_213.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/ROADMAP_ROOM_MANAGER_COMPLETA.md",
+          "bracci/room-hardware/ROADMAP_ROOM_MANAGER_COMPLETA.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/20260114_RICERCA_MEWS.md",
+          "bracci/room-hardware/studi/20260114_RICERCA_MEWS.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/20260114_ANALISI_VDA_ETHEOS_PARTE1.md",
+          "bracci/room-hardware/studi/20260114_ANALISI_VDA_ETHEOS_PARTE1.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/20260115_RICERCA_ROOM_MANAGER_AVANZATO.md",
+          "bracci/room-hardware/studi/20260115_RICERCA_ROOM_MANAGER_AVANZATO.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/big_players_research.md",
+          "bracci/room-hardware/studi/big_players_research.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/ANALISI_PMS_ESISTENTE.md",
+          "bracci/room-hardware/studi/ANALISI_PMS_ESISTENTE.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/20260114_RICERCA_CLOUDBEDS.md",
+          "bracci/room-hardware/studi/20260114_RICERCA_CLOUDBEDS.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/20260114_RICERCA_OPERA_CLOUD.md",
+          "bracci/room-hardware/studi/20260114_RICERCA_OPERA_CLOUD.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/20260114_ANALISI_VDA_ETHEOS_PARTE2.md",
+          "bracci/room-hardware/studi/20260114_ANALISI_VDA_ETHEOS_PARTE2.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/20260114_RICERCA_VDA_HARDWARE.md",
+          "bracci/room-hardware/studi/20260114_RICERCA_VDA_HARDWARE.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/20260114_RICERCA_SCIDOO.md",
+          "bracci/room-hardware/studi/20260114_RICERCA_SCIDOO.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/vda_hardware_strategy.md",
+          "bracci/room-hardware/studi/vda_hardware_strategy.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/20260114_CONFRONTO_DEFINITIVO.md",
+          "bracci/room-hardware/studi/20260114_CONFRONTO_DEFINITIVO.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/studi/20260114_ANALISI_VDA_ETHEOS_PARTE3.md",
+          "bracci/room-hardware/studi/20260114_ANALISI_VDA_ETHEOS_PARTE3.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/reports/RECAP_SESSIONE_216.md",
+          "bracci/room-hardware/reports/RECAP_SESSIONE_216.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/reports/20260114_GUARDIANA_QUALITA_VERIFICA.md",
+          "bracci/room-hardware/reports/20260114_GUARDIANA_QUALITA_VERIFICA.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/reports/20260114_INGEGNERA_ARCHITETTURA.md",
+          "bracci/room-hardware/reports/20260114_INGEGNERA_ARCHITETTURA.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/reports/AUDIT_SESSIONE_A_20260115.md",
+          "bracci/room-hardware/reports/AUDIT_SESSIONE_A_20260115.md"
+        ],
+        "count": 2
+      },
+      {
+        "files": [
+          "moduli/room_manager/reports/ANALISI_BACKEND_FASE1.md",
+          "bracci/room-hardware/reports/ANALISI_BACKEND_FASE1.md"
+        ],
+        "count": 2
+      }
+    ],
+    "stats": {
+      "total_files": 352,
+      "total_lines": 159242,
+      "total_issues": 222
+    }
+  }
+}
