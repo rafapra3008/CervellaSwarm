@@ -66,6 +66,21 @@ Io ho usato:
 
 ## COSA DEVI FARE - PROSSIMA SESSIONE
 
+### PRIORITA 0 - SEPARARE MIRACOLLOOK!
+```
++================================================================+
+|   MIRACOLLOOK DEVE AVERE PROMPT_RIPRESA SEPARATO!              |
+|                                                                |
+|   Creare: PROMPT_RIPRESA_miracollook.md                        |
+|   Path: .sncp/progetti/miracollook/ (NUOVA CARTELLA)           |
+|                                                                |
+|   Miracollo = PMS Core (:8000)                                 |
+|   Miracollook = Email Client (:8002) <- BRACCIO SEPARATO!      |
+|                                                                |
+|   Questo evita confusione nelle sessioni.                      |
++================================================================+
+```
+
 ### MIRACOLLOOK (Priorita 1)
 ```
 1. VERIFICARE API react-resizable-panels v4
