@@ -1,65 +1,45 @@
 # PROMPT RIPRESA - Miracollo
 
 > **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 239
-> **LEZIONE: I "big" usano layout FISSO, no drag handles!**
+> **STATO: Deploy BLOCCATO - fix services/__init__.py**
 
 ---
 
-## SESSIONE 239: STUDIO E LEZIONE
+## SESSIONE 239: CHECKOUT UI + DEPLOY BLOCCATO
 
-### Cosa Abbiamo Fatto
-1. Test visivo palette salutare - OK, colori funzionano
-2. Tentativo drag handles con react-resizable-panels - BLOCCATO
-3. Guardiana Review: 8/10 → 9.5/10 (fix applicati ma revertati)
-4. **Studio Open-Xchange** (webmail register.it)
+### Fatto
+- Checkout UI completato (2 bottoni ricevuta)
+- Commit pushato: `c09f64a`
 
-### SCOPERTA IMPORTANTE
+### Problema Deploy
 ```
-I "big" (Open-Xchange, Gmail, etc) NON usano drag handles!
-Usano:
-- Layout FISSO con CSS flexbox
-- Toggle button per hide/show sidebar
-- SEMPLICITA che FUNZIONA
+planning_swap.py importa funzioni da services che non sono esportate.
+Errore: ImportError get_segments_snapshot, log_history, etc.
+
+VECCHIO CONTAINER FUNZIONA ANCORA!
+miracollo-backend-1 = UP, healthy
 ```
 
-### Problema Tecnico
-Il file `ThreePanel.tsx` viene revertato continuamente.
-Possibile causa: linter, hot reload, o altro processo.
-DA INVESTIGARE prossima sessione.
-
----
-
-## SESSIONE 238: PALETTE SALUTARE MIRACOLLOOK
-
-### Palette Applicata
-```
-BG: #1C1C1E → #2C2C2E → #3A3A3C
-Accent: #7c7dff (indigo brand)
-Warm: #d4985c (hospitality VIP)
-Text: Apple hierarchy (rgba)
-```
-
-File aggiornati: tailwind.config.js, index.css, ThreePanel.tsx, CSS modals
-
----
-
-## SESSIONE 237: RICEVUTE PDF COMPLETE
-
-```
-GET  /api/receipts/booking/{id}/pdf          → Download
-GET  /api/receipts/booking/{id}/pdf/preview  → Preview
-POST /api/receipts/booking/{id}/email        → Invia
-```
+### Fix Necessario
+Aggiungere export in `services/__init__.py` per:
+- get_segments_snapshot
+- log_history
+- validate_past_bookings
+- check_room_availability
+- update_booking_segments_room
+- update_main_room
+- auto_merge_segments
+- get_booking_swap_info
+- get_segment_swap_info
 
 ---
 
 ## PROSSIMA SESSIONE
 
 ```
-1. Investigare perche ThreePanel.tsx viene revertato
-2. DECISIONE: Layout fisso (come i big) vs drag handles
-3. Implementare soluzione SEMPLICE e definitiva
-4. Test finale e commit
+1. Fix services/__init__.py (trovare file sorgente, aggiungere export)
+2. Re-deploy
+3. Test ricevute PDF live
 ```
 
 ---
@@ -68,9 +48,9 @@ POST /api/receipts/booking/{id}/email        → Invia
 
 | Sprint | Stato |
 |--------|-------|
-| 1. Ricevute PDF | COMPLETATO |
+| 1. Ricevute PDF | Backend OK, Frontend OK |
+| 1B. Checkout UI | FATTO (commit pushato) |
 | 2. RT Integration | BLOCCATO (serve hardware) |
-| 3. Fatture XML | DA FARE |
 
 ---
 
@@ -78,13 +58,11 @@ POST /api/receipts/booking/{id}/email        → Invia
 
 ```
 MIRACOLLO
-├── PMS CORE (:8000)        → 85%
-├── MODULO FINANZIARIO      → 35%
-├── MIRACALLOOK (:8002)     → 60% - Layout da sistemare
-└── ROOM HARDWARE (:8003)   → 10%
+├── PMS CORE (:8000)        → 85% - Produzione (vecchio container)
+├── MODULO FINANZIARIO      → 35% - Sprint 1 completo
+└── ROOM HARDWARE (:8003)   → 10% - Attesa hardware
 ```
 
 ---
 
-*"1 passo indietro per 10000 avanti!"*
-*"Studiare i grossi, fare come loro!"*
+*"Il vecchio container funziona - fix deploy prossima sessione"*
