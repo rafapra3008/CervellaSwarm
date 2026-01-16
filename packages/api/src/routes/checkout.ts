@@ -43,9 +43,9 @@ router.post("/create-checkout-session", async (req: Request, res: Response) => {
     const apiUrl = process.env.API_URL || "https://cervellaswarm-api.fly.dev";
 
     // Create Checkout Session
+    // Note: removed payment_method_types to let Stripe auto-configure
     const session = await stripe.checkout.sessions.create({
       mode: "subscription",
-      payment_method_types: ["card"],
       line_items: [
         {
           price: priceId,
@@ -60,8 +60,6 @@ router.post("/create-checkout-session", async (req: Request, res: Response) => {
       },
       success_url: `${apiUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${apiUrl}/cancel`,
-      // Automatic tax if configured
-      // automatic_tax: { enabled: true },
     });
 
     res.json({
