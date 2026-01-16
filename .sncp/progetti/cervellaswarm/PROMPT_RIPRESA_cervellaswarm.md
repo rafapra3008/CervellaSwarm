@@ -1,44 +1,53 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 238
-> **FASE ATTUALE:** Sprint 1 COMPLETATO! Prossimo: Metering
+> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 239
+> **FASE ATTUALE:** Sprint 2 COMPLETATO! Prossimo: Stripe
 
 ---
 
-## COSA E' SUCCESSO (Sessione 238)
+## SESSIONE 239 - SPRINT 2 METERING COMPLETATO!
 
 ```
 +================================================================+
-|   SESSIONE 238 - SPRINT 1 BYOK POLISH COMPLETATO!              |
+|   FILE CREATI in packages/mcp-server/src/billing/              |
 |                                                                |
-|   1. validateApiKey() portato al MCP server                    |
-|   2. check_status migliorato con validate=true                 |
-|   3. Error handling sincronizzato CLI->MCP                     |
-|   4. 134 test passano                                          |
-|   5. Build OK                                                  |
+|   types.ts    - Interfacce (Tier, QuotaResult, UsageData)      |
+|   tiers.ts    - Limiti (Free=50, Pro=500, Team=1000)           |
+|   messages.ts - Messaggi UX user-friendly                      |
+|   usage.ts    - UsageTracker completo                          |
+|                                                                |
+|   FEATURES IMPLEMENTATE:                                       |
+|   - Checksum integrity (anti-tampering)                        |
+|   - Mutex serialization (race-condition safe)                  |
+|   - Backup & recovery (atomic writes)                          |
+|   - Lazy monthly reset                                         |
+|   - Warning a 80%, Block a 100%                                |
+|   - Nuovo tool: check_usage                                    |
+|                                                                |
+|   BUILD: OK | TEST: 134 passano                                |
 +================================================================+
 ```
 
 ---
 
-## STRATEGIA DUAL-MODE (Sessione 237)
-
-| Modalita | Come Funziona | Target |
-|----------|---------------|--------|
-| **BYOK** | User porta API key | Power users, automazione |
-| **Sampling** | MCP chiede a Claude Code | Casual, Claude Max users |
-
----
-
-## MONETIZZAZIONE FREEMIUM
+## SCOPERTA SESSIONE 239: CONTEXT GUARD!
 
 ```
-Free:       $0       50 calls/mo    (acquisizione)
-Pro:        $20/mo   500 calls      (freelancer)
-Team:       $35/user 1K calls       (agenzie)
-Enterprise: Custom   Unlimited      (corporate)
+Il nostro CTX:53% nella statusline e' un DIFFERENZIALE UNICO!
 
-MARGINI: 95%+ (noi NON paghiamo MAI l'AI!)
+Competitor (ccusage, Usage Monitor):
+- Solo analytics post-hoc
+- No automation, no prevention
+
+NOI facciamo:
+- Real-time statusline
+- macOS notifications
+- Auto-handoff a 70%
+- Git auto-commit
+- Spawn nuova sessione
+
+POSSIAMO VENDERLO come prodotto standalone!
+Report completo: .sncp/.../RICERCA_CONTEXT_TRACKING_CLAUDE_CODE.md
 ```
 
 ---
@@ -46,44 +55,59 @@ MARGINI: 95%+ (noi NON paghiamo MAI l'AI!)
 ## ROADMAP AGGIORNATA
 
 ```
-Sprint 1: BYOK Polish              [COMPLETATO!] Sessione 238
-Sprint 2: Metering & Limits        [PROSSIMO]
-Sprint 3: Stripe Integration
+Sprint 1: BYOK Polish              [COMPLETATO] Sessione 238
+Sprint 2: Metering & Limits        [COMPLETATO] Sessione 239
+Sprint 3: Stripe Integration       [PROSSIMO]
 Sprint 4: Sampling Implementation
 Sprint 5: Polish
 
-Score attuale: ~3/10 -> Target: 9.5/10
+Score attuale: ~4/10 -> Target: 9.5/10
 ```
 
 ---
 
-## FILE CHIAVE
+## FILE CHIAVE (Aggiornati)
 
 | File | Cosa |
 |------|------|
-| `packages/mcp-server/src/config/manager.ts` | validateApiKey() |
-| `packages/mcp-server/src/index.ts` | check_status migliorato |
-| `packages/mcp-server/src/agents/spawner.ts` | Error handling |
-| `.sncp/.../SUBMAPPA_DUALMODE_MONETIZZAZIONE.md` | Roadmap completa |
+| `billing/types.ts` | Interfacce TypeScript |
+| `billing/tiers.ts` | TIER_LIMITS constants |
+| `billing/messages.ts` | UX messages |
+| `billing/usage.ts` | UsageTracker classe |
+| `config/manager.ts` | getTier(), setTier() |
+| `index.ts` | Integrazione + check_usage tool |
 
 ---
 
-## AZIONE PROSSIMA SESSIONE
+## MONETIZZAZIONE
 
 ```
-1. Sprint 2: METERING & LIMITS
-   - Usage tracking (calls/month)
-   - Tier limits enforcement (50/500/1K)
-   - Usage storage (local file first)
-   - Upgrade prompts when limit reached
+CERVELLASWARM (MCP Agents):
+Free: 50 calls/mo | Pro: $20/500 | Team: $35/1K
+
+CONTEXT GUARD (Nuovo prodotto?):
+Free: Statusline | Pro: $9 +notif | Team: $19 +auto-handoff
+```
+
+---
+
+## PROSSIMA SESSIONE
+
+```
+1. Sprint 3: Stripe Integration
+   - Stripe setup
+   - Payment flow
+   - Tier upgrade logic
+
+2. Decidere: Context Guard come prodotto separato?
 ```
 
 ---
 
 ## TL;DR
 
-**Sessione 238:** Sprint 1 BYOK Polish COMPLETATO! API validation funziona.
+**Sessione 239:** Sprint 2 Metering COMPLETATO + Scoperta Context Guard!
 
-**Prossimo:** Sprint 2 - Metering per tracciare le calls.
+**Prossimo:** Sprint 3 Stripe + Valutare Context Guard.
 
 *"Un progresso al giorno = 365 progressi all'anno!"*

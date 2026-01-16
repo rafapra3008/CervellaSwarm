@@ -1,43 +1,54 @@
 # STATO OGGI - 16 Gennaio 2026
 
 > **Ultima Sessione:** 239
-> **Progetti:** Miracollo (Miracollook)
+> **Progetti:** CervellaSwarm
 
 ---
 
-## SESSIONE 239 - LEZIONE IMPORTANTE!
+## SESSIONE 239 - SPRINT 2 COMPLETATO!
 
-### Miracollook - Layout Pannelli
+### Metering & Limits - FATTO!
 
 ```
-TENTATIVO: Drag handles custom con react-resizable-panels
-RISULTATO: BLOCCATO - File viene revertato continuamente
-
-STUDIO: Analizzato Open-Xchange (webmail register.it)
-SCOPERTA: I "big" usano layout FISSO, no drag handles!
-
-LEZIONE: SEMPLICE > COMPLICATO
-- Layout fisso con CSS flexbox
-- Toggle button per hide/show sidebar
-- Niente librerie complesse
++================================================================+
+|   SPRINT 2 COMPLETATO!                                         |
+|                                                                |
+|   CREATI:                                                      |
+|   - billing/types.ts (interfacce)                              |
+|   - billing/tiers.ts (limiti 50/500/1K)                        |
+|   - billing/messages.ts (UX user-friendly)                     |
+|   - billing/usage.ts (UsageTracker completo)                   |
+|                                                                |
+|   FEATURES:                                                    |
+|   - Checksum integrity                                         |
+|   - Mutex serialization (race-safe)                            |
+|   - Backup & recovery                                          |
+|   - Lazy monthly reset                                         |
+|   - Warning 80%, Block 100%                                    |
+|   - Tool check_usage                                           |
+|                                                                |
+|   BUILD: OK | TEST: 134 passano                                |
++================================================================+
 ```
 
-### Guardiana Review
-- ThreePanel.tsx: 8/10 → 9.5/10 (con fix)
-- Fix: colori hardcoded → Tailwind, inline styles → classes
-- MA: File continua a essere revertato (conflitto?)
+### SCOPERTA: Context Guard (DIFFERENZIALE!)
+
+```
+Il nostro CTX:53% e' UNICO!
+Nessun competitor fa: real-time + auto-handoff + git commit
+Possiamo venderlo come prodotto standalone!
+Report: .sncp/.../RICERCA_CONTEXT_TRACKING_CLAUDE_CODE.md
+```
 
 ---
 
 ## PROSSIMA SESSIONE
 
 ```
-1. Investigare PERCHE il file viene revertato
-2. Decidere: Layout fisso (come i big) vs Drag handles
-3. Applicare soluzione SEMPLICE e definitiva
+1. Sprint 3: Stripe Integration
+2. Valutare: Context Guard come prodotto separato?
 ```
 
 ---
 
-*"1 passo indietro per 10000 avanti!"*
-*"Studiare i grossi, fare come loro!"*
+*"Un progresso al giorno = 365 progressi all'anno!"*
