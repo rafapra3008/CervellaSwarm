@@ -1,53 +1,58 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 239
-> **FASE ATTUALE:** Sprint 2 COMPLETATO! Prossimo: Stripe
+> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 240
+> **FASE ATTUALE:** Sprint 3 Stripe IN CORSO (70% fatto!)
 
 ---
 
-## SESSIONE 239 - SPRINT 2 METERING COMPLETATO!
+## SESSIONE 240 - SPRINT 3 STRIPE
 
 ```
 +================================================================+
-|   FILE CREATI in packages/mcp-server/src/billing/              |
+|   COMPLETATO (70%)                                              |
 |                                                                |
-|   types.ts    - Interfacce (Tier, QuotaResult, UsageData)      |
-|   tiers.ts    - Limiti (Free=50, Pro=500, Team=1000)           |
-|   messages.ts - Messaggi UX user-friendly                      |
-|   usage.ts    - UsageTracker completo                          |
+|   packages/api/ (Backend Fly.io) - NUOVO!                      |
+|   ├── src/index.ts              Express server                 |
+|   ├── src/routes/checkout.ts    POST create-checkout-session   |
+|   ├── src/routes/portal.ts      POST create-portal-session     |
+|   ├── src/routes/subscription.ts GET subscription status       |
+|   ├── src/routes/webhooks.ts    5 webhook handlers             |
+|   ├── src/db/index.ts           JSON database (lowdb)          |
+|   ├── Dockerfile                Multi-stage build              |
+|   └── fly.toml                  Frankfurt region               |
 |                                                                |
-|   FEATURES IMPLEMENTATE:                                       |
-|   - Checksum integrity (anti-tampering)                        |
-|   - Mutex serialization (race-condition safe)                  |
-|   - Backup & recovery (atomic writes)                          |
-|   - Lazy monthly reset                                         |
-|   - Warning a 80%, Block a 100%                                |
-|   - Nuovo tool: check_usage                                    |
+|   packages/cli/ (Comandi billing)                              |
+|   ├── src/commands/upgrade.js   cervellaswarm upgrade pro/team |
+|   ├── src/commands/billing.js   cervellaswarm billing          |
+|   └── src/config/manager.js     +tier, customerId, email       |
 |                                                                |
-|   BUILD: OK | TEST: 134 passano                                |
+|   BUILD: OK (api + cli)                                        |
 +================================================================+
 ```
 
 ---
 
-## SCOPERTA SESSIONE 239: CONTEXT GUARD!
+## DA FARE (30%) - Sessione 241
 
 ```
-Il nostro CTX:53% nella statusline e' un DIFFERENZIALE UNICO!
+1. STRIPE DASHBOARD (con Rafa)
+   - Creare Product "CervellaSwarm Pro" → $20/month
+   - Creare Product "CervellaSwarm Team" → $35/month
+   - Copiare Price IDs (price_xxx)
+   - Rafa ha bisogno di aiuto!
 
-Competitor (ccusage, Usage Monitor):
-- Solo analytics post-hoc
-- No automation, no prevention
+2. DEPLOY FLY.IO
+   - fly auth login
+   - fly launch (nel folder packages/api)
+   - fly secrets set STRIPE_SECRET_KEY=sk_test_xxx
+   - fly secrets set STRIPE_WEBHOOK_SECRET=whsec_xxx
+   - fly secrets set STRIPE_PRICE_PRO=price_xxx
+   - fly secrets set STRIPE_PRICE_TEAM=price_xxx
 
-NOI facciamo:
-- Real-time statusline
-- macOS notifications
-- Auto-handoff a 70%
-- Git auto-commit
-- Spawn nuova sessione
-
-POSSIAMO VENDERLO come prodotto standalone!
-Report completo: .sncp/.../RICERCA_CONTEXT_TRACKING_CLAUDE_CODE.md
+3. TEST END-TO-END
+   - cervellaswarm upgrade pro → apre checkout
+   - Pagamento test (4242 4242 4242 4242)
+   - Webhook ricevuto → tier aggiornato
 ```
 
 ---
@@ -57,57 +62,35 @@ Report completo: .sncp/.../RICERCA_CONTEXT_TRACKING_CLAUDE_CODE.md
 ```
 Sprint 1: BYOK Polish              [COMPLETATO] Sessione 238
 Sprint 2: Metering & Limits        [COMPLETATO] Sessione 239
-Sprint 3: Stripe Integration       [PROSSIMO]
-Sprint 4: Sampling Implementation
+Sprint 3: Stripe Integration       [70%] Sessione 240-241
+Sprint 4: Sampling Implementation  [PROSSIMO]
 Sprint 5: Polish
 
-Score attuale: ~4/10 -> Target: 9.5/10
+Score attuale: ~5/10 -> Target: 9.5/10
 ```
 
 ---
 
-## FILE CHIAVE (Aggiornati)
-
-| File | Cosa |
-|------|------|
-| `billing/types.ts` | Interfacce TypeScript |
-| `billing/tiers.ts` | TIER_LIMITS constants |
-| `billing/messages.ts` | UX messages |
-| `billing/usage.ts` | UsageTracker classe |
-| `config/manager.ts` | getTier(), setTier() |
-| `index.ts` | Integrazione + check_usage tool |
-
----
-
-## MONETIZZAZIONE
+## MAPPA SESSIONI
 
 ```
-CERVELLASWARM (MCP Agents):
-Free: 50 calls/mo | Pro: $20/500 | Team: $35/1K
-
-CONTEXT GUARD (Nuovo prodotto?):
-Free: Statusline | Pro: $9 +notif | Team: $19 +auto-handoff
-```
-
----
-
-## PROSSIMA SESSIONE
-
-```
-1. Sprint 3: Stripe Integration
-   - Stripe setup
-   - Payment flow
-   - Tier upgrade logic
-
-2. Decidere: Context Guard come prodotto separato?
+237: MCP funziona + Dual-Mode + Freemium
+ |
+238: Sprint 1 BYOK Polish COMPLETATO
+ |
+239: Sprint 2 Metering COMPLETATO + Context Guard discovery
+ |
+240: Sprint 3 Stripe IN CORSO (backend + CLI pronti)  <-- OGGI!
+ |
+241: Sprint 3 Stripe COMPLETAMENTO (Stripe Dashboard + Deploy)
 ```
 
 ---
 
 ## TL;DR
 
-**Sessione 239:** Sprint 2 Metering COMPLETATO + Scoperta Context Guard!
+**Sessione 240:** Backend API + CLI commands PRONTI. Manca solo Stripe Dashboard + Deploy.
 
-**Prossimo:** Sprint 3 Stripe + Valutare Context Guard.
+**Prossimo (241):** Aiutare Rafa con Stripe, Deploy Fly.io, Test e2e.
 
 *"Un progresso al giorno = 365 progressi all'anno!"*

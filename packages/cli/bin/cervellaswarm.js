@@ -39,6 +39,8 @@ import { statusCommand } from '../src/commands/status.js';
 import { taskCommand } from '../src/commands/task.js';
 import { resumeCommand } from '../src/commands/resume.js';
 import { doctorCommand } from '../src/commands/doctor.js';
+import { upgradeCommand } from '../src/commands/upgrade.js';
+import { billingCommand } from '../src/commands/billing.js';
 
 // ASCII Art Banner
 const banner = `
@@ -198,6 +200,41 @@ Checks:
   - Configuration valid
 `)
   .action(doctorCommand);
+
+program
+  .command('upgrade <tier>')
+  .description('Upgrade to Pro or Team tier')
+  .option('-e, --email <email>', 'Email for checkout')
+  .addHelpText('after', `
+Examples:
+  $ cervellaswarm upgrade pro     Upgrade to Pro ($20/mo, 500 calls)
+  $ cervellaswarm upgrade team    Upgrade to Team ($35/mo, 1000 calls)
+
+Opens Stripe Checkout in your browser.
+Payment is secure and handled by Stripe.
+
+Current tier: Run \`cervellaswarm billing --status\` to check
+`)
+  .action(upgradeCommand);
+
+program
+  .command('billing')
+  .description('Manage billing and subscription')
+  .option('-s, --status', 'Show current subscription status')
+  .option('--sync', 'Force sync with billing server')
+  .addHelpText('after', `
+Examples:
+  $ cervellaswarm billing           Open billing portal
+  $ cervellaswarm billing --status  Show current tier and usage
+  $ cervellaswarm billing --sync    Refresh subscription data
+
+In the portal you can:
+  - Update payment method
+  - Change plan (upgrade/downgrade)
+  - Cancel subscription
+  - View and download invoices
+`)
+  .action(billingCommand);
 
 // Parse arguments
 program.parse();
