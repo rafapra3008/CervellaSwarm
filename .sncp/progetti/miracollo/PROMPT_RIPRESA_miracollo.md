@@ -1,7 +1,28 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 237
-> **FATTO: SPRINT 1 RICEVUTE PDF COMPLETATO!**
+> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 238
+> **FATTO: PALETTE SALUTARE applicata a Miracollook!**
+
+---
+
+## SESSIONE 238: PALETTE SALUTARE MIRACOLLOOK
+
+### File Aggiornati
+- `miracallook/frontend/tailwind.config.js` - Palette completa
+- `miracallook/frontend/src/index.css` - Body, scrollbar, glass
+- `miracallook/frontend/src/components/Layout/ThreePanel.tsx`
+- `miracallook/frontend/src/components/CommandPalette/CommandPalette.css`
+- `miracallook/frontend/src/components/HelpModal/HelpModal.css`
+
+### Palette Chiave
+```
+BG: #1C1C1E → #2C2C2E → #3A3A3C → #404042
+Accent: #7c7dff (indigo brand)
+Warm: #d4985c (hospitality VIP)
+Text: Apple hierarchy (rgba)
+```
+
+**Prossimo:** Test visivo + eventuali fix
 
 ---
 
