@@ -1,32 +1,53 @@
 # PROMPT RIPRESA - PMS Core
 
-> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 241
-> **STATO:** 85% - Produzione stabile
+> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 242
+> **STATO:** 85% - Produzione FIXATA
 
 ---
 
-## COS'E PMS CORE
+## SESSIONE 242 - PROBLEMA CRITICO RISOLTO
 
-Braccio principale Miracollo. Sistema gestionale hotel.
-Porta :8000, in produzione su GCP VM.
+```
+PROBLEMA: Planning non caricava dati in produzione
+CAUSA: DUE container backend attivi!
+  - app-backend-1 (DB VUOTO) ← nginx andava QUI!
+  - miracollo-backend-1 (DB corretto)
+
+FIX APPLICATI:
+1. Migrazione 024 (is_test column) applicata
+2. Container app-backend-1 RIMOSSO
+3. Ora nginx va al container corretto
+
+LEZIONE: SERVE FORTEZZA MODE PER DEPLOY!
+```
+
+---
+
+## FORTEZZA MODE - DA IMPLEMENTARE
+
+```
+OGNI DEPLOY DEVE:
+1. Verificare UN SOLO container backend attivo
+2. Verificare migrazioni DB applicate
+3. Test endpoint PRIMA di dichiarare successo
+4. Guardiana Ops supervisiona
+
+MAI PIU' deploy "alla cieca"!
+```
 
 ---
 
 ## STATO ATTUALE
 
 ```
-IN PRODUZIONE - STABILE
+IN PRODUZIONE - STABILE (dopo fix)
 
 Funzionalita LIVE:
 - Prenotazioni CRUD
-- Anagrafica ospiti
 - Room Rack / Planning
-- Fatturazione
 - Rate Board (9.5/10!)
-- Housekeeping
-- Revenue AI
-- Meteo integration
-- Eventi locali
+- Channel Manager
+- Ricevute PDF (Sprint Finanziario)
 ```
 
 ---
@@ -35,67 +56,36 @@ Funzionalita LIVE:
 
 | Sessione | Focus | Risultato |
 |----------|-------|-----------|
-| 240 | Deploy fix | services/__init__.py OK |
-| 232 | Mappa ecosistema | NORD.md creato |
-| 231 | Architettura 3 bracci | Struttura definita |
-
----
-
-## NESSUN LAVORO URGENTE
-
-```
-PMS Core e STABILE.
-Non richiede interventi.
-
-Se serve lavorare:
-1. Leggere COSTITUZIONE_pms-core.md
-2. Verificare che non rompa nulla
-3. Test PRIMA di deploy
-4. Rollback pronto
-```
+| 242 | **FIX CRITICO** | Due container, DB vuoto, nginx sbagliato |
+| 241 | Deploy Fly.io | CervellaSwarm API |
+| 240 | Deploy fix | services/__init__.py |
 
 ---
 
 ## MODULI INTERNI
 
-| Modulo | Path docs | Stato |
-|--------|-----------|-------|
-| Rate Board | `../../moduli/rateboard/` | 9.5/10 |
-| What-If | `../../moduli/whatif/` | POC |
-| Finanziario | `../../moduli/finanziario/` | Base |
+| Modulo | Stato |
+|--------|-------|
+| Rate Board | 9.5/10 |
+| Finanziario | Fase 1 OK |
+| What-If | POC |
 
 ---
 
-## COMANDI
+## COMANDI PRODUZIONE
 
 ```bash
-# Backend (su VM)
-ssh miracollo-vm
-cd /app/backend
-source venv/bin/activate
-uvicorn main:app --host 0.0.0.0 --port 8000
+# Verifica container (DEVE essere UNO SOLO!)
+ssh miracollo-vm "docker ps | grep backend"
 
-# Frontend (su VM)
-# Servito da nginx su porta 80/443
+# Health check
+curl https://miracollo.com/health
 
-# URL Produzione
-https://miracollo.app
+# Test endpoint
+curl https://miracollo.com/api/planning/NL
 ```
 
 ---
 
-## COMUNICAZIONE
-
-```
-PMS Core ESPONE API per:
-- Miracallook (dati ospiti)
-- Room Hardware (stato camere)
-
-PMS Core e la FONTE DI VERITA.
-Gli altri bracci LEGGONO da noi.
-```
-
----
-
-*"Il cuore batte. L'hotel vive."*
+*"Il cuore batte. Ma proteggiamolo."*
 *Braccio 1 - PMS Core*
