@@ -1,54 +1,49 @@
-# STATO OGGI - 15 Gennaio 2026
+# STATO OGGI - 16 Gennaio 2026
 
-> **Sessioni:** 228-229
-> **Ultimo aggiornamento:** 19:10
+> **Sessione:** 230
+> **Ultimo aggiornamento:** 03:45
 
 ---
 
-## MIRACALLOOK - 3 BUG FIXATI!
+## MIRACOLLO - VDA ROSETTA STONE
 
 ```
-[x] Email HTML rendering (preferisce HTML, \n -> <br>)
-[x] Resize pannelli (CSS temporaneo)
-[x] Bulk Actions 422 error (embed=True)
+SESSIONE 230:
+[x] Analizzato foto NUCLEUS H155300
+[x] Analizzato screenshot Room Manager VDA
+[x] Mappato ecosistema camera
+[x] Ricerca documentazione (NON ESISTE)
+[x] Decisione: NO contatto VDA, facciamo noi
+[x] Piano reverse engineering completo
 
-DA FARE:
-- Checkbox nei gruppi email aggregati
-- Background opaco barra bulk
-- Sistema cartelle smart
+FILE CREATI:
+- 20260116_MAPPA_ECOSISTEMA_CAMERA.md
+- 20260116_VDA_ROSETTA_STONE_PIANO.md
+
+ASPETTIAMO: Hardware Amazon (1-2 giorni)
+```
+
+---
+
+## MIRACALLOOK (da Sessione 229)
+
+```
+Bug da fare:
+- Checkbox nei gruppi email
+- Barra bulk opaca
+- Sistema cartelle
 - Drag handles custom
-```
-
----
-
-## CERVELLASWARM - CI/CD PRONTO
-
-```
-[x] ci.yml + publish.yml (Trusted Publishing)
-[x] Branch Protection + GitHub Pro
-[x] CI PASSA in 1m3s
-[x] MANIFESTO.md nato!
-
-FASE 2: 95% | Prossimo: npm publish
 ```
 
 ---
 
 ## PROSSIMA SESSIONE
 
-| Progetto | Priorita |
-|----------|----------|
-| Miracallook | Checkbox gruppi, barra opaca |
-| CervellaSwarm | npm publish (dopo 24h cooldown) |
+| Cosa | Quando |
+|------|--------|
+| VDA Sniffing | Quando arriva hardware |
+| Miracallook bug | Prossima sessione |
 
 ---
 
-*"3 bug fix Miracallook + CI/CD CervellaSwarm = giornata produttiva!"*
-
----
-
-## AUTO-CHECKPOINT: 2026-01-15 19:11 (session_end)
-
-- **Progetto**: CervellaSwarm
-- **Evento**: session_end
-- **Generato da**: sncp_auto_update.py v2.0.0
+*"Non esistono cose difficili, esistono cose non studiate!"*

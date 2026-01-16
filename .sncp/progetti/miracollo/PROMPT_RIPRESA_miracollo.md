@@ -1,13 +1,62 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 15 Gennaio 2026 - Sessione 229
-> **STATO: 3 BUG FIXATI, 4 DA FARE**
+> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 230
+> **STATO: VDA Rosetta Stone pianificata, hardware in arrivo**
 
 ---
 
 ## STATO IN UNA RIGA
 
-**MIRACALLOOK: Email rendering OK, resize OK, bulk actions OK. Mancano checkbox gruppi e UX polish.**
+**VDA: Hardware Amazon ordinato. Piano reverse engineering pronto. Aspettiamo pacco per iniziare sniffing Modbus.**
+
+---
+
+## SESSIONE 230: VDA ROSETTA STONE
+
+### DECISIONE RAFA
+- **NO contatto VDA** - facciamo il nostro modo
+- Reverse engineering completo
+- Indipendenza totale
+
+### HARDWARE ORDINATO (Amazon Prime)
+- USB-RS485 FTDI (DSD TECH) - €19
+- Multimetro Electraline - €12
+- Cacciaviti precisione - €10
+- Cavetti jumper - €8
+
+### DISPOSITIVI DA MAPPARE
+```
+NUCLEUS H155300 (cervello camera):
+- 4 porte Modbus (M1-M4)
+- AI1 = sonda bagno, AI2 = sonda ingresso
+- DO1-DO8 = rele, DI1-DI5 = sensori
+- Ethernet RJ45 (Modbus TCP?)
+
+ALTRI DEVICE (da Room Manager VDA):
+- 6T KEYPAD (NE000056) - pannello codici porta
+- LT BLE 2.1 (VE503E00) - termostato camera?
+- CON4 2.1 (VE503T00) - termostato bagno?
+```
+
+### RICERCA FATTA
+- Cercato documentazione pubblica: NON ESISTE
+- Cercato reverse engineering esistente: NESSUNO
+- VDA produce internamente (Pordenone)
+- Saremo i PRIMI a documentare!
+
+### PROSSIMI STEP (quando arriva hardware)
+1. Setup Mac (driver FTDI)
+2. Test connessione (Ethernet o RS-485)
+3. Sniffing passivo
+4. Mappatura registri
+5. Rosetta Stone!
+
+### FILE CREATO
+`.sncp/progetti/miracollo/idee/20260116_VDA_ROSETTA_STONE_PIANO.md`
+
+---
+
+## MIRACALLOOK (da Sessione 229)
 
 ---
 
