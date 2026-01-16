@@ -15,4 +15,14 @@ export declare function getTimeout(): number;
 export declare function getMaxRetries(): number;
 export declare function isVerbose(): boolean;
 export declare function getConfigPath(): string;
+export interface ValidationResult {
+    valid: boolean;
+    error?: string;
+    warning?: string;
+}
+/**
+ * Validate API key by making a minimal test call
+ * Returns { valid: boolean, error?: string, warning?: string }
+ */
+export declare function validateApiKey(key?: string | null): Promise<ValidationResult>;
 //# sourceMappingURL=manager.d.ts.map

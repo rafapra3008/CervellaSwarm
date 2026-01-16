@@ -1,38 +1,50 @@
 # STATO OGGI - 16 Gennaio 2026
 
 > **Ultima Sessione:** 238
-> **Progetti:** CervellaSwarm + Miracollook
+> **Progetti:** CervellaSwarm
 
 ---
 
-## SESSIONE 238 - PALETTE SALUTARE!
+## SESSIONE 238 - SPRINT 1 BYOK POLISH COMPLETATO!
 
-### Miracollook
+### CervellaSwarm
 ```
-PALETTE SALUTARE APPLICATA!
+SPRINT 1 BYOK POLISH - COMPLETATO!
 
-File aggiornati:
-- tailwind.config.js (palette completa)
-- src/index.css (body, scrollbar, glass)
-- ThreePanel.tsx (background, borders)
-- CommandPalette.css (modali)
-- HelpModal.css (modali)
+Modifiche MCP Server:
+- validateApiKey() con test call reale
+- check_status con validate=true
+- Error handling user-friendly (401,403,429,500,503)
 
-Colori chiave:
-- BG: #1C1C1E (Apple foundation)
-- Accent: #7c7dff (Miracollook indigo)
-- Warm: #d4985c (hospitality)
+File modificati:
+- packages/mcp-server/src/config/manager.ts
+- packages/mcp-server/src/index.ts
+- packages/mcp-server/src/agents/spawner.ts
+
+Build: OK
+Test: 134/134 PASS
 ```
 
 ---
 
-## PROSSIME SESSIONI
+## ROADMAP AGGIORNATA
+
+```
+Sprint 1: BYOK Polish              [COMPLETATO!]
+Sprint 2: Metering & Limits        [PROSSIMO]
+Sprint 3: Stripe Integration
+Sprint 4: Sampling Implementation
+Sprint 5: Polish
+```
+
+---
+
+## PROSSIMA SESSIONE
 
 | Progetto | Prossimo Step |
 |----------|---------------|
-| Miracollook | Test visivo palette |
-| Miracollo PMS | Checkout UI |
+| CervellaSwarm | Sprint 2: Metering & Limits |
 
 ---
 
-*"I dettagli fanno SEMPRE la differenza!"*
+*"Fatto BENE > Fatto VELOCE"*

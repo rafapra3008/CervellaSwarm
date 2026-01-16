@@ -13,7 +13,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import { spawnWorker, getAvailableWorkers } from "./agents/spawner.js";
-import { getApiKey, hasApiKey } from "./config/manager.js";
+import { getApiKey, hasApiKey, getApiKeySource, validateApiKey, getConfigPath, } from "./config/manager.js";
 // Server metadata
 const SERVER_NAME = "cervellaswarm";
 const SERVER_VERSION = "0.1.0";
@@ -128,24 +128,68 @@ server.tool("list_workers", "List all available CervellaSwarm worker agents and 
 });
 /**
  * Tool: check_status
- * Check CervellaSwarm configuration status
+ * Check CervellaSwarm configuration status with optional validation
  */
-server.tool("check_status", "Check if CervellaSwarm is properly configured (API key, etc).", {}, async () => {
+server.tool("check_status", "Check if CervellaSwarm is properly configured (API key, etc).", {
+    validate: z
+        .boolean()
+        .optional()
+        .default(false)
+        .describe("If true, validates the API key with a test call to Anthropic"),
+}, async ({ validate }) => {
     const hasKey = hasApiKey();
     const apiKey = getApiKey();
+    const keySource = getApiKeySource();
+    const configPath = getConfigPath();
     let status = "# CervellaSwarm Status\n\n";
+    // Basic info
+    status += `## Configuration\n\n`;
+    status += `- Config file: \`${configPath}\`\n`;
+    status += `- Server version: ${SERVER_VERSION}\n\n`;
+    // API Key section
+    status += `## API Key\n\n`;
     if (hasKey && apiKey) {
         const maskedKey = `${apiKey.substring(0, 10)}...${apiKey.substring(apiKey.length - 4)}`;
-        status += `- API Key: Configured (${maskedKey})\n`;
-        status += `- Status: Ready\n\n`;
-        status += `You can now use \`spawn_worker\` to execute tasks.`;
+        status += `- Status: Configured\n`;
+        status += `- Source: ${keySource}\n`;
+        status += `- Key: \`${maskedKey}\`\n`;
+        // Validate if requested
+        if (validate) {
+            status += `\n### Validation\n\n`;
+            const result = await validateApiKey();
+            if (result.valid) {
+                if (result.warning) {
+                    status += `- Result: Valid (with warning)\n`;
+                    status += `- Warning: ${result.warning}\n`;
+                }
+                else {
+                    status += `- Result: Valid\n`;
+                    status += `- API connection: Working\n`;
+                }
+            }
+            else {
+                status += `- Result: Invalid\n`;
+                status += `- Error: ${result.error}\n`;
+                status += `\nTo fix: Check your API key at https://console.anthropic.com/\n`;
+            }
+        }
+        status += `\n## Ready\n\n`;
+        status += `You can now use \`spawn_worker\` to execute tasks.\n`;
+        if (!validate) {
+            status += `\nTip: Use \`check_status(validate=true)\` to test the API connection.`;
+        }
     }
     else {
-        status += `- API Key: Not configured\n`;
-        status += `- Status: Not ready\n\n`;
-        status += `To configure:\n`;
-        status += `1. Run: cervellaswarm init\n`;
-        status += `2. Or set: export ANTHROPIC_API_KEY=sk-ant-...\n`;
+        status += `- Status: Not configured\n`;
+        status += `- Source: none\n\n`;
+        status += `## Setup Required\n\n`;
+        status += `To configure your API key:\n\n`;
+        status += `1. **Recommended:** Run \`cervellaswarm init\`\n`;
+        status += `2. **Alternative:** Set environment variable:\n`;
+        status += `   \`\`\`\n`;
+        status += `   export ANTHROPIC_API_KEY=sk-ant-...\n`;
+        status += `   \`\`\`\n\n`;
+        status += `Get your key at: https://console.anthropic.com/`;
     }
     return {
         content: [{ type: "text", text: status }],

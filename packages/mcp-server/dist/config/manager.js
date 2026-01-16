@@ -97,4 +97,48 @@ export function isVerbose() {
 export function getConfigPath() {
     return getConfig().path;
 }
+/**
+ * Validate API key by making a minimal test call
+ * Returns { valid: boolean, error?: string, warning?: string }
+ */
+export async function validateApiKey(key = null) {
+    const testKey = key || getApiKey();
+    if (!testKey) {
+        return { valid: false, error: "No API key provided" };
+    }
+    if (!testKey.startsWith("sk-ant-")) {
+        return { valid: false, error: "Invalid key format (must start with sk-ant-)" };
+    }
+    try {
+        // Dynamic import to avoid loading if not needed
+        const Anthropic = (await import("@anthropic-ai/sdk")).default;
+        const client = new Anthropic({ apiKey: testKey });
+        // Minimal test call - just check if key works
+        await client.messages.create({
+            model: "claude-sonnet-4-20250514",
+            max_tokens: 10,
+            messages: [{ role: "user", content: "hi" }],
+        });
+        return { valid: true };
+    }
+    catch (error) {
+        // Map error codes to user-friendly messages
+        const status = error.status;
+        const message = error.message;
+        if (status === 401) {
+            return { valid: false, error: "Invalid API key" };
+        }
+        if (status === 403) {
+            return { valid: false, error: "API key lacks permissions" };
+        }
+        if (status === 429) {
+            // Rate limited but key is valid!
+            return { valid: true, warning: "Rate limited, but key is valid" };
+        }
+        if (status === 500 || status === 503) {
+            return { valid: false, error: "Anthropic API temporarily unavailable" };
+        }
+        return { valid: false, error: message || "Unknown error" };
+    }
+}
 //# sourceMappingURL=manager.js.map

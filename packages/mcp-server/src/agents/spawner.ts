@@ -238,13 +238,27 @@ export async function spawnWorker(
 
         if (status === 401) {
           errorMessage = "Invalid API key";
-          nextStep = "Check your ANTHROPIC_API_KEY is correct";
+          nextStep =
+            "Your API key is invalid. Get a new one at https://console.anthropic.com/";
         } else if (status === 403) {
-          errorMessage = "API key lacks permission";
-          nextStep = "Check your API key permissions at console.anthropic.com";
+          errorMessage = "API key lacks permissions";
+          nextStep =
+            "Your API key doesn't have the required permissions. Check at https://console.anthropic.com/";
         } else if (status === 429) {
           errorMessage = "Rate limit exceeded";
-          nextStep = "Wait a moment and try again";
+          nextStep =
+            "You've hit the rate limit. Wait a few seconds and try again, or upgrade your plan.";
+        } else if (status === 500) {
+          errorMessage = "Anthropic API server error";
+          nextStep =
+            "Anthropic is having issues. Check https://status.anthropic.com/ and try again later.";
+        } else if (status === 503) {
+          errorMessage = "Anthropic API temporarily unavailable";
+          nextStep =
+            "The API is temporarily overloaded. Wait a moment and try again.";
+        } else if (lastError.name === "AbortError") {
+          errorMessage = "Request timed out";
+          nextStep = `The request took too long. Try a simpler task or increase timeout.`;
         }
 
         return {

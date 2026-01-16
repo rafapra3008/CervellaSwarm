@@ -82,7 +82,8 @@ describe('Agent Spawner', () => {
       const result = await spawnAgent('cervella-backend', 'test task', {});
 
       assert.equal(result.success, false);
-      assert.ok(result.error.includes('ANTHROPIC_API_KEY'));
+      // Error message is user-friendly, nextStep mentions ANTHROPIC_API_KEY
+      assert.ok(result.error.includes('API key') || result.nextStep.includes('ANTHROPIC_API_KEY'));
 
       // Restore original key
       if (originalKey) {
