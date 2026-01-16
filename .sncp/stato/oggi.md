@@ -1,21 +1,30 @@
 # STATO OGGI - 16 Gennaio 2026
 
-> **Sessione:** 233
-> **Progetto:** Miracollo
+> **Ultima Sessione:** 235
+> **Progetto:** CervellaSwarm
 
 ---
 
-## SESSIONE 233 - MODULO FINANZIARIO MIRACOLLO
+## SESSIONE 235 - FIX MCP INSIDERS
 
 ```
 COMPLETATO:
-├── Dissezionato PMS Core (3 audit, 15+ moduli)
-├── Identificato GAP finanziario (10%)
-├── Ricerche complete (fatturazione, RT, competitor)
-├── MAPPA Modulo Finanziario (score 9.4/10)
-├── Pattern ONE-CLICK checkout identificato
-├── NORD aggiornato
+├── Test server MCP (funziona!)
+├── Test protocollo MCP (risponde!)
+├── BUG TROVATO: config solo in ~/.claude/
+├── FIX: aggiunta config a ~/.claude-insiders/
 └── PROMPT_RIPRESA aggiornato
+```
+
+---
+
+## STATO MCP
+
+```
+Server:     OK (v0.1.0)
+Protocollo: OK (initialize + tools/list)
+Tools:      3 (spawn_worker, list_workers, check_status)
+Config:     ENTRAMBE le versioni Claude
 ```
 
 ---
@@ -23,22 +32,11 @@ COMPLETATO:
 ## PROSSIMA SESSIONE
 
 ```
-SPRINT 1: RICEVUTE PDF (3-4 giorni)
-├── Template HTML professionale
-├── Service PDF (WeasyPrint)
-├── Endpoint download + email
-└── Test con prenotazioni reali
-
-BLOCKER Sprint 3: Info RT hotel (marca, IP)
+1. Riavvia Claude Code
+2. Testa: "usa check_status di cervellaswarm"
+3. Se OK: aggiungi Resources SNCP
 ```
 
 ---
 
-## COMMIT
-
-- `454544d` - CervellaSwarm: MAPPA Modulo Finanziario
-- `89bdf64` - Miracollo: NORD aggiornato
-
----
-
-*"Studiare i grossi, fare meglio per noi!"*
+*"SU CARTA != REALE!"*
