@@ -1,57 +1,40 @@
 # STATO OGGI - 16 Gennaio 2026
 
 > **Ultima Sessione:** 240
-> **Progetto:** CervellaSwarm
+> **Progetto:** Miracollo (poi CervellaSwarm)
 
 ---
 
-## SESSIONE 240 - SPRINT 3 STRIPE (IN CORSO)
+## SESSIONE 240 - MIRACOLLO
 
-### Completato
+### Deploy Fixato
+- `services/__init__.py` - 15 export aggiunti
+- Backend healthy, nginx healthy, v1.7.0
+- Commits: `55fee8d`, `12cdd40`
 
-| Task | Risultato |
-|------|-----------|
-| Ricerca Stripe | Report 988 righe salvato |
-| Architettura | Fly.io $5/mo scelto |
-| packages/api/ | Backend completo! |
-| CLI commands | upgrade + billing pronti |
-| Config manager | +tier, customerId, email |
-
-### File Creati
-
-```
-packages/api/                    # NUOVO!
-├── src/
-│   ├── index.ts                 # Express server
-│   ├── routes/checkout.ts       # Stripe Checkout
-│   ├── routes/portal.ts         # Customer Portal
-│   ├── routes/subscription.ts   # Status sync
-│   ├── routes/webhooks.ts       # 5 webhook handlers
-│   └── db/index.ts              # JSON database (lowdb)
-├── Dockerfile                   # Ready for Fly.io
-└── fly.toml                     # Config Fly.io
-
-packages/cli/src/commands/
-├── upgrade.js                   # cervellaswarm upgrade pro/team
-└── billing.js                   # cervellaswarm billing
-```
+### Drag/Resize Iniziato
+- Consultata cervella-marketing (UX specs)
+- Creato `ThreePanelResizable.tsx` (DA COMPLETARE)
+- Specs: Sidebar 12%, List 28%, Detail 60%
 
 ---
 
 ## PROSSIMA SESSIONE (241)
 
+**MIRACOLLO:**
 ```
-1. Aiutare Rafa con Stripe Dashboard
-   - Creare Products (Pro $20, Team $35)
-   - Copiare Price IDs
+1. Verificare API react-resizable-panels v4
+2. Aggiornare index.css (handle sempre visibile)
+3. Migrare App.tsx
+4. Test + Guardiana Qualita (score 9.5+)
+```
 
-2. Deploy API su Fly.io
-   - fly launch
-   - Configurare secrets
-
-3. Test end-to-end
+**CERVELLASWARM (se tempo):**
+```
+- Sprint 3 Stripe continua
+- Deploy API su Fly.io
 ```
 
 ---
 
-*"Un progresso al giorno = 365 progressi all'anno!"*
+*"Fatto BENE > Fatto VELOCE"*
