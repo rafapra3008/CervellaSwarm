@@ -1,36 +1,27 @@
 # STATO OGGI - 17 Gennaio 2026
 
 > **Sessione:** 252
-> **Focus:** CervellaSwarm - npm publish COMPLETO!
+> **Focus:** Miracollo PMS - Modularizzazione FASE 2.1
 
 ---
 
-## SESSIONE 252 - MILESTONE!
+## SESSIONE 252 - MIRACOLLO
 
-```
-+================================================================+
-|   ENTRAMBI I PACCHETTI LIVE SU NPM!                            |
-+================================================================+
-|   cervellaswarm@0.1.1                                          |
-|   @cervellaswarm/mcp-server@0.1.2                              |
-+================================================================+
-```
-
-### Completato Oggi
+### Completato
 
 | Task | Status |
 |------|--------|
-| Org @cervellaswarm su npm | CREATA |
-| CLI pubblicata | v0.1.1 |
-| MCP Server pubblicato | v0.1.2 |
-| Test end-to-end | PASSATI |
-| README MCP fixato | FATTO |
+| Fix core/__init__.py | FATTO |
+| Split suggerimenti_engine.py | FATTO |
+| 7 moduli creati | OK |
+| Retrocompatibilita | OK |
+| Test main.py | PASSANO |
 
-### Test Verificati
+### Commits
 
 ```
-CLI:  install, version, doctor    OK
-MCP:  install, bin, 4 tools       OK
+658a517 - Fix core/__init__.py esportazioni
+16867e0 - FASE 2.1: Split suggerimenti_engine.py
 ```
 
 ---
@@ -38,11 +29,10 @@ MCP:  install, bin, 4 tools       OK
 ## PROSSIMI STEP (Sessione 253)
 
 ```
-1. OIDC Trusted Publishing
-2. Marketing: dove lanciare
-3. Primi utenti beta
+FASE 2.2: planning_swap.py (965 righe)
+FASE 2.3: settings.py (838 righe)
 ```
 
 ---
 
-*"Da SU CARTA a REALE! CLI + MCP pubblicati!"*
+*"Modularizzazione: un progresso alla volta!"*

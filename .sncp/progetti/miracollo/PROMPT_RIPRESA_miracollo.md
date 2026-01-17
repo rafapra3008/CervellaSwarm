@@ -1,28 +1,30 @@
 # PROMPT RIPRESA - Miracollo (Generale)
 
-> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 251
+> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 252
 > **NOTA:** Questo file e panoramica. Ogni braccio ha il SUO PROMPT_RIPRESA!
 
 ---
 
-## SESSIONE 251: AUDIT COMPLETO VM
+## SESSIONE 252: MODULARIZZAZIONE FASE 2.1
 
 ### Lavoro Completato
-- Audit diretto sulla VM di produzione
-- Verificato: miracollo.com LIVE e funzionante
-- Corretto: Database e SQLite (non PostgreSQL!)
-- Creato: STATO_REALE_PMS.md con verifica completa
-- Aggiornata tutta la documentazione
+- Fix core/__init__.py (esportazioni mancanti)
+- Split suggerimenti_engine.py (1047 righe -> 7 moduli)
+- Retrocompatibilita mantenuta
+- Test passano, main.py imports OK
 
-### Scoperta Importante
+### Split suggerimenti_engine.py
 ```
-PRIMA: Docs dicevano PostgreSQL
-REALTA: SQLite (3.8MB, 80+ tabelle, funziona!)
-
-Infrastruttura professionale:
-- Nginx con SSL Let's Encrypt
-- Rate limiting, HSTS, security headers
-- Zero-downtime deploy ready
+PRIMA: 1 file da 1047 righe
+DOPO:
+  services/suggerimenti/
+  ├── types.py (43 righe)
+  ├── analyzer.py (109 righe)
+  ├── creators.py (491 righe)
+  ├── integrations.py (157 righe)
+  ├── confidence.py (268 righe)
+  ├── orchestrator.py (266 righe)
+  └── __init__.py (106 righe)
 ```
 
 ---
@@ -31,38 +33,23 @@ Infrastruttura professionale:
 
 ```
 MIRACOLLO
-├── PMS CORE (:8001)        90% - PRODUZIONE VERIFICATA
-├── MIRACOLLOOK (:8002)     60% - Drag/resize in corso
+├── PMS CORE (:8001)        90% - PRODUZIONE
+├── MIRACOLLOOK (:8002)     60% - Drag/resize
 └── ROOM HARDWARE (:8003)   10% - Attesa hardware
 ```
 
 ---
 
-## DOVE TROVARE COSA
+## PROSSIMA SESSIONE (253)
 
-| Braccio | PROMPT_RIPRESA |
-|---------|----------------|
-| PMS Core | `bracci/pms-core/PROMPT_RIPRESA_pms-core.md` |
-| Miracollook | `bracci/miracallook/PROMPT_RIPRESA_miracollook.md` |
-| Room Hardware | `bracci/room-hardware/PROMPT_RIPRESA_room_hardware.md` |
+**FASE 2.2 + 2.3:**
+```
+1. Split planning_swap.py (965 righe)
+2. Split settings.py (838 righe)
+```
 
-**NUOVO:** `bracci/pms-core/STATO_REALE_PMS.md` - Verifica completa VM
+**Subroadmap:** `.sncp/progetti/miracollo/roadmaps/SUBROADMAP_MODULARIZZAZIONE_PMS.md`
 
 ---
 
-## PROSSIMA SESSIONE
-
-**PMS CORE (pulizia):**
-```
-1. Rimuovere 56 TODO nel codice
-2. Split file planning_*.py (965 righe -> max 500)
-3. Verificare integrazione Stripe
-```
-
-**MIRACOLLOOK:** Drag/resize panels
-
-**ROOM HARDWARE:** Attesa arrivo hardware Amazon
-
----
-
-*"Il diamante brilla. Ora e documentato."*
+*"Un modulo alla volta. Pulito e preciso."*
