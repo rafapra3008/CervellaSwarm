@@ -7,9 +7,7 @@
 ### 1. Install
 
 ```bash
-cd packages/mcp-server
-npm install
-npm run build
+npm install -g @cervellaswarm/mcp-server
 ```
 
 ### 2. Configure Claude Code
@@ -20,8 +18,7 @@ Add to your `~/.claude/settings.json`:
 {
   "mcpServers": {
     "cervellaswarm": {
-      "command": "node",
-      "args": ["/path/to/CervellaSwarm/packages/mcp-server/dist/index.js"]
+      "command": "cervellaswarm-mcp"
     }
   }
 }
@@ -33,8 +30,7 @@ Or add to your project's `.mcp.json`:
 {
   "mcpServers": {
     "cervellaswarm": {
-      "command": "node",
-      "args": ["./packages/mcp-server/dist/index.js"]
+      "command": "cervellaswarm-mcp"
     }
   }
 }
@@ -42,19 +38,27 @@ Or add to your project's `.mcp.json`:
 
 ### 3. Set API Key
 
-Either run `cervellaswarm init` or set environment variable:
+Install the CLI and run init:
+
+```bash
+npm install -g cervellaswarm
+cervellaswarm init
+```
+
+Or set environment variable directly:
 
 ```bash
 export ANTHROPIC_API_KEY=sk-ant-...
 ```
 
-### 4. Use in Claude Code
+### 4. Restart Claude Code
 
-Once configured, you'll have access to these tools in Claude Code:
+Restart Claude Code to load the MCP server. You'll have access to these tools:
 
 - **spawn_worker**: Execute tasks with specialized AI workers
-- **list_workers**: See available workers
-- **check_status**: Verify configuration
+- **list_workers**: See available workers and their specialties
+- **check_status**: Verify configuration and API key
+- **check_usage**: Check your usage quota
 
 ## Available Workers
 
@@ -77,9 +81,14 @@ Use spawn_worker to create a REST API endpoint for user authentication
 
 Claude Code will call the `spawn_worker` tool with `worker: "backend"` automatically.
 
-## Development
+## Development (for contributors)
 
 ```bash
+# Clone and install
+git clone https://github.com/rafapra/cervellaswarm
+cd cervellaswarm/packages/mcp-server
+npm install
+
 # Watch mode
 npm run dev
 
@@ -90,19 +99,40 @@ npm run inspect
 npm run build
 ```
 
+### Local Development Config
+
+For local development, use path-based config in `~/.claude/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "cervellaswarm": {
+      "command": "node",
+      "args": ["/path/to/CervellaSwarm/packages/mcp-server/dist/index.js"]
+    }
+  }
+}
+```
+
 ## Architecture
 
 ```
-MCP Server (this package)
+MCP Server
     │
     ├── Tools
-    │   ├── spawn_worker    → Anthropic API
+    │   ├── spawn_worker    → Anthropic API (your key)
     │   ├── list_workers    → Static list
-    │   └── check_status    → Config check
+    │   ├── check_status    → Config check
+    │   └── check_usage     → Quota info
     │
     └── Shares config with CLI
-        └── ~/.config/cervellaswarm/config.json
+        └── Uses same API key from cervellaswarm init
 ```
+
+## Links
+
+- CLI: [cervellaswarm on npm](https://www.npmjs.com/package/cervellaswarm)
+- GitHub: [rafapra/cervellaswarm](https://github.com/rafapra/cervellaswarm)
 
 ---
 

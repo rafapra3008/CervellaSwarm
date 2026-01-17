@@ -32,7 +32,7 @@
 
 ---
 
-## DOVE SIAMO (17 Gennaio 2026 - Sessione 250)
+## DOVE SIAMO (17 Gennaio 2026 - Sessione 252)
 
 ```
 +================================================================+
@@ -49,22 +49,20 @@ FASE 1: FONDAMENTA               [####################] 100%!
   - PRE/POST-FLIGHT 16 agenti    FATTO
   - 3 GAP critici                FATTO (Sessione 217!)
 
-FASE 2: MVP PRODOTTO             [#######.............] 35% REALE
+FASE 2: MVP PRODOTTO             [############........] 60% REALE
 
-  CODICE SCRITTO (su carta):
-  ✓ CLI completa                 8 comandi, 137 test
-  ✓ API Stripe                   Webhooks, checkout, portal
-  ✓ MCP Server                   Spawner, config, billing
-  ✓ CI/CD Pipeline               GitHub Actions configurato
-  ✓ Protezione IP                Apache 2.0
+  REALE (Sessione 252!):
+  ✓ CLI su npm                   cervellaswarm@0.1.1
+  ✓ MCP su npm                   @cervellaswarm/mcp-server@0.1.2
+  ✓ Test end-to-end              install, doctor, tools OK
+  ✓ API Fly.io                   ONLINE
+  ✓ Stripe                       Payment Link OK
+  ✓ BYOK                         Pronto
 
-  NON ANCORA REALE:
-  ✗ API NON deployata            fly.toml esiste, deploy NO
-  ✗ CLI NON su npm               Pronto ma mai pubblicato
-  ✗ MCP NON su npm               Pronto ma mai pubblicato
-  ✗ Test API = ZERO              Cartella test/ vuota!
-  ✗ End-to-end MAI testato       Flusso upgrade non provato
-  ✗ Database = lowdb             File JSON, non production
+  ANCORA DA FARE:
+  ✗ OIDC Trusted Publishing      CI/CD automatico npm
+  ✗ Test API Stripe              Webhook, checkout flow
+  ✗ Database production          Ancora lowdb
 
 FASE 3: PRIMI UTENTI             [....................] 0%
 
@@ -74,12 +72,12 @@ INIZIATIVE PARALLELE:
   - Casa Pulita                  100%! (Sessione 249)
   - Docs Sync System             Avviato (Sessione 250)
   - Phrasebook                   20%
+  - Famiglia Completa MCP        0% (8/16 agenti) - IL SEGRETO!
 
 PROSSIMI STEP CRITICI:
-  1. Test API (webhook, checkout)
-  2. Deploy API su Fly.io
-  3. npm publish CLI
-  4. Test end-to-end reale
+  1. OIDC Trusted Publishing
+  2. Marketing: dove lanciare
+  3. Primi utenti beta
 ```
 
 ---
@@ -158,6 +156,7 @@ PROSSIMI STEP CRITICI:
 | **SUBMAPPA DUAL-MODE** | `.sncp/progetti/cervellaswarm/roadmaps/SUBMAPPA_DUALMODE_MONETIZZAZIONE.md` |
 | **CASA PULITA (100%!)** | `.sncp/roadmaps/SUBROADMAP_CASA_PULITA.md` |
 | **PHRASEBOOK (NEW!)** | `.sncp/roadmaps/SUBROADMAP_PHRASEBOOK.md` |
+| **FAMIGLIA COMPLETA MCP** | `.sncp/progetti/cervellaswarm/roadmaps/SUBROADMAP_FAMIGLIA_COMPLETA_MCP.md` |
 | Roadmap visiva | `.sncp/progetti/cervellaswarm/roadmaps/ROADMAP_2026_PRODOTTO.md` |
 | Stato dettagliato | `.sncp/progetti/cervellaswarm/stato.md` |
 | DNA Famiglia (16 membri) | `docs/DNA_FAMIGLIA.md` |
