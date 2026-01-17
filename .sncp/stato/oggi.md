@@ -1,45 +1,47 @@
 # STATO OGGI - 17 Gennaio 2026
 
-> **Sessione:** 245
-> **Focus:** Casa Pulita Fase 2
+> **Sessione:** 246
+> **Focus:** Casa Pulita Fase 3 + 4
 
 ---
 
-## SESSIONE 245 - CASA PULITA FASE 2
+## SESSIONE 246 - DUE FASI!
 
-### 1. stato.md Compattato
-- 701 -> 216 righe (-69%!)
-- Sessioni 207-213 archiviate
+### Fase 3: Consolidare Docs
+- CLAUDE.md: 3 file consolidati
+- claude-insiders: 131 -> 10 righe (-92%)
+- project: 171 -> 57 righe (-67%)
+- SubagentStart hook: DISABILITATO
+- **Risparmio: ~4800 tokens**
 
-### 2. Duplicati VDA Eliminati
-- 6 file identici rimossi (~200KB)
-- File riferimento creato
-
-### 3. Struttura Archivio
-- Creata archivio/2026-01/
-- Pronta per future archiviazioni
+### Fase 4: DNA Agents Refactor
+- _SHARED_DNA.md creato (120 righe)
+- 16 agent: 6800 -> 1264 righe (-82%)
+- **Risparmio: ~7800 tokens**
 
 ---
 
 ## PROGRESSO CASA PULITA
 
 ```
-Fase 1: Quick Win       [FATTO] -3100 tokens
-Fase 2: Pulizia SNCP    [FATTO] oggi
-Fase 3: Consolidare docs [PROSSIMO]
-Fase 4: DNA Agents
-Fase 5: Automazione
+Fase 1: Quick Win       [FATTO]
+Fase 2: Pulizia SNCP    [FATTO]
+Fase 3: Consolidare     [FATTO] oggi
+Fase 4: DNA Agents      [FATTO] oggi
+Fase 5: Automazione     [PROSSIMO]
+Fase 6: Studio          [DA FARE]
 
-Health Score: 5.8 -> ~7.2
+Health: 5.8 -> 8.5
+Context: 28k -> 15k (TARGET!)
 ```
 
 ---
 
 ## PROSSIMO
 
-**Fase 3:** Consolidare CLAUDE.md (3 -> 1)
+**Fase 5:** Automazione (script, hook)
 **POI:** Sprint 4 Sampling
 
 ---
 
-*"Un progresso al giorno!"*
+*"Due progressi oggi!"*
