@@ -118,19 +118,29 @@ spawn-workers --researcher
 ## Project Status
 
 ```
-PHASE 1: Foundation     [##########] 90%
-PHASE 2: MVP            [..........] 0%
-PHASE 3: Alpha Users    [..........] 0%
+PHASE 1: Foundation     [##########] 100%
+PHASE 2: MVP            [########..] 80%
+PHASE 3: Alpha Users    [#.........] 5%
 PHASE 4: Scale          [..........] 0%
 ```
 
-Currently in active development. Core features work, documentation in progress.
+CLI and MCP Server live on npm. Preparing for public launch.
 
 ## Philosophy
 
-> "Fatto BENE > Fatto VELOCE" (Done RIGHT > Done FAST)
+> **"The only AI coding team that checks its own work"**
 
-We believe in quality over speed. Every feature is tested, reviewed, and refined before release.
+We're honest about our limitations. AI tools today aren't perfect - context gets lost, code quality varies, mistakes happen.
+
+Our solution? **Built-in quality guardians.** Three dedicated agents whose only job is to review and verify the work of other agents. Like having senior developers on every PR, but AI.
+
+> "Sometimes it feels like magic." - That's our promise. Not always, but when it works... it really works.
+
+**Our values:**
+- "Fatto BENE > Fatto VELOCE" (Done RIGHT > Done FAST)
+- Honest about limitations
+- Quality over speed
+- Growing with the community
 
 ## Contributing
 

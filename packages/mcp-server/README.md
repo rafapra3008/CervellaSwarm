@@ -1,6 +1,8 @@
 # CervellaSwarm MCP Server
 
-> 16 AI agents as MCP tools for Claude Code integration.
+> **The only AI coding team that checks its own work.**
+>
+> 16 AI agents with quality guardians for Claude Code.
 
 ## Quick Start
 
@@ -149,6 +151,14 @@ MCP Server
         └── Uses same API key from cervellaswarm init
 ```
 
+## Philosophy
+
+> "Sometimes it feels like magic."
+
+We're honest: AI tools aren't perfect. Context gets lost, mistakes happen. Our solution? **Built-in quality guardians** - three dedicated agents whose job is to review and verify the work of others.
+
+Not promising perfection. Promising honesty and continuous improvement.
+
 ## Links
 
 - CLI: [cervellaswarm on npm](https://www.npmjs.com/package/cervellaswarm)
@@ -156,4 +166,4 @@ MCP Server
 
 ---
 
-*"16 agents. MCP integration. Your AI team in Claude Code."*
+*"16 agents with quality guardians. Your AI team in Claude Code."*

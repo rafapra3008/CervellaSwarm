@@ -1,7 +1,7 @@
 {
   "name": "@cervellaswarm/mcp-server",
   "version": "0.2.0",
-  "description": "CervellaSwarm MCP Server - 16 AI agents as MCP tools",
+  "description": "16 AI agents with quality guardians - the only team that checks its own work",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
