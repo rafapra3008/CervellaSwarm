@@ -1,37 +1,35 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 244
-> **FASE ATTUALE:** Casa Pulita (prima di Sprint 4)
+> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 245
+> **FASE ATTUALE:** Casa Pulita in corso
 
 ---
 
-## SESSIONE 244 - RIFLESSIONE FAMIGLIA
+## SESSIONE 245 - CASA PULITA FASE 2 COMPLETATA!
 
 ### Cosa Abbiamo Fatto
-1. **Test Stripe finale** - Rafa ha testato, 3 clienti totali (test mode)
-2. **Studio organizzazione** - 4 report creati dalle Cervelle
-3. **Decisioni prese** - Guardiana + Regina (non Rafa!)
-4. **Quick Win** - Hook inutili disabilitati (-3100 tokens)
-
-### Problema Trovato
 ```
-SNCP Health Score: 5.8/10
+1. stato.md CervellaSwarm: 701 -> 216 righe (-69%!)
+   Sessioni 207-213 archiviate in archivio/2026-01/
 
-- stato.md CervellaSwarm: 700 righe (limite 500!)
-- 15+ file duplicati
-- Context spreca ~15k tokens/sessione
-- Hook fanno warning ma non bloccano
+2. Reports Miracollo: OK (nessun file > 7 giorni)
+   Nota: naming inconsistente da sistemare Fase 3
+
+3. Duplicati VDA: 6 file ELIMINATI (~200KB liberati)
+   File riferimento creato: RICERCHE_VDA_RIFERIMENTI.md
+
+4. Struttura archivio creata: archivio/2026-01/
 ```
 
-### Soluzione: SUBROADMAP CASA PULITA
+### Stato SUBROADMAP Casa Pulita
 ```
-FASE 1: Quick Win         [FATTO!]
-FASE 2: Pulizia SNCP      [PROSSIMO]
-FASE 3: Consolidare docs  [2-3 ore]
+FASE 1: Quick Win         [FATTO] (-3100 tokens)
+FASE 2: Pulizia SNCP      [FATTO!] (oggi)
+FASE 3: Consolidare docs  [PROSSIMO]
 FASE 4: DNA Agents        [4 ore]
 FASE 5: Automazione       [4-6 ore]
 
-Obiettivo: 5.8 → 9.5 Health Score
+Health Score: 5.8 -> ~7.2 (stimato)
 ```
 
 ---
@@ -39,19 +37,15 @@ Obiettivo: 5.8 → 9.5 Health Score
 ## MAPPA SESSIONI
 
 ```
-238: Sprint 1 BYOK COMPLETATO
- |
-239: Sprint 2 Metering COMPLETATO
- |
-240-242: Sprint 3 Stripe (problemi risolti)
- |
-243: Sprint 3 TEST 360 COMPLETO!
- |
-244: Test Stripe + Riflessione Famiglia  <-- OGGI
- |
-245: Casa Pulita (Fase 2-3)
- |
-246+: Sprint 4 Sampling Implementation
+238-243: Sprint 1-2-3 COMPLETATI
+    |
+  244: Riflessione Famiglia + Quick Win
+    |
+  245: Casa Pulita Fase 2  <-- FATTO!
+    |
+  246: Casa Pulita Fase 3 (consolidare docs)
+    |
+  247+: Sprint 4 Sampling Implementation
 ```
 
 ---
@@ -63,7 +57,9 @@ Sprint 1: BYOK Polish              [COMPLETATO]
 Sprint 2: Metering & Limits        [COMPLETATO]
 Sprint 3: Stripe Integration       [COMPLETATO!]
 
->>> PAUSA: Casa Pulita (1-2 sessioni) <<<
+>>> Casa Pulita <<<
+  Fase 1-2: FATTO!
+  Fase 3: consolidare CLAUDE.md (3 file -> 1)
 
 Sprint 4: Sampling Implementation  [DOPO Casa Pulita]
 Sprint 5: Polish
@@ -71,22 +67,27 @@ Sprint 5: Polish
 
 ---
 
-## PROSSIMA SESSIONE (245)
+## PROSSIMA SESSIONE (246)
 
-### CASA PULITA - Fase 2
+### CASA PULITA - Fase 3: Consolidare docs
 ```
-1. Compattare stato.md (700 → 280 righe)
-2. Archiviare reports Miracollo > 7 giorni
-3. Eliminare 8 duplicati VDA
-4. Creare archivio/2026-01/
+1. Consolidare 3 CLAUDE.md in 1 (-3800 tokens)
+2. Rimuovere COSTITUZIONE da SubagentStart system-reminder
+3. Aggiornare project CLAUDE.md (solo specifiche)
 ```
 
 ### Report da Consultare
-- `.sncp/reports/analisi_ingegnera_organizzazione.md`
-- `.sncp/reports/ricerca_best_practices_multi_agent.md`
-- `.sncp/reports/analisi_context_inefficienze.md`
-- `.sncp/decisioni/20260117_STANDARD_SNCP_FAMIGLIA.md`
+- `.sncp/reports/analisi_context_inefficienze.md` (raccomandazioni docs)
 - `.sncp/roadmaps/SUBROADMAP_CASA_PULITA.md`
+
+---
+
+## FILE MODIFICATI OGGI
+
+- `.sncp/progetti/cervellaswarm/stato.md` (compattato)
+- `.sncp/progetti/cervellaswarm/archivio/2026-01/SESSIONI_207_213.md` (nuovo)
+- `.sncp/progetti/miracollo/bracci/room-hardware/RICERCHE_VDA_RIFERIMENTI.md` (nuovo)
+- 6 duplicati VDA eliminati da `bracci/room-hardware/studi/`
 
 ---
 
@@ -100,4 +101,4 @@ Webhook: https://cervellaswarm-api.fly.dev/webhooks/stripe
 
 ---
 
-*"Prima sistemiamo casa, poi andiamo avanti!"*
+*"Un progresso al giorno. Casa sempre piu pulita!"*

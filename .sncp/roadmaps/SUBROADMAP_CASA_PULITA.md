@@ -1,6 +1,6 @@
 # SUBROADMAP - CASA PULITA
 
-> **Sessione 244** - 17 Gennaio 2026
+> **Aggiornato:** 17 Gennaio 2026 - Sessione 245
 > "Lavoriamo in pace! Senza casino! Dipende da noi!"
 
 ---
@@ -11,141 +11,144 @@ Sistemare l'organizzazione interna della famiglia:
 - SNCP pulito e navigabile
 - Context che non spreca token
 - Comunicazione chiara tra sessioni
-- Score SNCP: 5.8 → 9.5
+- Score SNCP: 5.8 -> 9.5
+- **NUOVO:** Manutenzione automatica periodica
 
 ---
 
-## STUDI COMPLETATI
-
-| Report | Cosa | Score |
-|--------|------|-------|
-| `analisi_ingegnera_organizzazione.md` | Struttura SNCP, problemi, soluzioni | 680 righe |
-| `ricerca_best_practices_multi_agent.md` | Pattern Google/Microsoft/AWS | 491 righe |
-| `analisi_context_inefficienze.md` | Consumo token, sprechi | 463 righe |
-| `audit_guardiana_standard.md` | Regole ignorate | (Guardiana) |
-
----
-
-## DECISIONI PRESE
+## STATO FASI
 
 ```
-1. stato.md    → Archiviare sessioni < 220
-2. Reports     → Soglia 7 giorni per archivio
-3. Duplicati   → Originali in bracci/, eliminare da idee/
-4. Naming      → YYYYMMDD_TIPO_descrizione.md (confermato)
-```
-
-Documento: `.sncp/decisioni/20260117_STANDARD_SNCP_FAMIGLIA.md`
-
----
-
-## FASE 1: QUICK WIN (30 min)
-
-**Chi:** Backend Worker
-**Quando:** Prima occasione
-
-| # | Task | Risparmio |
-|---|------|-----------|
-| 1 | Disabilitare `session_start_scientist.py` | 2500 tokens |
-| 2 | Disabilitare `session_start_reminder.py` | 600 tokens |
-| 3 | Compattare `cervellaswarm/stato.md` (700 → 280) | Compliance |
-
-**Comando quick:**
-```bash
-cd ~/.claude/hooks
-mv session_start_scientist.py session_start_scientist.py.DISABLED
-mv session_start_reminder.py session_start_reminder.py.DISABLED
+FASE 1: Quick Win         [COMPLETATO] Sessione 244
+FASE 2: Pulizia SNCP      [COMPLETATO] Sessione 245
+FASE 3: Consolidare docs  [PROSSIMO]
+FASE 4: DNA Agents        [DA FARE]
+FASE 5: Automazione       [DA FARE]
+FASE 6: Studio Periodico  [NUOVO - DA FARE]
 ```
 
 ---
 
-## FASE 2: PULIZIA SNCP (1-2 sessioni)
+## FASE 1: QUICK WIN [COMPLETATO]
 
-**Chi:** Backend Worker + Guardiana verifica
-**Quando:** Prossima sessione dedicata
-
-| # | Task | Impatto |
-|---|------|---------|
-| 1 | Archiviare reports Miracollo > 7 giorni | 87 → 22 file |
-| 2 | Eliminare 8 duplicati VDA da idee/ | -600KB |
-| 3 | Creare struttura `archivio/2026-01/` | Organizzazione |
-| 4 | Creare `archivio/SESSIONI_207_218.md` | stato.md sotto limite |
+**Sessione 244**
+- Disabilitati hook inutili (-3100 tokens)
 
 ---
 
-## FASE 3: CONSOLIDARE DOCS (2-3 ore)
+## FASE 2: PULIZIA SNCP [COMPLETATO]
+
+**Sessione 245**
+- stato.md: 701 -> 216 righe (-69%)
+- 6 duplicati VDA eliminati (~200KB)
+- Archivio 2026-01 creato
+
+---
+
+## FASE 3: CONSOLIDARE DOCS
 
 **Chi:** Ingegnera design + Backend implementa
-**Quando:** Settimana prossima
+**Quando:** Prossima sessione
 
 | # | Task | Risparmio |
 |---|------|-----------|
 | 1 | Consolidare 3 CLAUDE.md in 1 | 3800 tokens |
-| 2 | Rimuovere COSTITUZIONE da SubagentStart system-reminder | 1200 tokens |
+| 2 | Rimuovere COSTITUZIONE da SubagentStart | 1200 tokens |
 | 3 | Aggiornare project CLAUDE.md (solo specifiche) | Chiarezza |
 
 ---
 
-## FASE 4: DNA AGENTS (4 ore)
+## FASE 4: DNA AGENTS
 
 **Chi:** Ingegnera + Backend
-**Quando:** Sprint dedicato
 
 | # | Task | Risparmio |
 |---|------|-----------|
-| 1 | Creare `_SHARED_DNA.md` (340 righe comuni) | Base |
-| 2 | Refactor 16 DNA agent (solo specializzazione) | 12000 tokens |
+| 1 | Creare `_SHARED_DNA.md` | Base |
+| 2 | Refactor 16 DNA agent | 12000 tokens |
 | 3 | Aggiornare SubagentStart hook | Loading smart |
 
 ---
 
-## FASE 5: AUTOMAZIONE (4-6 ore)
+## FASE 5: AUTOMAZIONE
 
 **Chi:** Backend
-**Quando:** Dopo Fase 4
 
 | # | Task | Valore |
 |---|------|--------|
 | 1 | Script archivio automatico reports > 7 giorni | Zero manutenzione |
-| 2 | Hook pre-commit: verifica naming standard | Compliance |
+| 2 | Hook pre-commit: verifica naming | Compliance |
 | 3 | Hook che BLOCCA (non solo warning) | Enforcement |
-| 4 | File locks per evitare conflitti paralleli | Zero doppio lavoro |
+
+---
+
+## FASE 6: STUDIO MANUTENZIONE PERIODICA [NUOVO]
+
+> **Richiesto da Rafa - Sessione 245**
+> "Vale la pena automatizzare Casa Pulita periodicamente?"
+
+**Chi:** cervella-ingegnera + cervella-researcher
+**Quando:** Sessione dedicata (puo essere background)
+**Output:** Report con raccomandazioni
+
+### Domande da Rispondere
+
+```
+1. FREQUENZA
+   - Ogni 7 giorni? Ogni 3 giorni?
+   - Trigger su dimensione file? (es. stato.md > 400 righe)
+   - Trigger su numero file? (es. reports/ > 50)
+
+2. COSA AUTOMATIZZARE
+   - Archivio automatico file vecchi
+   - Check duplicati
+   - Compattazione stato.md
+   - Verifica naming
+   - Health score check
+
+3. COME IMPLEMENTARE
+   - launchd job (come sncp_daily)
+   - Hook pre-sessione
+   - Script manuale con reminder
+   - Combinazione?
+
+4. SCOPE
+   - Solo CervellaSwarm?
+   - Tutti i progetti?
+   - Configurabile per progetto?
+
+5. EFFORT vs VALORE
+   - Quanto costa implementare?
+   - Quanto risparmia nel tempo?
+   - ROI positivo?
+```
+
+### Best Practices da Studiare
+
+```
+- Come fanno grandi team multi-agent?
+- Pattern manutenzione codebase (git gc, etc)
+- Strategie archivio enterprise
+- Self-healing systems
+```
 
 ---
 
 ## METRICHE SUCCESS
 
-| Metrica | Prima | Dopo Fase 1 | Dopo Tutto |
-|---------|-------|-------------|------------|
-| **SNCP Health** | 5.8/10 | 7.2/10 | 9.5/10 |
-| **Context spreco** | 14% | 11% | 6.5% |
-| **stato.md** | 700 righe | 280 righe | < 300 sempre |
-| **Duplicati** | 15+ file | 15 file | 0 file |
-| **Naming issues** | ~40% | ~40% | < 5% |
-
----
-
-## UN PROGRESSO AL GIORNO
-
-```
-+================================================================+
-|                                                                |
-|   "Non importa quanto e grande il progetto.                   |
-|    Arriveremo. SEMPRE."                                       |
-|                                                                |
-|   Un task alla volta.                                          |
-|   Una fase alla volta.                                         |
-|   Un progresso al giorno.                                      |
-|                                                                |
-+================================================================+
-```
+| Metrica | Prima | Dopo Fase 2 | Target |
+|---------|-------|-------------|--------|
+| **SNCP Health** | 5.8/10 | ~7.2/10 | 9.5/10 |
+| **stato.md** | 700 righe | 216 righe | < 300 sempre |
+| **Duplicati** | 15+ file | 0 file | 0 file |
 
 ---
 
 ## PROSSIMO STEP
 
-**FASE 1** - Quick Win (oggi o prossima sessione):
-1. Disabilitare i 2 hook inutili
-2. Compattare stato.md
+**Fase 3:** Consolidare CLAUDE.md (prossima sessione)
+**Fase 6:** Studio Manutenzione Periodica (sessione dedicata o background)
 
-*"I dettagli fanno SEMPRE la differenza!"*
+---
+
+*"Casa pulita = mente pulita = lavoro pulito!"*
