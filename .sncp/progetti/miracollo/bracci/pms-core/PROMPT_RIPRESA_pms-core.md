@@ -1,91 +1,104 @@
 # PROMPT RIPRESA - PMS Core
 
-> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 242
-> **STATO:** 85% - Produzione FIXATA
+> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 251
+> **STATO:** 90% - Produzione STABILE e VERIFICATA
 
 ---
 
-## SESSIONE 242 - PROBLEMA CRITICO RISOLTO
+## SESSIONE 251 - AUDIT COMPLETO VM
 
 ```
-PROBLEMA: Planning non caricava dati in produzione
-CAUSA: DUE container backend attivi!
-  - app-backend-1 (DB VUOTO) ← nginx andava QUI!
-  - miracollo-backend-1 (DB corretto)
+VERIFICATO DIRETTAMENTE SULLA VM:
 
-FIX APPLICATI:
-1. Migrazione 024 (is_test column) applicata
-2. Container app-backend-1 RIMOSSO
-3. Ora nginx va al container corretto
+INFRASTRUTTURA:
+  miracollo.com         LIVE (SSL, HTTPS)
+  miracollo-backend-1   Up 17h (healthy)
+  miracollo-nginx       Up 23h (healthy)
 
-LEZIONE: SERVE FORTEZZA MODE PER DEPLOY!
-```
+DATABASE:
+  TIPO: SQLite (NON PostgreSQL!)
+  PATH: /app/backend/data/miracollo.db
+  SIZE: 3.8 MB
+  TABELLE: 80+
+  DATI: 45 bookings, 11 rooms, 27 guests
 
----
-
-## FORTEZZA MODE - DA IMPLEMENTARE
-
-```
-OGNI DEPLOY DEVE:
-1. Verificare UN SOLO container backend attivo
-2. Verificare migrazioni DB applicate
-3. Test endpoint PRIMA di dichiarare successo
-4. Guardiana Ops supervisiona
-
-MAI PIU' deploy "alla cieca"!
+NGINX:
+  SSL Let's Encrypt
+  Rate limiting, HSTS, Gzip
+  Zero-downtime ready
 ```
 
 ---
 
-## STATO ATTUALE
+## ARCHITETTURA REALE
 
 ```
-IN PRODUZIONE - STABILE (dopo fix)
+Internet -> Nginx (443) -> Backend (8001) -> SQLite
 
-Funzionalita LIVE:
-- Prenotazioni CRUD
-- Room Rack / Planning
-- Rate Board (9.5/10!)
-- Channel Manager
-- Ricevute PDF (Sprint Finanziario)
+VM: miracollo-cervella (Google Cloud)
+PATH: /home/rafapra/app/
+DEPLOY: docker-compose up -d
 ```
 
 ---
 
-## SESSIONI RECENTI
-
-| Sessione | Focus | Risultato |
-|----------|-------|-----------|
-| 242 | **FIX CRITICO** | Due container, DB vuoto, nginx sbagliato |
-| 241 | Deploy Fly.io | CervellaSwarm API |
-| 240 | Deploy fix | services/__init__.py |
-
----
-
-## MODULI INTERNI
+## FUNZIONALITA LIVE
 
 | Modulo | Stato |
 |--------|-------|
-| Rate Board | 9.5/10 |
-| Finanziario | Fase 1 OK |
-| What-If | POC |
+| Prenotazioni CRUD | LIVE |
+| Room Rack / Planning | LIVE |
+| Rate Board | LIVE (9.5/10) |
+| Channel Manager | LIVE |
+| Ricevute PDF | LIVE |
+| Health Check | LIVE |
 
 ---
 
-## COMANDI PRODUZIONE
+## PROSSIMI STEP
 
-```bash
-# Verifica container (DEVE essere UNO SOLO!)
-ssh miracollo-vm "docker ps | grep backend"
+```
+P1 - Pulizia Codice:
+  [ ] Rimuovere 56 TODO nel codice
+  [ ] Split planning_*.py (965 righe -> max 500)
 
-# Health check
-curl https://miracollo.com/health
+P2 - Verifiche:
+  [ ] Test integrazione Stripe
+  [ ] Verificare Autopilot attivo
 
-# Test endpoint
-curl https://miracollo.com/api/planning/NL
+P3 - Miglioramenti:
+  [ ] Backup automatico DB
+  [ ] Monitoring (Sentry?)
 ```
 
 ---
 
-*"Il cuore batte. Ma proteggiamolo."*
-*Braccio 1 - PMS Core*
+## COMANDI UTILI
+
+```bash
+# SSH
+ssh miracollo-vm
+
+# Stato
+docker ps
+
+# Logs
+docker logs miracollo-backend-1 --tail 100
+
+# Health
+curl https://miracollo.com/health
+```
+
+---
+
+## DOCUMENTAZIONE
+
+| File | Scopo |
+|------|-------|
+| STATO_REALE_PMS.md | Verifica completa infrastruttura |
+| docker-compose.yml | Config deploy (su VM) |
+| nginx.conf | Config nginx (su VM) |
+
+---
+
+*"Il diamante brilla. Ora e' documentato."*

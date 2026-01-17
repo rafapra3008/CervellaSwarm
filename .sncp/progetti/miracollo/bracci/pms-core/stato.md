@@ -21,9 +21,9 @@
 
 | Layer | Tech | Porta |
 |-------|------|-------|
-| Backend | FastAPI | 8000 |
+| Backend | FastAPI | 8001 |
 | Frontend | React | 80/443 |
-| Database | PostgreSQL | 5432 |
+| Database | SQLite | file-based |
 
 ## Stato: 85%
 

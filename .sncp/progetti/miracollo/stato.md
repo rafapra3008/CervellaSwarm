@@ -97,7 +97,7 @@ MIRACOLLO
 |------------|--------|
 | VM Google Cloud | LIVE |
 | Nginx + SSL | LIVE |
-| PostgreSQL | 41 migrations |
+| SQLite | 80+ tabelle, 3.8MB |
 | UptimeRobot | Documentato |
 
 ---
