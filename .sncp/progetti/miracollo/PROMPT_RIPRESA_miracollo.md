@@ -1,30 +1,30 @@
 # PROMPT RIPRESA - Miracollo (Generale)
 
-> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 252
+> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 253
 > **NOTA:** Questo file e panoramica. Ogni braccio ha il SUO PROMPT_RIPRESA!
 
 ---
 
-## SESSIONE 252: MODULARIZZAZIONE FASE 2.1
+## SESSIONE 253: MODULARIZZAZIONE FASE 2.2
 
 ### Lavoro Completato
-- Fix core/__init__.py (esportazioni mancanti)
-- Split suggerimenti_engine.py (1047 righe -> 7 moduli)
-- Retrocompatibilita mantenuta
-- Test passano, main.py imports OK
+- Split planning_swap.py (1046 righe -> 5 moduli)
+- Retrocompatibilita mantenuta (shim)
+- Sintassi verificata OK
 
-### Split suggerimenti_engine.py
+### Split planning_swap.py
 ```
-PRIMA: 1 file da 1047 righe
+PRIMA: 1 file da 1046 righe
 DOPO:
-  services/suggerimenti/
-  ├── types.py (43 righe)
-  ├── analyzer.py (109 righe)
-  ├── creators.py (491 righe)
-  ├── integrations.py (157 righe)
-  ├── confidence.py (268 righe)
-  ├── orchestrator.py (266 righe)
-  └── __init__.py (106 righe)
+  routers/planning/
+  ├── __init__.py      (54 righe) - Router unificato
+  ├── swap.py          (295 righe) - swap_rooms, multi_swap
+  ├── segment_swap.py  (303 righe) - swap_segment + helpers
+  ├── room_change.py   (157 righe) - change_room_during_stay
+  ├── assignments.py   (202 righe) - get_room_assignments, move_segment
+  └── history.py       (84 righe) - history, undo
+
+  planning_swap.py -> SHIM (45 righe)
 ```
 
 ---
@@ -40,12 +40,12 @@ MIRACOLLO
 
 ---
 
-## PROSSIMA SESSIONE (253)
+## PROSSIMA SESSIONE (254)
 
-**FASE 2.2 + 2.3:**
+**FASE 2.3:**
 ```
-1. Split planning_swap.py (965 righe)
-2. Split settings.py (838 righe)
+Split settings.py (838 righe)
+  -> routers/settings/ (3 moduli)
 ```
 
 **Subroadmap:** `.sncp/progetti/miracollo/roadmaps/SUBROADMAP_MODULARIZZAZIONE_PMS.md`

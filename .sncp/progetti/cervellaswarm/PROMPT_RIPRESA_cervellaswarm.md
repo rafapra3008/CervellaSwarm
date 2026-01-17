@@ -1,79 +1,47 @@
 # PROMPT RIPRESA - CervellaSwarm
 
 > **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 253
-> **MILESTONE:** FAMIGLIA COMPLETA - 16 AGENTI SU NPM!
+> **MILESTONE:** FAMIGLIA COMPLETA + MARKETING DIAMANTE
 
 ---
 
-## SESSIONE 253 - IN CORSO
+## SESSIONE 253 - COMPLETATA!
 
 ```
 +================================================================+
-|   MCP SERVER v0.2.0 - FAMIGLIA COMPLETA!                       |
+|   MCP SERVER v0.2.0 - 16 AGENTI LIVE!                          |
+|   MARKETING DIAMANTE - STRATEGIA PRONTA!                       |
 +================================================================+
-
-@cervellaswarm/mcp-server@0.2.0
-  npm install -g @cervellaswarm/mcp-server
-
-16 AGENTI:
-  - 12 Worker (backend, frontend, tester, docs, devops,
-              data, security, researcher, marketing,
-              ingegnera, scienziata, reviewer)
-  - 3 Guardiane (qualita, ricerca, ops)
-  - 1 Regina (orchestrator)
 ```
 
 ### Cosa Abbiamo Fatto
 
-1. Aggiunti 4 worker: marketing, ingegnera, scienziata, reviewer
-2. Aggiunte 3 Guardiane: qualita, ricerca, ops
-3. Aggiunta Regina: orchestrator
-4. Pubblicato v0.2.0 su npm
-5. Ricerca strategica lancio completata
+1. Da 8 a 16 agenti nel MCP Server
+2. Pubblicato v0.2.0 su npm
+3. Ricerca Marketing Diamante (4 parti)
+4. SUBROADMAP Marketing & Lancio
+5. MAPPA STUDI ORO (tutti i link!)
+6. Verificato da Guardiana: 8.5/10
 
 ---
 
-## STATO REALE
+## MESSAGGI CHIAVE
 
 ```
-PUBBLICATO E TESTATO:
-  [x] CLI v0.1.1 su npm
-  [x] MCP Server v0.2.0 su npm - 16 AGENTI!
-  [x] Test end-to-end passati
-
-FUNZIONA:
-  [x] Tutti i 16 agenti
-  [x] API Fly.io - ONLINE
-  [x] Stripe - Payment Link OK
-  [x] BYOK - Pronto
+"The only AI coding team that checks its own work"
+"Sometimes it feels like magic"
+"Rompere i paradigmi. Aprire la testa. Avere fiducia."
 ```
 
 ---
 
-## STRATEGIA LANCIO (da scienziata)
+## PROSSIMA SESSIONE (254)
 
 ```
-TOP 3 CANALI:
-1. Show HN - Martedi 08:00 EST
-2. r/ClaudeAI + r/LocalLLaMA - Dopo HN
-3. Product Hunt - Settimana dopo
-
-TIMING: Martedi 21 Gennaio 2026, 14:00 EST
-
-MESSAGGIO: "16 agents with quality guardians -
-           The only AI team that checks its own work"
-```
-
-Dettagli: `.sncp/progetti/cervellaswarm/STRATEGIA_LANCIO_CERVELLASWARM.md`
-
----
-
-## PROSSIMI STEP
-
-```
-1. Decidere: lanciare ora o aspettare miglioramenti?
-2. OIDC Trusted Publishing (CI/CD automatico)
-3. Preparare assets per lancio
+1. Aggiornare descrizioni (package.json, README)
+2. Creare screenshot/GIF demo
+3. Scrivere bozza post Show HN
+4. DATA LANCIO: Martedi 21 Gennaio 2026
 ```
 
 ---
@@ -82,10 +50,12 @@ Dettagli: `.sncp/progetti/cervellaswarm/STRATEGIA_LANCIO_CERVELLASWARM.md`
 
 | Cosa | Dove |
 |------|------|
-| CLI npm | https://www.npmjs.com/package/cervellaswarm |
-| MCP npm v0.2.0 | https://www.npmjs.com/package/@cervellaswarm/mcp-server |
-| Strategia Lancio | `.sncp/progetti/cervellaswarm/STRATEGIA_LANCIO_CERVELLASWARM.md` |
+| SUBROADMAP Marketing | `roadmaps/SUBROADMAP_DIAMANTE_MARKETING_LANCIO.md` |
+| MAPPA STUDI ORO | `MAPPA_STUDI_ORO.md` |
+| MANIFESTO | `MANIFESTO.md` |
+| Ricerca Marketing | `docs/DIAMANTE_MARKETING_*.md` |
 
 ---
 
-*"Le Guardiane sono il nostro segreto! 16 agenti REALI!"*
+*"Le Guardiane sono il nostro segreto!"*
+*"Ogni tanto sembra magia."*
