@@ -1,6 +1,6 @@
 # SUBROADMAP - CASA PULITA
 
-> **Aggiornato:** 17 Gennaio 2026 - Sessione 248
+> **Aggiornato:** 17 Gennaio 2026 - Sessione 249
 > "Lavoriamo in pace! Senza casino! Dipende da noi!"
 
 ---
@@ -26,8 +26,8 @@ FASE 4: DNA Agents             [COMPLETATO] Sessione 246
 FASE 5: Automazione            [COMPLETATO] Sessione 247
 FASE 6: Studio Periodico       [COMPLETATO] Sessione 248
 FASE 7: Comunicazione Interna  [COMPLETATO] Sessione 247
-FASE 8: Casa Pulita Clienti    [COMPLETATO] Sessione 248 (Piano creato)
-FASE 9: Sistema Aggiornamenti  [DA FARE]
+FASE 8: Casa Pulita Clienti    [COMPLETATO] Sessione 248-249 (Implementato!)
+FASE 9: Sistema Aggiornamenti  [COMPLETATO] Sessione 249
 ```
 
 ---
@@ -195,42 +195,66 @@ FASE 8.3: Auto-compact script (opzionale)
 
 ---
 
-## FASE 9: SISTEMA AGGIORNAMENTI PROGRAMMA [NUOVO]
+## FASE 9: SISTEMA AGGIORNAMENTI PROGRAMMA [COMPLETATO]
 
 > **Richiesto da Rafa - Sessione 247**
-> "Come funzionano gli updates del programma? Come renderlo automatico?"
+> **Implementato - Sessione 249**
 
-**Chi:** cervella-researcher + cervella-devops
-**Output:** Studio + Implementazione
+**Chi:** cervella-researcher + Regina
+**Output:** Studio + Implementazione COMPLETATI
 
-### Domande da Rispondere
+### Ricerca Completata
+
+| Domanda | Risposta |
+|---------|----------|
+| **Come fanno altri CLI?** | `update-notifier` (3.5M+ dependents) |
+| **GitHub CLI** | Check 24h, notifica stderr, opt-out env |
+| **Pattern dominante** | Background check, delayed notification |
+
+### Implementazione
+
+| # | Task | Stato |
+|---|------|-------|
+| 1 | Aggiunto `update-notifier` a dependencies | FATTO |
+| 2 | Creato `src/utils/update-checker.js` | FATTO |
+| 3 | Integrato in `cervellaswarm.js` | FATTO |
+| 4 | Testato funzionamento | FATTO |
+
+### Come Funziona
 
 ```
-1. STATO ATTUALE
-   - Come si aggiorna CervellaSwarm oggi?
-   - npm update? pip install --upgrade?
-   - Manual download?
-
-2. BEST PRACTICES
-   - Come fanno CLI tool popolari? (gh, vercel, etc)
-   - Semantic versioning
-   - Changelog automatico
-   - Breaking changes handling
-
-3. IMPLEMENTAZIONE
-   - Check versione all'avvio
-   - Notifica update disponibili
-   - Auto-update opzionale?
-   - Migration scripts per breaking changes
+1. Ogni run: check in background (zero impact)
+2. Cache 24h: no spam API
+3. Delayed notification: check run N, notify run N+1
+4. Auto-disabled in CI
+5. Opt-out: NO_UPDATE_NOTIFIER=1
 ```
+
+### File Creati/Modificati
+
+- `src/utils/update-checker.js` (NUOVO)
+- `bin/cervellaswarm.js` (import + chiamata)
+- `package.json` (dipendenza aggiunta)
+
+### Studio Salvato
+
+- `docs/studio/RICERCA_CLI_UPDATE_PATTERNS.md`
 
 ---
 
-## PROSSIMO STEP
+## CASA PULITA - COMPLETATA!
 
-**Fase 9:** Sistema Aggiornamenti Programma
+```
++================================================================+
+|                                                                |
+|   TUTTE LE 9 FASI COMPLETATE!                                 |
+|                                                                |
+|   Casa Pulita: 100%                                            |
+|                                                                |
++================================================================+
+```
 
-*Fasi 1-8 completate! Manca solo 1 fase per COMPLETARE Casa Pulita!*
+*"Casa pulita = mente pulita = lavoro pulito!"*
 
 ---
 

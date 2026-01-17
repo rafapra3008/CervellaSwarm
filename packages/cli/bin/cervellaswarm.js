@@ -41,6 +41,8 @@ import { resumeCommand } from '../src/commands/resume.js';
 import { doctorCommand } from '../src/commands/doctor.js';
 import { upgradeCommand } from '../src/commands/upgrade.js';
 import { billingCommand } from '../src/commands/billing.js';
+import { housekeepingCommand } from '../src/commands/housekeeping.js';
+import { checkForUpdates } from '../src/utils/update-checker.js';
 
 // ASCII Art Banner
 const banner = `
@@ -60,6 +62,7 @@ Getting Started:
   $ cervellaswarm task "..."    Execute a task with AI team
   $ cervellaswarm status        Check project progress
   $ cervellaswarm resume        Continue from last session
+  $ cervellaswarm housekeeping  Keep .sncp/ folder clean
   $ cervellaswarm doctor        Check setup and diagnose issues
 
 Examples:
@@ -77,6 +80,12 @@ Available Agents:
   data      SQL, Analytics, Queries
   security  Security Audit, Vulnerabilities
   researcher  Research, Analysis
+
+Essential Phrases:
+  checkpoint           Save your progress during a session
+  prossimo passo       Move to the next step
+  volete decidere      Let the team choose the approach
+  chiudiamo            End session cleanly
 
 Documentation: https://cervellaswarm.dev
 `;
@@ -235,6 +244,33 @@ In the portal you can:
   - View and download invoices
 `)
   .action(billingCommand);
+
+program
+  .command('housekeeping')
+  .alias('hk')
+  .description('Keep your .sncp/ folder clean and healthy')
+  .option('--compact', 'Compact oversized files (archives old content)')
+  .option('--archive', 'Archive old reports (> 30 days)')
+  .option('--auto', 'Run all cleanup tasks automatically')
+  .addHelpText('after', `
+Examples:
+  $ cervellaswarm housekeeping         Check .sncp/ health
+  $ cervellaswarm hk                   Same (alias)
+  $ cervellaswarm hk --compact         Archive and reset oversized files
+  $ cervellaswarm hk --archive         Move old reports to archive
+  $ cervellaswarm hk --auto            Run all cleanup automatically
+
+File Limits:
+  - PROMPT_RIPRESA: max 150 lines
+  - stato.md: max 500 lines
+  - reports/: archive after 30 days
+
+"Casa pulita = mente pulita = lavoro pulito!"
+`)
+  .action(housekeepingCommand);
+
+// Check for updates (non-blocking, uses cache)
+checkForUpdates();
 
 // Parse arguments
 program.parse();

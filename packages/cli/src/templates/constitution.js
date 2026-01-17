@@ -109,6 +109,20 @@ When working on this project:
 
 ---
 
+## MAINTENANCE
+
+> *"Casa pulita = mente pulita = lavoro pulito!"*
+
+Keep your .sncp/ folder clean:
+
+- **PROMPT_RIPRESA:** max 150 lines (archive old sessions)
+- **stato.md:** max 500 lines (compact periodically)
+- **reports/:** archive files older than 30 days
+
+**Command:** \`cervellaswarm housekeeping\`
+
+---
+
 *Created: {{createdDate}}*
 *CervellaSwarm v{{version}}*
 `;

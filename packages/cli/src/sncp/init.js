@@ -37,6 +37,9 @@ export async function initSNCP(answers) {
   // Create initial stato.md
   const statoContent = `# ${answers.projectName} - Stato Attuale
 
+<!-- LIMITI: Questo file deve restare < 500 righe -->
+<!-- Se cresce troppo, usa: cervellaswarm housekeeping -->
+
 > **Ultimo aggiornamento:** ${new Date().toISOString().split('T')[0]}
 > **Fase:** Inizializzazione
 
@@ -70,6 +73,9 @@ Progetto appena inizializzato con CervellaSwarm.
 
   // Create initial PROMPT_RIPRESA
   const promptRipresaContent = `# PROMPT RIPRESA - ${answers.projectName}
+
+<!-- LIMITI: Questo file deve restare < 150 righe -->
+<!-- Se cresce troppo, archivia sessioni vecchie in .sncp/archivio/ -->
 
 > **Ultimo aggiornamento:** ${new Date().toISOString().split('T')[0]}
 

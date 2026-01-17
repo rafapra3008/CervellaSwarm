@@ -222,3 +222,74 @@
 [2026-01-17 08:30:05] 
 [2026-01-17 08:30:05] Manutenzione completata!
 [2026-01-17 08:30:05] ============================================
+[2026-01-17 11:47:33] 
+[2026-01-17 11:47:33] ============================================
+[2026-01-17 11:47:33] SNCP DAILY MAINTENANCE - 2026-01-17
+[2026-01-17 11:47:33] ============================================
+[2026-01-17 11:47:33] === SNCP Daily Health Check ===
+[2026-01-17 11:47:33] Health check salvato: /Users/rafapra/Developer/CervellaSwarm/.sncp/reports/daily/health_2026-01-17.txt
+[2026-01-17 11:47:33] Tutto OK!
+[2026-01-17 11:47:33] === Cleanup file temporanei ===
+[2026-01-17 11:47:33] Cleanup completato
+[2026-01-17 11:47:33] === Verifica dimensioni file ===
+[2026-01-17 11:47:33] Dimensioni file OK
+[2026-01-17 11:47:33] === Compliance Check ===
+[2026-01-17 11:47:33] Compliance check salvato: /Users/rafapra/Developer/CervellaSwarm/.sncp/reports/daily/compliance_2026-01-17.txt
+[2026-01-17 11:47:33] Compliance OK!
+[2026-01-17 11:47:33] === Statistiche SNCP ===
+[2026-01-17 11:47:33]   cervellaswarm: 99 file
+[2026-01-17 11:47:33]   contabilita: 6 file
+[2026-01-17 11:47:33]   crypto-research: 16 file
+[2026-01-17 11:47:33]   menumaster: 3 file
+[2026-01-17 11:47:33]   miracollo: 332 file
+[2026-01-17 11:47:33]   Dimensione totale SNCP: 9.6M
+[2026-01-17 11:47:33] 
+[2026-01-17 11:47:33] Manutenzione completata!
+[2026-01-17 11:47:33] ============================================
+[2026-01-17 11:47:44] 
+[2026-01-17 11:47:44] ============================================
+[2026-01-17 11:47:44] SNCP DAILY MAINTENANCE - 2026-01-17
+[2026-01-17 11:47:44] ============================================
+[2026-01-17 11:47:44] === SNCP Daily Health Check ===
+[2026-01-17 11:47:44] Health check salvato: /Users/rafapra/Developer/CervellaSwarm/.sncp/reports/daily/health_2026-01-17.txt
+[2026-01-17 11:47:44] Tutto OK!
+[2026-01-17 11:47:44] === Cleanup file temporanei ===
+[2026-01-17 11:47:44] Cleanup completato
+[2026-01-17 11:47:44] === Verifica dimensioni file ===
+[2026-01-17 11:47:44] AUTO-COMPACT: test_autocompact/stato.md ha 450 righe (> 400)
+
+[0;34m+================================================================+[0m
+[0;34m|              SNCP COMPACTION                                  |[0m
+[0;34m+================================================================+[0m
+
+  File: [0;34m/Users/rafapra/Developer/CervellaSwarm/.sncp/progetti/test_autocompact//stato.md[0m
+  Righe attuali: 450
+  Limite: 400
+  Mantenere: 250
+
+  [1;33m[!][0m Compaction necessaria (450 > 400)
+
+  [0;34m[AUTO][0m Esecuzione automatica...
+  [1;33m[COMPACT][0m /Users/rafapra/Developer/CervellaSwarm/.sncp/progetti/test_autocompact//stato.md: 450 righe -> ~250 righe
+  [0;32m[BACKUP][0m /Users/rafapra/Developer/CervellaSwarm/.sncp/archivio/2026-01/stato_20260117_114744.md
+  [0;32m[DONE][0m Compattato: 450 -> 258 righe (-192)
+
+[0;34m+================================================================+[0m
+
+[2026-01-17 11:47:44]   -> Compattato automaticamente
+[2026-01-17 11:47:44] AUTO-COMPACT: 1 file compattati automaticamente
+[2026-01-17 11:47:44] Dimensioni file OK
+[2026-01-17 11:47:44] === Compliance Check ===
+[2026-01-17 11:47:44] Compliance check salvato: /Users/rafapra/Developer/CervellaSwarm/.sncp/reports/daily/compliance_2026-01-17.txt
+[2026-01-17 11:47:44] Compliance OK!
+[2026-01-17 11:47:44] === Statistiche SNCP ===
+[2026-01-17 11:47:44]   cervellaswarm: 99 file
+[2026-01-17 11:47:44]   contabilita: 6 file
+[2026-01-17 11:47:44]   crypto-research: 16 file
+[2026-01-17 11:47:44]   menumaster: 3 file
+[2026-01-17 11:47:44]   miracollo: 332 file
+[2026-01-17 11:47:44]   test_autocompact: 1 file
+[2026-01-17 11:47:44]   Dimensione totale SNCP: 9.6M
+[2026-01-17 11:47:44] 
+[2026-01-17 11:47:44] Manutenzione completata!
+[2026-01-17 11:47:44] ============================================

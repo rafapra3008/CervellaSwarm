@@ -2,7 +2,7 @@
 
 > **QUESTO FILE È SACRO. È LA NOSTRA BUSSOLA.**
 >
-> Aggiornato: 16 Gennaio 2026 - Sessione 237
+> Aggiornato: 17 Gennaio 2026 - Sessione 249
 
 ```
 +==================================================================+
@@ -137,12 +137,11 @@ SCORE ATTUALE: 9.5/10
 | Cosa | Dove |
 |------|------|
 | **MAPPA COMPLETA (BIBBIA!)** | `.sncp/progetti/cervellaswarm/roadmaps/MAPPA_COMPLETA_STEP_BY_STEP.md` |
-| **SUBMAPPA DUAL-MODE (NEW!)** | `.sncp/progetti/cervellaswarm/roadmaps/SUBMAPPA_DUALMODE_MONETIZZAZIONE.md` |
+| **SUBMAPPA DUAL-MODE** | `.sncp/progetti/cervellaswarm/roadmaps/SUBMAPPA_DUALMODE_MONETIZZAZIONE.md` |
+| **CASA PULITA (100%!)** | `.sncp/roadmaps/SUBROADMAP_CASA_PULITA.md` |
+| **PHRASEBOOK (NEW!)** | `.sncp/roadmaps/SUBROADMAP_PHRASEBOOK.md` |
 | Roadmap visiva | `.sncp/progetti/cervellaswarm/roadmaps/ROADMAP_2026_PRODOTTO.md` |
 | Stato dettagliato | `.sncp/progetti/cervellaswarm/stato.md` |
-| Ricerca MCP Sampling | `.sncp/progetti/cervellaswarm/idee/RICERCA_MCP_SAMPLING_DEEP_20260116.md` |
-| Ricerca Monetizzazione | `.sncp/progetti/cervellaswarm/idee/RICERCA_MONETIZZAZIONE_MCP_20260116.md` |
-| Ricerca Cursor | `.sncp/progetti/cervellaswarm/ricerche/RICERCA_20260115_CURSOR_BUSINESS_MODEL.md` |
 | DNA Famiglia (16 membri) | `docs/DNA_FAMIGLIA.md` |
 
 ---

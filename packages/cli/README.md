@@ -86,6 +86,27 @@ cervellaswarm doctor
 
 Shows if everything is configured correctly.
 
+## Talk to Your AI Team
+
+CervellaSwarm understands natural language. Here are the essential phrases:
+
+| Say This | To Do This |
+|----------|------------|
+| `cervellaswarm task "..."` | Execute a task with your AI team |
+| `checkpoint` | Save your progress (during a session) |
+| `prossimo passo` | Move to the next step |
+| `spawn-workers --backend` | Activate a specific agent |
+| `chiudiamo` | End session cleanly |
+
+**Pro tip:** CervellaSwarm is not an assistant - it's a **team**. Delegate decisions:
+
+```
+"volete decidere" → Let the team choose the best approach
+"consigli"        → Get suggestions before implementing
+```
+
+*"Not an assistant - a TEAM."*
+
 ## Commands
 
 ### `cervellaswarm init`

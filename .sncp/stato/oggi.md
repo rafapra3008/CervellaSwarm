@@ -1,47 +1,52 @@
 # STATO OGGI - 17 Gennaio 2026
 
-> **Sessione:** 246
-> **Focus:** Casa Pulita Fase 3 + 4
+> **Sessione:** 249
+> **Focus:** Casa Pulita 100% + Phrasebook P1
 
 ---
 
-## SESSIONE 246 - DUE FASI!
+## SESSIONE 249 - MEGA PRODUTTIVA!
 
-### Fase 3: Consolidare Docs
-- CLAUDE.md: 3 file consolidati
-- claude-insiders: 131 -> 10 righe (-92%)
-- project: 171 -> 57 righe (-67%)
-- SubagentStart hook: DISABILITATO
-- **Risparmio: ~4800 tokens**
+### Casa Pulita COMPLETATA (100%)
 
-### Fase 4: DNA Agents Refactor
-- _SHARED_DNA.md creato (120 righe)
-- 16 agent: 6800 -> 1264 righe (-82%)
-- **Risparmio: ~7800 tokens**
+| Fase | Cosa | Status |
+|------|------|--------|
+| 8.1 | Templates + Docs | FATTO |
+| 8.2 | Comando housekeeping | FATTO |
+| 9 | Sistema Aggiornamenti | FATTO |
+
+### Phrasebook P1 COMPLETATO
+
+- README: sezione "Talk to Your AI Team"
+- CLI --help: "Essential Phrases"
+- SUBROADMAP organizzata
 
 ---
 
-## PROGRESSO CASA PULITA
+## FILE CREATI OGGI
 
 ```
-Fase 1: Quick Win       [FATTO]
-Fase 2: Pulizia SNCP    [FATTO]
-Fase 3: Consolidare     [FATTO] oggi
-Fase 4: DNA Agents      [FATTO] oggi
-Fase 5: Automazione     [PROSSIMO]
-Fase 6: Studio          [DA FARE]
+packages/cli/
+  - src/commands/housekeeping.js (NUOVO)
+  - src/utils/update-checker.js (NUOVO)
+  - README.md (sezione frasi)
 
-Health: 5.8 -> 8.5
-Context: 28k -> 15k (TARGET!)
+docs/guides/
+  - KEEPING_SNCP_CLEAN.md (NUOVO)
+
+.sncp/roadmaps/
+  - SUBROADMAP_PHRASEBOOK.md (NUOVO)
 ```
 
 ---
 
-## PROSSIMO
+## PROSSIMA SESSIONE (250)
 
-**Fase 5:** Automazione (script, hook)
-**POI:** Sprint 4 Sampling
+```
+A) Phrasebook P2 (50 frasi complete)
+B) Sprint 4: Sampling Implementation
+```
 
 ---
 
-*"Due progressi oggi!"*
+*"Casa Pulita 100%! Phrasebook avviato!"*
