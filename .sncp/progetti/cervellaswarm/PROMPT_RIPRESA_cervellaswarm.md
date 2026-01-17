@@ -1,63 +1,37 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 243
-> **FASE ATTUALE:** Sprint 3 Stripe - COMPLETATO AL 100%!
+> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 244
+> **FASE ATTUALE:** Casa Pulita (prima di Sprint 4)
 
 ---
 
-## SESSIONE 243 - TEST 360 COMPLETATO!
+## SESSIONE 244 - RIFLESSIONE FAMIGLIA
 
+### Cosa Abbiamo Fatto
+1. **Test Stripe finale** - Rafa ha testato, 3 clienti totali (test mode)
+2. **Studio organizzazione** - 4 report creati dalle Cervelle
+3. **Decisioni prese** - Guardiana + Regina (non Rafa!)
+4. **Quick Win** - Hook inutili disabilitati (-3100 tokens)
+
+### Problema Trovato
 ```
-+================================================================+
-|   SPRINT 3 STRIPE: TESTATO E FUNZIONANTE!                     |
-|                                                                |
-|   PROBLEMI TROVATI E RISOLTI:                                  |
-|   1. Stripe CLI collegata ad account sbagliato                |
-|      → Rafa ha fatto stripe login su account CervellaSwarm    |
-|                                                                |
-|   2. Webhook endpoint non esisteva su account corretto        |
-|      → Creato: we_1SqJoTDcRzSMjFE4z2xxHy8M                    |
-|      → Secret aggiornato su Fly.io                            |
-|                                                                |
-|   3. Handler customer.subscription.created mancante           |
-|      → Aggiunto handler che recupera email da Stripe          |
-|      → Deploy eseguito                                         |
-|                                                                |
-|   TEST PAGAMENTO REALE: PASSATO!                              |
-|   - Rafa ha pagato $20 con carta test                         |
-|   - Webhook ricevuto e processato                              |
-|   - Subscription salvata: pro, active                          |
-+================================================================+
+SNCP Health Score: 5.8/10
+
+- stato.md CervellaSwarm: 700 righe (limite 500!)
+- 15+ file duplicati
+- Context spreca ~15k tokens/sessione
+- Hook fanno warning ma non bloccano
 ```
 
----
-
-## PRIMO CLIENTE!
-
+### Soluzione: SUBROADMAP CASA PULITA
 ```
-Customer: cus_TnvkMhima1FVHr
-Email: rafapra@gmail.com
-Tier: PRO
-Status: active
-Subscription: sub_1SqJt8DcRzSMjFE47Fggwys8
-```
+FASE 1: Quick Win         [FATTO!]
+FASE 2: Pulizia SNCP      [PROSSIMO]
+FASE 3: Consolidare docs  [2-3 ore]
+FASE 4: DNA Agents        [4 ore]
+FASE 5: Automazione       [4-6 ore]
 
----
-
-## CONFIGURAZIONE STRIPE FINALE
-
-```
-Account: CervellaSwarm (acct_1SqEoCDcRzSMjFE4)
-
-Prodotti:
-  - CervellaSwarm Pro:  $20/month (price_1SqJ5FDcRzSMjFE4cyZcqWs4)
-  - CervellaSwarm Team: $35/month (price_1SqJ5nDcRzSMjFE4n6bK07k5)
-
-Webhook:
-  - ID: we_1SqJoTDcRzSMjFE4z2xxHy8M
-  - URL: https://cervellaswarm-api.fly.dev/webhooks/stripe
-  - Secret: whsec_iSGm5DCho75Y30ESa63GYG9nwmZAnLkc
-  - Eventi: * (tutti)
+Obiettivo: 5.8 → 9.5 Health Score
 ```
 
 ---
@@ -69,57 +43,61 @@ Webhook:
  |
 239: Sprint 2 Metering COMPLETATO
  |
-240: Sprint 3 Stripe backend + CLI (70%)
+240-242: Sprint 3 Stripe (problemi risolti)
  |
-241: Sprint 3 Deploy OK, bug checkout
+243: Sprint 3 TEST 360 COMPLETO!
  |
-242: Sprint 3 BUG Payment Links RISOLTO
+244: Test Stripe + Riflessione Famiglia  <-- OGGI
  |
-243: Sprint 3 TEST 360 COMPLETO!  <-- OGGI
+245: Casa Pulita (Fase 2-3)
  |
-244: Sprint 4 Sampling Implementation
+246+: Sprint 4 Sampling Implementation
 ```
 
 ---
 
-## ROADMAP
+## ROADMAP PROGRAMMA
 
 ```
 Sprint 1: BYOK Polish              [COMPLETATO]
 Sprint 2: Metering & Limits        [COMPLETATO]
 Sprint 3: Stripe Integration       [COMPLETATO!]
-Sprint 4: Sampling Implementation  [PROSSIMO]
+
+>>> PAUSA: Casa Pulita (1-2 sessioni) <<<
+
+Sprint 4: Sampling Implementation  [DOPO Casa Pulita]
 Sprint 5: Polish
 ```
 
 ---
 
-## PROSSIMA SESSIONE (244)
+## PROSSIMA SESSIONE (245)
 
-### 1. TEST STRIPE FINALE (Rafa fa la prova)
-Rafa vuole fare LUI la prova del pagamento per verificare che arrivi tutto al 100%.
-Non toccare nulla - lasciare che Rafa testi da solo.
-
-### 2. RIFLESSIONE FAMIGLIA - Organizzazione Interna
+### CASA PULITA - Fase 2
 ```
-PROBLEMA: Confusione con multi-progetti e cartelle
-DISCUSSIONE: Come separare meglio le cose?
-            Come migliorare regole interne?
-            Studiare insieme la struttura.
+1. Compattare stato.md (700 → 280 righe)
+2. Archiviare reports Miracollo > 7 giorni
+3. Eliminare 8 duplicati VDA
+4. Creare archivio/2026-01/
 ```
-Questo è importante - fermarsi e parlare PRIMA di continuare a codificare.
 
-### 3. POI: Sprint 4 Sampling (se c'è tempo)
+### Report da Consultare
+- `.sncp/reports/analisi_ingegnera_organizzazione.md`
+- `.sncp/reports/ricerca_best_practices_multi_agent.md`
+- `.sncp/reports/analisi_context_inefficienze.md`
+- `.sncp/decisioni/20260117_STANDARD_SNCP_FAMIGLIA.md`
+- `.sncp/roadmaps/SUBROADMAP_CASA_PULITA.md`
 
 ---
 
-## TL;DR
+## CONFIGURAZIONE STRIPE (riferimento)
 
-**Sessione 243:** Test 360 Stripe COMPLETATO!
-- Risolti 3 problemi di configurazione
-- Pagamento REALE testato e funzionante
-- Primo cliente: rafapra@gmail.com -> PRO
+```
+Account: CervellaSwarm (acct_1SqEoCDcRzSMjFE4)
+Pro:  $20/month | Team: $35/month
+Webhook: https://cervellaswarm-api.fly.dev/webhooks/stripe
+```
 
-**Sprint 3 Stripe: FATTO AL 100%!**
+---
 
-*"Non esistono cose difficili, esistono cose non studiate!"*
+*"Prima sistemiamo casa, poi andiamo avanti!"*
