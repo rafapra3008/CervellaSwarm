@@ -1,22 +1,53 @@
 # Stato CervellaSwarm
-> Ultimo aggiornamento: 17 Gennaio 2026 - Sessione 245 (Casa Pulita)
+> Ultimo aggiornamento: 17 Gennaio 2026 - Sessione 250 (Audit & Docs Sync)
 
 ---
 
 ## TL;DR
 
 ```
-FASE ATTUALE: Casa Pulita (tra Sprint 3 e 4)
-SCORE SNCP: 5.8/10 -> in miglioramento
++================================================================+
+|   IMPORTANTE: "SU CARTA" != "REALE"                            |
+|   Codice scritto ≠ Deployato ≠ Production-ready               |
++================================================================+
 
-SPRINT 1: BYOK Polish         [COMPLETATO]
-SPRINT 2: Metering & Limits   [COMPLETATO]
-SPRINT 3: Stripe Integration  [COMPLETATO!]
+SPRINT 1: BYOK Polish         [CODICE FATTO] [DEPLOY: NO!]
+SPRINT 2: Metering & Limits   [CODICE FATTO] [DEPLOY: NO!]
+SPRINT 3: Stripe Integration  [CODICE FATTO] [DEPLOY: NO!]
+SPRINT 3.5: Deploy & Test     [DA FARE] <-- BLOCCANTE!
 
->>> PAUSA: Casa Pulita <<<
+>>> Casa Pulita: 100% <<<
+>>> Docs Sync System: AVVIATO <<<
 
-SPRINT 4: Sampling Implementation  [PROSSIMO]
-SPRINT 5: Polish
+PROSSIMI STEP CRITICI:
+1. Test API (webhook, checkout)
+2. Deploy API su Fly.io
+3. npm publish CLI + MCP
+4. Test end-to-end REALE
+```
+
+---
+
+## SESSIONE 250 - AUDIT & DOCS SYNC (17 Gennaio 2026)
+
+```
+PROBLEMA SCOPERTO:
+- Documenti dicevano Sprint 1-3 "COMPLETATI"
+- Audit REALE: codice scritto ma NIENTE deployato!
+- API su Fly.io: fly.toml esiste, deploy MAI fatto
+- CLI su npm: pronta ma MAI pubblicata
+- Test API: ZERO (cartella vuota!)
+
+AZIONI CORRETTIVE:
+1. SUBROADMAP_DOCS_SYNC creata
+2. Pre-commit hook per docs sync
+3. NORD.md aggiornato con realta
+4. SUBMAPPA_DUALMODE aggiornata
+5. Sprint 3.5 "Deploy & Test" aggiunto
+
+LEZIONE:
+"Mai dire COMPLETATO se non e' REALE!"
+La Costituzione aveva ragione: "SU CARTA" != "REALE"
 ```
 
 ---

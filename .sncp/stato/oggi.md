@@ -1,52 +1,55 @@
 # STATO OGGI - 17 Gennaio 2026
 
-> **Sessione:** 249
-> **Focus:** Casa Pulita 100% + Phrasebook P1
+> **Sessione:** 250
+> **Focus:** Audit Codice + Docs Sync System
 
 ---
 
-## SESSIONE 249 - MEGA PRODUTTIVA!
+## SESSIONE 250 - AUDIT CRITICO!
 
-### Casa Pulita COMPLETATA (100%)
+### Scoperta Importante
 
-| Fase | Cosa | Status |
-|------|------|--------|
-| 8.1 | Templates + Docs | FATTO |
-| 8.2 | Comando housekeeping | FATTO |
-| 9 | Sistema Aggiornamenti | FATTO |
+```
+DOCUMENTI dicevano: Sprint 1-3 "COMPLETATI" (90%)
+REALTA' del codice: Codice scritto ma NON deployato (35%)
 
-### Phrasebook P1 COMPLETATO
+"SU CARTA" != "REALE" - la Costituzione aveva ragione!
+```
 
-- README: sezione "Talk to Your AI Team"
-- CLI --help: "Essential Phrases"
-- SUBROADMAP organizzata
+### Azioni Correttive
+
+| Cosa | Status |
+|------|--------|
+| Audit completo codice | FATTO |
+| NORD.md aggiornato | FATTO |
+| SUBMAPPA_DUALMODE corretta | FATTO |
+| Docs Sync System creato | FATTO |
+| Pre-commit hook | FATTO |
 
 ---
 
-## FILE CREATI OGGI
+## DOCS SYNC SYSTEM (NUOVO!)
 
 ```
-packages/cli/
-  - src/commands/housekeeping.js (NUOVO)
-  - src/utils/update-checker.js (NUOVO)
-  - README.md (sezione frasi)
+FASE 1: Quick Wins     [####################] 100%
+FASE 2: Automation     [....................] 0%
+FASE 3: Cultura        [....................] 0%
 
-docs/guides/
-  - KEEPING_SNCP_CLEAN.md (NUOVO)
-
-.sncp/roadmaps/
-  - SUBROADMAP_PHRASEBOOK.md (NUOVO)
-```
-
----
-
-## PROSSIMA SESSIONE (250)
-
-```
-A) Phrasebook P2 (50 frasi complete)
-B) Sprint 4: Sampling Implementation
+File: .sncp/roadmaps/SUBROADMAP_DOCS_SYNC.md
 ```
 
 ---
 
-*"Casa Pulita 100%! Phrasebook avviato!"*
+## PROSSIMA SESSIONE (251)
+
+```
+PRIORITA P0 (Sprint 3.5 - Deploy & Test):
+1. Test API (webhook, checkout)
+2. Deploy API su Fly.io
+3. npm publish CLI + MCP
+4. Test end-to-end REALE
+```
+
+---
+
+*"Mai dire COMPLETATO se non e' REALE!"*

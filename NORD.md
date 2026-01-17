@@ -2,7 +2,7 @@
 
 > **QUESTO FILE È SACRO. È LA NOSTRA BUSSOLA.**
 >
-> Aggiornato: 17 Gennaio 2026 - Sessione 249
+> Aggiornato: 17 Gennaio 2026 - Sessione 250
 
 ```
 +==================================================================+
@@ -32,9 +32,14 @@
 
 ---
 
-## DOVE SIAMO (15 Gennaio 2026)
+## DOVE SIAMO (17 Gennaio 2026 - Sessione 250)
 
 ```
++================================================================+
+|   IMPORTANTE: "SU CARTA" != "REALE"                            |
+|   Codice scritto ≠ Deployato ≠ Production-ready               |
++================================================================+
+
 FASE 1: FONDAMENTA               [####################] 100%!
   - sncp-init.sh                 FATTO
   - verify-sync.sh               FATTO
@@ -44,24 +49,37 @@ FASE 1: FONDAMENTA               [####################] 100%!
   - PRE/POST-FLIGHT 16 agenti    FATTO
   - 3 GAP critici                FATTO (Sessione 217!)
 
-FASE 2: MVP PRODOTTO             [########............] 40%
-  - cervellaswarm init           FATTO!
-  - cervellaswarm task           FATTO! (API Reale!)
-  - 112 test passano             FATTO!
-  - MCP Server connesso          FATTO! (Sessione 237!)
-  - DUAL-MODE architecture       IN CORSO (Sessione 237)
-  - Monetizzazione (Stripe)      DA FARE
-  - 5 tester esterni             DA FARE
+FASE 2: MVP PRODOTTO             [#######.............] 35% REALE
+
+  CODICE SCRITTO (su carta):
+  ✓ CLI completa                 8 comandi, 137 test
+  ✓ API Stripe                   Webhooks, checkout, portal
+  ✓ MCP Server                   Spawner, config, billing
+  ✓ CI/CD Pipeline               GitHub Actions configurato
+  ✓ Protezione IP                Apache 2.0
+
+  NON ANCORA REALE:
+  ✗ API NON deployata            fly.toml esiste, deploy NO
+  ✗ CLI NON su npm               Pronto ma mai pubblicato
+  ✗ MCP NON su npm               Pronto ma mai pubblicato
+  ✗ Test API = ZERO              Cartella test/ vuota!
+  ✗ End-to-end MAI testato       Flusso upgrade non provato
+  ✗ Database = lowdb             File JSON, non production
 
 FASE 3: PRIMI UTENTI             [....................] 0%
-  - Product Hunt launch          DA FARE (Maggio)
-  - 50 alpha users               DA FARE
 
 FASE 4: SCALA                    [....................] 0%
-  - 1000+ users                  DA FARE (Dicembre)
-  - Revenue ricorrente           DA FARE
 
-SCORE ATTUALE: 9.5/10
+INIZIATIVE PARALLELE:
+  - Casa Pulita                  100%! (Sessione 249)
+  - Docs Sync System             Avviato (Sessione 250)
+  - Phrasebook                   20%
+
+PROSSIMI STEP CRITICI:
+  1. Test API (webhook, checkout)
+  2. Deploy API su Fly.io
+  3. npm publish CLI
+  4. Test end-to-end reale
 ```
 
 ---

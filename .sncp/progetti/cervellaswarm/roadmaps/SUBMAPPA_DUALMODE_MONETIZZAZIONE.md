@@ -276,85 +276,105 @@ export async function verifyLicense(licenseKey: string): Promise<Tier> {
 
 ---
 
-## 4. GAP ANALYSIS
+## 4. GAP ANALYSIS (Aggiornato Sessione 250)
+
+> **IMPORTANTE:** Audit del 17 Gen 2026 ha rivelato che molto codice
+> è scritto ma NON deployato. "SU CARTA" != "REALE"!
 
 ### 4.1 Score Attuale vs Target
 
 ```
 +================================================================+
-|   AREA                          | ATTUALE | TARGET | GAP       |
+|   AREA                          | CODICE | DEPLOY | REALE      |
 +================================================================+
-|   MCP Server base               | 9/10    | 9.5/10 | -0.5      |
-|   BYOK implementation           | 8/10    | 9.5/10 | -1.5      |
-|   Sampling implementation       | 0/10    | 9.5/10 | -9.5      |
-|   Dual-mode architecture        | 0/10    | 9.5/10 | -9.5      |
-|   Billing/metering              | 0/10    | 9.5/10 | -9.5      |
-|   License verification          | 0/10    | 9.5/10 | -9.5      |
-|   Stripe integration            | 0/10    | 9.5/10 | -9.5      |
-|   User dashboard                | 0/10    | 9.5/10 | -9.5      |
+|   MCP Server base               | 9/10   | 0/10   | 4/10       |
+|   BYOK implementation           | 9/10   | 0/10   | 4/10       |
+|   Sampling implementation       | 0/10   | 0/10   | 0/10       |
+|   Dual-mode architecture        | 0/10   | 0/10   | 0/10       |
+|   Billing/metering (codice)     | 9/10   | 0/10   | 4/10       |
+|   CLI commands                  | 9/10   | 0/10   | 4/10       |
+|   Stripe integration (codice)   | 9/10   | 0/10   | 4/10       |
+|   API deploy (Fly.io)           | 8/10   | 0/10   | 0/10       |
+|   Test API                      | 0/10   | -      | 0/10       |
 +================================================================+
-|   MEDIA ATTUALE                 | 2.1/10                       |
+|   MEDIA CODICE                  | 6.7/10                       |
+|   MEDIA REALE (production)      | 2.2/10                       |
 |   TARGET                        | 9.5/10                       |
 +================================================================+
 ```
 
-### 4.2 Task Prioritizzati
+### 4.2 Task Prioritizzati (RIVISTI)
 
-| Priority | Task | Effort | Score Gain |
-|----------|------|--------|------------|
-| P0 | BYOK polish + API key validation | 2 giorni | +1.5 |
-| P0 | Metering/limits (calls tracking) | 2 giorni | +1.5 |
-| P1 | Stripe integration | 3 giorni | +2.0 |
-| P1 | License key generation | 1 giorno | +0.5 |
-| P1 | Free tier enforcement | 1 giorno | +0.5 |
-| P2 | Sampling implementation | 3 giorni | +1.5 |
-| P2 | Dual-mode selection | 1 giorno | +0.5 |
-| P3 | User dashboard (usage) | 5 giorni | +1.0 |
-| P3 | Team features | 5 giorni | +0.5 |
+| Priority | Task | Status Codice | Status Deploy | Effort |
+|----------|------|---------------|---------------|--------|
+| **P0** | Test API (webhook, checkout) | 0% | - | 1 giorno |
+| **P0** | Deploy API su Fly.io | 90% | 0% | 0.5 giorno |
+| **P0** | npm publish CLI | 100% | 0% | 0.5 giorno |
+| **P0** | npm publish MCP | 100% | 0% | 0.5 giorno |
+| P1 | Test end-to-end flusso upgrade | 0% | - | 1 giorno |
+| P2 | Sampling implementation | 0% | - | 3 giorni |
+| P2 | Database production (non lowdb) | 0% | - | 2 giorni |
+| P3 | Monitoring/alerting | 0% | - | 1 giorno |
 
-**TOTALE:** ~23 giorni lavoro = ~5 settimane
+**TOTALE per REALE:** ~10 giorni (NON 23, codice già scritto!)
 
 ---
 
-## 5. ROADMAP IMPLEMENTAZIONE
+## 5. ROADMAP IMPLEMENTAZIONE (Aggiornata Sessione 250)
+
+> **NOTA:** Audit ha rivelato che Sprint 1-3 hanno CODICE completo
+> ma mancano DEPLOY e TEST. Roadmap rivista per "REALE".
 
 ```
 +================================================================+
-|   SPRINT 1: BYOK POLISH (Settimana 1)                          |
+|   SPRINT 1: BYOK POLISH - CODICE FATTO!                        |
 +================================================================+
-|   [ ] API key validation con test call                          |
-|   [ ] Error messages user-friendly                              |
-|   [ ] Config persistenza (conf package)                         |
-|   [ ] cervellaswarm doctor command                              |
+|   [x] API key validation con test call     (config/manager.ts) |
+|   [x] Error messages user-friendly         (completato)        |
+|   [x] Config persistenza (conf package)    (completato)        |
+|   [x] cervellaswarm doctor command         (doctor.js)         |
 |                                                                |
-|   GATE: BYOK funziona perfettamente, 9/10                      |
+|   CODICE: 100% | DEPLOY: 0% (npm publish mancante!)            |
 +================================================================+
 
 +================================================================+
-|   SPRINT 2: METERING & LIMITS (Settimana 2)                    |
+|   SPRINT 2: METERING & LIMITS - CODICE FATTO!                  |
 +================================================================+
-|   [ ] Usage tracking (calls/month)                              |
-|   [ ] Tier limits enforcement                                   |
-|   [ ] Usage storage (local file first)                          |
-|   [ ] Upgrade prompts when limit reached                        |
+|   [x] Usage tracking (calls/month)         (billing/usage.ts)  |
+|   [x] Tier limits enforcement              (billing/tiers.ts)  |
+|   [x] Usage storage (local file)           (completato)        |
+|   [x] Upgrade prompts when limit           (billing/messages)  |
 |                                                                |
-|   GATE: Limits funzionano, free tier rispettato                |
+|   CODICE: 100% | DEPLOY: 0% (npm publish mancante!)            |
 +================================================================+
 
 +================================================================+
-|   SPRINT 3: STRIPE INTEGRATION (Settimana 3)                   |
+|   SPRINT 3: STRIPE INTEGRATION - CODICE FATTO!                 |
 +================================================================+
-|   [ ] Stripe account setup                                      |
-|   [ ] Product/price creation (Pro, Team)                        |
-|   [ ] Checkout flow                                             |
-|   [ ] Webhook per subscription events                           |
-|   [ ] License key generation post-payment                       |
+|   [x] Stripe account setup                 (fatto)             |
+|   [?] Product/price creation               (verificare Stripe) |
+|   [x] Checkout flow                        (routes/checkout)   |
+|   [x] Webhook handler                      (routes/webhooks)   |
+|   [x] Billing command CLI                  (commands/billing)  |
 |                                                                |
-|   GATE: Pagamenti funzionano end-to-end                        |
+|   CODICE: 90% | DEPLOY: 0% (Fly.io + secrets mancanti!)        |
 +================================================================+
 
 +================================================================+
-|   SPRINT 4: SAMPLING (Settimana 4)                             |
+|   SPRINT 3.5: DEPLOY & TEST (NUOVO - BLOCCANTE!)               |
++================================================================+
+|   [ ] Test API (webhook, checkout)         PRIORITA P0!        |
+|   [ ] Deploy API su Fly.io                 fly deploy          |
+|   [ ] Secrets Stripe su Fly.io             fly secrets set     |
+|   [ ] npm publish CLI                      npm publish         |
+|   [ ] npm publish MCP                      npm publish         |
+|   [ ] Test end-to-end upgrade flow         REALE!              |
+|                                                                |
+|   GATE: Sistema funziona con utente REALE                      |
++================================================================+
+
++================================================================+
+|   SPRINT 4: SAMPLING (dopo Sprint 3.5)                         |
 +================================================================+
 |   [ ] MCP Sampling implementation                               |
 |   [ ] Dual-mode config                                          |
@@ -365,14 +385,14 @@ export async function verifyLicense(licenseKey: string): Promise<Tier> {
 +================================================================+
 
 +================================================================+
-|   SPRINT 5: POLISH (Settimana 5)                               |
+|   SPRINT 5: PRODUCTION-READY                                   |
 +================================================================+
-|   [ ] User dashboard basic (usage view)                         |
-|   [ ] Documentation completa                                    |
-|   [ ] Error handling robusto                                    |
-|   [ ] Security audit                                            |
+|   [ ] Database production (PostgreSQL/Turso, non lowdb)         |
+|   [ ] Monitoring/alerting (Sentry/LogFlare)                     |
+|   [ ] Documentation utente completa                             |
+|   [ ] Security audit finale                                     |
 |                                                                |
-|   GATE: Score 9.5/10, production-ready                         |
+|   GATE: Score 9.5/10, REALE production-ready                   |
 +================================================================+
 ```
 

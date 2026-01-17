@@ -1,79 +1,93 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 249
-> **MILESTONE:** Casa Pulita 100% + Phrasebook avviato!
+> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 250
+> **MILESTONE:** Audit Critico + Docs Sync System
 
 ---
 
-## SESSIONE 249 - COMPLETAMENTI IMPORTANTI
+## SESSIONE 250 - SCOPERTA IMPORTANTE!
 
-### Casa Pulita: 9/9 FASI (100%)
+```
++================================================================+
+|   "SU CARTA" != "REALE"                                        |
++================================================================+
+|                                                                |
+|   DOCUMENTI dicevano: Sprint 1-3 COMPLETATI (90%)              |
+|   REALTA' del codice: Scritto ma NON deployato (35%)           |
+|                                                                |
+|   - API su Fly.io: fly.toml esiste, deploy MAI fatto           |
+|   - CLI su npm: pronta ma MAI pubblicata                       |
+|   - Test API: ZERO (cartella vuota!)                           |
+|                                                                |
++================================================================+
+```
 
-| Fase | Cosa | Sessione |
-|------|------|----------|
-| 8.1 | Templates con limiti file | 249 |
-| 8.2 | Comando `cervellaswarm housekeeping` | 249 |
-| 9 | Sistema update-notifier | 249 |
+### Azioni Correttive Fatte
 
-**Subroadmap:** `.sncp/roadmaps/SUBROADMAP_CASA_PULITA.md`
-
-### Phrasebook: P1 Completato
-
-- README: sezione "Talk to Your AI Team"
-- CLI --help: "Essential Phrases" nel footer
-- Strategia Dual Voice definita (Marketing + Guardiana Ops)
-
-**Subroadmap:** `.sncp/roadmaps/SUBROADMAP_PHRASEBOOK.md`
+| Cosa | File |
+|------|------|
+| NORD.md aggiornato | `NORD.md` |
+| SUBMAPPA corretta | `.sncp/.../SUBMAPPA_DUALMODE_MONETIZZAZIONE.md` |
+| Docs Sync System | `.sncp/roadmaps/SUBROADMAP_DOCS_SYNC.md` |
+| Pre-commit hook | `.git/hooks/pre-commit` |
+| Script helper | `scripts/update-docs-status.sh` |
 
 ---
 
-## FILE CHIAVE CREATI
+## MAPPA REALE (Verificata da Guardiana)
 
 ```
-packages/cli/
-  src/commands/housekeeping.js    (health check SNCP)
-  src/utils/update-checker.js     (notifica aggiornamenti)
+FASE 2 MVP: 35% REALE (codice 90%, deploy 0%)
 
-docs/guides/
-  KEEPING_SNCP_CLEAN.md           (guida manutenzione)
-```
+CODICE FATTO:
+  [x] CLI completa (8 comandi, 137 test)
+  [x] API Stripe (webhooks, checkout)
+  [x] MCP Server (spawner, billing)
 
----
-
-## MAPPA ATTUALE
-
-```
-CASA PULITA:    [####################] 100% COMPLETATA!
-PHRASEBOOK:     [####................] P1 fatto, P2/P3 da fare
-SPRINT 4:       [....................] Sampling (prossimo)
-```
-
----
-
-## PROSSIMA SESSIONE (250)
-
-```
-A) Phrasebook P2: docs/guide/PHRASEBOOK.md (50 frasi)
-   - 6 categorie situazionali
-   - Anti-pattern documentati
-
-B) Sprint 4: Sampling Implementation
-   - MCP sampling mode
-   - Dual-mode architecture
+NON ANCORA REALE:
+  [ ] Deploy API Fly.io
+  [ ] npm publish CLI
+  [ ] npm publish MCP
+  [ ] Test API
+  [ ] Test e2e
 ```
 
 ---
 
-## PUNTATORI IMPORTANTI
+## DOCS SYNC SYSTEM (NUOVO!)
+
+```
+FASE 1: Quick Wins     [####################] 100%
+FASE 2: Automation     [....................] 0%
+FASE 3: Cultura        [....................] 0%
+```
+
+---
+
+## PROSSIMA SESSIONE (251)
+
+```
+PRIORITA P0 - Sprint 3.5: Deploy & Test
+
+1. Test API (webhook, checkout)
+2. Deploy API su Fly.io + secrets
+3. npm publish CLI
+4. npm publish MCP
+5. Test end-to-end REALE
+```
+
+---
+
+## PUNTATORI
 
 | Cosa | Dove |
 |------|------|
 | NORD | `NORD.md` |
-| Casa Pulita | `.sncp/roadmaps/SUBROADMAP_CASA_PULITA.md` |
-| Phrasebook | `.sncp/roadmaps/SUBROADMAP_PHRASEBOOK.md` |
-| Dual-Mode | `.sncp/progetti/cervellaswarm/roadmaps/SUBMAPPA_DUALMODE_MONETIZZAZIONE.md` |
+| Docs Sync | `.sncp/roadmaps/SUBROADMAP_DOCS_SYNC.md` |
+| Dual-Mode | `.sncp/.../SUBMAPPA_DUALMODE_MONETIZZAZIONE.md` |
+| Audit ricerca | `.sncp/.../ricerche/RICERCA_20260117_DOCS_CODE_SYNC_SOLUTION.md` |
 
 ---
 
-*"Casa Pulita completata! Phrasebook in corso!"*
+*"Mai dire COMPLETATO se non e' REALE!"*
 *"Lavoriamo in pace! Senza casino! Dipende da noi!"*
