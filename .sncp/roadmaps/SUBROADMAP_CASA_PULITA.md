@@ -1,6 +1,6 @@
 # SUBROADMAP - CASA PULITA
 
-> **Aggiornato:** 17 Gennaio 2026 - Sessione 245
+> **Aggiornato:** 17 Gennaio 2026 - Sessione 246
 > "Lavoriamo in pace! Senza casino! Dipende da noi!"
 
 ---
@@ -21,10 +21,10 @@ Sistemare l'organizzazione interna della famiglia:
 ```
 FASE 1: Quick Win         [COMPLETATO] Sessione 244
 FASE 2: Pulizia SNCP      [COMPLETATO] Sessione 245
-FASE 3: Consolidare docs  [PROSSIMO]
-FASE 4: DNA Agents        [DA FARE]
-FASE 5: Automazione       [DA FARE]
-FASE 6: Studio Periodico  [NUOVO - DA FARE]
+FASE 3: Consolidare docs  [COMPLETATO] Sessione 246
+FASE 4: DNA Agents        [COMPLETATO] Sessione 246
+FASE 5: Automazione       [PROSSIMO]
+FASE 6: Studio Periodico  [DA FARE]
 ```
 
 ---
@@ -45,28 +45,22 @@ FASE 6: Studio Periodico  [NUOVO - DA FARE]
 
 ---
 
-## FASE 3: CONSOLIDARE DOCS
+## FASE 3: CONSOLIDARE DOCS [COMPLETATO]
 
-**Chi:** Ingegnera design + Backend implementa
-**Quando:** Prossima sessione
-
-| # | Task | Risparmio |
-|---|------|-----------|
-| 1 | Consolidare 3 CLAUDE.md in 1 | 3800 tokens |
-| 2 | Rimuovere COSTITUZIONE da SubagentStart | 1200 tokens |
-| 3 | Aggiornare project CLAUDE.md (solo specifiche) | Chiarezza |
+**Sessione 246**
+- ~/.claude-insiders/CLAUDE.md: 131 -> 10 righe (-92%)
+- CervellaSwarm/CLAUDE.md: 171 -> 57 righe (-67%)
+- SubagentStart hook COSTITUZIONE: DISABILITATO
+- **Risparmio totale: ~4800 tokens/sessione**
 
 ---
 
-## FASE 4: DNA AGENTS
+## FASE 4: DNA AGENTS [COMPLETATO]
 
-**Chi:** Ingegnera + Backend
-
-| # | Task | Risparmio |
-|---|------|-----------|
-| 1 | Creare `_SHARED_DNA.md` | Base |
-| 2 | Refactor 16 DNA agent | 12000 tokens |
-| 3 | Aggiornare SubagentStart hook | Loading smart |
+**Sessione 246**
+- Creato `_SHARED_DNA.md` (~120 righe comuni)
+- Refactorizzati 16 DNA agent: 6800 -> 1264 righe (-82%)
+- **Risparmio: ~7800 token/sessione (con 3 agent)**
 
 ---
 
@@ -136,18 +130,19 @@ FASE 6: Studio Periodico  [NUOVO - DA FARE]
 
 ## METRICHE SUCCESS
 
-| Metrica | Prima | Dopo Fase 2 | Target |
+| Metrica | Prima | Dopo Fase 4 | Target |
 |---------|-------|-------------|--------|
-| **SNCP Health** | 5.8/10 | ~7.2/10 | 9.5/10 |
+| **SNCP Health** | 5.8/10 | ~8.5/10 | 9.5/10 |
 | **stato.md** | 700 righe | 216 righe | < 300 sempre |
-| **Duplicati** | 15+ file | 0 file | 0 file |
+| **DNA totale** | 6800 righe | 1264 righe | < 1500 |
+| **Context/sessione** | ~28k tokens | ~15k tokens | < 15k |
 
 ---
 
 ## PROSSIMO STEP
 
-**Fase 3:** Consolidare CLAUDE.md (prossima sessione)
-**Fase 6:** Studio Manutenzione Periodica (sessione dedicata o background)
+**Fase 5:** Automazione (script archivio, hook pre-commit)
+**Fase 6:** Studio Manutenzione Periodica
 
 ---
 

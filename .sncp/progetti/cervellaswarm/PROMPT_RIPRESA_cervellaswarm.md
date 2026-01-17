@@ -1,35 +1,43 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 245
-> **FASE ATTUALE:** Casa Pulita in corso
+> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 246
+> **FASE ATTUALE:** Casa Pulita - Fase 4 COMPLETATA!
 
 ---
 
-## SESSIONE 245 - CASA PULITA FASE 2 COMPLETATA!
+## SESSIONE 246 - MEGA PROGRESSO!
 
-### Cosa Abbiamo Fatto
+### Fase 3: Consolidare Docs - FATTO
 ```
-1. stato.md CervellaSwarm: 701 -> 216 righe (-69%!)
-   Sessioni 207-213 archiviate in archivio/2026-01/
-
-2. Reports Miracollo: OK (nessun file > 7 giorni)
-   Nota: naming inconsistente da sistemare Fase 3
-
-3. Duplicati VDA: 6 file ELIMINATI (~200KB liberati)
-   File riferimento creato: RICERCHE_VDA_RIFERIMENTI.md
-
-4. Struttura archivio creata: archivio/2026-01/
+~/.claude-insiders/CLAUDE.md: 131 -> 10 righe (-92%)
+CervellaSwarm/CLAUDE.md: 171 -> 57 righe (-67%)
+SubagentStart hook: DISABILITATO
+Risparmio: ~4800 tokens/sessione
 ```
 
-### Stato SUBROADMAP Casa Pulita
+### Fase 4: DNA Agents Refactor - FATTO
+```
+Creato _SHARED_DNA.md (120 righe comuni)
+16 DNA agent refactorizzati: 6800 -> 1264 righe (-82%)
+Risparmio: ~7800 tokens/sessione (con 3 agent)
+```
+
+### TOTALE RISPARMIO OGGI: ~12600 tokens/sessione!
+
+---
+
+## Stato SUBROADMAP Casa Pulita
+
 ```
 FASE 1: Quick Win         [FATTO] (-3100 tokens)
-FASE 2: Pulizia SNCP      [FATTO!] (oggi)
-FASE 3: Consolidare docs  [PROSSIMO]
-FASE 4: DNA Agents        [4 ore]
-FASE 5: Automazione       [4-6 ore]
+FASE 2: Pulizia SNCP      [FATTO] (-69% stato.md)
+FASE 3: Consolidare docs  [FATTO!] (-4800 tokens)
+FASE 4: DNA Agents        [FATTO!] (-7800 tokens)
+FASE 5: Automazione       [PROSSIMO]
+FASE 6: Studio Periodico  [DA FARE]
 
-Health Score: 5.8 -> ~7.2 (stimato)
+Health Score: 5.8 -> ~8.5
+Target raggiunto: Context < 15k tokens!
 ```
 
 ---
@@ -39,13 +47,15 @@ Health Score: 5.8 -> ~7.2 (stimato)
 ```
 238-243: Sprint 1-2-3 COMPLETATI
     |
-  244: Riflessione Famiglia + Quick Win
+  244: Quick Win
     |
-  245: Casa Pulita Fase 2  <-- FATTO!
+  245: Fase 2
     |
-  246: Casa Pulita Fase 3 (consolidare docs)
+  246: Fase 3 + Fase 4  <-- OGGI (2 fasi!)
     |
-  247+: Sprint 4 Sampling Implementation
+  247: Fase 5 Automazione
+    |
+  248+: Sprint 4 Sampling
 ```
 
 ---
@@ -53,52 +63,40 @@ Health Score: 5.8 -> ~7.2 (stimato)
 ## ROADMAP PROGRAMMA
 
 ```
-Sprint 1: BYOK Polish              [COMPLETATO]
-Sprint 2: Metering & Limits        [COMPLETATO]
-Sprint 3: Stripe Integration       [COMPLETATO!]
+Sprint 1-3: BYOK + Metering + Stripe   [COMPLETATI]
 
 >>> Casa Pulita <<<
-  Fase 1-2: FATTO!
-  Fase 3: consolidare CLAUDE.md (3 file -> 1)
+  Fase 1-4: FATTO!
+  Fase 5: Automazione (PROSSIMO)
 
-Sprint 4: Sampling Implementation  [DOPO Casa Pulita]
+Sprint 4: Sampling Implementation      [DOPO Casa Pulita]
 Sprint 5: Polish
 ```
 
 ---
 
-## PROSSIMA SESSIONE (246)
+## PROSSIMA SESSIONE (247)
 
-### CASA PULITA - Fase 3: Consolidare docs
+### CASA PULITA - Fase 5: Automazione
 ```
-1. Consolidare 3 CLAUDE.md in 1 (-3800 tokens)
-2. Rimuovere COSTITUZIONE da SubagentStart system-reminder
-3. Aggiornare project CLAUDE.md (solo specifiche)
+1. Script archivio automatico reports > 7 giorni
+2. Hook pre-commit verifica naming
+3. Hook che BLOCCA (non solo warning)
 ```
-
-### Report da Consultare
-- `.sncp/reports/analisi_context_inefficienze.md` (raccomandazioni docs)
-- `.sncp/roadmaps/SUBROADMAP_CASA_PULITA.md`
 
 ---
 
 ## FILE MODIFICATI OGGI
 
-- `.sncp/progetti/cervellaswarm/stato.md` (compattato)
-- `.sncp/progetti/cervellaswarm/archivio/2026-01/SESSIONI_207_213.md` (nuovo)
-- `.sncp/progetti/miracollo/bracci/room-hardware/RICERCHE_VDA_RIFERIMENTI.md` (nuovo)
-- 6 duplicati VDA eliminati da `bracci/room-hardware/studi/`
+**Fase 3:**
+- `~/.claude-insiders/CLAUDE.md`
+- `CervellaSwarm/CLAUDE.md`
+- `.claude/hooks/subagent_start_costituzione.py.DISABLED`
+
+**Fase 4:**
+- `~/.claude/agents/_SHARED_DNA.md` (NUOVO)
+- `~/.claude/agents/cervella-*.md` (tutti 16 refactorizzati!)
 
 ---
 
-## CONFIGURAZIONE STRIPE (riferimento)
-
-```
-Account: CervellaSwarm (acct_1SqEoCDcRzSMjFE4)
-Pro:  $20/month | Team: $35/month
-Webhook: https://cervellaswarm-api.fly.dev/webhooks/stripe
-```
-
----
-
-*"Un progresso al giorno. Casa sempre piu pulita!"*
+*"Due progressi oggi! La casa e quasi pronta!"*
