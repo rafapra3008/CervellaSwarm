@@ -1,30 +1,33 @@
 # PROMPT RIPRESA - Miracollo (Generale)
 
-> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 253
+> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 254
 > **NOTA:** Questo file e panoramica. Ogni braccio ha il SUO PROMPT_RIPRESA!
 
 ---
 
-## SESSIONE 253: MODULARIZZAZIONE FASE 2.2
+## SESSIONE 254: MODULARIZZAZIONE FASE 2.3
 
 ### Lavoro Completato
-- Split planning_swap.py (1046 righe -> 5 moduli)
-- Retrocompatibilita mantenuta (shim)
-- Sintassi verificata OK
+- Split settings.py (839 righe -> 7 moduli)
+- Consultata Guardiana Ingegnera (piano validato)
+- Audit Guardiana Qualita: 10/10 APPROVED
+- Fix: aggiunto updated_at in services.py
 
-### Split planning_swap.py
+### Split settings.py
 ```
-PRIMA: 1 file da 1046 righe
-DOPO:
-  routers/planning/
-  ├── __init__.py      (54 righe) - Router unificato
-  ├── swap.py          (295 righe) - swap_rooms, multi_swap
-  ├── segment_swap.py  (303 righe) - swap_segment + helpers
-  ├── room_change.py   (157 righe) - change_room_during_stay
-  ├── assignments.py   (202 righe) - get_room_assignments, move_segment
-  └── history.py       (84 righe) - history, undo
+PRIMA: 1 file da 839 righe
 
-  planning_swap.py -> SHIM (45 righe)
+DOPO:
+  routers/settings/
+  ├── __init__.py       (48 righe)  - Router unificato
+  ├── models.py         (226 righe) - Pydantic + constants
+  ├── hotel.py          (69 righe)  - Hotel GET/PUT
+  ├── room_types.py     (171 righe) - Room Types CRUD
+  ├── rooms.py          (161 righe) - Rooms CRUD
+  ├── rate_plans.py     (135 righe) - Rate Plans CRUD
+  └── services.py       (152 righe) - Services + amenities
+
+  settings.py -> SHIM (52 righe)
 ```
 
 ---
@@ -40,12 +43,27 @@ MIRACOLLO
 
 ---
 
-## PROSSIMA SESSIONE (254)
+## PROGRESSO FASE 2 (Modularizzazione)
 
-**FASE 2.3:**
 ```
-Split settings.py (838 righe)
-  -> routers/settings/ (3 moduli)
+COMPLETATI:
+  [x] 2.1 suggerimenti_engine.py -> suggerimenti/ (7 moduli)
+  [x] 2.2 planning_swap.py -> planning/ (5 moduli)
+  [x] 2.3 settings.py -> settings/ (7 moduli)  <-- OGGI!
+
+DA FARE:
+  [ ] 2.4 email_parser.py (829 righe)
+  [ ] 2.5 confidence_scorer.py (778 righe)
+```
+
+---
+
+## PROSSIMA SESSIONE (255)
+
+**FASE 2.4:**
+```
+Split email_parser.py (829 righe)
+  -> services/email/ (3 moduli)
 ```
 
 **Subroadmap:** `.sncp/progetti/miracollo/roadmaps/SUBROADMAP_MODULARIZZAZIONE_PMS.md`

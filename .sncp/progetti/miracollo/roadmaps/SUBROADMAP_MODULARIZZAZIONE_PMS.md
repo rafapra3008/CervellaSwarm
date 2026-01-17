@@ -6,22 +6,21 @@
 
 ---
 
-## STATO ATTUALE (Aggiornato 17 Gen - Sessione 251)
+## STATO ATTUALE (Aggiornato 17 Gen - Sessione 254)
 
 ```
-Health Score: 7/10 (era 6/10)
+Health Score: 7.5/10 (era 6/10)
 
-PRIMA:
-- 51 file > 500 righe
-- 22 funzioni > 100 righe
-- 72 TODO attivi
-- 8 TODO security critici
-
-DOPO FASE 1:
-- 51 file > 500 righe (invariato, FASE 2)
-- 19 funzioni > 100 righe (-3!)
-- 47 TODO attivi (-25!)
+DOPO FASE 2.3:
+- 48 file > 500 righe (-3 da split!)
+- 17 funzioni > 100 righe (-5!)
+- 45 TODO attivi
 - 8 TODO security (FASE 3)
+
+SPLIT COMPLETATI:
+- suggerimenti_engine.py -> suggerimenti/ (7 moduli)
+- planning_swap.py -> planning/ (5 moduli)
+- settings.py -> settings/ (7 moduli)
 ```
 
 ---
@@ -106,19 +105,24 @@ EFFORT: 3 giorni
 PRIORITA: CRITICO (alto traffico produzione)
 ```
 
-### 2.3 Split settings.py (838 righe)
+### 2.3 Split settings.py (839 righe) - COMPLETATO Sessione 254!
 ```
 DA:
-  routers/settings.py (838 righe)
+  routers/settings.py (839 righe)
 
-A:
+A (REALE - diverso da piano originale!):
   routers/settings/
-  ├── hotel.py (hotel config - 300 righe)
-  ├── user.py (user preferences - 250 righe)
-  └── system.py (system config - 200 righe)
+  ├── __init__.py       (48 righe)  - Router unificato
+  ├── models.py         (226 righe) - Pydantic + constants
+  ├── hotel.py          (69 righe)  - Hotel GET/PUT
+  ├── room_types.py     (171 righe) - Room Types CRUD
+  ├── rooms.py          (161 righe) - Rooms CRUD
+  ├── rate_plans.py     (135 righe) - Rate Plans CRUD
+  └── services.py       (152 righe) - Services + amenities
 
-EFFORT: 2 giorni
-PRIORITA: ALTO
+  settings.py -> SHIM (52 righe)
+
+AUDIT: Guardiana Qualita 10/10 APPROVED
 ```
 
 ### 2.4 Split email_parser.py (829 righe)
@@ -154,7 +158,7 @@ PRIORITA: ALTO
 **Checklist FASE 2:**
 - [x] 2.1 suggerimenti/ modulo creato (Sessione 252 - 7 moduli!)
 - [x] 2.2 planning/ modulo creato (Sessione 253 - 5 moduli!)
-- [ ] 2.3 settings/ modulo creato
+- [x] 2.3 settings/ modulo creato (Sessione 254 - 7 moduli!) 10/10
 - [ ] 2.4 email/ modulo creato
 - [ ] 2.5 confidence/ modulo creato
 - [ ] Test copertura > 80% su moduli nuovi
