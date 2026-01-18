@@ -1,59 +1,44 @@
 # STATO OGGI - 18 Gennaio 2026
 
-> **Sessione:** 257
-> **Focus:** CervellaSwarm - Lancio Ready!
+> **Sessione:** 258
+> **Focus:** Miracollo - VCC Booking.com
 
 ---
 
-## SESSIONE 257 - LANCIO PRONTO!
+## SESSIONE 258 - VCC + PROBLEMA DEPLOY
 
-### Cosa Abbiamo Fatto
-
-```
-1. MCP Server v0.2.2 pubblicato
-   - Tool annotations incluse
-   - LICENSE file aggiunto
-   - npm: @cervellaswarm/mcp-server@0.2.2
-
-2. Submit mcp.so directory
-   - Commento su Issue #1 OK
-   - Listing entro 24h
-
-3. Analisi Business Model
-   - Scienziata + Researcher
-   - Conferma: CLOSED-SOURCE (come Cursor)
-   - BYOK + Freemium = strategia giusta
-
-4. Email Anthropic aggiornata
-   - Closed-source model
-   - Accesso privato su richiesta
-   - APPROVATA!
-```
-
----
-
-## CHECKLIST LANCIO
+### Fatto
 
 ```
-[x] npm publish MCP con annotations
-[x] Submit mcp.so
-[x] Email Anthropic PRONTA
+1. VCC BOOKING.COM IMPLEMENTATO
+   - Backend: charge_vcc_payment() + /charge-vcc
+   - Frontend: Stripe Elements v2.0
 
-[ ] INVIARE Email (3-4 giorni prima)
-[ ] LANCIO Show HN
+2. STRIPE SANDBOX MIRACOLLO
+   - Account: acct_1Sqrxk7aXUHP1bna
+   - Test pagamento: OK
+
+3. DEPLOY ESEGUITO
+   - Commit cbf60c2 su VM
+```
+
+### Problema
+
+```
+ERRORE: sqlite3.OperationalError: no such column: imported
+FILE:   cm_reservation.py:416
+FIX:    Aggiungere colonna 'imported' al DB
 ```
 
 ---
 
-## DECISIONE STRATEGICA
+## PROSSIMA SESSIONE
 
 ```
-CLOSED-SOURCE come Cursor:
-- npm packages: PUBBLICI (acquisizione)
-- Codice sorgente: PRIVATO (protezione)
-- SNCP: Trade secret (vantaggio competitivo)
+1. Fix colonna 'imported' nel DB
+2. Test VCC (carta: 4242 4242 4242 4242)
 ```
 
 ---
 
-*"Ultrapassar os próprios limites!"*
+*"Lavoriamo in pace!"*

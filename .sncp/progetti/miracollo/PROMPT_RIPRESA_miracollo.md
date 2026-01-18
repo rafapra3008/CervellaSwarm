@@ -1,41 +1,43 @@
-# PROMPT RIPRESA - Miracollo (Generale)
+# PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 257
-> **NOTA:** Questo file e panoramica. Ogni braccio ha il SUO PROMPT_RIPRESA!
+> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 258
+> **ATTENZIONE:** Deploy problema - leggere sezione URGENTE!
 
 ---
 
-## SESSIONE 257: FASE 3 CONSOLIDAMENTO COMPLETATA
+## SESSIONE 258: VCC IMPLEMENTATO + PROBLEMA DEPLOY
 
 ### Cosa Abbiamo Fatto
 
 ```
-3.2 SECURITY:
-  - license_check.py: import fixati (Optional, Tuple)
-  - TODO JWT → FUTURE con documentazione chiara
-  - 4 step documentati per quando serve JWT
-  - Versione: 1.0.0 → 1.1.0
+VCC BOOKING.COM - CODICE COMPLETO:
+- Backend: charge_vcc_payment() in stripe_service.py
+- Backend: POST /api/payments/charge-vcc
+- Backend: GET /api/payments/stripe-config
+- Frontend: Stripe Elements in modal-payment.js v2.0
+- Frontend: Bottone "VCC Booking" (blu) nel modal pagamento
 
-3.1 ROUTERS:
-  - Analisi: 52 file nel root, 6 subdirectory
-  - DECISIONE: SKIP (sistema live, rischio breakage)
-  - Guardiana Qualità approvato
-
-3.3 TEST:
-  - 24 file test, 8 > 500 righe
-  - Già organizzati per feature
-  - DECISIONE: No move (rischio pytest)
-
-3.4 DOCS:
-  - README.md aggiornato v1.8.0
-  - Project Structure con nuova modularizzazione
+STRIPE SANDBOX MIRACOLLO:
+- Account creato: acct_1Sqrxk7aXUHP1bna
+- Chiavi configurate su VM (.env)
+- Test API: FUNZIONA (pagamento test OK)
 ```
 
-### Health Score
+### PROBLEMA URGENTE
 
 ```
-6/10 → 8/10 → 8.5/10
-OBIETTIVO 9.5: Da valutare prossime azioni
++----------------------------------------------------------+
+|  DOPO DEPLOY IL PLANNING NON CARICA!                     |
+|                                                          |
+|  ERRORE TROVATO (dai logs):                              |
+|  sqlite3.OperationalError: no such column: imported      |
+|  File: cm_reservation.py:416                             |
+|                                                          |
+|  CAUSA: Colonna DB mancante (NON causato da VCC!)        |
+|                                                          |
+|  FIX: Aggiungere colonna 'imported' alla tabella         |
+|  O verificare se c'è una migration mancante              |
++----------------------------------------------------------+
 ```
 
 ---
@@ -44,26 +46,27 @@ OBIETTIVO 9.5: Da valutare prossime azioni
 
 ```
 MIRACOLLO
-├── PMS CORE (:8001)        90% - PRODUZIONE
-├── MIRACOLLOOK (:8002)     60% - Drag/resize
+├── PMS CORE (:8001)        90% - PROBLEMA DEPLOY!
+├── MIRACOLLOOK (:8002)     60% - Non toccato
 └── ROOM HARDWARE (:8003)   10% - Attesa hardware
 ```
 
 ---
 
-## MODULARIZZAZIONE COMPLETATA
+## MODULO VCC (NUOVO)
 
 ```
-FASE 1: Quick Wins ✓
-FASE 2: Refactoring Critico ✓ (30+ moduli)
-FASE 3: Consolidamento ✓ (Security + Docs)
+Flow completo:
+1. Staff apre prenotazione
+2. Clicca "Pagamento"
+3. Clicca "VCC Booking" (bottone blu)
+4. Appare Stripe Elements (stile Booking.com)
+5. Inserisce dati VCC da Extranet
+6. Clicca "Addebita VCC"
+7. Stripe tokenizza → Backend addebita → DB aggiornato
 
-File modularizzati:
-- suggerimenti_engine.py → suggerimenti/ (7)
-- planning_swap.py → planning/ (5)
-- settings.py → settings/ (7)
-- email_parser.py → email/ (6)
-- confidence_scorer.py → confidence/ (5)
+Zero PCI compliance: dati carta vanno direttamente a Stripe
+Commissioni: 1.4% + €0.25 per transazione
 ```
 
 ---
@@ -71,14 +74,14 @@ File modularizzati:
 ## PROSSIMI STEP
 
 ```
-PER SCORE 9.5/10:
-- Test coverage incrementale
-- Refactoring routers (con freeze deploy)
-- API documentation auto-generate
+URGENTE:
+1. Fix 404 /api/planning/NL
+2. Verificare logs backend
+3. Rollback se serve (git revert cbf60c2)
 
-OPPURE:
-- CervellaSwarm Show HN launch
-- Miracollook palette salutare
+DOPO FIX:
+4. Test VCC frontend (carta: 4242 4242 4242 4242)
+5. Documentare VCC in docs/
 ```
 
 ---
