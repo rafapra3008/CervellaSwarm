@@ -1,8 +1,8 @@
 # MAPPA MODULO FINANZIARIO - MIRACOLLO
 
 > **QUESTO FILE E LA BUSSOLA DEL MODULO FINANZIARIO**
-> **Score: 9.7/10 | Ultimo aggiornamento: 18 Gennaio 2026 - Sessione 262**
-> **FASE 1 VERIFICATA REALE!**
+> **Score: 9.8/10 | Ultimo aggiornamento: 18 Gennaio 2026 - Sessione 263**
+> **FASE 1 REALE! | FASE 2 CODICE PRONTO!**
 
 ---
 
@@ -27,10 +27,10 @@
 
 ## CONTESTO ATTUALE
 
-### Sistema in Uso (Hotel Rafa)
-- **PMS attuale**: Ericsoft (da studiare per capire workflow)
+### Sistema in Uso (Sesto Grado Hotel)
+- **PMS attuale**: Ericsoft (reception)
 - **Contabilita**: SCP Spring (importa XML da cartella)
-- **RT**: Stampante fiscale esistente (marca/modello da verificare)
+- **RT**: **Epson TM-T800F (M261A)** @ **192.168.200.240** - VERIFICATO!
 
 ### Cosa Esiste in Miracollo
 | Componente | Stato | Note |
