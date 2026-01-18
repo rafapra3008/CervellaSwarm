@@ -1,57 +1,51 @@
 # OGGI - 18 Gennaio 2026
 
-> **Sessione:** 265
-> **Progetto:** CervellaSwarm
-> **Focus:** Verifica con Guardiane + Fix GIF README
+> **Sessione:** 265 | **Progetto:** Contabilita | **Focus:** Landing Page
 
 ---
 
-## RISULTATO SESSIONE
+## RISULTATO
 
 ```
 +================================================================+
-|                                                                |
-|   VERIFICA GUARDIANE COMPLETATA!                              |
-|   PROBLEMA GIF TROVATO E RISOLTO!                             |
-|   README ora con immagine PERFETTA                            |
-|                                                                |
+|   SPRINT 1 COMPLETATO! 8 file - 1.433 righe contenuto          |
 +================================================================+
 ```
 
 ---
 
-## COSA ABBIAMO FATTO
+## COSA FATTO
 
-1. **Guardiana Qualità** - Review Show HN + README (score 7-8/10)
-2. **Guardiana Marketing** - Review strategia (score 7.5/10)
-3. **Trovato problema critico** - TUTTE le GIF erano scure/inutilizzabili
-4. **Trovata soluzione** - `cli_workflow_en.png` PERFETTA!
-5. **Fix README** - Sostituito 3 GIF scure con 1 PNG funzionante
-6. **MAPPA_LANCIO aggiornata** - Stato reale documentato
+1. Roadmap landing (4 sprint)
+2. Ricerca con 3 api (Parser, Pareggi, Impatto)
+3. **8 sezioni scritte:** Hero, Problema, Parser, Pareggi, Screenshot, Unico, Metodo, Conclusione
 
 ---
 
-## FILE MODIFICATI
+## FILE CREATI
 
-| File | Modifica |
-|------|----------|
-| `README.md` | Hero PNG + rimosse GIF scure |
-| `MAPPA_LANCIO_DEFINITIVA.md` | Stato aggiornato sessione 265 |
+```
+ContabilitaAntigravity/docs/landing/
+├── 01_HERO.md         05_SCREENSHOT.md
+├── 02_PROBLEMA.md     06_PERCHE_UNICO.md
+├── 03_PARSER.md       07_IL_METODO.md
+├── 04_PAREGGI.md      08_CONCLUSIONE.md
+```
+
+---
+
+## NUMERI LANDING
+
+```
+31.657 righe | 142 commit | 90%+ match | 150+ ore/anno
+```
 
 ---
 
 ## PROSSIMA SESSIONE
 
-```
-TIMELINE SHOW HN:
-- 18-20 Gen: Draft Reddit/Twitter (opzionale)
-- 21-23 Gen: Polish finale
-- 24-25 Gen: Checklist pre-lancio
-- 26 Gen 13:00: SHOW HN!
-
-SCORE: 8.0/10 - PRONTI!
-```
+Sprint 2: Design mockup + Screenshot
 
 ---
 
-*"Verifica fatta, problema risolto, pronti per il lancio!"*
+*"1.433 righe scritte con il cuore!"*
