@@ -1,33 +1,32 @@
 # PROMPT RIPRESA - Miracollo (Generale)
 
-> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 254
+> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 255
 > **NOTA:** Questo file e panoramica. Ogni braccio ha il SUO PROMPT_RIPRESA!
 
 ---
 
-## SESSIONE 254: MODULARIZZAZIONE FASE 2.3
+## SESSIONE 255: MODULARIZZAZIONE FASE 2.4
 
 ### Lavoro Completato
-- Split settings.py (839 righe -> 7 moduli)
+- Split email_parser.py (830 righe -> 6 moduli)
 - Consultata Guardiana Ingegnera (piano validato)
-- Audit Guardiana Qualita: 10/10 APPROVED
-- Fix: aggiunto updated_at in services.py
+- Audit Guardiana Qualita: 9.5/10 APPROVED
+- SHIM per backward compatibility creato
 
-### Split settings.py
+### Split email_parser.py
 ```
-PRIMA: 1 file da 839 righe
+PRIMA: 1 file da 830 righe
 
 DOPO:
-  routers/settings/
-  ├── __init__.py       (48 righe)  - Router unificato
-  ├── models.py         (226 righe) - Pydantic + constants
-  ├── hotel.py          (69 righe)  - Hotel GET/PUT
-  ├── room_types.py     (171 righe) - Room Types CRUD
-  ├── rooms.py          (161 righe) - Rooms CRUD
-  ├── rate_plans.py     (135 righe) - Rate Plans CRUD
-  └── services.py       (152 righe) - Services + amenities
+  services/email/  (aggiunto al package esistente!)
+  ├── models.py         (167 righe) - Enums + DataClasses
+  ├── detection.py       (98 righe) - detect_* functions
+  ├── helpers.py        (183 righe) - utility functions
+  ├── besync.py         (224 righe) - BeSync parsers
+  ├── bookingengine.py  (145 righe) - BookingEngine parsers
+  └── __init__.py       (217 righe) - Router + parse_email
 
-  settings.py -> SHIM (52 righe)
+  email_parser.py -> SHIM (85 righe)
 ```
 
 ---
@@ -49,21 +48,23 @@ MIRACOLLO
 COMPLETATI:
   [x] 2.1 suggerimenti_engine.py -> suggerimenti/ (7 moduli)
   [x] 2.2 planning_swap.py -> planning/ (5 moduli)
-  [x] 2.3 settings.py -> settings/ (7 moduli)  <-- OGGI!
+  [x] 2.3 settings.py -> settings/ (7 moduli)
+  [x] 2.4 email_parser.py -> email/ (6 moduli) <-- OGGI!
 
 DA FARE:
-  [ ] 2.4 email_parser.py (829 righe)
   [ ] 2.5 confidence_scorer.py (778 righe)
+
+PROGRESSO: 80% (4/5)
 ```
 
 ---
 
-## PROSSIMA SESSIONE (255)
+## PROSSIMA SESSIONE (256)
 
-**FASE 2.4:**
+**FASE 2.5:**
 ```
-Split email_parser.py (829 righe)
-  -> services/email/ (3 moduli)
+Split confidence_scorer.py (778 righe)
+  -> ml/confidence/ (3 moduli)
 ```
 
 **Subroadmap:** `.sncp/progetti/miracollo/roadmaps/SUBROADMAP_MODULARIZZAZIONE_PMS.md`

@@ -6,21 +6,22 @@
 
 ---
 
-## STATO ATTUALE (Aggiornato 17 Gen - Sessione 254)
+## STATO ATTUALE (Aggiornato 18 Gen - Sessione 255)
 
 ```
-Health Score: 7.5/10 (era 6/10)
+Health Score: 7.8/10 (era 7.5/10)
 
-DOPO FASE 2.3:
-- 48 file > 500 righe (-3 da split!)
-- 17 funzioni > 100 righe (-5!)
-- 45 TODO attivi
+DOPO FASE 2.4:
+- 47 file > 500 righe (-1 da split!)
+- 16 funzioni > 100 righe (-1!)
+- 44 TODO attivi
 - 8 TODO security (FASE 3)
 
 SPLIT COMPLETATI:
 - suggerimenti_engine.py -> suggerimenti/ (7 moduli)
 - planning_swap.py -> planning/ (5 moduli)
 - settings.py -> settings/ (7 moduli)
+- email_parser.py -> email/ (6 moduli) + SHIM
 ```
 
 ---
@@ -125,19 +126,23 @@ A (REALE - diverso da piano originale!):
 AUDIT: Guardiana Qualita 10/10 APPROVED
 ```
 
-### 2.4 Split email_parser.py (829 righe)
+### 2.4 Split email_parser.py (830 righe) - COMPLETATO Sessione 255!
 ```
 DA:
-  services/email_parser.py (829 righe)
+  services/email_parser.py (830 righe)
 
-A:
+A (REALE - aggiunto al package email/ esistente!):
   services/email/
-  ├── parser.py (orchestration - 200 righe)
-  ├── extractors.py (date, guest, price - 350 righe)
-  └── patterns.py (regex constants - 100 righe)
+  ├── models.py         (167 righe) - Enums + DataClasses
+  ├── detection.py       (98 righe) - detect_* functions
+  ├── helpers.py        (183 righe) - utility functions
+  ├── besync.py         (224 righe) - BeSync parsers
+  ├── bookingengine.py  (145 righe) - BookingEngine parsers
+  └── __init__.py       (217 righe) - Router + parse_email
 
-EFFORT: 2 giorni
-PRIORITA: ALTO
+  email_parser.py -> SHIM (85 righe)
+
+AUDIT: Guardiana Qualita 9.5/10 APPROVED
 ```
 
 ### 2.5 Split confidence_scorer.py (778 righe)
@@ -159,7 +164,7 @@ PRIORITA: ALTO
 - [x] 2.1 suggerimenti/ modulo creato (Sessione 252 - 7 moduli!)
 - [x] 2.2 planning/ modulo creato (Sessione 253 - 5 moduli!)
 - [x] 2.3 settings/ modulo creato (Sessione 254 - 7 moduli!) 10/10
-- [ ] 2.4 email/ modulo creato
+- [x] 2.4 email/ modulo creato (Sessione 255 - 6 moduli!) 9.5/10
 - [ ] 2.5 confidence/ modulo creato
 - [ ] Test copertura > 80% su moduli nuovi
 - [ ] Deploy produzione OK
