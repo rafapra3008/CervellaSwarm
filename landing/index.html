@@ -6,6 +6,7 @@
     <title>CervellaSwarm - 16 AI Agents. One Unstoppable Team.</title>
     <meta name="description" content="CervellaSwarm coordinates 16 specialized AI agents that work together with persistent memory and quality gates. IDE-agnostic. Privacy-first.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -26,6 +27,103 @@
         .glow {
             box-shadow: 0 0 40px rgba(245, 158, 11, 0.3);
         }
+
+        /* Terminal Animation Styles */
+        .terminal-window {
+            background: #0D1117;
+            border-radius: 8px;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+
+        .terminal-header {
+            background: #161B22;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-body {
+            padding: 20px;
+            min-height: 280px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .terminal-line {
+            opacity: 0;
+            animation: fadeIn 0.3s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        .terminal-prompt {
+            color: #58A6FF;
+        }
+
+        .terminal-queen {
+            color: #F59E0B;
+        }
+
+        .terminal-worker {
+            color: #E5E5E5;
+        }
+
+        .terminal-success {
+            color: #3FB950;
+        }
+
+        .terminal-checkmark {
+            color: #3FB950;
+            font-weight: bold;
+        }
+
+        .terminal-cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background: #58A6FF;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        /* Hover States */
+        .btn-hover {
+            transition: all 200ms ease;
+        }
+        .btn-hover:hover {
+            transform: scale(1.02);
+        }
+
+        .card-hover {
+            transition: all 200ms ease;
+        }
+        .card-hover:hover {
+            border-color: #F59E0B;
+            transform: translateY(-2px);
+        }
+
+        .copy-btn {
+            transition: all 200ms ease;
+        }
+        .copy-btn.copied {
+            background-color: #3FB950;
+            border-color: #3FB950;
+        }
     </style>
 </head>
 <body class="gradient-bg text-white">
@@ -42,7 +140,7 @@
             <a href="faq.html" class="hover:text-primary transition">FAQ</a>
             <a href="getting-started.html" class="hover:text-primary transition">Get Started</a>
         </div>
-        <a href="getting-started.html" class="bg-primary text-secondary px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 transition">
+        <a href="getting-started.html" class="bg-primary text-secondary px-6 py-2 rounded-lg font-semibold hover:bg-yellow-400 btn-hover">
             Start Free
         </a>
     </nav>
@@ -59,39 +157,36 @@
             <span class="text-primary font-semibold">Your code stays local. Always.</span>
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-            <a href="#cta" class="bg-primary text-secondary px-8 py-4 rounded-lg text-xl font-bold hover:bg-yellow-400 transition glow">
+            <a href="#cta" class="bg-primary text-secondary px-8 py-4 rounded-lg text-xl font-bold hover:bg-yellow-400 btn-hover glow">
                 Install CLI in 60 Seconds
             </a>
-            <a href="how-it-works.html" class="border-2 border-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-white hover:text-secondary transition">
+            <a href="how-it-works.html" class="border-2 border-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-white hover:text-secondary btn-hover">
                 See How It Works
             </a>
         </div>
 
         <!-- NPM Install Snippet -->
-        <div class="mt-8 bg-slate-900 rounded-lg p-4 max-w-md mx-auto">
+        <div class="mt-8 bg-slate-900 rounded-lg p-4 max-w-md mx-auto flex items-center justify-between gap-3">
             <code class="text-primary">npm install -g @cervellaswarm/mcp-server</code>
+            <button onclick="copyNpm()" id="copy-btn" class="copy-btn border-2 border-primary text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary hover:text-secondary whitespace-nowrap">
+                Copy
+            </button>
         </div>
 
-        <!-- Swarm Visual -->
-        <div class="relative max-w-2xl mx-auto mt-16">
-            <div class="text-8xl mb-4">👑</div>
-            <p class="text-gray-400 mb-8">The Queen coordinates the swarm</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <span class="text-4xl" title="Frontend">🎨</span>
-                <span class="text-4xl" title="Backend">⚙️</span>
-                <span class="text-4xl" title="Tester">🧪</span>
-                <span class="text-4xl" title="Reviewer">📋</span>
-                <span class="text-4xl" title="Researcher">🔬</span>
-                <span class="text-4xl" title="DevOps">🚀</span>
-                <span class="text-4xl" title="Security">🔒</span>
-                <span class="text-4xl" title="Docs">📝</span>
-                <span class="text-4xl" title="Data">📊</span>
-                <span class="text-4xl" title="Marketing">📈</span>
-                <span class="text-4xl" title="Guardiana">🛡️</span>
-                <span class="text-4xl" title="Guardiana">🛡️</span>
-                <span class="text-4xl" title="Guardiana">🛡️</span>
+        <!-- Live Demo Terminal -->
+        <div class="relative max-w-3xl mx-auto mt-16">
+            <p class="text-gray-400 mb-6 text-lg">See the swarm in action:</p>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dot" style="background: #FF5F56;"></div>
+                    <div class="terminal-dot" style="background: #FFBD2E;"></div>
+                    <div class="terminal-dot" style="background: #27C93F;"></div>
+                    <span class="text-gray-400 text-xs ml-2">terminal</span>
+                </div>
+                <div class="terminal-body" id="terminal-output">
+                    <!-- Content will be generated by JavaScript -->
+                </div>
             </div>
-            <p class="text-gray-400 mt-4">16 specialists ready to build</p>
         </div>
     </section>
 
@@ -101,8 +196,8 @@
 
         <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <!-- Feature 1 -->
-            <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
-                <div class="text-5xl mb-4">🐝</div>
+            <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 card-hover">
+                <i data-lucide="users" class="text-primary w-12 h-12 mb-4"></i>
                 <h3 class="text-2xl font-bold mb-3 text-primary">16 Specialists > 4 Generalists</h3>
                 <p class="text-gray-300">
                     A frontend dev, a backend dev, a tester, a reviewer... and 12 more.
@@ -111,8 +206,8 @@
             </div>
 
             <!-- Feature 2 -->
-            <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
-                <div class="text-5xl mb-4">🧠</div>
+            <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 card-hover">
+                <i data-lucide="brain" class="text-primary w-12 h-12 mb-4"></i>
                 <h3 class="text-2xl font-bold mb-3 text-primary">Never Explain Context Twice</h3>
                 <p class="text-gray-300">
                     SNCP: persistent memory that remembers your decisions, your code, your style.
@@ -121,8 +216,8 @@
             </div>
 
             <!-- Feature 3 -->
-            <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
-                <div class="text-5xl mb-4">🛡️</div>
+            <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 card-hover">
+                <i data-lucide="shield-check" class="text-primary w-12 h-12 mb-4"></i>
                 <h3 class="text-2xl font-bold mb-3 text-primary">3 Quality Gates Stop Bugs</h3>
                 <p class="text-gray-300">
                     Three Guardians (powered by Claude Opus) verify every output before it reaches
@@ -131,8 +226,8 @@
             </div>
 
             <!-- Feature 4 -->
-            <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
-                <div class="text-5xl mb-4">🔒</div>
+            <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 card-hover">
+                <i data-lucide="lock" class="text-primary w-12 h-12 mb-4"></i>
                 <h3 class="text-2xl font-bold mb-3 text-primary">Your Code Never Leaves</h3>
                 <p class="text-gray-300">
                     Zero training on your data. Zero cloud storage. 100% local control.
@@ -208,7 +303,7 @@
                     <li>✓ Full SNCP memory</li>
                     <li>✓ Community support</li>
                 </ul>
-                <a href="#cta" class="block text-center border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-secondary transition">
+                <a href="#cta" class="block text-center border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-secondary btn-hover">
                     Start Free
                 </a>
             </div>
@@ -227,7 +322,7 @@
                     <li>✓ 100 tasks/month</li>
                     <li>✓ Email support</li>
                 </ul>
-                <a href="#cta" class="block text-center bg-primary text-secondary px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition">
+                <a href="#cta" class="block text-center bg-primary text-secondary px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 btn-hover">
                     Get Started
                 </a>
             </div>
@@ -243,7 +338,7 @@
                     <li>✓ Custom agents</li>
                     <li>✓ Priority support</li>
                 </ul>
-                <a href="#cta" class="block text-center border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-secondary transition">
+                <a href="#cta" class="block text-center border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-secondary btn-hover">
                     Contact Us
                 </a>
             </div>
@@ -264,7 +359,7 @@
                     placeholder="Enter your email"
                     class="flex-1 px-6 py-4 rounded-lg bg-slate-900 border border-slate-700 focus:border-primary focus:outline-none"
                 >
-                <button type="submit" class="bg-primary text-secondary px-8 py-4 rounded-lg font-bold hover:bg-yellow-400 transition whitespace-nowrap">
+                <button type="submit" class="bg-primary text-secondary px-8 py-4 rounded-lg font-bold hover:bg-yellow-400 btn-hover whitespace-nowrap">
                     Get Install Link
                 </button>
             </form>
@@ -293,5 +388,126 @@
             <p class="text-sm mt-2">2026 CervellaSwarm. Made with love by the swarm.</p>
         </div>
     </footer>
+
+    <!-- Copy NPM Script -->
+    <script>
+        function copyNpm() {
+            const command = 'npm install -g @cervellaswarm/mcp-server';
+            const btn = document.getElementById('copy-btn');
+
+            navigator.clipboard.writeText(command).then(() => {
+                // Success - change button
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+
+                // Reset after 2s
+                setTimeout(() => {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+    </script>
+
+    <!-- Terminal Animation Script -->
+    <script>
+        const terminalOutput = document.getElementById('terminal-output');
+
+        // Animation sequence
+        const sequence = [
+            { delay: 0, text: '$ cervellaswarm task "add user authentication"', class: 'terminal-prompt', typewriter: true },
+            { delay: 1500, text: '', class: '' },
+            { delay: 2000, text: '👸 Queen: Routing to specialists...', class: 'terminal-queen', typewriter: true },
+            { delay: 3500, text: '', class: '' },
+            { delay: 4000, text: '├─ cervella-backend: Building API endpoints...', class: 'terminal-worker' },
+            { delay: 4300, text: '   ✓', class: 'terminal-checkmark', append: true },
+            { delay: 5100, text: '├─ cervella-frontend: Creating login UI...', class: 'terminal-worker' },
+            { delay: 5400, text: '   ✓', class: 'terminal-checkmark', append: true },
+            { delay: 6200, text: '├─ cervella-tester: Writing tests...', class: 'terminal-worker' },
+            { delay: 6500, text: '   ✓', class: 'terminal-checkmark', append: true },
+            { delay: 7300, text: '└─ cervella-guardiana: Validating quality...', class: 'terminal-worker' },
+            { delay: 8300, text: '   ✓', class: 'terminal-checkmark', append: true },
+            { delay: 9100, text: '', class: '' },
+            { delay: 9600, text: '✅ Task completed! 3 agents collaborated.', class: 'terminal-success' },
+            { delay: 10100, text: '   Files: 5 created, 2 modified', class: 'terminal-worker' },
+            { delay: 10600, text: '   Tests: 12/12 passing', class: 'terminal-success' }
+        ];
+
+        let currentLine = null;
+        let lineIndex = 0;
+
+        function typeWriter(text, element, speed = 50) {
+            let i = 0;
+            return new Promise((resolve) => {
+                function type() {
+                    if (i < text.length) {
+                        element.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(type, speed);
+                    } else {
+                        resolve();
+                    }
+                }
+                type();
+            });
+        }
+
+        async function animateSequence() {
+            terminalOutput.innerHTML = '';
+            lineIndex = 0;
+
+            for (const step of sequence) {
+                await new Promise(resolve => setTimeout(resolve, step.delay - (sequence[lineIndex - 1]?.delay || 0)));
+
+                if (step.append && currentLine) {
+                    // Append to current line
+                    const span = document.createElement('span');
+                    span.className = step.class;
+                    span.textContent = step.text;
+                    currentLine.appendChild(span);
+                } else {
+                    // Create new line
+                    const line = document.createElement('div');
+                    line.className = 'terminal-line';
+
+                    if (step.text) {
+                        const span = document.createElement('span');
+                        span.className = step.class;
+                        line.appendChild(span);
+                        terminalOutput.appendChild(line);
+
+                        if (step.typewriter) {
+                            await typeWriter(step.text, span, 50);
+                        } else {
+                            span.textContent = step.text;
+                        }
+
+                        currentLine = line;
+                    } else {
+                        // Empty line for spacing
+                        line.innerHTML = '<br>';
+                        terminalOutput.appendChild(line);
+                        currentLine = null;
+                    }
+                }
+
+                lineIndex++;
+            }
+
+            // Loop after 3 seconds
+            setTimeout(() => {
+                animateSequence();
+            }, 3000);
+        }
+
+        // Start animation when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            animateSequence();
+            // Initialize Lucide icons
+            lucide.createIcons();
+        });
+    </script>
 </body>
 </html>

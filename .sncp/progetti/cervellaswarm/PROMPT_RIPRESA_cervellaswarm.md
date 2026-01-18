@@ -1,46 +1,38 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 258
-> **SCORE:** 9.5/10 (DIAMANTE!) - LANCIO IN CORSO!
+> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 259
+> **SCORE:** 9.7/10 (DIAMANTE!) - LANDING PRONTA!
 
 ---
 
-## SESSIONE 258 - LANCIO SPRINT EPICO!
+## SESSIONE 259 - LANDING COMPLETATA!
 
 ```
 +================================================================+
-|   4 CANALI OUTREACH ATTIVATI!                                  |
-|   LANDING PAGE MIGLIORATA!                                     |
-|   SHOW HN: 24-25 GENNAIO                                       |
+|   FASE 3 + FASE 4 COMPLETATE!                                  |
+|   TERMINALE ANIMATO + POLISH DESIGN                            |
+|   PROSSIMO: DEPLOY cervellaswarm.com                           |
 +================================================================+
 ```
 
-### Outreach Completato
-
-| Canale | Status | Note |
-|--------|--------|------|
-| CFP MCP Dev Summit NYC | SUBMITTED! | Apr 2-3, 2026 - Notifica 17 Feb |
-| mcp-ai.org | SUBMITTED! | Registry MCP |
-| Email Anthropic | INVIATA! | sales@anthropic.com |
-| Discord Claude Developers | JOINED! | Server ufficiale |
-
-### Landing Page Migliorata
+### Landing Page - PRONTA!
 
 ```
 FASE 1 ✓: Quick Wins
-- Early bird banner rimosso
-- CTA: "Install CLI in 60 Seconds"
-- npm snippet visibile
-- Footer links funzionanti
-
 FASE 2 ✓: Contenuti
-- Tabella comparison aggiornata (dati 2026 onesti)
-- Hero con MCP, Guardians, SNCP
-
-FASE 3 [ ]: Demo GIF (prossimo)
-FASE 4 [ ]: Polish design
+FASE 3 ✓: Demo animata (terminale typewriter!)
+FASE 4 ✓: Polish (Lucide icons, hover states, copy button)
 FASE 6 [ ]: Deploy cervellaswarm.com
 ```
+
+### Cosa Aggiunto Sessione 259
+
+| Elemento | Descrizione |
+|----------|-------------|
+| Terminale animato | Typewriter effect, comandi REALI, loop |
+| Lucide icons | Sostituito emoji con icons professionali |
+| Hover states | Scale + lift su bottoni e cards |
+| Copy button | npm command con feedback verde "Copied!" |
 
 ---
 
@@ -48,7 +40,6 @@ FASE 6 [ ]: Deploy cervellaswarm.com
 
 ```
 TIMELINE:
-19-22 Gen: Completare landing (FASE 3-4-6)
 23 Gen: Deploy cervellaswarm.com
 24-25 Gen: SHOW HN LAUNCH!
 
@@ -68,9 +59,9 @@ STRATEGIA:
 - [x] Discord - JOINED!
 - [x] Landing Quick Wins
 - [x] Landing Contenuti
-- [ ] Landing Demo GIF
-- [ ] Landing Polish
-- [ ] Landing Deploy
+- [x] Landing Demo (terminale animato)
+- [x] Landing Polish (icons + hover + copy)
+- [ ] **Landing Deploy**
 - [ ] **SHOW HN LAUNCH**
 
 ---
@@ -99,10 +90,9 @@ STRATEGIA:
 ## PROSSIMA SESSIONE
 
 ```
-1. Landing FASE 3: Demo GIF
-2. Landing FASE 4: Polish design
-3. Landing FASE 6: Deploy
-4. SHOW HN: 24-25 Gennaio!
+1. FASE 6: Deploy cervellaswarm.com (Vercel/Netlify)
+2. Test mobile + cross-browser
+3. SHOW HN LAUNCH: 24-25 Gennaio!
 ```
 
 ---
