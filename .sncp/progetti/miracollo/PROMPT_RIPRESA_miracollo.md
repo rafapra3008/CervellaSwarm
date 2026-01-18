@@ -5,28 +5,32 @@
 
 ---
 
-## SESSIONE 255: MODULARIZZAZIONE FASE 2.4
+## SESSIONE 255: MODULARIZZAZIONE FASE 2.4 + 2.5
 
 ### Lavoro Completato
-- Split email_parser.py (830 righe -> 6 moduli)
-- Consultata Guardiana Ingegnera (piano validato)
-- Audit Guardiana Qualita: 9.5/10 APPROVED
-- SHIM per backward compatibility creato
+- Split email_parser.py (830 righe -> 6 moduli) - 9.5/10
+- Split confidence_scorer.py (779 righe -> 5 moduli) - 9/10
+- Consultata Guardiana Ingegnera (2 piani validati)
+- SHIM per backward compatibility creati
 
 ### Split email_parser.py
 ```
-PRIMA: 1 file da 830 righe
+services/email/  (aggiunto al package esistente!)
+├── models.py, detection.py, helpers.py
+├── besync.py, bookingengine.py
+└── __init__.py (router)
+email_parser.py -> SHIM
+```
 
-DOPO:
-  services/email/  (aggiunto al package esistente!)
-  ├── models.py         (167 righe) - Enums + DataClasses
-  ├── detection.py       (98 righe) - detect_* functions
-  ├── helpers.py        (183 righe) - utility functions
-  ├── besync.py         (224 righe) - BeSync parsers
-  ├── bookingengine.py  (145 righe) - BookingEngine parsers
-  └── __init__.py       (217 righe) - Router + parse_email
-
-  email_parser.py -> SHIM (85 righe)
+### Split confidence_scorer.py
+```
+ml/confidence/
+├── utils.py         (107 righe) - Constants
+├── model_utils.py   (318 righe) - Model + variance
+├── components.py    (140 righe) - Acceptance + Quality
+├── scorer.py        (187 righe) - Main calculation
+└── __init__.py       (80 righe) - Router
+confidence_scorer.py -> SHIM
 ```
 
 ---
@@ -49,22 +53,22 @@ COMPLETATI:
   [x] 2.1 suggerimenti_engine.py -> suggerimenti/ (7 moduli)
   [x] 2.2 planning_swap.py -> planning/ (5 moduli)
   [x] 2.3 settings.py -> settings/ (7 moduli)
-  [x] 2.4 email_parser.py -> email/ (6 moduli) <-- OGGI!
+  [x] 2.4 email_parser.py -> email/ (6 moduli)
+  [x] 2.5 confidence_scorer.py -> confidence/ (5 moduli) <-- OGGI!
 
-DA FARE:
-  [ ] 2.5 confidence_scorer.py (778 righe)
-
-PROGRESSO: 80% (4/5)
+PROGRESSO: 100% (5/5) COMPLETATA!
 ```
 
 ---
 
 ## PROSSIMA SESSIONE (256)
 
-**FASE 2.5:**
+**FASE 3: CONSOLIDAMENTO**
 ```
-Split confidence_scorer.py (778 righe)
-  -> ml/confidence/ (3 moduli)
+- Organizza routers/ per domain
+- Security TODO (Twilio, JWT)
+- Test organization
+- Documentation update
 ```
 
 **Subroadmap:** `.sncp/progetti/miracollo/roadmaps/SUBROADMAP_MODULARIZZAZIONE_PMS.md`

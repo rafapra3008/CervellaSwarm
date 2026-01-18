@@ -9,12 +9,12 @@
 ## STATO ATTUALE (Aggiornato 18 Gen - Sessione 255)
 
 ```
-Health Score: 7.8/10 (era 7.5/10)
+Health Score: 8.0/10 (era 7.8/10)
 
-DOPO FASE 2.4:
-- 47 file > 500 righe (-1 da split!)
-- 16 funzioni > 100 righe (-1!)
-- 44 TODO attivi
+DOPO FASE 2.5 (FASE 2 COMPLETATA!):
+- 46 file > 500 righe (-1 da split!)
+- 15 funzioni > 100 righe (-1!)
+- 43 TODO attivi
 - 8 TODO security (FASE 3)
 
 SPLIT COMPLETATI:
@@ -22,6 +22,7 @@ SPLIT COMPLETATI:
 - planning_swap.py -> planning/ (5 moduli)
 - settings.py -> settings/ (7 moduli)
 - email_parser.py -> email/ (6 moduli) + SHIM
+- confidence_scorer.py -> confidence/ (5 moduli) + SHIM
 ```
 
 ---
@@ -145,27 +146,30 @@ A (REALE - aggiunto al package email/ esistente!):
 AUDIT: Guardiana Qualita 9.5/10 APPROVED
 ```
 
-### 2.5 Split confidence_scorer.py (778 righe)
+### 2.5 Split confidence_scorer.py (779 righe) - COMPLETATO Sessione 255!
 ```
 DA:
-  ml/confidence_scorer.py (778 righe)
+  ml/confidence_scorer.py (779 righe)
 
-A:
+A (REALE - 5 moduli!):
   ml/confidence/
-  ├── scorer.py (main scoring - 300 righe)
-  ├── validators.py (threshold check - 200 righe)
-  └── utils.py (stats helpers - 150 righe)
+  ├── utils.py         (107 righe) - Constants + helpers
+  ├── model_utils.py   (318 righe) - Model loading + variance
+  ├── components.py    (140 righe) - Acceptance + Data Quality
+  ├── scorer.py        (187 righe) - Main calculate_confidence
+  └── __init__.py       (80 righe) - Router
 
-EFFORT: 3 giorni
-PRIORITA: ALTO
+  confidence_scorer.py -> SHIM (82 righe)
+
+AUDIT: Guardiana Qualita 9/10 APPROVED
 ```
 
-**Checklist FASE 2:**
+**Checklist FASE 2: COMPLETATA!**
 - [x] 2.1 suggerimenti/ modulo creato (Sessione 252 - 7 moduli!)
 - [x] 2.2 planning/ modulo creato (Sessione 253 - 5 moduli!)
 - [x] 2.3 settings/ modulo creato (Sessione 254 - 7 moduli!) 10/10
 - [x] 2.4 email/ modulo creato (Sessione 255 - 6 moduli!) 9.5/10
-- [ ] 2.5 confidence/ modulo creato
+- [x] 2.5 confidence/ modulo creato (Sessione 255 - 5 moduli!) 9/10
 - [ ] Test copertura > 80% su moduli nuovi
 - [ ] Deploy produzione OK
 
