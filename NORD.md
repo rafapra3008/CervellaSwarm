@@ -32,7 +32,7 @@
 
 ---
 
-## DOVE SIAMO (18 Gennaio 2026 - Sessione 258)
+## DOVE SIAMO (18 Gennaio 2026 - Sessione 259)
 
 ```
 +================================================================+
@@ -41,13 +41,6 @@
 +================================================================+
 
 FASE 1: FONDAMENTA               [####################] 100%!
-  - sncp-init.sh                 FATTO
-  - verify-sync.sh               FATTO
-  - Hook automatici              FATTO
-  - Context Mesh                 FATTO
-  - Docs per esterni             FATTO
-  - PRE/POST-FLIGHT 16 agenti    FATTO
-  - 3 GAP critici                FATTO (Sessione 217!)
 
 FASE 2: MVP PRODOTTO             [####################] 100%! PRONTO!
 
@@ -55,45 +48,39 @@ FASE 2: MVP PRODOTTO             [####################] 100%! PRONTO!
   ✓ CLI su npm                   cervellaswarm@0.1.1
   ✓ MCP su npm                   @cervellaswarm/mcp-server@0.2.2
   ✓ FAMIGLIA COMPLETA            16 AGENTI!
-  ✓ Test end-to-end              install, doctor, tools OK
   ✓ API Fly.io                   ONLINE
-  ✓ Stripe                       Payment Link OK (Test Mode)
-  ✓ BYOK                         Pronto
+  ✓ Stripe                       $20/$40 (Test Mode)
 
-FASE 3: PRIMI UTENTI             [##################..] 90%  ← QUI!
+FASE 3: PRIMI UTENTI             [###################.] 95%  ← QUI!
 
-  SESSIONE 258 - LANCIO SPRINT:
-  ✓ CFP MCP Dev Summit NYC       SUBMITTED! (Apr 2-3, 2026)
+  SESSIONE 258 - OUTREACH:
+  ✓ CFP MCP Dev Summit NYC       SUBMITTED!
   ✓ mcp-ai.org registry          SUBMITTED!
   ✓ Email Anthropic              INVIATA!
   ✓ Discord Claude Developers    JOINED!
-  ✓ Landing Quick Wins           FATTO
-  ✓ Landing Contenuti            FATTO
-  ✓ Tweet bozza                  PRONTA
-  ✓ Show HN bozza                REVIEWED
+
+  SESSIONE 259 - LANDING 7.5→8.5:
+  ✓ Terminale animato            Typewriter + comandi REALI
+  ✓ Lucide icons                 Professionale
+  ✓ Dual CTA                     npm + Get Started + GitHub
+  ✓ Focus states                 WCAG 2.4.7
+  ✓ OG + Twitter tags            Social sharing ready
+  ✓ Badge dogfooding             "Built with CervellaSwarm"
+  ✓ Prezzi Stripe                $20/$40 allineati
 
   DA FARE:
-  - Landing Demo GIF             PROSSIMO
-  - Landing Polish design        PROSSIMO
-  - Landing Deploy               PROSSIMO
+  - Landing FASE 2               OG Image + Mobile Menu
+  - Landing Deploy               cervellaswarm.com
   - SHOW HN LAUNCH               24-25 GENNAIO!
 
 FASE 4: SCALA                    [....................] 0%
 
-INIZIATIVE PARALLELE:
-  - Casa Pulita                  100%! (Sessione 249)
-  - Famiglia Completa MCP        100%! (16/16 agenti)
-  - Marketing Diamante           100%!
-  - Demo Visual                  100%!
-  - Show HN Prep                 100%!
-  - Piano Diamante               100%!
-  - Lancio Sprint                IN CORSO! (Sessione 258)
+SCORE LANDING: 8.5/10 (target 9.5)
 
 PROSSIMI STEP:
-  1. Completare landing (GIF, polish, deploy)
+  1. FASE 2: OG Image + Mobile Menu
   2. Deploy cervellaswarm.com
   3. SHOW HN LAUNCH (24-25 Gennaio)
-  4. Twitter (se HN >30 upvotes)
 ```
 
 ---

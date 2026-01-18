@@ -1,47 +1,33 @@
 # STATO OGGI - 18 Gennaio 2026
 
 > **Sessione:** 259
-> **Focus:** Miracollo - Fix Deploy + Subroadmap DEPLOY_BLINDATO
+> **Focus:** CervellaSwarm - Landing 7.5 → 9.5
 
 ---
 
-## SESSIONE 259 - FIX PROBLEMI DEPLOY
+## SESSIONE 259 - LANDING PROFESSIONALE
 
-### Problemi Risolti
-
-```
-PROBLEMA 1: Planning 404
-- Causa: Conflitto naming (planning.py vs planning/)
-- Fix: Rinominato planning.py → planning_core.py
-- Status: RISOLTO
-
-PROBLEMA 2: Prenotazioni appaiono/spariscono
-- Causa: 2 container backend con stesso alias DNS
-- Fix: Rimosso container rogue, aggiunto name:miracollo
-- Status: RISOLTO
-
-PROBLEMA 3: Migration DB mancante
-- Causa: Colonna 'imported' non esisteva
-- Fix: Eseguita migration 025 su VM
-- Status: RISOLTO
-```
-
-### Subroadmap Creata
+### FASE 1 Completata (7.5 → 8.5)
 
 ```
-DEPLOY_BLINDATO (.sncp/roadmaps/):
-- FASE 1: Fix immediato ✓ COMPLETATA
-- FASE 2: Guardrail tecnici (wrapper docker run)
-- FASE 3: Un solo entry point (4 comandi)
-- FASE 4: Wizard interattivo
-- FASE 5: Monitoraggio
+✓ Form → Dual CTA (npm + Get Started + GitHub)
+✓ Focus states CSS (WCAG 2.4.7)
+✓ Open Graph + Twitter Card tags
+✓ Prezzi allineati Stripe ($20/$40)
+✓ Badge dogfooding footer
+✓ npm command unificato
+✓ aria-labels accessibilità
 ```
 
-### Commit Miracollo
+### Mappa Landing
 
 ```
-7c2867f - Fix: Planning endpoint 404 - naming conflict
-2436923 - Fix: Add explicit project name to docker-compose
+FASE 1: MUST (critici)     [####################] 100% ✓
+FASE 2: SHOULD (importanti) [....................] 0%
+FASE 3: NICE (bonus)       [....................] 0%
+
+Score: 7.5 → 8.5/10
+Target: 9.5/10
 ```
 
 ---
@@ -49,11 +35,13 @@ DEPLOY_BLINDATO (.sncp/roadmaps/):
 ## PROSSIMA SESSIONE
 
 ```
-1. FASE 2 subroadmap: Wrapper bash su VM
-2. Test VCC (carta: 4242 4242 4242 4242)
-3. Documentare VCC in docs/
+FASE 2:
+1. OG Image (1200x630px)
+2. Mobile menu hamburger
+
+Show HN: 24-25 Gennaio
 ```
 
 ---
 
-*"Lavoriamo in pace! Senza casino! Dipende da noi!"*
+*"Ultrapassar os próprios limites!"*

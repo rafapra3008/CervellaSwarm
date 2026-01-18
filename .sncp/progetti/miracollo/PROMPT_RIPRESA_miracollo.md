@@ -1,44 +1,44 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 259
-> **Status:** PRODUZIONE STABILE - Planning funziona!
+> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 260
+> **Status:** PRODUZIONE STABILE
 
 ---
 
-## SESSIONE 259: FIX DEPLOY + SUBROADMAP
+## SESSIONE 260: CONSOLIDAMENTO DOCUMENTI
 
 ### Cosa Abbiamo Fatto
 
 ```
-3 PROBLEMI RISOLTI:
+CONSOLIDAMENTO DEPLOY BLINDATO:
 
-1. Planning 404
-   - Causa: Conflitto naming (planning.py vs planning/ cartella)
-   - Fix: planning.py → planning_core.py
-   - Commit: 7c2867f
+1. SUBROADMAP_DEPLOY_BLINDATO.md
+   - Aggiornata come documento MASTER
+   - FASE 1 marcata COMPLETATA (era erroneamente PENDENTE)
+   - Integrata architettura e diagrammi
 
-2. Prenotazioni appaiono/spariscono
-   - Causa: 2 container backend con stesso alias DNS "backend"
-   - Fix: Rimosso container rogue, aggiunto name:miracollo
-   - Commit: 2436923
+2. SUBROADMAP_DEPLOY_ROBUSTO.md
+   - ARCHIVIATA in .sncp/archivio/2026-01/roadmaps/
+   - Contenuto migrato nel documento MASTER
 
-3. Migration DB mancante
-   - Causa: Colonna 'imported' non esisteva
-   - Fix: Eseguita migration 025 sulla VM
+Risultato: 1 solo documento deploy da seguire!
 ```
 
-### Subroadmap DEPLOY_BLINDATO Creata
+---
+
+## STATO SUBROADMAP DEPLOY BLINDATO
 
 ```
 Path: CervellaSwarm/.sncp/roadmaps/SUBROADMAP_DEPLOY_BLINDATO.md
 
-FASE 1: Fix immediato          ✓ COMPLETATA
-FASE 2: Guardrail tecnici      ← PROSSIMO (wrapper docker run)
-FASE 3: Un solo entry point    (4 comandi invece di 93 script)
-FASE 4: Wizard interattivo     (non puoi saltare step)
-FASE 5: Monitoraggio           (alert automatici)
+FASE 1: Fix immediato          ✓ COMPLETATA (18 Gen)
+FASE 2: Guardrail tecnici      ← PRONTA
+FASE 3: Un solo entry point    PIANIFICATA
+FASE 4: Wizard interattivo     PIANIFICATA
+FASE 5: Monitoraggio           FUTURO
 
-Principio: "PATH CORRETTO più FACILE del path sbagliato"
+Success criteria: 0 incidenti per 30 giorni
+Contatore: 0 giorni (reset 18 Gen 2026)
 ```
 
 ---
@@ -57,34 +57,12 @@ MIRACOLLO
 ## MODULO VCC (DA TESTARE)
 
 ```
-IMPLEMENTATO nella sessione 258:
-- Backend: charge_vcc_payment() in stripe_service.py
-- Backend: POST /api/payments/charge-vcc
-- Frontend: Stripe Elements in modal-payment.js v2.0
-- Frontend: Bottone "VCC Booking" (blu)
-
+Backend: POST /api/payments/charge-vcc
+Frontend: Stripe Elements + bottone "VCC Booking"
 Stripe Sandbox: acct_1Sqrxk7aXUHP1bna
 Carta test: 4242 4242 4242 4242
 
-STATUS: Codice completo, DA TESTARE nel browser!
-```
-
----
-
-## PROSSIMI STEP
-
-```
-PRIORITÀ 1: Test VCC
-- Aprire prenotazione nel browser
-- Click "Pagamento" → "VCC Booking"
-- Testare con carta 4242 4242 4242 4242
-
-PRIORITÀ 2: FASE 2 subroadmap
-- Wrapper bash su VM che blocca "docker run"
-- 10 minuti di lavoro
-
-PRIORITÀ 3: Documentazione
-- Documentare VCC in docs/
+STATUS: Codice completo, DA TESTARE!
 ```
 
 ---
@@ -93,15 +71,30 @@ PRIORITÀ 3: Documentazione
 
 ```
 VM MIRACOLLO:
-- 1 container backend: miracollo-backend-1 (healthy)
-- 1 container nginx: miracollo-nginx (healthy)
-- DB: ~/app/backend/data/miracollo.db
-- docker-compose.yml ha name:miracollo (previene duplicati)
-
-LOCALE:
-- Container: miracollo-backend-local
-- Funziona correttamente
+- 1 container: miracollo-backend-1 (healthy)
+- 1 nginx: miracollo-nginx (healthy)
+- docker-compose.yml con name:miracollo
 ```
+
+---
+
+## PROSSIMI STEP
+
+```
+1. Test VCC nel browser (carta 4242)
+2. FASE 2 subroadmap (wrapper docker run)
+3. Documentare VCC
+```
+
+---
+
+## FILE CHIAVE
+
+| File | Scopo |
+|------|-------|
+| `.sncp/roadmaps/SUBROADMAP_DEPLOY_BLINDATO.md` | Roadmap deploy MASTER |
+| `~/.claude/CHECKLIST_DEPLOY.md` | Checklist obbligatoria |
+| `miracollogeminifocus/deploy.sh` | Script deploy locale |
 
 ---
 

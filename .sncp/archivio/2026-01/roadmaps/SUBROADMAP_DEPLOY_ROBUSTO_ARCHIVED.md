@@ -1,6 +1,17 @@
-# SUBROADMAP: Deploy Robusto e Professionale
+# SUBROADMAP: Deploy Robusto e Professionale [ARCHIVIATA]
+
+> **NOTA ARCHIVIO**
+>
+> Questo documento è stato ARCHIVIATO il 18 Gennaio 2026 - Sessione 260.
+>
+> **Motivo:** Consolidato in `SUBROADMAP_DEPLOY_BLINDATO.md`
+>
+> **Documento attivo:** `.sncp/roadmaps/SUBROADMAP_DEPLOY_BLINDATO.md`
+
+---
 
 > **Creata:** 18 Gennaio 2026 - Sessione 256
+> **Archiviata:** 18 Gennaio 2026 - Sessione 260
 > **Obiettivo:** Struttura deploy robusta e professionale per Miracollo
 
 ---

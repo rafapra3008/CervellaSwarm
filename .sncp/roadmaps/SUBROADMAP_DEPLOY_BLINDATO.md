@@ -1,7 +1,8 @@
 # SUBROADMAP: Deploy Blindato
 
 > **Creata:** 18 Gennaio 2026 - Sessione 259
-> **Problema:** Stessi errori deploy ripetuti 2 volte in 3 giorni
+> **Consolidata:** 18 Gennaio 2026 - Sessione 260
+> **Status:** FASE 1 COMPLETATA - FASE 2 PRONTA
 > **Obiettivo:** Rendere IMPOSSIBILE sbagliare il deploy
 
 ---
@@ -13,66 +14,99 @@
 |                                                                    |
 |   "Rendere il PATH CORRETTO piu FACILE del path sbagliato"        |
 |                                                                    |
-|   Oggi:   Comando manuale (5 sec) vs Script (30 sec)              |
-|   Dopo:   Comando manuale (BLOCCATO) vs Script (10 sec)           |
-|                                                                    |
 +--------------------------------------------------------------------+
 ```
 
-**Pattern identificato:**
+**Pattern identificato (Sessioni 256-259):**
 ```
-CREIAMO SCRIPT -> NON LI USIAMO -> CASINO -> FIX -> REPEAT
+CREIAMO SCRIPT → NON LI USIAMO → CASINO → FIX → REPEAT
 ```
 
-**Causa root:**
-- 93 script = troppi da ricordare
-- Path manuale piu corto del path corretto
+**Cause root:**
+- Path manuale più corto del path corretto
 - Nessun enforcement (posso bypassare)
 - Checklist passive che non leggiamo
+- Container duplicati non rilevati
 
 ---
 
-## PRINCIPIO GUIDA
+## ARCHITETTURA ATTUALE (funziona!)
 
 ```
-NON: "Devi usare lo script"
-MA:  "Lo script fa in 1 comando quello che manualmente richiede 5"
-
-NON: "Leggi la checklist"
-MA:  "La checklist ti chiede interattivamente e BLOCCA se skip"
+LOCALE                          VM MIRACOLLO
+┌─────────────────┐            ┌─────────────────┐
+│ ./deploy.sh     │            │ ~/app/          │
+│                 │    SSH     │                 │
+│ 1. git status   │ ────────── │ 3. git pull     │
+│ 2. git push     │            │ 4. docker up    │
+│                 │            │ 5. health check │
+└─────────────────┘            └─────────────────┘
+         │
+         ▼
+   GitHub Actions
+   (deploy.yml v4.1.0)
 ```
 
----
-
-## FASE 1: FIX IMMEDIATO (oggi)
-
-**Obiettivo:** Fermare il sanguinamento
-
-| Task | Cosa | Chi | Status |
-|------|------|-----|--------|
-| 1.1 | Rimuovere container rogue `app-backend-1` | Guardiana Ops | PENDENTE |
-| 1.2 | Disabilitare vecchio docker-compose.yml | Guardiana Ops | PENDENTE |
-| 1.3 | Verificare 1 solo container backend | Guardiana Ops | PENDENTE |
+**Container attivi:**
+- `miracollo-backend-1` (healthy)
+- `miracollo-nginx` (healthy)
 
 ---
 
-## FASE 2: GUARDRAIL TECNICI (prossima sessione)
+## DOCUMENTI CORRELATI
+
+| Documento | Path | Scopo |
+|-----------|------|-------|
+| **CHECKLIST_DEPLOY** | `~/.claude/CHECKLIST_DEPLOY.md` | Checklist OBBLIGATORIA pre-deploy |
+| **deploy.sh** | `miracollogeminifocus/deploy.sh` | Script deploy locale |
+| **deploy.yml** | `.github/workflows/deploy.yml` | GitHub Actions (auto) |
+| **docker-compose.yml** | `miracollogeminifocus/docker-compose.yml` | Stack Docker |
+
+---
+
+## FASI IMPLEMENTAZIONE
+
+### FASE 1: FIX IMMEDIATO
+
+| Status | Completata 18 Gennaio 2026 - Sessione 259 |
+|--------|-------------------------------------------|
+
+| Task | Descrizione | Commit |
+|------|-------------|--------|
+| 1.1 | Fix naming conflict planning.py → planning_core.py | 7c2867f |
+| 1.2 | Rimosso container rogue `app-backend-1` | 2436923 |
+| 1.3 | Aggiunto `name: miracollo` in docker-compose.yml | 2436923 |
+| 1.4 | Eseguita migration 025 (colonna imported) | manuale |
+
+**Risultato:** Produzione STABILE, 1 solo container backend.
+
+---
+
+### FASE 2: GUARDRAIL TECNICI
+
+| Status | PRONTA - Prossima sessione |
+|--------|----------------------------|
 
 **Obiettivo:** Bloccare comandi manuali pericolosi
 
-| Task | Cosa | Effort |
-|------|------|--------|
-| 2.1 | Wrapper bash su VM che blocca `docker run` | 10 min |
-| 2.2 | Pre-flight check nel deploy.sh (conta container) | 15 min |
-| 2.3 | Post-deploy health check OBBLIGATORIO | 10 min |
-| 2.4 | container_name fisso in docker-compose.yml | 5 min |
+| Task | Cosa | Effort | Status |
+|------|------|--------|--------|
+| 2.1 | Wrapper bash che blocca `docker run` | 10 min | PENDENTE |
+| 2.2 | Pre-flight check in deploy.sh (conta container) | 15 min | PENDENTE |
+| 2.3 | Post-deploy health check OBBLIGATORIO | 10 min | PENDENTE |
 
-**Wrapper da aggiungere a ~/.bashrc sulla VM:**
+**Wrapper da aggiungere a `~/.bashrc` sulla VM:**
 ```bash
+# GUARDRAIL: Blocca docker run, forza docker-compose
 docker() {
     if [[ "$1" == "run" ]]; then
-        echo "BLOCCATO: Usare docker-compose, non docker run!"
-        echo "Comando: cd ~/app && ./deploy.sh"
+        echo ""
+        echo "╔════════════════════════════════════════════════════════════╗"
+        echo "║  BLOCCATO: Usare docker-compose, non docker run!           ║"
+        echo "║                                                            ║"
+        echo "║  Comando corretto: cd ~/app && ./deploy.sh                 ║"
+        echo "╚════════════════════════════════════════════════════════════╝"
+        echo ""
         return 1
     fi
     command docker "$@"
@@ -81,72 +115,82 @@ docker() {
 
 ---
 
-## FASE 3: UN SOLO ENTRY POINT (sessione successiva)
+### FASE 3: UN SOLO ENTRY POINT
 
-**Obiettivo:** Da 93 script a 4 comandi
+| Status | PIANIFICATA |
+|--------|-------------|
+
+**Obiettivo:** Da molti script a 4 comandi
 
 | Comando | Cosa fa |
 |---------|---------|
-| `cervella start` | Inizio sessione (legge COSTITUZIONE, verifica stato) |
-| `cervella check` | Verifica stato attuale (container, DB, etc.) |
-| `cervella deploy` | Deploy con TUTTE le verifiche automatiche |
-| `cervella end` | Fine sessione (checkpoint completo) |
-
-**Beneficio:** Ricordo 4 comandi invece di 93
+| `miracollo start` | Verifica stato (container, DB, health) |
+| `miracollo deploy` | Deploy con TUTTE le verifiche automatiche |
+| `miracollo logs` | Mostra logs container |
+| `miracollo rollback` | Torna alla versione precedente |
 
 ---
 
-## FASE 4: WIZARD INTERATTIVO DEPLOY (medio termine)
+### FASE 4: WIZARD INTERATTIVO
 
-**Obiettivo:** Non posso saltare step
+| Status | PIANIFICATA |
+|--------|-------------|
 
-Invece di checklist passiva:
+**Obiettivo:** Non puoi saltare step
+
 ```
-$ cervella deploy
+$ miracollo deploy
 
-[PRE-FLIGHT CHECK]
-[OK] Git pulito
-[OK] Test locale passato
-[?] Backup DB fatto? (s/n) > s
-[?] Guardiana approvato? (s/n) > s
+╔════════════════════════════════════════╗
+║         MIRACOLLO DEPLOY v1.0          ║
+╚════════════════════════════════════════╝
+
+[PRE-FLIGHT]
+  ✓ Git pulito
+  ✓ Test locale passato
+  ? Backup DB fatto? (s/n) > s
+  ? Guardiana approvato? (s/n) > s
 
 [DEPLOY]
-- docker-compose down --remove-orphans
-- docker-compose up -d --build
-- Health check...
+  → docker-compose down --remove-orphans
+  → docker-compose up -d --build
+  → Health check...
 
 [POST-DEPLOY]
-[OK] 1 container backend
-[OK] Health check passato
-[OK] Planning risponde
+  ✓ 1 container backend
+  ✓ Health check OK
+  ✓ Planning risponde
 
-DEPLOY COMPLETATO!
+╔════════════════════════════════════════╗
+║         DEPLOY COMPLETATO!             ║
+╚════════════════════════════════════════╝
 ```
 
 ---
 
-## FASE 5: MONITORAGGIO CONTINUO (lungo termine)
+### FASE 5: MONITORAGGIO CONTINUO
 
-**Obiettivo:** Early warning se qualcosa va storto
+| Status | FUTURO |
+|--------|--------|
 
 | Task | Cosa |
 |------|------|
 | 5.1 | Cron ogni 5 min che verifica N container |
 | 5.2 | Alert se container duplicati |
 | 5.3 | Log di tutti i deploy |
-| 5.4 | Score settimanale "processi rispettati" |
+| 5.4 | Dashboard stato infrastruttura |
 
 ---
 
-## CHECKLIST COMPLETAMENTO
+## CHECKLIST STATO FASI
 
-| Fase | Status | Quando |
-|------|--------|--------|
-| FASE 1 | PENDENTE | Oggi |
-| FASE 2 | PENDENTE | Prossima sessione |
-| FASE 3 | PENDENTE | Sessione +1 |
-| FASE 4 | PENDENTE | Sessione +2 |
-| FASE 5 | PENDENTE | Medio termine |
+| Fase | Descrizione | Status | Data |
+|------|-------------|--------|------|
+| FASE 1 | Fix immediato | **COMPLETATA** | 18 Gen 2026 |
+| FASE 2 | Guardrail tecnici | PRONTA | - |
+| FASE 3 | Un solo entry point | PIANIFICATA | - |
+| FASE 4 | Wizard interattivo | PIANIFICATA | - |
+| FASE 5 | Monitoraggio | FUTURO | - |
 
 ---
 
@@ -157,25 +201,38 @@ DEPLOY COMPLETATO!
 |                                                                    |
 |   SUCCESSO = 0 incidenti deploy per 30 giorni consecutivi         |
 |                                                                    |
+|   Contatore attuale: 0 giorni (reset 18 Gen 2026)                  |
+|                                                                    |
 +--------------------------------------------------------------------+
 ```
 
 ---
 
-## REGOLA D'ORO
+## REGOLE D'ORO
 
 ```
 +--------------------------------------------------------------------+
 |                                                                    |
-|   MAI COMANDI DOCKER MANUALI SULLA VM!                            |
-|                                                                    |
-|   SEMPRE: ./deploy.sh                                             |
-|                                                                    |
-|   Se serve altro: PRIMA aggiorna deploy.sh                        |
+|   1. MAI comandi Docker manuali sulla VM                           |
+|   2. SEMPRE usare deploy.sh o GitHub Actions                       |
+|   3. SEMPRE leggere CHECKLIST_DEPLOY prima                         |
+|   4. Se serve altro → PRIMA aggiorna lo script                     |
 |                                                                    |
 +--------------------------------------------------------------------+
 ```
+
+---
+
+## NOTE CONSOLIDAMENTO
+
+Questo documento consolida:
+- `SUBROADMAP_DEPLOY_BLINDATO.md` (Sessione 259)
+- `SUBROADMAP_DEPLOY_ROBUSTO.md` (Sessione 256) → Archiviata
+
+La versione precedente di DEPLOY_ROBUSTO è stata archiviata in:
+`.sncp/archivio/2026-01/roadmaps/SUBROADMAP_DEPLOY_ROBUSTO_ARCHIVED.md`
 
 ---
 
 *"Lavoriamo in pace! Senza casino! Dipende da noi!"*
+*"Fatto BENE > Fatto veloce"*

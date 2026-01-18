@@ -1,101 +1,77 @@
 # PROMPT RIPRESA - CervellaSwarm
 
 > **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 259
-> **SCORE:** 9.7/10 (DIAMANTE!) - LANDING PRONTA!
+> **SCORE Landing:** 8.5/10 (target 9.5)
 
 ---
 
-## SESSIONE 259 - LANDING COMPLETATA!
+## SESSIONE 259 - FASE 1 COMPLETATA
 
 ```
 +================================================================+
-|   FASE 3 + FASE 4 COMPLETATE!                                  |
-|   TERMINALE ANIMATO + POLISH DESIGN                            |
-|   PROSSIMO: DEPLOY cervellaswarm.com                           |
+|   LANDING 7.5 → 8.5                                            |
+|   FASE 1 MUST: COMPLETATA!                                     |
+|   PROSSIMO: FASE 2 (OG Image + Mobile Menu)                    |
 +================================================================+
 ```
 
-### Landing Page - PRONTA!
+### Fix Applicati
+
+| Fix | Descrizione |
+|-----|-------------|
+| Dual CTA | Form rimosso → npm + Get Started + GitHub |
+| Focus States | WCAG 2.4.7 accessibilità keyboard |
+| OG Tags | Open Graph + Twitter Card |
+| Prezzi | Allineati Stripe ($20/$40) |
+| Dogfooding | Badge footer con link commits |
+| Consistenza | npm command unificato |
+| Aria-labels | Accessibilità copy buttons |
+
+### Roadmap Landing 9.5
 
 ```
-FASE 1 ✓: Quick Wins
-FASE 2 ✓: Contenuti
-FASE 3 ✓: Demo animata (terminale typewriter!)
-FASE 4 ✓: Polish (Lucide icons, hover states, copy button)
-FASE 6 [ ]: Deploy cervellaswarm.com
-```
-
-### Cosa Aggiunto Sessione 259
-
-| Elemento | Descrizione |
-|----------|-------------|
-| Terminale animato | Typewriter effect, comandi REALI, loop |
-| Lucide icons | Sostituito emoji con icons professionali |
-| Hover states | Scale + lift su bottoni e cards |
-| Copy button | npm command con feedback verde "Copied!" |
-
----
-
-## STRATEGIA LANCIO
-
-```
-TIMELINE:
-23 Gen: Deploy cervellaswarm.com
-24-25 Gen: SHOW HN LAUNCH!
-
-STRATEGIA:
-- HN PRIMA → Twitter DOPO (solo se HN >30 upvotes)
-- Tag: @alexalbert__ @mcpsummit (se >50 upvotes)
+FASE 1: MUST      [####################] 100% ✓ (8.5)
+FASE 2: SHOULD    [....................] 0%   (→9.0)
+FASE 3: NICE      [....................] 0%   (→9.5)
 ```
 
 ---
 
-## CHECKLIST LANCIO (aggiornata)
+## CHECKLIST LANCIO
 
-- [x] npm publish MCP v0.2.2
-- [x] CFP MCP Dev Summit - SUBMITTED!
-- [x] mcp-ai.org - SUBMITTED!
-- [x] Email Anthropic - INVIATA!
-- [x] Discord - JOINED!
-- [x] Landing Quick Wins
-- [x] Landing Contenuti
-- [x] Landing Demo (terminale animato)
-- [x] Landing Polish (icons + hover + copy)
+- [x] npm MCP v0.2.2
+- [x] CFP MCP Dev Summit
+- [x] mcp-ai.org registry
+- [x] Email Anthropic
+- [x] Discord Claude Devs
+- [x] Landing FASE 1-4 (terminale + polish)
+- [x] Landing 7.5→8.5 (FASE 1 roadmap 9.5)
+- [ ] **Landing FASE 2** (OG Image + Mobile)
 - [ ] **Landing Deploy**
-- [ ] **SHOW HN LAUNCH**
+- [ ] **SHOW HN: 24-25 Gennaio**
 
 ---
 
-## VERSIONI ATTUALI
+## VERSIONI
 
-| Package | Versione | npm |
-|---------|----------|-----|
-| CLI | 0.1.1 | cervellaswarm |
-| MCP Server | 0.2.2 | @cervellaswarm/mcp-server |
-
----
-
-## FILE CHIAVE SESSIONE 258
-
-| File | Cosa |
-|------|------|
-| `docs/CFP_MCP_DEV_SUMMIT_2026.md` | CFP submitted |
-| `docs/BOZZA_TWEET_LANCIO.md` | Tweet pronto |
-| `docs/CONTATTI_ANTHROPIC_MCP_LAUNCH.md` | 10 canali mappati |
-| `.sncp/roadmaps/SUBROADMAP_LANDING_PROFESSIONALE.md` | Piano landing |
-| `landing/index.html` | Landing migliorata |
+| Package | Versione |
+|---------|----------|
+| CLI | 0.1.1 |
+| MCP Server | 0.2.2 |
 
 ---
 
 ## PROSSIMA SESSIONE
 
 ```
-1. FASE 6: Deploy cervellaswarm.com (Vercel/Netlify)
-2. Test mobile + cross-browser
-3. SHOW HN LAUNCH: 24-25 Gennaio!
+FASE 2:
+1. OG Image 1200x630px
+2. Mobile hamburger menu
+
+Poi: Deploy cervellaswarm.com
+Poi: SHOW HN!
 ```
 
 ---
 
-*"The only AI coding team that checks its own work"*
-*"Ultrapassar os próprios limites!"*
+*"Dogfooding: This entire site was built with CervellaSwarm"*
