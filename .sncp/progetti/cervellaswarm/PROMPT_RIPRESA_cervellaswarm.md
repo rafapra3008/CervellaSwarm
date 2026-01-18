@@ -61,13 +61,24 @@ Costo:       $0/mese
 
 ---
 
+## SHOW HN - PRONTO!
+
+```
+TITOLO:
+Show HN: CervellaSwarm – 16 AI agents + 3 quality guardians, coordinated via MCP
+
+DATA: Domenica 26 Gennaio 2026, 12:00 UTC (13:00 Italia)
+
+FILE: docs/SHOW_HN_POST_READY.md (titolo + commento + checklist)
+```
+
 ## PROSSIMI STEP
 
 ```
-1. SHOW HN post (24-25 Gennaio)
-2. www.cervellaswarm.com redirect (opzionale)
-3. Analytics Cloudflare (già incluso gratis)
-4. Monitorare feedback community
+1. Pre-launch check (24-25 Gennaio)
+2. SHOW HN (26 Gennaio 13:00 Italia)
+3. Monitoring e risposte community
+4. www.cervellaswarm.com redirect (opzionale)
 ```
 
 ---
