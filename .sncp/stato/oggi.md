@@ -1,56 +1,43 @@
-# STATO OGGI - 18 Gennaio 2026
+# OGGI - 18 Gennaio 2026
 
-> **Sessione:** 262
-> **Focus:** CervellaSwarm - PRE-LAUNCH CHECK
-
----
-
-## SESSIONE 262 - PRE-LAUNCH COMPLETATO!
-
-```
-SCORE: 6/10 → 9.5/10
-npm publish: CLI 0.1.2, MCP 0.2.3
-Show HN: PRONTO per 26 Gennaio
-```
+> **Sessione:** 264
+> **Progetto:** Miracollo PMS
+> **Focus:** Test Epson RT
 
 ---
 
-## COMPLETATO OGGI
+## RISULTATO STORICO
 
-| Task | Status |
-|------|--------|
-| Pre-launch check completo | FATTO |
-| Fix comandi Show HN | FATTO |
-| Fix link npm packages | FATTO |
-| Fix README status 100% | FATTO |
-| npm publish CLI 0.1.2 | FATTO |
-| npm publish MCP 0.2.3 | FATTO |
-| Test finale comandi | FATTO |
-| Organizzare la casa | FATTO |
+```
++================================================================+
+|                                                                |
+|   PRIMA STAMPA MIRACOLLO SU EPSON RT!                         |
+|                                                                |
+|   18-01-2026 15:51 - DOCUMENTO GESTIONALE                     |
+|   Stampante: TM-T800F @ 192.168.200.240 (Bar)                 |
+|                                                                |
++================================================================+
+```
 
 ---
 
-## FIX APPLICATI
+## SCOPERTE SESSIONE 264
 
-```
-- CLI homepage: cervellaswarm.com
-- CLI repo: rafapra3008/CervellaSwarm
-- MCP repo: rafapra3008/CervellaSwarm
-- Show HN: comandi corretti
-- Show HN: Apache-2.0 (non MIT)
-- README: PHASE 2 = 100%
-```
+1. **Rete FUNZIONA** - VLAN routing OK, Mac raggiunge Epson
+2. **Endpoint** - `/cgi-bin/fpmate.cgi?devid=local_printer&timeout=10000`
+3. **Formato SOAP/XML** - non semplice XML
+4. **Codice da aggiornare** - Guardiana Score 6/10
 
 ---
 
 ## PROSSIMI STEP
 
 ```
-1. Creare post Reddit/Tweet/LinkedIn
-2. Estendere FAQ a 10+
-3. SHOW HN - 26 Gennaio 13:00 Italia
+1. [ ] Trovare IP Reception (UniFi → "cassa1")
+2. [ ] Fix codice SOAP
+3. [ ] FASE 3 Fatture XML
 ```
 
 ---
 
-*"Score 9.5/10 - Pronto per il lancio!"*
+*"Prima stampa - Momento storico!"*

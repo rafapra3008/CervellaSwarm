@@ -1,8 +1,8 @@
 # MAPPA MODULO FINANZIARIO - MIRACOLLO
 
 > **QUESTO FILE E LA BUSSOLA DEL MODULO FINANZIARIO**
-> **Score: 9.8/10 | Ultimo aggiornamento: 18 Gennaio 2026 - Sessione 263**
-> **FASE 1 REALE! | FASE 2 CODICE PRONTO!**
+> **Score: 9.8/10 | Ultimo aggiornamento: 18 Gennaio 2026 - Sessione 264**
+> **FASE 1 REALE! | FASE 2 TEST FUNZIONANTE!**
 
 ---
 
@@ -208,15 +208,24 @@ DELIVERABLE - COMPLETATI:
     - GET  /api/fiscal/receipts
     - GET  /api/fiscal/closures
 
-BLOCKER - RETE:
-[ ] Test con RT reale - Mac non raggiunge Epson (VLAN diversa)
-[ ] Soluzione: Miracollo locale o bridge
+TEST SESSIONE 264 - FUNZIONA!
+[x] VLAN routing funziona! Mac raggiunge Epson
+[x] Prima stampa non fiscale: SUCCESSO! (18-01-2026 15:51)
+[x] Endpoint corretto: /cgi-bin/fpmate.cgi?devid=local_printer&timeout=10000
+[x] Formato: SOAP/XML (non semplice XML!)
 
-DA FARE DOPO (quando rete OK):
-[ ] Test stampa scontrino reale
-[ ] Integrazione UI checkout (bottone "Stampa Scontrino")
+MODIFICHE CODICE NECESSARIE (Guardiana Score 6/10):
+[ ] URL: aggiungere ?devid=local_printer&timeout=10000
+[ ] Content-Type: text/xml (non application/xml)
+[ ] SOAP Envelope: wrappare TUTTI gli XML
+[ ] _parse_response(): navigare dentro soap:Body
+
+DA FARE:
+[ ] Trovare IP stampante Reception (cercare "cassa1" in UniFi)
+[ ] Applicare fix SOAP al codice
+[ ] Test su stampante Reception
+[ ] Integrazione UI checkout
 [ ] Chiusura giornaliera automatica (23:55)
-[ ] Dashboard stato RT in frontend
 ```
 
 **File creati (Sessione 263):**
@@ -235,17 +244,27 @@ backend/routers/
 └── fiscal.py                      # API endpoints (NUOVO file!)
 ```
 
-**Nota architetturale:**
+**SCOPERTA SESSIONE 264 - Formato SOAP Corretto:**
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+  <soap:Body>
+    <printerNonFiscal>
+      <beginNonFiscal />
+      <printNormal data="Testo da stampare" />
+      <endNonFiscal />
+    </printerNonFiscal>
+  </soap:Body>
+</soap:Envelope>
 ```
-PROBLEMA: VM Miracollo (cloud) non raggiunge Epson (rete locale hotel)
 
-SOLUZIONI FUTURE:
-A) Miracollo locale - istanza nell'hotel
-B) Bridge/Proxy - servizio locale che fa da ponte
-C) VPN - collegamento cloud-hotel
+**STAMPANTI TROVATE:**
+| IP | Posizione | Cassa | Modello |
+|----|-----------|-------|---------|
+| 192.168.200.240 | BAR (Sesto Grado) | Cassa 2 | TM-T800F (M261A) |
+| ??? | RECEPTION | Cassa 1? | TM-T800F (M261A) |
 
-Per ora: codice pronto, test quando risolto problema rete
-```
+**Nota:** Rete VLAN routing FUNZIONA! Mac raggiunge Epson.
 
 ---
 
@@ -481,6 +500,7 @@ FASE 4 (Export):
 | 16/01/2026 | **FASE 1B: Checkout UI** (Frontend) | **239** |
 | 18/01/2026 | **FASE 1 VERIFICATA REALE!** (Fix bug + Test) | **262** |
 | 18/01/2026 | **FASE 2: Scontrini RT** (Codice completo!) | **263** |
+| 18/01/2026 | **FASE 2: Prima stampa FUNZIONA!** (Test non fiscale) | **264** |
 
 ---
 

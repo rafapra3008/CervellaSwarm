@@ -1,32 +1,51 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 263
-> **Status:** PRODUZIONE STABILE | FASE 2 RT CODICE PRONTO!
+> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 264
+> **Status:** PRODUZIONE STABILE | TEST RT FUNZIONANTE!
 
 ---
 
-## SESSIONE 263: FASE 2 SCONTRINI RT!
-
-### Cosa Abbiamo Fatto
+## SESSIONE 264: PRIMA STAMPA EPSON RT!
 
 ```
-1. STUDIO HARDWARE RT - COMPLETATO!
-   - Trovato IP Epson in UniFi: 192.168.200.240
-   - Modello: Epson TM-T800F (M261A)
-   - Seriale: X627183323
-   - Protocollo: HTTP/XML Epson
++================================================================+
+|                                                                |
+|   MIRACOLLO HA STAMPATO SU EPSON RT!                          |
+|                                                                |
+|   Data: 18-01-2026 15:51                                      |
+|   Tipo: DOCUMENTO GESTIONALE (non fiscale, sicuro)            |
+|   Risultato: SUCCESSO!                                        |
+|                                                                |
++================================================================+
+```
 
-2. CODICE COMPLETO (Stealth Mode!):
-   - Migration: 042_fiscal_rt.sql
-   - Interfaccia: base.py (FiscalPrinterAdapter)
-   - MockAdapter: mock_adapter.py
-   - EpsonAdapter: epson_adapter.py
-   - API: fiscal.py (9 endpoints!)
+### Scoperte Tecniche
 
-3. BLOCKER RETE:
-   - Mac (192.168.201.25) non raggiunge Epson (192.168.200.240)
-   - VLAN diverse
-   - Soluzione futura: Miracollo locale o bridge
+```
+1. RETE FUNZIONA!
+   - Mac (192.168.201.25) → Epson (192.168.200.240) = OK
+   - VLAN routing attivo
+
+2. ENDPOINT CORRETTO:
+   URL: /cgi-bin/fpmate.cgi?devid=local_printer&timeout=10000
+   Content-Type: text/xml
+   Formato: SOAP/XML (non semplice XML!)
+
+3. STAMPANTE TESTATA:
+   IP: 192.168.200.240 = BAR (Cassa 2)
+   Reception = DA TROVARE (cercare "cassa1" in UniFi)
+```
+
+### Modifiche Codice Necessarie
+
+```
+epson_adapter.py - Guardiana Score: 6/10
+
+FIX RICHIESTI:
+1. URL: aggiungere ?devid=local_printer&timeout=10000
+2. Content-Type: text/xml (non application/xml)
+3. SOAP Envelope: wrappare TUTTI gli XML
+4. _parse_response(): navigare dentro soap:Body
 ```
 
 ---
@@ -36,38 +55,9 @@
 ```
 FASE 1: Ricevute PDF      [####################] 100% REALE!
 FASE 1B: Checkout UI      [####################] 100% REALE!
-FASE 2: Scontrini RT      [##################..] 90% CODICE PRONTO!
+FASE 2: Scontrini RT      [###################.] 95% TEST OK!
 FASE 3: Fatture XML       [....................] 0%
 FASE 4: Export            [....................] 0%
-```
-
-**MAPPA DETTAGLIATA:** `.sncp/progetti/miracollo/moduli/finanziario/MAPPA_MODULO_FINANZIARIO.md`
-
----
-
-## FILE CREATI SESSIONE 263
-
-| File | Path |
-|------|------|
-| Migration | `backend/database/migrations/042_fiscal_rt.sql` |
-| Base | `backend/services/fiscal/base.py` |
-| Mock | `backend/services/fiscal/mock_adapter.py` |
-| Epson | `backend/services/fiscal/epson_adapter.py` |
-| API | `backend/routers/fiscal.py` |
-
----
-
-## INFRASTRUTTURA
-
-```
-VM MIRACOLLO (34.27.179.164):
-- miracollo-backend-1 (healthy)
-- miracollo-nginx (healthy)
-
-EPSON RT (192.168.200.240):
-- Modello: TM-T800F (M261A)
-- Connesso a: Armadio PT Port 17
-- Attualmente usato da: Ericsoft
 ```
 
 ---
@@ -75,12 +65,22 @@ EPSON RT (192.168.200.240):
 ## PROSSIMI STEP
 
 ```
-OPZIONI:
-A) Risolvere rete RT (VLAN routing in UniFi)
-B) FASE 3 Fatture XML (nessun blocker!)
-C) Altro modulo PMS
+1. [ ] Trovare IP stampante Reception (UniFi → "cassa1")
+2. [ ] Applicare fix codice (SOAP wrapper)
+3. [ ] Test su stampante Reception
+4. [ ] Contattare Epson per Training Mode (test fiscali sicuri)
 ```
 
 ---
 
-*"Codice pronto, attende solo la rete!" - Sessione 263*
+## FILE SESSIONE 264
+
+| File | Contenuto |
+|------|-----------|
+| `sessioni/SESSIONE_264_EPSON_TEST.md` | Documentazione completa |
+| `RICERCA_EPSON_RT_TRAININGMODE_20260118.md` | Ricerca Training Mode |
+| `~/Desktop/test_epson_nonfiscale.sh` | Script test |
+
+---
+
+*"Prima stampa Miracollo - Momento storico!" - Sessione 264*
