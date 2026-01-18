@@ -1,34 +1,47 @@
 # STATO OGGI - 18 Gennaio 2026
 
-> **Sessione:** 260
-> **Focus:** CervellaSwarm - FASE 2 Landing + Studio Deploy
+> **Sessione:** 261
+> **Focus:** Miracollo - Test VCC Booking.com
 
 ---
 
-## SESSIONE 260 - FASE 2 COMPLETATA!
+## SESSIONE 261 - TEST VCC
 
 ### Cosa Fatto
 
 ```
-1. FASE 2 LANDING (8.5 → 9.0):
-   ✓ OG Image 1200x630px creata (58KB)
-   ✓ Mobile hamburger menu implementato
-   ✓ Accessibilità WCAG completa
-   ✓ Test visivo OK
+1. STRIPE ABILITATO SULLA VM:
+   - Fix: docker compose down + up
+   - enabled: true
 
-2. STUDIO DEPLOY (Ricerca completa):
-   ✓ 9 opzioni analizzate
-   ✓ Cloudflare Pages = SCELTA
-   ✓ $0/mese, unlimited bandwidth
-   ✓ File: docs/studio/RICERCA_DEPLOY_LANDING_*.md
+2. FRONTEND VCC OK:
+   - Stripe Elements funziona
+   - Carta test riconosciuta come Visa
+
+3. BUG BACKEND TROVATO:
+   - Query cerca guest_name in bookings
+   - Ma nome e in tabella GUESTS!
+   - Serve JOIN
 ```
 
-### Mappa Landing
+### Bug Fix (Prossima Sessione)
+
+```sql
+-- Da fixare in payments.py:378
+SELECT ... FROM bookings b
+LEFT JOIN guests g ON b.guest_id = g.id
+LEFT JOIN channels c ON b.channel_id = c.id
+```
+
+---
+
+## MIRACOLLO VCC STATUS
 
 ```
-FASE 1: MUST      [####################] 100% (8.5)
-FASE 2: SHOULD    [####################] 100% (9.0)
-FASE 3: NICE      [....................] 0%   (→9.5)
+Frontend:  OK (Stripe Elements)
+Backend:   BUG (query da fixare)
+Stripe:    ABILITATO
+Test:      IN CORSO
 ```
 
 ---
@@ -36,12 +49,12 @@ FASE 3: NICE      [....................] 0%   (→9.5)
 ## PROSSIMA SESSIONE
 
 ```
-1. Setup Cloudflare Pages (40 min)
-2. Custom domain cervellaswarm.com
-3. Test workflow push → deploy
-4. SHOW HN: 24-25 Gennaio!
+1. Fix query JOIN guests
+2. Deploy
+3. Test completo
+4. VCC FUNZIONANTE!
 ```
 
 ---
 
-*"Lavoriamo in pace! Senza casino! Dipende da noi!"*
+*"Fatto BENE > Fatto veloce"*

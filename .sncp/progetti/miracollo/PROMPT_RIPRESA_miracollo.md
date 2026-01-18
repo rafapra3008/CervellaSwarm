@@ -1,81 +1,81 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 260
-> **Status:** PRODUZIONE STABILE
+> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 261
+> **Status:** PRODUZIONE STABILE - VCC in testing
 
 ---
 
-## SESSIONE 260: CONSOLIDAMENTO + FASE 2
+## SESSIONE 261: TEST VCC
 
 ### Cosa Abbiamo Fatto
 
 ```
-1. CONSOLIDAMENTO DOCUMENTI:
-   - SUBROADMAP_DEPLOY_BLINDATO.md → MASTER unico
-   - SUBROADMAP_DEPLOY_ROBUSTO.md → Archiviata
-   - 1 solo documento deploy da seguire!
+1. STRIPE CONFIGURATO SULLA VM:
+   - Chiavi esistevano in .env ma container non le leggeva
+   - Fix: docker compose down + up (non solo restart!)
+   - /api/payments/stripe-config -> enabled: true
 
-2. FASE 2 GUARDRAIL IMPLEMENTATA:
-   - Wrapper docker() in ~/.bashrc sulla VM
-   - Pre-flight check container in deploy.sh
-   - Health check 3 endpoint obbligatorio
+2. TEST VCC INIZIATO:
+   - Frontend: Stripe Elements funziona
+   - Carta 4242 4242 4242 4242 riconosciuta come Visa
+   - Backend: trovato BUG nella query!
+
+3. BUG TROVATO (DA FIXARE):
+   - payments.py riga 378-383
+   - Query cerca b.guest_name ma tabella bookings non ce l'ha
+   - Nome ospite e in tabella GUESTS (JOIN necessario!)
+```
+
+### Fix Da Applicare (Prossima Sessione)
+
+```python
+# VECCHIO (SBAGLIATO):
+SELECT b.id, b.booking_number, b.total, b.amount_paid, b.hotel_id,
+       (b.first_name || ' ' || b.last_name) AS guest_name, b.source
+FROM bookings b WHERE b.id = ?
+
+# NUOVO (CORRETTO):
+SELECT b.id, b.booking_number, b.total, b.amount_paid, b.hotel_id,
+       (g.first_name || ' ' || g.last_name) AS guest_name,
+       c.name as source
+FROM bookings b
+LEFT JOIN guests g ON b.guest_id = g.id
+LEFT JOIN channels c ON b.channel_id = c.id
+WHERE b.id = ?
 ```
 
 ---
 
-## STATO SUBROADMAP DEPLOY BLINDATO
+## ARCHITETTURA DB (Riferimento)
 
 ```
-Path: CervellaSwarm/.sncp/roadmaps/SUBROADMAP_DEPLOY_BLINDATO.md
-
-FASE 1: Fix immediato          ✓ COMPLETATA (18 Gen)
-FASE 2: Guardrail tecnici      ✓ COMPLETATA (18 Gen)
-FASE 3: Un solo entry point    ← PROSSIMA
-FASE 4: Wizard interattivo     PIANIFICATA
-FASE 5: Monitoraggio           FUTURO
-
-Guardrail implementati:
-- Wrapper docker run bloccato sulla VM
-- Pre-flight check container in deploy.sh
-- Health check 3 endpoint obbligatorio
-
-Success criteria: 0 incidenti per 30 giorni
-Contatore: 0 giorni (reset 18 Gen 2026)
+bookings: guest_id (FK) -> guests.id
+bookings: channel_id (FK) -> channels.id
+guests: first_name, last_name
 ```
 
 ---
 
-## ARCHITETTURA 3 BRACCI
+## STATO MODULO VCC
 
 ```
-MIRACOLLO
-├── PMS CORE (:8001)        90% - STABILE!
-├── MIRACOLLOOK (:8002)     60% - Non toccato
-└── ROOM HARDWARE (:8003)   10% - Attesa hardware
-```
+Backend endpoint:  /api/payments/charge-vcc
+Frontend UI:       Stripe Elements + "VCC Booking" button
+Stripe account:    acct_1Sqrxk7aXUHP1bna (Test Mode)
+Carta test:        4242 4242 4242 4242
 
----
-
-## MODULO VCC (DA TESTARE)
-
-```
-Backend: POST /api/payments/charge-vcc
-Frontend: Stripe Elements + bottone "VCC Booking"
-Stripe Sandbox: acct_1Sqrxk7aXUHP1bna
-Carta test: 4242 4242 4242 4242
-
-STATUS: Codice completo, DA TESTARE!
+STATUS: Frontend OK, Backend BUG da fixare
 ```
 
 ---
 
-## STATO INFRASTRUTTURA
+## INFRASTRUTTURA
 
 ```
-VM MIRACOLLO:
-- 1 container: miracollo-backend-1 (healthy)
-- 1 nginx: miracollo-nginx (healthy)
-- docker-compose.yml con name:miracollo
+VM MIRACOLLO (34.27.179.164):
+- miracollo-backend-1 (healthy)
+- miracollo-nginx (healthy)
+- Stripe: ABILITATO (dopo down+up)
 ```
 
 ---
@@ -83,9 +83,10 @@ VM MIRACOLLO:
 ## PROSSIMI STEP
 
 ```
-1. Test VCC nel browser (carta 4242 4242 4242 4242)
-2. Documentare VCC in docs/
-3. FASE 3 subroadmap (se serve - un solo entry point)
+1. Fix query VCC (JOIN guests + channels)
+2. Deploy fix
+3. Re-test VCC
+4. Documentare VCC funzionante
 ```
 
 ---
@@ -94,9 +95,9 @@ VM MIRACOLLO:
 
 | File | Scopo |
 |------|-------|
-| `.sncp/roadmaps/SUBROADMAP_DEPLOY_BLINDATO.md` | Roadmap deploy MASTER |
-| `~/.claude/CHECKLIST_DEPLOY.md` | Checklist obbligatoria |
-| `miracollogeminifocus/deploy.sh` | Script deploy locale |
+| `backend/routers/payments.py` | Endpoint VCC (riga 356-480) |
+| `frontend/js/planning/modal-payment.js` | UI Stripe Elements |
+| `backend/services/stripe_service.py` | Logica Stripe |
 
 ---
 
