@@ -1,7 +1,8 @@
 # Bozza Email Anthropic - CervellaSwarm
 
-> **Status:** BOZZA - Pronta per review e invio da parte di Rafa
+> **Status:** PRONTA - Aggiornata Sessione 257
 > **Canali trovati:** sales@anthropic.com, MCP Contributors Discord, Developer Newsletter
+> **Nota:** Repo privato (closed-source come Cursor) - offriamo accesso su richiesta
 
 ---
 
@@ -38,7 +39,7 @@ It's not a demo - it's a real tool that works.
 NOW LIVE:
 - CLI: npm install -g cervellaswarm
 - MCP Server: npm install -g @cervellaswarm/mcp-server
-- GitHub: https://github.com/rafapra3008/CervellaSwarm
+- Listed on mcp.so directory
 
 I'm preparing a Show HN launch and would love to know if Anthropic would be
 interested in:
@@ -46,6 +47,9 @@ interested in:
 1. Featuring CervellaSwarm in the MCP showcase/directory?
 2. Any community highlights or case studies?
 3. Feedback on the architecture before public launch?
+
+I'd be happy to provide private repository access if you'd like to review
+the codebase in detail.
 
 I believe multi-agent systems with built-in QA represent an interesting
 evolution of how developers use Claude - and I'd love to share our approach
@@ -56,9 +60,9 @@ Thank you for building such incredible models. Claude made this possible.
 Best regards,
 Rafa
 
-GitHub: https://github.com/rafapra3008/CervellaSwarm
 npm CLI: https://www.npmjs.com/package/cervellaswarm
 npm MCP: https://www.npmjs.com/package/@cervellaswarm/mcp-server
+mcp.so: (listing pending approval)
 ```
 
 ---
@@ -83,8 +87,8 @@ your codebase.
 
 npm install -g @cervellaswarm/mcp-server
 
-GitHub: [link]
 Show HN discussion: [link]
+mcp.so: [link when live]
 
 Would love feedback from the MCP community!
 ```
@@ -133,4 +137,5 @@ Would love feedback from the MCP community!
 ---
 
 *Bozza creata: Sessione 256*
+*Aggiornata: Sessione 257 - Closed-source model (come Cursor)*
 *"The only AI coding team that checks its own work"*
