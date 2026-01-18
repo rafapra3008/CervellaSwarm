@@ -1,33 +1,38 @@
 # STATO OGGI - 18 Gennaio 2026
 
-> **Sessione:** 259
-> **Focus:** CervellaSwarm - Landing 7.5 → 9.5
+> **Sessione:** 260
+> **Focus:** Miracollo - Deploy Blindato FASE 2
 
 ---
 
-## SESSIONE 259 - LANDING PROFESSIONALE
+## SESSIONE 260 - CONSOLIDAMENTO + GUARDRAIL
 
-### FASE 1 Completata (7.5 → 8.5)
-
-```
-✓ Form → Dual CTA (npm + Get Started + GitHub)
-✓ Focus states CSS (WCAG 2.4.7)
-✓ Open Graph + Twitter Card tags
-✓ Prezzi allineati Stripe ($20/$40)
-✓ Badge dogfooding footer
-✓ npm command unificato
-✓ aria-labels accessibilità
-```
-
-### Mappa Landing
+### Cosa Fatto
 
 ```
-FASE 1: MUST (critici)     [####################] 100% ✓
-FASE 2: SHOULD (importanti) [....................] 0%
-FASE 3: NICE (bonus)       [....................] 0%
+1. CONSOLIDAMENTO DOCUMENTI:
+   ✓ SUBROADMAP_DEPLOY_BLINDATO → Documento MASTER unico
+   ✓ SUBROADMAP_DEPLOY_ROBUSTO → Archiviata
+   ✓ Stato allineato in tutti i file
 
-Score: 7.5 → 8.5/10
-Target: 9.5/10
+2. FASE 2 GUARDRAIL IMPLEMENTATA:
+   ✓ Wrapper docker run bloccato sulla VM (~/.bashrc)
+   ✓ Pre-flight check container in deploy.sh
+   ✓ Health check 3 endpoint obbligatorio
+   ✓ Commit: d71290d (Miracollo)
+```
+
+### Stato Subroadmap Deploy Blindato
+
+```
+FASE 1: Fix immediato          ✓ COMPLETATA
+FASE 2: Guardrail tecnici      ✓ COMPLETATA
+FASE 3: Un solo entry point    PROSSIMA
+FASE 4: Wizard interattivo     PIANIFICATA
+FASE 5: Monitoraggio           FUTURO
+
+Success criteria: 0 incidenti per 30 giorni
+Contatore: 0 giorni (reset 18 Gen)
 ```
 
 ---
@@ -35,13 +40,11 @@ Target: 9.5/10
 ## PROSSIMA SESSIONE
 
 ```
-FASE 2:
-1. OG Image (1200x630px)
-2. Mobile menu hamburger
-
-Show HN: 24-25 Gennaio
+1. Test VCC (carta 4242 4242 4242 4242)
+2. FASE 3 subroadmap (se serve)
+3. Documentare VCC
 ```
 
 ---
 
-*"Ultrapassar os próprios limites!"*
+*"Lavoriamo in pace! Senza casino! Dipende da noi!"*

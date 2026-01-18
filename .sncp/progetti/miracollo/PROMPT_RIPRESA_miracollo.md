@@ -5,23 +5,20 @@
 
 ---
 
-## SESSIONE 260: CONSOLIDAMENTO DOCUMENTI
+## SESSIONE 260: CONSOLIDAMENTO + FASE 2
 
 ### Cosa Abbiamo Fatto
 
 ```
-CONSOLIDAMENTO DEPLOY BLINDATO:
+1. CONSOLIDAMENTO DOCUMENTI:
+   - SUBROADMAP_DEPLOY_BLINDATO.md → MASTER unico
+   - SUBROADMAP_DEPLOY_ROBUSTO.md → Archiviata
+   - 1 solo documento deploy da seguire!
 
-1. SUBROADMAP_DEPLOY_BLINDATO.md
-   - Aggiornata come documento MASTER
-   - FASE 1 marcata COMPLETATA (era erroneamente PENDENTE)
-   - Integrata architettura e diagrammi
-
-2. SUBROADMAP_DEPLOY_ROBUSTO.md
-   - ARCHIVIATA in .sncp/archivio/2026-01/roadmaps/
-   - Contenuto migrato nel documento MASTER
-
-Risultato: 1 solo documento deploy da seguire!
+2. FASE 2 GUARDRAIL IMPLEMENTATA:
+   - Wrapper docker() in ~/.bashrc sulla VM
+   - Pre-flight check container in deploy.sh
+   - Health check 3 endpoint obbligatorio
 ```
 
 ---
@@ -32,10 +29,15 @@ Risultato: 1 solo documento deploy da seguire!
 Path: CervellaSwarm/.sncp/roadmaps/SUBROADMAP_DEPLOY_BLINDATO.md
 
 FASE 1: Fix immediato          ✓ COMPLETATA (18 Gen)
-FASE 2: Guardrail tecnici      ← PRONTA
-FASE 3: Un solo entry point    PIANIFICATA
+FASE 2: Guardrail tecnici      ✓ COMPLETATA (18 Gen)
+FASE 3: Un solo entry point    ← PROSSIMA
 FASE 4: Wizard interattivo     PIANIFICATA
 FASE 5: Monitoraggio           FUTURO
+
+Guardrail implementati:
+- Wrapper docker run bloccato sulla VM
+- Pre-flight check container in deploy.sh
+- Health check 3 endpoint obbligatorio
 
 Success criteria: 0 incidenti per 30 giorni
 Contatore: 0 giorni (reset 18 Gen 2026)
@@ -81,9 +83,9 @@ VM MIRACOLLO:
 ## PROSSIMI STEP
 
 ```
-1. Test VCC nel browser (carta 4242)
-2. FASE 2 subroadmap (wrapper docker run)
-3. Documentare VCC
+1. Test VCC nel browser (carta 4242 4242 4242 4242)
+2. Documentare VCC in docs/
+3. FASE 3 subroadmap (se serve - un solo entry point)
 ```
 
 ---

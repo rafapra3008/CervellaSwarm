@@ -2,7 +2,7 @@
 
 > **Creata:** 18 Gennaio 2026 - Sessione 259
 > **Consolidata:** 18 Gennaio 2026 - Sessione 260
-> **Status:** FASE 1 COMPLETATA - FASE 2 PRONTA
+> **Status:** FASE 1 + FASE 2 COMPLETATE!
 > **Obiettivo:** Rendere IMPOSSIBILE sbagliare il deploy
 
 ---
@@ -84,34 +84,35 @@ LOCALE                          VM MIRACOLLO
 
 ### FASE 2: GUARDRAIL TECNICI
 
-| Status | PRONTA - Prossima sessione |
-|--------|----------------------------|
+| Status | Completata 18 Gennaio 2026 - Sessione 260 |
+|--------|-------------------------------------------|
 
 **Obiettivo:** Bloccare comandi manuali pericolosi
 
-| Task | Cosa | Effort | Status |
-|------|------|--------|--------|
-| 2.1 | Wrapper bash che blocca `docker run` | 10 min | PENDENTE |
-| 2.2 | Pre-flight check in deploy.sh (conta container) | 15 min | PENDENTE |
-| 2.3 | Post-deploy health check OBBLIGATORIO | 10 min | PENDENTE |
+| Task | Cosa | Status |
+|------|------|--------|
+| 2.1 | Wrapper bash che blocca `docker run` | **FATTO** |
+| 2.2 | Pre-flight check in deploy.sh (conta container) | **FATTO** |
+| 2.3 | Post-deploy health check OBBLIGATORIO (3 check) | **FATTO** |
 
-**Wrapper da aggiungere a `~/.bashrc` sulla VM:**
-```bash
-# GUARDRAIL: Blocca docker run, forza docker-compose
-docker() {
-    if [[ "$1" == "run" ]]; then
-        echo ""
-        echo "╔════════════════════════════════════════════════════════════╗"
-        echo "║  BLOCCATO: Usare docker-compose, non docker run!           ║"
-        echo "║                                                            ║"
-        echo "║  Comando corretto: cd ~/app && ./deploy.sh                 ║"
-        echo "╚════════════════════════════════════════════════════════════╝"
-        echo ""
-        return 1
-    fi
-    command docker "$@"
-}
-```
+**Cosa è stato implementato:**
+
+1. **Wrapper in ~/.bashrc sulla VM:**
+   - Blocca `docker run` in sessione interattiva
+   - Forza uso di `docker compose`
+
+2. **Pre-flight check in deploy.sh:**
+   - Conta container backend
+   - Blocca deploy se > 1 container
+   - Avvisa se naming non corretto
+
+3. **Health check OBBLIGATORIO (3 verifiche):**
+   - Container status sulla VM
+   - Endpoint /api/health
+   - Endpoint /api/hotels (routing funzionante)
+   - Se fallisce → exit 1 + suggerisce rollback
+
+**Commit:** d71290d
 
 ---
 
@@ -187,7 +188,7 @@ $ miracollo deploy
 | Fase | Descrizione | Status | Data |
 |------|-------------|--------|------|
 | FASE 1 | Fix immediato | **COMPLETATA** | 18 Gen 2026 |
-| FASE 2 | Guardrail tecnici | PRONTA | - |
+| FASE 2 | Guardrail tecnici | **COMPLETATA** | 18 Gen 2026 |
 | FASE 3 | Un solo entry point | PIANIFICATA | - |
 | FASE 4 | Wizard interattivo | PIANIFICATA | - |
 | FASE 5 | Monitoraggio | FUTURO | - |
