@@ -78,7 +78,18 @@ README: FIXED con PNG funzionante!
 ✓ README con immagine FUNZIONANTE
 ✓ MAPPA_LANCIO_DEFINITIVA aggiornata
 ✓ 2,459 righe ricerca marketing (DIAMANTE)
-✓ Subroadmap v2.0 per post-launch
+✓ Subroadmap v2.0 per post-launch (4 feature!)
+```
+
+---
+
+## DA STUDIARE POST-LAUNCH
+
+```
+SNCP EVOLUTION (aggiunto Sessione 265):
+- oggi.md: design ambiguo, ridondante con PROMPT_RIPRESA
+- Da studiare come Aider e altri gestiscono memoria
+- Aggiunto a SUBROADMAP_CERVELLASWARM_2.0 come Feature 4
 ```
 
 ---

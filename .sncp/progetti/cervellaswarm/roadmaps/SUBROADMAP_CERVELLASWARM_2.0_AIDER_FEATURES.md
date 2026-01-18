@@ -11,15 +11,16 @@
 
 ## EXECUTIVE SUMMARY
 
-Tre feature chiave da Aider per CervellaSwarm 2.0:
+Quattro feature chiave per CervellaSwarm 2.0:
 
 | Feature | Impact | Effort | Priority |
 |---------|--------|--------|----------|
 | Tree-sitter Repo Mapping | -80% token usage | 1 settimana | P1 |
 | Architect/Editor Pattern | +15% accuracy | 1 settimana | P2 |
 | Git Flow + Attribution | Professional history | 2-3 giorni | P1 |
+| **SNCP Evolution** | Memoria intelligente | Da studiare | P2 |
 
-**ROI Totale:** Costi ridotti, accuracy migliore, git professionale.
+**ROI Totale:** Costi ridotti, accuracy migliore, git professionale, memoria evoluta.
 
 ---
 
@@ -139,6 +140,38 @@ DOMANI:
 - [ ] Conventional Commits rispettati
 - [ ] `/undo` command implementato
 - [ ] Docs complete
+
+---
+
+## FEATURE 4: SNCP EVOLUTION
+
+### Cosa E
+Evoluzione del Sistema Nervoso Centrale Persistente per memoria più intelligente.
+
+### Problema Attuale (Sessione 265)
+```
+OGGI:
+  oggi.md = 1 file condiviso → si sovrascrive tra progetti
+  PROMPT_RIPRESA = già contiene tutto → ridondanza
+  Cross-progetto = non funziona bene
+
+DOMANI (da studiare):
+  Memoria intelligente cross-sessione
+  Struttura più pulita
+  Zero ridondanza
+```
+
+### Da Studiare (Researcher)
+- Come Aider gestisce memoria (`.aider.chat.history.md`)
+- Best practices state management cross-sessione
+- Altri tool multi-agent e loro memoria
+
+### Definition of Done
+- [ ] Ricerca completata su alternative
+- [ ] Design nuovo SNCP proposto
+- [ ] Decisione su oggi.md (eliminare/evolvere)
+- [ ] Implementazione se necessario
+- [ ] Docs aggiornate
 
 ---
 
