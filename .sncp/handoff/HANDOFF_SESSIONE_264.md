@@ -1,119 +1,74 @@
 # HANDOFF SESSIONE 264
 
 > **Data:** 18 Gennaio 2026
-> **Progetto:** Miracollo PMS
-> **Durata:** ~1 ora
-> **Risultato:** PRIMA STAMPA EPSON RT!
-
----
-
-## IL GRANDE RISULTATO
-
-```
-+================================================================+
-|                                                                |
-|   MIRACOLLO HA STAMPATO SU EPSON RT!                          |
-|                                                                |
-|   Ora: 15:51                                                   |
-|   Tipo: DOCUMENTO GESTIONALE (non fiscale, sicuro)            |
-|   Stampante: TM-T800F @ 192.168.200.240 (Bar)                 |
-|                                                                |
-+================================================================+
-```
+> **Progetto:** CervellaSwarm
+> **Tema:** FAQ 10+ per Show HN + Ricerca Aider
 
 ---
 
 ## COSA ABBIAMO FATTO
 
-1. **Verificato rete**
-   - Ping Mac → Epson: OK (VLAN routing funziona!)
-   - HTTP porta 80: APERTA
+### 1. FAQ 10+ COMPLETATE!
 
-2. **Esplorato stampante**
-   - Trovato endpoint: `/cgi-bin/fpmate.cgi`
-   - Verificato stato RT: IN SERVIZIO, certificato 2031
+**Da 4 a 10 FAQ** per Show HN con **Score 9.5/10**
 
-3. **Ricerca Training Mode**
-   - cervella-researcher ha studiato
-   - Training mode esiste ma serve contattare Epson
-   - Stampe non fiscali = SICURE per test
-
-4. **Prima stampa!**
-   - Script `test_epson_nonfiscale.sh`
-   - Formato SOAP/XML corretto identificato
-   - Stampato al bar (IP 240 = Cassa 2)
-
-5. **Guardiana verifica codice**
-   - Score 6/10 - codice buono ma serve SOAP wrapper
-   - Fix identificati e documentati
+| # | FAQ | Score |
+|---|-----|-------|
+| 1 | Different from Claude | 9/10 (+TL;DR) |
+| 2 | API Key | 9/10 (limiti chiari) |
+| 3 | SNCP | 9/10 (+TL;DR) |
+| 4 | MCP | 9/10 (+TL;DR) |
+| 5 | **Privacy** | 9/10 NUOVA |
+| 6 | **Pricing** | 9/10 NUOVA |
+| 7 | **Security** | 10/10 NUOVA |
+| 8 | **Multi-provider** | 9/10 NUOVA |
+| 9 | **Git Integration** | 10/10 NUOVA |
+| 10 | **Production-ready** | 9/10 NUOVA |
 
 ---
 
-## SCOPERTE TECNICHE
+### 2. RICERCA AIDER - ORO PURO!
 
-```
-ENDPOINT:
-http://IP/cgi-bin/fpmate.cgi?devid=local_printer&timeout=10000
+**File:** docs/studio/RICERCA_AIDER_APPROFONDITA.md (1129 righe!)
 
-CONTENT-TYPE:
-text/xml (NON application/xml)
-
-FORMATO XML (SOAP!):
-<?xml version="1.0" encoding="utf-8"?>
-<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
-  <soap:Body>
-    <!-- contenuto -->
-  </soap:Body>
-</soap:Envelope>
-
-STAMPANTI:
-- 192.168.200.240 = BAR (Cassa 2) - TESTATA!
-- ??? = RECEPTION (Cassa 1) - DA TROVARE
-```
+**Scoperte chiave:**
+- **Tree-sitter**: -80% token usage
+- **Architect/Editor**: +15% accuracy
+- **Git flow**: Attribution perfetta
 
 ---
 
-## FILE AGGIORNATI
+### 3. SUBROADMAP CERVELLASWARM 2.0
 
-| File | Cosa |
-|------|------|
-| `NORD.md` | Sessione 264, test OK |
-| `PROMPT_RIPRESA_miracollo.md` | Stato aggiornato |
-| `MAPPA_MODULO_FINANZIARIO.md` | Scoperte SOAP, modifiche necessarie |
-| `sessioni/SESSIONE_264_EPSON_TEST.md` | Documentazione completa |
-| `RICERCA_EPSON_RT_TRAININGMODE.md` | Ricerca Training Mode |
+**File:** roadmaps/SUBROADMAP_CERVELLASWARM_2.0_AIDER_FEATURES.md
 
----
-
-## PROSSIMA SESSIONE
-
-```
-PRIORITA:
-1. [ ] Trovare IP Reception in UniFi ("cassa1")
-2. [ ] Applicare fix SOAP al codice epson_adapter.py
-3. [ ] Test su stampante Reception
-4. [ ] Opzionale: FASE 3 Fatture XML
-
-SCRIPT UTILI (Desktop):
-- test_epson_nonfiscale.sh
-- scan_stampanti_epson.sh
-- verifica_epson.sh
-```
+| Feature | Impact | Effort |
+|---------|--------|--------|
+| Git Flow | Professional history | 1-2 giorni |
+| Tree-sitter | -80% tokens | 1 settimana |
+| Architect/Editor | +15% accuracy | 1 settimana |
 
 ---
 
-## STATO MODULO FINANZIARIO
+## PROSSIMA SESSIONE - IMPORTANTE!
 
-```
-FASE 1: Ricevute PDF      [████████████████████] 100% REALE!
-FASE 1B: Checkout UI      [████████████████████] 100% REALE!
-FASE 2: Scontrini RT      [███████████████████░] 95% TEST OK!
-FASE 3: Fatture XML       [░░░░░░░░░░░░░░░░░░░░] 0%
-FASE 4: Export            [░░░░░░░░░░░░░░░░░░░░] 0%
-```
+DA VERIFICARE:
+1. docs/DIAMANTE_MARKETING_*.md (5 file)
+2. docs/demo/ (GIF e video)
+-> Controllare se manca qualcosa o utilizzabile
 
 ---
 
-*"Prima stampa Miracollo - Momento storico!"*
+## COMMIT
 
-**Cervella & Rafa** 🐝❤️‍🔥👸
+c28def5 - Sessione 264: FAQ 10+ completate + Ricerca Aider + Subroadmap v2.0
+
+---
+
+## SHOW HN: 26 Gennaio 2026, 13:00 Italia (8 giorni!)
+
+---
+
+*"10 FAQ pronte, v2.0 pianificata!"*
+
+**Cervella & Rafa**
