@@ -1,7 +1,7 @@
 # MAPPA LANCIO DEFINITIVA - CervellaSwarm
 
 > **Creata:** 18 Gennaio 2026 - Sessione 264
-> **Aggiornata:** 18 Gennaio 2026 - Sessione 265 (Fix GIF README!)
+> **Aggiornata:** 18 Gennaio 2026 - Sessione 265 (Stato aggiornato!)
 > **Obiettivo:** SHOW HN - 26 Gennaio 2026, 13:00 Italia
 > **Giorni rimasti:** 8
 
@@ -41,7 +41,8 @@
 | README con GIF hero | ✓ FATTO | Aggiornato |
 | Quick start guide | ✓ FATTO | In README |
 | Architecture docs | ✓ FATTO | Multiple docs |
-| FAQ | ✓ FATTO | 10 FAQ, Score 9.5/10! |
+| FAQ Landing | ✓ FATTO | 15 FAQ su faq.html |
+| FAQ Show HN | ✓ FATTO | 10 FAQ per risposte HN |
 | Contributing guide | ✓ FATTO | In README |
 
 ### SHOW HN [100%]
@@ -131,10 +132,13 @@ TOTALE: 51+ documenti!
 ### 18-20 Gen (Sab-Lun) - PREPARAZIONE
 
 ```
-[ ] Estendere FAQ a 10+
-[ ] Creare draft Reddit post
-[ ] Creare draft Tweet thread
-[ ] Verificare GitHub Issues/Discussions attivi
+[✓] Estendere FAQ a 10+              ← FATTO Sessione 264!
+[✓] Verifica Guardiane               ← FATTO Sessione 265!
+[✓] Fix GIF README                   ← FATTO Sessione 265!
+[ ] Creare draft Reddit post         ← MANCA (opzionale)
+[ ] Creare draft Tweet thread        ← MANCA (opzionale)
+[ ] Verificare GitHub Issues attivi  ← Da fare
+[✓] FAQ su landing page              ← GIÀ 15 FAQ su faq.html!
 ```
 
 ### 21-23 Gen (Mar-Gio) - POLISH
@@ -142,7 +146,7 @@ TOTALE: 51+ documenti!
 ```
 [ ] Review finale README
 [ ] Test npm install su altra macchina
-[ ] Preparare LinkedIn post
+[ ] Preparare LinkedIn post          ← Opzionale
 [ ] Rileggere tutto il materiale
 ```
 
