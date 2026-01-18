@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CervellaSwarm - 16 AI Agents. One Unstoppable Team.</title>
     <meta name="description" content="CervellaSwarm coordinates 16 specialized AI agents that work together with persistent memory and quality gates. IDE-agnostic. Privacy-first.">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cervellaswarm.com/">
+    <meta property="og:title" content="CervellaSwarm - 16 AI Agents, One Unstoppable Team">
+    <meta property="og:description" content="Coordinate 16 specialized AI agents via MCP. 3 Guardians verify every output. Your code stays local.">
+    <meta property="og:image" content="https://cervellaswarm.com/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CervellaSwarm - 16 AI Agents, One Unstoppable Team">
+    <meta name="twitter:description" content="Coordinate 16 specialized AI agents via MCP. 3 Guardians verify every output. Your code stays local.">
+    <meta name="twitter:image" content="https://cervellaswarm.com/og-image.jpg">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script>
@@ -124,6 +138,14 @@
             background-color: #3FB950;
             border-color: #3FB950;
         }
+
+        /* Focus States - Accessibility (WCAG 2.4.7) */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible {
+            outline: 2px solid #F59E0B;
+            outline-offset: 2px;
+        }
     </style>
 </head>
 <body class="gradient-bg text-white">
@@ -167,8 +189,8 @@
 
         <!-- NPM Install Snippet -->
         <div class="mt-8 bg-slate-900 rounded-lg p-4 max-w-md mx-auto flex items-center justify-between gap-3">
-            <code class="text-primary">npm install -g @cervellaswarm/mcp-server</code>
-            <button onclick="copyNpm()" id="copy-btn" class="copy-btn border-2 border-primary text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary hover:text-secondary whitespace-nowrap">
+            <code class="text-primary">npm install -g cervellaswarm</code>
+            <button onclick="copyNpm()" id="copy-btn" aria-label="Copy npm install command" class="copy-btn border-2 border-primary text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary hover:text-secondary whitespace-nowrap">
                 Copy
             </button>
         </div>
@@ -315,7 +337,7 @@
                 </div>
                 <h3 class="text-2xl font-bold mb-2">Essentials</h3>
                 <p class="text-gray-400 mb-4">For individual developers</p>
-                <div class="text-4xl font-bold mb-6 text-primary">$19<span class="text-lg text-gray-400">/mo</span></div>
+                <div class="text-4xl font-bold mb-6 text-primary">$20<span class="text-lg text-gray-400">/mo</span></div>
                 <ul class="space-y-3 mb-8 text-gray-300">
                     <li>✓ Hosted tokens included</li>
                     <li>✓ Web dashboard</li>
@@ -331,7 +353,7 @@
             <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700">
                 <h3 class="text-2xl font-bold mb-2">Professional</h3>
                 <p class="text-gray-400 mb-4">For teams</p>
-                <div class="text-4xl font-bold mb-6">$39<span class="text-lg text-gray-400">/mo</span></div>
+                <div class="text-4xl font-bold mb-6">$40<span class="text-lg text-gray-400">/mo</span></div>
                 <ul class="space-y-3 mb-8 text-gray-300">
                     <li>✓ Unlimited tasks</li>
                     <li>✓ Team collaboration</li>
@@ -353,17 +375,26 @@
             <p class="text-xl text-gray-300 mb-8">
                 Join developers who ship faster with 16 AI specialists.
             </p>
-            <form class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                    type="email"
-                    placeholder="Enter your email"
-                    class="flex-1 px-6 py-4 rounded-lg bg-slate-900 border border-slate-700 focus:border-primary focus:outline-none"
-                >
-                <button type="submit" class="bg-primary text-secondary px-8 py-4 rounded-lg font-bold hover:bg-yellow-400 btn-hover whitespace-nowrap">
-                    Get Install Link
+
+            <!-- NPM Command Copiabile -->
+            <div class="bg-slate-900 rounded-lg p-4 flex items-center justify-between gap-3 max-w-lg mx-auto mb-6">
+                <code class="text-primary text-lg">npm install -g cervellaswarm</code>
+                <button onclick="copyCta()" id="cta-copy-btn" aria-label="Copy npm install command" class="copy-btn border-2 border-primary text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary hover:text-secondary whitespace-nowrap">
+                    Copy
                 </button>
-            </form>
-            <p class="text-gray-500 text-sm mt-4">
+            </div>
+
+            <!-- Dual CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="getting-started.html" class="bg-primary text-secondary px-8 py-4 rounded-lg text-xl font-bold hover:bg-yellow-400 btn-hover">
+                    Get Started Free
+                </a>
+                <a href="https://github.com/rafapra3008/CervellaSwarm" class="border-2 border-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-white hover:text-secondary btn-hover">
+                    View on GitHub
+                </a>
+            </div>
+
+            <p class="text-gray-500 text-sm mt-6">
                 No signup required. Works instantly.
             </p>
         </div>
@@ -384,6 +415,17 @@
             </div>
         </div>
         <div class="text-center text-gray-500 mt-8">
+            <!-- Dogfooding Badge -->
+            <p class="text-sm mb-4 flex items-center justify-center gap-2">
+                <i data-lucide="sparkles" class="inline w-4 h-4 text-primary"></i>
+                <span>Dogfooding: This entire site was built with CervellaSwarm</span>
+                <a href="https://github.com/rafapra3008/CervellaSwarm/commits/main/landing"
+                   class="text-primary hover:underline"
+                   target="_blank"
+                   rel="noopener">
+                    (see the commits)
+                </a>
+            </p>
             <p>"Build Better. Together."</p>
             <p class="text-sm mt-2">2026 CervellaSwarm. Made with love by the swarm.</p>
         </div>
@@ -392,7 +434,7 @@
     <!-- Copy NPM Script -->
     <script>
         function copyNpm() {
-            const command = 'npm install -g @cervellaswarm/mcp-server';
+            const command = 'npm install -g cervellaswarm';
             const btn = document.getElementById('copy-btn');
 
             navigator.clipboard.writeText(command).then(() => {
@@ -401,6 +443,23 @@
                 btn.classList.add('copied');
 
                 // Reset after 2s
+                setTimeout(() => {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+
+        function copyCta() {
+            const command = 'npm install -g cervellaswarm';
+            const btn = document.getElementById('cta-copy-btn');
+
+            navigator.clipboard.writeText(command).then(() => {
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+
                 setTimeout(() => {
                     btn.textContent = 'Copy';
                     btn.classList.remove('copied');
