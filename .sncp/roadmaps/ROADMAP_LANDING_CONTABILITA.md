@@ -1,13 +1,19 @@
 # ROADMAP - Landing Page Contabilita
 
 > **Creata:** 18 Gennaio 2026 - Sessione 265
+> **Aggiornata:** 19 Gennaio 2026 - Sessione 266
 > **Obiettivo:** Presentare il nostro primo capolavoro
 
 ---
 
-## VISIONE
+## STATO ATTUALE
 
-Una landing page nascosta (solo con link) che racconta la storia del progetto Contabilita Antigravity: le sfide, le soluzioni, il metodo. Non marketing, ma STORIA.
+```
++================================================================+
+|   SPRINT 1-2-3 COMPLETATI!                                      |
+|   Solo Sprint 4 (Deploy) rimasto!                               |
++================================================================+
+```
 
 ---
 
@@ -20,189 +26,97 @@ Una landing page nascosta (solo con link) che racconta la storia del progetto Co
 | Portali supportati | 3 (NL, HP, SHE) |
 | Rating sistema | 9.9/10 |
 | Versione | v2.7.0 |
-| FORTEZZA MODE | v4.3.0 |
-| Inizio | Dicembre 2025 |
-
----
-
-## SEZIONI DELLA LANDING (Ordine)
-
-### 1. HERO + IMPATTO
-- Titolo potente
-- Numero concreto: "X ore/mese automatizzate"
-- Screenshot hero del sistema
-
-### 2. IL PROBLEMA
-- Multi-portale (3 sistemi diversi, 3 formati PDF)
-- PDF "rompicapo" con dati sparsi
-- Nomi invertiti, caratteri accentati
-- Match caparre/giroconti manuale
-
-### 3. LA SOLUZIONE (come STORIA)
-**Parser PDF - Il Rompicapo**
-- v1.3.0: Bug associazione cliente
-- v1.4.0: Formato SHE diverso
-- v1.5.0: Deduplicazione (Heyvaert, Mazzon, Moise)
-- v1.6.0: "Caso Niccolo" - caratteri accentati
-
-**Algoritmo Pareggi**
-- Similarita nomi con SequenceMatcher
-- Gestione inversione nome/cognome
-- Match 1:1 e N:M
-
-### 4. ESEMPI VISIVI
-- Upload PDF -> Parsing automatico
-- Schermata validazione (caparre quadrano)
-- Sistema pareggi in azione
-- Export Excel finale
-
-### 5. NUMERI REALI
-```
-142 commit | 31.657 righe | 3 portali | 1 team | 0 compromessi
-```
-
-### 6. IL METODO
-Citazioni dalla COSTITUZIONE:
-- "Fatto BENE > Fatto VELOCE"
-- "I dettagli fanno SEMPRE la differenza"
-- "Nulla e complesso - solo non ancora studiato"
 
 ---
 
 ## SPRINT DI IMPLEMENTAZIONE
 
-### SPRINT 1: Contenuti (PRIMA del codice!) - COMPLETATO 18 Gen!
+### SPRINT 1: Contenuti - COMPLETATO 18 Gen!
+
 | Task | Status |
 |------|--------|
-| Scrivere testo Hero | FATTO |
-| Scrivere sezione Problema | FATTO |
-| Scrivere storia Parser (con casi reali) | FATTO |
-| Scrivere storia Pareggi | FATTO |
-| Lista screenshot (anonimizzati) | FATTO |
-| Sezione Perche e Unico | FATTO |
-| Sezione Il Metodo | FATTO |
-| Sezione Conclusione | FATTO |
+| 8 sezioni scritte | FATTO |
+| 1.433 righe totali | FATTO |
 
-**8 file creati - 1.433 righe totali!**
+### SPRINT 2: Design - COMPLETATO 19 Gen!
 
-### SPRINT 2: Design
 | Task | Status |
 |------|--------|
-| Mockup layout (cervella-marketing) | TODO |
-| Palette colori (coerente col portale) | TODO |
-| Animazioni counter | TODO |
+| Mockup layout (cervella-marketing) | FATTO |
+| Palette colori | FATTO |
+| Wireframe 7 sezioni | FATTO |
+| Review Guardiana (9/10) | FATTO |
 
-### SPRINT 3: Implementazione
+**Output:** `docs/landing/MOCKUP_DESIGN.md` (1.477 righe)
+
+### SPRINT 3: Implementazione - COMPLETATO 19 Gen!
+
 | Task | Status |
 |------|--------|
-| Creare pagina HTML/CSS | TODO |
-| Integrare screenshot | TODO |
-| Counter animato | TODO |
-| Test responsive | TODO |
+| HTML semantico (363 righe) | FATTO |
+| CSS responsive (1.077 righe) | FATTO |
+| JS animazioni (341 righe) | FATTO |
+| Counter animato | FATTO |
+| Fade-in on scroll | FATTO |
+| Test responsive | FATTO |
+| Review Guardiana (9/10) | FATTO |
+| Review Scienziata (8.5/10) | FATTO |
 
-### SPRINT 4: Deploy
+**Output:** `landing/` folder (index.html, styles.css, scripts.js)
+
+### SPRINT 4: Deploy - TODO
+
 | Task | Status |
 |------|--------|
-| Decidere hosting (GitHub Pages? Vercel?) | TODO |
-| Path: /showcase/contabilita/ | TODO |
-| Link nascosto (no index) | TODO |
+| Fix console.log (4 righe) | TODO |
+| Fix numeri (150→180) | TODO |
+| Verifica quote finale | TODO |
+| Decidere hosting | TODO |
+| Deploy online | TODO |
+| Test produzione | TODO |
 
 ---
 
-## STORIE DA RACCONTARE
+## FILE CREATI
 
-### Il Caso Niccolo (Perfetto per storytelling)
 ```
-PROBLEMA: "Bordin Galtarossa Niccolo" non veniva riconosciuto
-INDAGINE: La regex [A-Za-z] ignora i caratteri accentati
-FIX: Pattern esteso a [A-Za-z...] per tutti i caratteri latini
-MORALE: "I dettagli fanno SEMPRE la differenza"
-```
-
-### Il Bug dei Duplicati (€1.484,80 x 3)
-```
-PROBLEMA: 3 clienti con stesso importo sembravano duplicati
-- Heyvaert Johan [26403]/[26404]
-- Mazzon Eva [26744]/[26745]
-- Moise Cornelia [26837]/[26838]
-INDAGINE: Chiave deduplicazione non includeva client_id
-FIX: Aggiunto client_id alla chiave
-RISULTATO: €1.484,80 x 3 = €4.454,40 recuperati!
-```
-
-### Righe Spezzate
-```
-PROBLEMA: PDF con pagamento su 2 righe
-"Caparra - Unicredit100 - NL -"
-"MASTERCARD 01/02/2026"
-FIX: Pre-processing che unisce righe spezzate
-```
-
----
-
-## PERCHE E UNICO
-
-### Conoscenza dal Campo
-```
-Questo sistema NON poteva essere costruito da un developer esterno.
-
-PERCHE?
-- I PDF Ericsoft non hanno documentazione
-- Ogni portale (NL, HP, SHE) ha formati DIVERSI
-- Le eccezioni si scoprono SOLO processando dati reali
-- I pattern emergono dopo MESI di lavoro quotidiano
-```
-
-### Esempi di Conoscenza "Invisibile"
-```
-1. Righe spezzate su pagine diverse
-   → Solo chi processa centinaia di PDF lo scopre
-
-2. "FEST - Nome" vs "FE - Nome" vs "Nome"
-   → Varianti che cambiano senza preavviso
-
-3. Caparre senza nome cliente (solo circuito)
-   → Bisogna matchare per importo e data
-
-4. Nomi invertiti (ROSSI MARIO vs MARIO ROSSI)
-   → I portali non sono consistenti
-
-5. Caratteri accentati nei nomi stranieri
-   → Niccolo, Francois, Jose - ignorati da regex standard
-```
-
-### Il Vero Valore
-```
-NON e il codice. E la CONOSCENZA codificata.
-
-Anni di esperienza manuale trasformati in algoritmo.
-Ogni IF, ogni regex, ogni controllo = una lezione imparata.
-
-Un developer esterno scriverebbe codice "pulito"
-che fallirebbe al primo PDF reale.
-
-Questo sistema funziona perche chi l'ha progettato
-VIVE questi problemi ogni giorno.
+ContabilitaAntigravity/
+├── landing/
+│   ├── index.html      (363 righe)
+│   ├── styles.css      (1.077 righe)
+│   ├── scripts.js      (341 righe)
+│   └── README.md
+│
+└── docs/landing/
+    ├── 01_HERO.md
+    ├── 02_PROBLEMA.md
+    ├── 03_STORIA_PARSER.md
+    ├── 04_STORIA_PAREGGI.md
+    ├── 05_SCREENSHOT_NECESSARI.md
+    ├── 06_PERCHE_UNICO.md
+    ├── 07_IL_METODO.md
+    ├── 08_CONCLUSIONE.md
+    └── MOCKUP_DESIGN.md (1.477 righe)
 ```
 
 ---
 
-## COSA NON FARE
+## TOTALE RIGHE PRODOTTE
 
-- Linguaggio troppo tecnico (racconta come storia)
-- Lista features invece di narrazione
-- Screenshot vuoti/generici
-- Vanteria ("il migliore di tutti")
-- Dimenticare il PERCHE (liberta, non solo codice)
+| Tipo | Righe |
+|------|-------|
+| Contenuti (Sprint 1) | 1.433 |
+| Mockup (Sprint 2) | 1.477 |
+| Codice (Sprint 3) | 1.781 |
+| **TOTALE** | **4.691** |
 
 ---
 
-## NOTE
+## PROSSIMA SESSIONE
 
-- Path suggerito: `/showcase/contabilita/`
-- Nascosta ma linkabile
-- Contenuti PRIMA, codice DOPO
-- Anonimizzare dati sensibili negli screenshot
+1. Fix minori pre-deploy (5 min)
+2. Decidere hosting
+3. **DEPLOY!**
 
 ---
 

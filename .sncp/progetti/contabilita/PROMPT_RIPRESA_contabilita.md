@@ -1,6 +1,6 @@
 # PROMPT RIPRESA - Contabilita
 
-> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 265
+> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 266
 > **Per SOLO questo progetto!**
 
 ---
@@ -11,65 +11,57 @@
 +================================================================+
 |   CONTABILITA ANTIGRAVITY                                       |
 |   Sistema: v2.7.0 LIVE | Rating: 9.9/10                        |
-|   Nuovo: LANDING PAGE in sviluppo!                              |
+|   LANDING PAGE: Sprint 1-2-3 COMPLETATI!                       |
 +================================================================+
 ```
 
 ---
 
-## SESSIONE 265 - LANDING PAGE SPRINT 1
+## SESSIONE 266 - LANDING PAGE SPRINT 2+3
 
-**Obiettivo:** Creare landing page nascosta per presentare il progetto
+**Completati in una sessione:** Design + Implementazione!
 
-**COMPLETATO:**
-- Roadmap creata (4 sprint)
-- Ricerca approfondita (3 api parallele)
-- **8 sezioni scritte - 1.433 righe totali**
+**File creati in `ContabilitaAntigravity/landing/`:**
 
-**File creati in `ContabilitaAntigravity/docs/landing/`:**
+| File | Righe | Cosa |
+|------|-------|------|
+| index.html | 363 | 7 sezioni complete |
+| styles.css | 1.077 | Responsive, animazioni |
+| scripts.js | 341 | Counter, scroll effects |
+| MOCKUP_DESIGN.md | 1.477 | Design specs |
 
-| File | Contenuto |
-|------|-----------|
-| `01_HERO.md` | Titoli, stats (150+ ore, 90%+ match) |
-| `02_PROBLEMA.md` | Il caos quotidiano, 3 portali |
-| `03_STORIA_PARSER.md` | 6 capitoli, €3.372 recuperati |
-| `04_STORIA_PAREGGI.md` | Matching intelligente |
-| `05_SCREENSHOT_NECESSARI.md` | Lista 10 screenshot |
-| `06_PERCHE_UNICO.md` | Conoscenza codificata |
-| `07_IL_METODO.md` | Filosofia (5 principi) |
-| `08_CONCLUSIONE.md` | Messaggio finale |
+**Review finale:**
+- Guardiana Qualita (codice): **9/10** APPROVE
+- Scienziata (testi): **8.5/10** Revisione minore
 
 ---
 
-## NUMERI CHIAVE (per landing)
+## FIX PRE-DEPLOY
 
-```
-31.657      142       3         90%+      €3.372     150+
-righe       commit    portali   match     recuperati ore/anno
-codice                          automatici           liberate
-```
+| Issue | Fix |
+|-------|-----|
+| 4 console.log | Rimuovere righe 293,302,321,330 in scripts.js |
+| Numeri ore | 150+ → 180+ (coerenza con calcolo 4h→30min) |
+| Quote finale | Verificare grammatica riga 344 |
 
 ---
 
-## PROSSIMI SPRINT
+## MAPPA SPRINT
 
 | Sprint | Cosa | Status |
 |--------|------|--------|
-| 1 | Contenuti | FATTO |
-| 2 | Design mockup | TODO |
-| 3 | HTML/CSS | TODO |
+| 1 | Contenuti (8 sezioni) | FATTO 18 Gen |
+| 2 | Design mockup | FATTO 19 Gen |
+| 3 | HTML/CSS/JS | FATTO 19 Gen |
 | 4 | Deploy | TODO |
 
 ---
 
-## FILE CHIAVE
+## PROSSIMA SESSIONE
 
-| Cosa | Path |
-|------|------|
-| Landing content | `ContabilitaAntigravity/docs/landing/` |
-| Roadmap | `.sncp/roadmaps/ROADMAP_LANDING_CONTABILITA.md` |
-| Progetto | `~/Developer/ContabilitaAntigravity/` |
-| NORD | `ContabilitaAntigravity/NORD.md` |
+1. Fix minori (5 minuti)
+2. Decidere hosting (GitHub Pages? Vercel?)
+3. **DEPLOY ONLINE!**
 
 ---
 
@@ -80,15 +72,8 @@ codice                          automatici           liberate
 | Backend | v1.12.0 | LIVE |
 | PDF Parser | v1.6.0 | LIVE |
 | FORTEZZA MODE | v4.3.0 | Attivo |
+| Landing Page | v1.0.0 | LOCALE |
 
 ---
 
-## PROSSIMA SESSIONE
-
-1. Sprint 2: Chiedere a cervella-marketing mockup
-2. Decidere hosting (GitHub Pages? Vercel?)
-3. Catturare screenshot (anonimizzati)
-
----
-
-*"Il nostro primo capolavoro merita una presentazione degna!"*
+*"Il nostro primo capolavoro ha la sua presentazione degna!"*
