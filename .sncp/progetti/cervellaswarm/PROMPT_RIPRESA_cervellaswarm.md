@@ -92,14 +92,18 @@ Worker implementa seguendo plan
 
 ---
 
-## STRATEGIA VINCENTE CONFERMATA
+## STRATEGIA VINCENTE - OBBLIGATORIA!
 
 ```
++================================================================+
+|   DOPO OGNI PARTE FATTA → GUARDIANA QUALITÀ AUDIT!           |
++================================================================+
+
 1. Ricerca PRIMA (cervella-researcher)
 2. Implementa task
-3. Guardiana audit (target 9.5+)
+3. ⭐ GUARDIANA AUDIT (target 9.5+) ← SEMPRE DOPO OGNI PARTE!
 4. Hardtests
-5. Consultare Guardiana su decisioni ambigue
+5. Se decisione ambigua → CONSULTARE GUARDIANA
 6. Avanti al prossimo
 
 FUNZIONA! W3 completato con media 9.75/10!
