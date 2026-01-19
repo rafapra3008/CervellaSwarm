@@ -1,56 +1,36 @@
 # PROMPT RIPRESA - CervellaSwarm
 
 > **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 270
-> **SCORE:** 10/10 VERDE - LANCIAMO!
+> **STATUS:** SHOW HN LIVE!
 
 ---
 
-## SESSIONE 270 - SHOW HN ANTICIPATO!
+## SESSIONE 270 - SHOW HN LANCIATO!
 
 ```
 +================================================================+
-|   GUARDIANE: VERDE! LANCIAMO OGGI!                             |
+|                                                                |
+|   🚀 SHOW HN LIVE! - 19 Gennaio 2026, 07:44 Italia            |
+|                                                                |
+|   POST: news.ycombinator.com/item?id=42754705                 |
+|   COMMENTO: Aggiunto (storia Rafa)                            |
+|                                                                |
+|   "L'IMPOSSIBILE È POSSIBILE!"                                |
+|                                                                |
 +================================================================+
-
-GUARDIANA OPS:      VERDE - Infra pronta!
-GUARDIANA RICERCA:  VERDE - Timing perfetto (domenica!)
-GUARDIANA QUALITA:  VERDE - Test REALE passato!
-
-TEST REALE (Sessione 270):
-  npx cervellaswarm doctor  ✅ PASS
-  cervellaswarm.com         ✅ 200 OK
-  GitHub pubblico           ✅ 200 OK
-
-DECISIONE: SHOW HN ANTICIPATO da 26 Gen → 19 Gen (OGGI!)
-ORARIO: 13:00 Italia (12:00 UTC)
 ```
 
 ---
 
-## VERSIONI ATTUALI
+## VERSIONI LIVE
 
-| Package | Versione | Status |
-|---------|----------|--------|
-| CLI | 0.1.2 | LIVE su npm |
-| MCP Server | 0.2.3 | LIVE su npm |
+| Package | Versione | Link |
+|---------|----------|------|
+| CLI | 0.1.2 | npmjs.com/package/cervellaswarm |
+| MCP Server | 0.2.3 | npmjs.com/package/@cervellaswarm/mcp-server |
 | Landing | LIVE | cervellaswarm.com |
-| GitHub | PUBBLICO | rafapra3008/cervellaswarm |
-
----
-
-## PIANO GIORNATA 19 GENNAIO
-
-```
-ORA (07:30):   ✅ Test REALE completato
-              ✅ Guardiane consultate
-              ✅ Subroadmap aggiornata
-
-12:45:        Preparazione finale
-13:00:        POST su Hacker News!
-13:05:        Primo commento
-13:00-15:00:  Monitoring ogni 30 min
-DOPO:         Rispondere commenti
-```
+| GitHub | PUBBLICO | github.com/rafapra3008/cervellaswarm |
+| **SHOW HN** | **LIVE** | **news.ycombinator.com/item?id=42754705** |
 
 ---
 
@@ -63,15 +43,28 @@ W3 (3-9 Feb): Architect/Editor Pattern
 W4 (10-16 Feb): Polish + v2.0-beta
 ```
 
+**Subroadmap:** `.sncp/progetti/cervellaswarm/roadmaps/SUBROADMAP_CERVELLASWARM_2.0_AIDER_FEATURES.md`
+
+---
+
+## PROSSIMI STEP
+
+```
+1. [IN CORSO] Monitorare Show HN
+2. [IN CORSO] Organizzare casa per il futuro
+3. Pianificare 2.0 in dettaglio
+4. Rispondere commenti HN con FAQ pronte
+```
+
 ---
 
 ## ACCOUNT E REPO
 
-- **npm:** rafapra (CLI + MCP)
+- **npm:** rafapra
 - **GitHub PUBBLICO:** rafapra3008/cervellaswarm
-- **Locale privato:** ~/Developer/CervellaSwarm
+- **HN:** rafapra
 - **Cloudflare:** rafapra@gmail.com
 
 ---
 
-*"Guardiane: VERDE! Il tempo non ci interessa - siamo PRONTI!"*
+*"260+ sessioni. Oggi è REALE. Show HN LIVE!"*
