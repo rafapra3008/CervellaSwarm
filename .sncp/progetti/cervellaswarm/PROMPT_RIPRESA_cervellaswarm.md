@@ -1,42 +1,45 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 276
-> **STATUS:** W2 Day 3 - Test Miracollo + DECISIONE AUTO-CONTEXT
+> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 277
+> **STATUS:** W2.5-A COMPLETATO! Prossimo W2.5-B TypeScript
 
 ---
 
-## SESSIONE 276 - W2 DAY 3 TEST + DECISIONE
+## SESSIONE 277 - W2.5-A PYTHON REFERENCES DONE!
 
 ```
 +================================================================+
-|   W2 TREE-SITTER - DAY 3 COMPLETATO!                          |
-|   Test su Miracollo: PROBLEMA TROVATO                          |
-|   DECISIONE: Aspettare W2.5 per AUTO-CONTEXT perfetto         |
+|   W2.5-A PYTHON REFERENCE EXTRACTION - COMPLETATO!              |
+|   PageRank FUNZIONA! Ordine per IMPORTANZA!                     |
+|   Guardiana Qualita: 9.2/10 APPROVED                            |
 +================================================================+
 ```
 
-**FATTO in Sessione 276:**
-- Double check Guardiana Qualita: 91/100 APPROVED
-- Test AUTO-CONTEXT su Miracollo PMS
-- SCOPERTA: `extract_references()` ritorna vuoto (W2.5)
-- PageRank non funziona (ordine alfabetico)
-- Analisi con Guardiana Qualita + Guardiana Ops
-- **DECISIONE RAFA:** Opzione A - Aspettare W2.5
-- Standard richiesto: **minimo 9.5/10**
+**FATTO in Sessione 277:**
+- REQ-01 to REQ-06: TUTTI implementati
+- `_extract_python_references()` estrae: calls, methods, imports, inheritance, types
+- `_extract_module_level_references()` estrae imports a livello modulo
+- `PYTHON_BUILTINS` set per filtrare print, len, etc.
+- `add_reference()` ora risolve nomi semplici a symbol_id
+- T01-T14: 14/14 PASS
+- Test esistenti: 52 PASS (no regressioni)
+- Audit Guardiana Qualita: **9.2/10 APPROVED**
 
 ---
 
-## DECISIONE AUTO-CONTEXT
+## PAGERANK ORA FUNZIONA!
 
 ```
-NON usare --with-context fino a W2.5!
+PRIMA (sessione 276):
+  extract_references() → []
+  PageRank → tutti score UGUALI
+  Ordine file → ALFABETICO
 
-Motivo: PageRank non funziona senza references
-Soluzione: Implementare extract_references() in W2.5
-Target: Score 9.5/10 prima di rilasciare
+DOPO (sessione 277):
+  extract_references() → ['Symbol', 'Path', ...]
+  PageRank → Symbol=0.0158, altri=0.0057
+  Ordine file → per IMPORTANZA!
 ```
-
-**Report completo:** `reports/decisione_autocontext_20260119.md`
 
 ---
 
@@ -44,62 +47,63 @@ Target: Score 9.5/10 prima di rilasciare
 
 ```
 W1: Git Flow       [DONE] COMPLETATO!
-W2: Tree-sitter    [##################..] 60% (Day 3/7)
-    Day 1-2: Core + Integration  DONE
-    Day 3: Test Miracollo        DONE (problema trovato)
-    Day 4-5: W2.5 References     PROSSIMO
-    Day 6-7: Polish + 9.5/10     PIANIFICATO
+W2: Tree-sitter    [####################] 70% (Day 4/7)
+    Day 1-2: Core + Integration   DONE
+    Day 3: Test Miracollo         DONE
+    Day 4: W2.5-A Python          DONE! ← SESSIONE 277
+    Day 5: W2.5-B TypeScript      NEXT
+    Day 6-7: Polish + 9.5/10      PIANIFICATO
 W3: Architect/Editor
 W4: Polish + v2.0-beta
 ```
 
 ---
 
-## W2.5 - PIANO REFERENCE EXTRACTION
+## FILE W2 MODIFICATI (Sessione 277)
 
-| Task | Descrizione | Sessioni |
-|------|-------------|----------|
-| 1 | `extract_references()` Python | 1 |
-| 2 | `extract_references()` TypeScript | 1 |
-| 3 | Test CervellaSwarm + Miracollo | 1 |
-| 4 | Audit Guardiana (9.5/10) | 0.5 |
-
-**Totale:** 3-4 sessioni
+| File | Versione | Modifiche |
+|------|----------|-----------|
+| `symbol_extractor.py` | v2.0.0 | +`_extract_python_references()`, +`_extract_module_level_references()`, +`PYTHON_BUILTINS` |
+| `dependency_graph.py` | - | `add_reference()` ora risolve nomi |
 
 ---
 
-## FILE W2 TREE-SITTER
+## W2.5 PROGRESS
 
-| File | Righe | Status |
-|------|-------|--------|
-| `treesitter_parser.py` | 365 | OK |
-| `symbol_extractor.py` | 484 | W2.5 needed |
-| `dependency_graph.py` | 451 | OK |
-| `repo_mapper.py` | 571 | OK |
-| `generate_worker_context.py` | 147 | OK |
-| `spawn-workers.sh` | 1136 | v3.7.0 |
+| Task | Status |
+|------|--------|
+| W2.5-A: Python References | DONE (9.2/10) |
+| W2.5-B: TypeScript References | NEXT |
+| W2.5-C: Integration Test | PENDING |
+| W2.5-D: Audit 9.5/10 | PENDING |
 
 ---
 
-## VERSIONI LIVE
+## PROSSIMA SESSIONE - W2.5-B TYPESCRIPT
 
-| Package | Versione |
-|---------|----------|
-| CLI | 0.1.2 |
-| MCP Server | 0.2.3 |
-| spawn-workers | 3.7.0 |
+**Cosa fare:**
+1. Leggere `SUBROADMAP_W2.5_REFERENCE_EXTRACTION.md`
+2. Implementare REQ-07: TypeScript references
+   - Function calls
+   - Imports
+   - Class extends
+   - Type annotations
+3. Test T15-T18
+4. **Audit Guardiana Qualita dopo ogni step**
+5. Target: Score 9.5/10 totale
 
----
-
-## PROSSIMA SESSIONE
-
-**W2.5 - Reference Extraction:**
-1. Implementare `extract_references()` per import Python
-2. Testare PageRank con references reali
-3. Verificare ordine file per importanza (non alfabetico)
-4. Audit Guardiana Qualita: target 9.5/10
+**File da modificare:** `symbol_extractor.py` (metodo `_extract_typescript_symbols`)
 
 ---
 
-*"Non abbiamo fretta. Minimo 9.5 di score!"*
-*Sessione 276 - Cervella & Rafa*
+## SUBROADMAP
+
+| Doc | Path |
+|-----|------|
+| W2.5 Plan | `.sncp/roadmaps/SUBROADMAP_W2.5_REFERENCE_EXTRACTION.md` |
+| Decisione | `reports/decisione_autocontext_20260119.md` |
+
+---
+
+*"Fatto BENE > Fatto VELOCE. W2.5-A: 9.2/10!"*
+*Sessione 277 - Cervella & Rafa*

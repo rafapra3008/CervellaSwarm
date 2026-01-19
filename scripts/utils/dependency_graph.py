@@ -100,18 +100,32 @@ class DependencyGraph:
 
         Records that from_symbol references/uses to_symbol.
 
+        If to_symbol is a simple name (without ":"), it will be resolved
+        to a full symbol_id by searching existing nodes. This allows
+        references extracted from code (e.g., "MyClass") to match
+        symbols in the graph (e.g., "file.py:10:MyClass").
+
         Args:
             from_symbol: ID of the symbol making the reference
-            to_symbol: ID of the symbol being referenced
+            to_symbol: ID or name of the symbol being referenced
 
         Example:
-            >>> graph.add_reference("auth.py:login", "auth.py:verify_credentials")
-            >>> # login() calls verify_credentials()
+            >>> graph.add_reference("auth.py:5:login", "verify_credentials")
+            >>> # Will resolve to "auth.py:15:verify_credentials" if exists
         """
-        edge = (from_symbol, to_symbol)
+        # W2.5: Resolve simple names to full symbol_id
+        resolved_to = to_symbol
+        if ":" not in to_symbol:
+            # Search for matching symbol by name
+            for node_id, node in self.nodes.items():
+                if node.name == to_symbol:
+                    resolved_to = node_id
+                    break
+
+        edge = (from_symbol, resolved_to)
         if edge not in self.edges:
             self.edges.append(edge)
-            logger.debug(f"Added reference: {from_symbol} -> {to_symbol}")
+            logger.debug(f"Added reference: {from_symbol} -> {resolved_to}")
 
     def compute_importance(self) -> Dict[str, float]:
         """Compute importance scores via PageRank algorithm.

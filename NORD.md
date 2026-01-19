@@ -2,7 +2,7 @@
 
 > **QUESTO FILE È SACRO. È LA NOSTRA BUSSOLA.**
 >
-> Aggiornato: 19 Gennaio 2026 - Sessione 276 - W2 Day 3 + DECISIONE QUALITA!
+> Aggiornato: 19 Gennaio 2026 - Sessione 277 - W2.5-A Python References DONE!
 
 ```
 +==================================================================+
@@ -169,31 +169,39 @@ SESSIONE 275: 🌳 W2 TREE-SITTER DAY 2!
   ✓ AUDIT 95/100 APPROVED!
   → W2 DAY 2 COMPLETATO!
 
-SESSIONE 276: 🌳 W2 TREE-SITTER DAY 3! ← OGGI!
+SESSIONE 276: 🌳 W2 TREE-SITTER DAY 3!
   ✓ TEST MIRACOLLO PMS!
     - AUTO-CONTEXT testato su progetto REALE
     - SCOPERTA: extract_references() vuoto
     - PageRank non funziona (ordine alfabetico)
   ✓ ANALISI 2 GUARDIANE!
-    - Guardiana Qualita: USA_CON_WORKAROUND
-    - Guardiana Ops: USE_WITH_CAUTION
-  ✓ DECISIONE RAFA!
-    - Opzione A: Aspettare W2.5
-    - "Non abbiamo fretta. Minimo 9.5!"
+  ✓ DECISIONE RAFA: Aspettare W2.5
   ✓ SUBROADMAP W2.5 CREATA!
-    - 10 requisiti definiti
-    - 20 test pianificati
-    - 3-4 sessioni stimate
   → W2 DAY 3 COMPLETATO!
 
-SCORE: 91/100 ✅ W2 DAY 3 - DECISIONE QUALITA PRESA!
+SESSIONE 277: 🎯 W2.5-A PYTHON REFERENCES! ← OGGI!
+  ✓ REQ-01 to REQ-06 IMPLEMENTATI!
+    - _extract_python_references() NUOVO
+    - _extract_module_level_references() NUOVO
+    - PYTHON_BUILTINS set per filtro
+    - add_reference() name resolution
+  ✓ T01-T14: 14/14 PASS!
+  ✓ TEST ESISTENTI: 52 PASS (no regressioni)!
+  ✓ PAGERANK FUNZIONA!
+    - Symbol = 0.0158 (top, most referenced)
+    - Ordine per IMPORTANZA, non alfabetico!
+  ✓ AUDIT GUARDIANA QUALITA: 9.2/10 APPROVED!
+  → W2.5-A COMPLETATO!
+
+SCORE: 92/100 ✅ W2.5-A - PYTHON REFERENCES DONE!
 
 ROADMAP 2.0:
   W1: Git Flow       ████████████████████ 100% ✅
-  W2: Tree-sitter    ████████████░░░░░░░░ 60% (Day 3/7)
+  W2: Tree-sitter    ██████████████░░░░░░ 70% (Day 4/7)
       Day 1-2: Core + Integration   DONE
       Day 3: Test + Decisione       DONE
-      Day 4-5: W2.5 References      NEXT
+      Day 4: W2.5-A Python          DONE! ← SESSIONE 277
+      Day 5: W2.5-B TypeScript      NEXT
       Day 6-7: Polish + 9.5/10
   W3: Architect/Editor
   W4: Polish + v2.0-beta

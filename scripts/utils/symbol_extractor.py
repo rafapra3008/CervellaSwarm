@@ -21,12 +21,20 @@ Supported Languages:
     - JavaScript/JSX: functions, classes
 
 Author: Cervella Backend
-Version: 1.0.0
+Version: 2.0.0 (W2.5 Reference Extraction)
 Date: 2026-01-19
 """
 
-__version__ = "1.0.0"
+__version__ = "2.0.0"
 __version_date__ = "2026-01-19"
+__changelog__ = """
+v2.0.0 (2026-01-19) - W2.5 Reference Extraction
+    - Added _extract_python_references() for Python code analysis
+    - Symbol.references now populated during extract_symbols()
+    - Supports: function calls, method calls, imports, inheritance, type annotations
+    - Filters Python builtins (PYTHON_BUILTINS set)
+    - REQ-01 to REQ-06 implemented
+"""
 
 import logging
 from dataclasses import dataclass, field
@@ -38,6 +46,34 @@ from treesitter_parser import TreesitterParser
 
 # Configure logging
 logger = logging.getLogger(__name__)
+
+# Python builtins to ignore in reference extraction (T14)
+PYTHON_BUILTINS = frozenset({
+    # Built-in functions
+    "abs", "all", "any", "ascii", "bin", "bool", "breakpoint", "bytearray",
+    "bytes", "callable", "chr", "classmethod", "compile", "complex",
+    "delattr", "dict", "dir", "divmod", "enumerate", "eval", "exec",
+    "filter", "float", "format", "frozenset", "getattr", "globals",
+    "hasattr", "hash", "help", "hex", "id", "input", "int", "isinstance",
+    "issubclass", "iter", "len", "list", "locals", "map", "max",
+    "memoryview", "min", "next", "object", "oct", "open", "ord", "pow",
+    "print", "property", "range", "repr", "reversed", "round", "set",
+    "setattr", "slice", "sorted", "staticmethod", "str", "sum", "super",
+    "tuple", "type", "vars", "zip",
+    # Constants
+    "True", "False", "None", "Ellipsis", "NotImplemented",
+    # Special names
+    "self", "cls", "__init__", "__new__", "__del__", "__repr__", "__str__",
+    "__bytes__", "__format__", "__lt__", "__le__", "__eq__", "__ne__",
+    "__gt__", "__ge__", "__hash__", "__bool__", "__getattr__", "__setattr__",
+    "__delattr__", "__dir__", "__get__", "__set__", "__delete__",
+    "__call__", "__len__", "__getitem__", "__setitem__", "__delitem__",
+    "__iter__", "__next__", "__contains__", "__add__", "__sub__", "__mul__",
+    "__enter__", "__exit__", "__await__", "__aiter__", "__anext__",
+    # Common typing
+    "Any", "Union", "Optional", "List", "Dict", "Set", "Tuple", "Type",
+    "Callable", "Iterable", "Iterator", "Generator", "Sequence", "Mapping",
+})
 
 
 @dataclass
@@ -86,6 +122,216 @@ class SymbolExtractor:
         """
         self.parser = parser
         logger.debug("SymbolExtractor initialized")
+
+    def _extract_python_references(self, node: Node) -> List[str]:
+        """Extract all references from a Python AST node.
+
+        Extracts function calls, method calls, imports, inheritance, and type
+        annotations from the given node and its children.
+
+        Args:
+            node: Tree-sitter Node to analyze (typically function/class body)
+
+        Returns:
+            List of unique reference names (excluding builtins)
+
+        Covers:
+            - REQ-02: Function calls (func())
+            - REQ-03: Method calls (obj.method())
+            - REQ-04: Imports (from X import Y)
+            - REQ-05: Class inheritance (class A(B))
+            - REQ-06: Type annotations (x: MyType)
+        """
+        references = set()
+
+        def extract_from_node(n: Node) -> None:
+            """Recursively extract references from node."""
+            # REQ-02: Function calls - func()
+            # T01, T02, T12 (nested)
+            if n.type == "call":
+                func_node = n.child_by_field_name("function")
+                if func_node:
+                    # Simple call: func()
+                    if func_node.type == "identifier":
+                        name = func_node.text.decode()
+                        if name not in PYTHON_BUILTINS:
+                            references.add(name)
+                    # REQ-03: Method call: obj.method()
+                    # T03, T04
+                    elif func_node.type == "attribute":
+                        attr_node = func_node.child_by_field_name("attribute")
+                        if attr_node:
+                            method_name = attr_node.text.decode()
+                            if method_name not in PYTHON_BUILTINS:
+                                references.add(method_name)
+                        # Also extract the object if it's an identifier
+                        obj_node = func_node.child_by_field_name("object")
+                        if obj_node and obj_node.type == "identifier":
+                            obj_name = obj_node.text.decode()
+                            if obj_name not in PYTHON_BUILTINS:
+                                references.add(obj_name)
+
+            # REQ-04: Imports - from X import Y
+            # T05, T06
+            elif n.type == "import_from_statement":
+                # Module name
+                module_node = n.child_by_field_name("module_name")
+                if module_node:
+                    module_name = module_node.text.decode()
+                    # Extract first part of dotted name (e.g., "fastapi" from "fastapi.routing")
+                    first_part = module_name.split(".")[0]
+                    if first_part and first_part not in PYTHON_BUILTINS and not first_part.startswith("."):
+                        references.add(first_part)
+                # Imported names
+                for child in n.children:
+                    if child.type == "dotted_name":
+                        imported = child.text.decode()
+                        if imported not in PYTHON_BUILTINS:
+                            references.add(imported)
+                    elif child.type == "aliased_import":
+                        name_node = child.child_by_field_name("name")
+                        if name_node:
+                            imported = name_node.text.decode()
+                            if imported not in PYTHON_BUILTINS:
+                                references.add(imported)
+
+            # Import statement: import X
+            elif n.type == "import_statement":
+                for child in n.children:
+                    if child.type == "dotted_name":
+                        module_name = child.text.decode()
+                        first_part = module_name.split(".")[0]
+                        if first_part and first_part not in PYTHON_BUILTINS:
+                            references.add(first_part)
+                    elif child.type == "aliased_import":
+                        name_node = child.child_by_field_name("name")
+                        if name_node:
+                            module_name = name_node.text.decode()
+                            first_part = module_name.split(".")[0]
+                            if first_part and first_part not in PYTHON_BUILTINS:
+                                references.add(first_part)
+
+            # REQ-05: Class inheritance - class A(B, C)
+            # T07, T08
+            elif n.type == "class_definition":
+                bases_node = n.child_by_field_name("superclasses")
+                if bases_node:
+                    for child in bases_node.children:
+                        if child.type == "identifier":
+                            base_name = child.text.decode()
+                            if base_name not in PYTHON_BUILTINS:
+                                references.add(base_name)
+                        elif child.type == "attribute":
+                            # Handle qualified names like module.ClassName
+                            attr_node = child.child_by_field_name("attribute")
+                            if attr_node:
+                                references.add(attr_node.text.decode())
+
+            # REQ-06: Type annotations - x: MyType, def f() -> ReturnType
+            # T09, T10
+            elif n.type == "type":
+                # Extract type name from annotation
+                for child in n.children:
+                    if child.type == "identifier":
+                        type_name = child.text.decode()
+                        if type_name not in PYTHON_BUILTINS:
+                            references.add(type_name)
+                    elif child.type == "generic_type":
+                        # Handle List[T], Dict[K, V], etc.
+                        type_id = child.child_by_field_name("type")
+                        if type_id and type_id.type == "identifier":
+                            type_name = type_id.text.decode()
+                            if type_name not in PYTHON_BUILTINS:
+                                references.add(type_name)
+                        # Extract type parameters
+                        type_args = child.child_by_field_name("type_arguments")
+                        if type_args:
+                            for arg in type_args.children:
+                                if arg.type == "type":
+                                    for inner in arg.children:
+                                        if inner.type == "identifier":
+                                            inner_name = inner.text.decode()
+                                            if inner_name not in PYTHON_BUILTINS:
+                                                references.add(inner_name)
+
+            # T11: Decorators - @my_decorator
+            elif n.type == "decorator":
+                for child in n.children:
+                    if child.type == "identifier":
+                        dec_name = child.text.decode()
+                        if dec_name not in PYTHON_BUILTINS:
+                            references.add(dec_name)
+                    elif child.type == "call":
+                        func_node = child.child_by_field_name("function")
+                        if func_node and func_node.type == "identifier":
+                            dec_name = func_node.text.decode()
+                            if dec_name not in PYTHON_BUILTINS:
+                                references.add(dec_name)
+                    elif child.type == "attribute":
+                        attr_node = child.child_by_field_name("attribute")
+                        if attr_node:
+                            references.add(attr_node.text.decode())
+
+            # Recurse to children
+            for child in n.children:
+                extract_from_node(child)
+
+        extract_from_node(node)
+        return sorted(references)
+
+    def _extract_module_level_references(self, root_node: Node) -> List[str]:
+        """Extract module-level references (imports) from Python AST.
+
+        These are references that apply to the entire file, not specific symbols.
+
+        Args:
+            root_node: Root node of the parsed tree (module node)
+
+        Returns:
+            List of import references (module names, imported names)
+        """
+        references = set()
+
+        for child in root_node.children:
+            # import X, import X as Y
+            if child.type == "import_statement":
+                for sub in child.children:
+                    if sub.type == "dotted_name":
+                        module_name = sub.text.decode()
+                        first_part = module_name.split(".")[0]
+                        if first_part and first_part not in PYTHON_BUILTINS:
+                            references.add(first_part)
+                    elif sub.type == "aliased_import":
+                        name_node = sub.child_by_field_name("name")
+                        if name_node:
+                            module_name = name_node.text.decode()
+                            first_part = module_name.split(".")[0]
+                            if first_part and first_part not in PYTHON_BUILTINS:
+                                references.add(first_part)
+
+            # from X import Y, from X import Y as Z
+            elif child.type == "import_from_statement":
+                # Module name
+                module_node = child.child_by_field_name("module_name")
+                if module_node:
+                    module_name = module_node.text.decode()
+                    first_part = module_name.split(".")[0]
+                    if first_part and first_part not in PYTHON_BUILTINS and not first_part.startswith("."):
+                        references.add(first_part)
+                # Imported names
+                for sub in child.children:
+                    if sub.type == "dotted_name":
+                        imported = sub.text.decode()
+                        if imported not in PYTHON_BUILTINS:
+                            references.add(imported)
+                    elif sub.type == "aliased_import":
+                        name_node = sub.child_by_field_name("name")
+                        if name_node:
+                            imported = name_node.text.decode()
+                            if imported not in PYTHON_BUILTINS:
+                                references.add(imported)
+
+        return sorted(references)
 
     def extract_symbols(self, file_path: str) -> List[Symbol]:
         """Extract all symbols from a file.
@@ -138,6 +384,33 @@ class SymbolExtractor:
         """
         symbols = []
 
+        # W2.5: Extract module-level references (imports) to add to all symbols
+        module_refs = self._extract_module_level_references(tree.root_node)
+
+        def get_decorator_refs(node: Node) -> List[str]:
+            """Extract references from decorators if node is in decorated_definition."""
+            refs = []
+            parent = node.parent
+            if parent and parent.type == "decorated_definition":
+                for child in parent.children:
+                    if child.type == "decorator":
+                        for deco_child in child.children:
+                            if deco_child.type == "identifier":
+                                name = deco_child.text.decode()
+                                if name not in PYTHON_BUILTINS:
+                                    refs.append(name)
+                            elif deco_child.type == "call":
+                                func = deco_child.child_by_field_name("function")
+                                if func and func.type == "identifier":
+                                    name = func.text.decode()
+                                    if name not in PYTHON_BUILTINS:
+                                        refs.append(name)
+                            elif deco_child.type == "attribute":
+                                attr = deco_child.child_by_field_name("attribute")
+                                if attr:
+                                    refs.append(attr.text.decode())
+            return refs
+
         def traverse(node: Node) -> None:
             """Recursively traverse AST and extract symbols."""
             # Function definitions
@@ -170,6 +443,12 @@ class SymbolExtractor:
                                 doc_text = string_node.text.decode()
                                 docstring = doc_text.strip('"""').strip("'''").strip()
 
+                    # Extract references from function body (W2.5)
+                    body_refs = self._extract_python_references(node)
+                    decorator_refs = get_decorator_refs(node)
+                    # Combine: body refs + module-level imports + decorators
+                    all_refs = sorted(set(body_refs) | set(module_refs) | set(decorator_refs))
+
                     symbol = Symbol(
                         name=name,
                         type="function",
@@ -177,6 +456,7 @@ class SymbolExtractor:
                         line=name_node.start_point[0] + 1,
                         signature=signature,
                         docstring=docstring,
+                        references=all_refs,
                     )
                     symbols.append(symbol)
 
@@ -206,6 +486,12 @@ class SymbolExtractor:
                                 doc_text = string_node.text.decode()
                                 docstring = doc_text.strip('"""').strip("'''").strip()
 
+                    # Extract references from class body (W2.5)
+                    body_refs = self._extract_python_references(node)
+                    decorator_refs = get_decorator_refs(node)
+                    # Combine: body refs + module-level imports + decorators
+                    all_refs = sorted(set(body_refs) | set(module_refs) | set(decorator_refs))
+
                     symbol = Symbol(
                         name=name,
                         type="class",
@@ -213,6 +499,7 @@ class SymbolExtractor:
                         line=name_node.start_point[0] + 1,
                         signature=signature,
                         docstring=docstring,
+                        references=all_refs,
                     )
                     symbols.append(symbol)
 
@@ -383,22 +670,22 @@ class SymbolExtractor:
         """
         return symbol.signature
 
-    def extract_references(self, symbol: Symbol, tree) -> List[str]:
+    def extract_references(self, symbol: Symbol, tree=None) -> List[str]:
         """Extract references (calls to other functions) from symbol.
 
-        This is a simplified implementation. A full implementation would
-        analyze the function body to find all called functions.
+        Note: As of W2.5, references are extracted during symbol creation
+        and stored in symbol.references. This method returns the pre-computed
+        references.
 
         Args:
             symbol: Symbol to analyze
-            tree: Parsed tree containing the symbol
+            tree: (Deprecated) No longer needed, kept for API compatibility
 
         Returns:
             List of referenced symbol names
         """
-        # NOTE: Reference extraction is a future enhancement (W2.5)
-        # Current implementation returns empty list - PageRank works with structure only
-        return []
+        # W2.5: References are now extracted during symbol creation
+        return symbol.references
 
 
 # Convenience function for simple usage
