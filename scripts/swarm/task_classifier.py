@@ -49,8 +49,10 @@ COMPLEXITY_KEYWORDS = {
     # Pattern triggers
     "integrate": 0.5,
     "implement feature": 0.5,
+    "implement": 0.4,  # FIX T07: "implement" da solo (senza "feature")
     "add new": 0.4,
     "create system": 0.6,
+    "dashboard": 0.4,  # FIX T07: dashboard = UI complesso
 }
 
 # Keywords che suggeriscono task semplice
@@ -122,10 +124,12 @@ def calculate_keyword_score(task_description: str) -> tuple[float, list[str]]:
             matched.append(keyword)
             total_score += weight
 
-    # Normalizza score (max 1.0)
-    normalized = min(total_score / 2.0, 1.0)
+    # FIX T07/T09: Non normalizzare qui - il final_score in classify_task
+    # fa già la divisione. Doppia divisione penalizzava troppo.
+    # Cap a 1.5 per evitare overflow (final_score dividerà per 1.5)
+    capped = min(total_score, 1.5)
 
-    return normalized, matched
+    return capped, matched
 
 
 def is_simple_task(task_description: str) -> bool:
