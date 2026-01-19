@@ -1,38 +1,56 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 272
-> **STATUS:** W1 Git Flow - Day 1-5 DONE! Solo Day 6-7 (docs) rimasti
+> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 273
+> **STATUS:** W1 Git Flow COMPLETATO! Prossimo: W2 Tree-sitter
 
 ---
 
-## SESSIONE 272 - QUALITA CERTIFICATA!
+## SESSIONE 273 - W1 GIT FLOW 100%!
 
 ```
 +================================================================+
-|   GIT FLOW v1.2.2 - CERTIFIED 9.7/10!                         |
-|   SPAWN-WORKERS v3.6.0 - AUTO-COMMIT 9/10!                    |
-|   W1: 5/7 days COMPLETATI!                                    |
+|   W1 GIT FLOW - COMPLETATO!                                    |
+|   Day 1-7: TUTTI FATTI!                                        |
+|   DUAL REMOTE: origin=private, public=release                  |
 +================================================================+
 ```
 
 **FATTO:**
-- Day 2: `auto_detect_type()`, 13 scope patterns, `--auto` flag
-- Day 4: `--auto-commit` in spawn-workers (integrazione completa!)
-- Fix: undo --hard→--soft, orchestrator JSON (16/16)
-- 3 audit Guardiana APPROVED
+- DUAL REMOTE configurato:
+  - `origin` → cervellaswarm-internal (PRIVATO, 851+ commit)
+  - `public` → cervellaswarm (PUBBLICO, solo release)
+- Day 6-7: docs/GIT_ATTRIBUTION.md completato
+- Test --auto-commit verificato (dry-run OK)
+- Ricerca Git Strategy con cervella-researcher
+
+---
+
+## ARCHITETTURA GIT (NUOVO!)
+
+```
+LOCALE
+├── origin → cervellaswarm-internal (PRIVATO)
+│   └── Tutto il lavoro (851+ commit)
+└── public → cervellaswarm (PUBBLICO)
+    └── Solo release (v0.1.2, v0.2.0, ...)
+```
+
+**Workflow:**
+- Push quotidiano → `git push origin main`
+- Release pubblica → branch pulito su `public`
 
 ---
 
 ## STATO W1 GIT FLOW
 
-| Day | Task | Stato | Score |
-|-----|------|-------|-------|
-| 1 | Setup + Script | ✅ | 9.5 |
-| 2 | Conventional Commits | ✅ | 9.7 |
-| 3 | Attribution | ✅ | - |
-| 4 | Integrazione CLI | ✅ | 9.0 |
-| 5 | Undo | ✅ | - |
-| 6-7 | Docs + Polish | ❌ | TODO |
+| Day | Task | Stato |
+|-----|------|-------|
+| 1 | Setup + Script | DONE |
+| 2 | Conventional Commits | DONE (9.7/10) |
+| 3 | Attribution | DONE |
+| 4 | Integrazione CLI | DONE (9/10) |
+| 5 | Undo | DONE |
+| 6-7 | Docs + Polish | DONE |
 
 ---
 
@@ -43,18 +61,7 @@
 | `scripts/utils/git_worker_commit.sh` | v1.2.2 |
 | `scripts/utils/worker_attribution.json` | v1.1.0 (16/16) |
 | `scripts/swarm/spawn-workers.sh` | v3.6.0 |
-
----
-
-## COME USARE AUTO-COMMIT
-
-```bash
-# Default (no auto-commit)
-spawn-workers --backend
-
-# Con auto-commit
-spawn-workers --backend --auto-commit
-```
+| `docs/GIT_ATTRIBUTION.md` | v1.0.0 |
 
 ---
 
@@ -71,8 +78,8 @@ spawn-workers --backend --auto-commit
 ## ROADMAP 2.0
 
 ```
-W1 (20-26 Gen): Git Flow ← 5/7 DONE!
-W2 (27 Gen-2 Feb): Tree-sitter
+W1 (20-26 Gen): Git Flow       ✅ COMPLETATO!
+W2 (27 Gen-2 Feb): Tree-sitter ← PROSSIMO
 W3 (3-9 Feb): Architect/Editor
 W4 (10-16 Feb): Polish + v2.0-beta
 ```
@@ -81,10 +88,10 @@ W4 (10-16 Feb): Polish + v2.0-beta
 
 ## PROSSIMA SESSIONE
 
-1. Day 6-7: Documentazione (docs/GIT_ATTRIBUTION.md)
-2. Test reali con worker + auto-commit
-3. README aggiornato
+1. Iniziare W2 Tree-sitter (o attendere 27 Gen)
+2. Monitorare Show HN
+3. Review feedback utenti
 
 ---
 
-*"272 sessioni. Verificare PRIMA di assumere!"*
+*"273 sessioni. W1 Git Flow COMPLETATO!"*

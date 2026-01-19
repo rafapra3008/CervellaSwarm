@@ -1,6 +1,6 @@
 # OGGI - 19 Gennaio 2026
 
-> **Sessione:** 272 | **Progetto:** Miracollo PMS | **Focus:** Pulizia Casa
+> **Sessione:** 273 | **Progetto:** CervellaSwarm | **Focus:** W1 Git Flow Finale
 
 ---
 
@@ -8,9 +8,9 @@
 
 ```
 +================================================================+
-|   PULIZIA CASA PMS - SESSIONE 272                              |
-|   Health: 6.5/10 -> In miglioramento                           |
-|   9 task completati + SUBROADMAP creata                        |
+|   W1 GIT FLOW - 100% COMPLETATO!                               |
+|   Day 1-7: TUTTI FATTI!                                        |
+|   DUAL REMOTE: Architettura professionale!                     |
 +================================================================+
 ```
 
@@ -20,36 +20,32 @@
 
 | Task | Status |
 |------|--------|
-| Audit tecnico PMS | Mappato 6.5/10 |
-| Modulo subscription separato | `modules/subscription/` |
-| Encryption WhatsApp infrastruttura | `core/encryption.py` |
-| Fix rooms.py (check prenotazioni) | FATTO |
-| Fix bookingengine.py (num_guests) | FATTO |
-| Fix weather.py (location da DB) | FATTO |
-| Fix ml_api.py (TODO obsoleto) | FATTO |
-| SUBROADMAP split file giganti | CREATA |
+| Fix remote Git (archive → internal) | FATTO |
+| Dual remote configurato | FATTO |
+| Day 6-7 docs/GIT_ATTRIBUTION.md | FATTO |
+| Test --auto-commit (dry-run) | FATTO |
+| Ricerca Git Strategy | FATTO |
+| Push su cervellaswarm-internal | FATTO (851+ commit) |
 
 ---
 
-## FILE CREATI
+## ARCHITETTURA GIT NUOVA
 
-| File | Scopo |
-|------|-------|
-| `backend/modules/subscription/` | Modulo parcheggiato organizzato |
-| `backend/core/encryption.py` | TokenEncryptor per Twilio |
-| `SUBROADMAP_SPLIT_FILE_GIGANTI.md` | Piano split 6 file >700 righe |
+```
+origin → cervellaswarm-internal (PRIVATO)
+public → cervellaswarm (PUBBLICO)
+```
 
 ---
 
 ## PROSSIMA SESSIONE
 
 ```
-SPLIT FILE GIGANTI (8-9 sessioni totali):
-1. test_action_tracking.py (820 righe) - Warm-up
-2. ml_api.py (705 righe) - Basso rischio
-... poi file critici
+W2 Tree-sitter (27 Gen - 2 Feb)
+- Parsing intelligente codice
+- Context-aware edits
 ```
 
 ---
 
-*"Pulizia casa prima di costruire nuovo!" - Sessione 272*
+*"W1 completato! Prossimo: W2 Tree-sitter"*
