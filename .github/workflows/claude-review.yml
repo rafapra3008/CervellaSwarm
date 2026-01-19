@@ -1,0 +1,57 @@
+# CervellaSwarm - Claude Code Review Automatica
+# Versione: 1.0.0
+# Data: 2026-01-02
+#
+# Questo workflow usa Claude per review automatica delle PR.
+# Attivato su: apertura PR, sync, o menzione @claude
+
+name: CervellaSwarm Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+  issue_comment:
+    types: [created]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+
+    # Esegui su PR o se menzionato @claude in un commento PR
+    if: >
+      github.event_name == 'pull_request' ||
+      (github.event_name == 'issue_comment' &&
+       github.event.issue.pull_request &&
+       contains(github.event.comment.body, '@claude'))
+
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      id-token: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Claude Code Review
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+
+          prompt: |
+            Review this PR. Check for:
+            1. Code quality and best practices
+            2. Security issues (no hardcoded secrets)
+            3. Error handling
+
+            Be friendly but thorough. Approve if good, request changes if needed.
+
+      - name: Post Review Summary
+        if: always()
+        run: |
+          echo "Review completata!"
+          echo "PR: ${{ github.event.pull_request.number || github.event.issue.number }}"
+          echo "Status: ${{ job.status }}"
