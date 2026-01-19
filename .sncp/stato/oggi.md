@@ -1,6 +1,6 @@
 # OGGI - 19 Gennaio 2026
 
-> **Sessione:** 274 | **Progetto:** CervellaSwarm | **Focus:** W2 Tree-sitter Day 1
+> **Sessione:** 276 | **Progetto:** CervellaSwarm | **Focus:** W2 Day 3 + Decisione
 
 ---
 
@@ -8,9 +8,7 @@
 
 ```
 +================================================================+
-|   W2 TREE-SITTER - DAY 1 COMPLETATO!                          |
-|   Core implementato + 142 test                                 |
-|   Score: 80% → 96%                                             |
+|   W2 DAY 3 COMPLETATO! Test Miracollo + Decisione W2.5        |
 +================================================================+
 ```
 
@@ -20,14 +18,12 @@
 
 | Task | Status |
 |------|--------|
-| Ricerca py-tree-sitter (1887 righe) | FATTO |
-| treesitter_parser.py (365 righe) | FATTO |
-| symbol_extractor.py (486 righe) | FATTO |
-| dependency_graph.py (451 righe) | FATTO |
-| repo_mapper.py (571 righe) | FATTO |
-| 142 test suite completa | FATTO |
-| Audit Guardiana Qualita 96/100 | FATTO |
-| Audit Guardiana Ops 8/10 | FATTO |
+| Double check Guardiana Qualita (91/100) | FATTO |
+| Test AUTO-CONTEXT su Miracollo PMS | FATTO |
+| Scoperta: References vuote = ordine alfabetico | FATTO |
+| Analisi con 2 Guardiane | FATTO |
+| Decisione Rafa: Opzione A (aspettare W2.5) | FATTO |
+| SUBROADMAP W2.5 creata | FATTO |
 
 ---
 
@@ -35,23 +31,24 @@
 
 | Agente | Task |
 |--------|------|
-| cervella-researcher | Studio tree-sitter |
-| cervella-backend x4 | Implementazione 4 moduli |
-| cervella-tester x4 | 142 test |
-| cervella-guardiana-qualita x3 | Audit 80%→89%→96% |
-| cervella-guardiana-ops | Review infrastruttura |
+| cervella-guardiana-qualita x2 | Audit + Requisiti |
+| cervella-guardiana-ops | Analisi operativa |
+
+---
+
+## DECISIONE CHIAVE
+
+```
+AUTO-CONTEXT: NON usare fino a W2.5
+Target: Score 9.5/10
+```
 
 ---
 
 ## PROSSIMA SESSIONE
 
-```
-W2 Day 2-7:
-- Integrazione spawn-workers.sh
-- Test su Miracollo/Contabilita
-- docs/REPO_MAPPING.md
-```
+W2.5-A: Python Reference Extraction (REQ-01 to REQ-06)
 
 ---
 
-*"274 sessioni. W2 Day 1 - Core + 142 test + 96%!"*
+*"276 sessioni. Non abbiamo fretta. Minimo 9.5!"*

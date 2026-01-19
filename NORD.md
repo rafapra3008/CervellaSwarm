@@ -2,7 +2,7 @@
 
 > **QUESTO FILE È SACRO. È LA NOSTRA BUSSOLA.**
 >
-> Aggiornato: 19 Gennaio 2026 - Sessione 275 - W2 Tree-sitter Day 2 COMPLETATO!
+> Aggiornato: 19 Gennaio 2026 - Sessione 276 - W2 Day 3 + DECISIONE QUALITA!
 
 ```
 +==================================================================+
@@ -159,26 +159,42 @@ SESSIONE 274: 🌳 W2 TREE-SITTER DAY 1!
   ✓ AUDIT 96/100!
   → W2 DAY 1 COMPLETATO!
 
-SESSIONE 275: 🌳 W2 TREE-SITTER DAY 2! ← OGGI!
+SESSIONE 275: 🌳 W2 TREE-SITTER DAY 2!
   ✓ INTEGRAZIONE SPAWN-WORKERS!
     - generate_worker_context.py (147 righe) NUOVO
     - spawn-workers.sh v3.7.0 AUTO-CONTEXT
     - Flag: --with-context, --context-budget N
   ✓ HARDTEST 26/26 PASS (100%)!
   ✓ TEST LIVE SUCCESSO!
-    - Worker spawned con contesto iniettato
-    - Prompt file 179 righe con REPOSITORY MAP
-  ✓ DOCUMENTAZIONE FAMIGLIA!
-    - docs/REPO_MAPPING.md (guida completa)
-    - DNA_FAMIGLIA.md v1.3.0
   ✓ AUDIT 95/100 APPROVED!
   → W2 DAY 2 COMPLETATO!
 
-SCORE: 95/100 ✅ W2 TREE-SITTER AUTO-CONTEXT INTEGRATO!
+SESSIONE 276: 🌳 W2 TREE-SITTER DAY 3! ← OGGI!
+  ✓ TEST MIRACOLLO PMS!
+    - AUTO-CONTEXT testato su progetto REALE
+    - SCOPERTA: extract_references() vuoto
+    - PageRank non funziona (ordine alfabetico)
+  ✓ ANALISI 2 GUARDIANE!
+    - Guardiana Qualita: USA_CON_WORKAROUND
+    - Guardiana Ops: USE_WITH_CAUTION
+  ✓ DECISIONE RAFA!
+    - Opzione A: Aspettare W2.5
+    - "Non abbiamo fretta. Minimo 9.5!"
+  ✓ SUBROADMAP W2.5 CREATA!
+    - 10 requisiti definiti
+    - 20 test pianificati
+    - 3-4 sessioni stimate
+  → W2 DAY 3 COMPLETATO!
+
+SCORE: 91/100 ✅ W2 DAY 3 - DECISIONE QUALITA PRESA!
 
 ROADMAP 2.0:
   W1: Git Flow       ████████████████████ 100% ✅
-  W2: Tree-sitter    ██████████░░░░░░░░░░ 50% (Day 2/7)
+  W2: Tree-sitter    ████████████░░░░░░░░ 60% (Day 3/7)
+      Day 1-2: Core + Integration   DONE
+      Day 3: Test + Decisione       DONE
+      Day 4-5: W2.5 References      NEXT
+      Day 6-7: Polish + 9.5/10
   W3: Architect/Editor
   W4: Polish + v2.0-beta
 ```

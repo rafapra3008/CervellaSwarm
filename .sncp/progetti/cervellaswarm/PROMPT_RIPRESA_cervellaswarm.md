@@ -1,44 +1,70 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 275
-> **STATUS:** W2 Tree-sitter Day 2 COMPLETATO! AUTO-CONTEXT integrato!
+> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 276
+> **STATUS:** W2 Day 3 - Test Miracollo + DECISIONE AUTO-CONTEXT
 
 ---
 
-## SESSIONE 275 - W2 TREE-SITTER DAY 2!
+## SESSIONE 276 - W2 DAY 3 TEST + DECISIONE
 
 ```
 +================================================================+
-|   W2 TREE-SITTER - DAY 2 COMPLETATO!                          |
-|   spawn-workers v3.7.0 con AUTO-CONTEXT!                      |
-|   HARDTEST: 26/26 PASS (100%)                                 |
+|   W2 TREE-SITTER - DAY 3 COMPLETATO!                          |
+|   Test su Miracollo: PROBLEMA TROVATO                          |
+|   DECISIONE: Aspettare W2.5 per AUTO-CONTEXT perfetto         |
 +================================================================+
 ```
 
-**FATTO in Sessione 275:**
-- Double check Guardiana Qualita: 95/100 APPROVED
-- Fix dipendenze in requirements-dev.txt (+tree-sitter, +networkx)
-- Nuovo: `generate_worker_context.py` - wrapper per spawn-workers
-- spawn-workers.sh v3.6.0 → v3.7.0 con AUTO-CONTEXT
-- Nuovi flag: `--with-context`, `--context-budget N`
-- HARDTEST completo: 26/26 test PASS
-- Test live: worker spawned con contesto iniettato
-- Documentazione: `docs/REPO_MAPPING.md`
-- Aggiornato: `docs/DNA_FAMIGLIA.md` v1.3.0
+**FATTO in Sessione 276:**
+- Double check Guardiana Qualita: 91/100 APPROVED
+- Test AUTO-CONTEXT su Miracollo PMS
+- SCOPERTA: `extract_references()` ritorna vuoto (W2.5)
+- PageRank non funziona (ordine alfabetico)
+- Analisi con Guardiana Qualita + Guardiana Ops
+- **DECISIONE RAFA:** Opzione A - Aspettare W2.5
+- Standard richiesto: **minimo 9.5/10**
 
 ---
 
-## COME USARE AUTO-CONTEXT
+## DECISIONE AUTO-CONTEXT
 
-```bash
-# Worker con contesto intelligente (1500 tokens default)
-spawn-workers --backend --with-context
+```
+NON usare --with-context fino a W2.5!
 
-# Worker con contesto piu ampio
-spawn-workers --backend --context-budget 2000
+Motivo: PageRank non funziona senza references
+Soluzione: Implementare extract_references() in W2.5
+Target: Score 9.5/10 prima di rilasciare
 ```
 
-**Docs completa:** `docs/REPO_MAPPING.md`
+**Report completo:** `reports/decisione_autocontext_20260119.md`
+
+---
+
+## ROADMAP 2.0 AGGIORNATA
+
+```
+W1: Git Flow       [DONE] COMPLETATO!
+W2: Tree-sitter    [##################..] 60% (Day 3/7)
+    Day 1-2: Core + Integration  DONE
+    Day 3: Test Miracollo        DONE (problema trovato)
+    Day 4-5: W2.5 References     PROSSIMO
+    Day 6-7: Polish + 9.5/10     PIANIFICATO
+W3: Architect/Editor
+W4: Polish + v2.0-beta
+```
+
+---
+
+## W2.5 - PIANO REFERENCE EXTRACTION
+
+| Task | Descrizione | Sessioni |
+|------|-------------|----------|
+| 1 | `extract_references()` Python | 1 |
+| 2 | `extract_references()` TypeScript | 1 |
+| 3 | Test CervellaSwarm + Miracollo | 1 |
+| 4 | Audit Guardiana (9.5/10) | 0.5 |
+
+**Totale:** 3-4 sessioni
 
 ---
 
@@ -46,28 +72,12 @@ spawn-workers --backend --context-budget 2000
 
 | File | Righe | Status |
 |------|-------|--------|
-| `scripts/utils/treesitter_parser.py` | 365 | OK |
-| `scripts/utils/symbol_extractor.py` | 484 | OK |
-| `scripts/utils/dependency_graph.py` | 451 | OK |
-| `scripts/utils/repo_mapper.py` | 571 | OK |
-| `scripts/utils/generate_worker_context.py` | 147 | NUOVO |
-| `scripts/swarm/spawn-workers.sh` | 1136 | v3.7.0 |
-
----
-
-## ROADMAP 2.0
-
-```
-W1: Git Flow       [DONE] COMPLETATO!
-W2: Tree-sitter    [################..] 50% (Day 2/7)
-W3: Architect/Editor
-W4: Polish + v2.0-beta
-```
-
-**W2 Remaining:**
-- Day 3: Test su Miracollo + Contabilita
-- Day 4-5: Performance optimization
-- Day 6-7: Polish + eventuale MCP integration
+| `treesitter_parser.py` | 365 | OK |
+| `symbol_extractor.py` | 484 | W2.5 needed |
+| `dependency_graph.py` | 451 | OK |
+| `repo_mapper.py` | 571 | OK |
+| `generate_worker_context.py` | 147 | OK |
+| `spawn-workers.sh` | 1136 | v3.7.0 |
 
 ---
 
@@ -81,25 +91,15 @@ W4: Polish + v2.0-beta
 
 ---
 
-## KNOWN ISSUES
-
-- JSX non supportato da tree-sitter-language-pack (warning safe da ignorare)
-
----
-
 ## PROSSIMA SESSIONE
 
-**PRIMA DI TUTTO:** Double check con Guardiane!
-- Recap completo Sessione 275
-- Verifica qualita codice con Guardiana Qualita
-- Review decisioni architetturali
-
-**POI:**
-1. Test su Miracollo - spawn-workers --with-context su progetto reale
-2. Test su Contabilita - verifica funziona su altri progetti
-3. Performance check - tempo generazione contesto
-4. Considerare MCP integration (spawner.ts)
+**W2.5 - Reference Extraction:**
+1. Implementare `extract_references()` per import Python
+2. Testare PageRank con references reali
+3. Verificare ordine file per importanza (non alfabetico)
+4. Audit Guardiana Qualita: target 9.5/10
 
 ---
 
-*"275 sessioni. W2 Day 2 - AUTO-CONTEXT INTEGRATO!"*
+*"Non abbiamo fretta. Minimo 9.5 di score!"*
+*Sessione 276 - Cervella & Rafa*
