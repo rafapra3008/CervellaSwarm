@@ -507,6 +507,8 @@ FASE 4 (Export):
 | 18/01/2026 | **FASE 1 VERIFICATA REALE!** (Fix bug + Test) | **262** |
 | 18/01/2026 | **FASE 2: Scontrini RT** (Codice completo!) | **263** |
 | 18/01/2026 | **FASE 2: Prima stampa FUNZIONA!** (Test non fiscale) | **264** |
+| 19/01/2026 | **FASE 2: Fix SOAP applicati** (4 correzioni) | **266** |
+| 19/01/2026 | **FASE 3: TEST SPRING OK!** (XML validato e importato) | **271** |
 
 ---
 
@@ -515,16 +517,14 @@ FASE 4 (Export):
 ```
 +====================================================================+
 |                                                                    |
-|   OPZIONI PER PROSSIMA SESSIONE:                                  |
+|   QUANDO IN HOTEL:                                                 |
+|   → Test Scontrini RT su stampante Bar (192.168.200.240)          |
+|   → Se OK: UI integrazione checkout                                |
+|   → Se OK: Chiusura automatica 23:55                              |
 |                                                                    |
-|   A) RISOLVERE RETE RT                                            |
-|      - Verificare routing VLAN in UniFi                           |
-|      - Oppure Miracollo locale                                    |
-|      - Oppure bridge/proxy                                        |
-|                                                                    |
-|   B) FASE 3: FATTURE XML                                          |
-|      - Nessun blocker hardware                                    |
-|      - Genera XML FatturaPA per SCP Spring                        |
+|   PARCHEGGIATO:                                                    |
+|   - Fatture XML implementazione (test SPRING OK!)                 |
+|   - Export commercialista (10-15 fatt/mese = manuale)             |
 |                                                                    |
 +====================================================================+
 ```
@@ -532,6 +532,6 @@ FASE 4 (Export):
 ---
 
 *"Una cosa alla volta, ROBUSTO e COMPLETO"*
-*"Da SU CARTA a REALE!"*
+*"Test SPRING OK! Sappiamo che funziona."*
 
-**Sessione 263 - Cervella & Rafa** ❤️‍🔥
+**Sessione 271 - Cervella & Rafa**
