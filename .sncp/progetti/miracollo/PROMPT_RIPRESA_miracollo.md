@@ -47,19 +47,40 @@ PARCHEGGIATO:
 FASE 1: Ricevute PDF      [####################] 100% REALE!
 FASE 1B: Checkout UI      [####################] 100% REALE!
 FASE 2: Scontrini RT      [##################..] 90% ADAPTER FIXATO!
-FASE 3: Fatture XML       [....................] 0%
+FASE 3: Fatture XML       [##..................] 10% STUDIATO!
 FASE 4: Export            [....................] 0%
 ```
 
 ---
 
-## PROSSIMI STEP
+## SESSIONE 266: FASE 3 STUDIATA!
 
 ```
-1. [x] Applicare fix codice (SOAP wrapper) ← FATTO Sessione 266!
-2. [ ] Test adapter su stampante Bar (quando in hotel)
+FLUSSO FATTURE CHIARITO:
+
+Miracollo → XML FatturaPA → Cartella → SPRING → SDI
+
+- Miracollo genera solo XML (come faceva Ericsoft)
+- SPRING importa e invia a SDI
+- Zero costi extra (no Aruba)
+- 10-15 fatture/mese = gestibile
+```
+
+### Prossimi Step FASE 3
+
+```
+1. [ ] Parlare con contabilista (path cartella, dati cedente)
+2. [ ] Test import XML in SPRING
+3. [ ] Implementare generazione XML (python-a38)
+4. [ ] UI fatturazione
+```
+
+### Prossimi Step FASE 2
+
+```
+1. [x] Fix SOAP adapter ← FATTO!
+2. [ ] Test su stampante Bar (quando in hotel)
 3. [ ] Trovare IP Reception (parcheggiato)
-4. [ ] Contattare Epson per Training Mode
 ```
 
 ---
@@ -68,9 +89,10 @@ FASE 4: Export            [....................] 0%
 
 | File | Contenuto |
 |------|-----------|
+| `docs/roadmap/SUBROADMAP_FASE3_FATTURE_XML.md` | Piano completo FASE 3 |
 | `backend/services/fiscal/epson_adapter.py` | Adapter SOAP fixato |
-| `sessioni/SESSIONE_264_EPSON_TEST.md` | Test manuale documentato |
+| `.sncp/ricerca/RICERCA_*` | 3 ricerche fatturazione |
 
 ---
 
-*"Mai andare avanti con cose da fixare!" - Sessione 266*
+*"Non reinventiamo la ruota - usiamo lo standard!" - Sessione 266*
