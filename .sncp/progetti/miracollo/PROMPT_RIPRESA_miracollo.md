@@ -1,22 +1,38 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 266
-> **Status:** PRODUZIONE STABILE | ADAPTER SOAP FIXATO!
+> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 268
+> **Status:** PRODUZIONE STABILE | MIRACOLLOOK 100%!
+
+---
+
+## SESSIONE 268: MIRACOLLOOK 100%!
+
+```
++================================================================+
+|                                                                |
+|   MIRACOLLOOK COMPLETATO AL 100%!                              |
+|                                                                |
+|   Add Label implementato:                                      |
+|   - Backend batch-modify supporta add_label/remove_label       |
+|   - Frontend LabelPicker con dropdown labels                   |
+|   - BulkActionsBar con bottone Label                          |
+|                                                                |
++================================================================+
+```
+
+### Cosa Abbiamo Fatto (Sessione 268)
+
+| File | Modifica |
+|------|----------|
+| `actions.py` | +add_label/remove_label in batch-modify |
+| `api.ts` | +labelId param in batchModify |
+| `useBulkActions.ts` | +handleBulkAddLabel/RemoveLabel |
+| `LabelPicker.tsx` | NUOVO componente dropdown |
+| `BulkActionsBar.tsx` | +bottone Label |
 
 ---
 
 ## SESSIONE 266: FIX SOAP ADAPTER EPSON
-
-```
-+================================================================+
-|                                                                |
-|   FIX EPSON ADAPTER COMPLETATO!                               |
-|                                                                |
-|   epson_adapter.py ora usa SOAP correttamente                 |
-|   Pronto per test su stampante reale                          |
-|                                                                |
-+================================================================+
-```
 
 ### Fix Applicati (Sessione 266)
 
