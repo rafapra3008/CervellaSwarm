@@ -42,12 +42,29 @@ Dettagli: `docs/DNA_FAMIGLIA.md`
 | `.sncp/PROMPT_RIPRESA_MASTER.md` | Overview tutti progetti |
 | `.sncp/roadmaps/` | Piani e subroadmap |
 
+## DUAL REPO - REGOLA SACRA
+
+```
++================================================================+
+|   MAI FARE: git push public main                               |
+|   SEMPRE USARE: ./scripts/git/sync-to-public.sh                |
+|                                                                |
+|   origin = privato (tutto)                                     |
+|   public = pubblico (solo packages/, docs pubbliche)           |
+|                                                                |
+|   Docs: docs/DUAL_REPO_STRATEGY.md                            |
++================================================================+
+```
+
+**LEZIONE APPRESA (Sessione 286):** Terza volta che incontriamo questo problema!
+
 ## Comandi
 
 ```bash
-spawn-workers --list          # Agenti disponibili
-spawn-workers --backend       # Lancia backend worker
-./tests/run_all_tests.sh      # Test suite
+spawn-workers --list              # Agenti disponibili
+spawn-workers --backend           # Lancia backend worker
+./tests/run_all_tests.sh          # Test suite
+./scripts/git/sync-to-public.sh   # Sync sicuro al repo pubblico
 ```
 
 ## Progetti Collegati

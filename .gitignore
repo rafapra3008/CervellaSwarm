@@ -25,3 +25,8 @@ htmlcov/
 coverage.xml
 *.cover
 .pytest_cache/
+
+# Private files (NEVER sync to public)
+.sncp/
+NORD.md
+docs/studio/
