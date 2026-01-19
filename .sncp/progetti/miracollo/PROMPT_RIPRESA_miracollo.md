@@ -1,27 +1,26 @@
 # PROMPT RIPRESA - Miracollo
 
 > **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 268
-> **Status:** PRODUZIONE STABILE | MIRACOLLOOK 100%!
+> **Status:** Miracollook codice OK | Robustezza 6.5/10 → 9.5
 
 ---
 
-## SESSIONE 268: MIRACOLLOOK 100%!
+## SESSIONE 268: MIRACOLLOOK ANALISI E PIANO
 
 ```
 +================================================================+
 |                                                                |
-|   MIRACOLLOOK COMPLETATO AL 100%!                              |
+|   MIRACOLLOOK: CODICE 100% - ROBUSTEZZA 6.5/10                 |
 |                                                                |
-|   Add Label implementato:                                      |
-|   - Backend batch-modify supporta add_label/remove_label       |
-|   - Frontend LabelPicker con dropdown labels                   |
-|   - BulkActionsBar con bottone Label                          |
+|   Add Label implementato + Analisi completa fatta              |
+|   Creata SUBROADMAP per arrivare a 9.5/10                      |
 |                                                                |
 +================================================================+
 ```
 
 ### Cosa Abbiamo Fatto (Sessione 268)
 
+**CODICE:**
 | File | Modifica |
 |------|----------|
 | `actions.py` | +add_label/remove_label in batch-modify |
@@ -29,6 +28,30 @@
 | `useBulkActions.ts` | +handleBulkAddLabel/RemoveLabel |
 | `LabelPicker.tsx` | NUOVO componente dropdown |
 | `BulkActionsBar.tsx` | +bottone Label |
+
+**ANALISI (3 Cervelle):**
+- cervella-researcher: stato dipendenze, conflitti (zero!)
+- cervella-ingegnera: robustezza 6.5/10
+- cervella-devops: raccomanda LOCALE + robustezza
+
+**DOCUMENTAZIONE:**
+- Creata `docs/roadmap/SUBROADMAP_MIRACOLLOOK_ROBUSTEZZA.md`
+- 6 FASI, 15 task dettagliati
+
+### Prossimi Step (da SUBROADMAP)
+
+```
+FASE 1 - SECURITY (BLOCKER):
+[ ] 1.1 Token encryption
+[ ] 1.2 Gitignore root
+[ ] 1.3 ANTHROPIC_API_KEY
+[ ] 1.4 CORS produzione
+
+FASE 2 - ROBUSTEZZA:
+[ ] 2.1 Auto-start launchd
+[ ] 2.2 Backup automatico
+[ ] 2.3 Health check
+```
 
 ---
 
