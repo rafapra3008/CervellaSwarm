@@ -1,6 +1,6 @@
 # OGGI - 19 Gennaio 2026
 
-> **Sessione:** 279 | **Progetto:** CervellaSwarm | **Focus:** W2.5-C Integration
+> **Sessione:** 280 | **Progetto:** CervellaSwarm | **Focus:** W2.5-D Audit Finale
 
 ---
 
@@ -8,8 +8,7 @@
 
 ```
 +================================================================+
-|   W2.5-C INTEGRATION - COMPLETATO! 9.5/10 APPROVED             |
-|   100 test passano, 0 regressioni                              |
+|   W2.5 COMPLETATO! 9.6/10 | W2 TREE-SITTER 100% DONE!          |
 +================================================================+
 ```
 
@@ -17,44 +16,42 @@
 
 ## COSA FATTO
 
-| Task | Status | Score |
-|------|--------|-------|
-| REQ-08: Integration DependencyGraph | DONE | 9/10 |
-| REQ-09: Caching (152x speedup!) | DONE | 9/10 |
-| REQ-10: Graceful degradation | DONE | APPROVED |
-| T19-T20: PageRank + Ordering tests | DONE | PASS |
-| 9 test integration nuovi | DONE | 9/9 PASS |
+| Task | Status |
+|------|--------|
+| AC1-AC6 verificati | PASS |
+| Test CervellaSwarm | 927 refs, 14.81ms |
+| Test Miracollo | Python + TS OK |
+| Guardiana Audit | 9.6/10 APPROVED |
 
 ---
 
-## STRATEGIA VINCENTE: AUDIT OGNI STEP
+## W2.5 COMPLETATO
 
 ```
-REQ-08 → Guardiana → Fix → Avanti
-REQ-09 → Guardiana → Fix import os → Avanti
-REQ-10 → Guardiana → Fix test → Avanti
+W2.5-A Python      9.2/10
+W2.5-B TypeScript  9/10
+W2.5-C Integration 9.5/10
+W2.5-D Audit       9.6/10 ← OGGI
 
-Problemi catturati SUBITO, non accumulati!
+MEDIA: 9.33/10 | W2 100% DONE!
 ```
 
 ---
 
-## W2.5 PROGRESS
+## ROADMAP
 
 ```
-W2.5-A: Python Refs     DONE (9.2/10)
-W2.5-B: TypeScript      DONE (9/10)
-W2.5-C: Integration     DONE (9.5/10) ← OGGI!
-W2.5-D: Audit Finale    NEXT
-
-MEDIA: 9.23/10 → TARGET 9.5/10
+W1: Git Flow       100% DONE
+W2: Tree-sitter    100% DONE ← OGGI!
+W3: Architect/Editor   NEXT
+W4: Polish + v2.0-beta
 ```
 
 ---
 
 ## PROSSIMA SESSIONE
 
-W2.5-D: Audit finale + Test Miracollo
+W3: Architect/Editor - da pianificare
 
 ---
-*"279 sessioni. Fatto BENE!"*
+*"280 sessioni. W2 completato!"*

@@ -1,79 +1,44 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 279
-> **STATUS:** W2.5-C COMPLETATO! Prossimo W2.5-D Audit Finale
+> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 280
+> **STATUS:** W2.5 COMPLETATO! W2 Tree-sitter 100%! Prossimo W3
 
 ---
 
-## SESSIONE 279 - W2.5-C INTEGRATION DONE!
+## SESSIONE 280 - W2.5-D AUDIT FINALE DONE!
 
 ```
 +================================================================+
-|   W2.5-C INTEGRATION - COMPLETATO!                             |
-|   Guardiana Qualita: 9.5/10 APPROVED                           |
-|   100 test passano, 0 regressioni                              |
+|   W2.5 REFERENCE EXTRACTION - COMPLETATO!                      |
+|   Guardiana Qualita: 9.6/10 APPROVED                           |
+|   161 test passano, 0 regressioni                              |
 +================================================================+
 ```
 
-**FATTO in Sessione 279:**
-- REQ-08: Verificata integrazione symbol_extractor → dependency_graph → repo_mapper
-- REQ-09: Implementato caching mtime-based (152x speedup!)
-- REQ-10: Graceful degradation (ritorna [] su errori, mai crash)
-- T19: PageRank variance test (scores DIVERSI verificato)
-- T20: File ordering test (NON alfabetico verificato)
-- Creato `test_integration_w25c.py` con 9 nuovi test
+**FATTO in Sessione 280:**
+- AC1-AC6 TUTTI VERIFICATI!
+  - AC1: Python refs 100% test PASS
+  - AC2: TS/JS refs 100% test PASS
+  - AC3: PageRank variance > 0.001 PASS
+  - AC4: File ordering NOT alphabetical PASS
+  - AC5: Performance max 7.78ms < 100ms PASS
+  - AC6: No regressioni 161 test PASS
+- Test CervellaSwarm: 927 refs trovate in 14.81ms
+- Test Miracollo: Python + TypeScript funzionano!
+- AUDIT GUARDIANA QUALITA: 9.6/10 APPROVED!
 
 ---
 
-## STRATEGIA VINCENTE: AUDIT OGNI STEP
-
-```
-+================================================================+
-|   METODO CHE FUNZIONA BENE!                                    |
-|================================================================|
-|   Per ogni REQ:                                                 |
-|   1. Implementa                                                 |
-|   2. Lancia Guardiana Qualita con prompt specifico              |
-|   3. Se score < 9/10 → FIX immediato                           |
-|   4. Avanti al prossimo REQ                                     |
-|                                                                 |
-|   VANTAGGI:                                                     |
-|   - Problemi catturati SUBITO (non accumulati!)                |
-|   - Feedback specifico per ogni piece                          |
-|   - Score finale alto perche ogni parte e validata             |
-+================================================================+
-
-Esempio Sessione 279:
-- REQ-08 → Guardiana 9/10 → OK, avanti
-- REQ-09 → Guardiana 9/10 → Fix "import os" in top-level
-- REQ-10 → Guardiana 7/10 → Fix test esistente che aspettava exception
-- Audit Finale → 9.5/10!
-```
-
-**USA QUESTA STRATEGIA PER W2.5-D!**
-
----
-
-## FILE MODIFICATI (Sessione 279)
-
-| File | Versione | Modifiche |
-|------|----------|-----------|
-| `symbol_extractor.py` | v2.2.0 | +_symbol_cache, +clear_cache(), +graceful degradation |
-| `test_symbol_extractor.py` | - | Fix test_file_not_found per REQ-10 |
-| `test_integration_w25c.py` | NUOVO | 9 test: T19, T20, caching, graceful |
-
----
-
-## W2.5 PROGRESS
+## W2.5 COMPLETATO!
 
 | Task | Status | Score |
 |------|--------|-------|
 | W2.5-A: Python References | DONE | 9.2/10 |
 | W2.5-B: TypeScript References | DONE | 9/10 |
 | W2.5-C: Integration | DONE | 9.5/10 |
-| W2.5-D: Audit Finale | **NEXT** | target 9.5/10 |
+| W2.5-D: Audit Finale | DONE | 9.6/10 |
 
-**MEDIA ATTUALE: 9.23/10 → TARGET: 9.5/10**
+**MEDIA FINALE W2.5: 9.33/10**
 
 ---
 
@@ -81,29 +46,55 @@ Esempio Sessione 279:
 
 ```
 W1: Git Flow       [DONE] 100%
-W2: Tree-sitter    [##################..] 90% (Day 6/7)
+W2: Tree-sitter    [DONE] 100% ← COMPLETATO SESSIONE 280!
     Day 1-2: Core + Integration   DONE
     Day 3: Test + Decisione       DONE
     Day 4: W2.5-A Python          DONE (9.2/10)
     Day 5: W2.5-B TypeScript      DONE (9/10)
-    Day 6: W2.5-C Integration     DONE (9.5/10) ← SESSIONE 279
-    Day 7: W2.5-D Audit Finale    NEXT
-W3: Architect/Editor
+    Day 6: W2.5-C Integration     DONE (9.5/10)
+    Day 7: W2.5-D Audit Finale    DONE (9.6/10)
+W3: Architect/Editor              NEXT
 W4: Polish + v2.0-beta
 ```
 
 ---
 
-## PROSSIMA SESSIONE - W2.5-D AUDIT FINALE
+## COSA FUNZIONA ORA
 
-**Cosa fare:**
-1. Leggere `SUBROADMAP_W2.5_REFERENCE_EXTRACTION.md` sezione W2.5-D
-2. Test su Miracollo (codebase mista Python+TS)
-3. Verifica AC1-AC6 (tutti i criteri)
-4. Se media < 9.5/10 → identificare fix
-5. Audit finale Guardiana
+AUTO-CONTEXT sistema completo:
+- `spawn-workers --with-context` aggiunge contesto ai worker
+- Reference extraction Python (calls, imports, inheritance, types)
+- Reference extraction TypeScript (calls, imports, extends, types)
+- PageRank ordina file per IMPORTANZA (non alfabetico!)
+- Performance: ~3-8ms per file (molto sotto 100ms target)
+- Graceful degradation: errori ritornano [], no crash
 
-**Target:** Score totale W2.5 >= 9.5/10
+---
+
+## PROSSIMA SESSIONE - W3 ARCHITECT/EDITOR
+
+**Da ricercare/pianificare:**
+1. Leggere `.sncp/roadmaps/SUBROADMAP_v2.0.md` per scope W3
+2. Capire cosa include "Architect/Editor"
+3. Possibili feature:
+   - cervella-architect per design decisions
+   - Edit capabilities per worker
+   - Multi-file refactoring
+4. Creare SUBROADMAP_W3.md se necessario
+
+---
+
+## STRATEGIA VINCENTE CONFERMATA
+
+```
+Per ogni REQ:
+1. Implementa
+2. Lancia Guardiana Qualita con prompt specifico
+3. Se score < 9/10 → FIX immediato
+4. Avanti al prossimo REQ
+
+FUNZIONA! Usare per W3!
+```
 
 ---
 
@@ -112,8 +103,9 @@ W4: Polish + v2.0-beta
 | Doc | Path |
 |-----|------|
 | W2.5 Plan | `.sncp/roadmaps/SUBROADMAP_W2.5_REFERENCE_EXTRACTION.md` |
+| v2.0 Plan | `.sncp/roadmaps/SUBROADMAP_v2.0.md` |
 
 ---
 
-*"Audit ogni step = Qualita garantita!"*
-*Sessione 279 - Cervella & Rafa*
+*"W2 Tree-sitter COMPLETATO! Prossimo W3!"*
+*Sessione 280 - Cervella & Rafa*

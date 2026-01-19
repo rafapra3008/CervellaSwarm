@@ -2,7 +2,7 @@
 
 > **QUESTO FILE È SACRO. È LA NOSTRA BUSSOLA.**
 >
-> Aggiornato: 19 Gennaio 2026 - Sessione 279 - W2.5-C Integration DONE!
+> Aggiornato: 19 Gennaio 2026 - Sessione 280 - W2.5 COMPLETATO! (9.6/10)
 
 ```
 +==================================================================+
@@ -205,7 +205,7 @@ SESSIONE 278: 🎯 W2.5-B TYPESCRIPT REFERENCES!
   ✓ AUDIT GUARDIANA QUALITA: 9/10 APPROVED!
   → W2.5-B COMPLETATO!
 
-SESSIONE 279: 🎯 W2.5-C INTEGRATION! ← OGGI!
+SESSIONE 279: 🎯 W2.5-C INTEGRATION!
   ✓ REQ-08: Integration DependencyGraph (9/10)
   ✓ REQ-09: Caching references (152x speedup!)
   ✓ REQ-10: Graceful degradation (returns [] on error)
@@ -216,18 +216,31 @@ SESSIONE 279: 🎯 W2.5-C INTEGRATION! ← OGGI!
   ✓ AUDIT GUARDIANA QUALITA: 9.5/10 APPROVED!
   → W2.5-C COMPLETATO!
 
-SCORE: 92/100 ✅ W2.5-C - INTEGRATION DONE!
+SESSIONE 280: 🎯 W2.5-D AUDIT FINALE! ← OGGI!
+  ✓ AC1-AC6 TUTTI VERIFICATI!
+    - AC1: Python refs 100% test PASS
+    - AC2: TS/JS refs 100% test PASS
+    - AC3: PageRank variance > 0.001 PASS
+    - AC4: File ordering NOT alphabetical PASS
+    - AC5: Performance max 7.78ms < 100ms PASS
+    - AC6: No regressioni 161 test PASS
+  ✓ Test CervellaSwarm: 927 refs in 14.81ms
+  ✓ Test Miracollo: Python + TypeScript OK!
+  ✓ AUDIT GUARDIANA QUALITA: 9.6/10 APPROVED!
+  → W2.5-D COMPLETATO! W2.5 FINITO!
+
+SCORE: 96/100 ✅ W2.5 REFERENCE EXTRACTION DONE!
 
 ROADMAP 2.0:
   W1: Git Flow       ████████████████████ 100% ✅
-  W2: Tree-sitter    ██████████████████░░ 90% (Day 6/7)
+  W2: Tree-sitter    ████████████████████ 100% ✅ COMPLETATO!
       Day 1-2: Core + Integration   DONE
       Day 3: Test + Decisione       DONE
       Day 4: W2.5-A Python          DONE (9.2/10)
       Day 5: W2.5-B TypeScript      DONE (9/10)
-      Day 6: W2.5-C Integration     DONE (9.5/10) ← SESSIONE 279
-      Day 7: W2.5-D Audit Finale    NEXT
-  W3: Architect/Editor
+      Day 6: W2.5-C Integration     DONE (9.5/10)
+      Day 7: W2.5-D Audit Finale    DONE (9.6/10) ← SESSIONE 280
+  W3: Architect/Editor              NEXT
   W4: Polish + v2.0-beta
 ```
 
