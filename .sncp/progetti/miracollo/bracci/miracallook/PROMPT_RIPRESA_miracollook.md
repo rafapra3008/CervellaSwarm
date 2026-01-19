@@ -5,58 +5,63 @@
 
 # PROMPT RIPRESA - Miracollook
 
-> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 270
-> **ROBUSTEZZA:** 6.5 → 8.5/10 (+2.0!) | FASE 0-3 COMPLETATE!
+> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 272
+> **ROBUSTEZZA:** 8.5 → 9.2/10 (+0.7!) | FASE 0-5 COMPLETATE!
 
 ---
 
-## SESSIONE 270 - ROBUSTEZZA +2.0!
+## SESSIONE 272 - TESTING + LOGGING
 
 ```
 +================================================================+
-|   SCORE: 6.5/10 → 8.5/10 (+2.0!)                               |
-|   11 TASK COMPLETATI - FASE 0, 1, 2, 3!                        |
+|   SCORE: 8.5/10 → 9.2/10 (+0.7!)                              |
+|   FASE 4 Testing + FASE 5 Logging COMPLETATE!                 |
+|   Guardiana Qualità ha verificato TUTTO!                      |
 +================================================================+
 ```
 
-### Cosa Fatto
+### FASE 4 - Testing (9.0/10)
 
-| Fase | Contenuto |
+| Cosa | Dettaglio |
 |------|-----------|
-| 0.1 | pip-audit: 6 CVE → 0 (fastapi, starlette, cryptography, pyasn1) |
-| 1.1-1.4 | Token encryption Fernet, gitignore, API key, CORS |
-| 2.1-2.3 | LaunchAgents: backend, backup 02:00, health 5min |
-| 3.1-3.2 | Rate limiting (slowapi), retry logic (tenacity) |
+| pytest setup | pytest.ini, conftest.py, 3 test files |
+| test_crypto.py | 12 test, coverage 100% |
+| test_main.py | 10 test (incl P3 rate limit 429) |
+| test_auth.py | 9 test (incl P1 refresh token) |
+| **TOTALE** | **31 test, 0.36s, coverage 75%+** |
 
-### LaunchAgents Attivi
+### FASE 5 - Structured Logging (9.2/10)
+
+| Cosa | Dettaglio |
+|------|-----------|
+| Libreria | structlog v25.5.0 |
+| logging_setup.py | Config dev (pretty) / prod (JSON) |
+| LoggingMiddleware | request_id tracking, duration_ms |
+| Versione | v0.4.0 |
+
+---
+
+## MAPPA SCORE
 
 ```
-com.miracollook.backend     - PID attivo, KeepAlive
-com.miracollook.backup      - Backup DB ore 02:00 (7 giorni)
-com.miracollook.healthcheck - Check ogni 5 min + notifica macOS
-```
-
-### Packages Aggiornati
-
-```
-fastapi>=0.128.0, cryptography>=46.0.3, slowapi>=0.1.9, tenacity>=8.2.0
+FASE 0: CVE Fix          → 7.0/10  ✅
+FASE 1: Security         → 7.5/10  ✅
+FASE 2: LaunchAgents     → 8.0/10  ✅
+FASE 3: Rate Limiting    → 8.5/10  ✅
+FASE 4: Testing          → 9.0/10  ✅ (Sessione 272)
+FASE 5: Logging          → 9.2/10  ✅ (Sessione 272)
+FASE 6: Frontend         → 9.5/10  TODO
 ```
 
 ---
 
-## PROSSIMI STEP (FASE 4-6 → 9.5/10)
+## PROSSIMI STEP (FASE 6 → 9.5/10)
 
 ```
-FASE 4 - TESTING:      8.5 → 9.0
-[ ] Setup pytest
-[ ] Unit tests backend
-
-FASE 5 - MONITORING:   9.0 → 9.3
-[ ] Structured logging JSON
-
-FASE 6 - FRONTEND:     9.3 → 9.5
-[ ] Environment variables
-[ ] Error boundaries
+FASE 6 - FRONTEND:
+[ ] Environment variables (.env)
+[ ] Error boundaries React
+[ ] Loading states
 ```
 
 ---
@@ -64,12 +69,18 @@ FASE 6 - FRONTEND:     9.3 → 9.5
 ## COMANDI
 
 ```bash
-# Backend (ora gestito da launchd!)
+# Test
+cd ~/Developer/miracollogeminifocus/miracallook/backend
+source venv/bin/activate && pytest
+
+# Backend (launchd)
 launchctl list | grep miracollook
 
-# Manuale se serve
-cd ~/Developer/miracollogeminifocus/miracallook/backend
-source venv/bin/activate && uvicorn main:app --port 8002
+# Logging dev (pretty)
+LOG_FORMAT=pretty uvicorn main:app --port 8002
+
+# Logging prod (JSON)
+LOG_FORMAT=json uvicorn main:app --port 8002
 
 # Frontend
 cd ~/Developer/miracollogeminifocus/miracallook/frontend
@@ -82,11 +93,11 @@ npm run dev
 
 | File | Contenuto |
 |------|-----------|
+| `backend/logging_setup.py` | Structlog config |
+| `backend/tests/` | 31 test (crypto, main, auth) |
+| `backend/pytest.ini` | Pytest config |
 | `~/Library/LaunchAgents/com.miracollook.*.plist` | LaunchAgents |
-| `miracallook/scripts/backup.sh` | Script backup |
-| `miracallook/scripts/healthcheck.sh` | Script health |
-| `docs/roadmap/SUBROADMAP_MIRACOLLOOK_ROBUSTEZZA.md` | Piano completo |
 
 ---
 
-*"6.5 → 8.5 in una sessione! Un progresso alla volta." - Sessione 270*
+*"8.5 → 9.2 con qualità verificata dalla Guardiana!" - Sessione 272*
