@@ -1,7 +1,7 @@
 # PROMPT RIPRESA - Miracollo
 
-> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 268
-> **Status:** FASE 3 Fatture: GUIDA COMPLETA | Miracollook: 6.5 → 9.5
+> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 270
+> **Status:** Miracollook Security COMPLETATA! | Robustezza 6.5 → 7.5/10
 
 ---
 
@@ -19,91 +19,85 @@ TOTALE MODULO: 75%
 
 ---
 
-## SESSIONE 268: FATTURE XML - GUIDA COMPLETA
+## SESSIONE 270: MIRACOLLOOK SECURITY
 
 ```
 +================================================================+
-|   GUIDA COMPLETA CREATA E VERIFICATA DA 3 GUARDIANE!           |
-|   - Studiati 4 XML reali (Lodge + SHE)                         |
-|   - Estratti dati fiscali, aliquote, codici                    |
-|   - Schema DB pronto (cervella-data)                           |
+|   ✅ FASE 1 SECURITY COMPLETATA - TUTTI I TEST PASSATI!         |
+|                                                                  |
+|   Robustezza: 6.5/10 → 7.5/10 (+1.0!)                           |
 +================================================================+
 ```
 
-### Dati Estratti
+### Cosa Fatto
 
-| Campo | Valore |
-|-------|--------|
-| P.IVA | 00658350251 |
-| Denominazione | Famiglia Pra Srl |
-| Regime | RF01 (ordinario) |
-| SPRING | 3.5.02A (server) |
-| Numerazione test | 200/NL in poi |
-
-### File Creati
-
-| File | Contenuto |
+| Task | Risultato |
 |------|-----------|
-| `.sncp/progetti/miracollo/guide/GUIDA_FATTURE_XML_MIRACOLLO.md` | Guida completa |
-| `~/Desktop/fatture_xml_test/` | Cartella output test |
+| pip-audit | 3 CVE risolte (fastapi 0.125.0, starlette 0.50.0) |
+| Token Encryption | Fernet AES-128 - DB ora criptato! |
+| Gitignore | .env e *.db protetti da git |
+| ANTHROPIC_API_KEY | Chiave reale inserita |
+| CORS configurabile | Legge da .env |
 
-### Prossimi Step FASE 3
+### Test Passati
 
 ```
-1. [ ] Generare 1 XML test (fattura 200/NL)
-2. [ ] Validare con tool online
-3. [ ] Test import in SPRING (con contabilista)
-4. [ ] Se OK: implementare in Miracollo
+✅ Backend avvio         OK
+✅ Health check          OK
+✅ Auth status           rafapra@gmail.com (decrypt OK!)
+✅ Gmail Inbox           3 email recuperate
+✅ AI Summary            Claude Haiku funziona! ($0.000246)
+```
+
+### File Creati/Modificati
+
+```
+NUOVI:
+  miracallook/backend/db/crypto.py           # Encryption module
+  miracallook/backend/scripts/migrate_*.py   # Migrazione token
+  miracallook/.gitignore                     # Protezione file
+
+MODIFICATI:
+  miracallook/backend/requirements.txt       # +cryptography
+  miracallook/backend/db/__init__.py         # Export crypto
+  miracallook/backend/auth/google.py         # Encrypt/decrypt
+  miracallook/backend/main.py                # CORS da env
+  miracallook/.env                           # +ENCRYPTION_KEY, +CORS
 ```
 
 ---
 
-## SESSIONE 268: MIRACOLLOOK ROBUSTEZZA
+## PROSSIMI STEP MIRACOLLOOK
 
 ```
-CODICE: 100% | ROBUSTEZZA: 6.5/10 → target 9.5/10
-Add Label implementato + SUBROADMAP creata
-```
-
-### Prossimi Step Miracollook
-
-```
-FASE 1 - SECURITY (BLOCKER):
-[ ] Token encryption
-[ ] ANTHROPIC_API_KEY in env
-[ ] CORS produzione
-
-FASE 2 - ROBUSTEZZA:
+FASE 2 - ROBUSTEZZA LOCALE:
 [ ] Auto-start launchd
 [ ] Backup automatico
+[ ] Health check
+
+FASE 3 - RATE/RETRY:
+[ ] Rate limiting backend
+[ ] Retry logic Gmail
+
+FASE 4 - TESTING:
+[ ] Setup pytest
+[ ] Unit tests
 ```
 
 **File:** `docs/roadmap/SUBROADMAP_MIRACOLLOOK_ROBUSTEZZA.md`
 
 ---
 
-## SESSIONE 266: SOAP ADAPTER
+## SESSIONE 268: FATTURE XML (Referenza)
 
 ```
-✅ Fix completato - epson_adapter.py funziona!
-   - URL con ?devid=local_printer&timeout=10000
-   - Content-Type: text/xml
-   - SOAP Envelope wrapper
+GUIDA COMPLETA CREATA - 3 Guardiane verificate
+P.IVA: 00658350251 | Regime: RF01 | SPRING: 3.5.02A
 
-TESTATO: Mac → Epson 192.168.200.240 (BAR) = OK
-PARCHEGGIATO: IP Reception da trovare
-```
-
----
-
-## FLUSSO FATTURE (Referenza)
-
-```
-Miracollo → XML FatturaPA → Cartella → SPRING → SDI
-
-- Miracollo genera solo XML
-- SPRING gestisce firma/invio/conservazione
-- 10-15 fatture/mese
+Prossimi Step:
+1. [ ] Generare XML test 200/NL
+2. [ ] Validare con tool online
+3. [ ] Test import SPRING
 ```
 
 ---
@@ -112,11 +106,10 @@ Miracollo → XML FatturaPA → Cartella → SPRING → SDI
 
 | File | Contenuto |
 |------|-----------|
-| `.sncp/guide/GUIDA_FATTURE_XML_MIRACOLLO.md` | Guida fatture |
-| `docs/roadmap/SUBROADMAP_FASE3_FATTURE_XML.md` | Piano FASE 3 |
 | `docs/roadmap/SUBROADMAP_MIRACOLLOOK_ROBUSTEZZA.md` | Piano robustezza |
-| `backend/services/fiscal/epson_adapter.py` | Adapter SOAP |
+| `miracallook/backend/db/crypto.py` | Encryption module |
+| `.sncp/guide/GUIDA_FATTURE_XML_MIRACOLLO.md` | Guida fatture |
 
 ---
 
-*"Non reinventiamo la ruota - usiamo lo standard!" - Sessione 268*
+*"Security first! Token criptati, test passati!" - Sessione 270*
