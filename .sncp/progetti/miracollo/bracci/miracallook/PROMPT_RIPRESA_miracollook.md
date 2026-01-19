@@ -1,7 +1,7 @@
 # PROMPT RIPRESA - Miracollook
 
-> **Ultimo aggiornamento:** 16 Gennaio 2026 - Sessione 244
-> **STATO:** Design Salutare COMPLETATO!
+> **Ultimo aggiornamento:** 19 Gennaio 2026 - Verifica Codice REALE
+> **STATO:** FASE 1 = 92% (verificato dal codice!)
 
 ---
 
@@ -12,27 +12,22 @@ Porta :8002 dentro ecosistema Miracollo.
 
 ---
 
-## SESSIONE 244 - DESIGN SALUTARE COMPLETATO
+## SESSIONE 266 - VERIFICA CODICE REALE!
 
 ```
 +================================================================+
-|   COMPLETATO:                                                   |
-|   - Testo #FFFFFF -> #EBEBF5 (soft white, -glow)               |
-|   - Colori calm: #778DA9 (blue-gray), #E0DED0 (warm)           |
-|   - Labels FOLDERS/CATEGORIES -> calm-blue                      |
-|   - Timestamps email -> calm-blue                               |
-|   - Separatore sidebar -> calm-blue                             |
-|   - DIFFERENZA SFONDO COLONNE VISIBILE!                        |
-|     * Sidebar: #1C1C1E (scuro)                                  |
-|     * Email List: #3A3A3C (piu chiaro) <- NUOVO!               |
-|     * Detail: #1C1C1E (scuro)                                   |
-|   - Drag/resize TESTATO e FUNZIONA                              |
+|   VERIFICA 19 GENNAIO 2026                                      |
+|                                                                 |
+|   Analizzato codice frontend + backend con 3 Cervelle!         |
+|   Frontend: 8.5/10 | ~4,600 righe | 40 file                    |
+|   Backend:  8/10   | ~2,600 righe | 27 endpoint                |
+|                                                                 |
+|   SCOPERTA: Context Menu e Resizable GIA IMPLEMENTATI!         |
+|   I docs dicevano "DA FARE" ma il CODICE dice FATTO!           |
 +================================================================+
 ```
 
-### File Modificati Sessione 244
-- `App.tsx` - list wrapper bg-secondary -> bg-tertiary
-- `EmailList.tsx` - tutti bg-secondary -> bg-tertiary
+### Verifica MAPPA_VERITA_20260119.md per dettagli completi
 
 ---
 
@@ -41,6 +36,7 @@ Porta :8002 dentro ecosistema Miracollo.
 ```bash
 # Backend
 cd ~/Developer/miracollogeminifocus/miracallook/backend
+source venv/bin/activate
 uvicorn main:app --port 8002 --reload
 
 # Frontend
@@ -50,31 +46,35 @@ npm run dev
 
 ---
 
-## STATO FASE 1 (85%)
+## STATO FASE 1 (92% - VERIFICATO!)
 
 ```
-FATTO:
+FATTO (dal codice):
 [x] OAuth, Inbox, Send, Reply, Forward, Archive, Trash
 [x] Search, AI Summary, Keyboard Shortcuts, Command Palette
 [x] Mark Read/Unread, Drafts Auto-Save
 [x] Upload Attachments, Thread View
-[x] Resizable Panels (Allotment)
-[x] Design Salutare COMPLETO!
+[x] Resizable Panels - ThreePanelResizable.tsx (131L)
+[x] Context Menu - EmailContextMenu.tsx (280L) COMPLETO!
+[x] Design Salutare - colori corretti nel CSS
 
 DA FARE:
-[ ] Context Menu (ricerca pronta!)
-[ ] Bulk Actions
-[ ] Labels Custom
+[ ] Bulk Actions API backend (UI frontend pronta!)
+[ ] Labels CRUD API backend (UI disabled)
+[ ] Contacts Autocomplete
+[ ] Settings Page
 ```
 
 ---
 
 ## PROSSIMI STEP
 
-1. Context Menu - ricerca dettagliata in studi/
-2. Bulk Actions
-3. Labels Custom
+1. **Bulk Actions API** - Backend manca, frontend pronto (4h)
+2. **Labels CRUD API** - Backend solo list, serve CRUD (3h)
+3. Contacts Autocomplete (6h)
+4. Settings Page (8h)
 
 ---
 
 *"Non e un email client. E l'Outlook che CONOSCE il tuo hotel."*
+*"La VERITA dal codice, non dai documenti."*

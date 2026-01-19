@@ -1,18 +1,18 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 18 Gennaio 2026 - Sessione 265
-> **SCORE Pre-Launch:** 8.0/10
+> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 266
+> **SCORE Pre-Launch:** 9.6/10
 
 ---
 
-## SESSIONE 265 - VERIFICA GUARDIANE + FIX GIF!
+## SESSIONE 266 - DRAFT SOCIAL COMPLETATI!
 
 ```
 +================================================================+
 |                                                                |
-|   VERIFICA COMPLETATA CON GUARDIANE!                          |
-|   PROBLEMA GIF CRITICO → RISOLTO!                             |
-|   README ora usa cli_workflow_en.png (PERFETTA!)              |
+|   DRAFT REDDIT/TWITTER/LINKEDIN PRONTI!                        |
+|   Verificati da Guardiana - Score 9.33/10                      |
+|   BLOCCO TROVATO: Repo GitHub e PRIVATO!                       |
 |                                                                |
 +================================================================+
 ```
@@ -21,17 +21,32 @@
 
 | Task | Status |
 |------|--------|
-| Guardiana Qualità review | FATTO - Score 7-8/10 |
-| Guardiana Marketing review | FATTO - Score 7.5/10 |
-| Verifica GIF (tutte scure!) | TROVATO PROBLEMA |
-| Fix README con PNG buona | FATTO! |
-| MAPPA_LANCIO aggiornata | FATTO |
+| Ricerca best practices social | FATTO - 761 righe! |
+| Draft Reddit (r/ClaudeAI + r/LocalLLaMA) | FATTO |
+| Draft Twitter thread (10 tweet) | FATTO |
+| Draft LinkedIn post | FATTO |
+| Verifica Guardiana | FATTO - Score 9.33/10 |
+| Fix suggeriti | FATTO |
 
-### Problema Trovato e Risolto
+### File Creati Sessione 266
+
+| File | Cosa |
+|------|------|
+| `.sncp/ricerca/RICERCA_LANCIO_SOCIAL_MEDIA.md` | 761 righe best practices |
+| `docs/DRAFT_REDDIT_POST.md` | Post r/ClaudeAI + r/LocalLLaMA |
+| `docs/DRAFT_TWITTER_THREAD.md` | 10 tweet thread |
+| `docs/DRAFT_LINKEDIN_POST.md` | Post professionale |
+
+---
+
+## BLOCCO CRITICO!
 
 ```
-PRIMA: 3 GIF nel README tutte scure/inutilizzabili
-DOPO:  1 PNG perfetta (cli_workflow_en.png) come hero
++================================================================+
+|   GitHub repo e PRIVATO - ritorna 404!                         |
+|   DEVE diventare PUBBLICO prima del 26 Gen                     |
+|   GitHub → Settings → Danger Zone → Change visibility          |
++================================================================+
 ```
 
 ---
@@ -43,6 +58,7 @@ DOPO:  1 PNG perfetta (cli_workflow_en.png) come hero
 | CLI | 0.1.2 | LIVE su npm |
 | MCP Server | 0.2.3 | LIVE su npm |
 | Landing | LIVE | cervellaswarm.com |
+| **GitHub** | **PRIVATO** | **BLOCCO!** |
 
 ---
 
@@ -50,66 +66,45 @@ DOPO:  1 PNG perfetta (cli_workflow_en.png) come hero
 
 ```
 DATA: Domenica 26 Gennaio 2026, 12:00 UTC (13:00 Italia)
-GIORNI: 8
+GIORNI: 7
 POST: docs/SHOW_HN_POST_READY.md
-FAQ: 10 pronte, Score 9.5/10
-README: FIXED con PNG funzionante!
+SOCIAL: 3 draft pronti!
+BLOCCO: Repo deve diventare pubblico
 ```
 
 ---
 
-## TIMELINE PROSSIMI GIORNI
-
-| Periodo | Task |
-|---------|------|
-| 18-20 Gen | Draft Reddit/Twitter (opzionale) |
-| 21-23 Gen | Polish finale, test altra macchina |
-| 24-25 Gen | Checklist pre-lancio, Rafa approva |
-| **26 Gen 13:00** | **SHOW HN!** |
-
----
-
-## COSA È PRONTO
+## SCORE ATTUALE
 
 ```
-✓ CLI + MCP su npm
-✓ Landing cervellaswarm.com
-✓ Show HN post + 10 FAQ
-✓ README con immagine FUNZIONANTE
-✓ MAPPA_LANCIO_DEFINITIVA aggiornata
-✓ 2,459 righe ricerca marketing (DIAMANTE)
-✓ Subroadmap v2.0 per post-launch (4 feature!)
+PRODOTTO:        10/10
+DOCUMENTAZIONE:  10/10
+SHOW HN:         10/10
+ASSETS:          10/10
+ALTRI CANALI:     8/10  ← DRAFT PRONTI!
+
+MEDIA:            9.6/10
 ```
 
 ---
 
-## DA STUDIARE POST-LAUNCH
+## PROSSIMI STEP
 
 ```
-SNCP EVOLUTION (aggiunto Sessione 265):
-- oggi.md: design ambiguo, ridondante con PROMPT_RIPRESA
-- Da studiare come Aider e altri gestiscono memoria
-- Aggiunto a SUBROADMAP_CERVELLASWARM_2.0 come Feature 4
+1. [CRITICO] Rendere repo GitHub PUBBLICO
+2. [OPZIONALE] Verificare account Reddit karma
+3. [OPZIONALE] Test npm su altra macchina
+4. [OPZIONALE] Carousel PDF per LinkedIn
 ```
-
----
-
-## FILE CHIAVE
-
-| File | Cosa |
-|------|------|
-| `docs/SHOW_HN_POST_READY.md` | Post + 10 FAQ |
-| `MAPPA_LANCIO_DEFINITIVA.md` | Stato lancio |
-| `docs/demo/cli_workflow_en.png` | Hero image README |
 
 ---
 
 ## ACCOUNT
 
 - **npm:** rafapra (CLI + MCP)
+- **GitHub:** rafapra3008/CervellaSwarm (PRIVATO!)
 - **Cloudflare:** rafapra@gmail.com
-- **GitHub:** rafapra3008/CervellaSwarm
 
 ---
 
-*"Verificato con Guardiane, problema risolto, pronti per Show HN!"*
+*"Draft pronti, score 9.6, serve solo repo pubblico!"*

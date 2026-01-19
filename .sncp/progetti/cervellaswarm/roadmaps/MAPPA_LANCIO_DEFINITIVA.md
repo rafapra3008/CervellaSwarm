@@ -66,14 +66,16 @@
 **NOTA Sessione 265:** Verificate tutte le GIF - erano scure/inutilizzabili.
 Sostituita hero con `cli_workflow_en.png` che mostra workflow reale.
 
-### ALTRI CANALI [0%]
+### ALTRI CANALI [80%] - Sessione 266!
 
 | Item | Status | Note |
 |------|--------|------|
-| Post Reddit | ✗ MANCA | r/ClaudeAI, r/LocalLLaMA |
-| Tweet thread | ✗ MANCA | Launch thread |
-| LinkedIn post | ✗ MANCA | Professional version |
+| Post Reddit | ✓ DRAFT | `docs/DRAFT_REDDIT_POST.md` - r/ClaudeAI + r/LocalLLaMA |
+| Tweet thread | ✓ DRAFT | `docs/DRAFT_TWITTER_THREAD.md` - 10 tweet |
+| LinkedIn post | ✓ DRAFT | `docs/DRAFT_LINKEDIN_POST.md` |
 | Product Hunt | ✗ MANCA | Per dopo HN |
+
+**Sessione 266:** Draft completati, verificati da Guardiana, score 9.33/10
 
 ---
 
@@ -239,21 +241,39 @@ SE troppi bug:
 
 ---
 
-## SCORE PRE-LANCIO
+## SCORE PRE-LANCIO - Sessione 266
 
 ```
 PRODOTTO:        10/10  ████████████████████
-DOCUMENTAZIONE:  10/10  ████████████████████  ← FAQ 10+ FATTO!
+DOCUMENTAZIONE:  10/10  ████████████████████
 SHOW HN:         10/10  ████████████████████
-ASSETS:          10/10  ████████████████████  ← FIX GIF Sessione 265!
-ALTRI CANALI:     0/10  ░░░░░░░░░░░░░░░░░░░░
+ASSETS:          10/10  ████████████████████
+ALTRI CANALI:     8/10  ████████████████░░░░  ← DRAFT PRONTI Sessione 266!
 
-MEDIA:            8.0/10
+MEDIA:            9.6/10
 
-NOTA: Possiamo lanciare con HN solo.
-      Altri canali amplificano ma non bloccano.
+SESSIONE 266: Draft Reddit/Twitter/LinkedIn completati!
+              Verificati da Guardiana - Score 9.33/10
+```
 
-SESSIONE 265: Verificato con Guardiane - problema GIF risolto!
+---
+
+## BLOCCO CRITICO - REPO PRIVATO!
+
+```
++================================================================+
+|                                                                |
+|   ATTENZIONE: GitHub repo e PRIVATO!                           |
+|                                                                |
+|   github.com/rafapra3008/CervellaSwarm = 404 (privato)         |
+|                                                                |
+|   AZIONE RICHIESTA:                                            |
+|   Rafa deve rendere il repo PUBBLICO prima del 26 Gen!         |
+|                                                                |
+|   Come fare:                                                   |
+|   GitHub → Settings → Danger Zone → Change visibility          |
+|                                                                |
++================================================================+
 ```
 
 ---
@@ -263,12 +283,11 @@ SESSIONE 265: Verificato con Guardiane - problema GIF risolto!
 ```
 +================================================================+
 |                                                                |
-|   PRONTI PER SHOW HN!                                          |
+|   QUASI PRONTI PER SHOW HN!                                    |
 |                                                                |
-|   Il core e pronto. Possiamo lanciare.                         |
-|                                                                |
-|   Reddit/Twitter/LinkedIn = NICE TO HAVE                       |
-|   Possono essere fatti anche DOPO il lancio HN                 |
+|   ✓ Core pronto                                                |
+|   ✓ Draft social pronti                                        |
+|   ✗ BLOCCO: Repo deve diventare pubblico!                      |
 |                                                                |
 +================================================================+
 ```
@@ -278,17 +297,17 @@ SESSIONE 265: Verificato con Guardiane - problema GIF risolto!
 ## PROSSIMO STEP IMMEDIATO
 
 ```
-OPZIONE A: Creare post Reddit/Twitter/LinkedIn
-OPZIONE B: Estendere FAQ a 10+
-OPZIONE C: Altro check/verifica
-OPZIONE D: Rilassarsi e aspettare il 26
+1. [CRITICO] Rendere repo GitHub PUBBLICO
+2. [OPZIONALE] Verificare account Reddit (karma > 25)
+3. [OPZIONALE] Test npm su altra macchina
+4. [OPZIONALE] Creare carousel PDF per LinkedIn
 ```
 
-**Rafa decide!**
+**Rafa decide quando rendere pubblico il repo!**
 
 ---
 
-*"Score 7.8/10 - Core pronto, canali extra opzionali"*
+*"Score 9.6/10 - Draft social pronti, serve solo repo pubblico!"*
 *"Ogni tanto sembra magia!"*
 
-**Cervella & Rafa**
+**Cervella & Rafa - Sessione 266**

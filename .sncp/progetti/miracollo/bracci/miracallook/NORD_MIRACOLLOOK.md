@@ -2,7 +2,7 @@
 
 > **Il Centro Comunicazioni dell'Hotel Intelligente**
 >
-> **Aggiornato: 15 Gennaio 2026 - Sessione 225**
+> **Aggiornato: 19 Gennaio 2026 - Verifica Codice REALE**
 > **Questo file riflette lo stato REALE, non quello "su carta"**
 
 ---
@@ -20,12 +20,12 @@
 
 ---
 
-## STATO REALE (15 Gennaio 2026)
+## STATO REALE (19 Gennaio 2026 - Verificato dal CODICE!)
 
 ```
 FASE 0 (Fondamenta)     [####################] 100%
 FASE P (Performance)    [####################] 100% MERGED!
-FASE 1 (Email Solido)   [################....] 80%
+FASE 1 (Email Solido)   [##################..] 92% <- VERIFICATO!
 FASE 2 (PMS Integration)[....................] 0%
 FASE 3 (Hotel Workflow) [....................] 0%
 ```
@@ -39,22 +39,23 @@ IndexedDB Cache, Batch API, Skeleton Loading, Optimistic UI
 Prefetch, Service Worker, Offline Sync, PWA Installabile
 ```
 
-### FASE 1 - 80% (Sessione 222-223)
+### FASE 1 - 92% (Verificato dal codice 19 Gen!)
 
 ```
-FATTO:
-  Mark Read/Unread     - Sessione 222
-  Drafts Auto-Save     - Sessione 222
-  Upload Attachments   - Sessione 223
-  Thread View          - Sessione 223
+FATTO (VERIFICATO NEL CODICE):
+  Mark Read/Unread     - useEmailHandlers.ts + API
+  Drafts Auto-Save     - useDraft.ts (212L) + 6 endpoint
+  Upload Attachments   - AttachmentPicker.tsx (176L) + API
+  Thread View          - ThreadView.tsx (299L)
+  Resizable Panels     - ThreePanelResizable.tsx (131L) + Allotment
+  Context Menu         - EmailContextMenu.tsx (280L) COMPLETO!
+  Design Salutare      - Colori #778DA9, #E0DED0, #EBEBF5
 
-DA FARE (TUTTI STUDI PRONTI!):
-  1.5  Resizable Panels      (3h)   - studio PRONTO
-  1.6  Context Menu          (5h)   - studio PRONTO (2200 righe!)
-  1.7  Bulk Actions          (7-10gg) - STUDIO MACRO PRONTO
-  1.8  Labels Custom         (2-3gg)  - STUDIO MACRO PRONTO
-  1.9  Contacts Autocomplete (2-3gg)  - STUDIO MACRO PRONTO
-  1.10 Settings Page         (8-12h)  - STUDIO MACRO PRONTO
+DA FARE:
+  1.7  Bulk Actions API      (4h backend) - UI pronta, API manca!
+  1.8  Labels CRUD API       (3h backend) - UI disabled, API solo list
+  1.9  Contacts Autocomplete (6h full)
+  1.10 Settings Page         (8h full)
 ```
 
 ---
@@ -107,21 +108,17 @@ Domani (con):
 ## PROSSIMI STEP
 
 ```
-IMPLEMENTAZIONE (studi PRONTI!):
+COMPLETAMENTO FASE 1 (92% -> 100%):
+[ ] Bulk Actions API backend   (4h) - UI frontend GIA PRONTA!
+[ ] Labels CRUD API backend    (3h) - Abilitare UI dopo
+[ ] Contacts Autocomplete      (6h)
+[ ] Settings Page              (8h)
 
-Sprint 3 - COMPLETAMENTO FASE 1:
-[ ] 1.5 Resizable Panels     (3h)
-[ ] 1.6 Context Menu         (5h)
-[ ] 1.7 Bulk Actions         (MVP 2-3gg)
-[ ] 1.8 Labels Custom        (2-3gg)
-[ ] 1.9 Contacts             (2-3gg)
-[ ] 1.10 Settings            (8-12h)
-
-Sprint 4 - FASE 2 PMS (LA MAGIA!):
-[ ] 2.1 Guest Identification (8h)
-[ ] 2.2 GuestSidebar Reale   (6h)
-[ ] 2.3 Booking Context      (4h)
-[ ] 2.4 Guest History        (6h)
+FASE 2 - PMS INTEGRATION (LA MAGIA!):
+[ ] 2.1 Guest Identification   (8h)
+[ ] 2.2 GuestSidebar Reale     (6h)
+[ ] 2.3 Booking Context        (4h)
+[ ] 2.4 Guest History          (6h)
 ```
 
 ---
