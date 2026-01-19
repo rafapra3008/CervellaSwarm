@@ -2,7 +2,7 @@
 
 > **QUESTO FILE È SACRO. È LA NOSTRA BUSSOLA.**
 >
-> Aggiornato: 19 Gennaio 2026 - Sessione 285 - W4 Day 2-3 COMPLETATO! (9.5/10)
+> Aggiornato: 19 Gennaio 2026 - Sessione 286 - W4 Day 4 al 80%! (npm publish rimasto)
 
 ```
 +==================================================================+
@@ -259,16 +259,24 @@ SESSIONE 284: 🔧 W4 DAY 1 COMPLETATO!
     - 6 file migrati, reports cleanup -96%
   ✓ AUDIT GUARDIANA: 9.5/10 APPROVED!
 
-SESSIONE 285: 🧪 W4 DAY 2-3 COMPLETATO! ← OGGI!
+SESSIONE 285: 🧪 W4 DAY 2-3 COMPLETATO!
   ✓ pytest-cov config (pyproject.toml +52 righe)
   ✓ GitHub Actions CI (test-python.yml 99 righe)
   ✓ Matrix: Python 3.10, 3.11, 3.12
   ✓ 241 test passing, coverage 41%
-  ✓ Threshold: 40% (roadmap: 40 → 50 → 60)
   ✓ AUDIT GUARDIANA: 9.5/10 APPROVED!
-  → W4 Day 2-3 COMPLETATO! Prossimo Day 4 Release
 
-SCORE: 100/100 ✅ W3 COMPLETATO! W4 QUASI FINITO!
+SESSIONE 286: 🚀 W4 DAY 4 - RELEASE 80%! ← OGGI!
+  ✓ CHANGELOG.md completo (W1-W4 documentato)
+  ✓ Version bump: CLI + MCP → 2.0.0-beta
+  ✓ LEZIONE DUAL-REPO: Script + docs DEFINITIVI!
+    - scripts/git/sync-to-public.sh (300+ righe)
+    - docs/DUAL_REPO_STRATEGY.md
+    - CLAUDE.md REGOLA SACRA aggiunta
+  ✓ Sync public repo: 31 file, ZERO sensibili
+  → MANCA: npm publish + git tag + announcement
+
+SCORE: 100/100 ✅ W3 COMPLETATO! W4 AL 80%!
 
 ROADMAP 2.0:
   W1: Git Flow       ████████████████████ 100% ✅
@@ -276,10 +284,10 @@ ROADMAP 2.0:
   W3: Architect/Editor
       W3-A: Semantic Search         DONE (10/10)
       W3-B: Architect Pattern       DONE (9.5/10)
-  W4: Polish + v2.0-beta ← IN PROGRESS!
+  W4: Polish + v2.0-beta ← 80% DONE!
       Day 1: Apple Polish DRY       DONE (9.5/10)
-      Day 2-3: Test Coverage + CI   DONE (9.5/10) ← SESSIONE 285!
-      Day 4: Release v2.0-beta      NEXT
+      Day 2-3: Test Coverage + CI   DONE (9.5/10)
+      Day 4: Release v2.0-beta      80% ← SESSIONE 286!
 ```
 
 ---

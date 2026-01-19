@@ -1,31 +1,56 @@
 # PROMPT RIPRESA - CervellaSwarm
 
-> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 285
-> **STATUS:** W4 Day 2-3 COMPLETATO! Prossimo Day 4 Release
+> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 286
+> **STATUS:** W4 Day 4 IN PROGRESS - Manca solo npm publish!
 
 ---
 
-## SESSIONE 285 - W4 DAY 2-3 COMPLETATO!
+## SESSIONE 286 - W4 DAY 4 QUASI COMPLETO!
 
 ```
 +================================================================+
-|   W4 DAY 2-3 - TEST COVERAGE + CI                              |
-|   Score: 9.5/10 | CI attivo | 241 test passing                 |
+|   W4 DAY 4 - RELEASE v2.0.0-beta                               |
+|   Status: 80% | Manca: npm publish + tag + announcement        |
 +================================================================+
 ```
 
-**FATTO in Sessione 285:**
+**FATTO in Sessione 286:**
 
-- `cervella/pyproject.toml`: +52 righe (pytest + coverage config)
-- `.github/workflows/test-python.yml`: NUOVO (99 righe)
-- `.gitignore`: +7 righe (coverage files)
-- Ricerca: `docs/studio/RICERCA_PYTEST_COV_SETUP_2026.md`
+| Task | Status | Note |
+|------|--------|------|
+| CHANGELOG.md | DONE | W1-W4 documentato, Guardiana 9/10 |
+| Version bump | DONE | CLI 0.1.2->2.0.0-beta, MCP 0.2.3->2.0.0-beta |
+| Dual-repo LEZIONE | DONE | Script + docs + CLAUDE.md aggiornato |
+| Sync public repo | DONE | 31 file pushati, no sensibili |
+| npm publish | PENDING | Prossima sessione! |
+| Git tag | PENDING | Dopo npm publish |
+| Announcement | PENDING | Show HN, Twitter |
 
-**Metriche:**
-- Test: 241 passed, 1 skipped
-- Coverage baseline: 41%
-- Threshold: 40% (roadmap: 40 -> 50 -> 60)
-- Matrix CI: Python 3.10, 3.11, 3.12
+**LEZIONE IMPORTANTE (Sessione 286):**
+- Terza volta problema dual-repo sync!
+- Creato `scripts/git/sync-to-public.sh` DEFINITIVO
+- Documentato in `docs/DUAL_REPO_STRATEGY.md`
+- Aggiunto REGOLA SACRA in CLAUDE.md
+
+---
+
+## PROSSIMA SESSIONE - FINIRE W4 DAY 4
+
+**Rimasti 3 task:**
+```bash
+# 1. npm publish CLI
+cd packages/cli && npm publish
+
+# 2. npm publish MCP
+cd packages/mcp-server && npm publish
+
+# 3. Git tag
+git tag v2.0.0-beta
+git push origin v2.0.0-beta
+git push public v2.0.0-beta
+```
+
+**Opzionale:** Announcement draft (REQ-15)
 
 ---
 
@@ -35,7 +60,7 @@
 |-----|------|--------|-------|
 | 1 | Apple Polish DRY | DONE | 9.5/10 |
 | 2-3 | Test Coverage + CI | DONE | 9.5/10 |
-| 4 | Release v2.0-beta | NEXT | - |
+| 4 | Release v2.0-beta | 80% | - |
 
 ---
 
@@ -45,41 +70,25 @@
 W1: Git Flow       [DONE] 100%
 W2: Tree-sitter    [DONE] 100%
 W3: Architect      [DONE] 100% (9.75/10)
-W4: Polish + v2.0  [IN PROGRESS] Day 2-3 done
-    Day 1: DRY     [DONE] 9.5/10
-    Day 2-3: Test  [DONE] 9.5/10
-    Day 4: Release [NEXT]
+W4: Polish + v2.0  [IN PROGRESS] Day 4 quasi done!
 ```
 
 ---
 
-## PROSSIMA SESSIONE - W4 DAY 4
+## FILE CREATI/MODIFICATI SESSIONE 286
 
-**Task: Release v2.0-beta**
-1. Version bump (package.json, pyproject.toml)
-2. CHANGELOG.md update
-3. npm publish cervellaswarm@2.0.0-beta
-4. npm publish @cervellaswarm/mcp-server@2.0.0-beta
-5. GitHub Release con note
-
-**Vedi:** `.sncp/roadmaps/SUBROADMAP_W4_POLISH_RELEASE.md`
-
----
-
-## STRATEGIA VINCENTE
-
-```
-1. Ricerca PRIMA (cervella-researcher)
-2. Implementa task
-3. GUARDIANA AUDIT (target 9.5+)
-4. Fix issues se < 9.5
-5. Avanti al prossimo
-
-W3: 9.75/10 | W4 Day 1: 9.5/10 | W4 Day 2-3: 9.5/10
-```
+| File | Azione |
+|------|--------|
+| `CHANGELOG.md` | Riscritto per v2.0.0-beta |
+| `packages/cli/package.json` | version 2.0.0-beta |
+| `packages/mcp-server/package.json` | version 2.0.0-beta |
+| `scripts/git/sync-to-public.sh` | NUOVO - sync sicuro |
+| `docs/DUAL_REPO_STRATEGY.md` | NUOVO - documentazione |
+| `CLAUDE.md` | Aggiunto REGOLA SACRA dual-repo |
+| `.gitignore` | Aggiunto .sncp/, NORD.md, docs/studio/ |
 
 ---
 
-*"285 sessioni! W4 quasi completo!"*
+*"286 sessioni! Quasi al traguardo v2.0!"*
 *"Ultrapassar os proprios limites!"*
-*Sessione 285 - Cervella & Rafa*
+*Sessione 286 - Cervella & Rafa*
