@@ -5,123 +5,92 @@
 
 # PROMPT RIPRESA - PMS Core
 
-> **Ultimo aggiornamento:** 17 Gennaio 2026 - Sessione 251
-> **STATO:** 90% - Produzione STABILE + FASE 1 Modularizzazione COMPLETATA
+> **Ultimo aggiornamento:** 19 Gennaio 2026 - Sessione 271
+> **STATO:** 90% LIVE + Modulo Finanziario 75%
 
 ---
 
-## SESSIONE 251 - AUDIT + MODULARIZZAZIONE
+## SESSIONE 271 - FATTURE XML TEST OK!
 
-### Audit VM Completato
 ```
-VERIFICATO DIRETTAMENTE SULLA VM:
-
-INFRASTRUTTURA:
-  miracollo.com         LIVE (SSL, HTTPS)
-  miracollo-backend-1   Up 17h (healthy)
-  miracollo-nginx       Up 23h (healthy)
-
-DATABASE:
-  TIPO: SQLite (NON PostgreSQL!)
-  PATH: /app/backend/data/miracollo.db
-  SIZE: 3.8 MB
-  TABELLE: 80+
-  DATI: 45 bookings, 11 rooms, 27 guests
-
-NGINX:
-  SSL Let's Encrypt
-  Rate limiting, HSTS, Gzip
-  Zero-downtime ready
++================================================================+
+|                                                                |
+|   TEST SPRING: SUPERATO!                                       |
+|                                                                |
+|   - 2 XML generati (200/NL semplice, 201/NL completo)         |
+|   - Validati contro schema FatturaPA v1.2                      |
+|   - Import SPRING: OK (PDF generato)                           |
+|                                                                |
+|   DECISIONE: Implementazione PARCHEGGIATA                      |
+|   Motivo: Test OK, implementare quando serve realmente         |
+|                                                                |
++================================================================+
 ```
 
-### FASE 1 Modularizzazione COMPLETATA
+### File Test
 ```
-CREATO:
-  backend/core/validators.py   15 funzioni validazione
-  backend/core/decorators.py   6 decorators
-
-REFACTORING:
-  genera_tutti_suggerimenti()  250 -> 56 righe (-77%)
-  create_quick_booking()       233 -> 105 righe (-55%)
-  swap_segment()               202 -> 95 righe (-53%)
-
-RISULTATO:
-  -429 righe codice
-  +14 helper functions
-  Health Score: 6/10 -> 7/10
+~/Desktop/fatture_xml_test/
+├── IT00658350251_00200.xml   ← Fattura semplice
+├── IT00658350251_00201.xml   ← Fattura completa (10%+22%+N1)
+├── IT00658350251_00201.PDF   ← Output SPRING
+└── Schema_FatturaPA_v1.2.xsd ← Schema ufficiale
 ```
 
 ---
 
-## ARCHITETTURA REALE
+## MODULO FINANZIARIO - STATO
+
+| Fase | Componente | Stato |
+|------|------------|-------|
+| 1 | Ricevute PDF | 100% REALE |
+| 1B | Checkout UI | 100% REALE |
+| 2 | Scontrini RT | 90% - test stampante DA FARE |
+| 3 | Fatture XML | 60% - TEST OK, impl. PARCHEGGIATA |
+| 4 | Export | 0% - PARCHEGGIATO |
+
+---
+
+## PROSSIMO STEP CONCRETO
+
+```
+QUANDO IN HOTEL:
+  1. Test adapter Scontrini RT su stampante Bar
+  2. Se OK: UI integrazione checkout
+  3. Se OK: Chiusura automatica 23:55
+
+TUTTO RESTO: PARCHEGGIATO
+```
+
+---
+
+## PARCHEGGIATI (19 Gen 2026)
+
+| Cosa | Motivo |
+|------|--------|
+| Fatture XML impl. | Test SPRING OK, impl. quando serve |
+| Export commercialista | 10-15 fatt/mese = gestibile manuale |
+| Modularizzazione FASE 2-3 | Codice funziona |
+
+---
+
+## ARCHITETTURA
 
 ```
 Internet -> Nginx (443) -> Backend (8001) -> SQLite
-
 VM: miracollo-cervella (Google Cloud)
 PATH: /home/rafapra/app/
-DEPLOY: docker-compose up -d
 ```
 
 ---
 
-## FUNZIONALITA LIVE
-
-| Modulo | Stato |
-|--------|-------|
-| Prenotazioni CRUD | LIVE |
-| Room Rack / Planning | LIVE |
-| Rate Board | LIVE (9.5/10) |
-| Channel Manager | LIVE |
-| Ricevute PDF | LIVE |
-| Health Check | LIVE |
-
----
-
-## PROSSIMI STEP
-
-```
-P1 - Pulizia Codice:
-  [ ] Rimuovere 56 TODO nel codice
-  [ ] Split planning_*.py (965 righe -> max 500)
-
-P2 - Verifiche:
-  [ ] Test integrazione Stripe
-  [ ] Verificare Autopilot attivo
-
-P3 - Miglioramenti:
-  [ ] Backup automatico DB
-  [ ] Monitoring (Sentry?)
-```
-
----
-
-## COMANDI UTILI
-
-```bash
-# SSH
-ssh miracollo-vm
-
-# Stato
-docker ps
-
-# Logs
-docker logs miracollo-backend-1 --tail 100
-
-# Health
-curl https://miracollo.com/health
-```
-
----
-
-## DOCUMENTAZIONE
+## GUIDE E DOC
 
 | File | Scopo |
 |------|-------|
-| STATO_REALE_PMS.md | Verifica completa infrastruttura |
-| docker-compose.yml | Config deploy (su VM) |
-| nginx.conf | Config nginx (su VM) |
+| GUIDA_FATTURE_XML_MIRACOLLO.md | Tutto su fatture XML |
+| MAPPA_MODULO_FINANZIARIO.md | Stato modulo completo |
+| STATO_REALE_PMS.md | Verifica infrastruttura |
 
 ---
 
-*"Il diamante brilla. Ora e' documentato."*
+*"Test SPRING OK! Sappiamo che funziona. Implementiamo quando serve."*

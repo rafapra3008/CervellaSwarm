@@ -1,6 +1,6 @@
 # OGGI - 19 Gennaio 2026
 
-> **Sessione:** 270 | **Progetto:** Miracollo | **Focus:** Miracollook Robustezza
+> **Sessione:** 271 | **Progetto:** Miracollo PMS | **Focus:** Fatture XML Test
 
 ---
 
@@ -8,8 +8,8 @@
 
 ```
 +================================================================+
-|   MIRACOLLOOK: 6.5/10 → 8.5/10 (+2.0!)                         |
-|   FASE 0-3 COMPLETATE + DISAMBIGUAZIONE IMPLEMENTATA!          |
+|   FATTURE XML - TEST SPRING SUPERATO!                          |
+|   Formato validato, pronto per implementazione futura          |
 +================================================================+
 ```
 
@@ -17,35 +17,35 @@
 
 ## COSA FATTO
 
-| Fase | Contenuto | Status |
+| Task | Status |
+|------|--------|
+| Cartella test ~/Desktop/fatture_xml_test/ | CREATA |
+| XML 200/NL (fattura semplice 10%) | VALIDATO |
+| XML 201/NL (completo 10%+22%+N1) | VALIDATO |
+| Test import SPRING | SUPERATO |
+| Guida fatture aggiornata | FATTO |
+| NORD.md aggiornato | FATTO |
+| PROMPT_RIPRESA pms-core aggiornato | FATTO |
+
+---
+
+## DECISIONI
+
+| Cosa | Decisione | Perche |
 |------|-----------|--------|
-| 0.1 | pip-audit (6 CVE → 0) | ✅ |
-| 0.2 | api.py split (già fatto) | ✅ |
-| 1.1-1.4 | Security (encryption, CORS) | ✅ |
-| 2.1-2.3 | LaunchAgents (backend, backup, health) | ✅ |
-| 3.1-3.2 | Rate limiting + retry logic | ✅ |
-
-**BONUS:** Disambiguazione Miracollo/Miracollook in CLAUDE.md
+| Fatture XML impl. | PARCHEGGIATO | Test OK, impl. quando serve |
+| Export commerc. | PARCHEGGIATO | 10-15 fatt/mese = manuale |
 
 ---
 
-## LAUNCHAGENTS ATTIVI
+## PROSSIMA SESSIONE PMS
 
 ```
-com.miracollook.backend     - Auto-start + KeepAlive
-com.miracollook.backup      - Backup DB ore 02:00
-com.miracollook.healthcheck - Check ogni 5 min
+QUANDO IN HOTEL:
+  → Test Scontrini RT su stampante Bar
+  → UI integrazione checkout
 ```
 
 ---
 
-## PROSSIMA SESSIONE
-
-```
-MIRACOLLOOK: FASE 4-6 (testing, monitoring, frontend) → 9.5/10
-OPPURE: PMS Core - FASE 3 Fatture XML (test 200/NL)
-```
-
----
-
-*"Un progresso alla volta - oggi ne abbiamo fatti 11!" - Sessione 270*
+*"Test SPRING OK! Sappiamo che funziona." - Sessione 271*

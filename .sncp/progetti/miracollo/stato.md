@@ -1,6 +1,6 @@
 # STATO PROGETTO MIRACOLLO
 
-> **Data:** 2026-01-19 - Sessione 268
+> **Data:** 2026-01-19 - Sessione 271
 > **Architettura:** 3 Bracci (PMS Core, Miracollook, Room Hardware)
 
 ---
@@ -10,37 +10,15 @@
 ```
 MIRACOLLO
 ├── PMS CORE (:8001)        90%  PRODUZIONE STABILE
-├── MIRACOLLOOK (:8002)     Codice 100% | Robustezza 6.5/10
+├── MIRACOLLOOK (:8002)     Codice 100% | Robustezza 8.5/10
 └── ROOM HARDWARE (:8003)   10%  Attesa hardware
 ```
 
 | Braccio | Stato | Score | Prossimo |
 |---------|-------|-------|----------|
-| PMS Core | LIVE, stabile | 90% | Modulo Finanziario |
-| Miracollook | Codice OK | 6.5→9.5 | SUBROADMAP Robustezza |
+| PMS Core | LIVE, stabile | 90% | Test scontrini RT |
+| Miracollook | Robustezza OK | 8.5/10 | Prod quando serve |
 | Room Hardware | Ricerca OK | 10% | Setup hardware |
-
----
-
-## MIRACOLLOOK - STATO DETTAGLIATO
-
-```
-CODICE FEATURE:             [####################] 100%
-├── Inbox + Thread view     ✅ FATTO
-├── Compose/Reply/Forward   ✅ FATTO
-├── Bulk Actions (batch)    ✅ FATTO (Sessione 267)
-├── Labels CRUD             ✅ FATTO (Sessione 267)
-└── Add Label to emails     ✅ FATTO (Sessione 268)
-
-ROBUSTEZZA:                 [#############.......] 6.5/10
-├── Security (token crypt)  ❌ DA FARE (FASE 1)
-├── Auto-start (launchd)    ❌ DA FARE (FASE 2)
-├── Rate limiting           ❌ DA FARE (FASE 3)
-├── Testing (pytest)        ❌ DA FARE (FASE 4)
-└── Monitoring              ❌ DA FARE (FASE 5)
-```
-
-**SUBROADMAP:** `docs/roadmap/SUBROADMAP_MIRACOLLOOK_ROBUSTEZZA.md`
 
 ---
 
@@ -49,25 +27,37 @@ ROBUSTEZZA:                 [#############.......] 6.5/10
 ```
 FASE 1: Ricevute PDF        [####################] 100% REALE!
 FASE 1B: Checkout UI        [####################] 100% REALE!
-FASE 2: Scontrini RT        [##################..] 90% Adapter SOAP OK
-FASE 3: Fatture XML         [##..................] 10% Studiato
-FASE 4: Export              [....................] 0%
+FASE 2: Scontrini RT        [##################..] 90% Test stampante DA FARE
+FASE 3: Fatture XML         [############........] 60% TEST SPRING OK!
+FASE 4: Export              [....................] 0% PARCHEGGIATO
 ```
 
-**Prossimo:** Test stampante Bar + Parlare contabilista
+**Prossimo:** Test stampante Bar quando in hotel
 
 ---
 
-## RATEBOARD (AI PRICING)
+## MIRACOLLOOK - STATO DETTAGLIATO
 
 ```
-STATUS:                     [####################] 100% LIVE!
-├── Transparent AI          ✅ LIVE
-├── Learning from Actions   ✅ LIVE
-├── Meteo Integration       ✅ LIVE
-├── Eventi Locali           ✅ LIVE
-└── Competitor (POC)        ⏸️ Parcheggiato
+CODICE FEATURE:             [####################] 100%
+ROBUSTEZZA:                 [#################...] 8.5/10
+├── FASE 0: Prerequisiti    ✅ COMPLETATA (270)
+├── FASE 1: Security        ✅ COMPLETATA (270)
+├── FASE 2: Auto-start      ✅ COMPLETATA (270)
+├── FASE 3: Rate limiting   ✅ COMPLETATA (270)
+├── FASE 4-5: Test/Monitor  ❌ DA FARE (bassa prio)
 ```
+
+---
+
+## PARCHEGGIATI
+
+| Cosa | Motivo | Risveglio |
+|------|--------|-----------|
+| Fatture XML impl. | Test SPRING OK | Quando serve |
+| Export commerc. | 10-15 fatt/mese | Mai (manuale OK) |
+| Miracollook FASE 4-5 | 8.5 sufficiente | Dopo prod |
+| Room Hardware | Attesa hardware | Quando arriva |
 
 ---
 
@@ -75,21 +65,10 @@ STATUS:                     [####################] 100% LIVE!
 
 | Sess | Data | Focus | Risultato |
 |------|------|-------|-----------|
-| 268 | 19 Gen | Miracollook Robustezza | SUBROADMAP 7 fasi |
-| 267 | 19 Gen | Miracollook Bulk+Labels | Codice 100%! |
+| **271** | **19 Gen** | **Fatture XML Test** | **TEST SPRING OK!** |
+| 270 | 19 Gen | Miracollook Robustezza | 6.5→8.5/10 |
+| 268 | 19 Gen | Labels + SUBROADMAP | Codice 100% |
 | 266 | 19 Gen | SOAP Adapter Epson | Fix completo |
-| 262-263 | 18 Gen | Receipt PDF + Checkout | REALE! |
-
----
-
-## INFRASTRUTTURA
-
-| Componente | Status |
-|------------|--------|
-| PMS Core VM (GCP) | LIVE |
-| Miracollook | Locale Mac |
-| SQLite PMS | 80+ tabelle |
-| SQLite Look | Token storage |
 
 ---
 
@@ -98,11 +77,10 @@ STATUS:                     [####################] 100% LIVE!
 | Cosa | Dove |
 |------|------|
 | NORD.md | `miracollogeminifocus/NORD.md` |
-| SUBROADMAP Robustezza | `docs/roadmap/SUBROADMAP_MIRACOLLOOK_ROBUSTEZZA.md` |
-| SUBROADMAP Fatture | `docs/roadmap/SUBROADMAP_FASE3_FATTURE_XML.md` |
+| Guida Fatture XML | `.sncp/.../guide/GUIDA_FATTURE_XML_MIRACOLLO.md` |
 | MAPPA Finanziario | `.sncp/.../finanziario/MAPPA_MODULO_FINANZIARIO.md` |
 
 ---
 
-*"Fatto BENE > Fatto VELOCE"*
-*Aggiornato: 19 Gennaio 2026 - Sessione 268*
+*"Test SPRING OK! Sappiamo che funziona."*
+*Aggiornato: 19 Gennaio 2026 - Sessione 271*

@@ -1,8 +1,9 @@
 # GUIDA FATTURE XML - Miracollo PMS
 
 > **Creato:** 19 Gennaio 2026 - Sessione 268
+> **Aggiornato:** 19 Gennaio 2026 - Sessione 271
 > **Verificato da:** Guardiana Qualita, Guardiana Ops, Cervella Data
-> **Status:** APPROVATO
+> **Status:** TEST SPRING SUPERATO!
 
 ---
 
@@ -206,27 +207,64 @@ Workflow:
 
 ---
 
+## TEST COMPLETATI - Sessione 271
+
+```
++================================================================+
+|                                                                |
+|   TEST SPRING: SUPERATO!                                       |
+|   Data: 19 Gennaio 2026                                        |
+|                                                                |
++================================================================+
+```
+
+### File Generati
+```
+~/Desktop/fatture_xml_test/
+├── IT00658350251_00200.xml   ← Fattura semplice (solo 10%)
+├── IT00658350251_00201.xml   ← Fattura COMPLETA (10%+22%+N1)
+├── IT00658350251_00201.PDF   ← Output SPRING (conferma OK)
+├── Schema_FatturaPA_v1.2.xsd ← Schema ufficiale AdE
+└── backup/
+```
+
+### Fattura 201/NL - Test Realistico
+
+| Voce | Importo | IVA | Totale |
+|------|---------|-----|--------|
+| Soggiorno 2 notti | 200.00 | 10% (20.00) | 220.00 |
+| Colazione | 20.00 | 10% (2.00) | 22.00 |
+| Minibar | 15.00 | 22% (3.30) | 18.30 |
+| Tassa soggiorno | 6.00 | N1 (0.00) | 6.00 |
+| **TOTALE** | | | **266.30** |
+
+### Validazioni Superate
+1. xmllint (well-formed XML) - OK
+2. Schema FatturaPA v1.2 - VALIDATES
+3. Import SPRING - OK (PDF generato)
+
+---
+
 ## PROSSIMI STEP
 
 | # | Task | Chi | Status |
 |---|------|-----|--------|
-| 1 | Creare cartella test | Cervella | DA FARE |
-| 2 | Generare 1 XML test (fattura 200/NL) | Cervella | DA FARE |
-| 3 | Validare con tool online | Rafa | DA FARE |
-| 4 | Test import in SPRING | Rafa + contabilista | DA FARE |
-| 5 | Se OK: implementare in Miracollo | Cervella | BLOCCATO |
+| 1 | Creare cartella test | Cervella | FATTO |
+| 2 | Generare XML test (200/NL, 201/NL) | Cervella | FATTO |
+| 3 | Validare schema FatturaPA | Cervella | FATTO |
+| 4 | Test import in SPRING | Rafa | FATTO |
+| 5 | Implementare generatore XML in Miracollo | Cervella | PARCHEGGIATO |
+| 6 | UI fatturazione nel checkout | Cervella | PARCHEGGIATO |
 
 ---
 
-## DIPENDENZE
+## DIPENDENZE (per implementazione futura)
 
 ```
-BLOCCANTE:
-- [ ] Test import SPRING (conferma formato accettato)
-
-DA CHIEDERE A CONTABILISTA:
+DA CHIEDERE A CONTABILISTA (quando si implementa):
 - [ ] Path cartella input SPRING (dove copia i file)
-- [ ] Conferma ultimo numero fattura NL usato (produzione)
+- [ ] Ultimo numero fattura NL in produzione (evitare duplicati)
+- [ ] Conferma workflow: Miracollo genera -> copia manuale -> SPRING invia
 ```
 
 ---
