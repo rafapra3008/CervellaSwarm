@@ -1,6 +1,6 @@
 # OGGI - 19 Gennaio 2026
 
-> **Sessione:** 268 | **Progetto:** Miracollo | **Focus:** Miracollook Robustezza
+> **Sessione:** 268 | **Progetto:** Miracollo | **Focus:** Fatture XML + Miracollook
 
 ---
 
@@ -8,9 +8,9 @@
 
 ```
 +================================================================+
-|   MIRACOLLOOK: Codice 100% | Robustezza 6.5/10 → 9.5          |
-|   SUBROADMAP creata e reviewata (Guardiana 10/10)              |
-|   Casa organizzata, pronti per implementare                    |
+|   FASE 3 FATTURE: GUIDA COMPLETA (10% → 40%)                    |
+|   MIRACOLLOOK: Robustezza 6.5/10 → piano 9.5                    |
+|   3 Guardiane consultate - tutto verificato!                    |
 +================================================================+
 ```
 
@@ -18,35 +18,42 @@
 
 ## COSA FATTO
 
-1. **Add Label implementato**
-   - Backend batch-modify +add_label/remove_label
-   - Frontend LabelPicker dropdown
-   - Build verificato OK
+**FATTURE XML:**
+- Studiati 4 XML reali (Lodge + SHE)
+- Estratti dati fiscali hotel (P.IVA, regime, aliquote)
+- Ricerca numerazione fatture (sezionali, best practices)
+- Consultate 3 Guardiane (Qualita, Ops, Data)
+- Creata guida completa
+- Creata cartella test `~/Desktop/fatture_xml_test/`
 
-2. **Analisi completa (3 Cervelle)**
-   - Researcher: zero conflitti, OAuth OK
-   - Ingegnera: score 6.5/10
-   - DevOps: raccomanda locale + robustezza
+**MIRACOLLOOK:**
+- Add Label implementato
+- Analisi robustezza (score 6.5/10)
+- SUBROADMAP creata (17 task)
 
-3. **SUBROADMAP creata**
-   - 7 fasi, 17 task dettagliati
-   - Review Guardiana Qualita (8.5 → 10/10)
-   - Metriche di verifica per ogni fase
+---
 
-4. **Documentazione aggiornata**
-   - NORD.md con stato REALE
-   - PROMPT_RIPRESA sessione 268
+## STATO MODULO FINANZIARIO
+
+```
+FASE 1:  Ricevute PDF   [####################] 100% REALE!
+FASE 1B: Checkout UI    [####################] 100% REALE!
+FASE 2:  Scontrini RT   [##################..] 90% ADAPTER!
+FASE 3:  Fatture XML    [########............] 40% GUIDA!
+FASE 4:  Export         [....................] 0%
+
+TOTALE: 75%
+```
 
 ---
 
 ## PROSSIMA SESSIONE
 
 ```
-FASE 0.1: Dependency Audit (pip-audit)     15-30 min
-FASE 0.2: Split api.py (1391 righe!)       1-2h
-FASE 1.1: Token encryption                 2-3h
+FATTURE: Generare XML test 200/NL, validare, test SPRING
+MIRACOLLOOK: FASE 0.1 Dependency Audit, FASE 1.1 Token encryption
 ```
 
 ---
 
-*"Fatto BENE > Fatto VELOCE" - Casa organizzata!*
+*"Non reinventiamo la ruota - usiamo lo standard!"*
