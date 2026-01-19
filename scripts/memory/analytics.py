@@ -49,27 +49,8 @@ except ImportError:
     fetch_recent_errors = None
     save_patterns_to_db = None
 
-# === COLORI ANSI ===
-RED = "\033[91m"
-YELLOW = "\033[93m"
-CYAN = "\033[96m"
-GREEN = "\033[92m"
-BLUE = "\033[94m"
-MAGENTA = "\033[95m"
-RESET = "\033[0m"
-BOLD = "\033[1m"
-DIM = "\033[2m"
-
-
-def get_severity_color(severity: str) -> str:
-    """Ritorna il colore ANSI per il livello di severity."""
-    colors = {
-        "CRITICAL": RED,
-        "HIGH": YELLOW,
-        "MEDIUM": CYAN,
-        "LOW": GREEN,
-    }
-    return colors.get(severity.upper(), RESET)
+# === COLORI ANSI (importati da common.colors) ===
+# Import spostato sotto dopo sys.path setup
 
 
 # === HELPER FUNCTIONS FOR RICH FALLBACK ===
@@ -87,28 +68,14 @@ def plain_print(text: str):
     print(text)
 
 
-# Import centralizzato path management (dopo altri import)
+# Import centralizzato (W4 DRY - Sessione 284)
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from common.paths import get_db_path
-
-
-def connect_db() -> sqlite3.Connection:
-    """Connessione al database con gestione errori."""
-    db_path = get_db_path()
-
-    if not db_path.exists():
-        print(f"{RED}❌ Database non trovato: {db_path}{RESET}")
-        print(f"\n{YELLOW}Suggerimento:{RESET} Esegui prima:")
-        print(f"  cd scripts/memory && ./init_db.py\n")
-        sys.exit(1)
-
-    try:
-        conn = sqlite3.connect(str(db_path))
-        conn.row_factory = sqlite3.Row  # Accesso per nome colonna
-        return conn
-    except sqlite3.Error as e:
-        print(f"{RED}❌ Errore connessione database: {e}{RESET}")
-        sys.exit(1)
+from common.db import connect_db, DatabaseNotFoundError, DatabaseConnectionError
+from common.colors import (
+    RED, GREEN, YELLOW, BLUE, CYAN, MAGENTA, RESET, BOLD, DIM,
+    get_severity_color
+)
 
 
 # === COMMAND: SUMMARY ===

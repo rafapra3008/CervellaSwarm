@@ -25,26 +25,11 @@ from difflib import SequenceMatcher
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
 
-# Import centralizzato path management
+# Import centralizzato (W4 DRY - Sessione 284)
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from common.paths import get_db_path
-
-
-def connect_db() -> sqlite3.Connection:
-    """Connessione al database con gestione errori."""
-    db_path = get_db_path()
-
-    if not db_path.exists():
-        print(f"❌ Database non trovato: {db_path}")
-        sys.exit(1)
-
-    try:
-        conn = sqlite3.connect(str(db_path))
-        conn.row_factory = sqlite3.Row
-        return conn
-    except sqlite3.Error as e:
-        print(f"❌ Errore connessione database: {e}")
-        sys.exit(1)
+from common.db import connect_db, DatabaseNotFoundError, DatabaseConnectionError
+from common.config import SIMILARITY_THRESHOLD, MIN_PATTERN_OCCURRENCES
 
 
 def calculate_similarity(text1: str, text2: str) -> float:
@@ -72,7 +57,7 @@ def calculate_similarity(text1: str, text2: str) -> float:
 
 def group_similar_errors(
     errors: List[Dict[str, Any]],
-    similarity_threshold: float = 0.7
+    similarity_threshold: float = SIMILARITY_THRESHOLD
 ) -> List[List[Dict[str, Any]]]:
     """
     Raggruppa errori simili in cluster.
@@ -167,7 +152,7 @@ def infer_severity(occurrence_count: int) -> str:
 
 def detect_error_patterns(
     errors: List[Dict[str, Any]],
-    similarity_threshold: float = 0.7,
+    similarity_threshold: float = SIMILARITY_THRESHOLD,
     min_occurrences: int = 3
 ) -> List[Dict[str, Any]]:
     """

@@ -41,32 +41,10 @@ except ImportError:
     HAS_RICH = False
     console = None
 
-# Import centralizzato path management
+# Import centralizzato (W4 DRY - Sessione 284)
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from common.paths import get_db_path
-
-
-def connect_db() -> sqlite3.Connection:
-    """Connessione al database con gestione errori."""
-    db_path = get_db_path()
-
-    if not db_path.exists():
-        if HAS_RICH:
-            console.print(f"[red]❌ Database non trovato: {db_path}[/red]")
-        else:
-            print(f"❌ Database non trovato: {db_path}")
-        sys.exit(1)
-
-    try:
-        conn = sqlite3.connect(str(db_path))
-        conn.row_factory = sqlite3.Row
-        return conn
-    except sqlite3.Error as e:
-        if HAS_RICH:
-            console.print(f"[red]❌ Errore connessione database: {e}[/red]")
-        else:
-            print(f"❌ Errore connessione database: {e}")
-        sys.exit(1)
+from common.db import connect_db, DatabaseNotFoundError, DatabaseConnectionError
 
 
 def suggest_new_lessons(conn: sqlite3.Connection, period_start: str) -> List[Tuple[str, int, str]]:

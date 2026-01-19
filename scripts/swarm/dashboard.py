@@ -33,52 +33,9 @@ except ImportError:
     from task_manager import list_tasks, get_task_status, get_ack_status, TASKS_DIR
 
 
-# ========== COLORI ANSI ==========
-
-class Colors:
-    """Codici colore ANSI per terminale."""
-    RESET = '\033[0m'
-    BOLD = '\033[1m'
-    DIM = '\033[2m'
-
-    # Colori base
-    BLACK = '\033[30m'
-    RED = '\033[31m'
-    GREEN = '\033[32m'
-    YELLOW = '\033[33m'
-    BLUE = '\033[34m'
-    MAGENTA = '\033[35m'
-    CYAN = '\033[36m'
-    WHITE = '\033[37m'
-
-    # Colori bright
-    BRIGHT_BLACK = '\033[90m'
-    BRIGHT_RED = '\033[91m'
-    BRIGHT_GREEN = '\033[92m'
-    BRIGHT_YELLOW = '\033[93m'
-    BRIGHT_BLUE = '\033[94m'
-    BRIGHT_MAGENTA = '\033[95m'
-    BRIGHT_CYAN = '\033[96m'
-    BRIGHT_WHITE = '\033[97m'
-
-    # Background
-    BG_BLACK = '\033[40m'
-    BG_RED = '\033[41m'
-    BG_GREEN = '\033[42m'
-    BG_YELLOW = '\033[43m'
-    BG_BLUE = '\033[44m'
-
-    @staticmethod
-    def strip(text: str) -> str:
-        """Rimuove tutti i codici colore da una stringa."""
-        import re
-        ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
-        return ansi_escape.sub('', text)
-
-
-def colorize(text: str, color: str) -> str:
-    """Applica colore a un testo."""
-    return f"{color}{text}{Colors.RESET}"
+# ========== COLORI ANSI (W4 DRY - import centralizzato) ==========
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from common.colors import Colors, colorize
 
 
 # ========== WORKERS CONFIGURAZIONE ==========

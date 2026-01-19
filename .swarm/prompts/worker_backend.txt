@@ -1,3 +1,121 @@
+CONTESTO CODEBASE (auto-generato da repo_mapper):
+# REPOSITORY MAP
+
+## .claude/hooks/file_limits_guard.py
+
+def count_lines(file_path: Path) -> int
+def check_limits() -> list
+def main()
+
+## .claude/hooks/session_start_swarm.py
+
+def load_file_summary(file_path: Path, max_lines: int = 100) -> str
+def check_if_review_day() -> tuple
+def main()
+
+## .claude/hooks/subagent_stop.py
+
+def main()
+
+## .sncp/progetti/miracollo/moduli/whatif/backend_properties_api.py
+
+class PropertyResponse(BaseModel)
+class Config
+class RoomTypeResponse(BaseModel)
+class Config
+def get_properties()
+def get_property_room_types(property_id: int)
+def _validate_property_exists(conn, property_id: int) -> dict
+
+## .sncp/progetti/miracollo/moduli/whatif/frontend/what-if.js
+
+class WhatIfSimulator
+
+## .sncp/progetti/miracollo/moduli/whatif/routers_what_if_api.py
+
+def simulate_price_impact(
+    request: WhatIfRequest,
+    db=Depends(get_db)
+)
+def get_price_curve(
+    property_id: int = Query(..., description="ID della property"),
+    date_target: date = Query(..., description="Data target"),
+    room_type_id: int = Query(..., description="ID tipo camera"),
+    min_adjustment: Optional[float] = Query(-0.30, description="Min adjustment (-30%)"),
+    max_adjustment: Optional[float] = Query(0.50, description="Max adjustment (+50%)"),
+    step: Optional[float] = Query(0.05, description="Step (5%)"),
+    db=Depends(get_db)
+)
+def what_if_health()
+
+## .sncp/progetti/miracollo/moduli/whatif/schemas_what_if.py
+
+class WhatIfRequest(BaseModel)
+class Config
+class WhatIfResponse(BaseModel)
+class Config
+class PriceCurvePoint(BaseModel)
+class PriceCurveResponse(BaseModel)
+
+## .sncp/progetti/miracollo/moduli/whatif/services_what_if_calculator.py
+
+class WhatIfCalculator
+def __init__(self, db)
+def calculate_impact(
+        self,
+        property_id: int,
+        date_target: date,
+        room_type_id: int,
+        price_adjustment: float
+    ) -> Dict[str, Any]
+def generate_price_curve(
+        self,
+        property_id: int,
+        date_target: date,
+        room_type_id: int,
+        min_adjustment: float = -0.30,
+        max_adjustment: float = 0.50,
+        step: float = 0.05
+    ) -> Dict[str, Any]
+def _get_current_price(
+        self,
+        property_id: int,
+        date_target: date,
+        room_type_id: int
+    ) -> float
+def _get_current_occupancy(
+        self,
+        property_id: int,
+        date_target: date
+    ) -> float
+def _get_total_rooms(
+        self,
+        property_id: int,
+        room_type_id: int
+    ) -> int
+def _get_competitor_avg_price(
+        self,
+        property_id: int,
+        date_target: date
+    ) -> Optional[float]
+def _determine_position(
+        self,
+        our_price: float,
+        competitor_avg: Optional[float]
+    ) -> str
+def _calculate_confidence(
+        self,
+        property_id: int,
+        date_target: date,
+        current_occupancy: float
+    ) -> str
+
+---
+Usa questo contesto per capire la struttura del progetto.
+I simboli sono ordinati per importanza (PageRank).
+
+---
+
 Sei CERVELLA-BACKEND.
 Specializzazione: Python, FastAPI, Database, API REST, logica business.
 

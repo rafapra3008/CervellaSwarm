@@ -29,41 +29,11 @@ from pathlib import Path
 from typing import List, Dict, Any, Optional
 
 
-# === COLORI ANSI (senza Rich) ===
-
-class Colors:
-    """Colori ANSI base per output CLI."""
-    RED = '\033[91m'
-    ORANGE = '\033[93m'
-    YELLOW = '\033[93m'
-    GREEN = '\033[92m'
-    BLUE = '\033[94m'
-    BOLD = '\033[1m'
-    RESET = '\033[0m'
-
-
-# === DATABASE CONNECTION ===
-
-# Import centralizzato path management
+# === IMPORT CENTRALIZZATI (W4 DRY - Sessione 284) ===
 sys.path.insert(0, str(Path(__file__).parent.parent))
 from common.paths import get_db_path
-
-
-def connect_db() -> sqlite3.Connection:
-    """Connessione al database con gestione errori."""
-    db_path = get_db_path()
-
-    if not db_path.exists():
-        print(f"❌ Database non trovato: {db_path}", file=sys.stderr)
-        sys.exit(1)
-
-    try:
-        conn = sqlite3.connect(str(db_path))
-        conn.row_factory = sqlite3.Row
-        return conn
-    except sqlite3.Error as e:
-        print(f"❌ Errore connessione database: {e}", file=sys.stderr)
-        sys.exit(1)
+from common.db import connect_db, DatabaseNotFoundError, DatabaseConnectionError
+from common.colors import Colors, RED, GREEN, YELLOW, BLUE, BOLD, RESET
 
 
 # === CORE FUNCTIONS ===
