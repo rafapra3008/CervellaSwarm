@@ -17,3 +17,11 @@ data/swarm_memory.db
 # Keep tracked: .swarm/README.md, .swarm/tasks/*.md, .swarm/handoff/
 CREDENZIALI_OAUTH.md
 packages/cli/node_modules/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.pytest_cache/

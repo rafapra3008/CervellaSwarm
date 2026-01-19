@@ -59,3 +59,56 @@ target-version = ["py310", "py311", "py312"]
 line-length = 100
 select = ["E", "F", "W", "I", "N", "UP", "B", "C4"]
 ignore = ["E501"]
+
+# === PYTEST CONFIGURATION ===
+# "Fatto BENE > Fatto VELOCE" - CervellaSwarm
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+# Coverage options
+addopts = [
+    "--cov=scripts",
+    "--cov=src",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+    "--cov-fail-under=40",  # Baseline 41%, target graduale: 40 -> 50 -> 60
+    "-v",
+]
+
+# Markers per categorizzare test
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
+    "unit: marks tests as unit tests",
+]
+
+# === COVERAGE CONFIGURATION ===
+[tool.coverage.run]
+source = ["scripts", "src"]
+omit = [
+    "*/tests/*",
+    "*/test_*.py",
+    "*_test.py",
+    "*/.venv/*",
+    "*/venv/*",
+    "*/__pycache__/*",
+    "*/site-packages/*",
+    "conftest.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
+precision = 2
+show_missing = true
+
+[tool.coverage.html]
+directory = "htmlcov"
